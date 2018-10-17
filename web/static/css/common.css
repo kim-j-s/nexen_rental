@@ -10,11 +10,26 @@
 /* ==============================
  * header
  * ============================== */
-
+#headerWrap {background:#ddd; height:95px; text-align:center;}
 
 /* ==============================
  * footer
  * ============================== */
+#footerWrap {position:absolute; right:0; bottom:0; left:0; height:220px; background-color:#222;}
+#footerWrap .inner {width:1200px; margin:0 auto; color:#a4a4a4;}
+.footerTop {padding:20px 0 28px 0; border-bottom:1px solid #444; overflow:hidden;}
+.footerTop .footerLink {float:right; margin-top:22px;}
+.footerTop .footerLink a {position:relative; display:block; float:left;}
+.footerTop .footerLink a + a {padding-left:11px; margin-left:10px;}
+.footerTop .footerLink a + a:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
+.footerTop .footerLink a span {color:#a4a4a4;}
+.footerTop .footerLink a.etc span {color:#fefefe;}
+.footerBottom {padding:27px 0 0 0;}
+.footerBottom > p {font-size:0;}
+.footerBottom > p span {display:inline-block; font-size:13px;}
+.footerBottom > p span + span {margin-left:30px;}
+.footerBottom > p + p {margin-top:7px;}
+.footerBottom .copyright {font-size:11px; margin-top:25px;}
 
 
 @media screen and (max-width: 1214px) {

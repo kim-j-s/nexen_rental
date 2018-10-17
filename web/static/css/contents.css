@@ -7,12 +7,118 @@
 #wrap {min-width:1200px; max-width:1980px; margin:0 auto;}
 
 
+#content {width:1200px; margin:0 auto;}
+#content:last-of-type {padding-bottom:140px;}
+
+/* 텍스트 */
+.sectionTitle {text-align:center; font-weight:normal; font-size:40px; color:#353535;}
+.sectionTitle + .tabWrap {margin-top:35px;}
+
+.subTitle {text-align:center; font-weight:normal; font-size:24px; color:#454545;}
+.subTitle + .blTxt1 {margin-top:35px;}
+.subTitle + .table {margin-top:38px;}
+
+
+/* 블릿 계역 */
+.blTxt1 {padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888888;}
+.blTxt1 + .table {margin-top:14px;}
+
+
+/* location */
+.location {width:1200px; margin:0 auto; padding-top:13px; font-size:0; vertical-align:middle;}
+.location > span.home {position:relative; top:2px; text-indent:-999px; overflow:hidden; width:20px; height:17px; background:url(../images/common/icon/icon_home.png) no-repeat;}
+.location > span {display:inline-block; font-size:14px; color:#999;}
+.location > span:last-child {color:#666;}
+.location > span + span {padding-left:16px; margin-left:11px; background:url(../images/common/icon/icon_next.png) no-repeat left center;}
+.location + #content > .sectionTitle {margin-top:33px;}
+
+
+/* 버튼 */
+.btn {display:inline-block;}
+.btn.ty1 {position:relative; padding:0 20px;}
+.btn.ty1:before {content:''; position:absolute; top:0; left:0; width:20px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none;}
+.btn.ty1:after {content:''; position:absolute; top:0; right:0; width:20px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:2px solid #454545; border-left:none;}
+.btn.ty1 > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none;}
+.btn.ty1 .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:400; font-size:16px; color:#252525; background:#fff url(../images/common/btn/bg_btn1.png) no-repeat left center;}
+
+
+/* 탭 */
+.tabWrap {width:1200px; margin:0 auto;}
+.tabList {display:table; width:100%; table-layout:fixed;}
+.tabList > li {position:relative; display:table-cell; border:1px solid #d5d5d5; border-bottom:none; background:#f5f5f5;}
+.tabList > li:after {content:''; position:absolute; bottom:0; left:-1px; width:calc(100% + 2px); border-bottom:2px solid #812990;}
+.tabList > li + li {border-left:none;}
+.tabList > li > button {display:block; width:100%; height:48px; text-align:center;}
+.tabList > li > button span {font-size:18px; color:#757575;}
+.tabList > li.on {background:#fff; border:2px solid #812990; border-left:none; border-bottom:none;}
+.tabList > li.on:after {content:''; position:absolute; top:-2px; left:-1px; width:2px; border-bottom:50px solid #812990;}
+.tabList > li.on > button {height:48px;}
+.tabList > li.on > button span {font-weight:400; color:#353535;}
+.tabList > li:first-child:after {content:''; position:absolute; bottom:0; left:-1px; width:calc(100% + 1px); border-bottom:2px solid #812990;}
+.tabList > li.on:first-child:after {content:''; position:absolute; top:-2px; left:0; width:2px; border-bottom:50px solid #812990;}
+
+.tabWrap .tabContent {display:none;}
+.tabWrap .tabContent.on {display:block;}
+
+
+/* 리스트 */
+.list1 {}
+.list1 > li {position:relative; padding-left:15px; font-size:16px; color:#454545;}
+.list1 > li:before {content:''; position:absolute; top:8px; left:0; width:3px; height:3px; background:#000;}
+.list1 > li + li {margin-top:13px;}
+
+.list2 {}
+.list2 > li {position:relative; padding-left:14px; font-size:16px; color:#666; text-align:left;}
+.list2 > li:before {content:''; position:absolute; top:10px; left:0; width:6px; border-bottom:1px solid #c5c5c5;}
+.list2 > li + li {margin-top:13px;}
+
+.exList {}
+.exList > .title {}
+.exList > .title .ex {display:inline-block; padding-right:14px; font-size:16px; color:#454545; background:url(../static/images/common/icon/icon_next.png) no-repeat right center;}
+.exList > .title .txt {display:block; padding-top:13px; font-weight:normal; font-size:18px; color:#252525;}
+.exList > dd > .list1 {margin-top:14px;}
+
+
+/* 테이블 */
+.table {}
+.table table {width:100%;}
+.table.ty1 {}
+.table.ty1 th {text-align:center; background:#dee0ed; font-weight:400; font-size:15px; color:#555; border:1px solid #dee0ed}
+.table.ty1 td {padding:13px 0 14px 0; text-align:center; border:1px solid #dee0ed; font-weight:normal; font-size:18px; color:#454545;}
+
+.table.ty2 {border-top:2px solid #353535;}
+.table.ty2 thead th {padding:25px 0 26px 0; text-align:center; font-weight:normal; font-size:16px; color:#454545; border:1px solid #c5c5c5; border-right:none;}
+.table.ty2 tbody td {padding:25px 0 26px 0; text-align:center; border:1px solid #c5c5c5; border-right:none; font-size:16px;}
+.table.ty2 tbody td.etc {padding:25px 32px 26px 32px;}
+.table.ty2 thead tr th:first-child, .table.ty2 tbody tr td:first-child {border-left:none;}
+
+.table + .subTitle {margin-top:76px;}
+.table.ty2 + .box1 {margin-top:30px;}
+
+
+.box1 {background:#e7e2f2;}
+.box1 > .exList {padding:20px 20px 20px 37px;}
+
+
 
 
  /* ==============================
  * content
  * ============================== */
+/* 맴버십 */
+.affiliateCards {padding-top:100px; text-align:center;}
+.affiliateCards .inner {display:inline-block; padding-right:405px; min-height:214px;}
+.affiliateCards .inner .txt {padding-top:12px; font-size:32px; color:#252525;}
+.affiliateCards .inner .txt strong {font-size:32px; font-weight:normal;}
+.affiliateCards .inner .txt span {display:block; padding-top:43px; font-size:16px; color:#888;}
+.affiliateCards .inner .txt + .btnBox {padding-top:28px;}
 
+.affiliateCards.keb .inner {background:url(../images/membership/img_kebcard.png) no-repeat right top;}
+.affiliateCards.woori .inner {background:url(../images/membership/img_wooricard.png) no-repeat right top;}
+.affiliateCards.lotte .inner {background:url(../images/membership/img_lottecard.png) no-repeat right top;}
+.affiliateCards.kb .inner {background:url(../images/membership/img_kbcard.png) no-repeat right top;}
+.affiliateCards.nh .inner {background:url(../images/membership/img_nhcard.png) no-repeat right top;}
 
+.affiliateCards + .table {margin-top:115px;}
 
 

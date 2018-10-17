@@ -1,0 +1,270 @@
+<!-- ===============================================================
+	작성자 : 장영석
+	퍼블만 보는 페이지 입니다 공유 불가!!!
+=============================================================== -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>공통 템플릿</title>
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article");
+        document.createElement("aside"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+
+
+    <!-- 2018.05.16 -->
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <!-- //2018.05.16 -->
+    <style>
+        body {
+            padding: 0 20px;
+            padding-bottom: 200px;
+            padding-top: 80px;
+        }
+
+        h1 {
+            font-size: 30px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px dashed #666666;
+            font-size: 20px;
+        }
+
+        .box {
+            margin-top: 20px;
+            border: 1px solid #E3E3E3
+        }
+
+        .maping {
+            position: fixed;
+            z-index: 1000;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            padding-bottom: 0;
+            border: 1px solid blue;
+            background: #fff;
+        }
+
+        .maping a {
+            display: inline-block;
+            padding: 3px;
+            margin-bottom: 5px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>공통 템플릿</h1>
+
+    <h2 id="">테이블 1</h2>
+    <!-- content -->
+    <div class="table ty1">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>하나카드 신청 콜센터</th>
+                    <td>1599-6538</td>
+                    <th>렌탈료 자동이체 신쳥 넥센타이어 고객센터</th>
+                    <td>1855-0100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="table ty1">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"></th>
+							<td></td>
+							<th scope="row"></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+    <h2 id="">케이스 타이틀</h2>
+    <!-- content -->
+    <div class="table ty2">
+        <table>
+            <caption>서비스 정보</caption>
+            <colgroup>
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+                <col style="width:50%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">서비스 제공조건</th>
+                    <th scope="col">할인 금액</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>전월 이용실적 30만원 이상</td>
+                    <td>1만 3천원</td>
+                    <td>넥센타이어 렌탈 요금이 할인금액보다 적을 경우 승인금액만큼 청구할인 적용</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="table ty2">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+						<col style="width:50%;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+    <h2 id="">리스트</h2>
+    <!-- content -->
+    <ul class="list1">
+        <li>넥센타이어 렌탈 요금 2만 3천원 1회 발생 → 1만 6천원 청구할인</li>
+        <li>넥센타이어 렌탈 요금 건당 1만원 2회 발생 → 각각 1만원/6천원 (총 1만 6천원) 청구 할인</li>
+        <li>넥센타이어 렌탈 요금 1만원 1회 발생 → 1만원 청구할인 </li>
+    </ul>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<ul class="list1">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+    <h2 id="">리스트</h2>
+    <!-- content -->
+    <ul class="list2">
+        <li>넥센타이어 렌탈</li>
+        <li>넥센타이어 렌탈</li>
+    </ul>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<ul class="list2">
+				<li></li>
+				<li></li>
+			</ul>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+
+
+
+    <h2 id="">케이스 타이틀</h2>
+    <!-- content -->
+    <div>보여지는 마크업 넣는 구간</div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+    <div class="maping">
+        <div>
+            <a href="template.html">기본 가이드</a>
+            <a href="template_layout.html">레이아웃 가이드</a>
+            <a href="template_list.html">리스트 가이드</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

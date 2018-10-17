@@ -160,3 +160,22 @@ function selectMakeUI(){
 	});
 }
 
+
+
+$(function(){
+
+	// tabwrap
+	var tabList = $('.tabList > li');
+	$('.tabWrap').each(function(tab){
+		$(this).children('.tabList').children('li').each(function(idx){
+			$(this).click(function(){
+				$(this).parent('.tabList').children('li').removeClass('on');
+				$(this).addClass('on');
+				$(this).closest('.tabWrap').children('.tabContent').removeClass('on');
+				$(this).closest('.tabWrap').children('.tabContent').eq(idx).addClass('on');
+			});
+		});
+	});
+
+
+});

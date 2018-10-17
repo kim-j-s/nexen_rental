@@ -1,0 +1,195 @@
+<!-- ===============================================================
+	작성자 : 장영석
+	퍼블만 보는 페이지 입니다 공유 불가!!!
+=============================================================== -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>공통 템플릿</title>
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article");
+        document.createElement("aside"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+
+
+    <!-- 2018.05.16 -->
+    <script type="text/javascript" src="code/scripts/shCore.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <!-- //2018.05.16 -->
+    <style>
+        body {
+            padding: 0 20px;
+            padding-bottom: 200px;
+        }
+
+        h1 {
+            font-size: 30px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px dashed #666666;
+            font-size: 20px;
+        }
+
+        .box {
+            margin-top: 20px;
+            border: 1px solid #E3E3E3
+        }
+
+        .maping {
+            position: fixed;
+            z-index: 1000;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            padding-bottom: 0;
+            border: 1px solid blue;
+            background: #fff;
+        }
+
+        .maping a {
+            display: inline-block;
+            padding: 3px;
+            margin-bottom: 5px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>공통 템플릿</h1>
+
+    <h2 id="">로케이션</h2>
+    <!-- content -->
+    <div class="table ty1">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+                <col style="width:25%;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>하나카드 신청 콜센터</th>
+                    <td>1599-6538</td>
+                    <th>렌탈료 자동이체 신쳥 넥센타이어 고객센터</th>
+                    <td>1855-0100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="table ty1">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+						<col style="width:25%;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th></th>
+							<td></td>
+							<th></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+    <h2 id="">탭</h2>
+    <!-- content -->
+    <div class="tabWrap">
+        <ul class="tabList">
+            <li class="on"><button>하나은행</button></li>
+            <li><button>우리카드</button></li>
+            <li><button>롯데카드</button></li>
+        </ul>
+        <div class="tabContent on">컨텐츠 내용1</div>
+        <div class="tabContent">컨텐츠 내용2</div>
+        <div class="tabContent">컨텐츠 내용3</div>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="tabWrap">
+				<ul class="tabList">
+					<li class="on"><button></button></li>
+					<li><button></button></li>
+					<li><button></button></li>
+				</ul>
+				<div class="tabContent on">컨텐츠 내용1</div>
+				<div class="tabContent">컨텐츠 내용2</div>
+				<div class="tabContent">컨텐츠 내용3</div>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+
+
+
+
+
+
+    <h2 id="">케이스 타이틀</h2>
+    <!-- content -->
+    <div>보여지는 마크업 넣는 구간</div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+
+</body>
+
+</html>
