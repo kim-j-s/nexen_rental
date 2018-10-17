@@ -74,7 +74,7 @@
 
 .exList {}
 .exList > .title {}
-.exList > .title .ex {display:inline-block; padding-right:14px; font-size:16px; color:#454545; background:url(../static/images/common/icon/icon_next.png) no-repeat right center;}
+.exList > .title .ex {display:inline-block; padding-right:14px; font-size:16px; color:#454545; background:url(../images/common/icon/icon_next.png) no-repeat right center;}
 .exList > .title .txt {display:block; padding-top:13px; font-weight:normal; font-size:18px; color:#252525;}
 .exList > dd > .list1 {margin-top:14px;}
 
@@ -100,6 +100,18 @@
 .box1 > .exList {padding:20px 20px 20px 37px;}
 
 
+/* pagenation */
+.eventList + .pagenation {margin-top:80px;}
+.pagenation {text-align:center; font-size:0;}
+.pagenation > a {display:inline-block; margin:0 4px; border:1px solid #e5e5e5; min-width:32px; line-height:32px; vertical-align:middle; text-align:center; color:#666;}
+.pagenation > a.on {border:none; line-height:34px; background:#666; color:#fff;}
+.pagenation > .pb {text-indent:-999px; overflow:hidden; width:34px; height:34px; background:url(../images/common/btn/btn_pagenation.png) no-repeat left top;}
+.pagenation > .first {background-position:0 0;}
+.pagenation > .prev {background-position:0 -42px;}
+.pagenation > .next {background-position:0 -84px;}
+.pagenation > .last {background-position:0 -126px;}
+
+
 
 
  /* ==============================
@@ -122,3 +134,25 @@
 .affiliateCards + .table {margin-top:115px;}
 
 
+/* 이벤트 페이지 */
+.eventTxt {padding:45px 0 30px 0;font-size:20px; color:#454545;}
+.eventList {overflow:hidden;}
+.eventList > li {position:relative; border:1px solid #c5c5c5;}
+.eventList > li {float:left; width:364px; margin-top:50px;}
+.eventList > li + li {margin-left:54px;}
+.eventList > li:nth-child(n + 4) {margin-left:0;}
+.eventList > li:nth-child(-n + 3) {margin-top:0;}
+.eventList > li > a {display:block;}
+.eventList > li .thumb {height:259px; overflow:hidden;}
+.eventList > li .thumb img {width:100%; max-width:100%; max-height:100%; transition: 0.45s;}
+.eventList > li .thumb img:hover {transform: scale(1.06);}
+.eventList > li .inner {padding:20px 24px 24px 24px; border-top:1px solid #c5c5c5;}
+.eventList > li .inner .desc {height:48px; font-size:18px; color:#454545; line-height:24px; overflow:hidden;}
+.eventList > li .inner .date {margin-top:20px; padding-left:22px; font-size:14px; color:#777; background:url(../images/common/icon/icon_calendar.png) no-repeat left center;}
+
+.eventList li:nth-child(1),
+.eventList li:nth-child(3n + 1) { animation-delay: 0s;}
+.eventList li:nth-child(2),
+.eventList li:nth-child(3n + 2) { animation-delay: 0.2s;}
+.eventList li:nth-child(3),
+.eventList li:nth-child(3n + 3) { animation-delay: 0.4s;}
