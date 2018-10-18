@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta name="x-apple-disable-message-reformatting" />
     <title>NEXT LEVEL – 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
@@ -26,7 +25,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="mainWrap">
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <img src="../static/images/common/logo.png" alt="" />
@@ -34,11 +33,154 @@
         </header>
         <!-- //헤더영역 -->
 
-        <section id="content">
-            <!-- 컨텐츠 -->
 
-            <!--// 컨텐츠 -->
+        <section class="mainSection">
+            <div class="inner">
+                <h1>NEXEN NICE</h1>
+                <h2>넥센에서 적극 추천하는 타이어</h2>
+
+                <div class="itemWrap">
+                    <ul class="itemSelect">
+                        <li class="on">
+                            <button><span>전체보기</span></button>
+                        </li>
+                        <li>
+                            <button><span>승용차</span></button>
+                        </li>
+                        <li>
+                            <button><span>SUV</span></button>
+                        </li>
+                    </ul>
+
+                    <div class="itemCont on">
+                        <div class="slider1">
+                            <div class="itemTire">
+                                <img src="../static/images/sample/tire.jpg" alt="" />
+                            </div>
+                            <div class="itemTire">
+                                <img src="../static/images/sample/tire.jpg" alt="" />
+                            </div>
+                            <div class="itemTire">
+                                <img src="../static/images/sample/tire.jpg" alt="" />
+                            </div>
+                            <div class="itemTire">
+                                <img src="../static/images/sample/tire.jpg" alt="" />
+                            </div>
+                            <div class="itemTire">
+                                <img src="../static/images/sample/tire.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemCont">컨텐츠 2</div>
+                    <div class="itemCont">컨텐츠 3</div>
+                </div>
+
+            </div>
         </section>
+
+        <script type="text/javascript">
+            $(function() {
+                $('.slider1').slick({
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                });
+            });
+        </script>
+
+        <style type="text/css">
+            .itemWrap {}
+
+            .itemSelect {
+                text-align: center;
+            }
+
+            .itemSelect>li {
+                position: relative;
+                display: inline-block;
+                margin: 0 25px;
+            }
+
+            .itemSelect>li+li {
+                padding-left: 1px;
+            }
+
+            .itemSelect>li+li:after {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -26px;
+                width: 1px;
+                border-bottom: 16px solid #666;
+            }
+
+            .itemSelect>li>button {}
+
+            .itemSelect>li>button span {
+                display: block;
+                font-size: 18px;
+            }
+
+            .itemSelect>li.on>button span {
+                font-weight: normal;
+                color: #812990;
+            }
+
+            .itemCont {
+                display: none;
+            }
+
+            .itemCont.on {
+                display: block;
+            }
+
+            .slider1 {}
+
+            .slider1 .itemTire {
+                border: 1px solid #999;
+            }
+
+            .slider1 .itemTire+.itemTire {
+                margin: 0 10px;
+            }
+
+
+            .mainSection {
+                width: 1200px;
+                margin: 0 auto;
+                height: 1200px;
+            }
+
+            .mainSection>.inner {
+                padding: 62px 0 0 0;
+            }
+
+            .mainSection>.inner h1 {
+                font-family: 'Raleway';
+                font-weight: 800;
+                font-size: 36px;
+                color: #333;
+                text-align: center;
+            }
+
+            .mainSection>.inner h2 {
+                font-size: 24px;
+                color: #777;
+                text-align: center;
+            }
+
+            .mainSection>.inner h1+h2 {
+                margin-top: 12px;
+            }
+
+            .mainSection>.inner h2+.itemWrap {
+                margin-top: 42px;
+            }
+        </style>
+
+
+
+
 
         <!-- 하단 영역 -->
         <footer id="footerWrap">

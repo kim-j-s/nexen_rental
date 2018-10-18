@@ -165,7 +165,6 @@ function selectMakeUI(){
 $(function(){
 
 	// tabwrap
-	var tabList = $('.tabList > li');
 	$('.tabWrap').each(function(tab){
 		$(this).children('.tabList').children('li').each(function(idx){
 			$(this).click(function(){
@@ -176,6 +175,19 @@ $(function(){
 			});
 		});
 	});
+
+	// itemWrap
+	$('.itemWrap').each(function(){
+		$(this).children('.itemSelect').children('li').each(function(idx){
+			$(this).click(function(){
+				$(this).parent('.itemSelect').children('li').removeClass('on');
+				$(this).addClass('on');
+				$(this).closest('.itemWrap').children('.itemCont').removeClass('on');
+				$(this).closest('.itemWrap').children('.itemCont').eq(idx).addClass('on');
+			});
+		});
+	});
+	
 
 
 });

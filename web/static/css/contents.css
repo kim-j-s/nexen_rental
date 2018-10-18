@@ -16,12 +16,8 @@
 
 .subTitle {text-align:center; font-weight:normal; font-size:24px; color:#454545;}
 .subTitle + .blTxt1 {margin-top:35px;}
+.subTitle + .list3 {margin-top:35px;}
 .subTitle + .table {margin-top:38px;}
-
-
-/* 블릿 계역 */
-.blTxt1 {padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888888;}
-.blTxt1 + .table {margin-top:14px;}
 
 
 /* location */
@@ -75,6 +71,11 @@
 .list2 > li:before {content:''; position:absolute; top:10px; left:0; width:6px; border-bottom:1px solid #c5c5c5;}
 .list2 > li + li {margin-top:13px;}
 
+.list3 {}
+.list3 li {padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888;}
+.list3 li + li {margin-top:11px;}
+.list3 + .table {margin-top:14px;}
+
 .exList {}
 .exList > .title {}
 .exList > .title .ex {display:inline-block; padding-right:14px; font-size:16px; color:#454545; background:url(../images/common/icon/icon_next.png) no-repeat right center;}
@@ -104,17 +105,16 @@
 
 
 /* pagenation */
-.eventList + .pagenation {margin-top:80px;}
+.itemtList1 + .pagenation {margin-top:80px;}
 .pagenation {text-align:center; font-size:0;}
-.pagenation > a {display:inline-block; margin:0 4px; border:1px solid #e5e5e5; min-width:32px; line-height:32px; vertical-align:middle; text-align:center; color:#666;}
+.pagenation > a {display:inline-block; margin:0 4px; border:1px solid #e5e5e5; min-width:34px; line-height:32px; vertical-align:middle; text-align:center; color:#666;}
 .pagenation > a.on {border:none; line-height:34px; background:#666; color:#fff;}
+.pagenation > a:hover:not(.pb) {border:none; line-height:34px; background:#666; color:#fff;}
 .pagenation > .pb {text-indent:-999px; overflow:hidden; width:34px; height:34px; background:url(../images/common/btn/btn_pagenation.png) no-repeat left top;}
 .pagenation > .first {background-position:0 0;}
 .pagenation > .prev {background-position:0 -42px;}
 .pagenation > .next {background-position:0 -84px;}
 .pagenation > .last {background-position:0 -126px;}
-
-
 
 
  /* ==============================
@@ -130,40 +130,35 @@
 .affiliateCards .inner .txt span {display:block; padding-top:43px; font-size:16px; color:#888;}
 .affiliateCards .inner .txt + .btnBox {padding-top:28px;}
 
-/*
-.affiliateCards.keb .inner {background:url(../images/membership/img_kebcard.png) no-repeat right top;}
-.affiliateCards.woori .inner {background:url(../images/membership/img_wooricard.png) no-repeat right top;}
-.affiliateCards.lotte .inner {background:url(../images/membership/img_lottecard.png) no-repeat right top;}
-.affiliateCards.kb .inner {background:url(../images/membership/img_kbcard.png) no-repeat right top;}
-.affiliateCards.nh .inner {background:url(../images/membership/img_nhcard.png) no-repeat right top;}
-*/
-
 .affiliateCards + .table {margin-top:115px;}
 
 
 /* 이벤트 페이지 */
-.eventTxt {padding:45px 0 30px 0;font-size:20px; color:#454545;}
-.eventList {overflow:hidden;}
-.eventList > li {position:relative; border:1px solid #c5c5c5;}
-.eventList > li {float:left; width:364px; margin-top:50px;}
-.eventList > li + li {margin-left:54px;}
-.eventList > li:nth-child(n + 4) {margin-left:0;}
-.eventList > li:nth-child(-n + 3) {margin-top:0;}
-.eventList > li > a {display:block;}
-.eventList > li .thumb {height:259px; overflow:hidden;}
-.eventList > li .thumb img {width:100%; max-width:100%; max-height:100%; transition: 0.45s;}
-.eventList > li .thumb img:hover {transform: scale(1.06);}
-.eventList > li .inner {padding:20px 24px 18px 24px; border-top:1px solid #c5c5c5;}
-.eventList > li .inner .desc {height:48px; font-size:18px; color:#454545; line-height:24px; overflow:hidden;}
-.eventList > li .inner .date {height:24px; margin-top:20px; padding-left:22px; background:url(../images/common/icon/icon_calendar.png) no-repeat left 3px;}
-.eventList > li .inner .date > em {display:inline-block; font-size:14px; color:#777; line-height:22px;}
+.contTitle {padding:45px 150px 0 0;}
+.contTitle > .txt {font-size:20px; color:#454545;}
+.contTitle + .itemtList1 {margin-top:30px;}
 
-.eventList li:nth-child(1),
-.eventList li:nth-child(3n + 1) { animation-delay: 0s;}
-.eventList li:nth-child(2),
-.eventList li:nth-child(3n + 2) { animation-delay: 0.2s;}
-.eventList li:nth-child(3),
-.eventList li:nth-child(3n + 3) { animation-delay: 0.4s;}
+.itemtList1 {overflow:hidden;}
+.itemtList1 > li {position:relative; float:left; width:364px; margin-top:50px; border:1px solid #c5c5c5;}
+.itemtList1 > li:hover {border:1px solid #812990;}
+.itemtList1 > li + li {margin-left:54px;}
+.itemtList1 > li:nth-child(n + 4) {margin-left:0;}
+.itemtList1 > li:nth-child(-n + 3) {margin-top:0;}
+.itemtList1 > li > a {display:block;}
+.itemtList1 > li .thumb {height:259px; overflow:hidden;}
+.itemtList1 > li .thumb img {width:100%; max-width:100%; max-height:100%; transition: 0.45s;}
+.itemtList1 > li .thumb img:hover {transform: scale(1.06);}
+.itemtList1 > li .inner {padding:20px 24px 18px 24px; border-top:1px solid #c5c5c5;}
+.itemtList1 > li .inner .desc {height:48px; font-size:18px; color:#454545; line-height:24px; overflow:hidden;}
+.itemtList1 > li .inner .date {height:24px; margin-top:20px; padding-left:22px; background:url(../images/common/icon/icon_calendar.png) no-repeat left 3px;}
+.itemtList1 > li .inner .date > em {display:inline-block; font-size:14px; color:#777; line-height:22px;}
+
+.itemtList1 li:nth-child(1),
+.itemtList1 li:nth-child(3n + 1) { animation-delay: 0s;}
+.itemtList1 li:nth-child(2),
+.itemtList1 li:nth-child(3n + 2) { animation-delay: 0.2s;}
+.itemtList1 li:nth-child(3),
+.itemtList1 li:nth-child(3n + 3) { animation-delay: 0.4s;}
 
 /* 당첨자 발표 */
 .announce {display:inline-block; margin-left:12px; padding:0 10px; background:#812990; font-size:0; border-radius:2px;}
