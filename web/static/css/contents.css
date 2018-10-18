@@ -34,12 +34,15 @@
 
 
 /* 버튼 */
+.btnBox {text-align:center;}
 .btn {display:inline-block;}
 .btn.ty1 {position:relative; padding:0 20px;}
 .btn.ty1:before {content:''; position:absolute; top:0; left:0; width:20px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none;}
 .btn.ty1:after {content:''; position:absolute; top:0; right:0; width:20px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:2px solid #454545; border-left:none;}
 .btn.ty1 > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none;}
 .btn.ty1 .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:400; font-size:16px; color:#252525; background:#fff url(../images/common/btn/bg_btn1.png) no-repeat left center;}
+.btn.ty2 {width:200px; background:#353535; border-radius:2px; text-align:center;}
+.btn.ty2 span {display:block; font-size:18px; color:#fff; line-height:50px;}
 
 
 /* 탭 */
@@ -119,17 +122,21 @@
  * ============================== */
 /* 맴버십 */
 .affiliateCards {padding-top:100px; text-align:center;}
-.affiliateCards .inner {display:inline-block; padding-right:405px; min-height:214px;}
+.affiliateCards .inner {position:relative; display:inline-block; padding-right:405px; min-height:214px;}
+.affiliateCards .inner .cardImg {position:absolute; top:0; right:0; width:340px; height:214px;}
+.affiliateCards .inner .cardImg img {display:block;}
 .affiliateCards .inner .txt {padding-top:12px; font-size:32px; color:#252525;}
 .affiliateCards .inner .txt strong {font-size:32px; font-weight:normal;}
 .affiliateCards .inner .txt span {display:block; padding-top:43px; font-size:16px; color:#888;}
 .affiliateCards .inner .txt + .btnBox {padding-top:28px;}
 
+/*
 .affiliateCards.keb .inner {background:url(../images/membership/img_kebcard.png) no-repeat right top;}
 .affiliateCards.woori .inner {background:url(../images/membership/img_wooricard.png) no-repeat right top;}
 .affiliateCards.lotte .inner {background:url(../images/membership/img_lottecard.png) no-repeat right top;}
 .affiliateCards.kb .inner {background:url(../images/membership/img_kbcard.png) no-repeat right top;}
 .affiliateCards.nh .inner {background:url(../images/membership/img_nhcard.png) no-repeat right top;}
+*/
 
 .affiliateCards + .table {margin-top:115px;}
 
@@ -146,9 +153,10 @@
 .eventList > li .thumb {height:259px; overflow:hidden;}
 .eventList > li .thumb img {width:100%; max-width:100%; max-height:100%; transition: 0.45s;}
 .eventList > li .thumb img:hover {transform: scale(1.06);}
-.eventList > li .inner {padding:20px 24px 24px 24px; border-top:1px solid #c5c5c5;}
+.eventList > li .inner {padding:20px 24px 18px 24px; border-top:1px solid #c5c5c5;}
 .eventList > li .inner .desc {height:48px; font-size:18px; color:#454545; line-height:24px; overflow:hidden;}
-.eventList > li .inner .date {margin-top:20px; padding-left:22px; font-size:14px; color:#777; background:url(../images/common/icon/icon_calendar.png) no-repeat left center;}
+.eventList > li .inner .date {height:24px; margin-top:20px; padding-left:22px; background:url(../images/common/icon/icon_calendar.png) no-repeat left 3px;}
+.eventList > li .inner .date > em {display:inline-block; font-size:14px; color:#777; line-height:22px;}
 
 .eventList li:nth-child(1),
 .eventList li:nth-child(3n + 1) { animation-delay: 0s;}
@@ -156,3 +164,29 @@
 .eventList li:nth-child(3n + 2) { animation-delay: 0.2s;}
 .eventList li:nth-child(3),
 .eventList li:nth-child(3n + 3) { animation-delay: 0.4s;}
+
+/* 당첨자 발표 */
+.announce {display:inline-block; margin-left:12px; padding:0 10px; background:#812990; font-size:0; border-radius:2px;}
+.announce > span {position:relative; display:block; padding-right:12px; font-size:12px; color:#fff; line-height:22px;}
+.announce > span:after {content:''; position:absolute; top:50%; right:0; margin-top:-5px; width:6px; height:10px; border-left:6px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent;}
+
+/* 이벤트 상세 */
+.detailPage {margin-top:45px;}
+.detailPage > .title {position:relative; padding:22px 235px 22px 25px; background:#f5f5f5; border-top:3px solid #353535; border-bottom:1px solid #353535;}
+.detailPage > .title .txt {height:22px; font-size:18px; color:#454545; line-height:22px;}
+.detailPage > .title .date {position:absolute; top:23px; right:25px; padding-left:22px; font-size:16px; background:url(../images/common/icon/icon_calendar2.png) 
+no-repeat left center;}
+.detailPage > .detailContent {padding:40px 20px 70px 20px; text-align:center;}
+.detailPage > .detailContent img {max-width:100%;}
+.detailPage > .detailNav {border-top:1px solid #c5c5c5; border-bottom:1px solid #c5c5c5;}
+.detailPage > .detailNav li {}
+.detailPage > .detailNav li + li {border-top:1px solid #c5c5c5;}
+.detailPage > .detailNav li > a {display:table; table-layout:fixed; width:100%; font-size:0;}
+.detailPage > .detailNav li > a em {display:table-cell; vertical-align:middle; width:180px; background:#e5e5e5; text-align:center;}
+.detailPage > .detailNav li > a em span {position:relative; display:inline-block; padding-right:80px; font-size:18px; color:#454545;}
+.detailPage > .detailNav li > a .prev span:before {content:''; position:absolute; top:6px; right:0; width:18px; height:10px; border-bottom:10px solid #666; border-left:9px solid transparent; border-right:9px solid transparent;}
+.detailPage > .detailNav li > a .prev span:after {content:''; position:absolute; top:8px; right:0; width:18px; height:10px; border-bottom:10px solid #e5e5e5; border-left:9px solid transparent; border-right:9px solid transparent;}
+.detailPage > .detailNav li > a .next span:before {content:''; position:absolute; top:6px; right:0; width:18px; height:10px; border-top:10px solid #666; border-left:9px solid transparent; border-right:9px solid transparent;}
+.detailPage > .detailNav li > a .next span:after {content:''; position:absolute; top:4px; right:0; width:18px; height:10px; border-top:10px solid #e5e5e5; border-left:9px solid transparent; border-right:9px solid transparent;}
+.detailPage > .detailNav li > a .listTxt {display:table-cell; vertical-align:middle; height:60px; padding:0 35px; font-size:18px; color:#454545;}
+.detailPage + .btnBox {margin-top:65px;}
