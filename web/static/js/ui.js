@@ -182,11 +182,25 @@ $(function(){
 			$(this).click(function(){
 				$(this).parent('.itemSelect').children('li').removeClass('on');
 				$(this).addClass('on');
-				$(this).closest('.itemWrap').children('.itemCont').removeClass('on');
-				$(this).closest('.itemWrap').children('.itemCont').eq(idx).addClass('on');
+				$(this).closest('.itemWrap').find('.itemCont').removeClass('on');
+				$(this).closest('.itemWrap').find('.itemCont').eq(idx).addClass('on');
+				slickInit();
 			});
 		});
 	});
+
+	// slider 
+	$('.slider1').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		adaptiveHeight: true
+	});
+
+	// slick init
+	function slickInit() {
+		$('.slider1').slick('setPosition');
+	}
 	
 
 
