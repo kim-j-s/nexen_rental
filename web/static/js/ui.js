@@ -63,6 +63,24 @@ $(function(){
 	/* ==============================
 	 * main 
 	 * ============================== */
+	
+	// 메인화면 띠베너
+	$('.bandBanner').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		dots: true
+	});
+
+	$('.mainCardBnr').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		arrows: false,
+		dots: true
+	});
 
 
 	/* ==============================
@@ -196,7 +214,6 @@ $(function(){
 		slidesToScroll: 1,
 		adaptiveHeight: true
 	});
-
 	// slick init
 	function slickInit() {
 		$('.slider1').slick('setPosition');

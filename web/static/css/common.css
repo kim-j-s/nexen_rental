@@ -10,7 +10,7 @@
 /* ==============================
  * header
  * ============================== */
-#headerWrap {background:#ddd; height:95px; text-align:center;}
+#headerWrap {position:relative; z-index:1; background:#ddd; height:95px; text-align:center;}
 
 /* ==============================
  * footer

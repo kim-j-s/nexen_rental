@@ -33,12 +33,36 @@
 .btnBox {text-align:center;}
 .btn {display:inline-block;}
 .btn.ty1 {position:relative; padding:0 20px;}
-.btn.ty1:before {content:''; position:absolute; top:0; left:0; width:20px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none;}
-.btn.ty1:after {content:''; position:absolute; top:0; right:0; width:20px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:2px solid #454545; border-left:none;}
-.btn.ty1 > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none;}
+.btn.ty1:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none; background:#fff;}
+.btn.ty1:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:2px solid #454545; border-left:none; background:#fff;}
+.btn.ty1 > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none; background:#fff;}
 .btn.ty1 .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:400; font-size:16px; color:#252525; background:#fff url(../images/common/btn/bg_btn1.png) no-repeat left center;}
 .btn.ty2 {width:200px; background:#353535; border-radius:2px; text-align:center;}
 .btn.ty2 span {display:block; font-size:18px; color:#fff; line-height:50px;}
+.btn.ty3 {position:relative; padding:0 9px;}
+.btn.ty3:before {content:''; position:absolute; top:0; left:1px; width:11px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:1px solid #888; border-right:none; background:#fff;}
+.btn.ty3:after {content:''; position:absolute; top:0; right:1px; width:11px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:1px solid #888; border-left:none; background:#fff;}
+.btn.ty3 > span {position:relative; display:block; padding:0 10px 0 0; line-height:20px; border:1px solid #888; border-left:none; border-right:none; font-size:12px; color:#888; background:#fff;}
+.btn.ty3 > span:after {content:''; position:absolute; top:50%; right:0; z-index:1; height:10px; margin-top:-5px; border-left:6px solid #812990; border-top:5px solid transparent; border-bottom:5px solid transparent;}
+.btn.ty4 {padding:0 9px; font-size:14px; color:#666; border:1px solid #c5c5c5; border-radius:2px; line-height:24px;}
+.btn.ty5 {padding:0 9px; font-size:16px; color:#fff; line-height:30px; background:#812990;}
+
+
+.tel {position:relative; display:inline-block; padding:0 20px;}
+.tel:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none; background:#fff;}
+.tel:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; border:2px solid #454545; border-left:none; background:#fff;}
+.tel > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none; background:#fff;}
+.tel .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:400; font-size:18px; color:#222; background:#fff url(../images/common/icon/icon_tel.png) no-repeat left center;}
+
+.btn.message {position:relative; padding:0 20px;}
+.btn.message:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; background:#812990;}
+.btn.message:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; background:#812990;}
+.btn.message > span {display:block; padding:14px 1px 13px 1px; background:#812990;}
+.btn.message .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:200; font-size:16px; color:#fff; background:#812990 url(../images/common/btn/bg_btn2.png) no-repeat left center;}
+
+.viewMoreBtn {position:relative; display:inline-block; width:28px; height:28px; font-size:0; text-indent:-999px; overflow:hidden; border:1px solid #999;}
+.viewMoreBtn:before {content:''; position:absolute; top:12px; left:6px; width:13px; border-bottom:1px solid #666;}
+.viewMoreBtn:after {content:''; position:absolute; top:6px; left:12px; width:1px; border-bottom:13px solid #666;}
 
 
 /* 탭 */
@@ -104,13 +128,28 @@
 .table.ty1 td {padding:13px 0 14px 0; text-align:center; border:1px solid #dee0ed; font-weight:normal; font-size:18px; color:#454545;}
 
 .table.ty2 {border-top:2px solid #353535;}
-.table.ty2 thead th {padding:25px 0 26px 0; text-align:center; font-weight:normal; font-size:16px; color:#454545; border:1px solid #c5c5c5; border-right:none;}
+.table.ty2 thead th {padding:25px 0 26px 0; text-align:center; font-weight:normal; font-size:16px; color:#454545; border:1px solid #c5c5c5; border-top:none; border-right:none;}
 .table.ty2 tbody td {padding:25px 0 26px 0; text-align:center; border:1px solid #c5c5c5; border-right:none; font-size:16px;}
 .table.ty2 tbody td.etc {padding:25px 32px 26px 32px;}
 .table.ty2 thead tr th:first-child, .table.ty2 tbody tr td:first-child {border-left:none;}
 
+.table.ty3 {border-top:2px solid #353535;}
+.table.ty3 thead th {padding:17px 0 20px 0; text-align:center; font-weight:normal; font-size:16px; color:#454545; border:1px solid #c5c5c5; border-top:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody td {padding:20px 5px 20px 5px; text-align:center; border:1px solid #c5c5c5; border-right:none; font-size:16px;}
+.table.ty3 tbody td.other {font-size:15px;}
+.table.ty3 tbody td.other.color1 {font-weight:400;}
+.table.ty3 thead tr th:first-child, .table.ty3 tbody tr td:first-child {border-left:none;}
+
+.orderInfo {display:inline-block; margin-left:20px; font-size:0; vertical-align:middle;}
+.orderInfo .txt {font-weight:400; font-size:16px; color:#666;}
+.orderInfo .txt > .date {display:block; padding-top:3px; font-weight:400; font-size:16px; color:#666;}
+.orderInfo .txt + .btnBox {margin-top:10px;}
+.orderNum {}
+.orderNum > a {display:inline-block; font-size:16px; color:#b6985a; border-bottom:1px solid #b6985a;}
+
 .table + .subTitle {margin-top:76px;}
 .table.ty2 + .box1 {margin-top:30px;}
+.table.ty3 + .list3 {margin-top:17px;}
 
 
 .box1 {background:#e7e2f2;}
@@ -150,6 +189,9 @@
 .contTitle {padding:45px 150px 0 0;}
 .contTitle > .txt {font-size:20px; color:#454545;}
 .contTitle + .itemtList1 {margin-top:30px;}
+.contTitle + .table.ty3 {margin-top:18px;}
+.contTitle + .apply {text-align:right; margin-top:-30px;}
+.contTitle + .apply + .table.ty3 {margin-top:18px;}
 
 .itemtList1 {overflow:hidden;}
 .itemtList1 > li {position:relative; float:left; width:364px; margin-top:50px; border:1px solid #c5c5c5;}

@@ -11,14 +11,13 @@
  * main
  * ============================== */
 
-.mainSection {padding:0 0 70px 0;}
+.mainSection {min-width:1200px; padding:0 0 70px 0;}
 .mainSection > .inner {width:1200px; margin:0 auto; padding:62px 0 0 0;}
 .mainSection > .inner h1 {font-family:'Raleway'; font-weight:800; font-size:36px; color:#333; text-align:center;}
 .mainSection > .inner h2 {font-size:24px; color:#777; text-align:center;}
 .mainSection > .inner h1 + h2 {margin-top:12px;}
 .mainSection > .inner h2 + .itemWrap {margin-top:42px;}
-
-
+.mainSection > .inner h2 + .rentalServiceLink {margin-top:48px;}
 .mainSection.etc {position:relative; padding:0 0 66px 0; background:#f5f5f5;}
 .mainSection.etc > .inner {padding:65px 0 0 0;}
 .mainSection.etc > .inner h1 {font-family:'Noto Sans'; font-weight:normal; font-size:32px; color:#333;}
@@ -50,3 +49,65 @@
 .serviceFlow > ol li:nth-child(5) {animation-delay: 0.4s;}
 .serviceFlow > ol li:nth-child(6) {animation-delay: 0.5s;}
 .serviceFlow > ol li:nth-child(7) {animation-delay: 0.6s;}
+
+.rentalServiceLink {overflow:hidden; border-top:1px solid #999; border-bottom:1px solid #999;}
+.rentalServiceLink .rsl1 {padding:38px 39px 0 0; float:left; width:599px; height:270px; background:url(../images/main/bg_nexennew1.png) no-repeat; text-align:right;}
+.rentalServiceLink .rsl1 > .txt {text-align:right; font-weight:400; font-size:26px; color:#222; line-height:34px;}
+.rentalServiceLink .rsl1 .btnDiv1 {margin:14px 17px 0 0;}
+.rentalServiceLink .rsl1 .rntService {display:inline-block; font-size:15px; color:#454545;}
+.rentalServiceLink .rsl1 .btnDiv2 {margin:40px 0 0 0;}
+.rentalServiceLink .rsl1 .tip {display:inline-block; width:220px; height:62px; padding:11px 0 0 16px; border:1px solid #666; border-radius:2px; background:#fff url(../images/main/bg_tipbtn.png) no-repeat right center; text-align:left; font-size:15px; color:#777;}
+.rentalServiceLink .rsl1 .tip span {display:block; font-weight:normal; font-size:16px; color:#812990;}
+
+.rentalServiceLink .rsl2 {float:left; width:601px; border-left:1px solid #e5e5e5;}
+.rentalServiceLink .rsl2 {overflow:hidden;}
+.rentalServiceLink .rsl2 li {position:relative; float:left; width:300px; height:136px; padding:37px 0 0 40px;}
+.rentalServiceLink .rsl2 li:nth-child(1) {background:#f5f5f5;}
+.rentalServiceLink .rsl2 li:nth-child(4) {background:#f5f5f5;}
+.rentalServiceLink .rsl2 li:nth-child(2n + 2) {border-left:1px solid #e5e5e5;}
+.rentalServiceLink .rsl2 li:nth-child(-n + 2) {height:134px;}
+.rentalServiceLink .rsl2 li > .txt {font-size:15px; line-height:19px;}
+.rentalServiceLink .rsl2 li > .txt + .btnDiv {margin-top:11px;}
+.rentalServiceLink .rsl2 li:after {content:''; position:absolute; top:40px; right:40px; width:65px; height:59px; background:url(../images/main/bg_nexennew2.png) no-repeat 0 0;}
+.rentalServiceLink .rsl2 li.ty1:after {background-position:0 0;}
+.rentalServiceLink .rsl2 li.ty2:after {background-position:0 -59px;}
+.rentalServiceLink .rsl2 li.ty3:after {background-position:0 -118px;}
+.rentalServiceLink .rsl2 li.ty4:after {background-position:0 -177px;}
+
+.mainBandBanner {min-width:1200px; background:#422e5c;}
+.mainBandBanner .inner {width:1200px; margin:0 auto;}
+.mainBandBanner .inner .slick-prev {position:absolute; top:87px; left:-40px; width:25px; height:47px; background:url(../images/common/btn/btn_arrow2.png) no-repeat 0 0; text-indent:-999px; overflow:hidden;}
+.mainBandBanner .inner .slick-next {position:absolute; top:87px; right:-40px; width:25px; height:47px; background:url(../images/common/btn/btn_arrow2.png) no-repeat 0 -47px; text-indent:-999px; overflow:hidden;}
+.mainBandBanner .inner .slick-dots {position:absolute; bottom:18px; left:0; z-index:1; width:100%; text-align:center;}
+.mainBandBanner .inner .slick-dots > li {display:inline-block; width:12px; height:12px; margin:0 4px; background:#8e829d; overflow:hidden; text-indent:-999px; border-radius:50%; cursor:pointer;}
+.mainBandBanner .inner .slick-dots > .slick-active {background:#fff;}
+
+.neCont {margin-top:48px; overflow:hidden;}
+.neCont + .neCont {margin-top:36px;}
+.neCont .mainCardBnr {position:relative; float:left; width:560px; height:250px; border:1px solid #999;}
+.neCont .mainCardBnr .slick-dots {position:absolute; bottom:20px; left:0; width:100%; text-align:center;}
+.neCont .mainCardBnr .slick-dots > li {display:inline-block; width:12px; height:12px; margin:0 4px; overflow:hidden; text-indent:-999px; background:#b2b2b2; border-radius:50%; cursor:pointer;}
+.neCont .mainCardBnr .slick-dots > .slick-active {background:#9851a5;}
+.neCont .mainYoutube {float:right; width:560px; height:250px; border:1px solid #999;}
+.neCont .mainYoutube iframe {width:100%; height:100%;}
+
+.neCont .neTable {position:relative; width:560px; float:left;}
+.neCont .neTable + .neTable {margin-left:80px;}
+.neCont .neTable h3 {font-weight:400; font-size:24px; color:#222;}
+.neCont .neTable h3 + .noticeList {margin-top:21px;}
+.neCont .neTable .viewMoreBtn {position:absolute; top:4px; right:0;}
+
+.noticeList {border-top:1px solid #999; border-bottom:1px solid #999;}
+.noticeList > li {position:relative; padding:0 93px 0 10px;}
+.noticeList > li + li {border-top:1px dotted #999;}
+.noticeList > li > a {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:49px;}
+.noticeList > li .date {position:absolute; top:0; right:0; width:93px; text-align:center; font-size:15px; color:#888; line-height:49px;}
+
+.mainCs {min-width:1200px; background:#f5f5f5;}
+.mainCs .inner {width:1200px; height:120px; margin:0 auto; padding:39px 0 0 0; background:url(../images/main/bg_cs.png) no-repeat 67px 33px; vertical-align:top;}
+.mainCs .inner h1 {position:relative; top:-14px; display:inline-block; font-weight:normal; font-size:24px; color:#222;}
+.mainCs .inner .txt {display:inline-block; margin-left:56px; font-weight:400; font-size:20px; color:#555;}
+.mainCs .inner .txt span {display:block; padding-top:5px; font-size:16px; color:#888;}
+.mainCs .inner .etc {float:right;}
+.mainCs .inner .etc > * {float:left;}
+.mainCs .inner .etc .btn {margin-left:10px;}

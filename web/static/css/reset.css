@@ -74,6 +74,8 @@ button span{
 
 .ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
+.color1 {color:#812990 !important;}
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
