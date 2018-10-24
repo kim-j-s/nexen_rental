@@ -328,6 +328,7 @@ no-repeat left center;}
 .detailPage + .btnBox {margin-top:65px;}
 
 
+
 /* slider 1 */
 .slider1 {margin:0 -16px;}
 .slider1 .item {margin:0 16px; border:1px solid #999;}
@@ -447,3 +448,13 @@ p.mark1 {display:block;}
 
 /* datepicker */
 .ui-datepicker-current {display:none;}
+
+/* add style by shaina  */
+
+.contTitleWrap { overflow: hidden;padding:15px 0;}
+.contTitleWrap .contTitle {float:left;}
+.contTitleWrap .keyword {float:right;margin:40px 0 0 0;}
+
+.table.ty3 tbody td.link {padding:20px 32px; text-align: left}
+
+.pagenation.list {margin-top: 55px;}
