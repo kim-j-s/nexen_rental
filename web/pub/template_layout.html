@@ -42,48 +42,13 @@
     </script>
     <!-- //2018.05.16 -->
     <style>
-        body {
-            padding: 0 20px;
-            padding-bottom: 200px;
-            padding-top: 80px;
-        }
-
-        h1 {
-            font-size: 30px;
-            padding: 0 20px;
-        }
-
-        h2 {
-            padding: 20px 0;
-            margin-top: 20px;
-            border-top: 1px dashed #666666;
-            font-size: 20px;
-        }
-
-        .box {
-            margin-top: 20px;
-            border: 1px solid #E3E3E3
-        }
-
-        .maping {
-            position: fixed;
-            z-index: 1000;
-            top: 5px;
-            left: 0;
-            width: 100%;
-            padding: 5px;
-            padding-bottom: 0;
-            border: 1px solid blue;
-            background: #fff;
-        }
-
-        .maping a {
-            display: inline-block;
-            padding: 3px;
-            margin-bottom: 5px;
-            border: 1px solid #333;
-        }
-    </style>
+        body { padding:0 20px; padding-bottom:200px; padding-top:80px;}
+	h1 { font-size:30px; padding:0 20px;}
+	h2 { padding:20px 0; margin-top:20px; border-top:1px dashed #666666; font-size:20px;}
+	.box { margin-top:20px; border:1px solid #E3E3E3}
+	.maping {position:fixed; z-index:1000; top:5px; left:0; width:100%; padding:5px; padding-bottom:0; border:1px solid blue; background:#fff;}
+	.maping a {display:inline-block; padding:3px; margin-bottom:5px; border:1px solid #333;}
+</style>
 </head>
 
 <body>
@@ -139,7 +104,7 @@
     <!-- //souce code 뷰어 -->
 
 
-    <h2 id="">케이스 타이틀</h2>
+    <h2 id="">테이블 2</h2>
     <!-- content -->
     <div class="table ty2">
         <table>
@@ -197,6 +162,154 @@
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
+
+    <h2 id="">테이블 3</h2>
+    <!-- content -->
+    <div class="table ty3">
+        <table>
+            <caption>걱정제로서비스 주문 정보</caption>
+            <colgroup>
+                <col style="width:34%;">
+                <col style="width:15%;">
+                <col style="width:8%;">
+                <col style="width:8%;">
+                <col style="width:8%;">
+                <col style="width:9%;">
+                <col style="width:9%;">
+                <col style="width:9%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">주문 상품 정보(장착일자)</th>
+                    <th scope="col">주문일자(주문번호)</th>
+                    <th scope="col">계약본수</th>
+                    <th scope="col">계약기간</th>
+                    <th scope="col">차종</th>
+                    <th scope="col">차량No</th>
+                    <th scope="col">타이어<br /> 잔여본수</th>
+                    <th scope="col">신청상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="../static/images/sample/tire3.jpg" alt="" />
+                        <div class="orderInfo">
+                            <p class="txt">
+                                NFERA AU5 215/60R16 4p
+                                <span class="date">(2018.10.30)</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        2018.03.03
+                        <div class="orderNum">
+                            <a href="#">(O1505453001192)</a>
+                        </div>
+                    </td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>트라제XG</td>
+                    <td>24주2600</td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="table ty3">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:34%;">
+						<col style="width:15%;">
+						<col style="width:8%;">
+						<col style="width:8%;">
+						<col style="width:8%;">
+						<col style="width:9%;">
+						<col style="width:9%;">
+						<col style="width:9%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+    <h2 id="">테이블 4</h2>
+    <!-- content -->
+    <div class="table ty4">
+        <table>
+            <caption>주문자 정보 표시</caption>
+            <colgroup>
+                <col style="width:350px;">
+                <col style="">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">주문번호</th>
+                    <td>
+                        <div class="inputBox">
+                            <input type="text" class="inp" disabled="disabled" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="table ty4">
+				<table>
+					<caption></caption>
+					<colgroup>
+						<col style="width:350px;">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
 
     <h2 id="">리스트</h2>
     <!-- content -->

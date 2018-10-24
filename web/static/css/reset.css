@@ -36,22 +36,21 @@ button span{
 
 /* placeholder */
 ::-webkit-input-placeholder {/* Chrome/Opera/Safari */
-  font-size:13px;
-  color: #999;
+  font-size:14px;
+  color: #b5b5b5;
 }
 ::-moz-placeholder {/* Firefox 19+ */
-  font-size:13px;
-  color: #999;
-}
-:-ms-input-placeholder {/* IE 10+ */
-  font-size:13px;
-  color: rgba(153,153,153,0.1);
-  color: #999;
+  font-size:14px;
+  color: #b5b5b5;
 }
 :-moz-placeholder {/* Firefox 18- */
-  font-size:13px;
-  color: #999;
+  font-size:14px;
+  color: #b5b5b5;
 }
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(181,181,181,0.8);
+}
+
 
 .tl {text-align:left !important;}
 .tr {text-align:right !important;}
@@ -76,6 +75,8 @@ button span{
 
 .color1 {color:#812990 !important;}
 
+
+.ml10 {margin-left:10px;}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 

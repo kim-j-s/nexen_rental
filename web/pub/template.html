@@ -42,52 +42,14 @@
     </script>
     <!-- //2018.05.16 -->
     <style>
-        body {
-            padding: 0 20px;
-            padding-bottom: 200px;
-            padding-top: 80px;
-        }
-
-        h1 {
-            font-size: 30px;
-            padding: 0 20px;
-        }
-
-        h2 {
-            padding: 20px 0;
-            margin-top: 20px;
-            border-top: 1px dashed #666666;
-            font-size: 20px;
-        }
-
-        .box {
-            margin-top: 20px;
-            border: 1px solid #E3E3E3
-        }
-
-        .maping {
-            position: fixed;
-            z-index: 1000;
-            top: 5px;
-            left: 0;
-            width: 100%;
-            padding: 5px;
-            padding-bottom: 0;
-            border: 1px solid blue;
-            background: #fff;
-        }
-
-        .maping a {
-            display: inline-block;
-            padding: 3px;
-            margin-bottom: 5px;
-            border: 1px solid #333;
-        }
-
-        .btnBox+.btnBox {
-            margin-top: 10px;
-        }
-    </style>
+        body { padding:0 20px; padding-bottom:200px; padding-top:80px;}
+	h1 { font-size:30px; padding:0 20px;}
+	h2 { padding:20px 0; margin-top:20px; border-top:1px dashed #666666; font-size:20px;}
+	.box { margin-top:20px; border:1px solid #E3E3E3}
+	.maping {position:fixed; z-index:1000; top:5px; left:0; width:100%; padding:5px; padding-bottom:0; border:1px solid blue; background:#fff;}
+	.maping a {display:inline-block; padding:3px; margin-bottom:5px; border:1px solid #333;}
+	.btnBox + .btnBox {margin-top:10px;}
+</style>
 </head>
 
 <body>
@@ -107,6 +69,66 @@
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
+
+    <h2 id="">인풋</h2>
+    <!-- content -->
+    <div class="inputBox">
+        <input type="text" class="inp" />
+    </div>
+    <div class="inputBox">
+        <input type="text" class="inp error" />
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="inputBox">
+				<input type="text" class="inp" />
+			</div>
+
+			<div class="inputBox">
+				<input type="text" class="inp error" />
+			</div>
+		</pre>
+    </div>
+
+    <h2 id="">셀렉트</h2>
+    <!-- content -->
+    <select name="" id="" style="width:130px;" class="selectbox">
+        <option value="">본수</option>
+        <option value="">1본</option>
+        <option value="">2본</option>
+    </select>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<select name="" id="" style="width:130px;" class="selectbox">
+				<option value=""></option>
+			</select>
+		</pre>
+    </div>
+
+    <h2 id="">체크박스</h2>
+    <!-- content -->
+    <div class="checkbox">
+        <input type="checkbox" name="" id="check" /><label for="check">체크박스</label>
+    </div>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<div class="checkbox">
+				<input type="checkbox" name="" id="check" /><label for="check">체크박스</label>
+			</div>
+		</pre>
+    </div>
+
+
+
 
     <h2 id="">버튼</h2>
     <!-- content -->
@@ -129,7 +151,27 @@
     </div>
 
     <div class="btnBox">
+        <a href="#" class="btn ty6">렌탈 전문점 찾기</a>
+    </div>
+
+    <div class="btnBox">
+        <a href="#" class="btn ty7"><span>ty7</span></a>
+    </div>
+
+    <div class="btnBox">
+        <a href="#" class="btn ty8"><span>ty8</span></a>
+    </div>
+
+    <div class="btnBox">
+        <a href="#" class="btn ty9">ty9</a>
+    </div>
+
+    <div class="btnBox">
         <a href="#" class="viewMoreBtn">더보기</a>
+    </div>
+
+    <div class="btnBox">
+        <a href="#" class="btn sch"><span>검색</span></a>
     </div>
     <!-- content -->
 
@@ -150,7 +192,11 @@
 
 			<a href="#" class="btn ty5"><span>서비스 신청하기</span></a>
 
+			<a href="#" class="btn ty6">렌탈 전문점 찾기</a>
+
 			<a href="#" class="viewMoreBtn">더보기</a>
+
+			<a href="#" class="btn sch"><span>검색</span></a>
 
 		</pre>
     </div>
@@ -294,6 +340,19 @@
 				<a href="#" class="pb next">다음보기</a>
 				<a href="#" class="pb last">마지막</a>
 			</div>
+		</pre>
+    </div>
+    <!-- //souce code 뷰어 -->
+
+    <h2 id="">당구장</h2>
+    <!-- content -->
+    <span class="mark1">장착 요청일은 <strong>3일 이후 부터</strong> 선택 가능합니다.</span>
+    <!-- content -->
+
+    <!-- souce code 뷰어 -->
+    <div class="box">
+        <pre class="brush: html;">
+			<span class="mark1"><strong></strong></span>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->

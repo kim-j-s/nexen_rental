@@ -8,12 +8,10 @@ $(function(){
 	selectMakeUI();
 
 	//datepicker
-	if($('.datepicker').size() > 0){
-		$( '.datepicker' ).datepicker({
+	$(".datepicker").datepicker({
 			closeText: '닫기',
 			prevText: '이전 달',
 			nextText: '다음 달',
-			currentText: '오늘',			
 			monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
             monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
 			dayNames: ['일','월','화','수','목','금','토'],
@@ -23,11 +21,8 @@ $(function(){
 			showMonthAfterYear: true,
 			changeMonth: true,
       		changeYear: true,
-      		yearSuffix: '년',
-			showOn: 'button',
-			buttonText: '기간조회'
+			showButtonPanel: true
 		});
-	}
 
 	//swiper
 	if($('.swiper').size() != 0){
@@ -218,6 +213,31 @@ $(function(){
 	function slickInit() {
 		$('.slider1').slick('setPosition');
 	}
+
+
+
+	// popup
+	$('.popupOpen').click(function(e){
+		var NameValue = $(this).data('name');
+		console.log(NameValue);
+		e.preventDefault();
+		popupOpen(NameValue);
+	});
+
+	function popupOpen(name) {
+		$('.'+ name).addClass('on');
+	}
+
+	$('.layerPopupWrap > .bg').click(function(){
+		LayerpopupClose();
+	});
+	$('.layerClose').click(function(e){
+		e.preventDefault();
+		LayerpopupClose();
+	});
+	function LayerpopupClose(){
+		$('.layerPopupWrap').removeClass('on');
+	};
 	
 
 
