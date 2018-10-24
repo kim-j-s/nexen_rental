@@ -193,9 +193,12 @@ td .textarea {width:100%;}
 .table.ty4 {border-top:2px solid #353535;}
 .table.ty4 table {width:100%;}
 .table.ty4 table tbody th {padding:0 10px 0 80px; background:#f8f8f8; border-bottom:1px solid #e6e6e6; text-align:left; font-weight:400; font-size:16px; color:#454545;}
+.table.ty4 table tbody th.tc {padding:0;}
 .table.ty4 table tbody th label {font-weight:400; font-size:16px; color:#454545; cursor:pointer;}
 .table.ty4 table tbody td {padding:14px 20px; border-bottom:1px solid #e6e6e6; font-size:14px; color:#666;}
+.table.ty4.etc table tbody td {padding:7px 20px;}
 .table.ty4 table tbody td .inputBox {width:360px; color:#666;}
+
 
 .table.ty4 table tbody td .telGroup {display:inline-block; vertical-align:middle;}
 .table.ty4 table tbody td .telGroup .inputBox {width:130px;}
@@ -406,20 +409,10 @@ p.mark1 {display:block;}
 .storeInfo > dd {padding-top:10px;}
 .storeInfo > dd .storeAddress {margin-bottom:22px; font-size:14px; color:#888;}
 .iconGroup {display:inline-block; overflow:hidden; vertical-align:middle; font-size:0;}
-.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; font-size:10px; color:#666; text-align:center;}
+.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; font-size:10px; color:#666; text-align:center; vertical-align:middle;}
 .serviceIcon + .serviceIcon {margin-left:10px;}
 .serviceIcon + .serviceIcon.ty4 {margin-left:7px;}
 .serviceIcon.ty4 + .serviceIcon {margin-left:6px;}
-/*
-.iconGroup > .serviceIcon:after {content:''; position:absolute; top:0; left:50%; margin-left:-15px; width:30px; height:30px; background:url(../images/board/bg_icongroup.png) no-repeat 0 0;}
-.iconGroup > .serviceIcon.ty1:after {background-position:0 0;}
-.iconGroup > .serviceIcon.ty2:after {background-position:0 -30px;}
-.iconGroup > .serviceIcon.ty3:after {background-position:0 -60px;}
-.iconGroup > .serviceIcon.ty4:after {background-position:0 -90px;}
-.iconGroup > .serviceIcon.ty5:after {background-position:0 -120px;}
-.iconGroup > .serviceIcon.ty6:after {background-position:0 -150px;}
-*/
-
 .serviceIcon:after {content:''; position:absolute; top:0; left:50%; margin-left:-15px; width:30px; height:30px; background:url(../images/board/bg_icongroup.png) no-repeat 0 0;}
 .serviceIcon.ty1:after {background-position:0 0;}
 .serviceIcon.ty2:after {background-position:0 -30px;}
@@ -427,6 +420,25 @@ p.mark1 {display:block;}
 .serviceIcon.ty4:after {background-position:0 -90px;}
 .serviceIcon.ty5:after {background-position:0 -120px;}
 .serviceIcon.ty6:after {background-position:0 -150px;}
+
+.viewContent {margin-top:14px; padding-top:8px; overflow:hidden; border-top:2px solid #353535;}
+.viewContent > .visualContent {float:left; width:747px; height:300px; border:1px solid #e2dddb;}
+.viewContent > .visualContent .mapArea {display:none;}
+.viewContent > .visualContent .mapArea.on {display:block;}
+.viewContent > .visualContent .imgVisual {height:298px; display:none;}
+.viewContent > .visualContent .imgVisual.on {display:block;}
+.viewContent > .visualContent .imgVisual img {width:100%; height:100%;}
+.viewContent > .visualList {position:relative; float:right; width:150px; height:300px; overflow:hidden;}
+.viewContent > .visualList > ul {position:absolute; top:0; left:0; width:100%;}
+.viewContent > .visualList > ul li {position:relative; width:150px; height:88px; transition: 0.45s; font-size:0; text-align:center;}
+.viewContent > .visualList > ul li:hover:after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #812990; box-sizing:border-box;}
+.viewContent > .visualList > ul li img {display:inline-block; width:100%; height:100%; vertical-align:middle;}
+.viewContent > .visualList > ul li + li {margin-top:18px;}
+.viewContent > .visualList .btnVL {position:absolute; left:60px; width:30px; height:30px; z-index:1; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_visualList.png) no-repeat 0 -30px;}
+.viewContent > .visualList .btnVL.btn_prev {display:none;top:0;}
+.viewContent > .visualList .btnVL.btn_prev.on {display:block;}
+.viewContent > .visualList .btnVL.btn_next {bottom:0; background-position:0 0;}
+.viewContent + .table.ty4 {margin-top:10px;}
 
 .keyword {}
 .keyword .inputBox {width:300px; float:left;}

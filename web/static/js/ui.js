@@ -238,6 +238,85 @@ $(function(){
 	function LayerpopupClose(){
 		$('.layerPopupWrap').removeClass('on');
 	};
+
+	
+	// visual list
+	$('.visualList').mouseenter(function(){
+		$("p:first",this).text("mouse enter");
+		$('.visualContent').find('.mapArea').removeClass('on');
+		$('.visualContent').find('.imgVisual').addClass('on');
+	}).mouseleave(function(){
+		$('.visualContent').find('.mapArea').addClass('on');
+		$('.visualContent').find('.imgVisual').removeClass('on');
+	});
+	
+	$('.visualList').find('li').each(function(){
+		$(this).mouseenter(function(){
+			var thisImg = $(this).html();
+			$('.imgVisual').find('img').remove();
+			$('.imgVisual').append(thisImg);
+		});
+	});
+
+	var visualListLng = $('.visualList').find('li').length;
+	var MaxEvent = visualListLng - 3;
+	console.log(MaxEvent);
+	var visualListClickCnt = 0;
+	if (visualListLng < 3)
+	{
+		$('.visualList').find('.btnVL').hide();
+	}
+
+	$('.visualList').find('.btn_next').click(function(){
+		visualListClickCnt++;
+		if (visualListClickCnt < MaxEvent + 1)
+		{
+			move = visualListClickCnt * -106;
+			$('.visualListCont').stop(true, true).animate({
+				top:move
+			}, function(){
+				if (visualListClickCnt == MaxEvent)
+				{
+					$('.visualList').find('.btn_next').hide();
+				}
+			});
+			BtnChk();
+			console.log(visualListClickCnt);
+		} else {
+			visualListClickCnt = MaxEvent;
+		}
+	});
+
+	$('.visualList').find('.btn_prev').click(function(){
+		visualListClickCnt--;
+		if (visualListClickCnt > -1)
+		{
+			move = visualListClickCnt * -106;
+			$('.visualListCont').stop(true, true).animate({
+				top:move
+			}, function(){
+				if (visualListClickCnt == 0)
+				{
+					$('.visualList').find('.btn_prev').hide();
+				}
+			});
+			BtnChk();
+			console.log(visualListClickCnt + 'prev');
+		} else {
+			visualListClickCnt = 0;
+		}
+	});
+
+	function BtnChk() {
+		if (visualListClickCnt >= 1)
+		{
+			$('.visualList').find('.btn_prev').show();
+		}
+		if (visualListClickCnt <= MaxEvent)
+		{
+			$('.visualList').find('.btn_next').show();
+		}
+	}
 	
 
 
