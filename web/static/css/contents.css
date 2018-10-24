@@ -440,7 +440,7 @@ p.mark1 {display:block;}
 .viewContent > .visualList .btnVL.btn_next {bottom:0; background-position:0 0;}
 .viewContent + .table.ty4 {margin-top:10px;}
 
-.keyword {}
+.keyword {overflow:hidden;}
 .keyword .inputBox {width:300px; float:left;}
 .keyword .inputBox .inp {border:1px solid #fff; border-bottom:1px solid #d5d5d5;}
 .keyword .btn {float:left;}
