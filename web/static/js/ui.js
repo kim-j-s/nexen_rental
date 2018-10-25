@@ -202,6 +202,43 @@ $(function(){
 		});
 	});
 
+	// 약관 동의 체크박스
+	$('.checkbox.all').click(function(){
+		 var chkbox = $(this).find('input');
+		 if (chkbox.prop('checked'))
+		 {
+			 $(this).closest('.agreeWrap').find('.inner').find('input').prop("checked",true);
+		 } else {
+			 $(this).closest('.agreeWrap').find('.inner').find('input').prop("checked",false);
+		 }
+	 });
+
+	 $('.agreeWrap > .inner').find('input').each(function(){
+		$(this).click(function(){
+			if (!$(this).prop('checked'))
+			{
+				$(this).closest('.agreeWrap').find('.checkbox.all').find('input').prop("checked",false);
+			}
+		});
+	});
+
+	// faq
+	var faqList = $('.faqWrap > li')
+	$(faqList).each(function(faq){
+		$(this).click(function(){
+			if ( $(this).hasClass('on') )
+			{
+				$(faqList).removeClass('on');
+				$(faqList).find('.faqA').slideUp(200);
+			} else {
+				$(faqList).removeClass('on');
+				$(faqList).find('.faqA').slideUp(200);
+				$(this).addClass('on');
+				$(this).find('.faqA').slideDown(200);
+			}
+		});
+	});
+
 	// slider 
 	$('.slider1').slick({
 		infinite: true,
@@ -260,7 +297,6 @@ $(function(){
 
 	var visualListLng = $('.visualList').find('li').length;
 	var MaxEvent = visualListLng - 3;
-	console.log(MaxEvent);
 	var visualListClickCnt = 0;
 	if (visualListLng < 3)
 	{
@@ -281,7 +317,6 @@ $(function(){
 				}
 			});
 			BtnChk();
-			console.log(visualListClickCnt);
 		} else {
 			visualListClickCnt = MaxEvent;
 		}
@@ -301,7 +336,6 @@ $(function(){
 				}
 			});
 			BtnChk();
-			console.log(visualListClickCnt + 'prev');
 		} else {
 			visualListClickCnt = 0;
 		}
@@ -317,7 +351,7 @@ $(function(){
 			$('.visualList').find('.btn_next').show();
 		}
 	}
-	
+
 
 
 });
