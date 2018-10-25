@@ -1,6 +1,9 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+
 /* font */
+/*
 @font-face {
  font-family: 'Noto Sans';
  font-weight:normal;
@@ -61,6 +64,7 @@
       url('../../fonts/NotoSans-Regular.otf') format('otf'),
       url('../../fonts/NotoSans-Regular.ttf') format('truetype');
 }
+*/
 
 
 
