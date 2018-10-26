@@ -74,6 +74,8 @@ button span{
 .ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
 .color1 {color:#812990 !important;}
+.color2 {color:#6a2276 !important;}
+.color3 {color:#b6985a !important;}
 
 .mt10 {margin-top:10px;}
 .ml10 {margin-left:10px;}
