@@ -60,6 +60,49 @@ $(function(){
 	/* ==============================
 	 * main 
 	 * ============================== */
+
+	var viewLeft = $('.mainFind.case1').find('a');
+	var viewRight = $('.mainFind.case2').find('a');
+	var mainMove = $('#mainWrap > .inner');
+
+	$(viewLeft).click(function(){
+		$(mainMove).animate({
+			left:'0'
+		},500, function(){
+			$('.mainContent.centerCont').css('height','0');
+		});
+	});
+	$(viewRight).click(function(){
+		$(mainMove).animate({
+			left:'-200%'
+		},500, function(){
+			$('.mainContent.centerCont').css('height','0');
+		});
+	});
+
+	$('.mainContent.leftCont').click(function(){
+		MoveCenter();
+	});
+	$('.centerGo').click(function(){
+		MoveCenter();
+	});
+
+	function MoveCenter() {
+		$('.mainContent.centerCont').css('height','auto');
+		$(mainMove).animate({
+			left:'-100%'
+		},500);
+	}
+
+	// switch
+	$('.typeSwitch').each(function(){
+		$(this).find('.switchBtn').eq(1).click(function(){
+			$(this).closest('.inner').addClass('on');
+		});
+		$(this).find('.switchBtn').eq(0).click(function(){
+			$(this).closest('.inner').removeClass('on');
+		});
+	});
 	
 	// 메인화면 띠베너
 	$('.bandBanner').slick({
@@ -77,6 +120,24 @@ $(function(){
 		adaptiveHeight: true,
 		arrows: false,
 		dots: true
+	});
+
+	// 공통
+	// window height
+	var winHeight = $(window).height();
+
+	$(window).resize(function(){
+		var winHeight = $(window).height();
+		$('.mainVisual').height(winHeight);
+	});
+	$('.mainVisual').height(winHeight);
+
+	$('.goPage').click(function(){
+		movement = $('.mainVisual').height();
+		$('body, html').animate({
+			scrollTop:movement
+		},500);
+
 	});
 
 
