@@ -68,6 +68,21 @@ $(function(){
 	/* ==============================
 	 * content 
 	 * ============================== */
+	// affiliate card 
+	var menuCard = $('.menuCard > .sectionTitle')
+	var menuCardList = $('.menuCard > ul')
+	
+	$(menuCard).click(function(){
+		if ( $(menuCard).hasClass('on') )
+		{
+			$(menuCard).removeClass('on');
+			$(menuCardList).slideDown(200);
+		} else {
+			$(menuCardList).slideUp(200);
+			$(menuCard).addClass('on');
+		}
+	});
+
 	 
 });
 
