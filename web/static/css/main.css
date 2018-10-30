@@ -22,8 +22,6 @@
 .mainFind .desc {position:relative; padding-top:22px; font-size:17px; color:#d5d5d5; text-align:center; line-height:30px;}
 .mainFind .desc:after {content:''; position:absolute; top:0; left:50%; width:20px; margin-left:-10px; border-bottom:4px solid #fff;}
 .mainFind .btnBox {margin-top:37px;}
-.mainFind .btnBox > a {display:inline-block; width:258px; line-height:60px; border:1px solid #fff; border-radius:5px; font-weight:400; font-size:18px; color:#fff; 
-text-align:center;}
 .mainFind > .inner {position:relative; z-index:2;}
 .mainFind > .bgImg {position:absolute; top:0; left:0; width:100%; height:100%; transition: all 0.65s;}
 .mainFind > .bg2 {z-index:1; opacity:0;}
@@ -131,3 +129,46 @@ text-align:center;}
 .mainCs .inner .etc {float:right;}
 .mainCs .inner .etc > * {float:left;}
 .mainCs .inner .etc .btn {margin-left:10px;}
+
+#mainWrap {position:relative; max-width:1980px; min-width:1200px; overflow:hidden;}
+#mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
+.mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
+.mainContent.leftCont {background:red; font-size:50px; color:#fff; font-weight:700; text-align:center;}
+.mainContent.rightCont {}
+
+.mainRightVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
+.mainRightVisual > .inner {position:relative; width:1200px; margin:0 auto;}
+.mainRightVisual h1 {padding-top:188px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
+.mainRightVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
+.centerGo {position:absolute; top:384px; left:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_right.png) no-repeat center;}
+.mainRightVisual h2 + .typeSwitch {margin-top:36px;}
+
+
+.typeSwitch {text-align:center;}
+.typeSwitch > .inner {position:relative; display:inline-block; font-size:0; width:208px; height:68px; background:url(../images/main/bg_switch.png) no-repeat 0 0; overflow:hidden;}
+.typeSwitch > .inner:after {content:''; position:absolute; top:0; left:0; width:118px; height:68px; background:url(../images/main/btn_switch.png) no-repeat 0 0; transition:left 200ms;}
+.typeSwitch > .inner.on:after {left:90px;}
+.typeSwitch > .inner > .switchBtn {position:relative; z-index:1; float:left; text-align:center;}
+.typeSwitch > .inner > .switchBtn > label {display:inline-block; width:90px; font-size:24px; color:#fff; line-height:68px; text-align:center; transition: 0.45s; cursor:pointer;}
+.typeSwitch > .inner > .switchBtn > input[type="radio"] {position:absolute; top:-20px; left:0;}
+.typeSwitch > .inner > .switchBtn:nth-child(1) > label {padding-left:10px;}
+.typeSwitch > .inner > .switchBtn:nth-child(2) > label {padding-right:10px;}
+.typeSwitch > .inner > .switchBtn > input[type="radio"]:checked + label {width:118px; padding:0;}
+.typeSwitch + .rankSelect {margin-top:67px;}
+
+.rankSelect {height:338px;}
+.rankSelect > .inner {width:944px; margin:0 auto;}
+.rankSelect > .inner:after {content:''; display:block; clear:both;}
+.rankSelect > .inner > .rankList {position:relative; top:119px; float:left; display:inline-block;}
+.rankList {width:264px; border:4px solid #fff; border-radius:5px;}
+.rankList + .rankList {margin-left:76px;}
+.rankList > h3 {position:relative; padding:27px 0 29px 0; font-weight:400; font-size:30px; color:#fff; text-align:center;}
+.rankList .dom {display:none;}
+.rankList ul {position:relative; padding:24px 0 14px 0;}
+.rankList ul:after {content:''; position:absolute; top:0; left:50%; margin-left:-10px; width:20px; border-top:4px solid #fff;}
+.rankList ul > li {position:relative; overflow:hidden;}
+.rankList ul > li > input[type="radio"] {position:absolute; top:-20px; left:0;}
+.rankList ul > li > label {display:block; text-align:center; font-size:18px; color:#fff; transition: 0.3s; line-height:40px; cursor:pointer;}
+.rankList ul > li > label:hover {font-weight:400; font-size:24px; background:#6d2477;}
+.rankList ul > li > input[type="radio"]:checked + label {font-weight:400; font-size:24px; background:#6d2477;}
+.rankSelect + .btnBox {margin-top:65px;}

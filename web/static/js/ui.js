@@ -80,6 +80,24 @@ $(function(){
 		});
 	});
 
+	var RankEvent = $('.rankSelect').find('.rankList').eq(0);
+	var RankEventList = $('.rankList').find('li');
+	$(RankEvent).hover(function(){
+		$(RankEvent).animate({
+			top:0
+		},function(){
+			$(this).find('.dom').slideDown();
+		});
+	});
+
+	$(RankEventList).click(function(){
+		$(this).closest('.rankList').next().animate({
+			top:0
+		},function(){
+			$(this).find('.dom').slideDown();
+		});
+	});
+
 	$('.mainContent.leftCont').click(function(){
 		MoveCenter();
 	});

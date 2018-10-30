@@ -51,7 +51,7 @@
                                 <h3>신개념 타이어 <br />케어 서비스</h3>
                                     <p class="desc">국내 최초 신개념 타이어 렌탈 서비스 <br />넥센 타이어만의 렌탈 서비스를 소개합니다.</p>
                                         <div class="btnBox">
-                                            <a href="#">렌탈서비스 한눈에 보기</a>
+                                            <a href="#" class="btn ty12">렌탈서비스 한눈에 보기</a>
                                         </div>
                             </div>
                             <div class="bgImg bg1"><img src="../static/images/main/bg_mainlink_off.png" alt="" /></div>
@@ -62,7 +62,7 @@
                                 <h3>타이어를 <br />찾으시나요?</h3>
                                     <p class="desc">나의 라이프 스타일 타이어를 <br />추천 받아보세요</p>
                                         <div class="btnBox">
-                                            <a href="#">렌탈상품 추천받기</a>
+                                            <a href="#" class="btn ty12">렌탈상품 추천받기</a>
                                         </div>
                             </div>
                             <div class="bgImg bg1"><img src="../static/images/main/bg_mainlink_off.png" alt="" /></div>
@@ -663,245 +663,6 @@
                 </section>
             </div>
             <!--// 메인컨텐츠 -->
-            <script type="text/javascript">
-                $(function() {
-
-
-                });
-            </script>
-
-
-            <style type="text/css">
-                #mainWrap {
-                    position: relative;
-                    max-width: 1980px;
-                    min-width: 1200px;
-                    overflow: hidden;
-                }
-
-                #mainWrap>.inner {
-                    width: calc(100% * 3);
-                    position: relative;
-                    top: 0;
-                    left: -200%;
-                    overflow: hidden;
-                }
-
-                .mainContent {
-                    width: calc(100% / 3);
-                    min-height: 500px;
-                    float: left;
-                    overflow: hidden;
-                }
-
-                .mainContent.leftCont {
-                    background: red;
-                    font-size: 50px;
-                    color: #fff;
-                    font-weight: 700;
-                    text-align: center;
-                }
-
-                .mainContent.rightCont {}
-
-                .mainRightVisual {
-                    position: relative;
-                    min-width: 1200px;
-                    margin-top: -95px;
-                    min-height: 950px;
-                    background: url(../static/images/main/img_mainvisual_right.jpg) no-repeat center;
-                    background-size: cover;
-                }
-
-                .mainRightVisual>.inner {
-                    position: relative;
-                    width: 1200px;
-                    margin: 0 auto;
-                }
-
-                .mainRightVisual h1 {
-                    padding-top: 188px;
-                    font-weight: 400;
-                    font-size: 40px;
-                    color: #fff;
-                    text-align: center;
-                }
-
-                .mainRightVisual h2 {
-                    padding-top: 13px;
-                    font-weight: 100;
-                    font-size: 30px;
-                    color: #e5e5e5;
-                    text-align: center;
-                }
-
-                .centerGo {
-                    display: inline-block;
-                    width: 55px;
-                    height: 151px;
-                    text-indent: -999px;
-                    overflow: hidden;
-                    background: url(../static/images/main/btn_main_right.png) no-repeat center;
-                }
-
-                .mainRightVisual h2+.typeSwitch {
-                    margin-top: 36px;
-                }
-
-
-                .typeSwitch {
-                    text-align: center;
-                }
-
-                .typeSwitch>.inner {
-                    position: relative;
-                    display: inline-block;
-                    font-size: 0;
-                    width: 208px;
-                    height: 68px;
-                    background: url(../static/images/main/bg_switch.png) no-repeat 0 0;
-                    overflow: hidden;
-                }
-
-                .typeSwitch>.inner:after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 118px;
-                    height: 68px;
-                    background: url(../static/images/main/btn_switch.png) no-repeat 0 0;
-                    transition: left 200ms;
-                }
-
-                .typeSwitch>.inner.on:after {
-                    left: 90px;
-                }
-
-                .typeSwitch>.inner>.switchBtn {
-                    position: relative;
-                    z-index: 1;
-                    float: left;
-                    text-align: center;
-                }
-
-                .typeSwitch>.inner>.switchBtn>label {
-                    display: inline-block;
-                    width: 90px;
-                    font-size: 24px;
-                    color: #fff;
-                    line-height: 68px;
-                    text-align: center;
-                    transition: 0.45s;
-                }
-
-                .typeSwitch>.inner>.switchBtn>input[type="radio"] {
-                    position: absolute;
-                    top: -20px;
-                    left: 0;
-                }
-
-                .typeSwitch>.inner>.switchBtn:nth-child(1)>label {
-                    padding-left: 10px;
-                }
-
-                .typeSwitch>.inner>.switchBtn:nth-child(2)>label {
-                    padding-right: 10px;
-                }
-
-                .typeSwitch>.inner>.switchBtn>input[type="radio"]:checked+label {
-                    width: 118px;
-                    padding: 0;
-                }
-
-                .typeSwitch+.rankSelect {
-                    margin-top: 67px;
-                }
-
-                .rankSelect {}
-
-                .rankSelect>.inner {
-                    width: 944px;
-                    margin: 0 auto;
-                    overflow: hidden;
-                }
-
-                .rankSelect>.inner>.rankList {
-                    float: left;
-                    display: inline-block;
-                }
-
-                .rankList {
-                    width: 264px;
-                    border: 4px solid #fff;
-                    border-radius: 5px;
-                }
-
-                .rankList+.rankList {
-                    margin-left: 76px;
-                }
-
-                .rankList>h3 {
-                    position: relative;
-                    padding: 0 0 20px 0;
-                    font-weight: 400;
-                    font-size: 30px;
-                    color: #fff;
-                    text-align: center;
-                }
-
-                .rankList>h3:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    margin-left: -10px;
-                    width: 20px;
-                    border-top: 4px solid #fff;
-                }
-
-                .rankList>ul {
-                    position: relative;
-                }
-
-                .rankList>ul>li {
-                    position: relative;
-                    overflow: hidden;
-                }
-
-                .rankList>ul>li>input[type="radio"] {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                .rankList>ul>li>label {
-                    display: block;
-                    text-align: center;
-                    font-size: 18px;
-                    color: #fff;
-                    transition: 0.3s;
-                    line-height: 40px;
-                }
-
-                .rankList>ul>li>label:hover {
-                    font-weight: 400;
-                    font-size: 24px;
-                    background: #6d2477;
-                }
-
-                .rankList>ul>li>input[type="radio"]:checked+label {
-                    font-weight: 400;
-                    font-size: 24px;
-                    background: #6d2477;
-                }
-            </style>
-
-            <script type="text/javascript">
-                $(function() {
-
-                });
-            </script>
 
             <!-- 렌탈상품 추천받기 -->
             <div class="mainContent rightCont">
@@ -927,82 +688,91 @@
                             <div class="inner">
                                 <div class="rankList">
                                     <h3>1 순위</h3>
-                                    <ul>
-                                        <li>
-                                            <input type="radio" name="rankGroup1" id="rank1_1" />
-                                            <label for="rank1_1">연비</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup1" id="rank1_2" />
-                                            <label for="rank1_2">승차감</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup1" id="rank1_3" />
-                                            <label for="rank1_3">주행거리</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup1" id="rank1_4" />
-                                            <label for="rank1_4">접지력</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup1" id="rank1_5" />
-                                            <label for="rank1_5">마모</label>
-                                        </li>
-                                    </ul>
+                                    <div class="dom">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" name="rankGroup1" id="rank1_1" />
+                                                <label for="rank1_1">연비</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup1" id="rank1_2" />
+                                                <label for="rank1_2">승차감</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup1" id="rank1_3" />
+                                                <label for="rank1_3">주행거리</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup1" id="rank1_4" />
+                                                <label for="rank1_4">접지력</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup1" id="rank1_5" />
+                                                <label for="rank1_5">마모</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="rankList">
                                     <h3>2 순위</h3>
-                                    <ul>
-                                        <li>
-                                            <input type="radio" name="rankGroup2" id="rank2_1" />
-                                            <label for="rank2_1">연비</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup2" id="rank2_2" />
-                                            <label for="rank2_2">승차감</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup2" id="rank2_3" />
-                                            <label for="rank2_3">주행거리</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup2" id="rank2_4" />
-                                            <label for="rank2_4">접지력</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup2" id="rank2_5" />
-                                            <label for="rank2_5">마모</label>
-                                        </li>
-                                    </ul>
+                                    <div class="dom">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" name="rankGroup2" id="rank2_1" />
+                                                <label for="rank2_1">연비</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup2" id="rank2_2" />
+                                                <label for="rank2_2">승차감</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup2" id="rank2_3" />
+                                                <label for="rank2_3">주행거리</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup2" id="rank2_4" />
+                                                <label for="rank2_4">접지력</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup2" id="rank2_5" />
+                                                <label for="rank2_5">마모</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="rankList">
                                     <h3>3 순위</h3>
-                                    <ul>
-                                        <li>
-                                            <input type="radio" name="rankGroup3" id="rank3_1" />
-                                            <label for="rank3_1">연비</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup3" id="rank3_2" />
-                                            <label for="rank3_2">승차감</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup3" id="rank3_3" />
-                                            <label for="rank3_3">주행거리</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup3" id="rank3_4" />
-                                            <label for="rank3_4">접지력</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="rankGroup3" id="rank3_5" />
-                                            <label for="rank3_5">마모</label>
-                                        </li>
-                                    </ul>
+                                    <div class="dom">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" name="rankGroup3" id="rank3_1" />
+                                                <label for="rank3_1">연비</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup3" id="rank3_2" />
+                                                <label for="rank3_2">승차감</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup3" id="rank3_3" />
+                                                <label for="rank3_3">주행거리</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup3" id="rank3_4" />
+                                                <label for="rank3_4">접지력</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rankGroup3" id="rank3_5" />
+                                                <label for="rank3_5">마모</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="btnBox">
+                            <a href="#" class="btn ty12"><span class="sch">렌탈상품 알아보기</span></a>
+                        </div>
 
                         <a href="#" class="centerGo">메인으로</a>
                     </div>
