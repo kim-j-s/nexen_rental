@@ -9,9 +9,16 @@
 /* ==============================
  * header
  * ============================== */
- #headerWrap {position:relative; z-index:1; height:45px; line-height:45px; text-align:center; font-size:15px; font-weight:normal;}
- #headerWrap .history {position:absolute; top:15px; left:15px; text-indent: -9999px; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size: 32px 13px;}
- #headerWrap .totalMenu {position:absolute; top:15px; right:15px; text-indent: -9999px; display:block; width:17px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -15px 0; background-size: 32px 13px;}
+ #headerWrap {position: fixed; top:0; left:0; width:100%; z-index:1; background: #ffffff;}
+ #headerWrap .headerTopMenu {position:relative; height:45px; line-height:45px; text-align:center; font-size:15px; font-weight:normal;}
+ #headerWrap .headerTopMenu .history {position:absolute; top:15px; left:15px; text-indent: -9999px; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size: 32px 13px;}
+ #headerWrap .headerTopMenu .totalMenu {position:absolute; top:15px; right:15px; text-indent: -9999px; display:block; width:17px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -15px 0; background-size: 32px 13px;}
+
+ #headerWrap .headerMenu > ul {width:100%; display:none; z-index:2;}
+ #headerWrap .headerMenu > ul li {background:#fafafa; border-bottom:1px solid #dcdcdc;}
+ #headerWrap .headerMenu > ul li.on {background:#ffffff;}
+ #headerWrap .headerMenu > ul li a {display:block; color:#000000; font-size:12px; font-weight:400; line-height:40px; padding:0 15px;}
+ #headerWrap .headerMenu > ul li.on a {color:#812990;}
 
  /* ==============================
   * footer

@@ -69,8 +69,8 @@ $(function(){
 	 * content 
 	 * ============================== */
 	// affiliate card 
-	var menuCard = $('.menuCard > .sectionTitle')
-	var menuCardList = $('.menuCard > ul')
+	var menuCard = $('.headerMenu > .sectionTitle')
+	var menuCardList = $('.headerMenu > ul')
 	
 	$(menuCard).click(function(){
 		if ( $(menuCard).hasClass('on') )

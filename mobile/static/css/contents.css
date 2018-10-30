@@ -5,7 +5,7 @@
  * common - 컨텐츠 공통
  * ============================== */
 #wrap {width:100%;margin:0 auto;}
-#content .contWrap {padding:0 15px 30px 15px;}
+#content .contWrap {padding:90px 15px 30px 15px;}
 
 
 /* 텍스트 */
@@ -158,11 +158,6 @@ td .textarea {width:100%;}
  * ============================== */
 
  /* 맴버십 */
-.menuCard > ul {position:absolute;width:100%;top:90px;display:none;z-index: 2;}
-.menuCard > ul li {background:#fafafa; border-bottom:1px solid #dcdcdc;}
-.menuCard > ul li.on {background:#ffffff;}
-.menuCard > ul li a {display:block; color:#000000; font-size:12px; font-weight:400; line-height:40px; padding:0 15px;}
-.menuCard > ul li.on a {color:#812990;}
 .affiliateCards {padding-top:30px; text-align:center;}
 .affiliateCards .inner {position:relative; display:inline-block; }
 .affiliateCards .inner .cardImg {text-align: center;}
@@ -189,6 +184,7 @@ td .textarea {width:100%;}
 .itemtList1 > li .inner .desc {font-size:14px; font-weight:400; color:#000000; line-height:22px; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; word-break:break-all;}
 .itemtList1 > li .inner .date {overflow:hidden;margin-top:10px; padding-left:17px; background:url(../images/common/icon/icon_calendar.png) no-repeat 0 4px; background-size: 10px 11px;}
 .itemtList1 > li .inner .date > em {float:left; font-size:11px; font-weight: 400; color:#666666; line-height:20px;}
+.itemtList1 > li .inner .date > a {font-size:11px; font-weight: 400; color:#666666; line-height:20px;}
 
 /* 당첨자 발표 */
 .announce {float:right; margin-left:12px; padding:0 5px 0 10px; background:#812990; font-size:0; border-radius:2px;}
@@ -200,7 +196,7 @@ td .textarea {width:100%;}
 .detailPage > .title .date {padding:0 10px; text-align: right; font-size:11px; line-height:35px;border-bottom:1px solid #d9d9d9;}
 .detailPage > .title .date span {position:relative;padding-left:15px;}
 .detailPage > .title .date span:before {position:absolute; top:3px; left:0; content:'';display:inline-block; width:10px; height:11px; background:url(../images/common/icon/icon_calendar.png) no-repeat left center;background-size: 10px 11px;}
-.detailPage > .detailContent {padding:20px 0px;}
+.detailPage > .detailContent {padding:20px 0px; text-align:center;}
 .detailPage > .detailContent img {max-width:100%;}
 .detailPage > .detailNav {border-top:1px solid #c5c5c5; border-bottom:1px solid #c5c5c5;}
 .detailPage > .detailNav li + li {border-top:1px solid #c5c5c5;}
