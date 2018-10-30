@@ -184,7 +184,6 @@ td .textarea {width:100%;}
 .itemtList1 > li .inner .desc {font-size:14px; font-weight:400; color:#000000; line-height:22px; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; word-break:break-all;}
 .itemtList1 > li .inner .date {overflow:hidden;margin-top:10px; padding-left:17px; background:url(../images/common/icon/icon_calendar.png) no-repeat 0 4px; background-size: 10px 11px;}
 .itemtList1 > li .inner .date > em {float:left; font-size:11px; font-weight: 400; color:#666666; line-height:20px;}
-.itemtList1 > li .inner .date > a {font-size:11px; font-weight: 400; color:#666666; line-height:20px;}
 
 /* 당첨자 발표 */
 .announce {float:right; margin-left:12px; padding:0 5px 0 10px; background:#812990; font-size:0; border-radius:2px;}
