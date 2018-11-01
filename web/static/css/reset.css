@@ -19,7 +19,7 @@ legend, caption {display:none; }
 textarea {resize:vertical; font:inherit; overflow-y:auto; box-sizing:border-box; -webkit-appearance:none; -webkit-border-radius:0px;}
 input, select {color:inherit; font:inherit; vertical-align: middle; box-sizing:border-box;}
 address, i {font-style:normal; }
-img, select, input, button {vertical-align:middle; }
+img, select, input, button {vertical-align:middle;}
 button {outline:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; -webkit-appearance:none; -webkit-border-radius:0px;}
 em {font-style:normal; }
 input {font-family: 'Noto Sans', sans-serif;}
@@ -78,6 +78,8 @@ button span{
 .color3 {color:#b6985a !important;}
 
 .mt10 {margin-top:10px;}
+.mt46 {margin-top:46px;}
+
 .ml10 {margin-left:10px;}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {

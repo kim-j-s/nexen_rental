@@ -32,6 +32,27 @@
 .footerBottom .copyright {font-size:11px; margin-top:25px;}
 
 
+
+/* ==============================
+ * windBanner
+ * ============================== */
+.wing {position:fixed; top:100px; right:0; z-index:99;}
+.wing > ul {width:100px; border:1px solid #999; background:#fff;}
+.wing > ul li {}
+.wing > ul li + li {border-top:1px solid #999;}
+.wing > ul li:nth-child(1) a {padding:26px 0 0 0;}
+.wing > ul li:nth-child(2) a {padding:16px 0 0 0;}
+.wing > ul li:nth-child(3) a {padding:21px 0 0 0;}
+.wing > ul li > a {position:relative; display:block; height:98px;}
+.wing > ul li > a span {position:relative; display:block; text-align:center; font-size:13px; color:#777; line-height:16px;}
+.wing > ul li > a span:after {content:''; position:absolute; top:0; left:50%; margin-left:-18px; width:36px; height:36px; background:url(../images/common/btn/bg_wing.png) no-repeat; overflow:hidden;}
+.wing > ul li:nth-child(1) a span {padding-top:49px;}
+.wing > ul li:nth-child(2) a span {padding-top:42px;}
+.wing > ul li:nth-child(2) a span:after {background-position:0 -36px;}
+.wing > ul li:nth-child(3) a span {padding-top:43px;}
+.wing > ul li:nth-child(3) a span:after {background-position:0 -72px;}
+
+
 @media screen and (max-width: 1214px) {
 }
 

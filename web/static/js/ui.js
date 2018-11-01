@@ -255,7 +255,6 @@ function selectMakeUI(){
 }
 
 
-
 $(function(){
 
 	// tabwrap
@@ -346,6 +345,91 @@ $(function(){
 	function slickInit() {
 		$('.slider1').slick('setPosition');
 	}
+
+	// 타이어 게이지
+	var Gauge = $('.gaugeList').find('.bar');
+	var GaugeLng = $('.gaugeList').find('.bar').length;
+	for (var i = 0; i < GaugeLng; i++)
+	{
+		time = i * 300;
+		GaugeWidth = $(Gauge).eq(i).data('gauge');
+		$(Gauge).eq(i).delay(time).animate({
+			width:GaugeWidth+'%'
+		}, 800, 'easeOutCirc');
+	}
+
+	var tgLeft = $('.prodGalleryViewer').find('.prev');
+	var tgRight = $('.prodGalleryViewer').find('.next');
+	var tgThumbLng = $('.prodGalleryThumb').find('li').length;
+	tireGalleryCnt = 0;
+
+	$(tgLeft).click(function(){
+		if (!tireGalleryCnt == 0)
+		{
+			tireGalleryCnt--;
+			$(tgRight).removeClass('off');
+			tireThumb(tireGalleryCnt);
+			if (tireGalleryCnt == 0)
+			{
+				$(tgLeft).addClass('off');
+			}
+		}
+	});
+	$(tgRight).click(function(){
+		if (tireGalleryCnt < tgThumbLng - 1)
+		{
+			tireGalleryCnt++;
+			$(tgLeft).removeClass('off');
+			tireThumb(tireGalleryCnt);
+			if (tireGalleryCnt == tgThumbLng - 1)
+			{
+				$(tgRight).addClass('off');
+			}
+		}
+	});
+
+	function tireThumb(cnt) {
+		var tireThumbImg = $('.prodGalleryThumb').find('li').eq(cnt).html();
+		$('.prodGalleryThumb').find('li').siblings().removeClass('on');
+		$('.prodGalleryThumb').find('li').eq(cnt).addClass('on');
+		$('.prodGalleryViewer > img').remove();
+		$('.prodGalleryViewer').append(tireThumbImg);
+	}
+
+	// 타이어 상세 설정 탭
+	$('.settingList > li > .tit').each(function(){
+		$(this).click(function(){
+			$(this).parent('li').siblings().removeClass('on');
+			$(this).parent('li').addClass('on');
+		});
+	});
+
+	// 타이어 종류 셀렉트
+	$('.makerGroup1').each(function(){
+		$(this).find('label').click(function(){
+			$(this).closest('.makerGroup').find('.makerSelect').prop('selectedIndex',0);
+		});
+	});
+	$('.makerGroup2').each(function(){
+		$(this).find('.makerSelect').change(function(){
+			$(this).closest('.makerGroup').find('input[type="radio"]').prop('checked', false);
+		});
+	});
+
+	//tabContent
+	$('.carTypeSelect > li').click(function(){
+		$(this).closest('.tabWrap').find('.tabContent').find('.makerSelect').prop('selectedIndex',0);
+		$(this).closest('.tabWrap').find('.tabContent').find('input[type="radio"]').prop('checked', false);
+	});
+
+
+
+
+
+
+
+
+
 
 	// popup
 	$('.popupOpen').click(function(e){

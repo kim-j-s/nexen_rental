@@ -133,7 +133,7 @@
 #mainWrap {position:relative; max-width:1980px; min-width:1200px; overflow:hidden;}
 #mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
 .mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
-.mainContent.leftCont {background:red; font-size:50px; color:#fff; font-weight:700; text-align:center;}
+.mainContent.leftCont {background:green; font-size:50px; color:#fff; font-weight:700; text-align:center;}
 .mainContent.rightCont {}
 
 .mainRightVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
