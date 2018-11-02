@@ -81,7 +81,7 @@ td .textarea {width:100%;}
 
 .keyword {display:table; width:100%;}
 .keyword .inputBox {display:table-cell;}
-.keyword .inputBox .inp {border:1px solid #d5d5d5; width: 100%; line-height: 35px; padding:0 10px;}
+.keyword .inputBox .inp {border:1px solid #d5d5d5; width: 100%; line-height: 35px; height:35px; padding:0 10px;}
 .keyword .btn {display:table-cell; width:70px; height:35px;}
 
 .layerClose {display:inline-block; width:36px; height:36px; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_layerClose.jpg) no-repeat;}
