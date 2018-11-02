@@ -422,6 +422,21 @@ $(function(){
 		$(this).closest('.tabWrap').find('.tabContent').find('input[type="radio"]').prop('checked', false);
 	});
 
+	// input file
+	var fileTarget = $('.fileBox .upload-hidden');
+	fileTarget.on('change', function(){
+		// 값이 변경되면 
+		if(window.FileReader){// modern browser 
+			var filename = $(this)[0].files[0].name;
+			console.log(filename);
+		} 
+		else { // old IE 
+			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+		} 
+		// 추출한 파일명 삽입 
+		$(this).closest('.fileBox').find('.upload-name').val(filename); 
+	});
+
 
 
 

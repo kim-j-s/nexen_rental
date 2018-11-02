@@ -416,6 +416,120 @@
                 </div>
             </div>
 
+            <style type="text/css">
+                .itemtList3 {
+                    border-top: 3px solid #353535;
+                }
+
+                .itemtList3>li {
+                    display: table;
+                    width: 100%;
+                    padding: 32px 43px 37px 35px;
+                    border: 1px solid #d5d5d5;
+                    border-top: none;
+                }
+
+                .itemtList3>li .purchase {
+                    display: table-cell;
+                    vertical-align: top;
+                }
+
+                .purchase {}
+
+                .purchase dt {
+                    font-weight: 500;
+                    font-size: 26px;
+                    color: #353535;
+                }
+
+                .purchase dt>span {
+                    margin-left: 5px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #812990;
+                }
+
+                .purchase dd>.typeTxt4 {
+                    margin-top: 11px;
+                }
+
+                .purchase dd>.txt {
+                    margin-top: 14px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #454545;
+                    line-height: 28px;
+                }
+
+                .purchase dd>.txt+.list7 {
+                    margin-top: 22px;
+                }
+
+                .list7 {}
+
+                .list7>li {
+                    padding-left: 22px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #454545;
+                    background: url(../static/images/common/icon/icon_list7.png) no-repeat left 3px;
+                    line-height: 20px;
+                }
+
+                .list7>li+li {
+                    margin-top: 7px;
+                }
+
+                .list7>li>.text {
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+
+                .list7>li>.text>* {
+                    font-size: 15px;
+                }
+
+                .itemtList3>li .amount {
+                    display: table-cell;
+                    vertical-align: top;
+                    width: 260px;
+                }
+            </style>
+
+            <div class="prdDetailCont">
+                <ul class="itemtList3">
+                    <li>
+                        <div class="purchase">
+                            <dl>
+                                <dt>슈퍼 렌탈<span>(무한렌탈료 + 월 3,000원의 혜택)</span></dt>
+                                <dd>
+                                    <div class="typeTxt4">
+                                        <span>#주행거리 짧은 차량</span>
+                                        <span>#알뜰한 가격</span>
+                                    </div>
+                                    <p class="txt">
+                                        렌탈 서비스를 이용하지 않아도, 넥센 타이어 제품을 구매하실 수 있습니다. <br />
+										넥센 타이어만의 타이어 품질을 경험하세요!
+									</p>
+                                        <ul class="list7">
+                                            <li>3년 렌탈 기간
+                                                <div class="text">타이어 마모</div>
+                                            </li>
+                                            <li>3년 렌탈 기간</li>
+                                            <li>3년 렌탈 기간
+                                                <div class="text">타이어 마모</div>
+                                            </li>
+                                        </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="amount">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
             <div class="prdDetailCont">
                 <div class="serviceAdv">
                     <div class="step">
@@ -460,14 +574,14 @@
             </div>
 
             <div class="tabWrap">
-                <ul class="tabList other">
+                <ul class="tabList other floating">
                     <li class="on"><button><span>상품정보</span></button></li>
                     <li><button><span>계약/배송/반품/교환/AS</span></button></li>
                     <li><button><span>구매후기</span></button></li>
                 </ul>
 
                 <!-- 상품정보 -->
-                <div class="tabContent">
+                <div class="tabContent on">
                     <div class="prdDetailCont">
                         <div class="rentalOrder">
                             <h3 class="title">타이어 렌탈 주문에서 장착 그리고 정기점검까지!</h3>
@@ -603,7 +717,7 @@
                 <!--// 상품정보 -->
 
                 <!-- 계약/배송/반품/교환/AS -->
-                <div class="tabContent on">
+                <div class="tabContent">
                     <section class="infoWrap mt46">
                         <h1 class="title">상품기본정보</h1>
                         <div class="table ty3">
@@ -677,50 +791,267 @@
                 <!--// 계약/배송/반품/교환/AS -->
 
                 <!-- 구매후기 -->
-                <div class="tabContent">구매후기</div>
+                <div class="tabContent">
+                    <!-- 리스트 -->
+                    <div class="sortDisplay2 mt50">
+                        <div class="leftCont">
+                            <p class="mark2">총 <span class="color1">60</span>개의 구매후기가 있습니다.</p>
+                        </div>
+                        <div class="sub tr">
+                            <a href="#" class="btn ty5"><span>구매후기 작성</span></a>
+                        </div>
+                    </div>
+                    <ul class="itemtList1">
+                        <li data-animation="fadeInUp" class="animated fadeInUp">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="../static/images/sample/tire_v1.gif" alt="" />
+                                </div>
+                                <div class="inner">
+                                    <dl class="review">
+                                        <dt>NFERA AU5</dt>
+                                        <dd>
+                                            <div class="middle">
+                                                <span class="writer">uracl***</span>
+                                                <span class="date">2017.10.10</span>
+                                            </div>
+                                            <p class="txt">사용을 해보니, 너무 편하고 좋아요~^^</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="grade ty1">1점</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" class="animated fadeInUp">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="../static/images/sample/tire_v1.gif" alt="" />
+                                </div>
+                                <div class="inner">
+                                    <dl class="review">
+                                        <dt>NFERA AU5</dt>
+                                        <dd>
+                                            <div class="middle">
+                                                <span class="writer">uracl***</span>
+                                                <span class="date">2017.10.10</span>
+                                            </div>
+                                            <p class="txt">사용을 해보니, 너무 편하고 좋아요~^^</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="grade ty2">2점</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" class="animated fadeInUp">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="../static/images/sample/tire_v1.gif" alt="" />
+                                </div>
+                                <div class="inner">
+                                    <dl class="review">
+                                        <dt>NFERA AU5</dt>
+                                        <dd>
+                                            <div class="middle">
+                                                <span class="writer">uracl***</span>
+                                                <span class="date">2017.10.10</span>
+                                            </div>
+                                            <p class="txt">사용을 해보니, 너무 편하고 좋아요~^^</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="grade ty3">3점</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" class="animated fadeInUp">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="../static/images/sample/tire_v1.gif" alt="" />
+                                </div>
+                                <div class="inner">
+                                    <dl class="review">
+                                        <dt>NFERA AU5</dt>
+                                        <dd>
+                                            <div class="middle">
+                                                <span class="writer">uracl***</span>
+                                                <span class="date">2017.10.10</span>
+                                            </div>
+                                            <p class="txt">사용을 해보니, 너무 편하고 좋아요~^^</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="grade ty4">4점</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-animation="fadeInUp" class="animated fadeInUp">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="../static/images/sample/tire_v1.gif" alt="" />
+                                </div>
+                                <div class="inner">
+                                    <dl class="review">
+                                        <dt>NFERA AU5</dt>
+                                        <dd>
+                                            <div class="middle">
+                                                <span class="writer">uracl***</span>
+                                                <span class="date">2017.10.10</span>
+                                            </div>
+                                            <p class="txt">사용을 해보니, 너무 편하고 좋아요~^^</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="grade ty5">5점</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 등록된 글이 없을 경우 -->
+                    <!--
+					<div class="contentNone">
+						제품의 첫 구매후기를 기다립니다.
+					</div>
+					-->
+                    <!--// 등록된 글이 없을 경우 -->
+
+                    <div class="pagenation">
+                        <a href="#" class="pb first">맨처음</a>
+                        <a href="#" class="pb prev">이전보기</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#" class="pb next">다음보기</a>
+                        <a href="#" class="pb last">마지막</a>
+                    </div>
+                    <!--// 리스트 -->
+
+                    <!-- 상세보기 -->
+                    <!--
+					<div class="detailPage">
+                        <div class="title">
+                            <p class="txt ellipsis">
+								<strong>[NFERA AU5]</strong>넥센타이어 롯데카드 프로모션 연장 공지
+							</p>
+                            <span class="date">2018.07.11</span>
+                        </div>
+						<div class="detailSubCont">
+							작성자 : urac***  <div class="grade ty5">5점</div>
+						</div>
+                        <div class="detailContent">
+                            <img src="../static/images/sample/detail.jpg" alt="" />
+							<br />
+							<br />
+							<div class="tl">
+							이번에 처음으로 구입한 타이어 렌탈이 너무 좋아요~~ <br />
+							앞으로도 자주자주 사용할 것 같아요~~~
+							</div>
+                        </div>
+                    </div>
+					<div class="btnBox">
+                        <a href="#" class="btn ty2"><span>목록</span></a>
+						<a href="#" class="btn ty8"><span>수정</span></a>
+                    </div>
+					-->
+                    <!--// 상세보기 -->
+
+                    <!-- 후기작성 -->
+                    <!-- 썸네일 이미지 호출 구현 필요 -->
+                    <!--
+					<section class="infoWrap mt46">
+                        <h1 class="title">구매후기 등록</h1>
+						<p class="txt">고객님이 남겨주신 구매후기는 다른 고객 분들께 큰 힘이 됩니다. 따뜻한 마음으로 소중한 구매후기를 작성해 주세요.</p>
+                        <div class="table ty4">
+                            <table>
+                                <caption>구매후기 등록 표</caption>
+                                <colgroup>
+                                    <col style="width:300px;">
+                                    <col style="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="title">제목</label></th>
+                                        <td>
+											<div class="inputBox full">
+												<input type="text" placeholder="구매후기 제목을 적어주세요." id="title" class="inp" />
+											</div>
+										</td>
+                                    </tr>
+									<tr>
+                                        <th scope="row">평점</th>
+                                        <td>
+											<div class="radioBox">
+												<input type="radio" id="radio1" name="grade" checked="checked" /><label for="radio1"><span class="grade ty5">5점</span></label>
+											</div>
+											<div class="radioBox">
+												<input type="radio" id="radio2" name="grade" /><label for="radio2"><span class="grade ty4">4점</span></label>
+											</div>
+											<div class="radioBox">
+												<input type="radio" id="radio3" name="grade" /><label for="radio3"><span class="grade ty3">3점</span></label>
+											</div>
+											<div class="radioBox">
+												<input type="radio" id="radio4" name="grade" /><label for="radio4"><span class="grade ty2">2점</span></label>
+											</div>
+											<div class="radioBox">
+												<input type="radio" id="radio5" name="grade" /><label for="radio5"><span class="grade ty1">1점</span></label>
+											</div>
+										</td>
+                                    </tr>
+									<tr>
+                                        <th scope="row">
+											<label for="textarea">배송시 요청사항</label>
+										</th>
+										<td>
+											<textarea name="" id="textarea" placeholder="구매후기 내용을 적어주세요." cols="30" rows="10" class="textarea"></textarea>
+											<div class="byte">0 / 4000 Byte</div>
+										</td>
+                                    </tr>
+									<tr>
+                                        <th scope="row">이미지 파일 첨부</th>
+                                        <td>
+											<div class="fileBox preview-image">
+												<label for="upload">파일선택</label> 
+												<input type="file" id="upload" class="upload-hidden" />
+												<div class="inputBox">
+													<input type="text" class="inp upload-name" value="" disabled="disabled" />
+												</div>
+
+												<div class="previewArea">
+													<img src="../static/images/sample/tire.jpg" alt="" />
+													<a href="#" class="layerClose">닫기</a>
+												</div>
+											</div>
+											<p class="txt">※ 첨부파일은 이미지(jpg, gif, png, bmp) 파일만 가능합니다. <span class="color">(용량 5M 제한)</span></p>
+										</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+						<ul class="list3">
+							<li>상품 및 주문과 관계없는 글(광고성, 양도, 욕설, 비방, 도배)또는 불법 이미지/사진 등은 예고없이 삭제되며, 경우에 따라 고발 또는 쇼핑몰 이용제한을 받을 수 있습니다.</li>
+						</ul>
+						<div class="btnBox">
+							<a href="#" class="btn ty2"><span>목록</span></a>
+							<a href="#" class="btn ty7"><span>등록</span></a>
+						</div>
+                    </section>
+					-->
+                    <!--// 후기작성 -->
+
+                </div>
                 <!--// 구매후기 -->
             </div>
-
-
         </section>
 
-        <style type="text/css">
-            .prdDetailCont {
-                overflow: hidden;
-            }
-
-            .prdDetailCont {}
-
-            .prdDetailCont+.prdDetailCont {
-                margin-top: 50px;
-            }
-
-            .prdDetailCont+.prdDetailCont.etc {
-                margin-top: 0;
-            }
-
-            .prdDetailCont+.infoWrap {
-                margin-top: 50px;
-            }
-
-            .prdDetailCont+.tabWrap {
-                margin-top: 60px;
-            }
-
-            .prdDetailCont h3.title {
-                font-weight: 400;
-                font-size: 30px;
-                color: #252525;
-            }
-        </style>
-
-        <script type="text/javascript">
-            $(function() {
-
-            });
-        </script>
-
-
+        <div class="fixedBottom">
+            <div class="inner">
+                <a href="#" class="btn ty14"><span><span class="txt">렌탈상품 알아보기</span></span></a>
+            </div>
+        </div>
         <!-- 하단 영역 -->
         <!-- 작업 진행중 -->
         <!--
