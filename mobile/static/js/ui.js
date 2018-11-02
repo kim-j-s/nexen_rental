@@ -83,7 +83,22 @@ $(function(){
 		}
 	});
 
-	 
+	// faq
+	var faqList = $('.faqWrap > li')
+	$(faqList).each(function(faq){
+		$(this).click(function(){
+			if ( $(this).hasClass('on') )
+			{
+				$(faqList).removeClass('on');
+				$(faqList).find('.faqA').slideUp(200);
+			} else {
+				$(faqList).removeClass('on');
+				$(faqList).find('.faqA').slideUp(200);
+				$(this).addClass('on');
+				$(this).find('.faqA').slideDown(200);
+			}
+		});
+	}); 
 });
 
 /* parallax scrolling motion */
