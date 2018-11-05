@@ -358,43 +358,80 @@ $(function(){
 		}, 800, 'easeOutCirc');
 	}
 
+	// 타이어 상세 갤러리
 	var tgLeft = $('.prodGalleryViewer').find('.prev');
 	var tgRight = $('.prodGalleryViewer').find('.next');
+	var tgThumb = $('.prodGalleryThumb').find('li');	
 	var tgThumbLng = $('.prodGalleryThumb').find('li').length;
 	tireGalleryCnt = 0;
 
 	$(tgLeft).click(function(){
-		if (!tireGalleryCnt == 0)
-		{
-			tireGalleryCnt--;
-			$(tgRight).removeClass('off');
-			tireThumb(tireGalleryCnt);
-			if (tireGalleryCnt == 0)
-			{
-				$(tgLeft).addClass('off');
-			}
-		}
+		tireGalleryCnt--;
+		tireThumb(tireGalleryCnt);
 	});
 	$(tgRight).click(function(){
-		if (tireGalleryCnt < tgThumbLng - 1)
-		{
-			tireGalleryCnt++;
-			$(tgLeft).removeClass('off');
-			tireThumb(tireGalleryCnt);
-			if (tireGalleryCnt == tgThumbLng - 1)
-			{
-				$(tgRight).addClass('off');
-			}
-		}
+		tireGalleryCnt++;
+		tireThumb(tireGalleryCnt);
+	});
+
+	$(tgThumb).each(function(i){
+		$(this).mouseenter(function(x){
+			console.log(i);
+			tireThumb(i);
+		});
 	});
 
 	function tireThumb(cnt) {
+		if ( cnt == 0)
+		{
+			$(tgLeft).addClass('off');
+			tireThumbView(cnt);
+		} else if ( cnt < 0)
+		{
+			cnt = 0;
+			tireThumbView(cnt);
+		} else if ( cnt == tgThumbLng - 1 )
+		{
+			$(tgLeft).removeClass('off');
+			$(tgRight).addClass('off');
+			tireThumbView(cnt);
+		} else if ( cnt > tgThumbLng - 1 )
+		{
+			cnt = tgThumbLng - 1;
+		} else if ( cnt > 0 && cnt < tgThumbLng )
+		{
+			$(tgLeft).removeClass('off');
+			$(tgRight).removeClass('off');
+			tireThumbView(cnt);
+		}
+		tireGalleryCnt = cnt;
+	}
+
+	function tireThumbView(cnt) {
 		var tireThumbImg = $('.prodGalleryThumb').find('li').eq(cnt).html();
 		$('.prodGalleryThumb').find('li').siblings().removeClass('on');
 		$('.prodGalleryThumb').find('li').eq(cnt).addClass('on');
 		$('.prodGalleryViewer > img').remove();
 		$('.prodGalleryViewer').append(tireThumbImg);
 	}
+
+	// 타이어 상세 페이지	
+	$(window).scroll(function(){
+		var Top = $('body, html').scrollTop();
+		// 타이어 상품 상세 탭
+		var Floating = $('.floating').offset();		
+		if ( Top > Floating.top)
+		{
+			console.log('x');
+			$('.floating').find('.tabList').addClass('fixed');
+			$('.floating').addClass('pt62');
+		} else {
+			console.log('y');
+			$('.floating').find('.tabList').removeClass('fixed');
+			$('.floating').removeClass('pt62');
+		}
+	});
+
 
 	// 타이어 상세 설정 탭
 	$('.settingList > li > .tit').each(function(){

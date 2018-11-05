@@ -76,12 +76,18 @@ button span{
 .color1 {color:#812990 !important;}
 .color2 {color:#6a2276 !important;}
 .color3 {color:#b6985a !important;}
+.color4 {color:#c3244e !important;}
+
 
 .mt10 {margin-top:10px;}
+.mt20 {margin-top:20px;}
 .mt46 {margin-top:46px;}
 .mt50 {margin-top:50px;}
+.mt56 {margin-top:56px;}
 
 .ml10 {margin-left:10px;}
+
+.pt62 {padding-top:62px;}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 

@@ -15,7 +15,7 @@
 /* ==============================
  * footer
  * ============================== */
-#footerWrap {position:absolute; right:0; bottom:0; left:0; height:220px; background-color:#222;}
+#footerWrap {position:absolute; right:0; bottom:0; left:0; min-width:1200px; height:220px; background-color:#222;}
 #footerWrap .inner {width:1200px; margin:0 auto; color:#a4a4a4;}
 .footerTop {padding:20px 0 28px 0; border-bottom:1px solid #444; overflow:hidden;}
 .footerTop .footerLink {float:right; margin-top:22px;}
