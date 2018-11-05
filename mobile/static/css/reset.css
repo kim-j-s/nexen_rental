@@ -64,6 +64,8 @@ input {font-family: 'Noto Sans', sans-serif;}
 
 .ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
+.txtColor1 {color:#812990;}
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
