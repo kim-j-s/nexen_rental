@@ -93,9 +93,10 @@ td .textarea {width:100%;}
 .btn.ty5 span {display:inline-block; font-size:12px; color:#fff; line-height:35px; font-weight:400;}
 .btn.ty6 {width:65px; background:#555555; border-radius:2px; text-align:center;} /* 헤더 목록보기 */
 .btn.ty6 span {display:block; font-size:11px; font-weight:400; color:#fff; line-height:25px;}
-.btn.ty7 {width:65px; background:#ffffff; border:1px solid #812990; border-radius:1px; text-align:center;}
-.btn.ty7 span {display:block; font-size:11px; font-weight:400; color:#812990; line-height:25px;} /* 헤더 지도보기 */
-.btn.ty8 {padding:0 10px; background:#555; line-height:26px; border-radius:2px; color:#fff;}
+.btn.ty7 {width:65px; background:#ffffff; border:1px solid #812990; border-radius:1px; text-align:center;}  /* 헤더 지도보기 */
+.btn.ty7 span {display:block; font-size:11px; font-weight:400; color:#812990; line-height:25px;}
+.btn.ty8 {width:60px; background:#555; border-radius:13px; text-align: center; } /* 길찾기 */
+.btn.ty8 span {display:block; font-size:11px; font-weight:400; color:#ffffff; line-height:25px;}
 /*.btn.ty10 {padding:0 10px; background:#fff; line-height:26px; border-radius:2px; color:#b6985a; border:1px solid #b6985a;}
 .btn.ty11 {min-width:130px; background:#888; padding:0 10px; line-height:36px; font-size:14px; color:#fefefe; vertical-align:middle; text-align:center;}*/
 
@@ -300,26 +301,25 @@ td .textarea {width:100%;}
 .storeTable > table tr td .btnGroup > a + a {margin-top:4px;}
 .storeTable + .pagenation {margin-top:40px;}
 
-.storeInfo {}
-.storeInfo dt {font-weight:500; font-size:14px; color:#000000;}
-.storeInfo dd {padding-top:10px;}
-.storeInfo dd .storeAddress {margin-bottom:22px; font-size:12px; color:#666666;}
+.storeInfo dl {padding:15px;}
+.storeInfo dt {position:relative; font-weight:500; font-size:14px; color:#000000; line-height:16px;}
+.storeInfo dt.haveDist {padding-right:45px;}
+.storeInfo dt .distance {position:absolute; top:2px; right:0; color:#812990; font-size:11px; font-weight:300; border-bottom:1px solid #812990; padding-bottom:3px;}
+.storeInfo dd {padding-top:12px;}
+.storeInfo dd .storeAddress {margin-bottom:6px; font-size:12px; color:#666666;}
 .iconGroup {display:inline-block; overflow:hidden; vertical-align:middle; font-size:0;}
-.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; font-size:8px; font-weight:400; color:#666; text-align:center; vertical-align:middle;}
+.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; margin-right:5px; font-size:8px; font-weight:400; color:#666; text-align:center; vertical-align:middle;}
 .serviceIcon.ty1 {color:#b6985a;}
-.serviceIcon + .serviceIcon {margin-left:10px;}
-.serviceIcon + .serviceIcon.ty4 {margin-left:7px;}
-.serviceIcon.ty4 + .serviceIcon {margin-left:6px;}
 .serviceIcon:after {content:''; position:absolute; top:0; left:50%; margin-left:-15px; width:30px; height:30px; background:url(../images/common/icon/icon_service.png) no-repeat 0 0; background-size:205px 30px;}
 .serviceIcon.ty1:after {background-position:0 0;} /* 추천 */
-.serviceIcon.ty2:after {background-position:-35px 0;}
-.serviceIcon.ty3:after {background-position:-70px 0;}
-.serviceIcon.ty4:after {background-position:-105px 0;}
-.serviceIcon.ty5:after {background-position:-140px 0;}
-.serviceIcon.ty6:after {background-position:-175px 0;}
+.serviceIcon.ty2:after {background-position:-35px 0;} /* 타이어 */
+.serviceIcon.ty3:after {background-position:-70px 0;} /* 세차 */
+.serviceIcon.ty4:after {background-position:-105px 0;} /* 일급정비 */
+.serviceIcon.ty5:after {background-position:-140px 0;} /* 경정비 */
+.serviceIcon.ty6:after {background-position:-175px 0;} /* 겨울용 */
 .storeInfo .addInfo {position:relative; background:#f8f8f8; border-top:2px solid #dadada; overflow:hidden; height: 45px;}
 .storeInfo .addInfo .telNum {position:absolute; top:15px; left:15px; color:#666666; font-weight:500; font-size:12px;}
-.storeInfo .addInfo .btn {position:absolute; top:15px; right:15px;}
+.storeInfo .addInfo .btn {position:absolute; top:10px; right:15px;}
 
 
 /* etc */
