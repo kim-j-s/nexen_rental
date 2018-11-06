@@ -417,18 +417,21 @@ $(function(){
 
 	// 타이어 상세 페이지	
 	$(window).scroll(function(){
+		var FloatingChk = $('.floating').length;
 		var Top = $('body, html').scrollTop();
 		// 타이어 상품 상세 탭
-		var Floating = $('.floating').offset();		
-		if ( Top > Floating.top)
+		var Floating = $('.floating').offset();
+
+		if (FloatingChk > 0)
 		{
-			console.log('x');
-			$('.floating').find('.tabList').addClass('fixed');
-			$('.floating').addClass('pt62');
-		} else {
-			console.log('y');
-			$('.floating').find('.tabList').removeClass('fixed');
-			$('.floating').removeClass('pt62');
+			if ( Top > Floating.top)
+			{
+				$('.floating').find('.tabList').addClass('fixed');
+				$('.floating').addClass('pt62');
+			} else {
+				$('.floating').find('.tabList').removeClass('fixed');
+				$('.floating').removeClass('pt62');
+			}
 		}
 	});
 
@@ -473,14 +476,6 @@ $(function(){
 		// 추출한 파일명 삽입 
 		$(this).closest('.fileBox').find('.upload-name').val(filename); 
 	});
-
-
-
-
-
-
-
-
 
 
 	// popup
@@ -533,7 +528,7 @@ $(function(){
 		$('.visualList').find('.btnVL').hide();
 	}
 
-	$('.visualList').find('.btn_next').click(function(){
+	$('.visualList').find('.btn_next').on('click', function(){
 		visualListClickCnt++;
 		if (visualListClickCnt < MaxEvent + 1)
 		{
@@ -552,7 +547,7 @@ $(function(){
 		}
 	});
 
-	$('.visualList').find('.btn_prev').click(function(){
+	$('.visualList').find('.btn_prev').on('click', function(){
 		visualListClickCnt--;
 		if (visualListClickCnt > -1)
 		{
@@ -584,4 +579,8 @@ $(function(){
 
 
 
+});
+
+$(window).load(function(){
+	//alert('z');
 });
