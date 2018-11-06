@@ -85,6 +85,7 @@ $(function(){
 
 	// faq
 	var faqList = $('.faqWrap > li')
+
 	$(faqList).each(function(faq){
 		$(this).click(function(){
 			if ( $(this).hasClass('on') )
@@ -99,6 +100,86 @@ $(function(){
 			}
 		});
 	}); 
+
+	// search rental shop
+	var toggleBtn = $('.searchShop > .btnTogl')
+	var searchArea = $('.searchShop > .searchWrap')
+
+	$(toggleBtn).click(function(){
+		if ( $(toggleBtn).hasClass('on') )
+		{
+			$(searchArea).slideUp(200);
+			$(toggleBtn).removeClass('on');			
+		} else {
+			$(searchArea).slideDown(200);
+			$(toggleBtn).addClass('on');
+		}
+	});
+
+	// visual list
+	$('.visualList').mouseenter(function(){
+		$("p:first",this).text("mouse enter");
+		$('.visualContent').find('.mapArea').removeClass('on');
+		$('.visualContent').find('.imgVisual').addClass('on');
+	}).mouseleave(function(){
+		$('.visualContent').find('.mapArea').addClass('on');
+		$('.visualContent').find('.imgVisual').removeClass('on');
+	});
+	
+	$('.visualList').find('li').each(function(){
+		$(this).mouseenter(function(){
+			var thisImg = $(this).html();
+			$('.imgVisual').find('img').remove();
+			$('.imgVisual').append(thisImg);
+		});
+	});
+
+	var visualListLng = $('.visualList').find('li').length;
+	var MaxEvent = visualListLng - 3;
+	var visualListClickCnt = 0;
+	if (visualListLng < 3)
+	{
+		$('.visualList').find('.btnVL').hide();
+	}
+
+	$('.visualList').find('.btn_next').click(function(){
+		visualListClickCnt++;
+		if (visualListClickCnt < MaxEvent + 1)
+		{
+			move = visualListClickCnt * -96;
+			$('.visualListCont').stop(true, true).animate({
+				left:move
+			}, function(){
+				if (visualListClickCnt == MaxEvent)
+				{
+					$('.visualList').find('.btn_next').hide();
+				}
+			});
+			BtnChk();
+		} else {
+			visualListClickCnt = MaxEvent;
+		}
+	});
+
+	$('.visualList').find('.btn_prev').click(function(){
+		visualListClickCnt--;
+		if (visualListClickCnt > -1)
+		{
+			move = visualListClickCnt * -106;
+			$('.visualListCont').stop(true, true).animate({
+				top:move
+			}, function(){
+				if (visualListClickCnt == 0)
+				{
+					$('.visualList').find('.btn_prev').hide();
+				}
+			});
+			BtnChk();
+		} else {
+			visualListClickCnt = 0;
+		}
+	});
+
 });
 
 /* parallax scrolling motion */

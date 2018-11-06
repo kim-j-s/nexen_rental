@@ -7,6 +7,7 @@
 #wrap {width:100%;margin:0 auto;}
 #content .contWrap {padding:90px 15px 50px 15px;}
 #content .contWrap.optNo {padding:45px 15px 50px 15px;}
+#content .contWrap.lpdNo {padding:45px 0px 50px 0px;}
 
 #layerPop {padding: 10px;}
 
@@ -19,6 +20,7 @@
 .subTitle + .list3 {margin-top:35px;}
 .subTitle + .table {margin-top:38px;}
 .tableTitle.mg1 {margin:30px 0 0 0;}
+.tableTitle.mg2 {margin:20px 0 0 0;}
 .tableTitle .tit {font-size:15px; font-weight:bold; color:#000000;padding-bottom:10px;}
 .tableTitle .tit.line {border-bottom:1px solid #dadada;}
 .tableTitle .noti {position:relative; padding-left:10px; font-size:12px; line-height: 17px; font-weight:400; color:#666666; margin:5px 0 10px 0;}
@@ -80,9 +82,10 @@ td .textarea {width:100%;}
 .btn {display:inline-block; vertical-align:middle;}
 .btn.ty1 {position:relative; width:130px; height:30px; line-height:25px; text-align:center; border-radius:15px; border:1px solid #454545;} /* 자세히보기 */
 .btn.ty1 .btnTxt {padding:0 0 0 20px; font-weight:normal; font-size:12px; color:#252525; background:#fff url(../images/common/btn/bg_btn1.png) no-repeat left center;background-size:13px 13px;}
-.btn.ty2 {width:100%; background:#353535; border-radius:2px; text-align:center;} /* 하단 100% * 35px 버튼 : 목록 */
+.btn.ty2 {width:100%; background:#353535; border-radius:2px; text-align:center;} /* 100% * 35px 버튼 : 목록 */
 .btn.ty2 span {display:block; font-size:12px; color:#fff; line-height:35px;}
-.btn.ty2.bg1 {background:#812990;} /* 하단 100% * 35px 버튼 : 등록 */
+.btn.ty2.bg1 {background:#812990;} /* 100% * 35px 버튼 : 등록 */
+.btn.ty2.bg2 {background:#b6985a;} /* 100% * 35px 버튼 : 검색 */
 .btnSet {overflow:hidden;}
 .btn.ty3 {width:49%; background:#812990; border-radius:2px; text-align:center; padding:10px 0;} /* 제휴카드 콜센터 */
 .btn.ty3 span {display:inline-block; font-weight:400; font-size:12px; color:#fff; line-height:15px;}
@@ -96,9 +99,9 @@ td .textarea {width:100%;}
 .btn.ty7 {width:65px; background:#ffffff; border:1px solid #812990; border-radius:1px; text-align:center;}  /* 헤더 지도보기 */
 .btn.ty7 span {display:block; font-size:11px; font-weight:400; color:#812990; line-height:25px;}
 .btn.ty8 {width:60px; background:#555; border-radius:13px; text-align: center; } /* 길찾기 */
-.btn.ty8 span {display:block; font-size:11px; font-weight:400; color:#ffffff; line-height:25px;}
-/*.btn.ty10 {padding:0 10px; background:#fff; line-height:26px; border-radius:2px; color:#b6985a; border:1px solid #b6985a;}
-.btn.ty11 {min-width:130px; background:#888; padding:0 10px; line-height:36px; font-size:14px; color:#fefefe; vertical-align:middle; text-align:center;}*/
+.btn.ty8 span {display:block; font-size:12px; font-weight:400; color:#ffffff; line-height:25px;}
+.btn.ty9 {width:60px; background:#ffffff; border-radius:13px; text-align: center; border:1px solid #c5c5c5;} /* 상세보기 */
+.btn.ty9 span {display:block; font-size:12px; font-weight:400; color:#666666; line-height:23px;}
 
 .tel {position:relative; display:inline-block; padding:0 20px;}
 .tel:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none; background:#fff;}
@@ -149,13 +152,13 @@ td .textarea {width:100%;}
 .table.ty2 tbody th {vertical-align:middle; text-align:left; font-weight:500; font-size:12px; color:#333333; border-bottom:1px solid #dadada;}
 .table.ty2 tbody td {vertical-align:middle; padding:10px 0; text-align:left; border-bottom:1px solid #dadada; font-size:12px;}
 
-
 .table.ty3 {border-top:2px solid #353535;}
 .table.ty3 thead th {padding:15px 0; text-align:center; font-weight:normal; font-size:12px; color:#333333; border:1px solid #dadada; border-top:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody th {padding:15px 10px; text-align:left; font-weight:normal; font-size:12px; color:#333333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody td {padding:15px 5px 15px 5px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300;line-height:17px;}
+.table.ty3 tbody th {padding:15px 10px; text-align:left; line-height:16px; font-weight:normal; font-size:12px; color:#333333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody td {padding:15px 5px 15px 5px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300; line-height:17px;}
 .table.ty3 tbody td.link {padding:20px 32px; text-align:left}
 .table.ty3 tbody td.tl {padding:20px 30px 20px 30px; text-align:left;}
+.table.ty3 tbody td.tlNobd {padding:10px; text-align:left; border-left:none;}
 .table.ty3 tbody td.other {font-size:15px;}
 .table.ty3 tbody td.other.color1 {font-weight:400;}
 .table.ty3 thead tr th:first-child, .table.ty3 tbody tr td:first-child {border-left:none;}
@@ -291,24 +294,14 @@ td .textarea {width:100%;}
 .mapArea img {width:100%;}
 .fixedBottom {position:fixed; bottom:0; left:0; z-index:5; width:100%; background:#ffffff; box-shadow: 0px 0px 6px 2px #c7c7c7;}
 
-.storeTable {border-bottom:1px solid #c5c5c5;}
-.storeTable > table {width:100%;}
-.storeTable > table tr td {position:relative; height:143px; padding:10px 14px; border-bottom:1px solid #c5c5c5; border-right:1px solid #c5c5c5; vertical-align:top;}
-.storeTable > table tr td:nth-child(2) {border-right:none;}
-.storeTable > table tr:last-child td {border-bottom:none;}
-.storeTable > table tr td .btnGroup {position:absolute; bottom:19px; right:16px;}
-.storeTable > table tr td .btnGroup > a {display:block; text-align:center;}
-.storeTable > table tr td .btnGroup > a + a {margin-top:4px;}
-.storeTable + .pagenation {margin-top:40px;}
-
-.storeInfo dl {padding:15px;}
+.storeInfo dl {padding:15px 15px 10px 15px;}
 .storeInfo dt {position:relative; font-weight:500; font-size:14px; color:#000000; line-height:16px;}
 .storeInfo dt.haveDist {padding-right:45px;}
 .storeInfo dt .distance {position:absolute; top:2px; right:0; color:#812990; font-size:11px; font-weight:300; border-bottom:1px solid #812990; padding-bottom:3px;}
 .storeInfo dd {padding-top:12px;}
 .storeInfo dd .storeAddress {margin-bottom:6px; font-size:12px; color:#666666;}
 .iconGroup {display:inline-block; overflow:hidden; vertical-align:middle; font-size:0;}
-.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; margin-right:5px; font-size:8px; font-weight:400; color:#666; text-align:center; vertical-align:middle;}
+.serviceIcon {position:relative; display:inline-block; min-width:30px; padding-top:35px; margin:0 5px 5px 0; font-size:8px; font-weight:400; color:#666; text-align:center; vertical-align:middle;}
 .serviceIcon.ty1 {color:#b6985a;}
 .serviceIcon:after {content:''; position:absolute; top:0; left:50%; margin-left:-15px; width:30px; height:30px; background:url(../images/common/icon/icon_service.png) no-repeat 0 0; background-size:205px 30px;}
 .serviceIcon.ty1:after {background-position:0 0;} /* 추천 */
@@ -321,6 +314,48 @@ td .textarea {width:100%;}
 .storeInfo .addInfo .telNum {position:absolute; top:15px; left:15px; color:#666666; font-weight:500; font-size:12px;}
 .storeInfo .addInfo .btn {position:absolute; top:10px; right:15px;}
 
+.searchShop {position:relative;}
+.searchShop .searchWrap {background:#fafafa; border-bottom:1px solid #a9a9a9; padding:20px 15px 18px 15px;}
+.searchShop .searchWrap > dl {display:table; width:100%; margin:0 0 5px 0;}
+.searchShop .searchWrap > dl:nth-child(4) { margin-bottom:10px;}
+.searchShop .searchWrap > dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333333;  vertical-align: middle;}
+.searchShop .searchWrap > dl dd {display:table-cell;}
+.searchShop .searchWrap > dl dd select {width:100%;} 
+.searchShop .btnTogl {position:absolute; top:100%; left:50%; margin-left:-22px; margin-top:0px; cursor:pointer; display:block; font-size:0; width:44px; height:16px; background:url(../images/common/btn/bg_btn2.png) no-repeat 0 0; background-size:44px 32px; }
+.searchShop .btnTogl.on {background-position:0 -16px; margin-top:-1px;}
+.rentalShopList {padding:35px 15px 0px 15px;}
+.rentalShopList > ul li {margin:10px 0;}
+.rentalShopList > ul li:last-child {margin:0;}
+.rentalShopList .txt {color:#000000; font-size:12px; font-weight:300;}
+.rentalShopList .txt .txtCount {color:#812990; font-size:12px; font-weight:500;}
+.rentalShopList .storeInfo > dl {border:1px solid #d5d5d5; border-bottom:none; }
+.rentalShopList .addInfo {border-top:none;}
+.rentalShopList .addInfo .btn.ty8 {position:absolute; top:10px; right:10px;}
+.rentalShopList .addInfo .btn.ty9 {position:absolute; top:10px; right:75px;}
+
+.viewContent {position:relative; margin:15px 0; overflow:hidden; }
+.viewContent > .visualContent {width:100%; height:280px;}
+.viewContent > .visualContent .mapArea {display:none;}
+.viewContent > .visualContent .mapArea.on {display:block;}
+.viewContent > .visualContent .imgVisual {display:none;}
+.viewContent > .visualContent .imgVisual.on {display:block;}
+.viewContent > .visualContent .imgVisual img {width:100%; height:100%;}
+.viewContent > .visualList {width:100%; height:51px; overflow:hidden; margin:10px 0;}
+.viewContent > .visualList > ul {position:absolute; bottom:0; left:0; width:2000px; overflow:hidden;}
+.viewContent > .visualList > ul li {position:relative; width:93px; height:51px; transition: 0.45s; font-size:0; text-align:center; float:left; margin-right:5px; }
+.viewContent > .visualList > ul li:hover:after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #812990; box-sizing:border-box;}
+.viewContent > .visualList > ul li img {display:inline-block; width:100%; height:100%; vertical-align:middle;}
+.viewContent > .visualList .btnVL {position:absolute; bottom:5px; width:20px; height:40px; z-index:1; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_visualList.png) no-repeat 0 0; background-size:40px 40px; }
+.viewContent > .visualList .btnVL.btn_prev {display:none;left:0px; margin-left:-15px; background-position:0px 0px;}
+.viewContent > .visualList .btnVL.btn_prev.on {display:block;}
+.viewContent > .visualList .btnVL.btn_next {right:0px; margin-right:0px; background-position:-20px 0px;}
+
+.divShopName {display:table; width:100%;}
+.divShopName .serviceIcon {display:table-cell; width:40px;}
+.divShopName .shopName {display:table-cell; line-height:17px;}
+.divAddress > p {line-height:17px; margin-bottom:5px;}
+.divBizHour {line-height:17px;}
+.divBizHour .week {display:inline-block; width:43px; color:#000000} 
 
 /* etc */
 .disabledBox {display:inline-block; width:60px; height:20px; border:1px solid #d5d5d5; background:#eee; overflow:hidden; text-indent:-999px; vertical-align:middle;}
