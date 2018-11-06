@@ -20,6 +20,7 @@
 .sectionTitle2 + .txt {margin-top:15px; text-align:center; font-weight:400; font-size:18px; color:#777;}
 .sectionTitle2 + .txt + .loginWrap {margin-top:29px;}
 .sectionTitle2 + .txt + .tabWrap {margin-top:39px;}
+.sectionTitle2 + .terms {margin-top:30px;}
 
 
 .subTitle {text-align:center; font-weight:500; font-size:24px; color:#454545;}
@@ -453,24 +454,69 @@ text-align:center;}
 .agreementCont {word-break:keep-all;}
 .agreementCont > h3 {font-weight:500; font-size:22px; color:#353535;}
 .agreementCont > h3 + h4 {margin-top:35px;}
+.agreementCont > h3 + p {margin-top:33px;}
 .agreementCont > h4 {font-weight:500; font-size:16px; color:#454545;}
 .agreementCont > h4 + p {margin-top:5px;}
 .agreementCont h4 + .cNumber {margin-top:8px;}
 .agreementCont p {font-weight:400; font-size:15px; color:#666; line-height:24px;}
 .agreementCont p + h3 {margin-top:32px;}
 .agreementCont p + h4 {margin-top:32px;}
+.agreementCont p + p {margin-top:30px;}
 .agreementCont p + .cNumber {margin-top:24px;}
 .agreementCont p + .number {padding-left:35px;}
 .agreementCont .cNumber + h4 {margin-top:32px;}
 .agreementCont .cNumber + p {margin-top:24px;}
 .agreementCont .cNumber + h3 {margin-top:32px;}
 .agreementCont .number + h4 {margin-top:30px;}
+
+.agreementCont.privacy > h4 {font-weight:500; font-size:22px; color:#353535;}
+.agreementCont.privacy > h4 + p {margin-top:33px;}
+.agreementCont.privacy > h4 + .termsList {margin-top:36px;}
+.agreementCont.privacy > p + .privacyLink {margin-top:25px;}
+.agreementCont.privacy > p + .termsList {margin-top:33px;}
+.agreementCont.privacy > p.etc {font-weight:500; font-size:16px; color:#454545;}
+.agreementCont.privacy .table {margin-top:5px;}
+.agreementCont.privacy .table td * {font-weight:inherit; font-size:inherit; color:inherit;}
+.agreementCont.privacy p > * {font-weight:inherit; font-size:inherit; color:inherit;}
+
 .cNumber {}
 .cNumber > li {font-weight:400; font-size:15px; color:#666; line-height:24px; text-indent:-18px; margin-left:18px;}
 .cNumber > li > .number {padding-left:35px;}
+.cNumber > li > .termsList3 {}
+
 .number {}
 .number > li {font-weight:400; font-size:15px; color:#666; line-height:24px; text-indent:-16px; margin-left:16px;}
 .agreementCont .table tbody td .point {font-weight:500; font-size:15px; color:#666;}
+
+.terms {border-top:2px solid #353535;}
+.terms > .agreementCont {padding-top:26px;}
+
+.termsList {}
+.termsList + .termsList {margin-top:26px;}
+.termsList > dt {font-weight:500; font-size:16px; color:#454545; line-height:30px; text-indent:-24px; margin-left:24px;}
+.termsList > dd {font-weight:400; font-size:15px; color:#666; line-height:24px;}
+.termsList > dd > a {font-weight:400; font-size:15px; color:#666; line-height:24px;}
+.termsList > dd > p {margin-top:7px;}
+.termsList > dd > .numList1 {margin-top:10px;}
+.termsList + h4 {margin-top:26px;}
+
+.termsList2 {}
+.termsList2 > li {font-weight:400; font-size:15px; color:#666; line-height:23px; text-indent:-17px; margin-left:17px;}
+
+.termsList3 > li {position:relative; padding-left:9px; margin:0; text-indent:0; font-weight:400; font-size:15px; color:#666; line-height:24px;}
+.termsList3 > li:before {content:''; position:absolute; top:12px; left:0; width:4px; border-bottom:1px solid #666;}
+.termsList3 > li > .termsList2 {padding-left:25px;}
+
+.date_list {margin-top:36px;}
+.date_list > li {font-weight:500; font-size:16px; color:#454545; line-height:24px;}
+.date_list > li + li {margin-top:6px;}
+
+.privacyLink {overflow:hidden;}
+.privacyLink > ol {float:left; width:580px; height:290px; padding:28px 0 0 40px; background:#f5f5f5;}
+.privacyLink > ol + ol {margin-left:40px;}
+.privacyLink > ol > li a {font-weight:400; font-size:15px; color:#353535; line-height:20px;}
+.privacyLink > ol > li + li {margin-top:16px;}
+.privacyLink + h4 {margin-top:62px;}
 
 /* pagenation */
 .itemtList1 + .pagenation {margin-top:80px;}
@@ -1067,7 +1113,12 @@ no-repeat left center;}
 }
 */
 .layerPopupWrap.on .layerPopCont {opacity:1;}
-.layerPopCont {position:relative; display:inline-block; vertical-align:middle; width:1000px; padding:36px 40px 32px 40px; background:#fff; text-align:left;}
+.layerPopCont {position:relative; display:inline-block; vertical-align:middle; width:1000px; padding:36px 40px 32px 40px; background:#fff; text-align:left; border: solid 1px #c5c5c5;}
+.layerPopCont {
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.35);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.35);
+	box-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
 .layerPopCont .layerClose {position:absolute; top:23px; right:40px;}
 .layerPopCont .popupTitle {font-weight:500; font-size:26px; color:#222;}
 .layerPopCont .popupTitle + .txt {margin-top:12px; font-size:16px; color:#888;}
