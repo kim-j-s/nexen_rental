@@ -357,15 +357,51 @@ td .textarea {width:100%;}
 .divBizHour {line-height:17px;}
 .divBizHour .week {display:inline-block; width:43px; color:#000000} 
 
+
+/* 약관내용 */
+.agreementCont {word-break:keep-all;}
+.agreementCont > h3 {font-size:15px; font-weight:bold; color:#000000; padding-bottom:10px; border-bottom:1px solid #dadada; margin-top:20px;}
+.agreementCont > h4 {font-weight:500; font-size:13px; color:#000000; margin:15px 0 10px 0;}
+.agreementCont p {font-weight:400; font-size:11px; color:#666; line-height:16px;}
+.agreementCont p + .number {padding-left:25px;}
+.agreementCont.privacy h3 + p {margin-top:10px;}
+.agreementCont.privacy p + p {margin-top:10px;}
+.agreementCont.privacy .box1 {margin-top:10px;}
+.agreementCont.privacy .box1 .number {margin:0 10px;}
+.agreementCont.privacy .tBracket {padding-left:15px;}
+.agreementCont.privacy .tBracket li > p {margin:10px 0 0 10px;}
+.agreementCont.privacy .tBracket > li > .ulBar {margin-top:10px;}
+.agreementCont.privacy .tBracket li > p + .ulBar {margin-top:0;}
+.agreementCont.privacy .oBracket {padding-left:10px;}
+.agreementCont.privacy .cNumber .ulBar li {margin-left:-7px;}
+.agreementCont.privacy .ulBar {padding-left:6px;}
+.agreementCont.privacy .ulBar + p {margin-top:10px;}
+.agreementCont.privacy .table {margin:10px 0;}
+
+.cNumber {margin:10px 0 0 0;}
+.cNumber > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-14px; margin-left:15px; margin-bottom:10px;}
+.cNumber > li > .number {padding-left:10px;}
+
+.number {margin:10px 0 0 0;}
+.number > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px;}
+.agreementCont .table tbody td .point {font-weight:500; font-size:15px; color:#666;}
+
+.tBracket {}
+.tBracket > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px; margin:10px 0 0 0;}
+
+.oBracket {}
+.oBracket > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px; margin:10px 0 0 0;}
+
+.ulBar  {}
+.ulBar > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-6px;}
+
 /* etc */
 .disabledBox {display:inline-block; width:60px; height:20px; border:1px solid #d5d5d5; background:#eee; overflow:hidden; text-indent:-999px; vertical-align:middle;}
 .mark1 {position:relative; display:inline-block; padding-left:13px; font-size:10px; color:#888888; font-weight:400; line-height: 15px;}
 .mark1:before {content:'※'; position:absolute; top:0; left:0;}
 .mark1 > strong {font-weight:400; color:#000;}
 p.mark1 {display:block;}
-
 p.mark2 {padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888; line-height:21px;}
-
-
+.mgt10 {margin-top:10px;}
 /* datepicker */
 .ui-datepicker-current {display:none;}
