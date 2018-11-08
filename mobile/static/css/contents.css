@@ -90,7 +90,6 @@ td .textarea {width:100%;}
 .btn.ty3 {width:49%; background:#812990; border-radius:2px; text-align:center; padding:10px 0;} /* 제휴카드 콜센터 */
 .btn.ty3 span {display:inline-block; font-weight:400; font-size:12px; color:#fff; line-height:15px;}
 .btn.ty4 {width:49%; background:#666666; border-radius:2px; text-align:center; padding:10px 0;} /* 넥센 콜센터 */
-.btn.ty4.bg1 {background:#555555;}
 .btn.ty4 span {display:inline-block; font-weight:400; font-size:12px; color:#fff; line-height:15px;}
 .btn.ty5 {width:100%; background:#888888; text-align:center;} /* 테이블 내 각진 버튼  */
 .btn.ty5 span {display:inline-block; font-size:12px; color:#fff; line-height:35px; font-weight:400;}
@@ -109,12 +108,6 @@ td .textarea {width:100%;}
 .tel > span {display:block; padding:11px 1px 10px 1px; border:2px solid #454545; border-left:none; border-right:none; background:#fff;}
 .tel .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:400; font-size:18px; color:#222; background:#fff url(../images/common/icon/icon_tel.png) no-repeat left center;}
 
-.btn.message {position:relative; padding:0 20px;}
-.btn.message:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; background:#812990;}
-.btn.message:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; background:#812990;}
-.btn.message > span {display:block; padding:14px 1px 13px 1px; background:#812990;}
-.btn.message .btnTxt {position:relative; z-index:1; display:block; padding-left:24px; font-weight:300; font-size:16px; color:#fff; background:#812990 url(../images/common/btn/bg_btn2.png) no-repeat left center;}
-
 .btn.sch {padding:0 11px; background:#812990;}
 .btn.sch > span {display:block; padding-left:23px; background:url(../images/common/icon/icon_sch.png) no-repeat left center; background-size:11px 11px; line-height:35px; font-weight:400; font-size:12px; color:#fff;}
 .btn.sch.big {width:80px; padding:0; text-align:center;}
@@ -125,27 +118,15 @@ td .textarea {width:100%;}
 .keyword .inputBox .inp {border:1px solid #d5d5d5; width: 100%; line-height: 35px; height:35px; padding:0 10px;}
 .keyword .btn {display:table-cell; width:70px; height:35px;}
 
-.layerClose {display:inline-block; width:36px; height:36px; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_layerClose.jpg) no-repeat;}
-
-.viewMoreBtn {position:relative; display:inline-block; width:28px; height:28px; font-size:0; text-indent:-999px; overflow:hidden; border:1px solid #999;}
-.viewMoreBtn:before {content:''; position:absolute; top:12px; left:6px; width:13px; border-bottom:1px solid #666;}
-.viewMoreBtn:after {content:''; position:absolute; top:6px; left:12px; width:1px; border-bottom:13px solid #666;}
-
 /* 리스트 */
 .list1.mg1 {margin:10px 0 15px 0;}
 .list1 > li {position:relative; padding-left:10px; font-size:12px; line-height: 17px; font-weight:400; color:#666666;}
 .list1 > li:before {content:''; position:absolute; top:7px; left:5px; width:2px; height:2px; border-radius:2px; background:#666666;}
 .list1 > li + li {margin-top:10px;}
 
-.list2 > li {position:relative; padding-left:14px; font-size:16px; color:#666; text-align:left;}
-.list2 > li:before {content:''; position:absolute; top:10px; left:0; width:6px; border-bottom:1px solid #c5c5c5;}
-.list2 > li + li {margin-top:13px;} 
-
 .exList > .title {color:#222222; font-weight:normal; font-size:12px; margin:0 0 13px 0;}
 .exList > .title .ex {display:inline-block; padding-right:9px; color:#222222; font-weight:normal; font-size:12px; background:url(../images/common/icon/icon_next.png) no-repeat right center; background-size: 3px 5px;}
 .exList > .title .txt {display:inline-block; color:#222222; font-weight:normal; font-size:12px;}
-
-
 
 /* 테이블 */
 .table.ty2 {border-top:2px solid #353535;}
@@ -246,7 +227,6 @@ td .textarea {width:100%;}
 .detailPage + .btnBox {margin:15px 0 0 0;}
 
 /* 고객지원 */
-
 .itemtList2 {overflow:hidden; border-top:2px solid #000000; margin: 30px  0 0 0;}
 .itemtList2 > li {position:relative; width:100%; border-bottom:1px solid #dadada;}
 .itemtList2 > li > a {display:block;}
@@ -287,7 +267,6 @@ td .textarea {width:100%;}
 .fileAttach {margin:0 0 5px 0;}
 .imgAttach li {margin:0 0 5px 0; }
 .imgAttach .imgBox {width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
-
 
 /* 스토어 */
 .mapArea {width:100%;}
@@ -396,12 +375,8 @@ td .textarea {width:100%;}
 .ulBar > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-6px;}
 
 /* etc */
-.disabledBox {display:inline-block; width:60px; height:20px; border:1px solid #d5d5d5; background:#eee; overflow:hidden; text-indent:-999px; vertical-align:middle;}
 .mark1 {position:relative; display:inline-block; padding-left:13px; font-size:10px; color:#888888; font-weight:400; line-height: 15px;}
 .mark1:before {content:'※'; position:absolute; top:0; left:0;}
 .mark1 > strong {font-weight:400; color:#000;}
 p.mark1 {display:block;}
-p.mark2 {padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888; line-height:21px;}
 .mgt10 {margin-top:10px;}
-/* datepicker */
-.ui-datepicker-current {display:none;}
