@@ -87,10 +87,13 @@
 
                 <div class="tableTitle mg1">
                     <p class="tit">기본 정보</p>
-                    <p class="noti">휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.<br> <span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li></p>
+                    <ul class="list1">
+                        <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
+                        <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
+                    </ul>    
                 </div>
 
-                <div class="table ty2">
+                <div class="table ty2 mg2">
                     <table>
                         <caption>기본 정보</caption>
                         <colgroup>
@@ -109,17 +112,19 @@
                             <tr>
                                 <th scope="row">휴대폰번호<span class="iconMust">필수</span></th>
                                 <td>
-                                    <select name="" style="width:32%;" class="selectbox">
-                                        <option value="">선택</option>
-                                        <option value="">010</option>
-                                        <option value="">000</option>
-                                    </select>
-                                    <div class="inputBox" style="width:32%;">
-                                        <input type="text" class="inp" placeholder="숫자 입력" />
-                                    </div>
-                                    <div class="inputBox" style="width:32%;">
-                                        <input type="text" class="inp" placeholder="숫자 입력" />
-                                    </div>
+                                    <div class="hpNum">
+                                        <select name="" class="selectbox">
+                                            <option value="">선택</option>
+                                            <option value="">010</option>
+                                            <option value="">000</option>
+                                        </select>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                    </div>    
                                 </td>
                             </tr>
                             <tr>

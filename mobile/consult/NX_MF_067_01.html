@@ -47,10 +47,18 @@
 
                 <div class="tableTitle">
                     <p class="tit">기본 정보</p>
-                    <p class="noti"><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li></p>
+                    <ul class="list1">
+                        <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
+                        <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
+                        <li>타이어 규격이 잘 보여지는 사진으로 촬영 및 업로드 해주시기 바랍니다.</li>
+                    </ul>   
                 </div>
-
-                <div class="table ty2">
+                
+                <div class="imgSpec">
+                    <img src="../static/images/prd/img_tireSpec.jpg" alt="타이어 규격 예시">
+                </div>
+                
+                <div class="table ty2 mg2">
                     <table>
                         <caption>기본 정보</caption>
                         <colgroup>
@@ -61,17 +69,19 @@
                             <tr>
                                 <th scope="row">휴대폰번호<span class="iconMust">필수</span></th>
                                 <td>
-                                    <select name="" style="width:32%;" class="selectbox">
-                                        <option value="">선택</option>
-                                        <option value="">010</option>
-                                        <option value="">000</option>
-                                    </select>
-                                    <div class="inputBox" style="width:32%;">
-                                        <input type="text" class="inp" placeholder="숫자 입력" />
-                                    </div>
-                                    <div class="inputBox" style="width:32%;">
-                                        <input type="text" class="inp" placeholder="숫자 입력" />
-                                    </div>
+                                    <div class="hpNum">
+                                        <select name="" class="selectbox">
+                                            <option value="">선택</option>
+                                            <option value="">010</option>
+                                            <option value="">000</option>
+                                        </select>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                    </div>    
                                 </td>
                             </tr>
                             <tr>
@@ -79,26 +89,23 @@
                                 <td>
                                     <div class="fileAttach">
                                         <a href="#" class="btn ty5"><span>사진첨부</span></a>
-                                    </div> 
-                                    <p><span class="mark1">첨부 파일은 이미지(jpg, png, gif, pdf, bmp) 파일만 가능합니다.</span></p>
+                                    </div>
+                                    <div class="groupMark">
+                                        <p><span class="mark1">첨부 파일은 이미지(jpg, png, gif, pdf, bmp) 파일만 가능합니다.</span></p>
+                                        <p><span class="mark1">타이어 규격이 잘 보여지는 사진으로 촬영 및 업로드 해주시기 바랍니다.</span></p>
+                                    </div>
+                                    <div class="imgAttach">
+                                        <ul>
+                                            <li>
+                                                <div class="imgBox">
+                                                   <img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지">
+                                                   <a href="#" class="btnImgDel">첨부 이미지 삭제</a>
+                                                </div>
+                                            </li> 
+                                        </ul>  
+                                    </div>       
                                 </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">
-                                    <ul class="imgAttach">
-                                        <li>
-                                            <div class="imgBox">
-                                                
-                                            </div>
-                                        </li>  
-                                        <li>
-                                            <div class="imgBox">
-                                                
-                                            </div>
-                                        </li>     
-                                    </ul>    
-                                </td>
-                            </tr>                            
+                            </tr>                       
                         </tbody>
                     </table>
                 </div>

@@ -23,8 +23,8 @@
 .tableTitle.mg2 {margin:20px 0 0 0;}
 .tableTitle .tit {font-size:15px; font-weight:bold; color:#000000;padding-bottom:10px;}
 .tableTitle .tit.line {border-bottom:1px solid #dadada;}
-.tableTitle .noti {position:relative; padding-left:10px; font-size:12px; line-height: 17px; font-weight:400; color:#666666; margin:5px 0 10px 0;}
-.tableTitle .noti:before {content:''; position:absolute; top:7px; left:5px; width:2px; height:2px; border-radius:2px; background:#666666;}
+.tableTitle .list1 {margin:5px 0 10px 0;}
+.tableTitle .list1 li {margin:0px 0 5px 0;}
 
 /* input */
 .inputBox {position:relative; display:inline-block;}
@@ -148,6 +148,7 @@ td .textarea {width:100%;}
 .table.ty3 + .pagenation {margin-top:55px;}
 
 .table.mg1 {margin:30px 0 0 0;}
+.table.mg2 {margin:10px 0 15px 0;}
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .inputBox.picker {width:180px;}
 .table table tbody td .inputBox.picker .inp {background:url(../images/common/icon/icon_datepicker.png) no-repeat right 10px center;}
@@ -254,10 +255,15 @@ td .textarea {width:100%;}
 .itemtList1 > li .inner .txt {font-size:12px; font-weight:300; color:#666666; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; word-break:break-all;}
 
 /* 상담하기 */
-.iconMust {display:inline-block; vertical-align:middle; width:12px; height:9px; text-indent: -9999px; background:url('../images/common/icon/icon_must.png') no-repeat 0 0; background-size:100%; margin:0 0 3px 5px;}
+.iconMust {display:inline-block; vertical-align:middle; width:12px; height:9px; font-size:0; background:url('../images/common/icon/icon_must.png') no-repeat 0 0; background-size:100%; margin:0 0 3px 3px;}
 .telNum {font-weight:normal;}
-.iconTel {display:inline-block; vertical-align:middle; width:10px; height:10px; text-indent: -9999px; background:url('../images/common/icon/icon_tel.png') no-repeat 0 0; background-size:100%; margin:0 4px 2px 5px;}
+.iconTel {display:inline-block; vertical-align:middle; width:10px; height:10px; font-size:0; background:url('../images/common/icon/icon_tel.png') no-repeat 0 0; background-size:100%; margin:0 4px 2px 5px;}
 .telNum .iconTel {margin:0 4px 2px 0;}
+.hpNum {text-align:center; width:100%; overflow:hidden;}
+.hpNum > select {width:30%; float:left;}
+.hpNum .inputBox {display:table-row; width:35%; float:left; padding-left:5px;}
+.hpNum .inputBox input {display:table-cell;}
+.imgSpec > img {width:100%;}
 .zipCode > .addr {display: table; width:100%;}
 .zipCode > .addr .btn {display: table-cell; width:75px;}
 .zipCode > .addr + .addr {margin-top:10px;}
@@ -265,8 +271,12 @@ td .textarea {width:100%;}
 .zipCode > .addr + .addr + .addr .inputBox {width:100%;}
 .zipCode > .addr .btn + .inputBox {display:table-cell; padding-left:5px;}
 .fileAttach {margin:0 0 5px 0;}
-.imgAttach li {margin:0 0 5px 0; }
-.imgAttach .imgBox {width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
+.groupMark > p {margin-bottom:5px;}
+.imgAttach > ul {overflow:hidden;}
+.imgAttach li {margin:0 5px 5px 0; float:left;}
+.imgAttach .imgBox {position:relative; width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
+.imgAttach .imgBox img {width:100%;}
+.imgAttach .imgBox .btnImgDel {position:absolute; top:4px; right:4px; width: 16px; height:16px; text-indent: -9999px; background:url('../images/common/btn/btn_close2.png') no-repeat 0 0; background-size:100%; }
 
 /* 스토어 */
 .mapArea {width:100%;}
