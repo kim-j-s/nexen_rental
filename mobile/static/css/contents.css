@@ -298,7 +298,8 @@ td .textarea {width:100%;}
 .rentalShopList > ul li:last-child {margin:0;}
 .rentalShopList .txt {color:#000000; font-size:12px; font-weight:300;}
 .rentalShopList .txt .txtCount {color:#812990; font-size:12px; font-weight:500;}
-.rentalShopList .storeInfo > dl {border:1px solid #d5d5d5; border-bottom:none; }
+.rentalShopList .storeInfo {border: 1px solid #d5d5d5;}
+.rentalShopList .storeInfo > dl {border-bottom:none;}
 .rentalShopList .addInfo {border-top:none;}
 .rentalShopList .addInfo .btn.ty8 {position:absolute; top:10px; right:10px;}
 .rentalShopList .addInfo .btn.ty9 {position:absolute; top:10px; right:75px;}
