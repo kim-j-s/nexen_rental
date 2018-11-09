@@ -162,7 +162,7 @@ td .textarea {width:100%;}
 .affiliateCards .inner .txt span {display:block; padding-top:20px; font-size:12px; font-weight:400; line-height:16px; color:#666666;}
 .affiliateCards .inner .txt + .btnBox {padding:10px 0 30px 0;}
 .btnSet .call {position:relative; padding-left:13px;}
-.btnSet .call:before {position:absolute; display: inline-block; content:''; top:3px; left:0; width:10px; height:10px; background:url(../images/common/btn/bg_btn3.png) no-repeat left center; background-size:100%;}
+.btnSet .call:before {display: inline-block; content:''; width:10px; height:12px; margin-right:2px; background:url(../images/common/icon/icon_tel2.png) no-repeat left center; background-size:100%; vertical-align:-1px;}
 .btnSet + .table {margin-top:20px;}
 .note {margin:20px 0;}
 .note > .exList .title {display:block; padding:10px 0; font-weight:bold; font-size:15px; color:#000000; border-bottom:2px solid #ededed}
