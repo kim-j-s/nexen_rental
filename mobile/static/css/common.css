@@ -10,7 +10,7 @@
  * header
  * ============================== */
  #headerWrap {position: fixed; top:0; left:0; width:100%; z-index:1; background: #ffffff;}
- #headerWrap .headerTopMenu {position:relative; height:45px; line-height:45px; text-align:center; font-size:15px; font-weight:normal;border-bottom:2px solid #dcdcdc;}
+ #headerWrap .headerTopMenu {position:relative; height:45px; line-height:45px; text-align:center; font-size:15px; font-weight:normal;border: bottom 1;px solid #dcdcdc;}
  #headerWrap .headerTopMenu .history {position:absolute; top:15px; left:15px; text-indent: -9999px; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size:45px 13px;}
  #headerWrap .headerTopMenu .totalMenu {position:absolute; top:15px; right:15px; text-indent: -9999px; display:block; width:17px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -15px 0; background-size:45px 13px;}
  #headerWrap .headerTopMenu .closeBtn {position:absolute; top:15px; right:15px; text-indent: -9999px; display:block; width:13px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -32px 0; background-size:45px 13px;}
