@@ -41,7 +41,7 @@
     </script>
     <!-- //2018.05.16 -->
     <style>
-        body { padding:0 20px; padding-bottom:200px; padding-top:80px;}
+    body { padding:0 20px; padding-bottom:200px; padding-top:80px;}
 	h1 { font-size:30px; padding:0 20px;}
 	h2 { padding:20px 0; margin-top:20px; border-top:1px dashed #666666; font-size:20px;}
 	.box { margin-top:20px; border:1px solid #E3E3E3}
@@ -55,76 +55,31 @@
 
     <h2 id="">테이블 1</h2>
     <!-- content -->
-    <div class="table ty1">
-        <table>
-            <caption></caption>
-            <colgroup>
-                <col style="width:25%;" />
-                <col style="width:25%;" />
-                <col style="width:25%;" />
-                <col style="width:25%;" />
-            </colgroup>
-            <tbody>
-                <tr>
-                    <th>하나카드 신청 콜센터</th>
-                    <td>1599-6538</td>
-                    <th>렌탈료 자동이체 신쳥 넥센타이어 고객센터</th>
-                    <td>1855-0100</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- content -->
-
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
-			<div class="table ty1">
-				<table>
-					<caption></caption>
-					<colgroup>
-						<col style="width:25%;" />
-						<col style="width:25%;" />
-						<col style="width:25%;" />
-						<col style="width:25%;" />
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row"></th>
-							<td></td>
-							<th scope="row"></th>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
-
-
-    <h2 id="">테이블 2</h2>
-    <!-- content -->
     <div class="table ty2">
         <table>
-            <caption>서비스 정보</caption>
+            <caption>휴대폰 정보</caption>
             <colgroup>
-                <col style="width:25%;" />
-                <col style="width:25%;" />
-                <col style="width:50%;" />
+                <col style="width:27%;" />
+                <col style="width:73%;" />
             </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">서비스 제공조건</th>
-                    <th scope="col">할인 금액</th>
-                    <th scope="col">비고</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <td>전월 이용실적 30만원 이상</td>
-                    <td>1만 3천원</td>
-                    <td>넥센타이어 렌탈 요금이 할인금액보다 적을 경우 승인금액만큼 청구할인 적용</td>
+                    <th scope="row">휴대폰번호</th>
+                    <td>
+                        <div class="hpNum">
+                            <select name="" class="selectbox">
+                                <option value="">선택</option>
+                                <option value="">010</option>
+                                <option value="">000</option>
+                            </select>
+                            <div class="inputBox">
+                                <input type="text" class="inp" placeholder="숫자 입력" />
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" class="inp" placeholder="숫자 입력" />
+                            </div>
+                        </div>    
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -135,83 +90,62 @@
     <div class="box">
         <pre class="brush: html;">
 			<div class="table ty2">
-				<table>
-					<caption></caption>
-					<colgroup>
-						<col style="width:25%;" />
-						<col style="width:25%;" />
-						<col style="width:50%;" />
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+                <table>
+                    <caption>휴대폰 정보</caption>
+                    <colgroup>
+                        <col style="width:27%;" />
+                        <col style="width:73%;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">휴대폰번호</th>
+                            <td>
+                                <div class="hpNum">
+                                    <select name="" class="selectbox">
+                                        <option value="">선택</option>
+                                        <option value="">010</option>
+                                        <option value="">000</option>
+                                    </select>
+                                    <div class="inputBox">
+                                        <input type="text" class="inp" placeholder="숫자 입력" />
+                                    </div>
+                                    <div class="inputBox">
+                                        <input type="text" class="inp" placeholder="숫자 입력" />
+                                    </div>
+                                </div>    
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
 
-    <h2 id="">테이블 3</h2>
+
+    <h2 id="">테이블 2</h2>
     <!-- content -->
     <div class="table ty3">
         <table>
-            <caption>걱정제로서비스 주문 정보</caption>
+            <caption>서비스 정보</caption>
             <colgroup>
-                <col style="width:34%;">
-                <col style="width:15%;">
-                <col style="width:8%;">
-                <col style="width:8%;">
-                <col style="width:8%;">
-                <col style="width:9%;">
-                <col style="width:9%;">
-                <col style="width:9%;">
+                <col style="width:65%;" />
+                <col style="width:35%;" />
             </colgroup>
             <thead>
                 <tr>
-                    <th scope="col">주문 상품 정보(장착일자)</th>
-                    <th scope="col">주문일자(주문번호)</th>
-                    <th scope="col">계약본수</th>
-                    <th scope="col">계약기간</th>
-                    <th scope="col">차종</th>
-                    <th scope="col">차량No</th>
-                    <th scope="col">타이어<br /> 잔여본수</th>
-                    <th scope="col">신청상태</th>
+                    <th scope="col">서비스 제공조건</th>
+                    <th scope="col">할인 금액</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <img src="../static/images/sample/tire3.jpg" alt="" />
-                        <div class="orderInfo">
-                            <p class="txt">
-                                NFERA AU5 215/60R16 4p
-                                <span class="date">(2018.10.30)</span>
-                            </p>
-                        </div>
-                    </td>
-                    <td>
-                        2018.03.03
-                        <div class="orderNum">
-                            <a href="#">(O1505453001192)</a>
-                        </div>
-                    </td>
-                    <td>04</td>
-                    <td>12</td>
-                    <td>트라제XG</td>
-                    <td>24주2600</td>
-                    <td>0</td>
-                    <td></td>
+                    <td>전월 이용실적 30만원 이상</td>
+                    <td>1만 1천원</td>
+                </tr>
+                <tr>
+                    <td>전월 이용실적 70만원 이상</td>
+                    <td>1만 5천원</td>
                 </tr>
             </tbody>
         </table>
@@ -222,65 +156,56 @@
     <div class="box">
         <pre class="brush: html;">
 			<div class="table ty3">
-				<table>
-					<caption></caption>
-					<colgroup>
-						<col style="width:34%;">
-						<col style="width:15%;">
-						<col style="width:8%;">
-						<col style="width:8%;">
-						<col style="width:8%;">
-						<col style="width:9%;">
-						<col style="width:9%;">
-						<col style="width:9%;">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+                <table>
+                    <caption>서비스 정보</caption>
+                    <colgroup>
+                        <col style="width:65%;" />
+                        <col style="width:35%;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">서비스 제공조건</th>
+                            <th scope="col">할인 금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>전월 이용실적 30만원 이상</td>
+                            <td>1만 1천원</td>
+                        </tr>
+                        <tr>
+                            <td>전월 이용실적 70만원 이상</td>
+                            <td>1만 5천원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
-
-    <h2 id="">테이블 4</h2>
+    
+    
+    <h2 id="">테이블 3</h2>
     <!-- content -->
-    <div class="table ty4">
+    <div class="table ty3 view">
         <table>
-            <caption>주문자 정보 표시</caption>
+            <caption>개인정보 수집 정보</caption>
             <colgroup>
-                <col style="width:350px;">
-                <col style="">
+                <col style="width:27%;" />
+                <col style="width:73%;" />
             </colgroup>
             <tbody>
                 <tr>
-                    <th scope="row">주문번호</th>
-                    <td>
-                        <div class="inputBox">
-                            <input type="text" class="inp" disabled="disabled" />
-                        </div>
-                    </td>
+                    <th scope="row">이용목적</th>
+                    <td>타이어 렌탈 가입 상담 및 계약 체결</td>
+                </tr>
+                <tr>
+                    <th scope="row">항목</th>
+                    <td>이름, 주소, 연락처(핸드폰), 차종</td>
+                </tr>
+                <tr>
+                    <th scope="row">보유기간</th>
+                    <td>상담 종료일로부터 90일 이내</td>
                 </tr>
             </tbody>
         </table>
@@ -290,168 +215,132 @@
     <!-- souce code 뷰어 -->
     <div class="box">
         <pre class="brush: html;">
-			<div class="table ty4">
-				<table>
-					<caption></caption>
-					<colgroup>
-						<col style="width:350px;">
-						<col style="">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row"></th>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<div class="table ty3 view">
+                <table>
+                    <caption>개인정보 수집 정보</caption>
+                    <colgroup>
+                        <col style="width:27%;" />
+                        <col style="width:73%;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">이용목적</th>
+                            <td>타이어 렌탈 가입 상담 및 계약 체결</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <td>이름, 주소, 연락처(핸드폰), 차종</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">보유기간</th>
+                            <td>상담 종료일로부터 90일 이내</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</pre>
     </div>
-    <!-- //souce code 뷰어 -->
+    <!-- //souce code 뷰어 --> 
 
 
-    <h2 id="">리스트</h2>
+    <h2 id="">불릿 리스트</h2>
     <!-- content -->
     <ul class="list1">
-        <li>넥센타이어 렌탈 요금 2만 3천원 1회 발생 → 1만 6천원 청구할인</li>
-        <li>넥센타이어 렌탈 요금 건당 1만원 2회 발생 → 각각 1만원/6천원 (총 1만 6천원) 청구 할인</li>
-        <li>넥센타이어 렌탈 요금 1만원 1회 발생 → 1만원 청구할인 </li>
-    </ul>
+        <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
+        <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
+    </ul>   
     <!-- content -->
 
     <!-- souce code 뷰어 -->
     <div class="box">
         <pre class="brush: html;">
-			<ul class="list1">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+            <ul class="list1">
+                <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
+                <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
+            </ul>   
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
 
-    <h2 id="">리스트</h2>
+
+    <h2 id="">당구장 리스트</h2>
     <!-- content -->
-    <ul class="list2">
-        <li>넥센타이어 렌탈</li>
-        <li>넥센타이어 렌탈</li>
-    </ul>
+    <span class="mark1">장착 요청일은 <strong>3일 이후 부터</strong> 선택 가능합니다.</span>
     <!-- content -->
 
     <!-- souce code 뷰어 -->
     <div class="box">
         <pre class="brush: html;">
-			<ul class="list2">
-				<li></li>
-				<li></li>
-			</ul>
+			<span class="mark1"><strong></strong></span>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
 
-    <h2 id="">리스트</h2>
+    <h2 id="">박스 1</h2>
     <!-- content -->
-    <ul class="list3">
-        <li>넥센타이어 렌탈</li>
-        <li>넥센타이어 렌탈</li>
-    </ul>
-    <p class="mark2">mark2</p>
+    <div class="box1">
+        <dl class="exList">
+            <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 60만원 이상 시</span></dt>
+            <dd>
+                <ul class="list1">
+                    <li>넥센타이어 렌탈 요금 2만 5천원 1건인 경우<br> → 1만 5천원 할인</li>
+                    <li>넥센타이어 렌탈 요금 1만원 2건인 경우<br> → 1만원(총 1만원) 할인</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
     <!-- content -->
 
     <!-- souce code 뷰어 -->
     <div class="box">
         <pre class="brush: html;">
-			<ul class="list3">
-				<li></li>
-				<li></li>
-			</ul>
-
-			<p class="mark2"></p>
+			<div class="box1">
+                <dl class="exList">
+                    <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 60만원 이상 시</span></dt>
+                    <dd>
+                        <ul class="list1">
+                            <li>넥센타이어 렌탈 요금 2만 5천원 1건인 경우<br> → 1만 5천원 할인</li>
+                            <li>넥센타이어 렌탈 요금 1만원 2건인 경우<br> → 1만원(총 1만원) 할인</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
 
-    <h2 id="">리스트</h2>
+    <h2 id="">박스 2</h2>
     <!-- content -->
-    <ul class="list5">
-        <li>주문 전에는 타이어 렌탈서비스 상세 내용을 미리 확인하세요~!</li>
-        <li>회원가입주문은 렌탈전문점에도 가능합니다.</li>
-    </ul>
+    <div class="box2">
+        <div class="txt"><span>타이어 렌탈 가입 상담을 위한<br> 개인정보 수집 및 이용</span></div> 
+        <div class="radioGroup">
+            <div class="radio">
+                <input type="radio" name="radioAgree" id="radioAgree1"><label for="radioAgree1">동의함</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="radioAgree" id="radioAgree2" ><label for="radioAgree2">동의안함</label>
+            </div>    
+        </div>    
+    </div>
     <!-- content -->
 
     <!-- souce code 뷰어 -->
     <div class="box">
         <pre class="brush: html;">
-			<ul class="list5">
-				<li></li>
-				<li></li>
-			</ul>
+			<div class="box2">
+                <div class="txt"><span>타이어 렌탈 가입 상담을 위한<br> 개인정보 수집 및 이용</span></div> 
+                <div class="radioGroup">
+                    <div class="radio">
+                        <input type="radio" name="radioAgree" id="radioAgree1"><label for="radioAgree1">동의함</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="radioAgree" id="radioAgree2" ><label for="radioAgree2">동의안함</label>
+                    </div>    
+                </div>    
+            </div>
 		</pre>
     </div>
     <!-- //souce code 뷰어 -->
-
-    <h2 id="">리스트</h2>
-    <!-- content -->
-    <ol class="list6">
-        <li>프리미엄 타이어 월 1만원이면 OK~!</li>
-        <li>제휴카드 월 30만원 사용 시, 프리미엄 타이어가 공짜~</li>
-        <li>총 40만원 상당의 프리미엄 무상 서비스까지~ 기분좋은 혜택!</li>
-    </ol>
-    <!-- content -->
-
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
-			<ol class="list6">
-				<li></li>
-				<li></li>
-			</ol>
-		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
-
-    <h2 id="">리스트</h2>
-    <!-- content -->
-    <ol class="list7">
-        <li>프리미엄 타이어 월 1만원이면 OK~!</li>
-        <li>제휴카드 월 30만원 사용 시, 프리미엄 타이어가 공짜~</li>
-        <li>총 40만원 상당의 프리미엄 무상 서비스까지~ 기분좋은 혜택!</li>
-    </ol>
-    <!-- content -->
-
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
-			<ol class="list7">
-				<li></li>
-				<li></li>
-			</ol>
-		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
-
-    <h2 id="">리스트</h2>
-    <!-- content -->
-    <ol class="list8">
-        <li>프리미엄 타이어 월 1만원이면 OK~!</li>
-        <li>제휴카드 월 30만원 사용 시, 프리미엄 타이어가 공짜~</li>
-        <li>총 40만원 상당의 프리미엄 무상 서비스까지~ 기분좋은 혜택!</li>
-    </ol>
-    <!-- content -->
-
-    <!-- souce code 뷰어 -->
-    <div class="box">
-        <pre class="brush: html;">
-			<ol class="list8">
-				<li></li>
-				<li></li>
-			</ol>
-		</pre>
-    </div>
-    <!-- //souce code 뷰어 -->
-
-
 
 
 
@@ -476,8 +365,6 @@
             <a href="template_list.html">리스트 가이드</a>
         </div>
     </div>
-
-
 </body>
 
 </html>

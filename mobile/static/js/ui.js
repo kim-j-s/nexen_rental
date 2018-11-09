@@ -116,43 +116,45 @@ $(function(){
 		}
 	});
 
-	// visual list
-	$('.visualList').mouseenter(function(){
-		$("p:first",this).text("mouse enter");
-		$('.visualContent').find('.mapArea').removeClass('on');
-		$('.visualContent').find('.imgVisual').addClass('on');
-	}).mouseleave(function(){
-		$('.visualContent').find('.mapArea').addClass('on');
-		$('.visualContent').find('.imgVisual').removeClass('on');
-	});
-	
+	// 렌탈전문점
 	$('.visualList').find('li').each(function(){
-		$(this).mouseenter(function(){
-			var thisImg = $(this).html();
-			$('.imgVisual').find('img').remove();
-			$('.imgVisual').append(thisImg);
+		$(this).click(function(){
+			var map = $(this).index();
+			if (map == 0){
+				$('.visualContent').find('.mapArea').addClass('on');
+				$('.visualContent').find('.imgVisual').removeClass('on');
+			}else{
+				$('.visualContent').find('.mapArea').removeClass('on');
+				$('.visualContent').find('.imgVisual').addClass('on');
+				var thisImg = $(this).html();		
+				$('.imgVisual').find('img').remove();
+				$('.imgVisual').append(thisImg);
+			}	
 		});
 	});
 
 	var visualListLng = $('.visualList').find('li').length;
-	var MaxEvent = visualListLng - 3;
+	var thumViewWidth = $(window).width() - 30;
+	var thumViewNum = parseInt(thumViewWidth / 91,0);
+	var MaxEvent = visualListLng - thumViewNum;
 	var visualListClickCnt = 0;
+
 	if (visualListLng < 3)
 	{
-		$('.visualList').find('.btnVL').hide();
+		$('.btnVisualList').find('.btnVL').hide();
 	}
 
-	$('.visualList').find('.btn_next').click(function(){
+	$('.btnVisualList').find('.btn_next').click(function(){
 		visualListClickCnt++;
 		if (visualListClickCnt < MaxEvent + 1)
 		{
-			move = visualListClickCnt * -96;
+			move = visualListClickCnt * -97;
 			$('.visualListCont').stop(true, true).animate({
 				left:move
 			}, function(){
 				if (visualListClickCnt == MaxEvent)
 				{
-					$('.visualList').find('.btn_next').hide();
+					$('.btnVisualList').find('.btn_next').hide();
 				}
 			});
 			BtnChk();
@@ -161,17 +163,17 @@ $(function(){
 		}
 	});
 
-	$('.visualList').find('.btn_prev').click(function(){
+	$('.btnVisualList').find('.btn_prev').click(function(){
 		visualListClickCnt--;
 		if (visualListClickCnt > -1)
 		{
-			move = visualListClickCnt * -106;
+			move = visualListClickCnt * -97;
 			$('.visualListCont').stop(true, true).animate({
-				top:move
+				left:move
 			}, function(){
 				if (visualListClickCnt == 0)
 				{
-					$('.visualList').find('.btn_prev').hide();
+					$('.btnVisualList').find('.btn_prev').hide();
 				}
 			});
 			BtnChk();
@@ -180,6 +182,16 @@ $(function(){
 		}
 	});
 
+	function BtnChk() {
+		if (visualListClickCnt >= 1)
+		{
+			$('.btnVisualList').find('.btn_prev').show();
+		}
+		if (visualListClickCnt <= MaxEvent)
+		{
+			$('.btnVisualList').find('.btn_next').show();
+		}
+	}
 });
 
 /* parallax scrolling motion */

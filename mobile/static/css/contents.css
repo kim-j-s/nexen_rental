@@ -8,17 +8,12 @@
 #content .contWrap {padding:90px 15px 50px 15px;}
 #content .contWrap.optNo {padding:45px 15px 50px 15px;}
 #content .contWrap.lpdNo {padding:45px 0px 50px 0px;}
-
 #layerPop {padding: 10px;}
 
 /* 텍스트 */
 .sectionTitle {position:relative; line-height: 40px; text-align:center; font-weight:400; font-size:14px; color:#000000; border-bottom:2px solid #dcdcdc;background-color:#f5f5f5}
 .sectionTitle span:after {content:''; position:absolute; top:17px; right:15px; width:11px; height:6px; background:url(../images/common/icon/icon_arrow_updown.png) no-repeat; background-size:11px 6px;}
 .sectionTitle.on span:after {transform:rotate(180deg);}
-.subTitle {text-align:center; font-weight:500; font-size:24px; color:#454545;}
-.subTitle + .blTxt1 {margin-top:35px;}
-.subTitle + .list3 {margin-top:35px;}
-.subTitle + .table {margin-top:38px;}
 .tableTitle.mg1 {margin:30px 0 0 0;}
 .tableTitle.mg2 {margin:20px 0 0 0;}
 .tableTitle .tit {font-size:15px; font-weight:bold; color:#000000;padding-bottom:10px;}
@@ -34,18 +29,8 @@
 .inputBox .inp:focus {border:1px solid #812990;}
 .inputBox .inp.error {border:1px solid #c3244e;}
 
-
-/* checkbox */
-.checkbox {display:inline-block; position:relative; min-height:24px; padding:2px 0 0 35px;}
-.checkbox input { position:absolute; top:0; left:0; z-index:1; opacity:0;}
-.checkbox label {font-size:16px; color:#666; cursor:pointer; line-height:21px;}
-.checkbox label:after { content:''; display:block; position:absolute; top:0px; left:0; width:24px; height:24px; background:url('../images/common/icon/icon_checkbox.jpg') no-repeat 0 0;}
-.checkbox input:checked + label:after { background-position:0 -24px;}
-.checkbox.all {padding:0 0 0 35px;}
-.checkbox.all label {font-weight:500; font-size:22px; color:#333; line-height:1;}
-.checkbox.all label:after {top:1px;}
-
 /* radio */
+.radioGroup {}
 .radio {display:inline-block; position:relative; min-height:17px; padding:0 0 0 25px; text-align:left;}
 .radio input { position:absolute; top:0; left:0; z-index:1; opacity:0;}
 .radio label {font-size:12px; color:#666; font-weight:300; cursor:pointer; line-height:17px; margin-right:20px;}
@@ -145,14 +130,10 @@ td .textarea {width:100%;}
 .table.ty3 thead tr th:first-child, .table.ty3 tbody tr td:first-child {border-left:none;}
 .table.ty3.view tbody tr th:first-child, .table.ty3 tbody tr td:first-child {border-top:none;}
 .table.ty3.view tbody td {border-left:none;}
-.table.ty3 + .pagenation {margin-top:55px;}
 
 .table.mg1 {margin:30px 0 0 0;}
 .table.mg2 {margin:10px 0 15px 0;}
 .table table tbody td .inputBox {vertical-align:middle;}
-.table table tbody td .inputBox.picker {width:180px;}
-.table table tbody td .inputBox.picker .inp {background:url(../images/common/icon/icon_datepicker.png) no-repeat right 10px center;}
-.table table tbody td .inputBox.picker + .mark1 {margin-left:6px;}
 .table table tbody td .link {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
 .box1 {background:#f5f5f5; padding:15px 10px;}
@@ -322,22 +303,23 @@ td .textarea {width:100%;}
 .rentalShopList .addInfo .btn.ty8 {position:absolute; top:10px; right:10px;}
 .rentalShopList .addInfo .btn.ty9 {position:absolute; top:10px; right:75px;}
 
-.viewContent {position:relative; margin:15px 0; overflow:hidden; }
-.viewContent > .visualContent {width:100%; height:280px;}
+.viewContent {margin:15px 0 0 0;}
+.viewContent > .visualContent {width:100%; height:280px; max-height: 280px;}
 .viewContent > .visualContent .mapArea {display:none;}
 .viewContent > .visualContent .mapArea.on {display:block;}
-.viewContent > .visualContent .imgVisual {display:none;}
+.viewContent > .visualContent .imgVisual {height:280px; display:none;}
 .viewContent > .visualContent .imgVisual.on {display:block;}
 .viewContent > .visualContent .imgVisual img {width:100%; height:100%;}
-.viewContent > .visualList {width:100%; height:51px; overflow:hidden; margin:10px 0;}
-.viewContent > .visualList > ul {position:absolute; bottom:0; left:0; width:2000px; overflow:hidden;}
+.viewContent > .visualList {position:relative; width:100%; height:51px; overflow:hidden; margin:10px 0;}
+.viewContent > .visualList > ul {position:absolute; bottom:0; left:0; width:20000px; overflow:hidden;z-index:100px;}
 .viewContent > .visualList > ul li {position:relative; width:93px; height:51px; transition: 0.45s; font-size:0; text-align:center; float:left; margin-right:5px; }
 .viewContent > .visualList > ul li:hover:after {content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #812990; box-sizing:border-box;}
 .viewContent > .visualList > ul li img {display:inline-block; width:100%; height:100%; vertical-align:middle;}
-.viewContent > .visualList .btnVL {position:absolute; bottom:5px; width:20px; height:40px; z-index:1; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_visualList.png) no-repeat 0 0; background-size:40px 40px; }
-.viewContent > .visualList .btnVL.btn_prev {display:none;left:0px; margin-left:-15px; background-position:0px 0px;}
-.viewContent > .visualList .btnVL.btn_prev.on {display:block;}
-.viewContent > .visualList .btnVL.btn_next {right:0px; margin-right:0px; background-position:-20px 0px;}
+.btnVisualList {position:relative;}
+.btnVL {position:absolute; bottom:15px; width:20px; height:40px; z-index:1; text-indent:-999px; overflow:hidden; background:url(../images/common/btn/btn_visualList.png) no-repeat 0 0; background-size:40px 40px; }
+.btnVL.btn_prev {left:0px; margin-left:-15px; background-position:0px 0px;}
+.btnVL.btn_prev.on {display:block;}
+.btnVL.btn_next {right:0px; margin-right:-15px; background-position:-20px 0px;}
 
 .divShopName {display:table; width:100%;}
 .divShopName .serviceIcon {display:table-cell; width:40px;}
