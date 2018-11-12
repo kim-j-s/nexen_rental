@@ -5,8 +5,8 @@
  * common - 컨텐츠 공통
  * ============================== */
 #wrap {width:100%; margin:0 auto;}
-#content {width:100%; margin:45px 0 50px 0;}
-#content .contWrap {padding:0 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
+#content {width:100%; margin:45px 0 0 0;}
+#content .contWrap {padding:0 15px 50px 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
 #layerPop {padding: 10px;}
 
 /* 상단 옵션 */
@@ -299,7 +299,7 @@ td .textarea {width:100%;}
 .searchShop .searchWrap > dl dd select {width:100%;} 
 .searchShop .btnTogl {position:absolute; top:100%; left:50%; margin-left:-22px; margin-top:0px; cursor:pointer; display:block; font-size:0; width:44px; height:16px; background:url(../images/common/btn/bg_btn2.png) no-repeat 0 0; background-size:44px 32px; }
 .searchShop .btnTogl.on {background-position:0 -16px; margin-top:-1px;}
-.rentalShopList {padding:35px 15px 0px 15px;}
+.rentalShopList {padding:35px 0px 0px 0px;}
 .rentalShopList > ul li {margin:10px 0;}
 .rentalShopList > ul li:last-child {margin:0;}
 .rentalShopList .txt {color:#000000; font-size:12px; font-weight:300;}
