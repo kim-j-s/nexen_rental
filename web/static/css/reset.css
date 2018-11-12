@@ -51,6 +51,9 @@ button span{
   color: rgba(181,181,181,0.8);
 }
 
+textarea:-ms-input-placeholder {
+    color:rgba(181,181,181,0.8) !important;
+}
 
 .tl {text-align:left !important;}
 .tr {text-align:right !important;}
@@ -78,6 +81,8 @@ button span{
 .color3 {color:#b6985a !important;}
 .color4 {color:#c3244e !important;}
 
+.bold {font-weight:500;}
+
 
 .mt5 {margin-top:5px;}
 .mt10 {margin-top:10px;}
@@ -89,6 +94,11 @@ button span{
 .ml10 {margin-left:10px;}
 
 .pt62 {padding-top:62px;}
+
+.pl17 {padding-left:17px;}
+
+.wd60 {width:60px !important;}
+.wd130 {width:130px !important;}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
