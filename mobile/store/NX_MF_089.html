@@ -11,9 +11,10 @@
     <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
     <link href="../static/css/common.css" rel="stylesheet" />
-    <link href="../static/css/contents.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />    
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
+    <script type="text/javascript" src="../static/js/lib/jquery.swiper.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript">
         document.createElement("header"); 
@@ -44,33 +45,38 @@
                     <p class="tit line">매장위치</p>
                 </div>
 
-                <div class="viewContent">
-                    <div class="visualContent">
-                        <!-- 지도영역 -->
-                        <div class="mapArea on">
-                            <img src="../static/images/sample/map2.jpg" alt="" />
+                <div div class="viewContentWrap">
+                    <div div class="viewContent">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(../static/images/sample/map2.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                            </div>
                         </div>
-                        <!--// 지도영역 -->
-                        <div class="imgVisual">
-                            <img src="../static/images/common/img_null.jpg" alt="" />
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(../static/images/sample/map2.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                                <div class="swiper-slide" style="background-image:url(../static/images/common/img_null.jpg)"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="visualList">
-                        <ul class="visualListCont">
-                            <li><img src="../static/images/sample/map2.jpg" alt="" /></li>
-                            <li><img src="../static/images/common/img_null.jpg" alt="" /></li>
-                            <li><img src="../static/images/common/img_null.jpg" alt="" /></li>
-                            <li><img src="../static/images/common/img_null.jpg" alt="" /></li>
-                            <li><img src="../static/images/common/img_null.jpg" alt="" /></li>
-                            <li><img src="../static/images/sample/map2.jpg" alt="" /></li>
-                        </ul>                        
-                    </div>
-                    <div class="btnVisualList">
-                        <button class="btnVL btn_prev"><span>이전보기</span></button>
-                        <button class="btnVL btn_next"><span>다음보기</span></button>
-                    </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div> 
                 </div>
-                
+
                 <div class="table ty3">
                     <table>
                         <caption>렌탈 전문점 정보</caption>

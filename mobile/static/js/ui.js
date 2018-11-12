@@ -117,81 +117,23 @@ $(function(){
 	});
 
 	// 렌탈전문점
-	$('.visualList').find('li').each(function(){
-		$(this).click(function(){
-			var map = $(this).index();
-			if (map == 0){
-				$('.visualContent').find('.mapArea').addClass('on');
-				$('.visualContent').find('.imgVisual').removeClass('on');
-			}else{
-				$('.visualContent').find('.mapArea').removeClass('on');
-				$('.visualContent').find('.imgVisual').addClass('on');
-				var thisImg = $(this).html();		
-				$('.imgVisual').find('img').remove();
-				$('.imgVisual').append(thisImg);
-			}	
-		});
-	});
-
-	var visualListLng = $('.visualList').find('li').length;
-	var thumViewWidth = $(window).width() - 30;
-	var thumViewNum = parseInt(thumViewWidth / 91,0);
-	var MaxEvent = visualListLng - thumViewNum;
-	var visualListClickCnt = 0;
-
-	if (visualListLng < 3)
-	{
-		$('.btnVisualList').find('.btnVL').hide();
-	}
-
-	$('.btnVisualList').find('.btn_next').click(function(){
-		visualListClickCnt++;
-		if (visualListClickCnt < MaxEvent + 1)
-		{
-			move = visualListClickCnt * -97;
-			$('.visualListCont').stop(true, true).animate({
-				left:move
-			}, function(){
-				if (visualListClickCnt == MaxEvent)
-				{
-					$('.btnVisualList').find('.btn_next').hide();
-				}
-			});
-			BtnChk();
-		} else {
-			visualListClickCnt = MaxEvent;
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	  });
+	  var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 15,
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+		  swiper: galleryThumbs
 		}
-	});
-
-	$('.btnVisualList').find('.btn_prev').click(function(){
-		visualListClickCnt--;
-		if (visualListClickCnt > -1)
-		{
-			move = visualListClickCnt * -97;
-			$('.visualListCont').stop(true, true).animate({
-				left:move
-			}, function(){
-				if (visualListClickCnt == 0)
-				{
-					$('.btnVisualList').find('.btn_prev').hide();
-				}
-			});
-			BtnChk();
-		} else {
-			visualListClickCnt = 0;
-		}
-	});
-
-	function BtnChk() {
-		if (visualListClickCnt >= 1)
-		{
-			$('.btnVisualList').find('.btn_prev').show();
-		}
-		if (visualListClickCnt <= MaxEvent)
-		{
-			$('.btnVisualList').find('.btn_next').show();
-		}
-	}
+	  });
 });
 
 /* parallax scrolling motion */
