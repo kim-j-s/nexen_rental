@@ -1,12 +1,26 @@
 @charset "utf-8";
 
-
-/* ==============================
- * common - 컨텐츠 공통
- * ============================== */
- 
-
-
  /* ==============================
  * main
  * ============================== */
+
+#mainWrap .mainTitle {}
+#mainWrap .mainTitle .tit {color:#000000; font-size:20px; font-weight:400; text-align: center; line-height:27px;}
+#mainWrap .mainTitle .txt {color:#666666; font-size:12px; font-weight:400; text-align: center; line-height:15px; margin-top:3px;}
+#mainWrap .mainTitle .txt .ty1 {font-weight:500; color:#c3244e;}
+
+.serviceFlow {position:relative; margin-top:58px; text-align:center; background:#f5f5f5;}
+.serviceFlow:after {content:''; position:absolute; top:62px; left:0; width:100%; border-bottom:1px solid #999;}
+.serviceFlow > ol {display:inline-block; width:1200px; margin:0 auto; overflow:hidden;}
+.serviceFlow > ol li {position:relative; z-index:1; padding-top:135px; width:126px; float:left;}
+
+
+
+#mainWrap .mainTitle {}
+
+.btnGoTop {position:fixed; right:15px; bottom:95px; display:block; width:36px; height:37px; background:url(../images/main/btn_top.png) no-repeat 0 0; background-size: 36px 37px; z-index:5;}
+.btnGoTop span {font-size:0;}
+.floatingMenu {position:fixed; top:0; left:0; bottom:0; width:100%; height:45px; border-top:1px solid #dcdcdc;}
+.floatingMenu > ul li {width:}
+.floatingMenu > ul li:after {content:''; position:absolute; top:33px; left:33px; width:60px; height:60px; background:blue; background:url(../images/main/icon_servieflow.png) no-repeat 0 0;}
+.floatingMenu > ul li:nth-child(1) {}
