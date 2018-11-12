@@ -53,6 +53,17 @@
 .wing > ul li:nth-child(3) a span:after {background-position:0 -72px;}
 
 
+/* ==============================
+ * Error
+ * ============================== */
+.errorPage {margin-top:140px; padding-top:95px; text-align:center; background:url(../images/common/bg_error.png) no-repeat center top;}
+.errorPage > .tit {font-weight:500; font-size:90px; color:#353535;}
+.errorPage > .txt1 {margin-top:140px; font-weight:500; font-size:20px; color:#333;}
+.errorPage > .txt1.etc {margin-top:165px;}
+.errorPage > .txt1 > strong {display:block; margin-top:9px; font-weight:500; font-size:30px; color:#812990;}
+.errorPage > .txt2 {margin-top:24px; font-size:18px;}
+.errorPage > .txt2 + .btnBox {margin-top:39px;}
+
 @media screen and (max-width: 1214px) {
 }
 
