@@ -31,45 +31,59 @@
         <header id="headerWrap">
             <div class="headerTopMenu">
                 <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>제휴카드</span></h1>
+                <h1><span>제휴카드</span></h1> <!-- 181112 : h1 추가 //-->
                 <a href="#" class="totalMenu"><span>전체메뉴</span></a>
             </div>
-        </header>
-        <!-- //헤더영역 -->
-
-        <!-- 제휴카드 --> 
-        <section id="content">
-            <div class="optionList">
-                <div class="optionTitle on"><span>우리카드</span></div>               
+            
+            <!-- 181112 : class="headerMenu" 삭제>
+            <div class="headerMenu">
+                <div class="headerTitle on"><span>롯데카드</span></div>               
                 <ul>
                     <li><a href="#">하나카드</a></li>     
-                    <li class="on"><a href="#">우리카드</a></li>
-                    <li><a href="#">롯데카드</a></li>
+                    <li><a href="#">우리카드</a></li>
+                    <li class="on"><a href="#">롯데카드</a></li>
                     <li><a href="#">농협카드</a></li>
                     <li><a href="#">국민카드</a></li>
                 </ul>
-            </div>                
-             
-            <div class="contWrap">               
+            </div-->
+        </header>
+        <!-- //헤더영역 -->
+
+        <section id="content">  
+            <!-- 181112 : class="optionList" 추가 -->
+            <div class="optionList">
+                <div class="optionTitle on"><span>농협카드</span></div>               
+                <ul>
+                    <li><a href="#">하나카드</a></li>     
+                    <li><a href="#">우리카드</a></li>
+                    <li><a href="#">롯데카드</a></li>
+                    <li class="on"><a href="#">농협카드</a></li>
+                    <li><a href="#">국민카드</a></li>
+                </ul>
+            </div>    
+            <!--// 181112 : class="optionList" 추가 -->
+
+            <!-- 제휴카드 -->  
+            <div class="contWrap">      
                 
-                <!-- 우리카드 -->
+                <!-- 농협카드 -->
                 <div class="affiliateCards">
                     <div class="inner">
                         <span data-animation="fadeInRight" class="animated fadeInRight cardImg">
-                            <img src="../static/images/membership/img_wooricard.png" alt="Woori Card" />
+                            <img src="../static/images/membership/img_nhcard.png" alt="NH Card" />
                         </span>
                         <p class="txt">
                             <span>제휴카드 관련 규정은<br> 카드사의 홈페이지를 통해서 확인하세요</span>
                         </p>
                         <div class="btnBox">
-                            <a href="https://sccd.wooribank.com/ccd/Dream?withyou=CDCIF0021&__STEP=1&CD_PRD_CD=228002&CTGR_CD=228002" class="btn ty1" target="_blank"><span class="btnTxt">자세히보기</span></a>
+                            <a href="https://card.nonghyup.com/index_cardProd.html?SERVICE_ID=IPCC2021R&NAVIGATE_TYPE=1&cd_wrs_sqno=90000364&FromSite=a3" class="btn ty1" target="_blank"><span class="btnTxt">자세히보기</span></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="btnSet">
-                    <a href="tel:1588-9955" class="btn ty4 fl">
-                        <span>우리카드 신청 콜센터</span><br><span class="call">1588-9955</span>
+                    <a href="tel:1644-2866" class="btn ty4 fl">
+                        <span>NH농협카드 신청 콜센터</span><br><span class="call">1644-2866</span>
                     </a>
                     <a href="tel:1855-0100" class="btn ty3 fr">
                         <span>넥센타이어 신청 콜센터</span><br><span class="call">1855-0100</span>
@@ -91,12 +105,16 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>전월 이용실적<br> 30만원 이상 ~ 100만원 미만</td>
-                                <td>1만 3천원</td>
+                                <td>전월 이용실적 30만원 이상</td>
+                                <td>1만 1천원</td>
                             </tr>
                             <tr>
                                 <td>전월 이용실적 100만원 이상</td>
-                                <td>2만원</td>
+                                <td>1만 5천원</td>
+                            </tr>
+                            <tr>
+                                <td>전월 이용실적 200만원 이상</td>
+                                <td>3만원</td>
                             </tr>
                         </tbody>
                     </table>
@@ -107,8 +125,8 @@
                         <dt class="title">비고</dt>
                         <dd>
                             <ul class="list1">
-                                <li>넥센타이어 렌탈 요금이 할인금액보다 적을 경우 승인 금액 만큼 청구할인 적용</li>
-                                <li>넥센타이어 렌탈료 자동이체 건이 여러 건인 경우에도 합산하여  할인한도 내에서 할인 적용</li>
+                                <li>전월 실적 산정시 넥센타이어 렌탈료는 제외됩니다.</li>
+                                <li>렌탈료 승인 금액이 할인 금액보다 적을 경우 승인금액만큼 할인 적용됩니다.</li>
                             </ul>
                         </dd>
                     </dl> 
@@ -116,21 +134,20 @@
 
                 <div class="box1">
                     <dl class="exList">
-                        <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 70만원 이상 시</span></dt>
+                        <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 100만원 이상 이용 시</span></dt>
                         <dd>
                             <ul class="list1">
-                                <li>넥센타이어 렌탈 요금 2만 5천원 1건인 경우<br> → 2만원 할인</li>
-                                <li>넥센타이어 렌탈 요금 1만원 2건인 경우<br> → 각 1만원/1만원 (총 2만원) 할인</li>
+                                <li>넥센타이어 렌탈 요금 2만 5천원 1건인 경우<br> → 1만 5천원 할인</li>
+                                <li>넥센타이어 렌탈 요금 1만원 2건인 경우<br> → 각 1만원/5천원 (총 1만 5천원) 할인</li>
                                 <li>넥센타이어 렌탈 요금 1만원 1건인 경우<br> → 1만원 할인</li>
                             </ul>
                         </dd>
                     </dl>
                 </div>
-                <!--// 우리카드 -->
+                <!--// 농협카드 -->
                 
             </div>
         </section>
-        <!-- 제휴카드 --> 
 
         <!-- 하단 영역 -->
         <footer id="footerWrap">

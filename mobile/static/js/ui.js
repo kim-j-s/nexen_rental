@@ -64,22 +64,24 @@ $(function(){
 	 * main 
 	 * ============================== */
 
+	 
+
 
 	/* ==============================
 	 * content 
 	 * ============================== */
 	// affiliate card 
-	var menuCard = $('.headerMenu > .sectionTitle')
-	var menuCardList = $('.headerMenu > ul')
+	var menuOpt = $('.optionList .optionTitle')
+	var menuOptList = $('.optionList > ul')
 	
-	$(menuCard).click(function(){
-		if ( $(menuCard).hasClass('on') )
+	$(menuOpt).click(function(){
+		if ( $(menuOpt).hasClass('on') )
 		{
-			$(menuCard).removeClass('on');
-			$(menuCardList).slideDown(200);
+			$(menuOpt).removeClass('on');
+			$(menuOptList).slideDown(200);
 		} else {
-			$(menuCardList).slideUp(200);
-			$(menuCard).addClass('on');
+			$(menuOptList).slideUp(200);
+			$(menuOpt).addClass('on');
 		}
 	});
 
@@ -134,6 +136,10 @@ $(function(){
 		  swiper: galleryThumbs
 		}
 	  });
+
+
+
+
 });
 
 /* parallax scrolling motion */

@@ -30,73 +30,78 @@
         <header id="headerWrap">
             <div class="headerTopMenu">
                 <a href="#" class="btn ty7"><span>지도보기</span></a>
-                <span>렌탈전문점</span>
+                <h1><span>렌탈전문점</span></h1>
                 <a href="#" class="closeBtn"><span>현재 창 닫기</span></a>
             </div>
         </header>
         <!-- //헤더영역 -->
 
-        <section id="content">            
-            <!-- 렌탈전문점 검색 -->
-            <div class="contWrap lpdNo">     
-                <div class="searchShop">
-                    <div class="searchWrap">
-                        <dl class="selectArea">
-                            <dt>시/도</dt> 
-                            <dd>
-                                <select name="" id="" class="selectbox">
-                                    <option value="">시/도 선택</option>
-                                    <option value="강원">강원</option>
-                                    <option value="경기">경기</option>
-                                    <option value="경남">경남</option>
-                                    <option value="경북">경북</option>
-                                    <option value="광주">광주</option>
-                                    <option value="대구">대구</option>
-                                    <option value="대전">대전</option>
-                                    <option value="부산">부산</option>
-                                    <option value="서울">서울</option>
-                                    <option value="세종">세종</option>
-                                    <option value="울산">울산</option>
-                                    <option value="인천">인천</option>
-                                    <option value="전남">전남</option>
-                                    <option value="전북">전북</option>
-                                    <option value="제주">제주</option>
-                                    <option value="충남">충남</option>
-                                    <option value="충북">충북</option>
-                                </select>
-                            </dd>
-                        </dl>
-                        <dl>   
-                            <dt>시/군/구</dt> 
-                            <dd>
-                                <select name="" id="" class="selectbox" disabled="disabled">
-                                    <option value="">시/군/구 선택</option>
-                                </select>
-                            </dd>
-                        </dl>
-                        <dl>   
-                            <dt>수입차 여부</dt> 
-                            <dd>
-                                <select name="" id="" class="selectbox">
-                                    <option value="">수입차 여부 선택</option>
-                                </select>
-                            </dd>
-                        </dl>    
-                        <dl>
-                            <dt>검색어</dt> 
-                            <dd>
-                                <div class="inputBox w100">
-                                    <input  class="inp" placeholder="키워드를 입력해주세요." />
-                                </div>
-                            </dd>
-                        </dl>
+        <!-- 렌탈전문점 검색 -->
+        <section id="content">  
 
-                        <div class="btnBox">
-                            <a href="#" class="btn ty2 bg2"><span>검색</span></a>
-                        </div> 
-                    </div>    
-                    <span class="btnTogl on">상세검색 열기/닫기</span>
-                </div> 
+            <!-- 상세검색 -->
+            <div class="searchShop">
+                <div class="searchWrap">
+                    <dl class="selectArea">
+                        <dt>시/도</dt> 
+                        <dd>
+                            <select name="" id="" class="selectbox">
+                                <option value="">시/도 선택</option>
+                                <option value="강원">강원</option>
+                                <option value="경기">경기</option>
+                                <option value="경남">경남</option>
+                                <option value="경북">경북</option>
+                                <option value="광주">광주</option>
+                                <option value="대구">대구</option>
+                                <option value="대전">대전</option>
+                                <option value="부산">부산</option>
+                                <option value="서울">서울</option>
+                                <option value="세종">세종</option>
+                                <option value="울산">울산</option>
+                                <option value="인천">인천</option>
+                                <option value="전남">전남</option>
+                                <option value="전북">전북</option>
+                                <option value="제주">제주</option>
+                                <option value="충남">충남</option>
+                                <option value="충북">충북</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>   
+                        <dt>시/군/구</dt> 
+                        <dd>
+                            <select name="" id="" class="selectbox" disabled="disabled">
+                                <option value="">시/군/구 선택</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>   
+                        <dt>수입차 여부</dt> 
+                        <dd>
+                            <select name="" id="" class="selectbox">
+                                <option value="">수입차 여부 선택</option>
+                            </select>
+                        </dd>
+                    </dl>    
+                    <dl>
+                        <dt>검색어</dt> 
+                        <dd>
+                            <div class="inputBox w100">
+                                <input  class="inp" placeholder="키워드를 입력해주세요." />
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <div class="btnBox">
+                        <a href="#" class="btn ty2 bg2"><span>검색</span></a>
+                    </div> 
+                </div>    
+                <span class="btnTogl on">상세검색 열기/닫기</span>
+            </div> 
+            <!--// 상세검색 -->
+            
+            <!-- 검색 리스트 -->
+            <div class="contWrap">               
                 <div class="rentalShopList">
                     <p class="txt">검색한 결과는 총 <span class="txtCount">20</span>건입니다.</p>
                     <ul> 
@@ -233,11 +238,12 @@
                             </div>   
                         </li>
                     </ul>
-                </div>    
-            </div>
-
-            <!--// 렌탈전문점 검색 --> 
-        </section>        
+                </div> 
+            </div>     
+            <!--// 검색 리스트 -->
+            
+        </section>  
+        <!--// 렌탈전문점 검색 -->       
     </div>
 </body>
 </html>
