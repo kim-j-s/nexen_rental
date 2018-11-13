@@ -16,6 +16,8 @@
 .sectionTitle + .schWrap {margin-top:35px;}
 .sectionTitle + .cartStepWrap {margin-top:55px;}
 .sectionTitle + .orderError {margin-top:25px;}
+.sectionTitle + .itemList3Wrap {margin-top:35px;}
+.sectionTitle + .orderAmount2 {margin-top:35px;}
 .sectionTitle2 {text-align:center; font-weight:500; font-size:22px; color:#333;}
 .sectionTitle + .sectionTitle2 {margin-top:27px;}
 .sectionTitle2 + .loginWrap {margin-top:18px;}
@@ -50,6 +52,7 @@
 .inputBox.error .inp {border:1px solid #c3244e;}
 .inputBox + .dateTxt {display:inline-block; width:34px; padding-left:6px; vertical-align:middle;}
 .inputBox + .btn.ty6 {margin-left:7px;}
+.inputBox.picker .inp {background:url(../images/common/icon/icon_datepicker.png) no-repeat right 10px center;}
 
 /* checkbox */
 .checkbox {display:inline-block; position:relative; min-height:24px; padding:1px 0 0 35px;}
@@ -143,7 +146,7 @@ td .textarea {width:100%;}
 .btn.ty7 span {display:block; font-size:18px; color:#fff; line-height:50px;}
 .btn.ty8 {width:200px; background:#fff; border-radius:2px; text-align:center; border:1px solid #999;}
 .btn.ty8 span {display:block; font-size:18px; color:#000; line-height:48px;}
-.btn.ty9 {padding:0 9px; min-width:72px; background:#555; line-height:26px; border-radius:2px; color:#fff; text-align:center;}
+.btn.ty9 {padding:0 9px; min-width:83px; background:#555; line-height:26px; border-radius:2px; color:#fff; text-align:center;}
 .btn.ty10 {padding:0 10px; background:#fff; line-height:26px; border-radius:2px; color:#b6985a; border:1px solid #b6985a;}
 .btn.ty11 {min-width:130px; background:#888; padding:0 10px; line-height:36px; font-size:14px; color:#fefefe; vertical-align:middle; text-align:center;}
 .btn.ty12 {display:inline-block; width:258px; line-height:60px; border:1px solid #fff; border-radius:5px; font-weight:400; font-size:18px; color:#fff; 
@@ -216,6 +219,7 @@ text-align:center;}
 .tabContent > .agreeWrap {margin-top:57px;}
 .tabContent > .loginWrap {margin-top:60px;}
 .tabContent > .deleteBox:nth-child(1) {font-size:0; margin:50px 0 15px 0;}
+.tabContent > .itemNone {margin-top:72px;}
 
 .tabWrap.mini {width:100%;}
 .tabWrap.mini .tabList > li > button {height:38px;}
@@ -290,6 +294,7 @@ text-align:center;}
 .list3 + .table {margin-top:14px;}
 .list3 + .infoWrap {margin-top:64px;}
 .list3 + .guideImg {margin-top:10px;}
+.list3 + .btnBox {margin-top:97px;}
 
 .list4 {}
 .list4 > li {font-size:14px; color:#888; line-height:20px;}
@@ -352,18 +357,22 @@ text-align:center;}
 .table.ty3 tbody td.tl {padding:20px 20px 20px 20px; text-align:left;}
 .table.ty3 tbody td.other {font-size:15px;}
 .table.ty3 tbody td.other.color1 {font-weight:400;}
+.table.ty3 tbody .used td {background:#dce3f0;}
 .table.ty3 thead tr th:first-child, .table.ty3 tbody tr td:first-child {border-left:none;}
 .table.ty3.small thead th {padding:12px 0 13px 0; font-size:15px;}
 .table.ty3.small tbody td {padding:11px 10px; font-size:15px;}
-.table.ty3 + .pagenation {margin-top:55px;}
 .table.ty3.small + .pagenation {margin-top:40px;}
+.table.ty3.cursor  tbody td {cursor:pointer;}
+.table.ty3 + .pagenation {margin-top:55px;}
 .table.ty3 + .infoAgree {margin-top:36px;}
 .table.ty3 + .infoAgreeBox {margin-top:20px;}
 .table.ty3 + .itemList3Wrap {margin-top:70px;}
+.table.ty3 + .infoWrap {margin-top:65px;}
+.table.ty3 + .orderAmount {margin-top:50px;}
 
 .table.ty4 {border-top:2px solid #353535;}
 .table.ty4 table {width:100%;}
-.table.ty4 table tbody th {padding:14px 10px 14px 80px; background:#f8f8f8; border-bottom:1px solid #e6e6e6; text-align:left; font-weight:400; font-size:16px; color:#454545;}
+.table.ty4 table tbody th {padding:21px 10px 21px 80px; background:#f8f8f8; border-bottom:1px solid #e6e6e6; text-align:left; font-weight:400; font-size:16px; color:#454545;}
 .table.ty4 table tbody th.tc {padding:14px 0;}
 .table.ty4 table tbody th label {font-weight:400; font-size:16px; color:#454545; cursor:pointer;}
 .table.ty4 table tbody td {padding:14px 10px 14px 20px; border-bottom:1px solid #e6e6e6; font-size:14px; color:#666; line-height:22px;}
@@ -372,6 +381,7 @@ text-align:center;}
 .table.ty4 table tbody td .inputBox {width:360px; color:#666;}
 .table.ty4 table tbody td .fileBox .inputBox {width:380px;}
 .table.ty4 + .table.ty3 {margin-top:20px;}
+.table.ty4 + .orderTotal {margin-top:50px;}
 
 .table.ty4 table tbody td .carGroup .txt {display:inline-block; font-weight:300; font-size:16px; color:#666; line-height:36px; vertical-align:middle;}
 .table.ty4 table tbody td .carGroup .txt + .inputBox {margin-left:4px; vertical-align:middle;}
@@ -397,7 +407,6 @@ text-align:center;}
 .table table tbody td .businessGroup .inputBox + .inputBox:before {content:''; position:absolute; top:17px; left:-15px; width:10px; border-bottom:1px solid #808080;}
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .inputBox.picker {width:180px;}
-.table table tbody td .inputBox.picker .inp {background:url(../images/common/icon/icon_datepicker.png) no-repeat right 10px center;}
 .table table tbody td .inputBox.picker + .mark1 {margin-left:6px;}
 .table table tbody td .inputBox + .txtBox {margin-top:13px;}
 .table table tbody td .inputBox.full {width:100%;}
@@ -468,13 +477,14 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .infoWrap.small + .infoWrap.small {margin-top:56px;}
 .infoWrap > .title {font-weight:500; font-size:22px; color:#333; line-height:26px;}
 .infoWrap > .title + .list3 {margin-top:13px;}
-.infoWrap > .title + .table.ty3 {margin-top:16px;}
-.infoWrap > .title + .table.ty4 {margin-top:16px;}
+.infoWrap > .title + .table.ty3 {margin-top:14px;}
+.infoWrap > .title + .table.ty4 {margin-top:14px;}
 .infoWrap > .txt {font-size:16px; color:#888; line-height:21px;}
 .infoWrap > .title + .txt {margin-top:13px;}
 .infoWrap > .txt + .table {margin-top:14px;}
 
 .infoWrap + .btnBox {margin-top:95px;}
+.infoWrap + .pagenation {margin-top:56px;}
 
 /* 평점 */
 .grade {display:inline-block; font-size:0; width:84px; height:15px; background:url(../images/common/bg_grade.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
@@ -579,7 +589,22 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .pagenation > .last {background-position:0 -126px;}
 .pagenation + .mark2 {display:block; margin-top:66px; font-size:16px; color:#666;}
 
-.itemNone {margin:52px 0; padding-top:58px; background:url(../images/common/icon/icon_none.png) no-repeat center top; font-size:16px; color:#666; text-align:center;}
+/* 기간 검색창 */
+.periodSorting {overflow:hidden;}
+.monthBtns {float:left; overflow:hidden;}
+.monthBtns > a {float:left; width:80px; line-height:34px; border:1px solid #d5d5d5; text-align:center; font-size:16px;}
+.monthBtns > a + a {margin-left:5px;}
+.monthBtns > a.on {background:#555; border:1px solid #555; color:#fff;}
+.period {float:left; margin-left:20px; overflow:hidden;}
+.period .inputBox {float:left; width:180px;}
+.period .inputBox + .inputBox {margin-left:20px;}
+.period .inputBox + .inputBox:before {content:'~'; position:absolute; top:0; left:-20px; width:20px; line-height:36px; text-align:center;}
+.periodSorting > .btn.ty6 {float:left; min-width:73px; margin-left:10px;}
+.periodSorting + .table.ty3 {margin-top:15px;}
+
+.itemNone {margin-top:52px; padding:58px 0 52px 0; background:url(../images/common/icon/icon_none.png) no-repeat center top; font-size:16px; color:#666; text-align:center; line-height:24px;}
+.itemNone.etc {border-bottom:1px solid #e6e6e6;}
+.itemNone + .btnBox {margin-top:50px;}
 
  /* ==============================
  * content
@@ -677,7 +702,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .contTitle > .txt {font-size:20px; color:#454545;}
 .contTitle > .mark2.fr {margin-top:4px;}
 .contTitle + .itemtList1 {margin-top:30px;}
-.contTitle + .table.ty3 {margin-top:18px;}
+.contTitle + .table.ty3 {margin-top:8px;}
 .contTitle + .apply {text-align:right; margin-top:-30px;}
 .contTitle + .apply + .table.ty3 {margin-top:18px;}
 .contTitle + .infoWrap {margin-top:55px;}
@@ -736,6 +761,8 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3Wrap {}
 .itemList3Wrap + .paymentWrap {margin-top:66px;}
 .itemList3Wrap + .orderNTxt {margin-top:27px;}
+.itemList3Wrap + .table.ty3 {margin-top:70px;}
+.itemList3Wrap + .tabWrap {margin-top:50px;}
 .itemList3 {}
 .itemList3 > li {border-top:2px solid #353535;}
 .itemList3 > li + li {border-top:none;}
@@ -746,7 +773,11 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3 > li > .infoTxt {padding:22px 30px; font-weight:400; font-size:18px;}
 .itemList3 > li > .infoTxt > span {font-weight:400; font-size:18px; color:#b6985a; line-height:26px;}
 .itemList3 > li > .inner .thumb {width:270px; text-align:center; border-right:1px solid #e6e6e6;}
-.itemList3 > li > .inner .info {padding:34px 0 38px 20px;}
+.itemList3 > li > .inner .info {position:relative; padding:34px 20px 38px 20px;}
+.itemList3 > li > .inner .info.etc {padding:34px 20px 20px 20px;}
+.itemList3 > li > .inner .info .btnGroup {margin-top:16px; text-align:right;}
+.itemList3 > li > .inner .info .btnGroup a {min-width:83px;}
+.itemList3 > li > .inner .info .btnGroup a + a {margin-left:4px;}
 .itemList3 > li > .inner .fee {width:275px; position:relative; padding:0 40px 0 0;}
 .itemList3 > li > .inner .fee:after {content:''; position:absolute; top:30px; left:0; width:1px; height:calc(100% - 60px); background:#dbdbdb;}
 .itemList3 > li > .inner .fee > dl {text-align:right;}
@@ -1200,8 +1231,9 @@ no-repeat left center;}
 .cartStepWrap + .tabWrap {margin-top:60px;}
 .cartStepWrap + .itemList3Wrap {margin-top:60px;}
 
-.orderAmount {display:table; width:100%; margin-top:50px; padding:33px 100px 35px 100px; background:#e7e2f2;}
+.orderAmount {display:table; width:100%; padding:33px 100px 35px 100px; background:#e7e2f2;}
 .orderAmount > .tit {display:table-cell; vertical-align:middle; padding-top:3px; font-weight:500; font-size:22px; color:#353535;}
+.orderAmount > .tit .color {font-weight:500; font-size:22px; color:#812990;}
 .orderAmount > .pay {display:table-cell; vertical-align:middle; text-align:right;}
 .orderAmount > .pay > dl {display:table; width:100%;}
 .orderAmount > .pay > dl + dl {margin-top:18px;}
@@ -1209,6 +1241,23 @@ no-repeat left center;}
 .orderAmount > .pay > dl dd {display:table-cell; width:165px; font-weight:400; font-size:20px; color:#454545; text-align:right;}
 .orderAmount > .pay > dl dd strong {font-weight:500; font-size:28px; color:#812990;}
 .orderAmount + .btnBox {margin-top:70px;}
+
+.orderAmount2 {display:table; width:100%; padding:21px 30px 23px 30px; background:#e7e2f2;}
+.orderAmount2.etc {padding:20px 30px 22px 30px; background:#fff; border:1px solid #812990;}
+.orderAmount2.other {background:#f5f5f5; border:1px solid #e5e5e5;}
+.orderAmount2 + .orderAmount2 {margin-top:20px;}
+.orderAmount2 > .tit {display:table-cell; vertical-align:middle; padding-top:3px; font-weight:400; font-size:20px; color:#353535;}
+.orderAmount2 > .tit .color {font-weight:400; font-size:20px; color:#812990;}
+.orderAmount2 > .pay {display:table-cell; vertical-align:middle; text-align:right;}
+.orderAmount2 > .pay > dl {display:table; width:100%;}
+.orderAmount2 > .pay > dl + dl {margin-top:18px;}
+.orderAmount2 > .pay > dl dt {display:table-cell; font-weight:400; font-size:20px; color:#454545; text-align:right; vertical-align:bottom;}
+.orderAmount2 > .pay > dl dd {display:table-cell; width:165px; font-weight:400; font-size:20px; color:#454545; text-align:right;}
+.orderAmount2 > .pay > dl dd strong {font-weight:500; font-size:28px; color:#812990;}
+.orderAmount2 > .btn {display:table-cell; width:160px; text-align:right;}
+.orderAmount2 + .btnBox {margin-top:70px;}
+.orderAmount2 + .infoWrap {margin-top:66px;}
+.orderAmount2 + .periodSorting {margin-top:40px;}
 
 .orderView {position:absolute; top:74px; right:0; width:335px; padding:0 14px; border:2px solid #812990;}
 .orderView.fix {top:74px !important;}
@@ -1247,13 +1296,24 @@ no-repeat left center;}
 .orderTotal {padding:21px 0 27px 0; background:#e7e2f2; text-align:center;}
 .orderTotal > .inner {display:inline-block;}
 .orderTotal > .inner > dl {display:table; width:100%;}
-.orderTotal > .inner > dl dt {display:table-cell; vertical-align:top; padding-top:12px; font-weight:400; font-size:20px; color:#353535;}
+.orderTotal > .inner > dl dt {display:table-cell; vertical-align:top; padding-top:12px; font-weight:400; font-size:20px; color:#353535; text-align:left;}
 .orderTotal > .inner > dl dd {display:table-cell; vertical-align:top; width:185px; text-align:right;}
 .orderTotal > .inner > dl dd .pay {font-size:20px; color:#353535;}
 .orderTotal > .inner > dl dd .pay .num {font-weight:500; font-size:34px; color:#812990;}
 .orderTotal > .inner > dl dd .txt {font-size:16px;}
+.orderTotal.etc {padding:21px 0 22px 0;}
+.orderTotal.etc > .inner > dl + dl {margin-top:4px;}
+.orderTotal.etc > .inner > dl dt {padding-top:6px;}
+.orderTotal.etc > .inner > dl dd {width:230px;}
+.orderTotal.etc > .inner > dl dd .pay .num {font-weight:500; font-size:28px; color:#812990;}
+.orderTotal.etc > .inner > dl dd .pay .num.minus {color:#c3244e;}
+.orderTotal.etc > .inner > dl.fin {margin-top:11px; padding-top:1px; border-top:1px dashed #b9b7bb;}
+.orderTotal.etc > .inner > dl.fin dt {padding-top:10px; font-size:22px;}
+.orderTotal.etc > .inner > dl.fin dd .pay .num {font-weight:500; font-size:34px; color:#812990;}
+.orderTotal.etc > .inner > dl.fin dd .pay .num.minus {color:#c3244e;}
 .orderTotal + .orderNTxt {margin-top:27px;}
 .orderTotal + .infoWrap {margin-top:66px;}
+.orderTotal + .btnBox {margin-top:100px;}
 
 .orderNTxt {font-size:16px; color:#333; text-align:center;}
 .orderNTxt + .btnBox {margin-top:100px;}

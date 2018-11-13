@@ -90,8 +90,10 @@ textarea:-ms-input-placeholder {
 .mt46 {margin-top:46px;}
 .mt50 {margin-top:50px;}
 .mt56 {margin-top:56px;}
+.mt60 {margin-top:60px !important;}
 
 .ml10 {margin-left:10px;}
+.ml16 {margin-left:16px;}
 
 .pt62 {padding-top:62px;}
 
