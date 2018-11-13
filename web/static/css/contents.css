@@ -165,6 +165,7 @@ text-align:center;}
 .btn.ty16 span {display:block; font-size:18px; color:#fff; line-height:50px;}
 .btn.ty17 {padding:0 10px; min-width:72px; background:#812990; line-height:26px; border-radius:2px; color:#fff; text-align:center;}
 .btn.ty18 {min-width:90px; padding:0 9px; font-size:16px; color:#666; border:1px solid #c5c5c5; line-height:28px; text-align:center;}
+.btn.ty19 {padding:0 10px; min-width:83px; background:#999; line-height:26px; border-radius:2px; color:#fff; text-align:center;}
 
 .tel {position:relative; display:inline-block; padding:0 20px;}
 .tel:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; border:2px solid #454545; border-right:none; background:#fff;}
@@ -369,6 +370,7 @@ text-align:center;}
 .table.ty3 + .itemList3Wrap {margin-top:70px;}
 .table.ty3 + .infoWrap {margin-top:65px;}
 .table.ty3 + .orderAmount {margin-top:50px;}
+.table.ty3 + .orderTotal {margin-top:50px;}
 
 .table.ty4 {border-top:2px solid #353535;}
 .table.ty4 table {width:100%;}
@@ -380,7 +382,7 @@ text-align:center;}
 .table.ty4.etc table tbody td > * {vertical-align:middle;}
 .table.ty4 table tbody td .inputBox {width:360px; color:#666;}
 .table.ty4 table tbody td .fileBox .inputBox {width:380px;}
-.table.ty4 + .table.ty3 {margin-top:20px;}
+.table.ty4 + .table.ty3 {margin-top:70px;}
 .table.ty4 + .orderTotal {margin-top:50px;}
 
 .table.ty4 table tbody td .carGroup .txt {display:inline-block; font-weight:300; font-size:16px; color:#666; line-height:36px; vertical-align:middle;}
@@ -762,6 +764,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3Wrap + .paymentWrap {margin-top:66px;}
 .itemList3Wrap + .orderNTxt {margin-top:27px;}
 .itemList3Wrap + .table.ty3 {margin-top:70px;}
+.itemList3Wrap + .table.ty4 {margin-top:70px;}
 .itemList3Wrap + .tabWrap {margin-top:50px;}
 .itemList3 {}
 .itemList3 > li {border-top:2px solid #353535;}
@@ -1254,10 +1257,11 @@ no-repeat left center;}
 .orderAmount2 > .pay > dl dt {display:table-cell; font-weight:400; font-size:20px; color:#454545; text-align:right; vertical-align:bottom;}
 .orderAmount2 > .pay > dl dd {display:table-cell; width:165px; font-weight:400; font-size:20px; color:#454545; text-align:right;}
 .orderAmount2 > .pay > dl dd strong {font-weight:500; font-size:28px; color:#812990;}
-.orderAmount2 > .btn {display:table-cell; width:160px; text-align:right;}
+.orderAmount2 > .btn {display:table-cell; width:50px; text-align:right; white-space:nowrap; padding-left:30px;}
 .orderAmount2 + .btnBox {margin-top:70px;}
 .orderAmount2 + .infoWrap {margin-top:66px;}
 .orderAmount2 + .periodSorting {margin-top:40px;}
+.orderAmount2 + .mark2 {margin-top:67px;}
 
 .orderView {position:absolute; top:74px; right:0; width:335px; padding:0 14px; border:2px solid #812990;}
 .orderView.fix {top:74px !important;}
@@ -1390,9 +1394,18 @@ no-repeat left center;}
 .layerPopCont .layerF .mark2 {display:inline-block; vertical-align:middle; color:#666;}
 .layerPopCont .layerF .btns {float:right;}
 .layerPopCont .layerF .btns.tc {float:none; text-align:center;}
+.layerPopCont .layerF .btns .btn {min-width:83px;}
 .layerPopCont .layerF .btns .btn + .btn {margin-left:7px;}
+.layerPopCont .table.ty4 + .table.ty3 {margin-top:20px;}
 .subTxt2 {}
-.subTxt2 > p {padding:0 20px; font-weight:400; font-size:15px; color:#333; line-height:58px; background:#f5f5f5; border:1px solid #e5e5e5;}
+.subTxt2 > p {padding:14px 20px; font-weight:400; font-size:15px; color:#333; line-height:30px; background:#f5f5f5; border:1px solid #e5e5e5;}
+.subTxt2 + .accountInfo {margin-top:50px;}
+
+.accountInfo {border:1px solid #d2d2d2;}
+.accountInfo > dt {padding:0 20px; line-height:53px; border-bottom:1px solid #d2d2d2; font-weight:500; font-size:18px; color:#454545;}
+.accountInfo > dd {padding:17px 20px 18px 20px; background:#f8f8f8;}
+.accountInfo > dd li {color:#666;}
+.accountInfo + .layerF {margin-top:40px;}
 
 .popSearch {position:relative; margin-top:14px; padding:14px 10px; border-top:2px solid #353535; border-bottom:1px solid #c5c5c5;}
 .popSearch .keyword {position:absolute; top:14px; right:10px;}
@@ -1517,6 +1530,7 @@ no-repeat left center;}
 .mark1 > strong {font-weight:400; color:#000;}
 p.mark1 {display:block; line-height:20px;}
 .mark2 {display:inline-block; padding-left:17px; background:url(../images/common/icon/icon_star1.png) no-repeat left 5px; font-size:16px; color:#888; line-height:21px;}
+.mark2 > .color1 {font-weight:500; font-size:16px;}
 .mark2 + .table.ty3 {margin-top:7px;}
 
 
