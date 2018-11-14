@@ -319,6 +319,7 @@ text-align:center;}
 .list7 {}
 .list7 > li {padding-left:22px; font-weight:400; font-size:16px; color:#454545; background:url(../images/common/icon/icon_list7.png) no-repeat left 3px; line-height:20px;}
 .list7 > li + li {margin-top:7px;}
+.list7 > li .toolTip {margin-top:-3px;}
 .list7 > li > .text {margin-top:10px; font-size:15px;}
 .list7 > li > .text > * {font-size:15px;}
 .list7 > li > .text .serviceTxt + .serviceTxt {margin-left:12px;}
@@ -906,8 +907,11 @@ no-repeat left center;}
 .switch .switchBtn > input[type="radio"]:checked {}
 .switch .switchBtn > input[type="radio"]:checked + label {color:#fff; border:1px solid #555;}
 .switchGroup + .selectGroup {margin-left:12px;}
+.switchGroup + .selectGroup + .selectGroup {margin-left:12px;}
 .switchGroup.on + .selectGroup > .selectbox {width:261px;}
 .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:260px;}
+.switchGroup.on + .selectGroup + .selectGroup > .selectbox {width:261px;}
+.switchGroup.on + .selectGroup + .selectGroup > .selectbox:nth-of-type(1) {width:260px;}
 .switchGroup.on .switch:nth-of-type(2) {display:none;}
 .schWrap + .itemWrap {margin-top:48px;}
 
@@ -917,20 +921,23 @@ no-repeat left center;}
 .selectGroup + .btn.sch.big {margin-left:12px;}
 
 .schTip {display:inline-block; vertical-align:middle;}
-.tipBtn {display:inline-block; cursor:pointer; width:80px; text-align:center; border:1px solid #d5d5d5; background:#fff;}
-.tipBtn > span {display:inline-block; padding-left:21px; font-size:16px; color:#454545; line-height:40px; background:url(../images/common/icon/icon_tip.png) no-repeat left center;}
+.tipBtn {position:relative; display:inline-block; cursor:pointer; width:80px; text-align:center; border:1px solid #d5d5d5; background:#fff;}
+.tipBtn > .txt {display:inline-block; padding-left:21px; font-size:16px; color:#454545; line-height:40px; background:url(../images/common/icon/icon_tip.png) no-repeat left center;}
+.tipBtn > .toolBox {top:51px; right:-30px; left:auto;}
+.tipBtn > .toolBox:after {}
+.tipBtn:hover > .toolBox {display:block;}
+.tipBtn > .toolBox:after {content:''; position:absolute; top:-10px; right:65px; width:14px; border-bottom:10px solid #252525; border-left:7px solid transparent; border-right:7px solid transparent;}
 
-.lifeStyle {position:relative; margin-top:25px; border:1px solid #c5c5c5; padding:20px; overflow:hidden;}
-.lifeStyle > .txt {display:inline-block; vertical-align:middle; font-size:18px; color:#454545; line-height:30px;}
-.lifeStyle > .btn.close {position:relative; z-index:1; float:right;}
-.lifeStyle > .lifeStyleCase {position:absolute; top:15px; left:0; width:100%;}
+.lifeStyle {position:relative; display:table; width:100%; margin-top:25px; padding:0 20px 0 20px; border:1px solid #c5c5c5; overflow:hidden;}
+.lifeStyle > .txt {display:table-cell; vertical-align:middle; width:305px; font-size:18px; color:#454545; line-height:30px;}
+.lifeStyle > .btn.close {position:absolute; top:50%; right:20px; margin-top:-15px; z-index:1;}
+.lifeStyle > .lifeStyleCase {display:table-cell; vertical-align:middle; padding:0 40px 20px 0; text-align:left;}
 .lifeStyleCase {text-align:center; font-size:0;}
 .lifeStyleCase > .lsCase {position:relative; display:inline-block;}
-.lsCase {position:relative; padding:0 20px;}
+.lsCase {position:relative; padding:0 20px; margin:20px 30px 0 0;}
 .lsCase:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; background:#812990;}
 .lsCase:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; background:#812990;}
-.lsCase > span {display:block; min-width:90px; padding:0 1px; line-height:40px; border-left:none; border-right:none; background:#812990; font-size:16px; color:#fff; text-align:center;}
-.lsCase + .lsCase {margin-left:30px;}
+.lsCase > span {display:block; min-width:90px; padding:0 2px; line-height:40px; border-left:none; border-right:none; background:#812990; font-size:16px; color:#fff; text-align:center;}
 .lifeStyle + .sortDisplay {margin-top:27px;}
 
 .sortDisplay {margin-top:19px; overflow:hidden;}
@@ -1022,15 +1029,16 @@ no-repeat left center;}
 .prodGalleryThumb > ul li + li:nth-child(3),
 .prodGalleryThumb > ul li + li:nth-child(4) {margin-left:15px;}
 
-.prdDetailCont {overflow:hidden;}
-.prdDetailCont {}
+.prdDetailCont {position:relative;}
+.prdDetailCont:after {content:''; display:block; clear:both;}
 .prdDetailCont + .prdDetailCont {margin-top:50px;}
 .prdDetailCont + .prdDetailCont.etc {margin-top:0;}
 .prdDetailCont + .infoWrap {margin-top:50px;}
 .prdDetailCont + .tabWrap {margin-top:60px;}
 .prdDetailCont h3.title {font-weight:400; font-size:30px; color:#252525;}
 
-.carInfoWrap {position:relative; border:1px solid #c5c5c5; overflow:hidden;}
+.carInfoWrap {position:relative; border:1px solid #c5c5c5;}
+.carInfoWrap:after {content:''; display:block; clear:both;}
 .carInfoWrap + .itemtList3 {margin-top:50px;}
 .setting {float:left; width:623px;}
 .settingList {position:relative; width:128px; border-right:1px solid #c5c5c5;}
@@ -1099,7 +1107,7 @@ no-repeat left center;}
 .makerGroup2 .selectbox + .selectbox {margin:10px 0 0 0;;}
 .makerGroup2 .selectbox + .inputBox {display:block; margin-top:10px;}
 
-.tireOptions {height:266px; overflow:auto;}
+.tireOptions {height:266px; /* overflow:auto; */ overflow-y:scroll;}
 .tireOptions > .head {font-size:0;}
 .tireOptions > .head .txt {position:relative; display:inline-block; padding-left:10px; vertical-align:middle; line-height:36px; font-weight:500; font-size:15px; color:#454545;}
 .tireOptions > .head .txt:after {content:''; position:absolute; top:50%; left:0; margin-top:-1px; width:3px; height:3px; background:#666;}
@@ -1111,10 +1119,14 @@ no-repeat left center;}
 .tireOptionList > li {position:relative; overflow:hidden;}
 .tireOptionList > li + li {margin-top:10px;}
 .tireOptionList > li input[type="radio"] {position:absolute; top:-20px; left:0;}
-.tireOptionList > li label {position:relative; display:block; padding:0 10px; font-size:14px; color:#666; line-height:34px; border:1px solid #d5d5d5;}
+.tireOptionList > li label {position:relative; display:block; padding:0 10px; font-size:14px; color:#666; line-height:34px; border:1px solid #d5d5d5; background:#fff;}
 .tireOptionList > li label:after {content:''; position:absolute; top:50%; right:10px; margin-top:-10px; width:20px; height:20px; background:url(../images/common/icon/icon_checkbox2.jpg) no-repeat 0 0;}
 .tireOptionList > li input[type="radio"]:checked + label {border:1px solid #812990;}
 .tireOptionList > li input[type="radio"]:checked + label:after {background:url(../images/common/icon/icon_checkbox2.jpg) no-repeat 0 -20px;}
+
+
+.tireOptions > .head:first-child .toolBox {display:block}
+
 
 .serviceAdv {display:table; width:100%; padding:60px 20px 46px 20px; border-top:3px solid #353535;}
 .serviceAdv > .step {display:table-cell; vertical-align:middle;}
@@ -1360,9 +1372,31 @@ no-repeat left center;}
 .payType1 > li:nth-child(2) {text-align:left; border-left:1px solid #e6e6e6;}
 .payType1 > li:nth-child(2) dl {text-align:right;}
 
-
-
 .toolTip {position:relative; display:inline-block; width:16px; height:16px; vertical-align:middle; background:url(../images/common/icon/icon_tip.png) no-repeat; cursor:pointer;}
+.toolTip .toolBox {top:27px; left:0; margin-left:-242px;}
+.toolTip .toolBox.txtType {top:-9px; left:25px; margin-left:0;}
+.toolTip:hover .toolBox {display:block;}
+
+
+
+/* toolTip */
+.toolBox {position:absolute; top:0; left:0; z-index:10; width:500px; background:#fff; display:none;}
+.toolBox {
+	-webkit-box-shadow: 0 1px 8px rgba(0,0,0,.45);
+	-moz-box-shadow: 0 1px 8px rgba(0,0,0,.45);
+	box-shadow: 0 1px 8px rgba(0,0,0,.45);
+}
+.toolBox > .tit {display:block; line-height:60px; text-align:center; font-weight:500; font-size:18px; color:#fff; background:#252525;}
+.toolBox > .inner {display:table-cell; width:500px; height:439px; padding:33px 0; border:1px solid #c5c5c5; text-align:center; vertical-align:middle;}
+.toolBox > .inner.etc {display:block; width:500px; height:auto; padding:33px 0; border:1px solid #c5c5c5; text-align:center; vertical-align:middle;}
+.toolBox:after {content:''; position:absolute; top:-10px; right:50%; margin-right:-7px; width:14px; border-bottom:10px solid #252525; border-left:7px solid transparent; border-right:7px solid transparent;}
+
+.toolBox.txtType {width:auto; box-shadow:none !important;}
+.toolBox.txtType > .inner {display:block; width:auto; height:auto; padding:15px; text-align:left; border:1px solid #252525; background:#353535; font-size:12px; color:#fff; line-height:18px; border-radius:3px; white-space:nowrap;}
+.toolBox.txtType:before {content:''; position:absolute; top:10px; left:-6px; z-index:1; right:auto; margin-right:0; width:auto; height:14px; border-right:7px solid #353535; border-bottom:7px solid transparent; border-top:7px solid transparent;  border-left:none;}
+.toolBox.txtType:after {content:''; position:absolute; top:10px; left:-7px; right:auto; margin-right:0; width:auto; height:14px; border-right:7px solid #252525; border-bottom:7px solid transparent; border-top:7px solid transparent;  border-left:none;}
+
+
 
 /* 플로팅 기능 추가 필요 */
 .fixedBottom {position:relative; bottom:0; left:0; z-index:5; width:100%; text-align:center; padding-top:8px; background:url(../images/prd/bg_dark.png) repeat-x left top;}
@@ -1413,6 +1447,8 @@ no-repeat left center;}
 
 .selectArea {display:inline-block; vertical-align:middle;}
 .selectArea .selectbox + .selectbox {margin-left:7px;}
+.selectArea .selectbox + #sp1 {margin-left:7px;}
+.selectArea #sp1 + .selectbox {margin-left:7px;}
 
 .viewCont {position:relative;}
 .viewCont .rstTxt {position:absolute; top:-42px;; right:0; font-size:14px; color:#888;}
