@@ -12,9 +12,10 @@
     <link href="../static/css/reset.css" rel="stylesheet" />
     <link href="../static/css/common.css" rel="stylesheet" />
     <link href="../static/css/contents.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/lib/TweenMax.min.js"></script>
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
+     <!--[if lt IE 9]>
     <script type="text/javascript">
         document.createElement("header"); 
         document.createElement("nav"); 
@@ -27,6 +28,7 @@
 
 <body>
     <div id="wrap">
+
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
@@ -34,38 +36,83 @@
                 <h1 class="logo"><span>넥스트 레벨</span></h1>
                 <a href="#" class="totalMenu"><span>전체메뉴</span></a>
             </div>
+
+            <!-- 전체 메뉴 -->
+            <div class="totNavWrap">
+                <div class="overlay"></div>
+                
+                <nav>
+                    <div class="inner">
+                        <div class="navHead">
+                            <a href="#" class="closeTotalMenu">메뉴닫기</a>
+                            <div class="navHeadMenu">
+                                <div class="loginArea">
+                                    <a href="#" class="btnHome"><span>홈으로 가기</span></a>
+                                    <a href="#" class="btn on"><span>로그아웃</span></a>
+                                    <a href="#" class="btn"><span>나의정보</span></a>
+                                </div>
+                                <div class="menuArea">
+                                    <ul>
+                                        <li><span>장바구니</span></li>
+                                        <li><span>주문/배송조회</span></li>
+                                        <li><span>이용상품조회</span></li>
+                                        <li><span>나의결제</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>          
+                        <!--div class="navList">
+                            <ul class="navLv1">
+                                <li>
+                                    <a href=""><span>타이어</span></a>
+                                    <ul class="navLv2">
+                                        <li><a href="#"><span>렌탈상품</span></a></li>
+                                        <li><a href="#"><span>일시불상품</span></a></li>
+                                        <li><a href="#"><span>패키지상품</span></a></li>
+                                        <li><a href="#"><span>단체상품</span></a></li>
+                                        <li><a href="#"><span>결합상품</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>                                
+                        </div>  
+                        <div class="centerInfo">
+                            <p>고객센터 이용안내 <a href="tel:1855-0100">1855-0100</a></p>
+                            <p>평일 09:00~18:00 (토요일, 공휴일 휴무)</p>
+                        </div-->
+                    </div>                   
+                </nav>
+                
+            </div>
+            <!--// 전체 메뉴 -->               
         </header>
         <!-- //헤더영역 -->
 
-        <section id="mainWrap">            
-            
-                
-                <div class="serviceFlow">
-                    <div class="mainTitle">
-                        <p class="tit">넥센타이어</p>
-                        <p class="txt"><span class="ty1">렌탈 주문</span>에서 <span class="ty1">장착, 정기점검</span>까지</p>
+        <div id="mainWrap">
+            <section class="findTire">
+                <div class="tabCont">
+                    <div class="findTireOpt">
+                        <p class="tit">Driving Tomorrow</p>
+                        <p>국내 최초 신개념 타이어 렌탈 서비스, 넥스트 레벨</p>
+                        <p>가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
+                            나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
+                        </p>
                     </div>
-                    <ol>
-                        <li class="ty1">
-                           
-                        </li>
-                        <li class="ty2">
-                        </li>
-                        <li class="ty3">
-                        </li>
-                        <li class="ty4">
-                        </li>
-                        <li class="ty5">
-                        </li>
-                        <li class="ty6">
-                        </li>
-                        <li class="ty7">
-                        </li>
-                    </ol>
+                </div>
+                <ul class="tabArea">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>           
+            </section>
+            <section class="serviceFlow">
+                <div class="mainTitle">
+                    <p class="tit">넥센타이어</p>
+                    <p class="txt"><span class="ty1">렌탈 주문</span>에서 <span class="ty1">장착, 정기점검</span>까지</p>
                 </div>
             </section>
-        </section>
-
+            <section class="secEvent">
+                <div></div>
+            </section>
+        </div>
 
         <!-- 하단 영역 -->
         <footer id="footerWrap">
