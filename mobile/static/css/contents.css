@@ -376,3 +376,61 @@ td .textarea {width:100%;}
 .mark1 > strong {font-weight:400; color:#000;}
 p.mark1 {display:block;}
 .mgt10 {margin-top:10px;}
+
+/* ==============================
+ * 타이어
+ * ============================== */
+ .badge.inline span { display: inline-block; }
+ .badge span {display: block;box-sizing: border-box;	width: 35px;height: 18px;line-height: 18px;	border-radius: 2px;	background: #b6985a;color: #fff;font-size: 10px;text-align:center;}
+ .badge span.hit { background: #c3244e;}
+ .badge span.best {background: #6a2276;}
+ .badge span:not(:first-child) { margin-top: 2px; }
+ 
+ .label { display: inline-block; margin-top:10px; }
+ .label span {box-sizing: border-box;	border: 1px solid #666;	min-width: 45px;	height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px;}
+ .label span.point { border-color: #6a2276;}
+ 
+ .productSearchWrap { margin-top: 20px; }
+ .count { margin-bottom: 10px; color:#000; font-size:12px; }
+ .count .total { color:#812990; font-weight: 600; }
+ 
+ .productList {}
+ .productList li:not(:first-child) { margin-top:10px; }
+ .productList a { display: block; }
+ 
+ /* 상품 */
+ .product { position:relative;border:1px solid #d5d5d5;}
+ .product .thumb {display:flex; align-items: center;justify-content: center;height:200px;background:#fff;text-align:center}
+ .product .thumb img { height:150px; } /* 세로고정 150px */
+ .product .badge { position: absolute; top:0; right:0; }
+ 
+ .productInfo {padding: 0 15px 20px;}
+ .productInfo .tit {margin-top: 15px;color:#000;font-size:15px;font-weight: 600;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+ .productInfo .desc {margin-top: 10px;font-size: 11px;}
+ .productInfo .pointInfo {margin-top:10px;font-size:0;}
+ .productInfo .pointInfo span {display: inline-block;margin-top: 5px;padding: 5px 10px;	background:#e7e2f2;	border-radius: 10px;color:#000;	font-size: 10px;}
+ .productInfo .pointInfo span + span { margin-right: 5px; }
+ 
+ .priceInfoWrap {padding: 15px 15px;border-top: 1px dashed #e1e1e1;}
+ .priceInfo {display:flex;align-items:center;color:#000;}
+ .priceInfo:not(:first-child) {margin-top:10px;}
+ .priceInfo .txt {flex:auto;font-size:11px;}
+ .priceInfo .price {flex-basis: 100px;font-size:11px;font-weight:500;text-align:right;}
+ .priceInfo .price .num {font-size:18px;font-weight:500;}
+ .priceInfo .price .num.type1 {color:#812990;}
+ .priceInfo .price .num.type2 {color:#b6985a;}
+ 
+ .myRentalProduct {padding: 15px 12px;border-radius: 2px;background: #f8f8f8;text-align: center;}
+ .myRentalProduct:not(:first-child) {margin-top:5px;}
+ .myRentalProduct .tit {display:inline-block;color:#000;font-size:12px; }
+ .myRentalProduct .info {margin-top:5px;}
+ .myRentalProduct .info li {display: inline-block;}
+ .myRentalProduct .info li ~ li { margin-top:5px;}
+ .myRentalProduct .info span {box-sizing: border-box;display:inline-block;padding: 5px 10px;	border-radius:10px;background: #812990;color:#fff;	font-size: 11px;font-weight: 300;}
+ .myRentalProduct .btnDel {display: inline-block;width: 15px;height: 15px;border-radius: 100%;background: #555 url('../images/common/btn/btn_del.png') no-repeat 50%;background-size: 7px 7px;vertical-align: -1px;}
+ .myRentalProduct .btnDel span {font-size:0;}
+ 
+ /* 상품상세 팝업 */
+ .productDetail { padding-top: 15px; }
+ img.full { width: 100%;}
+ 

@@ -4,23 +4,60 @@
  * main
  * ============================== */
 
-#mainWrap .mainTitle {}
-#mainWrap .mainTitle .tit {color:#000000; font-size:20px; font-weight:400; text-align: center; line-height:27px;}
-#mainWrap .mainTitle .txt {color:#666666; font-size:12px; font-weight:400; text-align: center; line-height:15px; margin-top:3px;}
-#mainWrap .mainTitle .txt .ty1 {font-weight:500; color:#c3244e;}
+ /* 전체메뉴 */
+ .totNavWrap {}
+ .overlay {display:none; position:fixed; top:0; left:0; right: 0; bottom:0; z-index:100; width:100%; height:100%; background-color:#000; opacity:0.8}
+ nav {position:fixed; top:0; right:-100%; z-index:101; width:100%; height:100%;}
+ nav .inner {position:relative; height: 100%; z-index:101; overflow-y:auto;}
+ nav .navHead {height:108px;}
+ nav .navHead .navHeadMenu {width:100%; height:100%; padding:0 0 0 50px; box-sizing:border-box;}
+ nav .navHead .loginArea {position:relative; background:#5f14ea; height:45px; vertical-align:middle; text-align:right; padding:10px 15px; box-sizing:border-box;} 
+ nav .navHead .loginArea .btnHome {position:absolute; top:13px; left:15px; width:23px; height:20px; background:url(../images/main/btn_home.png) no-repeat 0 0; background-size:100%; font-size:0;}
+ nav .navHead .loginArea .btn {display:inline-block; width:70px; height:25px; margin-left:5px; text-align:center; color:#ffffff; border-radius:12px; border:1px solid #ffffff;} 
+ nav .navHead .loginArea .btn.on {background:#ffffff; color:#5f14ea;} 
+ nav .navHead .loginArea .btn span {font-weight:400; font-size:12px; line-height: 23px;}
+ nav .navHead .menuArea {background:#3c079d; height:63px;}
+ nav .navHead .menuArea > ul {width: 100%; padding:10px 0; overflow: hidden;}
+ nav .navHead .menuArea > ul li {width:25%; height:45px; float:left; text-align:center; border-right:1px solid #6b36cb;}
+ nav .navHead .menuArea > ul li span {position:relative; display:block; color:#ffffff; font-size:10px; padding-top:32px;}
+ nav .navHead .menuArea > ul li span:after {position:absolute; display:block; top:2px; left:50%; margin-left:-10px; content:''; width:20px; height:21px; background:url(../images/main/btn_navHeadMenu.png) no-repeat 0 0; background-size:80px 21px;} 
+ nav .navHead .menuArea > ul li:nth-child(1) span:after {background-position:0 0}
+ nav .navHead .menuArea > ul li:nth-child(2) span:after {background-position:-20px 0}
+ nav .navHead .menuArea > ul li:nth-child(3) span:after {background-position:-40px 0}
+ nav .navHead .menuArea > ul li:nth-child(4) span:after {background-position:-60px 0}
+ nav .navList {display:table; width:100%; height:100%;}
+ nav .navList .navLv1 {display:table-cell; width:100px; background:#f3f3f3;} 
+ nav .navList .navLv2 {display:table-cell;} 
+ nav .navHead .closeTotalMenu {position:absolute; top:11px; left:14px; width:22px; height:22px; background:url(../images/main/btn_closeMenu.png) no-repeat 0 0; background-size:100%; font-size:0;}
+ nav .navHead .closeTotalMenu {position:absolute; top:11px; left:14px; width:22px; height:22px; background:url(../images/main/btn_closeMenu.png) no-repeat 0 0; background-size:100%; font-size:0;}
+ nav .navList {position:relative; width:100%; height:100%; background:#ffffff; margin:0 0 0 50px; box-sizing:border-box;}
+ nav .navList .lv1 {}
+ nav .centerInfo {position:fixed; right:-100%; bottom:0; width:100%; height:65px; background:#ffffff; border-top:1px solid #d5d5d5; margin-left:50px; text-align:center;box-sizing:border-box; text-align:center;}
+ nav .centerInfo + p {color:#000000; font-size:11px; font-weight:500;}
+ nav .centerInfo + p + p {color:#666666; font-size:10px; font-weight:400;}
 
-.serviceFlow {position:relative; margin-top:58px; text-align:center; background:#f5f5f5;}
-.serviceFlow:after {content:''; position:absolute; top:62px; left:0; width:100%; border-bottom:1px solid #999;}
-.serviceFlow > ol {display:inline-block; width:1200px; margin:0 auto; overflow:hidden;}
-.serviceFlow > ol li {position:relative; z-index:1; padding-top:135px; width:126px; float:left;}
-
-
-
-#mainWrap .mainTitle {}
-
+/* 하단 플로팅 메뉴 */ 
 .btnGoTop {position:fixed; right:15px; bottom:95px; display:block; width:36px; height:37px; background:url(../images/main/btn_top.png) no-repeat 0 0; background-size: 36px 37px; z-index:5;}
 .btnGoTop span {font-size:0;}
 .floatingMenu {position:fixed; top:0; left:0; bottom:0; width:100%; height:45px; border-top:1px solid #dcdcdc;}
 .floatingMenu > ul li {width:}
 .floatingMenu > ul li:after {content:''; position:absolute; top:33px; left:33px; width:60px; height:60px; background:blue; background:url(../images/main/icon_servieflow.png) no-repeat 0 0;}
-.floatingMenu > ul li:nth-child(1) {}
+
+ /* 공통 */
+ #mainWrap {padding-top:45px;}
+
+ /* 타이어 찾기 */
+ #mainWrap .findTire {min-height:473px; background:url(../images/main/bgMainTop.jpg) no-repeat 0 0; background-size: cover; padding:15px;}
+ #mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#ffffff; text-align: center;}
+ #mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#ffffff; text-align: center;}
+ #mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#ffffff; text-align: center; line-height:17px;}
+ /* 서비스 플로우 */
+ #mainWrap .serviceFlow {background:#f5f5f5}
+ #mainWrap .mainTitle .tit {color:#000000; font-size:20px; font-weight:400; text-align: center; line-height:27px;}
+ #mainWrap .mainTitle .txt {color:#666666; font-size:12px; font-weight:400; text-align: center; line-height:15px; margin-top:3px;}
+ #mainWrap .mainTitle .txt .ty1 {font-weight:500; color:#c3244e;}
+ 
+ /* 공지사항 및 이벤트 */
+ #mainWrap .secEvent {} 
+
+ 

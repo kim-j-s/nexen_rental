@@ -6,6 +6,8 @@ $(function(){
 	
 	selectMake();
 	selectMakeUI();
+	uiMain.init();
+
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -58,13 +60,6 @@ $(function(){
 	 * gnb 
 	 * ============================== */
 
-
-
-	/* ==============================
-	 * main 
-	 * ============================== */
-
-	 
 
 
 	/* ==============================
@@ -136,11 +131,45 @@ $(function(){
 		  swiper: galleryThumbs
 		}
 	  });
-
-
-
-
 });
+
+
+/* ==============================
+	* main 
+* ============================== */
+var uiMain = {
+	init : function(){
+		this.close(); // 전체 메뉴
+		this.menu(); // 전체 메뉴
+		this.goTop(); // top버튼 클릭시 페이지 상단으로 이동
+	},
+
+	menu : function() {
+		$('.totalMenu').on('click',function() {
+			$('.overlay').css({display:'block'});
+			TweenMax.to('.overlay',0.5,{opacity:0.8});
+			TweenMax.to('nav', 0.5, {left:'0'});
+		});
+	},
+
+	close : function() {
+		$('.navHead .closeTotalMenu').on('click',function() {
+			TweenMax.to('nav', 0.5, {left:'100%'});
+			TweenMax.to('.overlay',0.5,{opacity:0,onComplete:function() {
+				$('.overlay').css({display:'none'});
+			}});			
+		});
+	},
+
+	goTop : function(){
+		$(document).on("click", 'a.btnGoTop', function(e){
+			$(document).scrollTop(0);
+			e.preventDefault();
+		});
+	}
+	
+}; 
+
 
 /* parallax scrolling motion */
 scrollAnimation();
@@ -230,4 +259,3 @@ function selectMakeUI(){
 	  return false;
 	});
 }
-
