@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@import url('lib/animated.css');
+@import url('lib/jquery-ui-1.10.4.custom.min.css');
+@import url('lib/swiper.css');
+@import url('main.css');
+
+
+
+/* ==============================
+ * header
+ * ============================== */
+#headerWrap {position:relative; z-index:1; background:#ddd; height:95px; text-align:center;}
+
+/* ==============================
+ * footer
+ * ============================== */
+#footerWrap {position:absolute; right:0; bottom:0; left:0; min-width:1200px; height:220px; background-color:#222;}
+#footerWrap .inner {width:1200px; margin:0 auto; color:#a4a4a4;}
+.footerTop {padding:20px 0 28px 0; border-bottom:1px solid #444; overflow:hidden;}
+.footerTop .footerLink {float:right; margin-top:22px;}
+.footerTop .footerLink a {position:relative; display:block; float:left;}
+.footerTop .footerLink a + a {padding-left:11px; margin-left:10px;}
+.footerTop .footerLink a + a:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
+.footerTop .footerLink a span {color:#a4a4a4;}
+.footerTop .footerLink a.etc span {color:#fefefe;}
+.footerBottom {padding:27px 0 0 0;}
+.footerBottom > p {font-size:0;}
+.footerBottom > p span {display:inline-block; font-size:13px;}
+.footerBottom > p span + span {margin-left:30px;}
+.footerBottom > p + p {margin-top:7px;}
+.footerBottom .copyright {font-size:11px; margin-top:25px;}
+
+
+
+/* ==============================
+ * windBanner
+ * ============================== */
+.wing {position:fixed; top:100px; right:0; z-index:99;}
+.wing > ul {width:100px; border:1px solid #999; background:#fff;}
+.wing > ul li {}
+.wing > ul li + li {border-top:1px solid #999;}
+.wing > ul li:nth-child(1) a {padding:26px 0 0 0;}
+.wing > ul li:nth-child(2) a {padding:16px 0 0 0;}
+.wing > ul li:nth-child(3) a {padding:21px 0 0 0;}
+.wing > ul li > a {position:relative; display:block; height:98px;}
+.wing > ul li > a span {position:relative; display:block; text-align:center; font-size:13px; color:#777; line-height:16px;}
+.wing > ul li > a span:after {content:''; position:absolute; top:0; left:50%; margin-left:-18px; width:36px; height:36px; background:url(../images/common/btn/bg_wing.png) no-repeat; overflow:hidden;}
+.wing > ul li:nth-child(1) a span {padding-top:49px;}
+.wing > ul li:nth-child(2) a span {padding-top:42px;}
+.wing > ul li:nth-child(2) a span:after {background-position:0 -36px;}
+.wing > ul li:nth-child(3) a span {padding-top:43px;}
+.wing > ul li:nth-child(3) a span:after {background-position:0 -72px;}
+
+
+/* ==============================
+ * Error
+ * ============================== */
+.errorPage {margin-top:140px; padding-top:95px; text-align:center; background:url(../images/common/bg_error.png) no-repeat center top;}
+.errorPage > .tit {font-weight:500; font-size:90px; color:#353535;}
+.errorPage > .txt1 {margin-top:140px; font-weight:500; font-size:20px; color:#333;}
+.errorPage > .txt1.etc {margin-top:165px;}
+.errorPage > .txt1 > strong {display:block; margin-top:9px; font-weight:500; font-size:30px; color:#812990;}
+.errorPage > .txt2 {margin-top:24px; font-size:18px;}
+.errorPage > .txt2 + .btnBox {margin-top:39px;}
+
+@media screen and (max-width: 1214px) {
+}
+
+@media screen and (max-width:800px) {
+}
+
+@media screen and (max-width:640px) {
+}
