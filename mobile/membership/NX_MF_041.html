@@ -14,15 +14,6 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
 
 <body>
@@ -30,15 +21,15 @@
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>제휴카드</span></h1>
-                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">제휴카드</h1>
+                <button class="totalMenu">전체메뉴</button>
             </div>
         </header>
         <!-- //헤더영역 -->
 
         <!-- 제휴카드 -->  
-        <section id="content"> 
+        <section id="content">
             <div class="optionList">
                 <div class="optionTitle on"><span>롯데카드</span></div>               
                 <ul>
@@ -61,17 +52,19 @@
                             <span>제휴카드 관련 규정은<br> 카드사의 홈페이지를 통해서 확인하세요</span>
                         </p>
                         <div class="btnBox">
-                            <a href="https://www.lottecard.co.kr/app/view/if/gate.jsp?b_id=12103_12190_12442&vt_cd_knd_c=P11280-A11280" class="btn ty1" target="_blank"><span class="btnTxt">자세히보기</span></a>
+							<a href="https://www.lottecard.co.kr/app/view/if/gate.jsp?b_id=12103_12190_12442&vt_cd_knd_c=P11280-A11280" class="btnLink"><span>자세히보기</span></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="btnSet">
-                    <a href="tel:1588-2800" class="btn ty4 fl">
-                        <span>롯데카드 신청 콜센터</span><br><span class="call">1588-2800</span>
+                    <a href="tel:1588-2800" class="btn">
+                        <span>롯데카드 신청 콜센터</span>
+                        <span class="call">1522-2800</span>
                     </a>
-                    <a href="tel:1855-0100" class="btn ty3 fr">
-                        <span>넥센타이어 신청 콜센터</span><br><span class="call">1855-0100</span>
+                    <a href="tel:1855-0100" class="btn primary">
+                        <span>넥센타이어 신청 콜센터</span>
+                        <span class="call">1855-0100</span>
                     </a>
                 </div>
 
@@ -94,7 +87,7 @@
                                 <td>1만 1천원</td>
                             </tr>
                             <tr>
-                                <td>전월 이용실적 70만원 이상</td>
+                                <td>전월 이용실적 60만원 이상</td>
                                 <td>1만 5천원</td>
                             </tr>
                             <tr>
@@ -105,22 +98,17 @@
                     </table>
                 </div>
 
-                <div class="note">
-                    <dl class="exList">
-                        <dt class="title">비고</dt>
-                        <dd>
-                            <ul class="list1">
-                                <li>할인한도보다 자동이체 승인된 금액이 작을 경우 승인금액 만큼 할인 적용</li>
-                                <li>프리미엄 렌탈DC 넥센타이어 롯데카드로 넥센타이어 가전제품 렌탈료 자동이체시에만 할인혜택을 받으실 수 있습니다.</li>
-                                <li>할인금액이 렌탈요금보다 큰 경우 렌탈요금 청구금액까지만 할인 받으실 수 있으며, 대상 가맹점에 적용되는 롯데카드의 다른 청구할인 서비스와 중복으로 할인 받으실  수 없습니다.</li>
-                            </ul>
-                        </dd>
-                    </dl> 
-                </div>  
+                <h2 class="headTitle">비고</h2>
+                <ul class="list1">
+                    <li>지난달(1일~말일) 프리미엄 렌탈DC 넥센타이어 롯데카드 일시불 및 할부(이용일을 기준으로 총 금액) 이용금액에 따 라 이번달(1일~말일) 렌탈료 할인금액이 월 1회 적용됩니다.</li>
+                    <li>프리미엄 렌탈DC 넥센타이어 롯데카드로 넥센타이어 가전제품 렌탈료 자동이체시에만 할인혜택을 받으실 수 
+                    있습니다.</li>
+                    <li>할인금액이 렌탈요금보다 큰 경우 렌탈요금 청구금액까지만 할인 받으실 수 있으며, 대상 가맹점에 적용되는 롯데카드의 다른 청구할인 서비스와 중복으로 할인 받으실 수 없습니다.</li>
+                </ul>
 
                 <div class="box1">
                     <dl class="exList">
-                        <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 60만원 이상 시</span></dt>
+                        <dt class="title"><span class="ex">예시</span> <span class="txt">전월실적 60만원 이상 이용시</span></dt>
                         <dd>
                             <ul class="list1">
                                 <li>넥센타이어 렌탈 요금 2만 5천원 1건인 경우<br> → 1만 5천원 할인</li>
@@ -165,6 +153,20 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- 하단 플로팅 메뉴 -->
+        <div class="floatingWrap">
+            <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
+            <div class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#">나의 정보</a></li>
+                    <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
+                    <li class="consult"><a href="#">상담하기</a></li>
+                    <li class="store"><a href="#">가까운 전문점 찾기</a></li>
+                </ul>
+            </div>
+        </div>        
+        <!--// 하단 플로팅 메뉴 -->
     </div>
 </body>
 
