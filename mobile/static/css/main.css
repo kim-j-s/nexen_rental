@@ -3,54 +3,107 @@
  /* ==============================
  * main
  * ============================== */
+ /* 띠배너 */
+ .topBanner {
+	 /* display: none; */
+	 position: relative;
+	 height: 50px;
+	 background: url('../images/main/bg_topBanner.jpg') no-repeat;
+	 background-size: 100%;
+ }
+ .topBanner .btnClose {
+	position: absolute;
+	top:0;
+	right:0;
+	width: 50px;
+	height: 50px;
+	background: url('../images/main/btn_closeMenu.png') no-repeat 50%;
+	background-size: 16px 16px;
+	font-size: 0;
+ }
+ .topBanner .notiList {height:50px;}
+ .topBanner .notiList li {
+	 padding: 18px 50px 0 25px;
+	 text-align: center;
+	 color:#fff;
+	 font-size: 15px;
+	 font-weight: 500;
+
+	 overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+ }
 
  /* 전체메뉴 */
- .totNavWrap {}
- .overlay {display:none; position:fixed; top:0; left:0; right: 0; bottom:0; z-index:100; width:100%; height:100%; background-color:#000; opacity:0.8}
- nav {position:fixed; top:0; right:-100%; z-index:101; width:100%; height:100%;}
- nav .inner {position:relative; height: 100%; z-index:101; overflow-y:auto;}
- nav .navHead {height:108px;}
- nav .navHead .navHeadMenu {width:100%; height:100%; padding:0 0 0 50px; box-sizing:border-box;}
- nav .navHead .loginArea {position:relative; background:#5f14ea; height:45px; vertical-align:middle; text-align:right; padding:10px 15px; box-sizing:border-box;} 
- nav .navHead .loginArea .btnHome {position:absolute; top:13px; left:15px; width:23px; height:20px; background:url(../images/main/btn_home.png) no-repeat 0 0; background-size:100%; font-size:0;}
- nav .navHead .loginArea .btn {display:inline-block; width:70px; height:25px; margin-left:5px; text-align:center; color:#ffffff; border-radius:12px; border:1px solid #ffffff;} 
- nav .navHead .loginArea .btn.on {background:#ffffff; color:#5f14ea;} 
- nav .navHead .loginArea .btn span {font-weight:400; font-size:12px; line-height: 23px;}
- nav .navHead .menuArea {background:#3c079d; height:63px;}
- nav .navHead .menuArea > ul {width: 100%; padding:10px 0; overflow: hidden;}
- nav .navHead .menuArea > ul li {width:25%; height:45px; float:left; text-align:center; border-right:1px solid #6b36cb;}
- nav .navHead .menuArea > ul li span {position:relative; display:block; color:#ffffff; font-size:10px; padding-top:32px;}
- nav .navHead .menuArea > ul li span:after {position:absolute; display:block; top:2px; left:50%; margin-left:-10px; content:''; width:20px; height:21px; background:url(../images/main/btn_navHeadMenu.png) no-repeat 0 0; background-size:80px 21px;} 
- nav .navHead .menuArea > ul li:nth-child(1) span:after {background-position:0 0}
- nav .navHead .menuArea > ul li:nth-child(2) span:after {background-position:-20px 0}
- nav .navHead .menuArea > ul li:nth-child(3) span:after {background-position:-40px 0}
- nav .navHead .menuArea > ul li:nth-child(4) span:after {background-position:-60px 0}
- nav .navList {display:table; width:100%; height:100%;}
- nav .navList .navLv1 {display:table-cell; width:100px; background:#f3f3f3;} 
- nav .navList .navLv2 {display:table-cell;} 
- nav .navHead .closeTotalMenu {position:absolute; top:11px; left:14px; width:22px; height:22px; background:url(../images/main/btn_closeMenu.png) no-repeat 0 0; background-size:100%; font-size:0;}
- nav .navHead .closeTotalMenu {position:absolute; top:11px; left:14px; width:22px; height:22px; background:url(../images/main/btn_closeMenu.png) no-repeat 0 0; background-size:100%; font-size:0;}
- nav .navList {position:relative; width:100%; height:100%; background:#ffffff; margin:0 0 0 50px; box-sizing:border-box;}
- nav .navList .lv1 {}
- nav .centerInfo {position:fixed; right:-100%; bottom:0; width:100%; height:65px; background:#ffffff; border-top:1px solid #d5d5d5; margin-left:50px; text-align:center;box-sizing:border-box; text-align:center;}
- nav .centerInfo + p {color:#000000; font-size:11px; font-weight:500;}
- nav .centerInfo + p + p {color:#666666; font-size:10px; font-weight:400;}
+ #gnb {}
+ #gnb a {display:inline-block;}
+.overlay {display:none; position:fixed; top:0; left:0; right: 0; bottom:0; z-index:100; width:100%; height:100%; background-color:#000; opacity:0.8}
+.gnb {position:fixed; top:0; right:-100%; z-index:101; width:100%; height:100%;}
+.gnb .inner {position:relative; height: 100%; z-index:101; overflow-y:auto;}
+
+.gnb .closeTotalMenu {
+	 display: block;
+	 position:absolute;
+	 top:0;
+	 left:0; 
+	 width:50px; 
+	 height:45px;
+	 font-size:0;
+}
+.gnb .closeTotalMenu:after {
+	content:'';
+	display: block;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	width:22px;
+	height:22px;
+	margin: -11px 0 0 -11px; 
+	background: url('../images/main/btn_closeMenu.png') no-repeat; 
+	background-size:100%;
+}
+
+.navHead  {width:100%; height:110px; padding:0 0 0 50px; box-sizing:border-box;}
+.navHead .loginArea {position:relative; background:#5f14ea; height:45px; vertical-align:middle; text-align:right; padding:10px 15px; box-sizing:border-box;}
+.navHead .loginArea .home {position:absolute; top:13px; left:15px; width:23px; height:20px; background:url(../images/main/btn_home.png) no-repeat 0 0; background-size:100%; font-size:0;}
+.navHead .loginArea .btn {display:inline-block; width:70px; height:25px; margin-left:5px; text-align:center; color:#fff; border-radius:12px; border:1px solid #fff;} 
+.navHead .loginArea .btn.on {background:#fff; color:#5f14ea;} 
+.navHead .loginArea .btn span {font-weight:400; font-size:12px; line-height: 23px;}
+
+.navHead .menuArea {background:#3c079d; height:63px;}
+.navHead .menuArea > ul {width: 100%; padding:10px 0; overflow: hidden;}
+.navHead .menuArea > ul li {width:25%; height:45px; float:left; text-align:center; border-right:1px solid #6b36cb;}
+.navHead .menuArea > ul li {position:relative; display:block; color:#fff; font-size:10px; padding-top:32px;}
+.navHead .menuArea > ul li:after {position:absolute; display:block; top:2px; left:50%; margin-left:-10px; content:''; width:20px; height:21px; background:url('../images/main/btn_navHeadMenu.png') no-repeat 0 0; background-size:80px 21px;} 
+.navHead .menuArea > ul li:nth-child(1):after {background-position:0 0}
+.navHead .menuArea > ul li:nth-child(2):after {background-position:-20px 0}
+.navHead .menuArea > ul li:nth-child(3):after {background-position:-40px 0}
+.navHead .menuArea > ul li:nth-child(4):after {background-position:-60px 0}
+
+.navBody {display:table; width:100%; height:100%;}
+.nav .dep1 {display:table-cell; width:100px; background:#f3f3f3;} 
+.nav .dep2 {display:table-cell;} 
+
+.nav {position:relative; width:100%; height:100%; background:#fff; margin:0 0 0 50px; box-sizing:border-box;}
+
+
+.csInfo {position:fixed; right:-100%; bottom:0; width:100%; height:65px; background:#fff; border-top:1px solid #d5d5d5; margin-left:50px; text-align:center;box-sizing:border-box; text-align:center;}
+.centerInfo + p {color:#000000; font-size:11px; font-weight:500;}
+.centerInfo + p + p {color:#666666; font-size:10px; font-weight:400;}
 
 /* 하단 플로팅 메뉴 */ 
-.btnGoTop {position:fixed; right:15px; bottom:95px; display:block; width:36px; height:37px; background:url(../images/main/btn_top.png) no-repeat 0 0; background-size: 36px 37px; z-index:5;}
+/*.btnGoTop {position:fixed; right:15px; bottom:95px; display:block; width:36px; height:37px; background:url(../images/main/btn_top.png) no-repeat 0 0; background-size: 36px 37px; z-index:5;}
 .btnGoTop span {font-size:0;}
 .floatingMenu {position:fixed; top:0; left:0; bottom:0; width:100%; height:45px; border-top:1px solid #dcdcdc;}
-.floatingMenu > ul li {width:}
+.floatingMenu > ul li {}
 .floatingMenu > ul li:after {content:''; position:absolute; top:33px; left:33px; width:60px; height:60px; background:blue; background:url(../images/main/icon_servieflow.png) no-repeat 0 0;}
-
+*/
  /* 공통 */
  #mainWrap {padding-top:45px;}
 
  /* 타이어 찾기 */
  #mainWrap .findTire {min-height:473px; background:url(../images/main/bgMainTop.jpg) no-repeat 0 0; background-size: cover; padding:15px;}
- #mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#ffffff; text-align: center;}
- #mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#ffffff; text-align: center;}
- #mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#ffffff; text-align: center; line-height:17px;}
+ #mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#fff; text-align: center;}
+ #mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#fff; text-align: center;}
+ #mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#fff; text-align: center; line-height:17px;}
  /* 서비스 플로우 */
  #mainWrap .serviceFlow {background:#f5f5f5}
  #mainWrap .mainTitle .tit {color:#000000; font-size:20px; font-weight:400; text-align: center; line-height:27px;}
