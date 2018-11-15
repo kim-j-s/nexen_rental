@@ -5,47 +5,455 @@
 @import url('lib/swiper.css');
 @import url('main.css');
 
+html,
+body { 
+    color: #666;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 12px;
+}
+
+strong { font-weight: 500; } /* bold */
+.hide {
+	position: absolute;
+	left: -9999px;
+}
 
 /* ==============================
  * header
  * ============================== */
- #headerWrap {position: fixed; top:0; left:0; width:100%; z-index:1; background: #ffffff;}
- #headerWrap .headerTopMenu {position:relative; height:45px; line-height:45px; text-align:center; font-size:15px; font-weight:normal;border-bottom:1px solid #dcdcdc;}
- #headerWrap .headerTopMenu h1 {display:inline-block;}
- #headerWrap .headerTopMenu h1.logo {position:absolute; display:block; top:12px; left:50%; margin-left:-46px; font-size:0; width:93px; height:46px; background:url(../images/common/logo.png) no-repeat 0 0; background-size:100%;}
- #headerWrap .headerTopMenu .cart {position:relative; top:12px; left:15px; display:block; width:23px; height:25px; background:url(../images/common/btn/btn_headerCart.png) no-repeat 0 0; background-size:17px 20px;}
- #headerWrap .headerTopMenu .cart span {font-size:0;}
- #headerWrap .headerTopMenu .cart span.cartNum {position:absolute; bottom:0; right:0; width:13px; height:13px; line-height:12px; background:#812990; border-radius:12px; color:#ffffff; font-size:9px; font-weight:bold; }
- #headerWrap .headerTopMenu .history {position:absolute; top:15px; left:15px; font-size:0; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size:45px 13px;}
- #headerWrap .headerTopMenu .totalMenu {position:absolute; top:15px; right:15px; font-size:0; display:block; width:17px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -15px 0; background-size:45px 13px;}
- #headerWrap .headerTopMenu .closeBtn {position:absolute; top:15px; right:15px; font-size:0; display:block; width:13px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -32px 0; background-size:45px 13px;}
- #headerWrap .headerTopMenu .btn {position:absolute; top:10px; left:15px;}
-
- /* ==============================
-  * footer
-  * ============================== */
- #footerWrap {height:220px; background-color:#222;}
- #footerWrap .inner {width:100%; padding:0 15px; color:#a4a4a4;}
- .footerTop {padding:20px 0; border-bottom:1px solid #444;font-size:12px;}
- .footerTop .footerLink {width:100%; overflow:hidden;}
- .footerTop .footerLink a {position:relative; width:29%; display:block; text-align:center; float:left;}
- .footerTop .footerLink a:nth-child(2) {width:42%}
- .footerTop .footerLink a + a:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
- .footerTop .footerLink a span {color:#a4a4a4;}
- .footerTop .footerLink a.etc span {color:#fefefe;}
- .footerBottom {padding:20px 0 10px 0; border-bottom:1px solid #444; font-size:11px;}
- .footerBottom > p {margin-bottom:10px;}
- .footerBottom > p span {position:relative; display:inline-block; padding-right:8px;} 
- .footerBottom > p span + span {padding-left:8px;}
- .footerBottom > p span + span:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
- .copyright {font-size:11px; margin-top:20px;}
-
-
-@media screen and (max-width: 1214px) {
+#headerWrap { 
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:200;
+    background: #fff;
+}
+#headerWrap .headerTopMenu {
+    position: relative;
+    height: 45px; 
+    border-bottom: 1px solid #dcdcdc;
+}
+.headerTopMenu h1.logo {
+    display:inline-block;
+    position:absolute;
+    left:50%; 
+    margin-left:-46px;
+    font-size:0; 
+    width:90px; 
+    height:22px; 
+    background:url('../images/common/logo.png') no-repeat; 
+    background-size:90px 22px;
+}
+.headerTopMenu h1 a {
+    display:block;
+    color: #000; 
+    font-size: 15px;
+}
+.headerTopMenu .mainTitle {
+    color:#000;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+}
+/* history back */
+.headerTopMenu .back {
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:50px;
+    height:45px;
+    font-size:0;
+}
+.headerTopMenu .back:after {
+    content:'';
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    width:7px;
+    height:13px;
+    background:url('../images/common/btn/btn_history_back.png') no-repeat;
+    background-size:100%;
+}
+/* 전체메뉴 */
+.headerTopMenu .totalMenu {
+    position:absolute; 
+    top:0;
+    right:0; 
+    display:block;
+    width:50px;
+    height:45px; 
+    font-size:0;
+}
+.headerTopMenu .totalMenu:after {
+    content:'';
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    width: 17px;
+    height: 13px;
+    background: url('../images/common/btn/btn_total_menu.png') no-repeat;
+    background-size: 100%;
 }
 
-@media screen and (max-width:800px) {
+.headerTopMenu .cart {position:relative; top:12px; left:15px; display:block; width:23px; height:25px; background:url(../images/common/btn/btn_headerCart.png) no-repeat 0 0; background-size:17px 20px;}
+.headerTopMenu .cart span {font-size:0;}
+.headerTopMenu .cart span.cartNum {position:absolute; bottom:0; right:0; width:13px; height:13px; line-height:12px; background:#812990; border-radius:12px; color:#ffffff; font-size:9px; font-weight:bold; }
+
+.headerTopMenu .history {position:absolute; top:15px; left:15px; font-size:0; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size:45px 13px;}
+.headerTopMenu .closeBtn {position:absolute; top:15px; right:15px; font-size:0; display:block; width:13px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -32px 0; background-size:45px 13px;}
+.headerTopMenu .btn {position:absolute; top:10px; left:15px;}
+
+
+/* ==============================
+* footer
+* ============================== */
+#footerWrap {height:220px; background-color:#222;}
+#footerWrap .inner {width:100%; padding:0 15px; color:#a4a4a4;}
+.footerTop {padding:20px 0; border-bottom:1px solid #444;font-size:12px;}
+.footerTop .footerLink {width:100%; overflow:hidden;}
+.footerTop .footerLink a {position:relative; width:29%; display:block; text-align:center; float:left;}
+.footerTop .footerLink a:nth-child(2) {width:42%}
+.footerTop .footerLink a + a:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
+.footerTop .footerLink a span {color:#a4a4a4;}
+.footerTop .footerLink a.etc span {color:#fefefe;}
+.footerBottom {padding:20px 0 10px 0; border-bottom:1px solid #444; font-size:11px;}
+.footerBottom > p {margin-bottom:10px;}
+.footerBottom > p span {position:relative; display:inline-block; padding-right:8px;} 
+.footerBottom > p span + span {padding-left:8px;}
+.footerBottom > p span + span:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
+.copyright {font-size:11px; margin-top:20px;}
+
+/* ==============================
+* 팝업
+* ============================== */
+.popup { width: 100%; }
+.popup .popHead {
+    position: relative;
+    height: 45px; 
+    border-bottom: 1px solid #dcdcdc;
+}
+.popHead .mainTitle {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+}
+.popHead .btnClose {
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+}
+.popHead .btn {
+    position: absolute;
+    top: 0; 
+    left: 15px;
+}
+.popHead .btnClose:after {
+    content:'';
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    width: 13px;
+    height: 13px;
+    background: url('../images/common/btn/btn_close_popup.png') no-repeat;
+    background-size: 100%;
+}
+.popContent {
+    padding: 20px 15px 100px;
+}
+.popContent .btnArea {
+    margin-top: 20px; 
+    text-align: center;
 }
 
-@media screen and (max-width:640px) {
+/* .popContent .contTitle { padding: 0; } */
+
+/* ==============================
+*  에러페이지
+* ============================== */
+body.errorPage {
+	display: flex;
+	flex-direction:column;
+	min-height: 100vh;
 }
+.errorPage .logo {
+	width:100%;
+	height:55px;
+	background:#812990 url('../images/common/logo2.png') no-repeat 50%;
+    background-size: 90px 22px;
+    font-size: 0;
+}
+
+.errorMessage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	margin: 0 15px;
+	text-align: center;
+	border-bottom: 1px solid #dcdcdc;
+}
+.errorMessage .mainText {
+	padding-top: 90px;
+    color:#525797;
+    font-size:17px;
+    font-weight:500;
+}
+.errorMessage .subText {margin-top:30px;font-size:13px;}
+
+.error404 {
+    background: url('../images/common/icon/icon_error1.png') no-repeat 50% top;
+    background-size: 75px 75px;
+}
+.error500 {
+    background: url('../images/common/icon/icon_error2.png') no-repeat 50% top;
+    background-size: 75px 75px;
+}
+.errorPage .btnArea {
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+} 
+.errorPage .btnArea .btn { width: 140px; flex: none; }
+
+/* ==============================
+* 타이틀
+* ============================== */
+
+.headTitle {
+    margin: 30px 0 15px;
+    padding-bottom: 10px;
+    color:#000;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #dadada;
+}
+.headTitle:first-child { margin-top: 0; }
+.headTitle.noline { padding-bottom:0; border: none; }
+
+.headTitle2 {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    color:#000;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* 하단 플로팅 메뉴 */ 
+.btnGoTop {
+    display:block;
+    position: fixed;
+    right: 15px;
+    bottom: 55px;
+    z-index: 5; 
+    width: 36px; 
+    height: 37px; 
+    background: url('../images/common/btn/btn_top.png') no-repeat;
+    background-size: 100%;
+}
+.btnGoTop span {font-size:0;}
+
+.floatingMenu {
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    background-color: #fff;
+    
+    border-top: 1px solid #dcdcdc;
+}
+.floatingMenu ul {
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.floatingMenu li {
+    height: 45px;
+    text-align: center;
+}
+.floatingMenu li:not(:first-child) {}
+.floatingMenu li a {
+    box-sizing: border-box;
+    display: block;
+    height: 45px;
+    padding-top: 30px;
+    font-size: 8px;
+}
+.floatingMenu li.mypage { 
+    background: url('../images/common/icon/icon_floating_mypage.png') no-repeat center top;
+    background-size: 30px 30px;
+}
+.floatingMenu li.rental { 
+    background: url('../images/common/icon/icon_floating_rental.png') no-repeat center top;
+    background-size: 30px 30px;
+}
+.floatingMenu li.consult { 
+    background: url('../images/common/icon/icon_floating_consult.png') no-repeat center top;
+    background-size: 30px 30px;
+}
+.floatingMenu li.store { 
+    background: url('../images/common/icon/icon_floating_store.png') no-repeat center top;
+    background-size: 30px 30px;
+}
+
+/* ==============================
+* 버튼
+* ============================== */
+.btn {
+	box-sizing: border-box;
+    display: inline-block;
+    min-width: 75px;
+    height: 35px;
+	line-height: 33px;
+	padding: 0 15px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	white-space: nowrap;
+	background: #555;
+	border: 1px solid #555;
+	border-radius: 2px;
+    cursor: pointer;
+}
+
+/* .btn:focus,
+.btn:active { color:#666; } */
+/* .btn:hover,
+.btn:focus,
+.btn:active,
+.btn:link,
+.btn:visited { color:#fff; } */
+
+.btn.block { width: 100%; } /* full */
+
+.btn:focus span,
+.btn:active span {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* 배경 full, 강조버튼  */
+.btn.primary {
+    border-color: #812990;
+    background-color: #812990;
+    color: #fff;
+} 
+.btn.point {
+    border-radius: none;
+    border-color: #b6985a;
+    background-color: #b6985a;
+} /* 계산하기 */
+
+
+/* 보더 있는 버튼 */
+.btn.light {
+    border-color: #666;
+    background-color: #fff;
+    color: #666;
+}
+.btn.light.primary {
+    border-color: #812990;
+    background-color: #fff;
+}
+
+.btn.round {
+    border-radius: calc(70px / 2);
+}
+
+.btn.small {
+    height: 30px;
+    line-height: 28px;
+}
+
+.btn.large {}
+
+a.btn { text-decoration: none !important; }
+
+/* 버튼 내부 아이콘 button > span 클래스 지정  */
+.innerIcon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* 자세히보기 */
+.innerIcon.view:before,
+.innerIcon.search:before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 3px;
+    background: url('../images/common/icon/icon_inner_view.png') no-repeat;
+    background-size: 100%;
+    vertical-align: -1px;
+}
+/* 전화 */
+.innerIcon.call:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    margin-right: 5px;
+    background: url('../images/common/icon/icon_inner_call.png') no-repeat;
+    background-size: 100%;
+    vertical-align: top;
+}
+/* 상담 */
+.innerIcon.consult:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    margin-right: 5px;
+    background: url('../images/common/icon/icon_inner_consult.png') no-repeat;
+    background-size: 100%;
+    vertical-align: top;
+}
+/* 멤버십-자세히보기*/
+.btnLink {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 30px;
+    border-radius: 30px;
+    border: 1px solid #454545;
+    background: #fff;
+    color: #252525;
+    font-weight: 500;
+}
+.btnLink span {
+    display: inline-block;
+    padding-left: 18px;
+    background: url('../images/common/icon/icon_link.png') no-repeat;
+    background-size: 13px 13px;
+}
+
+.btnArea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px
+}
+.btnArea .btn { flex: 1; }
+.btnArea .btn + .btn { margin-left: 5px; }
