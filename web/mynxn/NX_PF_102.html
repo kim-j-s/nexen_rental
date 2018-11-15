@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="x-apple-disable-message-reformatting" />
-    <title>로그인 | 신개념 타이어 렌탈서비스</title>
+    <title>회원정보수정 | 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
     <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
@@ -35,38 +35,35 @@
 
         <div class="location">
             <span class="home">홈</span>
-            <span>로그인</span>
+            <span>나의정보</span>
+            <span>회원정보수정</span>
         </div>
 
         <section id="content">
-            <h1 class="sectionTitle">로그인</h1>
-            <h2 class="sectionTitle2">국내 최초 신개념 타이어 렌탈서비스</h2>
+            <h1 class="sectionTitle">회원정보확인</h1>
+            <h2 class="sectionTitle2">정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</h2>
 
             <div class="loginWrap">
                 <div class="inner">
-                    <p class="txt">홈페이지에서 간편하게 주문하고 무료로 <br />장착 받으실 수 있는 넥센 타이어만의 타이어 렌탈 서비스입니다.</p>
-                        <div class="inpWrap">
-                            <div class="inputBox">
-                                <input type="text" placeholder="아이디 입력" class="inp" />
-                            </div>
-                            <!-- 2018-11-15 수정 -->
-                            <div class="inputBox">
-                                <input type="password" placeholder="비밀번호 입력" class="inp" />
-                            </div>
-                            <!--// 2018-11-15 수정 -->
-                            <div class="middle">
-                                <div class="ele">
-                                    <div class="checkbox">
-                                        <input type="checkbox" name="" id="idSave"><label for="idSave">아이디 저장</label>
-                                    </div>
-                                </div>
-                                <div class="ele">
-                                    <a href="#" class="btn">회원가입</a>
-                                    <a href="#" class="btn">아이디/비밀번호 찾기</a>
-                                </div>
-                            </div>
-                            <a href="#" class="btn ty7"><span>로그인</span></a>
+                    <p class="txt etc">정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p>
+                    <div class="inpWrap">
+                        <div class="inputBox">
+                            <input type="text" class="inp" value="testID" disabled="disabled" />
                         </div>
+                        <div class="inputBox error">
+                            <input type="password" placeholder="비밀번호 입력" class="inp" />
+                        </div>
+                        <!-- p 태그는 삭제하시 마시고 가운데 들어가는 글자만 제어해 주세요 공간설정에 필요 -->
+                        <p class="txt color4">비밀번호가 일치하지 않습니다. 다시 확인 후 입력해 주세요.</p>
+                        <!--// p 태그는 삭제하시 마시고 가운데 들어가는 글자만 제어해 주세요 공간설정에 필요 -->
+                        <div class="btnBox double">
+                            <a href="#" class="btn ty15"><span>취소</span></a>
+                            <!-- 비활성화 버튼 -->
+                            <!-- <a href="#" class="btn ty16"><span>확인</span></a> -->
+                            <!--// 비활성화 버튼 -->
+                            <a href="#" class="btn ty7"><span>확인</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
