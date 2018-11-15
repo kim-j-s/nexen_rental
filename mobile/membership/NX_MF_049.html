@@ -14,27 +14,19 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
+
 
 <body>
     <div id="wrap">
         <!-- 헤더영역 -->
         <header id="headerWrap">
-            <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>이벤트</span></h1>
-                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
-            </div>
-        </header>
+			<div class="headerTopMenu">
+				<button class="back">이전화면</button>
+				<h1 class="mainTitle">이벤트</h1>
+				<button class="totalMenu">전체메뉴</button>
+			</div>
+		</header>
         <!-- //헤더영역 -->
 
         <section id="content"> 
@@ -74,8 +66,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="btnBox">
-                    <a href="./NX_MF_048.html" class="btn ty2"><span>목록</span></a>
+                <div class="btnArea">
+                    <a href="./NX_MF_048.html" class="btn">목록</a>
                 </div>                
             </div>
             <!--// 지난 이벤트/당첨자 발표 -->            
@@ -110,6 +102,20 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- 하단 플로팅 메뉴 -->
+        <div class="floatingWrap">
+            <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
+            <div class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#">나의 정보</a></li>
+                    <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
+                    <li class="consult"><a href="#">상담하기</a></li>
+                    <li class="store"><a href="#">가까운 전문점 찾기</a></li>
+                </ul>
+            </div>
+        </div>        
+        <!--// 하단 플로팅 메뉴 -->
     </div>
 </body>
 
