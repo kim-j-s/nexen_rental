@@ -14,45 +14,35 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
+
 <body>
     <div id="wrap">
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>렌탈제품상담</span></h1>
-                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">렌탈제품상담</h1>
+                <button class="totalMenu">전체메뉴</button>
             </div>
         </header>
         <!-- //헤더영역 -->
 
         <section id="content">            
             <!-- 가입상담 -->  
-            <div class="contWrap">  <!-- 181112 : optNo클래스 삭제 //-->              
+            <div class="contWrap">      
                 <div class="contTitleWrap">
                     <div class="contTitle">
                         <p class="txt">사용하시는 타이어 사진을 등록해주세요.</p>
                     </div>                    
                 </div>
 
-                <div class="tableTitle">
-                    <p class="tit">기본 정보</p>
-                    <ul class="list1">
-                        <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
-                        <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
-                        <li>타이어 규격이 잘 보여지는 사진으로 촬영 및 업로드 해주시기 바랍니다.</li>
-                    </ul>   
-                </div>
+                <h2 class="headTitle noline">기본 정보</h2>
+                <ul class="list1">
+                    <li>휴대폰 번호는 ‘-’ 제외한 숫자만 입력해주세요.</li>
+                    <li><span class="iconMust">필수</span> 표시는 필수로 입력해 주세요.</li>
+                    <li>타이어 규격이 잘 보여지는 사진으로 촬영 및 업로드 해주시기 바랍니다.</li>
+                </ul>   
                 
                 <div class="imgSpec">
                     <img src="../static/images/prd/img_tireSpec.jpg" alt="타이어 규격 예시">
@@ -98,7 +88,7 @@
                                         <ul>
                                             <li>
                                                 <div class="imgBox">
-                                                   <img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지">
+                                                   <a href="#"><img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지"></a>
                                                    <a href="#" class="btnImgDel">첨부 이미지 삭제</a>
                                                 </div>
                                             </li> 
@@ -110,8 +100,8 @@
                     </table>
                 </div>
 
-                <div class="btnBox">
-                    <a href="#" class="btn ty2 bg1"><span>등록</span></a>
+                <div class="btnArea">
+                    <a href="#" class="btn primary">등록</a>
                 </div>   
             </div>
             <!--// 가입상담 -->  
@@ -146,6 +136,21 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- 하단 플로팅 메뉴 -->
+        <div class="floatingWrap">
+            <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
+            <div class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#">나의 정보</a></li>
+                    <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
+                    <li class="consult"><a href="#">상담하기</a></li>
+                    <li class="store"><a href="#">가까운 전문점 찾기</a></li>
+                </ul>
+            </div>
+        </div>        
+        <!--// 하단 플로팅 메뉴 -->
+
     </div>
 </body>
 </html>
