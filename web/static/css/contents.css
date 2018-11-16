@@ -648,6 +648,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .loginStep > ol > li.on:first-child:after {content:''; position:absolute; top:auto; bottom:-1px; left:-1px; width:calc(100% + 2px); border-bottom:2px solid #812990;}
 .loginStep + .agreeWrap {margin-top:57px;}
 .loginStep + .loginWrap {margin-top:60px;}
+.loginStep + form {margin-top:57px;}
 
 
 .loginWrap {width:1200px; margin:0 auto; text-align:center;}
