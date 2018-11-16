@@ -295,9 +295,9 @@ td .textarea {width:100%;}
 
 /* 약관내용 */
 .agreementCont {word-break:keep-all;}
-.agreementCont > h2 {font-size:15px; font-weight:bold; color:#000; padding-bottom:10px; border-bottom:1px solid #dadada;}
-.agreementCont > h3 {font-weight:500; font-size:13px; color:#000; margin:15px 0 10px 0;}
-.agreementCont p {font-weight:400; font-size:11px; color:#666; line-height:16px;}
+/* .agreementCont > h2 {font-size:15px; font-weight:bold; color:#000; padding-bottom:10px; border-bottom:1px solid #dadada;}
+.agreementCont > h3 {font-weight:500; font-size:13px; color:#000; margin:15px 0 10px 0;} */
+.agreementCont p {font-weight:400; font-size:11px; color:#666; line-height:16px; }
 .agreementCont p + .number {padding-left:25px;}
 .agreementCont.privacy h2 + p {margin-top:10px;}
 .agreementCont.privacy p + p {margin-top:10px;}
@@ -321,13 +321,8 @@ td .textarea {width:100%;}
 .number > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px;}
 .agreementCont .table tbody td .point {font-weight:500; font-size:15px; color:#666;}
 
-.tBracket {}
 .tBracket > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px; margin:10px 0 0 0;}
-
-.oBracket {}
 .oBracket > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-12px; margin:10px 0 0 0;}
-
-.ulBar  {}
 .ulBar > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-6px;}
 
 /* etc */

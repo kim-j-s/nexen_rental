@@ -169,7 +169,7 @@ strong { font-weight: 500; } /* bold */
     background-size: 100%;
 }
 .popContent {
-    padding: 20px 15px 100px;
+    padding: 20px 15px 50px;
 }
 .popContent .btnArea {
     margin-top: 20px; 
