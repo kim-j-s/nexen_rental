@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* ==============================
+* popup 
+* ============================== */
+/* 렌탈전문점 찾기 */
+.popRentalStore { position: relative; }
+.popRentalStore .popHead { position: fixed; z-index: 100; width: 100%; height: 45px; background: #fff; }
+.popRentalStore .popContent {padding: 0;}
+.popRentalStore .lBtn .btn { width: 65px; min-width: inherit; padding: 0; }
+.popRentalStore .lBtn .btn.light.primary  {color:#812990;border-color:#812990;}
+.popRentalStore .searchShop + .contWrap { padding: 35px 15px 50px; }
+.popRentalStore .popContent .contWrap  { padding: 65px 15px 50px; }
+
+.mapArea {width:100%;}
+.mapArea img {width:100%;}
+
+.fixedBottom {position:fixed; bottom:0; left:0; z-index:5; width:100%; background:#ffffff; box-shadow: 0px 0px 6px 2px #c7c7c7;}
+.fixedBottom .storeInfo dl { padding: 20px 15px 15px; }
+
+.storeInfo dl { padding: 15px 15px;}
+.storeInfo dt {
+	position:relative;
+	color:#000;
+	font-weight:500;
+	font-size:14px;
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: normal; 
+	word-wrap: break-word; 
+	display: -webkit-box; 
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.storeInfo dt {padding-right:45px;}
+.storeInfo dt .distance {
+	position:absolute;
+	top:2px;
+	right:0;
+	padding-bottom:3px;
+	border-bottom:1px solid #812990; 
+	color:#812990;
+	font-size:11px;
+	font-weight:300; 
+}
+.storeInfo dd {padding-top:12px;}
+.storeInfo dd .storeAddress {margin-bottom:6px; font-size:12px; color:#666666;}
+
+.iconGroup {font-size: 0;}
+.iconGroup li { display: inline-block; margin: 2px 5px 2px 0;} 
+.serviceIcon {
+	display:inline-block;
+	position: relative; 
+	min-width:30px;
+	padding-top:35px;
+	font-size:8px;
+	text-align:center; 
+	vertical-align: top;
+}
+.serviceIcon.ty1 {color:#b6985a;}
+.serviceIcon:after {
+	content:'';
+	position:absolute;
+	top:0;
+	left:50%; 
+	width:30px;
+	height:30px;
+	margin-left:-15px;
+	background: url('../images/common/icon/icon_service.png') no-repeat 0 0;
+	background-size: 205px 30px;
+}
+.serviceIcon.ty1:after {background-position:0 0;} /* 추천 */
+.serviceIcon.ty2:after {background-position:-35px 0;} /* 타이어 */
+.serviceIcon.ty3:after {background-position:-70px 0;} /* 세차 */
+.serviceIcon.ty4:after {background-position:-105px 0;} /* 일급정비 */
+.serviceIcon.ty5:after {background-position:-140px 0;} /* 경정비 */
+.serviceIcon.ty6:after {background-position:-175px 0;} /* 겨울용 */
+
+.storeInfo .addInfo { 
+	position: relative;;
+	display: flex;
+	align-items: center;
+	height: 45px;
+	padding: 0 15px;
+	border-top:1px solid #dadada; 
+	background:#f8f8f8;
+}
+.storeInfo .addInfo a.txtTel {
+	display: inline-block;
+	padding-left: 17px;
+	background: url('../images/common/icon/icon_tel3.png') no-repeat;
+	background-size: 12px 12px;
+	font-size:12px;
+	font-weight:500;
+	line-height: 12px;
+	vertical-align: middle;
+}
+.storeInfo .addInfo .btns {position:absolute; top: 10px; right: 15px; font-size:0;}
+.storeInfo .addInfo .btns .btn { width: 60px; min-width: inherit; padding: 0;}
+.storeInfo .addInfo .btns .btn + .btn {margin-left: 5px;}
+
+.searchShop {position:relative;padding-top:45px;}
+.searchShop .searchWrap {background:#fafafa; border-bottom:1px solid #a9a9a9; padding:20px 15px 18px 15px;}
+.searchShop .searchWrap > dl {display:table; width:100%; margin:0 0 5px 0;}
+.searchShop .searchWrap > dl:nth-child(4) { margin-bottom:10px;}
+.searchShop .searchWrap > dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333333;  vertical-align: middle;}
+.searchShop .searchWrap > dl dd {display:table-cell;}
+.searchShop .searchWrap > dl dd select {width:100%;} 
+.searchShop .btnTogl {position:absolute; top:100%; left:50%; margin-left:-22px; margin-top:0px; cursor:pointer; display:block; font-size:0; width:44px; height:16px; background:url(../images/common/btn/bg_btn2.png) no-repeat 0 0; background-size:44px 32px; }
+.searchShop .btnTogl.on {background-position:0 -16px; margin-top:-1px;}
+
+.rentalShopList li:not(:first-child) { margin-top: 10px;}
+.rentalShopList .storeInfo {border: 1px solid #d5d5d5;}
+
+/*매장위치 슬라이드*/
+.storeSlideWrap { position:relative;}
+.galleryView { border: 1px solid #d5d5d5; }
+.galleryView .swiper-slide {
+	/* height: 280px; */
+	padding-top: 56.25%;
+	background-position: 50%;
+	background-size: cover;
+}
+
+.galleryThumbs {
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+.galleryThumbs .swiper-slide {
+	box-sizing: border-box;
+	border: 1px solid #d5d5d5;
+	/* width: 89px; */
+	min-height: 50px;
+	max-height: 90px;
+	background-position: 50%;
+	background-size: cover;
+}
+.galleryThumbs .swiper-slide-thumb-active {
+	border: 1px solid #812990;
+	opacity: 1;
+}
+
+.storeSlideWrap .swiper-button-next,
+.storeSlideWrap .swiper-button-prev {
+	position:absolute;
+	top:100%;
+	margin-top:-45px;
+	width:20px; 
+	height:40px; 
+	z-index:1; 
+	text-indent:-999px; 
+	overflow: hidden; 
+	background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0;
+	background-size: 40px 40px;
+}
+.storeSlideWrap .swiper-button-prev {left: -15px; background-position:0px 0px;}
+.storeSlideWrap .swiper-button-next {right: -15px; background-position:-20px 0px;}
+.storeSlideWrap .swiper-button-next.swiper-button-disabled, 
+.storeSlideWrap .swiper-button-prev.swiper-button-disabled { 
+	opacity: 0;
+	cursor: auto; 
+	pointer-events: none;
+}
+
+.storeName {display: flex; align-items: center;}
+.storeName .serviceIcon { flex-basis: 30px; margin-right: 10px; }
+.storeAddress {margin-bottom: 5px; }
+.operationHour .week {display:inline-block; width:45px; color:#000; } 
+

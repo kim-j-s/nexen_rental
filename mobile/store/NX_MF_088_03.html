@@ -14,33 +14,21 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
+
 <body>
-    <div id="wrap">
-        <!-- 헤더영역 -->
-        <header id="headerWrap">
-            <div class="headerTopMenu">
-                <a href="#" class="btn ty7"><span>지도보기</span></a>
-                <h1><span>렌탈전문점</span></h1>
-                <a href="#" class="closeBtn"><span>현재 창 닫기</span></a>
-            </div>
+
+    <!-- 팝업 : 렌탈전문점 찾기 -->
+    <article id="" class="popup popRentalStore"> <!-- 렌탈전문점 클래스 추가 .popRentalStore -->
+        <header class="popHead">
+            <div class="lBtn"><a href="#" class="btn small light primary">지도보기</a></div>
+            <h1 class="mainTitle">렌탈전문점</h1>
+            <button class="btnClose">닫기</button>
         </header>
-        <!-- //헤더영역 -->
-
-        <!-- 렌탈전문점 검색 -->
-        <section id="content">  
-
-            <!-- 상세검색 -->
-            <div class="searchShop">
+        
+        <div class="popContent">
+             <!-- 검색조건 -->
+             <div class="searchShop">
                 <div class="searchWrap">
                     <dl class="selectArea">
                         <dt>시/도</dt> 
@@ -87,153 +75,164 @@
                         <dt>검색어</dt> 
                         <dd>
                             <div class="inputBox w100">
-                                <input  class="inp" placeholder="키워드를 입력해주세요." />
+                                <input type="text" class="inp" placeholder="키워드를 입력해주세요." />
                             </div>
                         </dd>
                     </dl>
-
                     <div class="btnBox">
-                        <a href="#" class="btn ty2 bg2"><span>검색</span></a>
+                        <a href="#" class="btn block point">검색</a>
                     </div> 
                 </div>    
                 <span class="btnTogl on">상세검색 열기/닫기</span>
-            </div> 
-            <!--// 상세검색 -->
+            </div>   
             
-            <!-- 검색 리스트 -->
-            <div class="contWrap">               
+            <div class="contWrap">
+                <!-- 검색결과 -->
+                <p class="count">검색한 결과는 총 <span class="total">20</span>건입니다.</p>
+                    
                 <div class="rentalShopList">
-                    <p class="txt">검색한 결과는 총 <span class="txtCount">20</span>건입니다.</p>
                     <ul> 
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">SP타이어(타이어테크 개포점)<!--span class="distance">150M</span--></dt>
+                                    <dt>SP타이어(타이어테크 개포점)SP타이어(타이어테크 개포점)SP타이어(타이어테크 개포점)SP타이어(타이어테크 개포점)</dt>
                                     <dd>
                                         <div class="storeAddress">서울 강남구 개포동 1231-3</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty1">추천</span>
-                                            <span class="serviceIcon ty2">타이어</span>
-                                            <span class="serviceIcon ty3">세차</span>
-                                            <span class="serviceIcon ty4">일급정비</span>
-                                            <span class="serviceIcon ty5">경정비</span>
-                                            <span class="serviceIcon ty6">겨울용</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty1">추천</span></li>
+                                            <li><span class="serviceIcon ty2">타이어</span></li>
+                                            <li><span class="serviceIcon ty3">세차</span></li>
+                                            <li><span class="serviceIcon ty4">일급정비</span></li>
+                                            <li><span class="serviceIcon ty5">경정비</span></li>
+                                            <li><span class="serviceIcon ty6">겨울용</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>     
                                 </div>
                             </div>   
                         </li>
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">타이어테크 정비<!--span class="distance">150M</span--></dt>
+                                    <dt>타이어테크 정비</dt>
                                     <dd>
                                         <div class="storeAddress">인천광역시 부평구 부평동 611</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty1">추천</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty1">추천</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>     
                                 </div>
                             </div>   
                         </li>
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">주식회사 루틴상사<!--span class="distance">150M</span--></dt>
+                                    <dt>주식회사 루틴상사</dt>
                                     <dd>
                                         <div class="storeAddress">경기도 용인시 처인구 중부대로 2307</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty2">타이어</span>
-                                            <span class="serviceIcon ty3">세차</span>
-                                            <span class="serviceIcon ty4">일급정비</span>
-                                            <span class="serviceIcon ty5">경정비</span>
-                                            <span class="serviceIcon ty6">겨울용</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty2">타이어</span></li>
+                                            <li><span class="serviceIcon ty3">세차</span></li>
+                                            <li><span class="serviceIcon ty4">일급정비</span></li>
+                                            <li><span class="serviceIcon ty5">경정비</span></li>
+                                            <li><span class="serviceIcon ty6">겨울용</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>     
                                 </div>
                             </div>   
                         </li>
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">SP타이어(타이어테크 개포점)<!--span class="distance">150M</span--></dt>
+                                    <dt>SP타이어(타이어테크 개포점)</dt>
                                     <dd>
                                         <div class="storeAddress">서울 강남구 개포동 1231-3</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty1">추천</span>
-                                            <span class="serviceIcon ty2">타이어</span>
-                                            <span class="serviceIcon ty3">세차</span>
-                                            <span class="serviceIcon ty4">일급정비</span>
-                                            <span class="serviceIcon ty5">경정비</span>
-                                            <span class="serviceIcon ty6">겨울용</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty1">추천</span></li>
+                                            <li><span class="serviceIcon ty2">타이어</span></li>
+                                            <li><span class="serviceIcon ty3">세차</span></li>
+                                            <li><span class="serviceIcon ty4">일급정비</span></li>
+                                            <li><span class="serviceIcon ty5">경정비</span></li>
+                                            <li><span class="serviceIcon ty6">겨울용</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>     
                                 </div>
                             </div>   
                         </li>
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">SP타이어(타이어테크 개포점)<!--span class="distance">150M</span--></dt>
+                                    <dt>SP타이어(타이어테크 개포점)</dt>
                                     <dd>
                                         <div class="storeAddress">서울 강남구 개포동 1231-3</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty1">추천</span>
-                                            <span class="serviceIcon ty2">타이어</span>
-                                            <span class="serviceIcon ty3">세차</span>
-                                            <span class="serviceIcon ty4">일급정비</span>
-                                            <span class="serviceIcon ty5">경정비</span>
-                                            <span class="serviceIcon ty6">겨울용</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty1">추천</span></li>
+                                            <li><span class="serviceIcon ty2">타이어</span></li>
+                                            <li><span class="serviceIcon ty3">세차</span></li>
+                                            <li><span class="serviceIcon ty4">일급정비</span></li>
+                                            <li><span class="serviceIcon ty5">경정비</span></li>
+                                            <li><span class="serviceIcon ty6">겨울용</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>   
                                 </div>
                             </div>   
                         </li>
                         <li>
                             <div class="storeInfo">
                                 <dl>
-                                    <dt class="haveDist">SP타이어(타이어테크 개포점)<!--span class="distance">150M</span--></dt>
+                                    <dt>SP타이어(타이어테크 개포점)</dt>
                                     <dd>
                                         <div class="storeAddress">서울 강남구 개포동 1231-3</div>
-                                        <div class="iconGroup">
-                                            <span class="serviceIcon ty1">추천</span>
-                                            <span class="serviceIcon ty2">타이어</span>
-                                            <span class="serviceIcon ty3">세차</span>
-                                            <span class="serviceIcon ty4">일급정비</span>
-                                            <span class="serviceIcon ty5">경정비</span>
-                                            <span class="serviceIcon ty6">겨울용</span>
-                                        </div>
+                                        <ul class="iconGroup">
+                                            <li><span class="serviceIcon ty1">추천</span></li>
+                                            <li><span class="serviceIcon ty2">타이어</span></li>
+                                            <li><span class="serviceIcon ty3">세차</span></li>
+                                            <li><span class="serviceIcon ty4">일급정비</span></li>
+                                            <li><span class="serviceIcon ty5">경정비</span></li>
+                                            <li><span class="serviceIcon ty6">겨울용</span></li>
+                                        </ul>
                                     </dd>
                                 </dl>
                                 <div class="addInfo">
-                                    <a href="tel:02-2057-4863" class="telNum"><span class="iconTel">전화</span>02-2057-4863</a>
-                                    <a href="#" class="btn ty9"><span>상세보기</span></a>
-                                    <a href="#" class="btn ty8"><span>길찾기</span></a>
+                                    <p class="info"><a href="tel:02-2057-4863" class="txtTel" title="전화걸기">02-2057-4863</a></p>
+                                    <div class="btns">
+                                        <a href="#" class="btn small round light">상세보기</a>
+                                        <a href="#" class="btn small round" target="_blank" title="새창열림">길찾기</a>
+                                    </div>     
                                 </div>
                             </div>   
                         </li>
@@ -241,9 +240,10 @@
                 </div> 
             </div>     
             <!--// 검색 리스트 -->
-            
-        </section>  
-        <!--// 렌탈전문점 검색 -->       
-    </div>
+
+        </div>
+    </article>
+    <!-- //팝업 : 렌탈전문점 찾기 -->
+   
 </body>
 </html>

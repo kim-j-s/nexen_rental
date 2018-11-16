@@ -114,14 +114,14 @@ $(function(){
 	});
 
 	// 렌탈전문점
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	var galleryThumbs = new Swiper('.galleryThumbs', {
 		spaceBetween: 10,
 		slidesPerView: 3,
 		freeMode: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	  });
-	  var galleryTop = new Swiper('.gallery-top', {
+	  var galleryTop = new Swiper('.galleryView', {
 		spaceBetween: 15,
 		navigation: {
 		  nextEl: '.swiper-button-next',
@@ -148,13 +148,13 @@ var uiMain = {
 		$('.totalMenu').on('click',function() {
 			$('.overlay').css({display:'block'});
 			TweenMax.to('.overlay',0.5,{opacity:0.8});
-			TweenMax.to('nav', 0.5, {left:'0'});
+			TweenMax.to('#gnb', 0.5, {left:'0'});
 		});
 	},
 
 	close : function() {
-		$('.navHead .closeTotalMenu').on('click',function() {
-			TweenMax.to('nav', 0.5, {left:'100%'});
+		$('.closeTotalMenu').on('click',function() {
+			TweenMax.to('#gnb', 0.5, {left:'100%'});
 			TweenMax.to('.overlay',0.5,{opacity:0,onComplete:function() {
 				$('.overlay').css({display:'none'});
 			}});			

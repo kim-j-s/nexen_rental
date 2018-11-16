@@ -135,6 +135,7 @@ strong { font-weight: 500; } /* bold */
     position: relative;
     height: 45px; 
     border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
 }
 .popHead .mainTitle {
     color: #000;
@@ -152,9 +153,9 @@ strong { font-weight: 500; } /* bold */
     height: 45px;
     font-size: 0;
 }
-.popHead .btn {
+.popHead .lBtn {
     position: absolute;
-    top: 0; 
+    top: 10px; 
     left: 15px;
 }
 .popHead .btnClose:after {
@@ -317,7 +318,7 @@ body.errorPage {
 .btn {
 	box-sizing: border-box;
     display: inline-block;
-    min-width: 75px;
+    /* min-width: 75px; */
     height: 35px;
 	line-height: 33px;
 	padding: 0 15px;
@@ -380,8 +381,12 @@ body.errorPage {
 }
 
 .btn.small {
-    height: 30px;
-    line-height: 28px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 11px;
+}
+.btn.small.round {
+    border-radius: calc(24px / 2);
 }
 
 .btn.large {}

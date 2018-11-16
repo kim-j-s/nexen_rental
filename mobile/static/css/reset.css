@@ -20,10 +20,9 @@ textarea {resize:vertical; font:inherit; overflow-y:auto; box-sizing:border-box;
 input, select {color:inherit; font:inherit; vertical-align: middle; box-sizing:border-box;}
 address, i {font-style:normal; }
 img, select, input, button {vertical-align:middle; }
-button {/*outline:none;*/-webkit-appearance:none;}
+input, button { border-radius:0; background: transparent; -webkit-appearance: none; }
 button::-moz-focus-inner {border: 0;}
 em {font-style:normal; }
-input {font-family: 'Noto Sans', sans-serif;}
 
 /* placeholder */
 ::-webkit-input-placeholder {/* Chrome/Opera/Safari */
