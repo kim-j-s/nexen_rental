@@ -55,6 +55,19 @@ $(function(){
 		  $(this).find('.loding-txt').html('진도율 <br /><span>' + parseInt(lodingActVal * progress) + '%</span>');
 		});
 	}
+
+	// 탭 메뉴
+	$('.tabMenu').each(function(tab){
+		$(this).children('.tabList').children('li').each(function(idx){
+			$(this).click(function(){
+				$(this).parent('.tabList').children('li').removeClass('on');
+				$(this).addClass('on');
+				$(this).closest('.tabMenu').children('.tabContent').removeClass('on');
+				$(this).closest('.tabMenu').children('.tabContent').eq(idx).addClass('on');
+			});
+		});
+	});
+
 	
 	/* ==============================
 	 * gnb 
@@ -131,6 +144,66 @@ $(function(){
 		  swiper: galleryThumbs
 		}
 	  });
+
+	  //타이어 간편 조회
+	var toolTipInfo = $('.easySearchInfo .toolTipInfo')
+	$('.searchOptList .tireSize').click(function(){	
+		console.log('test');
+		$(toolTipInfo).hide();
+		$(toolTipInfo).eq(1).show();
+	});
+
+	$('.searchOptList .member').click(function(){	
+		console.log('test');
+		$(toolTipInfo).hide();
+		$(toolTipInfo).eq(2).show();
+	});
+	
+	// 타이어 상품 갤러리
+	var swiper = new Swiper('.photoSlide', {
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+		  el: '.swiper-pagination',
+		},
+	 });
+
+	//타이어 검색 
+	var btnTireSearh = $('.tireSearchWrap .btnSearch')
+	var searchCont = $('.tireSearchWrap > .searchWrap')
+
+	$(btnTireSearh).click(function(){
+		if ( $(btnTireSearh).hasClass('on') )
+		{
+			$(searchCont).slideUp(200);
+			$(btnTireSearh).removeClass('on');	
+			$('.dimCont').css({display:'none'});			
+		} else {
+			$(searchCont).slideDown(200);
+			$(btnTireSearh).addClass('on');
+			$('.dimCont').css({display:'block'});	
+		}
+	});
+
+	var subOption =  $('.optLv1 ll:nth-child(1) button')
+
+	$('.searchOptList li button').each(function( ){
+		$(this).click(function(){	
+			$(this).parent('li').siblings().children('button').removeClass('on');	 
+			$(this).addClass('on');
+			// if ( $(subOption).hasClass('on') ){
+			// 	$('.optLv2').slideDown(200);	
+			// } else {
+			// 	$('.optLv2').slideUp(200);
+			// }		
+		});
+	}); 
+
+
+
+
 });
 
 
