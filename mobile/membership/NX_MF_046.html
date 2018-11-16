@@ -14,25 +14,17 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
+
 
 <body>
     <div id="wrap">
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>이벤트</span></h1>
-                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">이벤트</h1>
+                <button class="totalMenu">전체메뉴</button>
             </div>
         </header>
         <!-- //헤더영역 -->
@@ -51,6 +43,11 @@
                     <p class="txt">넥센타이어는 다양한 이벤트로 고객님의 성원에 보답하기 위해 항상 노력하고 있습니다.</p>
                 </div>
                 <ul class="itemtList1">
+                    <!-- 게시글이 없을 경우 -->
+                    <!-- <li>
+                        <p class="noResult">등록 된 게시글이 없습니다.</p>
+                    </li> -->
+
                     <li>
                         <a href="#">
                             <!-- 등록된 썸네일이 없을경우 null 이미지 제공 -->
@@ -61,7 +58,7 @@
                             <div class="inner">
                                 <p class="desc">2018년 9월 장착 고객 대상 추석 선물세트 증정 프로모션</p>
                                 <div class="date">
-                                    <em>2018.09.20 ~ 2018.10.30</em></span>
+                                    <em>2018.09.20 ~ 2018.10.30</em>
                                 </div>
                             </div>
                         </a>
@@ -95,9 +92,10 @@
                             </div>
                             <div class="inner">
                                 <p class="desc">2018년 9월 장착 고객 대상 추석 선물세트 증정 프로모션</p>
-                                <div class="date"><em>2018.09.20 ~ 2018.10.30</em> <span href="#" class="announce"><span>당첨자 발표</span></span></div>
+                                <div class="date"><em>2018.09.20 ~ 2018.10.30</em></div>
                             </div>
                         </a>
+                        <a href="#" class="announce"><span>당첨자 발표</span></a>
                     </li>
                 </ul>
             </div>
@@ -133,6 +131,20 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- 하단 플로팅 메뉴 -->
+        <div class="floatingWrap">
+            <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
+            <div class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#">나의 정보</a></li>
+                    <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
+                    <li class="consult"><a href="#">상담하기</a></li>
+                    <li class="store"><a href="#">가까운 전문점 찾기</a></li>
+                </ul>
+            </div>
+        </div>        
+        <!--// 하단 플로팅 메뉴 -->
     </div>
 </body>
 

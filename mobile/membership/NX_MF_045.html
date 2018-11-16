@@ -14,25 +14,17 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
+
 
 <body>
     <div id="wrap">
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>제휴카드</span></h1>
-                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">제휴카드</h1>
+                <button class="totalMenu">전체메뉴</button>
             </div>
         </header>
         <!-- //헤더영역 -->
@@ -61,16 +53,18 @@
                             <span>제휴카드 관련 규정은<br> 카드사의 홈페이지를 통해서 확인하세요</span>
                         </p>
                         <div class="btnBox">
-                            <a href="https://www.hanacard.co.kr/OPI42000000D.web?_frame=no&CD_PD_SEQ=7644&bansrc=nexentire&ban_nm=hanacard" class="btn ty1" target="_blank"><span class="btnTxt">자세히보기</span></a>
+                            <a href="https://www.hanacard.co.kr/OPI42000000D.web?_frame=no&CD_PD_SEQ=7644&bansrc=nexentire&ban_nm=hanacard" class="btnLink" target="_blank">자세히보기</a>
                         </div>
                     </div>
                 </div>
                 <div class="btnSet">
-                    <a href="tel:1599-6538" class="btn ty4 fl">
-                        <span>하나카드 신청 콜센터</span><br><span class="call">1599-6538</span>
+                    <a href="tel:1599-6538" class="btn">
+                        <span>하나카드 신청 콜센터</span>
+                        <span class="call">1599-6538</span>
                     </a>
-                    <a href="tel:1855-0100" class="btn ty3 fr">
-                        <span>넥센타이어 신청 콜센터</span><br><span class="call">1855-0100</span>
+                    <a href="tel:1855-0100" class="btn primary">
+                        <span>넥센타이어 신청 콜센터</span>
+                        <span class="call">1855-0100</span>
                     </a>
                 </div>
 
@@ -99,16 +93,12 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="note">
-                    <dl class="exList">
-                        <dt class="title">비고</dt>
-                        <dd>
-                            <ul class="list1">
-                                <li>넥센타이어 렌탈료 할인 서비스는 해당 카드로 넥센타이어 렌탈료 자동이체 필수</li>
-                            </ul>
-                        </dd>
-                    </dl> 
-                </div>  
+
+                <h2 class="headTitle">비고</h2>
+                <ul class="list1">
+                    <li>넥센타이어 렌탈 요금이 할인금액보다 적을 경우 승인 금액만큼 청구할인 적용</li>
+                </ul>
+
                 <div class="box1">
                     <dl class="exList">
                         <dt class="title"><span class="ex">예시</span> <span class="txt">전월 실적 70만원 이상 시</span></dt>
@@ -156,6 +146,20 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- 하단 플로팅 메뉴 -->
+        <div class="floatingWrap">
+            <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
+            <div class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#">나의 정보</a></li>
+                    <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
+                    <li class="consult"><a href="#">상담하기</a></li>
+                    <li class="store"><a href="#">가까운 전문점 찾기</a></li>
+                </ul>
+            </div>
+        </div>        
+        <!--// 하단 플로팅 메뉴 -->
     </div>
 </body>
 
