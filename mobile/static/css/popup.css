@@ -38,7 +38,6 @@
 	position:absolute;
 	top:2px;
 	right:0;
-	padding-bottom:2px;
 	border-bottom:1px solid #812990; 
 	color:#812990;
 	font-size:11px;
@@ -114,6 +113,7 @@
 
 .rentalShopList li:not(:first-child) { margin-top: 10px;}
 .rentalShopList .storeInfo {border: 1px solid #d5d5d5;}
+.rentalShopList .storeInfo .addInfo { border-top: 0; }
 
 /*매장위치 슬라이드*/
 .storeSlideWrap { position:relative; }
