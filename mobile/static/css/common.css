@@ -58,6 +58,10 @@ strong { font-weight: 500; } /* bold */
     z-index: 100;
     background: #fff;
 }
+#headerWrap.wt { 
+    background-color: rgba(255,255,255,.75);
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 2px;
+}
 #headerWrap .headerTopMenu {
     position: relative;
     height: 45px; 

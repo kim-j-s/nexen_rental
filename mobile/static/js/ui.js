@@ -264,15 +264,21 @@ var uiMain = {
 	fixedNav : function(){
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > 300) {
-				$(".floatingWrap").fadeIn();
-				$(".btnGoTop").fadeIn();
+				$('.floatingWrap').fadeIn();
+				$('.btnGoTop').fadeIn();
+
+				$('#headerWrap').addClass('wt');
+
 			} else {
-				$(".floatingWrap").fadeOut();
-				$(".btnGoTop").fadeOut();
+				$('.floatingWrap').fadeOut();
+				$('.btnGoTop').fadeOut();
+				
+				$('#headerWrap').removeClass('wt');
 			}
 		});
 
-	}
+	},
+
 
 }; 
 
