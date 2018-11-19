@@ -8,7 +8,7 @@ $(function(){
 	selectMakeUI();
 	uiMain.init();
 	uiForm();
-
+	topBanner();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -217,7 +217,6 @@ var uiMain = {
 		this.menu(); // 전체 메뉴
 		this.goTop(); // top버튼 클릭시 페이지 상단으로 이동
 		this.nav(); // gnb메뉴
-		this.fixedNav();
 	},
 
 	menu : function() {
@@ -262,23 +261,13 @@ var uiMain = {
 		});
 	}, 
 
-	fixedNav : function(){
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-			//	$('.floatingWrap').fadeIn();
-				$('.btnGoTop').fadeIn();
+	headerFix : function() {
 
-				$('#headerWrap').addClass('wt');
+	}
 
-			} else {
-			//	$('.floatingWrap').fadeOut();
-				$('.btnGoTop').fadeOut();
-				
-				$('#headerWrap').removeClass('wt');
-			}
-		});
 
-	},
+	
+	
 
 
 }; 
@@ -394,6 +383,32 @@ function uiForm() {
 		$('[name="' + n + '"]').parent().removeClass('on');
 		$('[for="'+labelFor+'"]').addClass('on');
 	});
-	
+
 }
 
+// 띠배너
+function topBanner() {
+	$('.topBanner .btnClose').bind("click", function(){
+		$('.topBanner').animate({height: 0}, 500);
+	});
+}
+
+// scroll 
+$(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+	
+	// 헤더
+	if (scroll >= 50) {
+		$('#headerWrap').addClass('fixed');
+		$('.topBanner').hide();
+	} else {
+		$('#headerWrap').removeClass('fixed');
+		$('.topBanner').show();
+	}
+
+
+	// 하단고정네비
+
+	// TOp 버튼
+
+});

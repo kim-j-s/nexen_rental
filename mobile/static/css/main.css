@@ -6,9 +6,11 @@
 
 /* 띠배너 */
 .topBanner {
-	display: none;
 	position: relative;
-	height: 50px;
+	z-index: 250;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
 	background: url('../images/main/bg_topBanner.jpg') no-repeat;
 	background-size: 100%;
 }
@@ -22,9 +24,10 @@
 	background-size: 16px 16px;
 	font-size: 0;
 }
-.topBanner .notiList {height:50px;}
+.topBanner .notiList { height:50px; }
 .topBanner .notiList li {
-	padding: 18px 50px 0 25px;
+	line-height: 50px;
+	padding: 0 50px 0 25px;
 	text-align: center;
 	color:#fff;
 	font-size: 15px;
@@ -33,12 +36,13 @@
 	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
 }
 
+
 /* ==============================
  * 메인컨텐츠
  * ============================== */
 
 /* 임시 */
-.mainContent { padding-top: 45px;}
+.mainContent { /*padding-top: 45px;*/ }
 .maintemp {
 	width: 100%;
 	height: 100%;
@@ -73,6 +77,13 @@
 	text-align: center;
 }
 .serviceFlow li:not(:first-child) { margin-left: 10px; }
+
+.serviceFlow li:nth-child(1) { animation-delay: 0.1s;}
+.serviceFlow li:nth-child(2) { animation-delay: 0.2s;}
+.serviceFlow li:nth-child(3) { animation-delay: 0.3s; letter-spacing: -.08em}
+.serviceFlow li:nth-child(4) { animation-delay: 0.4s;}
+.serviceFlow li:nth-child(5) { animation-delay: 0.5s;}
+
 .serviceFlow li:before {
 	content: '';
 	display: block;
@@ -87,8 +98,6 @@
 .serviceFlow li:nth-child(3):before { background-position: -120px 0; }
 .serviceFlow li:nth-child(4):before { background-position: -180px 0; }
 .serviceFlow li:nth-child(5):before { background-position: -240px 0; }
-
-.serviceFlow li:nth-child(3) { letter-spacing: -.08em}
 
 /* 퀵메뉴 */
 .quickMenuWrap {

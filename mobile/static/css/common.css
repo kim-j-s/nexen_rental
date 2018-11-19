@@ -51,17 +51,19 @@ strong { font-weight: 500; } /* bold */
  * header
  * ============================== */
 #headerWrap { 
-    position: fixed;
-    top:0;
-    left:0;
+    position: relative;
     width:100%;
     z-index: 100;
     background: #fff;
 }
-#headerWrap.wt { 
-    background-color: rgba(255,255,255,.75);
+
+#headerWrap.fixed {
+	position: fixed;
+	top: 0;
+    background-color: rgba(255,255,255,.8);
     box-shadow: rgba(0,0,0,0.2) 0px 0px 2px;
-}
+} /* 스크롤 시 추가 */
+
 #headerWrap .headerTopMenu {
     position: relative;
     height: 45px; 
@@ -136,7 +138,7 @@ strong { font-weight: 500; } /* bold */
 .headerTopMenu .cart span {font-size:0;}
 .headerTopMenu .cart span.cartNum {position:absolute; bottom:0; right:0; width:13px; height:13px; line-height:12px; background:#812990; border-radius:12px; color:#ffffff; font-size:9px; font-weight:bold; }
 
-.headerTopMenu .history {position:absolute; top:15px; left:15px; font-size:0; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size:45px 13px;}
+/* .headerTopMenu .history {position:absolute; top:15px; left:15px; font-size:0; display:block; width:15px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat 0 0; background-size:45px 13px;} */
 .headerTopMenu .closeBtn {position:absolute; top:15px; right:15px; font-size:0; display:block; width:13px; height:13px; background:url(../images/common/icon/icon_header_navi.png) no-repeat -32px 0; background-size:45px 13px;}
 .headerTopMenu .btn {position:absolute; top:10px; left:15px;}
 
@@ -363,7 +365,10 @@ body.noScroll { overflow-y: hidden; }
 	background: #fff;
 }
 .dep2.on {display: block;}
-.dep2 > li { border-bottom: 1px solid #e4e4e4;
+.dep2 > li {
+	box-sizing: border-box;
+	height: 40px;
+	border-bottom: 1px solid #e4e4e4;
 }
 .dep2 > li > a {
 	position: relative;
@@ -805,49 +810,6 @@ a.btn { text-decoration: none !important; }
 }
 .btnAction.block { display: block; }
 
-
-/* 타이어 라디오 선택 */
-.radiobtn {
-	box-sizing: border-box;
-	display: inline-block;
-	position: relative;
-	height: 35px;
-	line-height: 33px;
-	padding: 0 5px;
-	border-radius: 2px;
-	border: 1px solid #d6d6d6;
-	background-color: #efefef;
-	color:#000;
-	font-size: 12px;
-	text-align: center;
-	transition: background 0.2s ease-in;
-}
-.radiobtn input {
-	position:absolute;
-	opacity:0;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	-o-appearance:none;
-	appearance:none;
-}
-.radiobtn.on {
-	border: 1px solid #812990;
-	background-color: #fff;
-	color:#812990;
-}
-.radiobtn:active, 
-.radiobtn:focus { border-color:#812990; }
-.radiobtn .txt { display:inline-block; }
-.radiobtn.disabled:hover { border-color: #d6d6d6; }
-
-.radiobtnGroup { display: flex; }
-.radiobtnGroup .radiobtn { flex: 1; }
-.radiobtnGroup .radiobtn + .radiobtn { margin-left: 5px; }
-
-
-
- 
- 
 /* ==============================
 * 하단 플로팅 메뉴
 * ============================== */
