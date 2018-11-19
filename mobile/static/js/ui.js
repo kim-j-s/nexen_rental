@@ -7,6 +7,7 @@ $(function(){
 	selectMake();
 	selectMakeUI();
 	uiMain.init();
+	uiForm();
 
 
 	//datepicker
@@ -264,13 +265,13 @@ var uiMain = {
 	fixedNav : function(){
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > 300) {
-				$('.floatingWrap').fadeIn();
+			//	$('.floatingWrap').fadeIn();
 				$('.btnGoTop').fadeIn();
 
 				$('#headerWrap').addClass('wt');
 
 			} else {
-				$('.floatingWrap').fadeOut();
+			//	$('.floatingWrap').fadeOut();
 				$('.btnGoTop').fadeOut();
 				
 				$('#headerWrap').removeClass('wt');
@@ -372,3 +373,27 @@ function selectMakeUI(){
 	  return false;
 	});
 }
+
+function uiForm() {
+	var radioForm = 'input[type=radio]';
+
+	//라디오버튼
+	$(radioForm).each(function () {
+		if ($(this).prop('checked') == true) {
+			var labelFor = $(this).attr('id');
+			$('[for="'+labelFor+'"]').addClass('on');
+		}
+		if($(this).prop('disabled') == true){
+			$(this).parent().addClass('disabled');
+		}
+	});
+
+	$(document).on('click', radioForm, function () {
+		var labelFor = $(this).attr('id');
+		var n = $(this).attr('name');
+		$('[name="' + n + '"]').parent().removeClass('on');
+		$('[for="'+labelFor+'"]').addClass('on');
+	});
+	
+}
+

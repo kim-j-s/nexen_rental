@@ -415,10 +415,12 @@ p.mark1 {display:block;}
  .techSkill li img {height:30px;}
 
  .pageFoot {position:fixed; bottom:0; left:0; z-index:5; width:100%;}
+/* 가이드 추가
  .btnSearch {width:100%; height:45px; line-height:45px; background:#5f14ea; color:#ffffff; font-size:16px; font-weight:400; text-align: center;} 
  .btnSearch span {position:relative; padding-left:22px; color:#ffffff;}
- .btnSearch span:before {position: absolute; top:6px; left:0; display:block; content:''; width:16px; height:16px; background:url('../images/common/btn/btn_search.png') no-repeat; background-size:100%;}
+ .btnSearch span:before {position: absolute; top:6px; left:0; display:block; content:''; width:16px; height:16px; background:url('../images/common/btn/btn_search.png') no-repeat; background-size:100%;} */
 
+ 
  .productSearchWrap { margin-top: 20px; }
  .count { margin-bottom: 10px; color:#000; font-size:12px; font-weight:300;}
  .count .total { color:#812990; font-weight: 500; }

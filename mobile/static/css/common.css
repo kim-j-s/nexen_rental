@@ -161,6 +161,7 @@ body.noScroll { overflow-y: hidden; }
 	height: 100%;
 	background: rgba(0,0,0,.8);
 }
+
 .gnb {
 	display: flex;
 	flex-direction: column;
@@ -233,12 +234,13 @@ body.noScroll { overflow-y: hidden; }
 	width: 70px;
 	height: 25px;
 	line-height: 23px;
+	padding: 0;
 	border: 1px solid #fff;
 	border-radius: calc(25px / 2);
 	background: transparent;
 	color:#fff; 
 	font-size: 12px;
-	text-align:center;
+	text-align: center;
 }
 .loginArea .btn.logout {
 	background:#fff;
@@ -432,6 +434,26 @@ body.noScroll { overflow-y: hidden; }
 }
 
 /* ==============================
+* Top버튼
+* ============================== */
+
+/* top이동 버튼 */
+.btnGoTop {
+    display:block;
+    position: fixed;
+    right: 15px;
+    bottom: 55px;
+    z-index: 30;
+    width: 36px; 
+    height: 37px; 
+    background: url('../images/common/btn/btn_top.png') no-repeat;
+    background-size: 100%;
+}
+.btnGoTop span { font-size:0; }
+.btnGoTop.active { bottom: 55px; }
+
+
+/* ==============================
 * footer
 * ============================== */
 #footerWrap {height:220px; background-color:#222;}
@@ -574,74 +596,6 @@ body.errorPage {
     font-weight: 500;
 }
 
-/* top이동 버튼 */
-.btnGoTop {
-    display:block;
-    position: fixed;
-    right: 15px;
-    bottom: 55px;
-    z-index: 30;
-    width: 36px; 
-    height: 37px; 
-    background: url('../images/common/btn/btn_top.png') no-repeat;
-    background-size: 100%;
-}
-.btnGoTop span { font-size:0; }
-.btnGoTop.active {
-    bottom: 55px;
-}
-
-/* 하단 플로팅 메뉴 */ 
-
-.floatingWrap {
-    position: fixed;
-    bottom: 0;
-    z-index: 50;
-    width: 100%;
-}
-.floatingMenu {
-    width: 100%;
-    height: 45px;
-    background-color: #fff;    
-    border-top: 1px solid #dcdcdc;
-}
-.floatingMenu ul {
-    box-sizing: border-box;
-    height: 45px;
-    padding: 0 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.floatingMenu li {
-    height: 45px;
-    text-align: center;
-}
-.floatingMenu li a {
-    box-sizing: border-box;
-    display: block;
-    height: 45px;
-    padding-top: 30px;
-    font-size: 8px;
-    text-decoration: none;
-}
-.floatingMenu li.mypage { 
-    background: url('../images/common/icon/icon_floating_mypage.png') no-repeat center top;
-    background-size: 30px 30px;
-}
-.floatingMenu li.rental { 
-    background: url('../images/common/icon/icon_floating_rental.png') no-repeat center top;
-    background-size: 30px 30px;
-}
-.floatingMenu li.consult { 
-    background: url('../images/common/icon/icon_floating_consult.png') no-repeat center top;
-    background-size: 30px 30px;
-}
-.floatingMenu li.store { 
-    background: url('../images/common/icon/icon_floating_store.png') no-repeat center top;
-    background-size: 30px 30px;
-}
 
 /* ==============================
 * 버튼
@@ -766,6 +720,7 @@ a.btn { text-decoration: none !important; }
     background-size: 100%;
     vertical-align: top;
 }
+
 /* 멤버십-자세히보기*/
 .btnLink {
     box-sizing: border-box;
@@ -793,3 +748,83 @@ a.btn { text-decoration: none !important; }
 }
 .btnArea .btn { flex: 1; }
 .btnArea .btn + .btn { margin-left: 5px; }
+
+/* 타이어 */
+.btnAction {
+	box-sizing: border-box;
+    display: inline-block;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 15px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+	white-space: nowrap;
+	background: #5f14ea;
+    cursor: pointer;
+}
+
+.btnAction.primary {
+	background-color: #3c079d;
+}
+
+.pageFoot { display: flex; }
+.pageFoot .btnAction { flex: 1; }
+
+.btnAction  .btnSearch {
+	display: inline-block;
+}
+.btnAction  .btnSearch:before {
+	content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 3px;
+    background: url('../images/common/icon/icon_inner_search.png') no-repeat;
+    background-size: 100%;
+    vertical-align: -3px;
+}
+.btnAction.block { display: block; }
+
+
+/* 타이어 라디오 선택 */
+.radiobtn {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	line-height: 33px;
+	padding: 0 5px;
+	border-radius: 2px;
+	border: 1px solid #d6d6d6;
+	background-color: #efefef;
+	color:#000;
+	font-size: 12px;
+	text-align: center;
+	transition: background 0.2s ease-in;
+}
+.radiobtn input {
+	position:absolute;
+	opacity:0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+}
+.radiobtn.on {
+	border: 1px solid #812990;
+	background-color: #fff;
+	color:#812990;
+}
+.radiobtn:active, 
+.radiobtn:focus { border-color:#812990; }
+.radiobtn .txt { display:inline-block; }
+.radiobtn.disabled:hover { border-color: #d6d6d6; }
+
+.radiobtnGroup { display: flex; }
+.radiobtnGroup .radiobtn { flex: 1; }
+.radiobtnGroup .radiobtn + .radiobtn { margin-left: 5px; }
