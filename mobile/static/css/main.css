@@ -1,17 +1,18 @@
 @charset "utf-8";
 
- /* ==============================
+/* ==============================
  * main
  * ============================== */
- /* 띠배너 */
- .topBanner {
-	 display: none;
-	 position: relative;
-	 height: 50px;
-	 background: url('../images/main/bg_topBanner.jpg') no-repeat;
-	 background-size: 100%;
- }
- .topBanner .btnClose {
+
+/* 띠배너 */
+.topBanner {
+	display: none;
+	position: relative;
+	height: 50px;
+	background: url('../images/main/bg_topBanner.jpg') no-repeat;
+	background-size: 100%;
+}
+.topBanner .btnClose {
 	position: absolute;
 	top:0;
 	right:0;
@@ -20,45 +21,146 @@
 	background: url('../images/main/btn_closeMenu.png') no-repeat 50%;
 	background-size: 16px 16px;
 	font-size: 0;
- }
- .topBanner .notiList {height:50px;}
- .topBanner .notiList li {
-	 padding: 18px 50px 0 25px;
-	 text-align: center;
-	 color:#fff;
-	 font-size: 15px;
-	 font-weight: 500;
+}
+.topBanner .notiList {height:50px;}
+.topBanner .notiList li {
+	padding: 18px 50px 0 25px;
+	text-align: center;
+	color:#fff;
+	font-size: 15px;
+	font-weight: 500;
 
-	 overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
- }
+	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
+/* ==============================
+ * 메인컨텐츠
+ * ============================== */
+
+/* 임시 */
+.mainContent { padding-top: 45px;}
+.maintemp {
+	width: 100%;
+	height: 100%;
+	background: url('../images/main/temp_main.png') no-repeat / cover;
+}
+
+/* 서비스 */
+.serviceFlow {
+	padding: 30px 0;
+	background: #f5f5f5;
+	text-align: center;
+}
+.serviceFlow .title {
+	color: #000;
+	font-size: 20px;
+}
+.serviceFlow .sub {
+	margin-top: 10px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #999;
+}
+.serviceFlow .sub strong { color: #c3244e; } 
+.serviceFlow ul {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-top: -25px;
+}
+.serviceFlow li {
+	z-index: 5;
+	font-size: 10px;
+	text-align: center;
+}
+.serviceFlow li:not(:first-child) { margin-left: 10px; }
+.serviceFlow li:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+	background: url('../images/main/icon_service_flow.png') no-repeat;
+	background-size: 290px 50px;
+}
+.serviceFlow li:nth-child(1):before { background-position: 0 0; }
+.serviceFlow li:nth-child(2):before { background-position: -60px 0; }
+.serviceFlow li:nth-child(3):before { background-position: -120px 0; }
+.serviceFlow li:nth-child(4):before { background-position: -180px 0; }
+.serviceFlow li:nth-child(5):before { background-position: -240px 0; }
+
+.serviceFlow li:nth-child(3) { letter-spacing: -.08em}
+
+/* 퀵메뉴 */
+.quickMenuWrap {
+	border-top: 1px solid #e1e1e1;
+	padding: 0 15px;
+	background-color: #fff;
+}
+.quickMenuWrap li { position: relative; }
+.quickMenuWrap li:not(:first-child) { 
+	background: url('../images/main/bg_line.png') repeat-x;
+	background-size: 3px 1px;
+}
+.quickMenuWrap li:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: calc(50% - 6px);
+	width: 7px;
+	height: 12px;
+	background: url('../images/main/arrow_right.png') no-repeat;
+	background-size: 100%;
+}
+.quickMenuWrap li a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90px;
+	padding-left: 65px; 
+}
+.quickMenuWrap li a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background-size: 50px 50px;
+}
+.quickMenuWrap li:nth-child(1) a:after { background-image: url('../images/main/icon_main_quick1.png'); }
+.quickMenuWrap li:nth-child(2) a:after { background-image: url('../images/main/icon_main_quick2.png'); }
+.quickMenuWrap li:nth-child(3) a:after { background-image: url('../images/main/icon_main_quick3.png'); }
+
+.quickMenuWrap .title {
+	color: #444;
+	font-weight: 700;
+}
+.quickMenuWrap .desc {
+	margin-top: 5px;
+	font-size: 10px;
+}
+/* 무엇이 궁금하세요 */
+.custormerService {
+	border-top: 1px solid #e1e1e1;
+	padding: 30px 0;
+	background: #f5f5f5 url('../images/main/bg_consult.png') no-repeat left 15px bottom;
+	background-size: 105px 85px;
+	text-align: center;
+}
+.custormerService .title { 
+	margin-bottom: 10px;
+	color: #000;
+	font-size: 20px;
+}
+.custormerService .btnArea { padding: 0 15px; }
+
 
  
- 
 
 
-
- /* 공통 */
- #mainWrap {padding-top:45px;}
-
- /* 타이어 찾기 */
- #mainWrap .findTire {min-height:473px; background:url(../images/main/bgMainTop.jpg) no-repeat 0 0; background-size: cover; padding:15px;}
- #mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#fff; text-align: center;}
- #mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#fff; text-align: center;}
- #mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#fff; text-align: center; line-height:17px;}
- /* 서비스 플로우 */
- #mainWrap .serviceFlow {background:#f5f5f5}
- #mainWrap .mainTitle .tit {color:#000000; font-size:20px; font-weight:400; text-align: center; line-height:27px;}
- #mainWrap .mainTitle .txt {color:#666666; font-size:12px; font-weight:400; text-align: center; line-height:15px; margin-top:3px;}
- #mainWrap .mainTitle .txt .ty1 {font-weight:500; color:#c3244e;}
- 
- /* 공지사항 및 이벤트 */
- #mainWrap .secEvent {} 
-
-
- .mainContent { padding-top: 45px;}
- .maintemp {
-	 width: 100%;
-	 height: 100%;
-	 background: url('../images/main/temp_main.png') no-repeat / cover;
- }
- 
+/* 타이어 찾기 */
+#mainWrap .findTire {min-height:473px; background:url(../images/main/bgMainTop.jpg) no-repeat 0 0; background-size: cover; padding:15px;}
+#mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#fff; text-align: center;}
+#mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#fff; text-align: center;}
+#mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#fff; text-align: center; line-height:17px;}

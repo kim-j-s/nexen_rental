@@ -216,10 +216,14 @@
                 </div>
                 <!-- //신개념타이어케어 -->
             </div>
+</div>
 
             <div class="serviceFlow">
-                <p class="headCopy">넥센타이어, 렌탈 주문에서 장착, 정기점검까지</p>
-                <ul>
+                <p class="title">넥센타이어</p>
+                <p class="sub">
+                    <strong>렌탈</strong> 주문에서 <strong>장착, 정기점검</strong>까지
+                </p>
+                <ul class="flow">
                     <li>렌탈주문</li>
                     <li>무료배송</li>
                     <li>도착문자발송</li>
@@ -228,6 +232,10 @@
                 </ul>
             </div>
 
+            <div class="maintemp">
+                <img src="../static/images/main/temp_main2.png" alt="" class="full">
+            </div>
+<div style="display: none;">
             <div class="">
                 <h3 class="mainTitle">NOTICE &amp; EVENT</h3>
                 <p>부담없이 넥센타이어 렌탈</p>
@@ -269,6 +277,7 @@
                     </div>
                 </div>
             </div>
+</div>
 
             <div class="quickMenuWrap">
                 <ul>
@@ -302,72 +311,82 @@
                 </ul>
             </div>
 
-            <div >
-                <p>무엇이 궁금하세요?</p>
+            <div class="custormerService">
+                <p class="title">무엇이 궁금하세요?</p>
                 <p class="desc">
                     상담전화와 무료문자로 궁금증을 해결하세요<br>
                     평일 09:00 ~ 18:00 (토요일, 공휴일 휴무)
                 </p>
                 <div class="btnArea">
-                    <a href="tel:1855-0100" class="btn light round">
-                        <span class="call">1855-0100</span>
-                    </a>
-                    <a href="#" class="btn round primary">
-                        <span>무료문자상담</span>
-                    </a>
+                    <a href="#tel:1855-0100" class="btn round light"><span class="innerIcon call">1855-0100</span></a>
+                    <a href="#" class="btn round primary"><span class="innerIcon consult">무료문자상담</span></a>
                 </div>
             </div>
-            
-                
-</div>
-
         </section>
         <!-- //메인 컨텐츠영역 -->
 
-        <!-- 하단 영역 -->
+        <!-- 푸터영역 -->
         <footer id="footerWrap">
-            <div class="inner">
-                <div class="footerTop">
-                    <div class="footerLink">
-                        <a href="#">이용약관</a>
-                        <a href="#" class="etc">개인정보처리방침</a>
-                        <a href="#">기업소개</a>
-                    </div>
+            <div class="footerTop">
+                <div class="footerLink">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="etc">개인정보처리방침</a>
+                    <a href="#">기업소개</a>
                 </div>
-                <div class="footerBottom">
-                    <p>
-                        <span>경상남도 양산시 충렬로 355 넥센타이어주식회사</span>
-                    </p>
-                    <p>    
-                        <span>대표이사 : 강호찬 </span>
-                        <span>사업자등록번호 : 621-81-10769</span>
-                    </p>
-                    <p>
-                        <span>통신판매업신고번호 : 제2015-경남양산-0139호</span>
-                    </p>
-                    <p>
-                        <span>대표번호 : 1855-0100</span>
-                    </p>
-                </div>
-                <div class="copyright">COPYRIGHT ⓒ NEXTLEVEL. ALL RIGHTS RESERVED.</div>
             </div>
+            <div class="footerBottom">
+                <address>경상남도 양산시 충렬로 355 넥센타이어주식회사</address>
+                <p>    
+                    <span>대표이사 : 강호찬 </span>
+                    <span>사업자등록번호 : 621-81-10769</span>
+                </p>
+                <p>
+                    <span>통신판매업신고번호 : 제2015-경남양산-0139호</span>
+                    <span>대표번호 : <a href="tel:1855-0100">1855-0100</a></span>
+                </p>
+            </div>
+            <p class="copyright">COPYRIGHT &copy; NEXTLEVEL. ALL RIGHTS RESERVED.</p>
         </footer>
-        <!-- //하단 영역 -->
+        <!-- //푸터영역 -->
 
-        <a href="#" class="btnGoTop"><span>Top으로 이동</span></a>
-            
         <!-- 하단 플로팅 메뉴 -->
-        <div class="floatingWrap">
+        <div class="floatingWrap fixBotNav">
             <div class="floatingMenu">            
                 <ul>
                     <li class="mypage"><a href="#">나의 정보</a></li>
                     <li class="rental"><a href="#">내게 맞는 렌탈찾기</a></li>
                     <li class="consult"><a href="#">상담하기</a></li>
                     <li class="store"><a href="#">가까운 전문점 찾기</a></li>
-                </ul>
+				</ul>
             </div>
-        </div>        
+			<div class="floatingCont mypage">
+                <ul class="sub">
+                    <li><a href="#">주문배송조회</a></li>
+                    <li><a href="#">내이용상품조회</a></li>
+                    <li><a href="#">나의결제관리</a></li>
+                    <li><a href="#">서비스신청관리</a></li>
+                    <li><a href="#">인증번호발급</a></li>
+                    <li><a href="#">인증번호발급</a></li>
+                </ul>
+                <button type="button" class="btnClose">닫기</button>
+            </div>
+
+            <div class="floatingCont consult">
+                <ul class="sub">
+                    <li><a href="#">전화상담</a></li>
+                    <li><a href="#">가입상담</a></li>
+                    <li><a href="#">렌탈제품상담</a></li>
+                    <li><a href="#">무료문자</a></li>
+                    <li><a href="#">1:1상담</a></li>
+                </ul>
+                <button type="button" class="btnClose">닫기</button>
+            </div>  
+        </div> 
         <!--// 하단 플로팅 메뉴 -->
+        
+        <div class="lyBtns">
+            <button class="btnGoTop"><span>Top으로 이동</span></button>
+        </div>
     </div>
 
     

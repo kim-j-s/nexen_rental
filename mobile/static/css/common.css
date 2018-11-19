@@ -456,21 +456,36 @@ body.noScroll { overflow-y: hidden; }
 /* ==============================
 * footer
 * ============================== */
-#footerWrap {height:220px; background-color:#222;}
-#footerWrap .inner {width:100%; padding:0 15px; color:#a4a4a4;}
-.footerTop {padding:20px 0; border-bottom:1px solid #444;font-size:12px;}
-.footerTop .footerLink {width:100%; overflow:hidden;}
-.footerTop .footerLink a {position:relative; width:29%; display:block; text-align:center; float:left;}
-.footerTop .footerLink a:nth-child(2) {width:42%}
-.footerTop .footerLink a + a:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
-.footerTop .footerLink a span {color:#a4a4a4;}
-.footerTop .footerLink a.etc span {color:#fefefe;}
-.footerBottom {padding:20px 0 10px 0; border-bottom:1px solid #444; font-size:11px;}
-.footerBottom > p {margin-bottom:10px;}
-.footerBottom > p span {position:relative; display:inline-block; padding-right:8px;} 
-.footerBottom > p span + span {padding-left:8px;}
-.footerBottom > p span + span:after {content:''; position:absolute; top:2px; left:0; width:1px; border-bottom:10px solid #444;}
-.copyright {font-size:11px; margin-top:20px;}
+#footerWrap { width:100%; padding:0 15px 50px; background-color:#222; }
+.footerTop { padding:20px 0; }
+.footerTop .footerLink { width:100%; text-align:center; }
+.footerTop .footerLink a { display: inline-block; color:#a4a4a4; font-size: 12px; }
+.footerTop .footerLink a:nth-child(2) { padding: 0 20px;}
+.footerTop .footerLink a:nth-child(2):before,
+.footerTop .footerLink a:nth-child(2):after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 9px;
+	background: #444;
+	vertical-align: middle;
+}
+.footerTop .footerLink a:nth-child(2):before { margin-right: 20px; }
+.footerTop .footerLink a:nth-child(2):after { margin-left: 20px; }
+.footerTop .footerLink a.etc { color:#fff; }
+.footerBottom { padding: 20px 0; border-top: 1px solid #444; border-bottom:1px solid #444; }
+.footerBottom p, address { font-size: 11px; }
+.footerBottom p span { display: inline-block; padding-top: 10px; }
+.footerBottom span:not(:last-child):after { 
+	content:'';
+	display: inline-block;
+	width: 1px;
+	height: 9px;
+	margin: 0 6px 0 8px;
+	background: #444;
+	vertical-align: -1px;
+}
+.copyright { margin-top:20px; font-size: 11px; }
 
 /* ==============================
 * 팝업
@@ -828,3 +843,152 @@ a.btn { text-decoration: none !important; }
 .radiobtnGroup { display: flex; }
 .radiobtnGroup .radiobtn { flex: 1; }
 .radiobtnGroup .radiobtn + .radiobtn { margin-left: 5px; }
+
+
+
+ 
+ 
+/* ==============================
+* 하단 플로팅 메뉴
+* ============================== */
+.floatingWrap {
+	position: fixed;
+	bottom: 0;
+	z-index: 300;
+	width: 100%;
+}
+.floatingMenu {
+	width: 100%;
+	height: 45px;
+	background-color: #fff;    
+	border-top: 1px solid #dcdcdc;
+}
+.floatingMenu ul {
+	box-sizing: border-box;
+	height: 45px;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.floatingMenu li {
+	height: 45px;
+	text-align: center;
+}
+.floatingMenu li a {
+	box-sizing: border-box;
+	display: block;
+	height: 45px;
+	padding-top: 30px;
+	font-size: 8px;
+	text-decoration: none;
+}
+.floatingMenu li.mypage { 
+	background: url('../images/common/icon/icon_floating_mypage.png') no-repeat center top;
+	background-size: 30px 30px;
+}
+.floatingMenu li.rental { 
+	background: url('../images/common/icon/icon_floating_rental.png') no-repeat center top;
+	background-size: 30px 30px;
+}
+.floatingMenu li.consult { 
+	background: url('../images/common/icon/icon_floating_consult.png') no-repeat center top;
+	background-size: 30px 30px;
+}
+.floatingMenu li.store { 
+	background: url('../images/common/icon/icon_floating_store.png') no-repeat center top;
+	background-size: 30px 30px;
+}
+
+.floatingCont {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;	
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+}
+.floatingCont .sub {
+	display: flex;
+	flex-direction: column;
+}
+.floatingCont .sub li a {
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+	height: 52px;
+	line-height: 52px;
+	padding-left: 32px;
+	color: #fff;
+	font-size: 13px;
+}
+.floatingCont .sub { 
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 45px;
+	padding-left: 24px;
+	background: url('../images/common/bg_dashed.png') repeat-x left bottom;
+	background-size: 6px 1px;
+}
+.floatingCont .btnClose {
+	position: absolute;
+	/* left: 24px; */
+	bottom: 12px;
+	width: 22px;
+	height: 22px;
+	background: url('../images/common/btn/btn_close_floating.png') no-repeat;
+	background-size: 44px 22px;
+	background-position: 0 0;
+	font-size: 0;
+}
+.floatingCont .btnClose.active, 
+.floatingCont .btnClose:focus, 
+.floatingCont .btnClose:active { background-position: 22px 0; }
+
+/* 나의정보 */
+.floatingCont.mypage ul {padding-left: 24px;}
+.floatingCont.mypage .sub li a:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 12px);
+	width: 22px;
+	height: 24px;
+	background: url('../images/common/icon/icon_floating1.png') no-repeat;
+	background-size: 22px 268px;
+}
+.floatingCont.mypage .sub li:nth-child(1) a:after { background-position: 0 0; } 
+.floatingCont.mypage .sub li:nth-child(2) a:after { background-position: 0 -50px; } 
+.floatingCont.mypage .sub li:nth-child(3) a:after { background-position: 0 -102px; } 
+.floatingCont.mypage .sub li:nth-child(4) a:after { background-position: 0 -152px; } 
+.floatingCont.mypage .sub li:nth-child(5) a:after { background-position: 0 -203px; } 
+.floatingCont.mypage .btnClose { left: 24px;}
+
+/* 상담하기 */
+.floatingCont.consult {}
+.floatingCont.consult ul { padding-left: 50%; }
+.floatingCont.consult .btnClose { padding-left: 50%; }
+.floatingCont.consult .sub li a:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 12px);
+	width: 22px;
+	height: 24px;
+	background: url('../images/common/icon/icon_floating2.png') no-repeat;
+	background-size: 22px 230px;
+	/* background-color: yellow; */
+}
+.floatingCont.consult .sub li:nth-child(1) a:after { background-position: 0 0; } 
+.floatingCont.consult .sub li:nth-child(2) a:after { background-position: 0 -50px; } 
+.floatingCont.consult .sub li:nth-child(3) a:after { background-position: 0 -102px; } 
+.floatingCont.consult .sub li:nth-child(4) a:after { background-position: 0 -152px; } 
+.floatingCont.consult .sub li:nth-child(5) a:after { background-position: 0 -203px; } 
