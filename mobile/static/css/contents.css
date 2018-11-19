@@ -75,6 +75,45 @@
 .selectbox + .selectbox {margin-left:7px;}
 .selectGroup + .list4 {margin-top:12px;}
 
+/* 타이어 라디오 선택 */
+.radiobtn {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	line-height: 33px;
+	padding: 0 5px;
+	border-radius: 2px;
+	border: 1px solid #d6d6d6;
+	background-color: #efefef;
+	color:#000;
+	font-size: 12px;
+	text-align: center;
+	transition: background 0.2s ease-in;
+}
+.radiobtn input {
+	position:absolute;
+	opacity:0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+}
+.radiobtn.on {
+	border: 1px solid #812990;
+	background-color: #fff;
+	color:#812990;
+}
+.radiobtn:active, 
+.radiobtn:focus { border-color:#812990; }
+.radiobtn .txt { display:inline-block; }
+.radiobtn.disabled:hover { border-color: #d6d6d6; }
+
+.radiobtnGroup { display: flex; }
+.radiobtnGroup .radiobtn { flex: 1; }
+.radiobtnGroup .radiobtn + .radiobtn { margin-left: 5px; }
+
+
 /* hack */
 @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
 	.selectbox {padding:0 0 0 8px; background:none;}
