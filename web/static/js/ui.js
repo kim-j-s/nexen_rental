@@ -22,7 +22,7 @@ $(function(){
 		showMonthAfterYear: true,
 		changeMonth: true,
 		changeYear: true,
-		showButtonPanel: true
+		showButtonPanel: true // 닫기버튼
 	});
 	*/
 
@@ -278,6 +278,18 @@ $(function(){
 				$(this).closest('.itemWrap').find('.itemCont').removeClass('on');
 				$(this).closest('.itemWrap').find('.itemCont').eq(idx).addClass('on');
 				slickInit();
+			});
+		});
+	});
+
+	//subTabWrap
+	$('.subTabWrap').each(function(tab){
+		$(this).children('.subTabList').children('li').each(function(idx){
+			$(this).click(function(){
+				$(this).parent('.subTabList').children('li').removeClass('on');
+				$(this).addClass('on');
+				$(this).closest('.subTabWrap').children('.subTabContent').removeClass('on');
+				$(this).closest('.subTabWrap').children('.subTabContent').eq(idx).addClass('on');
 			});
 		});
 	});
