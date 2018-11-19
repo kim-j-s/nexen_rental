@@ -29,23 +29,23 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content" class="sectionTire"><!-- 페이지 컨트롤을 위한 클래스 추가 .sectionTire -->             
+        <section id="content" class="sectionTire"><!-- 페이지 컨트롤을 위한 클래스 추가 .sectionTire -->  
             
             <!-- 타이어 검색 -->
-            <div class="dimCont"></div>
+            <div class="dimCont" style="display:block;"></div>
             <div id="dimTopLayer" class="tireSearchWrap">
-                <div class="searchWrap">
+                <div class="searchWrap" style="display:block;">
                     <div class="searchOpt">
                         <ul class="optLv1">
-                            <li><button class="on"><span>차종</span></button></li>
-                            <li><button><span>사이즈</span></button></li>
+                            <li><button><span>차종</span></button></li>
+                            <li><button class="on"><span>사이즈</span></button></li>
                         </ul>
-                        <ul class="optLv2">
+                        <ul class="optLv2" style="display:none;">
                             <li><button class="on"><span >국내</span></button></li>
                             <li><button><span class="">수입</span></button></li>
                         </ul>    
                     </div>
-                    <div class="searchOptList on">
+                    <div class="searchOptList">
                         <dl>
                             <dt>제조사 선택</dt> 
                             <dd>
@@ -74,7 +74,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="searchOptList">
+                    <div class="searchOptList on">
                         <dl>
                             <dt>단면폭 선택</dt> 
                             <dd>
@@ -105,12 +105,12 @@
                     </div>
                 </div> 
                 <div class="btnArea">
-                    <button class="btn btnSearch"><span>타이어 검색</span></button>
+                    <button class="btn btnSearch" disabled="disabled"><span>타이어 검색</span></button>
                 </div>  
             </div>
             <!-- // 타이어 검색 -->
 
-            <div class="contWrap" style="margin-top:90px;">
+            <div class="contWrap" style="margin-top:110px;">
                 <div class="sortArea">
                     <select name="" id="" class="selectbox">
                         <option value="">전체보기</option>
@@ -149,7 +149,7 @@
 
                 <div class="productSearchWrap">
                     <p class="count">총 <strong class="total">20</strong>개의 상품이 있습니다.</p>
-                  
+                    
                     <ul class="productList">
                         <li>
                             <a href="#">
@@ -289,6 +289,8 @@
             </div>
         </section>
         <!-- //본문영역 -->
+
+        <!-- -->
 
     </div>
 </body>

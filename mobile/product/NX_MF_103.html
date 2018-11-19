@@ -8,12 +8,12 @@
     <meta name="x-apple-disable-message-reformatting" />
     <title>타이어 | 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
-    <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
     <link href="../static/css/common.css" rel="stylesheet" />
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
+    
     <!--[if lt IE 9]>
     <script type="text/javascript">
         document.createElement("header"); 
@@ -29,19 +29,37 @@
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <h1 class="mainTitle">상품정보 자세히 보기</h1>
-                <button class="closeBtn">현재 창 닫기</button>
+                <a href="#" class="history"><span>이전화면</span></a>
+                <h1><span>승용차용</span></h1>
+                <a href="#" class="totalMenu"><span>전체메뉴</span></a>
             </div>
         </header>
         <!-- //헤더영역 -->
-        
-        <section id="content" class="sectionTire">         
-            <div class="contWrap"> 
-                <div class="productDetail"> <!-- 핀치줌 적용필요 -->
-                    <img src="../static/images/prd/img_prduct_detail.jpg" alt="상품상세 이미지" class="full">
+
+        <!-- 본문 영역 -->
+        <section id="content" class="sectionTire">           
+    
+            <div class="tabMenu fixed"><!-- scrollTop : class="fixed" 추가 -->
+                <ul class="tabList">
+                    <li><button><span>일시불</span></button></li>
+                    <li class="on"><button><span>추천렌탈</span></button></li>
+                </ul>
+
+                <!-- 일시불 탭 내용 -->
+                <div class="tabContent on">
+                     일시불
                 </div>
+                <!--// 일시불 탭 내용 -->
+                
+                <!-- 추천렌탈 탭 내용 -->
+                <div class="tabContent on">
+                    추천렌탈  
+                </div>
+                <!--// 추천렌탈 탭 내용 -->
             </div>
-        </section>        
+                          
+        </section>
+        <!--// 본문 영역 -->        
     </div>
 </body>
 </html>

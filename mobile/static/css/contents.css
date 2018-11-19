@@ -356,7 +356,7 @@ p.mark1 {display:block;}
 /* ==============================
  * 타이어
  * ============================== */
-
+ .searchWrap {width:100%;}
  .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
  .searchWrap dl:nth-child(4) { margin-bottom:10px;}
  .searchWrap dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333333;  vertical-align: middle;}

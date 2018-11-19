@@ -68,10 +68,10 @@
                         <dl>
                             <dt>국내/외</dt> 
                             <dd>
-                                <ul>
-                                    <li><button class="on"><span >국내</span></button></li>
-                                    <li><button><span class="">수입</span></button></li>
-                                </ul>  
+                                <div class="radiobtnGroup">
+                                    <label class="radiobtn on" for="rd11"><input name="radioSelect" id="rd11" type="radio" checked="checked"><span class="txt">국내</span></label>
+                                    <label class="radiobtn" for="rd12"><input name="radioSelect" id="rd12" type="radio"><span class="txt">수입</span></label>
+                                </div>  
                             </dd>
                         </dl>
                         <dl>
@@ -115,19 +115,19 @@
                         <dl class="ty1">
                             <dt>수량</dt> 
                             <dd>
-                                <ul>
-                                    <li><button class="on"><span >2본</span></button></li>
-                                    <li><button><span class="">4본</span></button></li>
-                                </ul> 
+                                <div class="radiobtnGroup">
+                                    <label class="radiobtn on" for="rd21"><input name="radioSelect" id="rd21" type="radio" checked="checked"><span class="txt">차종</span></label>
+                                    <label class="radiobtn" for="rd22"><input name="radioSelect" id="rd22" type="radio"><span class="txt">사이즈</span></label>
+                                </div>
                             </dd>
                         </dl>
                         <div class="tooltip member">
                             <span class="txt">기고객 혜택 확인방법</span><span class="iconToolTip">?</span>
                         </div>
                     </div>
-                    <div class="btnArea">
-                        <a href="" class="btn btnRental"><span>일시불/추천렌탈</span></a>
-                        <a href="" class="btn btnDirect"><span>렌탈료 직접설계</span></a>
+                    <div class="pageFoot">
+                        <a class="btnAction primary" href="#">일시불/추천렌탈</a>
+                        <a class="btnAction" href="#">렌탈료 직접설계</a>
                     </div>  
                 </div>                 
             </div>
@@ -221,8 +221,8 @@
                 <!--// 교환후기 -->                
             </div>
             
-            <div class="pageFoot">
-                <a href="#" class="btn btnSearch"><span>간편조회하기</span></a>
+            <div class="pageFoot" style="position:fixed; bottom:0; width:100%;"> <!-- 공통 플로팅 메뉴 작업 필요-->
+                <a href="#" class="btnAction"><span class="btnSearch">간편조회하기</span></a>
             </div>
                      
         </section>        
