@@ -10,8 +10,8 @@
 .popRentalStore .lBtn .btn { width: 65px; min-width: inherit; padding: 0; }
 .popRentalStore .lBtn .btn.light.primary  {color:#812990;border-color:#812990;}
 
-.popRentalStore .searchShop + .contWrap { padding: 35px 15px 50px; }
 .popRentalStore .popContent .contWrap  { padding: 65px 15px 50px; }
+.popRentalStore .popContent .searchShop + .contWrap { padding: 35px 15px 50px; }
 .popRentalStore .mapArea {width:100%;}
 .popRentalStore .mapArea img {width:100%;}
 
