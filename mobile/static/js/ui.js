@@ -259,17 +259,7 @@ var uiMain = {
 			$(document).scrollTop(0);
 			e.preventDefault();
 		});
-	}, 
-
-	headerFix : function() {
-
 	}
-
-
-	
-	
-
-
 }; 
 
 
