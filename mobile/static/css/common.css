@@ -147,7 +147,12 @@ strong { font-weight: 500; } /* bold */
 * 전체메뉴
 * ============================== */
 
-body.noScroll {  position: fixed; overflow-y: hidden; }
+body.noScroll { 
+	position: fixed;
+	overflow: hidden;
+	width:100%;
+	height:100%
+} /* body 스크롤 막기 */
 
 #gnb {
 	position: fixed;
