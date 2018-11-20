@@ -208,6 +208,8 @@ text-align:center; line-height:60px;}
 
 /* 탭 */
 .tabWrap {width:1200px; margin:0 auto;}
+.tabWrap.floating {position:relative; z-index:3;}
+.tabWrap.floating2 {position:relative; z-index:2;}
 .tabList {display:table; width:100%; table-layout:fixed;}
 .tabList > li {position:relative; display:table-cell; border:1px solid #d5d5d5; border-bottom:none; background:#f5f5f5; vertical-align:middle;}
 .tabList > li:after {content:''; position:absolute; bottom:0; left:-1px; width:calc(100% + 2px); border-bottom:2px solid #812990;}
@@ -813,6 +815,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 
 .itemtList2Wrap {padding:27px 0 0 0;}
 .itemtList2 > li {display:table; width:100%; bordeR:1px solid #d5d5d5;}
+.itemtList2 > li > a {display:table; width:100%;}
 .itemtList2 > li + li {margin-top:30px;}
 .itemtList2 > li .thumb {display:table-cell; width:217px; vertical-align:middle; text-align:center;}
 .itemtList2 > li .thumb img {max-width:100%; max-height:100%;}

@@ -12,9 +12,10 @@
 .topBanner > .control .counter > * {font-weight:400; font-size:13px; color:#888;}
 .topBanner > .control .counter .now {color:#252525;}
 .topBanner > .control .counter .playBtn {position:relative; float:right; display:inline-block; margin:2px 0 0 10px; overflow:hidden; text-indent:-999px; width:10px; height:12px;}
-.topBanner > .control .counter .playBtn:after {content:''; position:absolute; top:0; left:0; border-left:10px solid #353535; border-top:6px solid transparent; border-bottom:6px solid transparent;}
-.topBanner > .control .counter .playBtn.on:before {content:''; position:absolute; top:0; left:5px; height:12px; border-left:3px solid #353535; border-top:none; border-bottom:none;}
-.topBanner > .control .counter .playBtn.on:after {content:''; height:12px; border-left:3px solid #353535; border-top:none; border-bottom:none;}
+.topBanner > .control .counter .playBtn:before {content:''; position:absolute; top:0; left:5px; height:12px; border-left:3px solid #353535; border-top:none; border-bottom:none;}
+.topBanner > .control .counter .playBtn:after {content:''; position:absolute; top:0; left:0; height:12px; border-left:3px solid #353535; border-top:none; border-bottom:none;}
+.topBanner > .control .counter .playBtn.on:before {content:none;}
+.topBanner > .control .counter .playBtn.on:after {content:''; position:absolute; top:0; left:0; border-left:10px solid #353535; border-top:6px solid transparent; border-bottom:6px solid transparent;}
 .topBanner > .control .btns {}
 .topBanner > .control .btns button {position:absolute; padding:10px;}
 .topBanner > .control .btns button span {display:block; width:10px; height:17px; overflow:hidden; text-indent:-999px;}

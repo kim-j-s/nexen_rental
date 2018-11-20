@@ -559,9 +559,11 @@ $(function(){
 	$(window).scroll(function(){
 		// 타이어 상세 페이지	
 		var FloatingChk = $('.floating').length;
+		var Floating2Chk = $('.floating2').length;
 		var Top = $('body, html').scrollTop();
 		// 타이어 상품 상세 탭
 		var Floating = $('.floating').offset();
+		var Floating2 = $('.floating2').offset();
 
 		if (FloatingChk > 0)
 		{
@@ -572,6 +574,18 @@ $(function(){
 			} else {
 				$('.floating').find('.tabList').removeClass('fixed');
 				$('.floating').removeClass('pt62');
+			}
+		}
+
+		if (Floating2Chk > 0)
+		{
+			if ( Top > Floating2.top)
+			{
+				$('.floating2').find('.tabList').addClass('fixed');
+				$('.floating2').addClass('pt62');
+			} else {
+				$('.floating2').find('.tabList').removeClass('fixed');
+				$('.floating2').removeClass('pt62');
 			}
 		}
 
