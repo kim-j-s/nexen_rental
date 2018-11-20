@@ -51,24 +51,25 @@ strong { font-weight: 500; } /* bold */
  * header
  * ============================== */
 #headerWrap { 
-    position: relative;
     width:100%;
-    z-index: 100;
     background: #fff;
 }
 
-#headerWrap.fixed {
+#headerWrap .headerTopMenu {
+    position: relative;
+    z-index: 100;
+	width: 100%;
+	height: 45px; 
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#headerWrap.fixed .headerTopMenu {
 	position: fixed;
 	top: 0;
     background-color: rgba(255,255,255,.8);
     box-shadow: rgba(0,0,0,0.2) 0px 0px 2px;
 } /* 스크롤 시 추가 */
 
-#headerWrap .headerTopMenu {
-    position: relative;
-    height: 45px; 
-    border-bottom: 1px solid #dcdcdc;
-}
 .headerTopMenu h1.logo {
     display: inline-block;
     position: absolute;
@@ -306,12 +307,12 @@ body.noScroll { overflow-y: hidden; }
 	display: flex;
 	position: relative;
 	/* width: 100%; */
-	height: calc(100% - 172px);
+	height: calc(100% - 173px);
 	background: #fff;
 	margin-left: 50px;
 }
 
-.nav {
+.navBody .nav {
 	box-sizing: border-box;
 	position: relative;
 	width: 100px;
@@ -400,9 +401,9 @@ body.noScroll { overflow-y: hidden; }
 
 .navFoot {
 	box-sizing: border-box; 
-	position: fixed;
+	position: bottom;
 	/* right: 0; */
-	right: auto;
+	/* right: auto; */
 	bottom: 0;
 	width: 100%;
 	height: 65px;
