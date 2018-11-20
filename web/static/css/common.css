@@ -37,6 +37,7 @@
  * windBanner
  * ============================== */
 .wing {position:fixed; top:100px; right:0; z-index:99;}
+.wing.on {position:absolute;}
 .wing > ul {width:100px; border:1px solid #999; background:#fff;}
 .wing > ul li {}
 .wing > ul li + li {border-top:1px solid #999;}

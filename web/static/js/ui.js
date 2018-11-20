@@ -126,9 +126,12 @@ $(function(){
 		}
 	});
 
-	setTimeout(function(){
-		TBRolling = StartInterval();
-	},RollingTime);
+	if (TBLng > 1)
+	{
+		setTimeout(function(){
+			TBRolling = StartInterval();
+		},RollingTime);
+	}
 
 	function StartInterval() {
 		i = setInterval(function(){
@@ -153,14 +156,11 @@ $(function(){
 	}
 
 	function TBL(TBCnt) {
-		console.log('들어온 값 + ' + TBCnt);
 		$('.topBanner > .item > a').hide();
 		$('.topBanner > .item > a').eq(TBCnt - 1).show();
 		$('.topBanner').find('.now').html(TBCnt);
 	}
 	// TopRollingBanner End
-
-	
 
 	var viewLeft = $('.mainFind.case1').find('a');
 	var viewRight = $('.mainFind.case2').find('a');
@@ -428,7 +428,6 @@ $(function(){
 
 	 $('.table').find('tbody').find('input:checkbox').each(function(){
 		$(this).click(function(){
-			console.log('zz');
 			if (!$(this).prop('checked'))
 			{
 				$(this).closest('.table').find('.checkbox.single.all').find('input:checkbox').prop("checked",false);
@@ -518,7 +517,6 @@ $(function(){
 
 	$(tgThumb).each(function(i){
 		$(this).mouseenter(function(x){
-			console.log(i);
 			tireThumb(i);
 		});
 	});
@@ -591,6 +589,28 @@ $(function(){
 				$('.orderView').addClass('fix');
 			}
 		}
+
+		// wingBanner Break Main
+
+		var MainVisualLng = $('.mainVisual').length;
+		var itemContWrapOff = $('.itemContWrap').offset();
+		if (MainVisualLng >= 1)
+		{
+			console.log('zxdfsd');
+
+			if ( Top < itemContWrapOff.top )
+			{
+				console.log(Top);
+				$('.wing').addClass('on');
+				$('.wing').css('top',itemContWrapOff.top);
+			}
+
+			if ( Top + 100 > itemContWrapOff.top )
+			{
+				$('.wing').removeClass('on');
+				$('.wing').css('top','');
+			}
+		}
 	});
 
 
@@ -626,7 +646,6 @@ $(function(){
 		// 값이 변경되면 
 		if(window.FileReader){// modern browser 
 			var filename = $(this)[0].files[0].name;
-			console.log(filename);
 		} 
 		else { // old IE 
 			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
@@ -639,7 +658,6 @@ $(function(){
 	// popup
 	$('.popupOpen').click(function(e){
 		var NameValue = $(this).data('name');
-		console.log(NameValue);
 		e.preventDefault();
 		popupOpen(NameValue);
 	});
