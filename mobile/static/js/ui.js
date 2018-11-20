@@ -217,6 +217,7 @@ var uiMain = {
 		this.menu(); // 전체 메뉴
 		this.goTop(); // top버튼 클릭시 페이지 상단으로 이동
 		this.nav(); // gnb메뉴
+		this.botNavList(); // gnb메뉴
 	},
 
 	menu : function() {
@@ -255,14 +256,37 @@ var uiMain = {
 	},
 
 	goTop : function() {
-		$(document).on("click", 'a.btnGoTop', function(e){
+		$(document).on("click", '.btnGoTop', function(e){
 			$(document).scrollTop(0);
 			e.preventDefault();
 		});
+	},
+
+	botNavList : function(){
+		// 플로팅메뉴 클릭 시 서브메뉴 노출
+		$('.floatingMenu .mypage a').on('click', function(e){
+			e.preventDefault();
+
+			$('.floatingWrap').css('display', 'block');
+			$('.floatingCont.mypage').show();
+			$('body').addClass('noScroll');
+			
+		});
+
+		$('.floatingMenu .consult a').on('click', function(e){
+			e.preventDefault();
+
+			$('.floatingWrap').css('display', 'block');
+			$('.floatingCont.consult').show();
+			$('body').addClass('noScroll');
+		});
+
+		$('.floatingCont .btnClose').on('click', function(){
+			$(this).parent().hide();
+			$('body').removeClass('noScroll');
+		});
 	}
 }; 
-
-
 
 /* parallax scrolling motion */
 scrollAnimation();
@@ -383,22 +407,31 @@ function topBanner() {
 	});
 }
 
-// scroll 
+
 $(window).scroll(function() {
-	var scroll = $(window).scrollTop();
-	
-	// 헤더
-	if (scroll >= 50) {
+	var st = $(this).scrollTop();
+	var fixedStartY = 50;	
+
+	if(st > fixedStartY) {
 		$('#headerWrap').addClass('fixed');
 		$('.topBanner').hide();
+
+		$('.btnGoTop').addClass('active');
+		$('.fixBotNav').fadeIn(200);
+
 	} else {
 		$('#headerWrap').removeClass('fixed');
 		$('.topBanner').show();
+
+		$('.btnGoTop').removeClass('active');
+		$('.fixBotNav').fadeOut(200);
 	}
 
-
-	// 하단고정네비
-
-	// TOp 버튼
-
+	// 하단고정네비 노출에 따른 height 설정
+	$('.fixBotNav:visible').each(function(){
+		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
+	});
 });
+
+
+
