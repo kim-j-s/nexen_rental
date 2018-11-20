@@ -21,8 +21,8 @@
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
-                <a href="#" class="history"><span>이전화면</span></a>
-                <h1><span>렌탈료 직접설계</span></h1>
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">렌탈료 직접설계</h1>
             </div>
         </header>
         <!-- //헤더영역 -->
@@ -30,50 +30,77 @@
         <!-- 본문영역 -->
         <section id="content" class="sectionTire"><!-- 페이지 컨트롤을 위한 클래스 추가 .sectionTire -->  
             
-            <!-- 타이어 검색 -->
-            <div class="tireSearchWrap">
-                <div class="searchWrap" style="display:block;">
-                    <div class="searchOptList on">
+            <!-- 렌탈료 계산 -->
+            <div class="calcRentalWrap">
+                <div class="searchWrap">
+                    <div class="searchOptList">
                         <dl>
-                            <dt>제조사 선택</dt> 
+                            <dt>렌탈등록비</dt> 
                             <dd>
                                 <select name="" id="" class="selectbox">
-                                    <option value="">제조사 선택</option>
-                                    <option value="현대자동차">현대자동차</option>
+                                    <option value="">렌탈등록비 선택</option>
                                 </select>
                             </dd>
                         </dl>
                         <dl>   
-                            <dt>모델명 선택</dt> 
+                            <dt>렌탈료<br>납부기간</dt> 
                             <dd>
                                 <select name="" id="" class="selectbox">
-                                    <option value="">모델명 선택</option>
-                                    <option value="">EF소나타</option>
+                                    <option value="">렌탈료납부기간 선택</option>
                                 </select>
                             </dd>
                         </dl>
                         <dl>   
-                            <dt>사이즈</dt> 
+                            <dt>타이어 무상<br>교체서비스<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
                             <dd>
                                 <select name="" id="" class="selectbox">
-                                    <option value="">사이즈 선택</option>    
-                                    <option value="">205/60R16</option>
+                                    <option value="">타이어 무상 교체 서비스 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>   
+                            <dt>엔진오일<br>교체<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
+                            <dd>
+                                <select name="" id="" class="selectbox">
+                                    <option value="">엔진오일 교체 서비스 선택</option> 
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>   
+                            <dt>얼라인먼트<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
+                            <dd>
+                                <select name="" id="" class="selectbox">
+                                    <option value="">얼라인먼트 무상서비스 선택</option> 
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>   
+                            <dt>위치교환<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
+                            <dd>
+                                <select name="" id="" class="selectbox">
+                                    <option value="">위치교환 무상서비스 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>   
+                            <dt>방문점검<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
+                            <dd>
+                                <select name="" id="" class="selectbox">
+                                    <option value="">방문점검 서비스 선택</option>    
                                 </select>
                             </dd>
                         </dl>
                     </div>
                     <div class="btnArea">
-                        <button class="btn ty2 bg2"><span>렌탈료 계산하기</span></button>
+                        <button class="btn block point"><span>렌탈료 계산하기</span></button>
                     </div> 
                 </div> 
                  
             </div>
-            <!-- // 타이어 검색 -->
+            <!-- // 렌탈료 계산 -->
 
         </section>
         <!-- //본문영역 -->
-
-        <!-- -->
 
     </div>
 </body>
