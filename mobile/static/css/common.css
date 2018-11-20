@@ -147,7 +147,7 @@ strong { font-weight: 500; } /* bold */
 * 전체메뉴
 * ============================== */
 
-body.noScroll { overflow-y: hidden; }
+body.noScroll {  position: fixed; overflow-y: hidden; }
 
 #gnb {
 	position: fixed;
@@ -402,7 +402,7 @@ body.noScroll { overflow-y: hidden; }
 .navFoot {
 	box-sizing: border-box; 
 	position: bottom;
-	/* right: 0; */
+	right: 0;
 	/* right: auto; */
 	bottom: 0;
 	width: 100%;
