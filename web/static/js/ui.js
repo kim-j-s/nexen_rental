@@ -50,6 +50,13 @@ $(function(){
 		  $(this).find('.loding-txt').html('진도율 <br /><span>' + parseInt(lodingActVal * progress) + '%</span>');
 		});
 	}
+
+	$('.pageTop').on('click', function(e){
+		e.preventDefault();
+		$("html, body").animate({
+			scrollTop: 0 }
+		,500);
+	});
 	
 	/* ==============================
 	 * gnb 
@@ -477,14 +484,28 @@ $(function(){
 
 	// slider 
 	$('.slider1').slick({
-		infinite: true,
+		infinite: false,
 		slidesToShow: 4,
-		slidesToScroll: 1,
+		slidesToScroll: 4,
 		adaptiveHeight: true
 	});
 	// slick init
 	function slickInit() {
 		$('.slider1').slick('setPosition');
+	}
+
+	//slick btn disabled class
+	function AddLeftDisabled() {
+		$('.slider1').find('.slick-prev').addClass('slick-disabled');
+	}
+	function RemoveLeftDisabled() {
+		$('.slider1').find('.slick-prev').removeClass('slick-disabled');
+	}
+	function AddRightDisabled() {
+		$('.slider1').find('.slick-next').addClass('slick-disabled');
+	}
+	function RemoveRightDisabled() {
+		$('.slider1').find('.slick-next').removeClass('slick-disabled');
 	}
 
 	// 타이어 게이지
@@ -555,15 +576,41 @@ $(function(){
 		$('.prodGalleryViewer').append(tireThumbImg);
 	}
 
+	var BreakPoint1 = $('.bPoint1').offset();
+	$('.fixedBottom').find('.btn').on('click', function(e){
+		e.preventDefault();
+		$("html, body").animate({
+			scrollTop: BreakPoint1.top }
+		,500);
+	});
+
 	// 스크롤 이벤트
 	$(window).scroll(function(){
 		// 타이어 상세 페이지	
 		var FloatingChk = $('.floating').length;
 		var Floating2Chk = $('.floating2').length;
+		var bPoint1Lng = $('.bPoint1').length;
+		
 		var Top = $('body, html').scrollTop();
 		// 타이어 상품 상세 탭
 		var Floating = $('.floating').offset();
 		var Floating2 = $('.floating2').offset();
+		var BreakPoint1 = $('.bPoint1').offset();
+
+		// 상품상세 플로팅버튼
+		if (bPoint1Lng > 0)
+		{
+			if ( Top > BreakPoint1.top + 298 )
+			{
+				console.log(Top);
+				$('.fixedBottom').addClass('on');
+				//$('.wing').css('top',itemContWrapOff.top);
+			} else {
+				$('.fixedBottom').removeClass('on');
+			}
+		}	
+
+		
 
 		if (FloatingChk > 0)
 		{
@@ -605,20 +652,15 @@ $(function(){
 		}
 
 		// wingBanner Break Main
-
 		var MainVisualLng = $('.mainVisual').length;
 		var itemContWrapOff = $('.itemContWrap').offset();
 		if (MainVisualLng >= 1)
 		{
-			console.log('zxdfsd');
-
 			if ( Top < itemContWrapOff.top )
 			{
-				console.log(Top);
 				$('.wing').addClass('on');
 				$('.wing').css('top',itemContWrapOff.top);
 			}
-
 			if ( Top + 100 > itemContWrapOff.top )
 			{
 				$('.wing').removeClass('on');
@@ -626,6 +668,23 @@ $(function(){
 			}
 		}
 	});
+
+	var Top = $('body, html').scrollTop();
+	var MainVisualLng = $('.mainVisual').length;
+	var itemContWrapOff = $('.itemContWrap').offset();
+	if (MainVisualLng >= 1)
+	{
+		if ( Top < itemContWrapOff.top )
+		{
+			$('.wing').addClass('on');
+			$('.wing').css('top',itemContWrapOff.top);
+		}
+		if ( Top + 100 > itemContWrapOff.top )
+		{
+			$('.wing').removeClass('on');
+			$('.wing').css('top','');
+		}
+	}
 
 
 	// 타이어 상세 설정 탭
