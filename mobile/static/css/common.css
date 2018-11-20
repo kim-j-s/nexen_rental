@@ -148,8 +148,10 @@ strong { font-weight: 500; } /* bold */
 
 body.noScroll { overflow-y: hidden; }
 
-#gnb { position: fixed; z-index: 200;}
-#gnb a { text-decoration: none; }
+#gnb {
+	position: fixed;
+	z-index: 200;
+}
 
 .overlay {
 	display: none;
@@ -444,19 +446,17 @@ body.noScroll { overflow-y: hidden; }
 
 /* top이동 버튼 */
 .btnGoTop {
-    display:block;
+	display:block;
     position: fixed;
     right: 15px;
     bottom: 55px;
-    z-index: 30;
+    z-index: 50;
     width: 36px; 
     height: 37px; 
     background: url('../images/common/btn/btn_top.png') no-repeat;
-    background-size: 100%;
+	background-size: 100%;
+	font-size: 0;
 }
-.btnGoTop span { font-size:0; }
-.btnGoTop.active { bottom: 55px; }
-
 
 /* ==============================
 * footer
@@ -816,53 +816,46 @@ a.btn { text-decoration: none !important; }
 .floatingWrap {
 	position: fixed;
 	bottom: 0;
-	z-index: 300;
+	z-index: 150;
 	width: 100%;
 }
 .floatingMenu {
-	width: 100%;
-	height: 45px;
-	background-color: #fff;    
+	background: #fff;    
 	border-top: 1px solid #dcdcdc;
 }
 .floatingMenu ul {
-	box-sizing: border-box;
-	height: 45px;
-	padding: 0 15px;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	justify-content: space-between;
 }
-.floatingMenu li {
-	height: 45px;
-	text-align: center;
-}
+.floatingMenu li { width: 20%; }
+.floatingMenu li:nth-child(2),
+.floatingMenu li:nth-child(4) { width: 30%; }
+
 .floatingMenu li a {
+	position: relative;
 	box-sizing: border-box;
 	display: block;
 	height: 45px;
 	padding-top: 30px;
 	font-size: 8px;
-	text-decoration: none;
+	text-align: center;
 }
-.floatingMenu li.mypage { 
-	background: url('../images/common/icon/icon_floating_mypage.png') no-repeat center top;
-	background-size: 30px 30px;
+.floatingMenu span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 30px;
+	background-size: 100%;
 }
-.floatingMenu li.rental { 
-	background: url('../images/common/icon/icon_floating_rental.png') no-repeat center top;
-	background-size: 30px 30px;
-}
-.floatingMenu li.consult { 
-	background: url('../images/common/icon/icon_floating_consult.png') no-repeat center top;
-	background-size: 30px 30px;
-}
-.floatingMenu li.store { 
-	background: url('../images/common/icon/icon_floating_store.png') no-repeat center top;
-	background-size: 30px 30px;
-}
+.floatingMenu .mypage span:after { background-image: url('../images/common/icon/icon_floating_mypage.png'); }
+.floatingMenu .rental span:after { background-image: url('../images/common/icon/icon_floating_rental.png'); }
+.floatingMenu .consult span:after { background-image: url('../images/common/icon/icon_floating_consult.png'); }
+.floatingMenu .store span:after { background-image: url('../images/common/icon/icon_floating_store.png'); }
 
+/* 하단 메뉴 */
 .floatingCont {
 	display: none;
 	position: fixed;
@@ -870,37 +863,34 @@ a.btn { text-decoration: none !important; }
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 500;	
+	z-index: 200;	
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,.8);
 }
-.floatingCont .sub {
+.floatingCont ul { 
+
 	display: flex;
 	flex-direction: column;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 45px;
+	background: url('../images/common/bg_dashed.png') repeat-x left bottom;
+	background-size: 6px 1px;
 }
-.floatingCont .sub li a {
+.floatingCont ul li a {
 	box-sizing: border-box;
-	display: block;
 	position: relative;
+	display: block;
 	height: 52px;
 	line-height: 52px;
 	padding-left: 32px;
 	color: #fff;
 	font-size: 13px;
 }
-.floatingCont .sub { 
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	margin-bottom: 45px;
-	padding-left: 24px;
-	background: url('../images/common/bg_dashed.png') repeat-x left bottom;
-	background-size: 6px 1px;
-}
 .floatingCont .btnClose {
 	position: absolute;
-	/* left: 24px; */
 	bottom: 12px;
 	width: 22px;
 	height: 22px;
@@ -909,13 +899,12 @@ a.btn { text-decoration: none !important; }
 	background-position: 0 0;
 	font-size: 0;
 }
-.floatingCont .btnClose.active, 
 .floatingCont .btnClose:focus, 
-.floatingCont .btnClose:active { background-position: 22px 0; }
+.floatingCont .btnClose:active { background-position: -22px 0; }
 
 /* 나의정보 */
-.floatingCont.mypage ul {padding-left: 24px;}
-.floatingCont.mypage .sub li a:after {
+.floatingCont.mypage ul { padding-left: 24px; }
+.floatingCont.mypage li a:after {
 	content: '';
 	display: inline-block;
 	position: absolute;
@@ -926,18 +915,16 @@ a.btn { text-decoration: none !important; }
 	background: url('../images/common/icon/icon_floating1.png') no-repeat;
 	background-size: 22px 268px;
 }
-.floatingCont.mypage .sub li:nth-child(1) a:after { background-position: 0 0; } 
-.floatingCont.mypage .sub li:nth-child(2) a:after { background-position: 0 -50px; } 
-.floatingCont.mypage .sub li:nth-child(3) a:after { background-position: 0 -102px; } 
-.floatingCont.mypage .sub li:nth-child(4) a:after { background-position: 0 -152px; } 
-.floatingCont.mypage .sub li:nth-child(5) a:after { background-position: 0 -203px; } 
+.floatingCont.mypage li:nth-child(1) a:after { background-position: 0 0; } 
+.floatingCont.mypage li:nth-child(2) a:after { background-position: 0 -50px; } 
+.floatingCont.mypage li:nth-child(3) a:after { background-position: 0 -102px; } 
+.floatingCont.mypage li:nth-child(4) a:after { background-position: 0 -152px; } 
+.floatingCont.mypage li:nth-child(5) a:after { background-position: 0 -203px; } 
 .floatingCont.mypage .btnClose { left: 24px;}
 
 /* 상담하기 */
-.floatingCont.consult {}
-.floatingCont.consult ul { padding-left: 50%; }
-.floatingCont.consult .btnClose { padding-left: 50%; }
-.floatingCont.consult .sub li a:after {
+.floatingCont.consult ul { padding-left: calc(50% + 24px); }
+.floatingCont.consult li a:after {
 	content: '';
 	display: inline-block;
 	position: absolute;
@@ -947,10 +934,12 @@ a.btn { text-decoration: none !important; }
 	height: 24px;
 	background: url('../images/common/icon/icon_floating2.png') no-repeat;
 	background-size: 22px 230px;
-	/* background-color: yellow; */
 }
-.floatingCont.consult .sub li:nth-child(1) a:after { background-position: 0 0; } 
-.floatingCont.consult .sub li:nth-child(2) a:after { background-position: 0 -50px; } 
-.floatingCont.consult .sub li:nth-child(3) a:after { background-position: 0 -102px; } 
-.floatingCont.consult .sub li:nth-child(4) a:after { background-position: 0 -152px; } 
-.floatingCont.consult .sub li:nth-child(5) a:after { background-position: 0 -203px; } 
+.floatingCont.consult li:nth-child(1) a:after { background-position: 0 0; } 
+.floatingCont.consult li:nth-child(2) a:after { background-position: 0 -50px; } 
+.floatingCont.consult li:nth-child(3) a:after { background-position: 0 -102px; } 
+.floatingCont.consult li:nth-child(4) a:after { background-position: 0 -152px; } 
+.floatingCont.consult li:nth-child(5) a:after { background-position: 0 -203px; } 
+.floatingCont.consult .btnClose { left: calc(50% + 24px); }
+
+

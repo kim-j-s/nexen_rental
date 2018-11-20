@@ -7,7 +7,6 @@
 /* 띠배너 */
 .topBanner {
 	position: relative;
-	z-index: 250;
 	width: 100%;
 	height: auto;
 	overflow: hidden;
