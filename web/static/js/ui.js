@@ -60,6 +60,107 @@ $(function(){
 	/* ==============================
 	 * main 
 	 * ============================== */
+	
+	// 배너갯수
+	var TBLng = $('.topBanner > .item > a').length;
+	var TBCnt = 1;
+	var TBIntervalCnt = 0;
+	var TBLeft = $('.topBanner').find('.left');
+	var TBRight = $('.topBanner').find('.right');
+	var RollingTime = 2500;
+	// 배너 컨트롤 초기화
+	if (TBLng < 2)
+	{
+		$('.topBanner').find('.counter').hide();
+		$('.topBanner').find('.btns').hide();
+	}
+	$('.topBanner').find('.allcnt').html(TBLng);
+
+	// topbanner close
+	$('.topBanner').find('.topBclose').on('click', function(){
+		$('.topBanner').animate({
+			height : '0px'
+		},300);
+		StopInterval();
+	});
+
+	// 배너 이벤트
+	$(TBLeft).on('click', function(){
+		TBCnt--;
+		if (TBCnt == 0)
+		{
+			TBCnt = TBLng;
+		}
+		TBL(TBCnt);
+	});
+	$(TBLeft).on('mouseenter', function(){
+		StopInterval();
+		$('.topBanner').find('.playBtn').addClass('on');
+		TBIntervalCnt = 1;
+	});
+
+	$(TBRight).on('click', function(){
+		TBCnt++;
+		if (TBCnt == TBLng + 1)
+		{
+			TBCnt = 1;
+		}
+		TBL(TBCnt);
+	});
+	$(TBRight).on('mouseenter', function(){
+		StopInterval();
+		$('.topBanner').find('.playBtn').addClass('on');
+		TBIntervalCnt = 1;
+	});
+
+	$('.topBanner').find('.playBtn').on('click', function(){
+		TBIntervalCnt++;
+		if (TBIntervalCnt == 1)
+		{
+			StopInterval();
+			$(this).addClass('on');
+		} else {
+			$(this).removeClass('on');
+			TBIntervalCnt = 0;
+			restartRolling();
+		}
+	});
+
+	setTimeout(function(){
+		TBRolling = StartInterval();
+	},RollingTime);
+
+	function StartInterval() {
+		i = setInterval(function(){
+			TBCnt++;
+			if (TBCnt == TBLng + 1)
+			{
+				TBCnt = 1;
+			}
+			TBL(TBCnt);
+		},RollingTime);
+		return i;
+	}
+
+	// 롤링 시작
+	function restartRolling(){
+		TBRolling = StartInterval();
+	}
+	
+	// 재생정지
+	function StopInterval(){
+		clearInterval(TBRolling);
+	}
+
+	function TBL(TBCnt) {
+		console.log('들어온 값 + ' + TBCnt);
+		$('.topBanner > .item > a').hide();
+		$('.topBanner > .item > a').eq(TBCnt - 1).show();
+		$('.topBanner').find('.now').html(TBCnt);
+	}
+	// TopRollingBanner End
+
+	
 
 	var viewLeft = $('.mainFind.case1').find('a');
 	var viewRight = $('.mainFind.case2').find('a');
