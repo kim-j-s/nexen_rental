@@ -60,6 +60,107 @@ $(function(){
 	/* ==============================
 	 * main 
 	 * ============================== */
+	
+	// 배너갯수
+	var TBLng = $('.topBanner > .item > a').length;
+	var TBCnt = 1;
+	var TBIntervalCnt = 0;
+	var TBLeft = $('.topBanner').find('.left');
+	var TBRight = $('.topBanner').find('.right');
+	var RollingTime = 2500;
+	// 배너 컨트롤 초기화
+	if (TBLng < 2)
+	{
+		$('.topBanner').find('.counter').hide();
+		$('.topBanner').find('.btns').hide();
+	}
+	$('.topBanner').find('.allcnt').html(TBLng);
+
+	// topbanner close
+	$('.topBanner').find('.topBclose').on('click', function(){
+		$('.topBanner').animate({
+			height : '0px'
+		},300);
+		StopInterval();
+	});
+
+	// 배너 이벤트
+	$(TBLeft).on('click', function(){
+		TBCnt--;
+		if (TBCnt == 0)
+		{
+			TBCnt = TBLng;
+		}
+		TBL(TBCnt);
+	});
+	$(TBLeft).on('mouseenter', function(){
+		StopInterval();
+		$('.topBanner').find('.playBtn').addClass('on');
+		TBIntervalCnt = 1;
+	});
+
+	$(TBRight).on('click', function(){
+		TBCnt++;
+		if (TBCnt == TBLng + 1)
+		{
+			TBCnt = 1;
+		}
+		TBL(TBCnt);
+	});
+	$(TBRight).on('mouseenter', function(){
+		StopInterval();
+		$('.topBanner').find('.playBtn').addClass('on');
+		TBIntervalCnt = 1;
+	});
+
+	$('.topBanner').find('.playBtn').on('click', function(){
+		TBIntervalCnt++;
+		if (TBIntervalCnt == 1)
+		{
+			StopInterval();
+			$(this).addClass('on');
+		} else {
+			$(this).removeClass('on');
+			TBIntervalCnt = 0;
+			restartRolling();
+		}
+	});
+
+	if (TBLng > 1)
+	{
+		setTimeout(function(){
+			TBRolling = StartInterval();
+		},RollingTime);
+	}
+
+	function StartInterval() {
+		i = setInterval(function(){
+			TBCnt++;
+			if (TBCnt == TBLng + 1)
+			{
+				TBCnt = 1;
+			}
+			TBL(TBCnt);
+		},RollingTime);
+		return i;
+	}
+
+	// 롤링 시작
+	function restartRolling(){
+		TBRolling = StartInterval();
+	}
+	
+	// 재생정지
+	function StopInterval(){
+		clearInterval(TBRolling);
+	}
+
+	function TBL(TBCnt) {
+		$('.topBanner > .item > a').hide();
+		$('.topBanner > .item > a').eq(TBCnt - 1).show();
+		$('.topBanner').find('.now').html(TBCnt);
+	}
+	// TopRollingBanner End
 
 	var viewLeft = $('.mainFind.case1').find('a');
 	var viewRight = $('.mainFind.case2').find('a');
@@ -327,7 +428,6 @@ $(function(){
 
 	 $('.table').find('tbody').find('input:checkbox').each(function(){
 		$(this).click(function(){
-			console.log('zz');
 			if (!$(this).prop('checked'))
 			{
 				$(this).closest('.table').find('.checkbox.single.all').find('input:checkbox').prop("checked",false);
@@ -417,7 +517,6 @@ $(function(){
 
 	$(tgThumb).each(function(i){
 		$(this).mouseenter(function(x){
-			console.log(i);
 			tireThumb(i);
 		});
 	});
@@ -460,9 +559,11 @@ $(function(){
 	$(window).scroll(function(){
 		// 타이어 상세 페이지	
 		var FloatingChk = $('.floating').length;
+		var Floating2Chk = $('.floating2').length;
 		var Top = $('body, html').scrollTop();
 		// 타이어 상품 상세 탭
 		var Floating = $('.floating').offset();
+		var Floating2 = $('.floating2').offset();
 
 		if (FloatingChk > 0)
 		{
@@ -473,6 +574,18 @@ $(function(){
 			} else {
 				$('.floating').find('.tabList').removeClass('fixed');
 				$('.floating').removeClass('pt62');
+			}
+		}
+
+		if (Floating2Chk > 0)
+		{
+			if ( Top > Floating2.top)
+			{
+				$('.floating2').find('.tabList').addClass('fixed');
+				$('.floating2').addClass('pt62');
+			} else {
+				$('.floating2').find('.tabList').removeClass('fixed');
+				$('.floating2').removeClass('pt62');
 			}
 		}
 
@@ -488,6 +601,28 @@ $(function(){
 				$('.orderView').css('top',Top - CartBaseTop.top);
 			} else {
 				$('.orderView').addClass('fix');
+			}
+		}
+
+		// wingBanner Break Main
+
+		var MainVisualLng = $('.mainVisual').length;
+		var itemContWrapOff = $('.itemContWrap').offset();
+		if (MainVisualLng >= 1)
+		{
+			console.log('zxdfsd');
+
+			if ( Top < itemContWrapOff.top )
+			{
+				console.log(Top);
+				$('.wing').addClass('on');
+				$('.wing').css('top',itemContWrapOff.top);
+			}
+
+			if ( Top + 100 > itemContWrapOff.top )
+			{
+				$('.wing').removeClass('on');
+				$('.wing').css('top','');
 			}
 		}
 	});
@@ -525,7 +660,6 @@ $(function(){
 		// 값이 변경되면 
 		if(window.FileReader){// modern browser 
 			var filename = $(this)[0].files[0].name;
-			console.log(filename);
 		} 
 		else { // old IE 
 			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
@@ -538,7 +672,6 @@ $(function(){
 	// popup
 	$('.popupOpen').click(function(e){
 		var NameValue = $(this).data('name');
-		console.log(NameValue);
 		e.preventDefault();
 		popupOpen(NameValue);
 	});

@@ -423,14 +423,14 @@ p.mark1 {display:block;}
  
  
  /* 상품 */
- .productViewWrap .productInfo {padding:20px 15px 30px 15px;}
- .productViewWrap .productInfo .tit {margin-top:10px; color:#000; font-size:16px; font-weight:500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
- .productViewWrap .productInfo .desc {font-size: 11px; line-height:16px; font-weight:400; color:#666666;}
- .productViewWrap .productInfo .desc strong {display:block; margin:20px 0 10px 0; font-size: 13px; font-weight:400; color:#222222;}
-
  .label { display: inline-block;}
  .label span { display:inline-block; box-sizing: border-box; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
  .label span.point { border-color: #6a2276;}
+
+ .hTag { display: inline-block;}
+ .hTag span { display:inline-block; background:#ffffff; box-sizing: border-box; border-radius:1px; border: 1px solid #666; min-width: 45px; height: 20px; line-height: 18px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
+ .hTag span.point { border-color: #6a2276;}
+
 
  .tabContent > .btnArea {margin-top:0px;}
  .tabContent .list1 .ulBar {margin-bottom:10px;}
@@ -471,23 +471,22 @@ p.mark1 {display:block;}
 
  .reviewList {border-top:2px solid #000000;}
  .reviewList > ul li {border-bottom:1px solid #dadada; padding: 20px 0;} 
- .reviewList > ul li .grade span {font-size:0; display:block; width:84px; height:16px; background:url('../images/common/icon/icon_star.png') no-repeat; background-size:100%;}
- .reviewList > ul li .grade span.star5 {background-position:0 0} /* 별점 5 */  
- .reviewList > ul li .grade span.star4 {background-position:0 -16px} /* 별점 4 */ 
- .reviewList > ul li .grade span.star3 {background-position:0 -32px} /* 별점 3 */ 
- .reviewList > ul li .grade span.star2 {background-position:0 -48px} /* 별점 2 */ 
- .reviewList > ul li .grade span.star1 {background-position:0 -64px} /* 별점 1 */
- .reviewList > ul li .grade span.star {background-position:0 -80px} /* 별점 0 */
+ .grade span {font-size:0; display:block; width:84px; height:16px; background:url('../images/common/icon/icon_star.png') no-repeat; background-size:100%;}
+ .grade span.star5 {background-position:0 0} /* 별점 5 */  
+ .grade span.star4 {background-position:0 -16px} /* 별점 4 */ 
+ .grade span.star3 {background-position:0 -32px} /* 별점 3 */ 
+ .grade span.star2 {background-position:0 -48px} /* 별점 2 */ 
+ .grade span.star1 {background-position:0 -64px} /* 별점 1 */
+ .grade span.star {background-position:0 -80px} /* 별점 0 */
  .reviewList > ul li .tit {font-size:14px; color:#000000; font-weight:400; margin-top:15px; line-height:17px;} 
  .reviewList > ul li .txt {font-size:12px; color:#666666; font-weight:400; margin-top:10px; line-height:17px;} 
  .reviewList > ul li.noList {display:table; width: 100%; min-height:130px; table-layout:fixed;} 
  .reviewList > ul li.noList .txt {display:table-cell; vertical-align:middle; text-align:center;}
- .reviewList > ul li .txt2 {font-size:11px; color:#999999; font-weight:400; margin-top:15px;}
- .reviewList > ul li .txt2 span {position:relative; padding-right:5px;}
- .reviewList > ul li .txt2 span + span {padding-left:5px;}
- .reviewList > ul li .txt2 span:nth-child(1):after {position:absolute; top:6px; right:0; width:1px; height:7px; background:#e8e8e8; content:'';}
+ .reviewList .txt2 {font-size:11px; color:#999999; font-weight:400; margin-top:15px;}
+ .reviewList .txt2 span {position:relative; padding-right:5px;}
+ .reviewList .txt2 span + span {padding-left:5px;}
+ .reviewList .txt2 span:nth-child(1):after {position:absolute; top:6px; right:0; width:1px; height:7px; background:#e8e8e8; content:'';}
 
- .productList {}
  .productList li:not(:first-child) { margin-top:10px; }
  .productList a { display: block; }
 
@@ -495,21 +494,37 @@ p.mark1 {display:block;}
  .product .thumb {display:flex; align-items: center;justify-content: center;height:200px;background:#fff;text-align:center}
  .product .thumb img { height:150px; } /* 세로고정 150px */
  .product .badge { position: absolute; top:0; right:0; }
- .productInfo {padding: 0 15px 20px;} 
- .productInfo .tit {margin-top:15px; color:#000; font-size:15px; font-weight:500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
- .productInfo .desc {margin-top: 10px;font-size: 11px;}
+ .orderArea {margin-top:0; padding:0 5px 5px 5px;}
+ .orderArea .btn:nth-child(1) {flex:0; flex-basis:40px;}
+ .orderArea .btn:nth-child(2) {flex:1;}
+ .orderArea .btn:nth-child(3) {flex:2;}
+ .orderArea .innerIcon.cart {position:relative; display:block; font-size:0; width:20px; height:1px;}
+ .orderArea .innerIcon.cart:after {position:absolute; content:''; top:9px; margin-left:-9px; width:20px; height:18px; background: url('../images/common/btn/btn_cart.png') no-repeat; background-size: 20px 18px;}
+ 
+ .productViewWrap .productInfo {padding:20px 15px 30px 15px;}
+ .productInfo {padding: 0 15px 20px;}  
+ .productInfo.ty1 {background:#fafafa; padding:20px 15px 20px 15px;}
+ .productInfo .tit {margin-top:10px; color:#000; font-size:16px; font-weight:500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+ .productInfo .tit .sub {color:#c3244e; font-size:13px; font-weight:500;}
+ .productInfo .desc {margin-top: 10px; font-size: 11px; line-height:16px; font-weight:400; color:#666666;}
+ .productInfo .desc strong {display:block; margin:20px 0 10px 0; font-size: 12px; font-weight:400; color:#222222;}
  .productInfo .pointInfo {margin-top:10px;font-size:0;}
  .productInfo .pointInfo span {display: inline-block;margin-top: 5px;padding: 5px 10px;	background:#e7e2f2;	border-radius: 10px;color:#000;	font-size: 10px;}
  .productInfo .pointInfo span + span { margin-right: 5px; }
+
  
- .priceInfoWrap {padding: 15px 15px;border-top: 1px dashed #e1e1e1;}
- .priceInfo {display:flex;align-items:center;color:#000;}
+ .priceInfoWrap {position:relative; padding: 15px 15px; border-top: 1px dashed #e1e1e1;}
+ .priceInfoWrap.noLine {border:none;}
+ .priceInfo {display:flex; align-items:center; color:#000;}
  .priceInfo:not(:first-child) {margin-top:10px;}
  .priceInfo .txt {flex:auto;font-size:11px;}
  .priceInfo .price {flex-basis: 100px;font-size:11px;font-weight:500;text-align:right;}
  .priceInfo .price .num {font-size:18px;font-weight:500;}
  .priceInfo .price .num.type1 {color:#812990;}
  .priceInfo .price .num.type2 {color:#b6985a;}
+ .priceInfo .price .num.type3 {color:#c3244e;}
+ .priceInfo.more {padding-right:35px;}
+ .priceInfo .btn.more {position:absolute; top:12px; right:5px; font-size:0; width:30px; height:30px; background:#555555 url('../images/common/btn/btn_more.png') no-repeat 50% 50%; background-size: 14px 14px;}
  
  .myRentalProduct {display:none; padding: 15px 12px; margin-top:10px; border-radius: 2px; background: #f8f8f8; text-align: center;}
  .myRentalProduct + .myRentalProduct {margin-top:5px;}
@@ -520,7 +535,7 @@ p.mark1 {display:block;}
  .myRentalProduct .info span {min-width:85px; box-sizing:border-box; display:inline-block; padding:5px 10px; border-radius:10px; background:#812990; color:#fff; font-size: 11px; font-weight:300;}
  .myRentalProduct .btnDel {display: inline-block; width: 15px; height: 15px; border-radius: 100%; background: #555 url('../images/common/btn/btn_del.png') no-repeat 50%; background-size: 7px 7px; vertical-align: -1px;}
  .myRentalProduct .btnDel span {font-size:0;}
- 
+
  /* 간편 조회하기 */ 
  .easySearchWrap {width:100%; height:100%;}
  .easySearchWrap .btnTopClose {display:block; width:22px; height:22px; background:url('../images/common/btn/btn_close3.png') no-repeat; background-size:100%; position:fixed; top:11px; right:15px; font-size:0;}
@@ -564,9 +579,39 @@ p.mark1 {display:block;}
  .sortArea .selectbox {display:table-cell; width:50%; box-sizing:border-box;} 
  .sortArea .selectBox:last-child {margin-right:0;}
 
+ /* 일시불/추천렌탈 리스트 */
+ .rentalList.mg1 {margin:20px 15px 50px 15px;}
+ .rentalList li:not(:first-child) { margin-top:5px;}
+ .rentalList .list1 li {color:#454545; margin:0;}
+ .rentalList .list1 .cNumber {overflow:hidden; margin-top:0;}
+ .rentalList .list1 .cNumber li {float:left; margin:0 5px 0 14px; color:#666666;}
+ .rentalList .list1 .tooltip {color:#888888; font-size:11px; text-align:left; margin:0 0 5px 0;}
+ .rentalList .list1 .tooltip a {text-decoration:none;}
+ .rentalList .list1 .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 3px 2px;}
+ .infoArea .desc {font-size:12px; font-weight:400; color:#000; line-height:17px; margin-bottom:15px;}
+ .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
+ .infoArea .priceInfo {padding:0 10px 10px 10px;}
+ .infoArea .priceInfo .txt {flex:auto;font-size:12px; color:#666666;}
+ .infoArea .priceInfo .price {flex-basis: 100px;font-size:12px; font-weight:400; text-align:right; color:#333333;}
+ .infoArea .priceInfo .price .num {font-size:12px;font-weight:400; color:#333333;}
+ .infoArea .totPrice {background:#feefef; margin:10px 0 5px 0; height:30px;}
+ .infoArea .totPrice .priceInfo .txt {font-size:12px; color:#333333; font-weight:500; line-height:30px;}
+ .infoArea .totPrice .price {flex-basis: 100px; font-size:13px; font-weight:500; text-align:right; color:#c3244e; line-height:30px;}
+ .infoArea .totPrice .price .num {font-size:13px; font-weight:500; color:#c3244e;}
+ .infoArea .list1 li {font-size:10px;}
+
+ /* 렌탈료 계산 */
+ .calcRentalWrap {padding:20px 15px; background:#fafafa; border-bottom:1px solid #d4d4d4}
+ .calcRentalWrap .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 2px 2px;}
+
  /* 구매후기 */
- .detailPage > .name
-   
+ .detailPage > .idArea {display: table; width:100%; table-layout:fixed; padding:10px; box-sizing:border-box; border-bottom:1px solid #d9d9d9;}
+ .detailPage > .idArea .grade {display:table-cell; width:110px;}
+ .detailPage > .idArea .txt2 {text-align:right;}
+ .detailPage > .idArea .txt2 span {position:relative; padding-right:5px;}
+ .detailPage > .idArea .txt2 span + span {padding-left:5px;}
+ .detailPage > .idArea .txt2 span:nth-child(1):after {position:absolute; top:6px; right:0; width:1px; height:7px; background:#e8e8e8; content:'';}
+
  /* 상품상세 팝업 */
- .productDetail { padding-top: 15px; }
+ .productDetail { padding-top: 15px;}
  img.full { width: 100%;}
