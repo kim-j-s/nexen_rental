@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>로그인 – 신개념 타이어 렌탈서비스</title>
+    <title>회원가입 – 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
     <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
         <header id="headerWrap">
             <div class="headerTopMenu">
                 <button class="back">이전화면</button>
-                <h1 class="mainTitle">로그인</h1>
+                <h1 class="mainTitle">회원가입</h1>
                 <button class="totalMenu">전체메뉴</button>
             </div>
         </header>
@@ -33,36 +33,38 @@
         <!-- 본문영역 -->
         <section id="content" class="sectionLogin">
             <div class="contWrap">
-                <div class="loginTop">
-                    <h2 class="logo"><img src="../static/images/common/logo3.png" alt="NEXT LEVEL"></h2>
-                    <p class="headCopy">국내 최초 신개념 타이어 렌탈서비스</p>
+                <div class="contTitleWrap">
+                    <div class="contTitle">
+                        <h2 class="headTitle">회원 유형 선택</h2>
+                        <p class="txt">
+                            회원별 가입 절차에 차이가 있으니 고객님이 해당하는 유형을 선택해 주세요.
+                        </p>
+                    </div>                    
                 </div>
-                <form action="" class="loginForm">
-                    <div class="inputBox">
-                        <label for="userId">아이디</label>
-                        <input type="text" class="inp" id="userId" placeholder="아이디 입력">
-                    </div>
-                    <div class="inputBox">
-                        <label for="pwd">비밀번호</label>
-                        <input type="password" class="inp" id="pwd" placeholder="비밀번호 입력">
-                    </div>
-                </form>
-                
-                <div class="loginBottom">
-                    <div class="checkbox">
-                        <input type="checkbox" name="" id="saveId">
-                        <label for="saveId">아이디 저장</label>
-                    </div>
 
-                    <ul class="action">
-                        <li><a href="#">회원가입</a></li>
-                        <li><a href="#">아이디/비밀번호 찾기</a></li>
-                    </ul>
+                <ul class="memberType">
+                    <li class="personal">
+                        <a href="#">
+                            <strong>개인회원</strong>
+                            만 19세 이상 개인고객
+                        </a>
+                    </li>
+                    <li class="business">
+                        <a href="#">
+                            <strong>사업자 회원</strong>
+                            사업자(개인,법인) 고객
+                        </a>
+                    </li>
+                </ul>
 
-                    <div class="btnArea">
-                        <button type="submit" class="btn primary" disabled>로그인</button>
-                    </div>
-                </div>
+                <h2 class="headTitle">NOTICE</h2>
+                <ul class="list1">
+                    <li>회원가입은 본인 명의로 1회만 가능합니다.</li>
+                    <li>
+                        영업용 차량의 경우 서비스가 제한될 수 있습니다.<br>
+                        (자세한 사항은 계약서 약관 참조)
+                    </li>
+                </ul>
             </div>
         </section>
         <!-- //본문영역 -->

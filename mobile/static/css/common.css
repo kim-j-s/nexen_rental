@@ -5,6 +5,8 @@
 @import url('lib/swiper.css');
 @import url('main.css');
 
+@import url('jeon.css'); /* 임시 - 삭제예정 */
+
 html,
 body { 
     color: #666;
@@ -819,7 +821,12 @@ body.errorPage {
     border-color: #812990;
     background-color: #812990;
     color: #fff;
-} 
+}
+.btn.primary:disabled {
+    border-color: #5a1d66;
+    background-color: #5a1d66;
+    color: #7f7f7f;
+}
 .btn.point {
     border-radius: none;
     border-color: #b6985a;
@@ -966,4 +973,6 @@ a.btn { text-decoration: none !important; }
     vertical-align: -3px;
 }
 .btnAction.block { display: block; }
+
+
 

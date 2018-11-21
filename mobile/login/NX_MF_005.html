@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>로그인 – 신개념 타이어 렌탈서비스</title>
+    <title>새 비밀번호 입력 – 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
     <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
@@ -32,26 +32,29 @@
 
         <!-- 본문영역 -->
         <section id="content" class="sectionLogin">
-			<div class="contTitleWrap">
-				<div class="contTitle">
-					<p class="txt">홈페이지를 통한 렌탈 주문이 불편하신 경우 상담 신청을 남겨주세요.</p>
-				</div>                    
-			</div>
-
             <div class="contWrap"> 
+                <div class="contTitleWrap">
+                    <div class="contTitle">
+                        <p class="txt">
+                            고객님의 비밀번호를 재 설정합니다.<br>
+                            새로운 비밀번호를 입력 해 주세요.
+                        </p>
+                    </div>                    
+                </div>
+
                 <div class="table ty2">
                     <table>
                         <caption>비밀번호 입력 테이블</caption>
                         <colgroup>
-                            <col style="width:27%;" />
-                            <col style="width:73%;" />
+                            <col style="width: 85px">
+                            <col>
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th scope="row">아이디</th>
                                 <td>
                                     <div class="inputBox w100">
-                                        <input type="text" class="inp" value="test1234" placeholder="아이디 입력">
+                                        <input type="text" class="inp" value="test1234" placeholder="아이디 입력" readonly>
                                     </div>    
                                 </td>
                             </tr>
@@ -59,10 +62,10 @@
                                 <th scope="row">비밀번호</th>
                                 <td>
 									<div class="inputBox w100">
-										<input type="password" class="inp" placeholder="비밀번호 입력">
+										<input type="password" class="inp error" placeholder="비밀번호 입력"> <!-- validation 체크 실패 시, .error 추가 -->
 									</div>   
-									<p>영문 대 소문자,숫자를 포함하여 8 ~ 20자를 입력해주세요.</p> 
-									<p class="error">다시 입력해 주십시요</p> 
+									<p class="inpDesc">영문 대 소문자,숫자를 포함하여 8 ~ 20자를 입력해주세요.</p> 
+									<p class="inpDesc error ">다시 입력해 주십시요</p> 
                                 </td>
                             </tr>
                             <tr>
@@ -71,8 +74,7 @@
 									<div class="inputBox w100">
 										<input type="password" class="inp" placeholder="비밀번호 재 입력">
 									</div>   
-									<p>영문 대 소문자,숫자를 포함하여 8 ~ 20자를 입력해주세요.</p>
-									<p class="error">비밀번호가 일치하지 않습니다.<br>다시 입력해 주십시요.</p>
+									<p class="inpDesc error">비밀번호가 일치하지 않습니다.<br>다시 입력해 주십시요.</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -80,7 +82,7 @@
                 </div>             
 
                 <div class="btnArea">
-                    <button class="btn block" disabled>수정하기</button>
+                    <button class="btn primary block" disabled>수정하기</button>
                 </div>
             </div>
         </section>
