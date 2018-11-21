@@ -146,7 +146,18 @@ $(function(){
 		}
 	  });
 
-	  //타이어 간편 조회
+	// 타이어 상품 갤러리
+	var swiper = new Swiper('.photoSlide', {
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+		  el: '.swiper-pagination',
+		},
+	 });
+
+	  //타이어 간편 조회 툴팁 레이어
 	var toolTipInfo = $('.easySearchInfo .toolTipInfo')
 	$('.searchOptList .tireSize').click(function(){	
 		console.log('test');
@@ -160,17 +171,6 @@ $(function(){
 		$(toolTipInfo).eq(2).show();
 	});
 	
-	// 타이어 상품 갤러리
-	var swiper = new Swiper('.photoSlide', {
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-		  el: '.swiper-pagination',
-		},
-	 });
-
 	//타이어 검색 
 	var btnTireSearh = $('.tireSearchWrap .btnSearch')
 	var searchCont = $('.tireSearchWrap > .searchWrap')
@@ -188,22 +188,21 @@ $(function(){
 		}
 	});
 
-	var subOption =  $('.optLv1 ll:nth-child(1) button')
+	var radioVal = $('.searchOpt .radiobtnGroup:nth-child(1)') 
+	var radioVal2 = $('.searchOpt .radiobtnGroup:nth-child(2)')
 
-	$('.searchOptList li button').each(function( ){
-		$(this).click(function(){	
-			$(this).parent('li').siblings().children('button').removeClass('on');	 
-			$(this).addClass('on');
-			// if ( $(subOption).hasClass('on') ){
-			// 	$('.optLv2').slideDown(200);	
-			// } else {
-			// 	$('.optLv2').slideUp(200);
-			// }		
+	$(radioVal).children('label').each(function(idx){
+		$(this).click(function(){
+			$(this).closest('.searchOpt').siblings('.searchOptList').removeClass('on');
+			$(this).closest('.searchOpt').siblings('.searchOptList').eq(idx).addClass('on');
+			
+			if (idx == 1){
+				$(radioVal2).css({display:'none'});
+			}else{
+				$(radioVal2).css({display:'flex'});
+			}	
 		});
-	}); 
-
-
-
+	});
 
 });
 

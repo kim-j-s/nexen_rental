@@ -57,6 +57,67 @@ $(function(){
 			scrollTop: 0 }
 		,500);
 	});
+
+	var DimmdBg = '<div class="dimmedBg"></div>';
+	$('.mainWing').find('.call').on('click', function(){
+		if ( $(this).hasClass('on') )
+		{
+			$('.wing').removeClass('down');
+			$(this).closest('li').siblings().removeClass('on');
+			$('.dimmedBg').removeClass('on');
+			setTimeout(function(){
+				$('.dimmedBg').remove();
+			},500);
+			$(this).removeClass('on');
+			$(this).next('.cList').removeClass('on');
+			$(this).closest('.inner').animate({
+				left: '0'
+			}, 500);
+		} else {
+			$('.wing').addClass('down');
+			$(this).closest('li').siblings().addClass('on');
+			$(DimmdBg).insertBefore('#footerWrap');
+			setTimeout(function(){
+				$('.dimmedBg').addClass('on');
+			},100);
+			$(this).addClass('on');
+			$(this).next('.cList').addClass('on');
+			$(this).closest('.inner').animate({
+				left: '-349px'
+			}, 500);
+		}
+	});
+
+	$('.wing').find('.call').on('click', function(){
+		if ( $(this).hasClass('on') )
+		{
+			$('.mainWing').removeClass('down');
+			$(this).closest('li').siblings().removeClass('on');
+			$('.dimmedBg').removeClass('on');
+			setTimeout(function(){
+				$('.dimmedBg').remove();
+			},500);
+			$(this).removeClass('on');
+			$(this).next('.cList').removeClass('on');
+			$(this).closest('.inner').animate({
+				width: '79px',
+				left: '0'
+			}, 500);
+		} else {
+			$('.mainWing').addClass('down');
+			$(this).closest('li').siblings().addClass('on');
+			$(DimmdBg).insertBefore('#footerWrap');
+			setTimeout(function(){
+				$('.dimmedBg').addClass('on');
+			},100);
+			$(this).addClass('on');
+			$(this).next('.cList').addClass('on');
+			$(this).closest('.inner').animate({
+				width: '428px',
+				left: '-349px'
+			}, 500);
+		}
+	});
 	
 	/* ==============================
 	 * gnb 
@@ -604,13 +665,10 @@ $(function(){
 			{
 				console.log(Top);
 				$('.fixedBottom').addClass('on');
-				//$('.wing').css('top',itemContWrapOff.top);
 			} else {
 				$('.fixedBottom').removeClass('on');
 			}
-		}	
-
-		
+		}
 
 		if (FloatingChk > 0)
 		{
@@ -661,7 +719,7 @@ $(function(){
 				$('.wing').addClass('on');
 				$('.wing').css('top',itemContWrapOff.top);
 			}
-			if ( Top + 100 > itemContWrapOff.top )
+			if ( Top + 176 > itemContWrapOff.top )
 			{
 				$('.wing').removeClass('on');
 				$('.wing').css('top','');
@@ -679,13 +737,12 @@ $(function(){
 			$('.wing').addClass('on');
 			$('.wing').css('top',itemContWrapOff.top);
 		}
-		if ( Top + 100 > itemContWrapOff.top )
+		if ( Top + 176 > itemContWrapOff.top )
 		{
 			$('.wing').removeClass('on');
 			$('.wing').css('top','');
 		}
 	}
-
 
 	// 타이어 상세 설정 탭
 	$('.settingList > li > .tit').each(function(){

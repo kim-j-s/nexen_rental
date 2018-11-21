@@ -19,7 +19,7 @@
 <body>
     <div id="wrap">
         <!-- 헤더영역 -->
-        <header id="headerWrap">
+        <header id="headerWrap" style="z-index:100;">
             <div class="headerTopMenu">
                 <button class="back">이전화면</button>
                 <h1 class="mainTitle">승용차용</h1>
@@ -36,14 +36,14 @@
             <div id="dimTopLayer" class="tireSearchWrap">
                 <div class="searchWrap" style="display:block;">
                     <div class="searchOpt">
-                        <ul class="optLv1">
-                            <li><button class="on"><span>차종</span></button></li>
-                            <li><button><span>사이즈</span></button></li>
-                        </ul>
-                        <ul class="optLv2">
-                            <li><button class="on"><span >국내</span></button></li>
-                            <li><button><span class="">수입</span></button></li>
-                        </ul>    
+                        <div class="radiobtnGroup">
+                            <label class="radiobtn on" for="rd11"><input name="radioSelect" id="rd11" type="radio" checked="checked"><span class="txt">차종</span></label>
+                            <label class="radiobtn" for="rd12"><input name="radioSelect" id="rd12" type="radio"><span class="txt">사이즈</span></label>
+                        </div>
+                        <div class="radiobtnGroup">
+                            <label class="radiobtn on" for="rd21"><input name="radioSelect2" id="rd21" type="radio" checked="checked"><span class="txt">국내</span></label>
+                            <label class="radiobtn" for="rd22"><input name="radioSelect2" id="rd22" type="radio"><span class="txt">수입</span></label>
+                        </div>
                     </div>
                     <div class="searchOptList on">
                         <dl>
@@ -105,8 +105,8 @@
                     </div>
                 </div> 
                 <div class="btnArea">
-                    <button class="btn btnSearch" disabled="disabled"><span>타이어 검색</span></button>
-                </div>  
+                    <button class="btnAction" disabled="disabled"><span class="btnSearch">타이어 검색</span></button>
+                </div>   
             </div>
             <!-- // 타이어 검색 -->
 

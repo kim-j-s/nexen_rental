@@ -51,6 +51,8 @@ button span{
   color: rgba(181,181,181,0.8);
 }
 
+::-ms-clear {display:none;}
+
 textarea:-ms-input-placeholder {
     color:rgba(181,181,181,0.8) !important;
 }

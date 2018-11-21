@@ -29,21 +29,20 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content" class="sectionTire"><!-- 페이지 컨트롤을 위한 클래스 추가 .sectionTire -->             
-            
+        <section id="content" class="sectionTire"><!-- 페이지 컨트롤을 위한 클래스 추가 .sectionTire -->  
             <!-- 타이어 검색 -->
             <div class="dimCont"></div>
             <div id="dimTopLayer" class="tireSearchWrap">
                 <div class="searchWrap">
                     <div class="searchOpt">
-                        <ul class="optLv1">
-                            <li><button class="on"><span>차종</span></button></li>
-                            <li><button><span>사이즈</span></button></li>
-                        </ul>
-                        <ul class="optLv2">
-                            <li><button class="on"><span >국내</span></button></li>
-                            <li><button><span class="">수입</span></button></li>
-                        </ul>    
+                        <div class="radiobtnGroup">
+                            <label class="radiobtn on" for="rd11"><input name="radioSelect" id="rd11" type="radio" checked="checked"><span class="txt">차종</span></label>
+                            <label class="radiobtn" for="rd12"><input name="radioSelect" id="rd12" type="radio"><span class="txt">사이즈</span></label>
+                        </div>
+                        <div class="radiobtnGroup">
+                            <label class="radiobtn on" for="rd21"><input name="radioSelect2" id="rd21" type="radio" checked="checked"><span class="txt">국내</span></label>
+                            <label class="radiobtn" for="rd22"><input name="radioSelect2" id="rd22" type="radio"><span class="txt">수입</span></label>
+                        </div>
                     </div>
                     <div class="searchOptList on">
                         <dl>
@@ -105,12 +104,12 @@
                     </div>
                 </div> 
                 <div class="btnArea">
-                    <button class="btn btnSearch"><span>타이어 검색</span></button>
+                    <button class="btnAction"><span class="btnSearch">타이어 검색</span></button>
                 </div>  
             </div>
             <!-- // 타이어 검색 -->
 
-            <div class="contWrap" style="margin-top:90px;">
+            <div class="contWrap" style="margin-top:45px;">
                 <div class="sortArea">
                     <select name="" id="" class="selectbox">
                         <option value="">전체보기</option>
