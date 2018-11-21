@@ -1,9 +1,8 @@
 @charset "utf-8";
 
 /* ==============================
-* popup 
+* popup - 렌탈전문점 찾기
 * ============================== */
-/* 렌탈전문점 찾기 */
 .popRentalStore { position: relative; }
 .popRentalStore .popHead { position: fixed; z-index: 100; width: 100%; height: 45px; background: #fff; }
 .popRentalStore .popContent {padding: 0;}
@@ -169,4 +168,13 @@
 .storeName .serviceIcon { flex-basis: 30px; margin-right: 10px; }
 .storeAddress {margin-bottom: 5px; }
 .operationHour .week {display:inline-block; width:45px; color:#000; } 
+
+/* ==============================
+* popup - 타이어 상품
+* ============================== */
+.popTire {}
+
+
+
+
 
