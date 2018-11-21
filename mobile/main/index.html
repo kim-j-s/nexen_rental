@@ -26,10 +26,10 @@
     <div id="wrap">
         <!-- 띠배너영역 -->
         <div class="topBanner">
-            <ul class="notiList">
-                <li>타이어 방문 장착 서비스 개시! 타이어 방문 장착 서비스 개시!</li>
-                <li>222타이어 방문 장착 서비스 개시!</li>
-                <li>333타이어 방문 장착 서비스 개시!</li>
+            <ul class="bannerList">
+                <li><img src="../static/images/main/img_topbanner1.png" alt=""></li>
+                <li><img src="../static/images/main/img_topbanner1.png" alt=""></li>
+                <li><img src="../static/images/main/img_topbanner1.png" alt=""></li>
             </ul>
             <button class="btnClose">닫기</button>
         </div>
@@ -123,100 +123,98 @@
 
         <!-- 메인 컨텐츠영역 -->
         <section class="mainContent">
-            <div class="maintemp">
-                <img src="../static/images/main/temp_main.png" alt="" class="full">
-            </div>
 
-<div style="display: none;">
-            <div class="">
-                <p class="headCopy">Driving Tomorrow</p>
-                <p class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, 넥스트 레벨</p>
-                
-            </div>
-
-            <div class="tireContWrap">
-                <ul class="tab">
-                    <li><a href="#">타이어 찾기</a></li>
-                    <li><a href="#">신개념타이어케어</a></li>
-                </ul>
-
-                <!-- 타이어 찾기 -->
-                <div class="tabcont tireChoice">
-                    <p class="mainText">
-                        가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
-                        나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
-                    </p>
-
-                    <ul>
-                        <li><a href="#">승용차</a></li>
-                        <li><a href="#">SUV</a></li>
+            <div class="mainIntro">
+                <h2>
+                    <span class="headCopy">Driving Tomorrow</span>
+                    <span class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, <strong>넥스트 레벨</strong></span>
+                </h2>
+                <div class="tireContWrap">
+                    <ul class="tab">
+                        <li class="on"><a href="#tireCont1">타이어 찾기</a></li>
+                        <li><a href="#tireCont2">신개념타이어케어</a></li>
                     </ul>
-
-                    <div class="productSearch">
-                        <div class="selectBox">
-                            <select class="select">
-                                <option value="" selected>1순위</option>
-                                <option value="">연비</option>
-                                <option value="">승차감</option>
-                                <option value="">주행거리</option>
-                                <option value="">접지력</option>
-                                <option value="">마모</option>
-                            </select>
-                        </div>
-                        <div class="selectBox">
-                            <select class="select">
-                                <option value="">2순위</option>
-                            </select>
-                        </div>
-                        <div class="selectBox">
-                            <select class="select">
-                                <option value="">3순위</option>
-                            </select>
-                        </div>
-
-                        <div class="btnArea">
-                            <button>타이어 검색</button>
+    
+                    <!-- 타이어 찾기 -->
+                    <div class="tireCont tireSearch" id="tireCont1" style="display: block;">
+                        <p class="txt">
+                            가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
+                            나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
+                        </p>
+    
+                        <div class="inner">
+                            <ul class="carType">
+                                <li class="on"><a href="#">승용차</a></li>
+                                <li><a href="#">SUV</a></li>
+                            </ul>
+        
+                            <div class="searchWrap">
+                                <div class="selectBox">
+                                    <label for="opt1">1순위</label>
+                                    <select class="select" id="opt1">
+                                        <option value="">1순위</option>
+                                        <option value="">연비</option>
+                                        <option value="">승차감</option>
+                                        <option value="">주행거리</option>
+                                        <option value="">접지력</option>
+                                        <option value="">마모</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="opt2">2순위</label>
+                                    <select class="select" id="opt2">
+                                        <option value="">2순위</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="opt3">3순위</label>
+                                    <select class="select" id="opt3">
+                                        <option value="">3순위</option>
+                                    </select>
+                                </div>
+                                <div class="btnArea">
+                                    <button type="button" class="btn primary">타이어 검색</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
+                    <!-- //타이어 찾기 -->
+    
+                    <!-- 신개념타이어케어 -->
+                    <div class="tireCont tireCare" id="tireCont2">
+                        <ul class="careService">
+                            <li>
+                                <a href="#">
+                                    <p class="tit">타이어 방문장착 서비스</p>
+                                    <p class="desc">
+                                        넥센 전문가가 직접 방문해서<br>
+                                        타이어를 장착해 드립니다!
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="tit">타이어 렌탈 서비스란?</p>
+                                    <p class="desc">
+                                        타이어에서부터 엔진오일까지<br>
+                                        넥센에서 차량 관리를 책임집니다!                                    
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="tit">다양한 렌탈상품</p>
+                                    <p class="desc">
+                                        일시불 상품부터 패키지 상품까지<br>
+                                        넥센타이어의 렌탈 상품을 확인하세요
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //신개념타이어케어 -->
                 </div>
-                <!-- //타이어 찾기 -->
-
-                <!-- 신개념타이어케어 -->
-                <div class="tabcont tireCare">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>타이어 방문장착 서비스</p>
-                                <p>
-                                    넥센 전문가가 직접 방문해서<br>
-                                    타이어를 장착해 드립니다!
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>타이어 렌탈 서비스란?</p>
-                                <p>
-                                    타이어에서부터 엔진오일까지<br>
-                                    넥센에서 차량 관리를 책임집니다!                                    
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>다양한 렌탈상품</p>
-                                <p>
-                                    일시불 상품부터 패키지 상품까지<br>
-                                    넥센타이어의 렌탈 상품을 확인하세요
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //신개념타이어케어 -->
             </div>
-</div>
 
             <div class="serviceFlow">
                 <p class="title">넥센타이어</p>

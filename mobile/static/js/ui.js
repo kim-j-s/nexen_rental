@@ -398,6 +398,25 @@ function uiForm() {
 		$('[for="'+labelFor+'"]').addClass('on');
 	});
 
+	// label + select 
+	var selectTarget = $('.tireSearch .selectBox select'); 
+
+	selectTarget.on('focus',function(){ 
+		$(this).parent().addClass('focus');
+	}); 
+
+	selectTarget.on('blur', function(){ 
+		$(this).parent().removeClass('focus'); 
+	});
+
+	selectTarget.change(function(){ 
+		var select_name = $(this).children('option:selected').text();
+		
+		$(this).siblings('label').text(select_name); 
+		$(this).parent().removeClass('focus'); 
+	});
+
+
 }
 
 // 띠배너
@@ -431,6 +450,7 @@ $(window).scroll(function() {
 	$('.fixBotNav:visible').each(function(){
 		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
 	});
+
 });
 
 

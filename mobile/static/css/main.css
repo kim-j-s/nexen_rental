@@ -35,6 +35,9 @@
 	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
 }
 
+.topBanner .bannerList { height: 50px; }
+.topBanner .bannerList img { width: 100%; }
+
 
 /* ==============================
  * 메인컨텐츠
@@ -163,11 +166,231 @@
 }
 .custormerService .btnArea { padding: 0 15px; }
 
-
-
 /* 타이어 찾기 */
 #mainWrap .findTire {min-height:473px; background:url(../images/main/bgMainTop.jpg) no-repeat 0 0; background-size: cover; padding:15px;}
 #mainWrap .findTire .findTireOpt p.tit {margin-top:30px; font-family: 'Raleway'; font-size:23px; font-weight: 800; color:#fff; text-align: center;}
 #mainWrap .findTire .findTireOpt p.tit + p {margin-top:12px; font-size:12px; font-weight: 200; color:#fff; text-align: center;}
 #mainWrap .findTire .findTireOpt p.tit + p + p {margin-top:15px; font-size:12px; font-weight: 300; color:#fff; text-align: center; line-height:17px;}
 
+
+.mainIntro {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 473px;
+	background: url('../images/main/bgMainTop.jpg') no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+}
+.mainIntro .headCopy,
+.mainIntro .subCopy {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.mainIntro .headCopy {
+	top: 45px;
+	font-family: 'Raleway'; 
+	font-size: 23px;
+	font-weight: 800;
+	line-height: 25px;
+}
+.mainIntro .subCopy {
+	top: 75px;
+	font-weight: 200;
+}
+.mainIntro .subCopy strong { font-weight: 500;}
+
+.tireContWrap { padding-top: 120px; }
+.tireContWrap .tab {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0 15px;
+}
+.tireContWrap .tab li {
+	float: left;
+	width: 50%;
+	height: 52px;
+}
+.tireContWrap .tab li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.tireContWrap .tab li a {
+	display: block;
+	padding-top: 12px;
+	font-size: 11px;
+	font-weight: 700;
+}
+.tireContWrap .tab li.on { position: relative; }
+.tireContWrap .tab li.on a:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 145px;
+	height: 2px;
+	background-color: #fff;
+}
+
+.tireContWrap .tireCont {
+	display: none;
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	height: 280px;
+	padding: 0 25px;
+}
+
+/* 타이어 찾기 */ 
+.tireSearch .txt {
+	height: 40px;
+	font-size: 11px;
+	font-weight: 200;
+	line-height: 17px;
+}
+.tireSearch .inner {
+	box-sizing: border-box;
+	height: 240px;
+	background: rgba(245,245,245,.2);
+	padding-top: 15px;
+}
+
+.tireSearch .carType {
+	box-sizing: border-box;
+	width: 180px;
+	height: 35px;
+	margin: 0 auto 15px;
+	background: url('../images/main/bg_tab_car.png') no-repeat left top;
+	background-size: 100%;
+	font-size: 0;
+}
+.tireSearch .carType:after {
+	content:'';
+	clear: both;
+	display: block;
+}
+.tireSearch .carType li { float: left; width: 50%; }
+.tireSearch .carType li a {
+	display: block;
+	height: 35px;
+	line-height: 31px;
+	font-size: 12px;
+}
+.tireSearch .carType li:nth-child(1).on {
+	padding-right: 2px;
+	background: url('../images/main/bg_tab_car1.png') no-repeat left top;
+	background-size: 180px 35px;
+}
+.tireSearch .carType li:nth-child(2).on {
+	padding-left: 2px;
+	background: url('../images/main/bg_tab_car2.png') no-repeat right top;
+	background-size: 180px 35px;
+}
+
+.tireSearch .searchWrap {
+	padding: 0 15px;
+}
+.tireSearch .selectBox {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #fff;
+}
+.tireSearch .selectBox:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 3px);
+	right: 10px;
+	width: 10px;
+	height: 6px;
+	background:url('../images/main/arrow_bottom.png') no-repeat;
+	background-size: 100%;
+}
+
+.tireSearch .selectBox.focus { border: 1px solid #fff; }
+.tireSearch .selectBox:not(:first-child) { margin-top: 5px; }
+
+.tireSearch .selectBox label {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	line-height: 28px;
+	color: #fff;
+	text-align: center;
+}
+
+
+.tireSearch .selectBox .select {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px;
+	border: none;
+	opacity: 0;
+	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.tireSearch .selectBox select::-ms-expand { display: none; }
+.selectBox .select option {
+	color: #000;
+	background: #fafafa;
+}
+.selectBox .select option:hover { 
+    color: #812990;
+	background: #fff;
+}
+
+.tireSearch .searchWrap .btnArea { margin-top: 10px; }
+
+/* 신개념타이어케어 */
+.tireCare {}
+.careService li { 
+	position: relative;
+	width: 100%;
+	background: rgba(244,244,244,.2);
+}
+.careService li:not(:first-child) { margin-top: 5px; }
+.careService li:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 5px);
+	right: 15px;
+	width: 6px;
+	height: 10px;
+	background: url('../images/main/arrow_right2.png') no-repeat;
+	background-size: 100%;
+}
+.careService li a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+	width: 100%; 
+	color: #fff;
+}
+.careService li .tit {
+	font-size: 15px;
+	font-weight: 700;
+}
+.careService li .desc {
+	margin-top: 15px;
+	font-size: 11px;
+}
+.careService li:focus { border: 1px solid #fff; }
