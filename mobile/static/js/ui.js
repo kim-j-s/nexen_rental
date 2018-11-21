@@ -450,6 +450,11 @@ $(window).scroll(function() {
 		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
 	});
 
+	// 타이어 상품
+	$('.sectionTire .fixedBot:visible').each(function(){
+		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
+	});
+
 });
 
 

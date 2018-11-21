@@ -14,31 +14,20 @@
     <link href="../static/css/contents.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
 </head>
 <body>
-    <div id="wrap">
-        <!-- 헤더영역 -->
-        <header id="headerWrap">
-            <div class="headerTopMenu">
-                <h1 class="mainTitle">구매후기작성</h1>
-                <button class="closeBtn">현재 창 닫기</button>
-            </div>
+
+
+    <!-- 팝업 : 구매후기 -->
+    <article id="" class="popup"> 
+        <header class="popHead">
+            <h1 class="mainTitle">구매후기작성</h1>
+            <button class="btnClose">닫기</button>
         </header>
-        <!-- //헤더영역 -->
-
-        <section id="content">            
-            <!-- 구매후기 -->  
-            <div class="contWrap">  <!-- 181112 : optNo클래스 삭제 //-->    
-
+        
+        <div class="popContent">
+           <!-- 구매후기 -->  
+           <div class="contWrap">
                 <div class="table ty2">
                     <table>
                         <caption>구매후기 작성</caption>
@@ -95,12 +84,14 @@
                 </div>             
 
                 <div class="btnArea">
-                    <button class="btn" href="#">취소</button>
-                    <button class="btn primary" href="#" disabled="disabled">작성</button>
+                    <button class="btn">취소</button>
+                    <button class="btn primary" disabled="disabled">작성</button>
                 </div>
             </div>
             <!--// 구매후기 -->  
-        </section>        
-    </div>
+        </div>
+    </article>
+    <!-- //팝업 : 구매후기 -->
+    
 </body>
 </html>
