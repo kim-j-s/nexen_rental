@@ -35,7 +35,7 @@
             <div class="contWrap">
                 <div class="contTitleWrap">
                     <div class="contTitle">
-                        <h2 class="headTitle">회원 유형 선택</h2>
+                        <h2 class="headTitle noline">회원 유형 선택</h2>
                         <p class="txt">
                             회원별 가입 절차에 차이가 있으니 고객님이 해당하는 유형을 선택해 주세요.
                         </p>
@@ -43,16 +43,20 @@
                 </div>
 
                 <ul class="memberType">
-                    <li class="personal">
+                    <li class="on">
                         <a href="#">
-                            <strong>개인회원</strong>
-                            만 19세 이상 개인고객
+                            <dl class="personal">
+                                <dt>개인회원</dt>
+                                <dd>만 19세 이상 개인고객</dd>
+                            </dl>
                         </a>
                     </li>
-                    <li class="business">
+                    <li>
                         <a href="#">
-                            <strong>사업자 회원</strong>
-                            사업자(개인,법인) 고객
+                            <dl class="business">
+                                <dt>사업자 회원</dt>
+                                <dd>사업자(개인,법인) 고객</dd>
+                            </dl>
                         </a>
                     </li>
                 </ul>
@@ -133,6 +137,17 @@
         </div> 
         <!--// 하단 고정 메뉴 -->
       
+        <!-- 스크립트-->
+        <script>
+        $(function(){
+            $('.memberType li').on('click', function(e){
+                e.preventDefault();
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+        })
+        </script>
+        <!-- //스크립트 -->
+    
     </div>
 </body>
 </html>

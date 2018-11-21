@@ -83,8 +83,7 @@
 }
 .checkbox label > .color {font-weight:inherit; font-size:inherit; color:#812990;}
 .checkbox input:checked + label:after { 
-	content:''; display:block; position:absolute; top:0px; left:0; 
-	background-image: url('../images/common/icon/icon_checkbox_checked.png');
+	background-image: url('../images/common/icon/icon_checkbox_checkd.png');
 }
 
 /* radio */
@@ -651,7 +650,6 @@ img.full { width: 100%;}
  /* ==============================
  *  로그인 / 회원가입
  * ============================== */
-
 .loginTop { margin: -20px 0 50px; text-align: center; }
 .loginTop .logo { display: inline-block; margin-top: 50px; width: 163px; height: 40px; }
 .loginTop .logo img { width: 100%; }
@@ -744,38 +742,34 @@ img.full { width: 100%;}
 .infoBox dl dd { margin-top: 15px; }
 .infoBox.authPhone:before { background: url('../images/login/bg_auth_ipin.png') no-repeat; }
 
-
 /* 회원가입 */
-.memberType {}
-.memberType li {
-	border-radius: 2px;
-	border: 1px solid #d5d5d5;
-	font-size: 13px;
+.memberType li { border: 1px solid #d5d5d5; }
+.memberType li:not(:first-child) { margin-top: 5px; }
+.memberType li.on { 
+	border-color: #812990;
+	box-shadow: 1px 3px 2px rgba(0,0,0,.2);
+}
+.memberType li a {
+	height: 90px;
 	display: flex;
 	align-items: center;
 }
-.memberType li strong {
-	display: block; 
+.memberType dl {
+	position: relative;
+	padding-left: 62px;
+}
+.memberType dl dt {
+	margin-bottom: 8px;
 	color: #333;
 	font-size: 16px;
-	margin-bottom: 8px;
+	font-weight: 500;
 }
-.memberType li:not(:first-child) { margin-top: 5px; }
-.memberType li:active,
-.memberType li:focus { 
-	border-color: #812990;
-	box-shadow: 1px 3px 3px rgba(0,0,0,.5);
-}
-.memberType li a {
-	display: block;
-	height: 90px;
-	position: relative;
-}
-.memberType li.personal a:after {
+.memberType dl dd { font-size: 13px; }
+.memberType .personal:after {
 	content: '';
 	position: absolute;
 	top: calc(50% - 25px);
-	left: 15px;
+	left: 14px;
 	display: block;
 	width: 38px;
 	height: 51px;
@@ -783,9 +777,17 @@ img.full { width: 100%;}
 	background-size: 76px 51px;
 	background-position: 0 0;
 }
-.memberType li.personal:focus  a:after,
-.memberType li.personal:active a:after {
-	background-position: right 0;
+.memberType li.on .personal:after {	background-position: right 0; }
+.memberType .business:after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 25px);
+	left: 14px;
+	display: block;
+	width: 38px;
+	height: 51px;
+	background: url('../images/login/bg_member_type2.png');
+	background-size: 76px 51px;
+	background-position: 0 0;
 }
-
-
+.memberType li.on .business:after {	background-position: right 0; }
