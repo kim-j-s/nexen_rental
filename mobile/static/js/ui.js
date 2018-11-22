@@ -266,17 +266,9 @@ var uiMain = {
 		$('.floatingMenu .mypage a').on('click', function(e){
 			e.preventDefault();
 
-			xx = $('body, html').height();
-			xxx = $(window).height();
-
-			console.log(xx);
-
-			$('.floatingCont.mypage').height(xxx);
-
-
 			$('.floatingWrap').css('display', 'block');
 			$('.floatingCont.mypage').show();
-			//$('body').addClass('noScroll');
+			$('body').addClass('noScroll');
 			
 		});
 
@@ -294,14 +286,6 @@ var uiMain = {
 		});
 	}
 }; 
-
-	$(window).resize(function(){
-		if ( $('.floatingCont.mypage').css('display') == 'block')
-		{
-			xxx = $(window).height();
-			$('.floatingCont.mypage').height(xxx);
-		}
-	});
 
 /* parallax scrolling motion */
 scrollAnimation();
