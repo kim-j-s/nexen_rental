@@ -51,6 +51,143 @@ $(function(){
 		});
 	}
 
+	//mainRoll
+	var rollTime = 1200;
+	var rollTime2 = 3000;
+	var rollTime3 = 2500;
+	var rollCnt = 0;
+	var aniCnt = 0;
+	var mainRollLng = $('.mainRoll').find('.item').length;
+	var mrObj = $('.mainRoll').children('.items');
+	var mkDot = '<a href="#"></a>';
+	var mrLeft = $('.mainRoll').find('.btnLeft');
+	var mrRight = $('.mainRoll').find('.btnRight');
+
+	// rollReset
+	if (mainRollLng > 1)
+	{
+		for (var i = 0; i < mainRollLng ;i ++ )
+		{
+			$('.mainRoll').find('.dots').append(mkDot);
+		}
+		$('.mainRoll').find('.dots > a').eq(0).addClass('on');
+	} else {
+		$('.mainRoll').find('.control').hide();
+		$('.mainRoll').find('.btns').hide();
+	}
+
+	$(mrLeft).on('click', function(){
+		aniCnt++;
+		mrLeftRoll();
+	});
+
+	$(mrLeft).on('mouseenter', function(){
+		mrStopInterval();
+		$('.mainRoll').find('.play').addClass('on');
+	});
+
+	$(mrRight).on('click', function(){
+		aniCnt++;
+		mrRightRoll();
+	});
+
+	$(mrRight).on('mouseover', function(){
+		mrStopInterval();
+		$('.mainRoll').find('.play').addClass('on');
+	});
+
+	$('.mainRoll').find('.play').on('click', function(){
+		if ( $(this).hasClass('on') )
+		{
+			$(this).removeClass('on');
+			mrrestartRolling();
+		} else {
+			$(this).addClass('on');
+			mrStopInterval();
+		}
+	});
+
+	if (mainRollLng > 1)
+	{
+		setTimeout(function(){
+			mrRolling = mrStartInterval();
+		},rollTime2);
+	}
+
+	function mrStartInterval() {
+		i = setInterval(function(){
+			rollCnt++;
+			if (rollCnt > mainRollLng - 1)
+			{
+				rollCnt = 0;
+			}
+			$('.mainRoll').find('.items').stop(true,true).animate({
+				left: '-438px'
+			},rollTime, function(){
+				$('.mainRoll').find('.items').children('.item').first().appendTo(mrObj);
+				$(mrObj).css('left',0);
+				aniCnt = 0;
+			});
+			indicator();
+		},rollTime3);
+		return i;
+	}
+
+	// 롤링 시작
+	function mrrestartRolling(){
+		mrRolling = mrStartInterval();
+	}
+	
+	// 재생정지
+	function mrStopInterval(){
+		clearInterval(mrRolling);
+	}
+
+	function mrLeftRoll() {
+		if (aniCnt == 1)
+		{
+			rollCnt--;
+			if (rollCnt < 0)
+			{
+				rollCnt = mainRollLng - 1;
+			}
+			$('.mainRoll').find('.items').stop(true,true).animate({
+				left: '-438px'
+			},rollTime, function(){
+				$('.mainRoll').find('.items').children('.item').first().appendTo(mrObj);
+				$(mrObj).css('left',0);
+				aniCnt = 0;
+			});
+			indicator();
+		}
+	}
+
+	function mrRightRoll() {
+		if ( aniCnt == 1 )
+		{
+			rollCnt++;
+			if (rollCnt > mainRollLng - 1)
+			{
+				rollCnt = 0;
+			}
+			$('.mainRoll').find('.items').children('.item').last().prependTo(mrObj);
+			$(mrObj).css('left','-438px');
+			$('.mainRoll').find('.items').stop(true,true).animate({
+				left: '0'
+			},rollTime, function(){
+				aniCnt = 0;
+			});
+			indicator();
+		}
+
+		$('.fix').html(' + ' + rollCnt);
+	}
+
+	function indicator() {
+		$('.mainRoll').find('.dots > a').removeClass('on');
+		$('.mainRoll').find('.dots > a').eq(rollCnt).addClass('on');
+	}
+
 	$('.pageTop').on('click', function(e){
 		e.preventDefault();
 		$("html, body").animate({
