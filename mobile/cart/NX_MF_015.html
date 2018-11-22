@@ -19,7 +19,6 @@
 
 <body>
     <div id="wrap">
-        
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
@@ -31,9 +30,9 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content" style="min-height: 350px;">
+        <section id="content" class="sectionCart">
             <div class="optionList">
-                <div class="optionTitle on"><span>일시불</span><span>(2)</span></div>               
+                <div class="optionTitle on"><span>일시불</span><span class="num">(2)</span></div>               
                 <ul>
                     <li class="on"><a href="#">일시불</a></li>     
                     <li><a href="#">알뜰</a></li>
@@ -45,25 +44,21 @@
                 </ul>
             </div>
 
-            <div class="contWrap">
-				<div>
-					장바구니 담긴 상품이 없습니다.
-				</div>
+            <div class="carNoitem">
+				<p class="txt">장바구니 담긴 상품이 없습니다.</p>
 
-				<div class="btnArea">
-					<a href="#" class="btn">제품 보러 가기</a>
-				</div>
+				<a href="#" class="btn">제품 보러 가기</a>
             </div>
         </section>
         <!-- //본문영역 -->
 
-        <!-- 푸터영역 -->
-        <footer id="footerWrap">
+       <!-- 푸터영역 -->
+       <footer id="footerWrap">
             <div class="footerTop">
                 <div class="footerLink">
                     <a href="#">이용약관</a>
                     <a href="#" class="etc">개인정보처리방침</a>
-                    <a href="#">기업소개</a>
+                    <a href="https://www.nexentire.com/kr/" target="_blank" title="새창열림">기업소개</a>
                 </div>
             </div>
             <div class="footerBottom">
@@ -85,42 +80,6 @@
         <div class="btnGoTop"><a href="#">Top으로 이동</a></div>
         <!-- //Top버튼 -->
 
-        <!-- 하단 고정 메뉴 -->
-        <div class="floatingWrap fixBotNav">
-            <nav class="floatingMenu">            
-                <ul>
-                    <li class="mypage"><a href="#"><span>나의 정보</span></a></li>
-                    <li class="rental"><a href="#"><span>내게 맞는 렌탈찾기</span></a></li>
-                    <li class="consult"><a href="#"><span>상담하기</span></a></li>
-                    <li class="store"><a href="#"><span>가까운 전문점 찾기</span></a></li>
-                </ul>
-            </nav>
-
-            <div class="floatingCont mypage">
-                <ul>
-                    <li><a href="#">주문배송조회</a></li>
-                    <li><a href="#">내이용상품조회</a></li>
-                    <li><a href="#">나의결제관리</a></li>
-                    <li><a href="#">서비스신청관리</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">인증번호발급</a></li>
-                </ul>
-                <button type="button" class="btnClose">닫기</button>
-            </div>
-
-            <div class="floatingCont consult">
-                <ul>
-                    <li><a href="#">전화상담</a></li>
-                    <li><a href="#">가입상담</a></li>
-                    <li><a href="#">렌탈제품상담</a></li>
-                    <li><a href="#">무료문자</a></li>
-                    <li><a href="#">1:1상담</a></li>
-                </ul>
-                <button type="button" class="btnClose">닫기</button>
-            </div>  
-        </div> 
-        <!--// 하단 고정 메뉴 -->
-      
     </div>
 </body>
 </html>

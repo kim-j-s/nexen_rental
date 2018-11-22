@@ -31,7 +31,7 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content" style="min-height: 350px;">
+        <section id="content" class="sectionCart">
             <div class="optionList">
                 <div class="optionTitle on"><span>일시불</span><span>(2)</span></div>               
                 <ul>
@@ -45,15 +45,147 @@
                 </ul>
             </div>
 
-            <div class="contWrap">
-				<div>
-					장바구니 담긴 상품이 없습니다.
-				</div>
+            <div class="cartListWrap">
+                <div class="cartAction">
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="checkAll">
+                        <label for="checkAll">전체선택</label>
+                    </div>
+                    <div class="rbtn">
+                        <button class="btn small light">선택삭제</button>
+                    </div>
+                </div>
 
-				<div class="btnArea">
-					<a href="#" class="btn">제품 보러 가기</a>
-				</div>
+                <div class="cartList">
+                    <ul>
+                        <li>
+                            <div class="checkbox single">
+                                <input type="checkbox" id="item1"><label for="item1">선택</label>
+                            </div>
+                            <div class="itemInfo">
+                                <div class="thumb">
+                                    <img src="../static/images/cart/thumb_tire.jpg" alt=""> 
+                                </div>
+                                <div class="info">
+                                    <p class="label">
+                                        <span>[일시불]</span><br>
+                                        <span>[승용차용]</span>
+                                        <span>[사계절용]</span>
+                                        <span>[순정]</span>
+                                    </p>
+                                    <p class="tit">NFERA AU5</p>
+                                    <p class="desc">205/65R16</p>
+                                    <p class="option">
+                                        <span>2본</span>
+                                        <span>1년</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="priceInfoWrap">
+                                <div class="priceInfo">
+                                    <p class="txt">제품금액</p>
+                                    <p class="price">
+                                        <strong class="num">47,500</strong>원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button class="btn light btnDel">삭제</button>
+                                <button class="btn btnOpt">옵션변경</button>
+                                <button class="btn primary btnOrder">주문하기</button>
+                            </div>
+                            <!-- 옵션 변경 시 노출 -->
+                            <div class="optionview">
+                                <p class="tit">수량</p>
+                                <div class="radiobtnGroup">
+                                    <label for="rd11" class="radiobtn on"><input type="radio" name="radioSelect" id="rd11" checked="checked"><span class="txt">2본</span></label>
+                                    <label for="rd12" class="radiobtn"><input type="radio" name="radioSelect" id="rd12"><span class="txt">4본</span></label>
+                                </div>
+                                <div class="btnArea">
+                                    <button class="btn block btnOptChange">변경완료</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox single">
+                                <input type="checkbox" id="item2"><label for="item2">선택</label>
+                            </div>
+                            <div class="itemInfo">
+                                <div class="thumb">
+                                    <img src="../static/images/cart/thumb_tire.jpg" alt=""> 
+                                </div>
+                                <div class="info">
+                                    <p class="label">
+                                        <span>[일시불]</span><br>
+                                        <span>[승용차용]</span>
+                                        <span>[사계절용]</span>
+                                        <span>[순정]</span>
+                                    </p>
+                                    <p class="tit">NFERA AU5</p>
+                                    <p class="desc">205/65R16</p>
+                                    <p class="option">
+                                        <span>2본</span>
+                                        <span>1년</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="priceInfoWrap">
+                                <div class="priceInfo">
+                                    <p class="txt">제품금액</p>
+                                    <p class="price">
+                                        <strong class="num">47,500</strong>원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button class="btn light btnDel">삭제</button>
+                                <button class="btn btnOpt">옵션변경</button>
+                                <button class="btn primary btnOrder">주문하기</button>
+                            </div>
+                            <!-- 옵션 변경 시 노출 -->
+                            <div class="optionview">
+                                <p class="tit">수량</p>
+                                <div class="radiobtnGroup">
+                                    <label for="rd3" class="radiobtn on"><input type="radio" name="radioSelect" id="rd3" checked="checked"><span class="txt">1본</span></label>
+                                    <label for="rd4" class="radiobtn"><input type="radio" name="radioSelect" id="rd4"><span class="txt">2본</span></label>
+                                    <label for="rd5" class="radiobtn"><input type="radio" name="radioSelect" id="rd5"><span class="txt">3본</span></label>
+                                    <label for="rd6" class="radiobtn"><input type="radio" name="radioSelect" id="rd6"><span class="txt">4본</span></label>
+                                </div>
+                                <div class="btnArea">
+                                    <button class="btn block btnOptChange">변경완료</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 일시불상품인 경우 -->
+                <div class="itemTotal fixedBot">
+                    <p class="total">총 <span>2</span>개의 상품</p>
+                    <div class="priceInfo">
+                        <p class="txt">제품금액</p>
+                        <p class="price"><strong class="num">47,500</strong>원</p>
+                    </div>
+                    <a href="#" class="btn primary block">주문하기</a>
+                </div>
+
+                <!-- 렌탈상품인 경우 -->
+                <!--
+                <div class="itemTotal fixedBot">
+                    <p class="total">총 <span>2</span>개의 상품</p>
+                    <div class="priceInfo">
+                        <p class="txt">월 렌탈료</p>
+                        <p class="price"><strong class="num">47,500</strong>원</p>
+                    </div>
+                    <div class="priceInfo">
+                        <p class="txt">등록비</p>
+                        <p class="price"><strong class="num">47,500</strong>원</p>
+                    </div>
+                    <a href="#" class="btn primary block">주문하기</a>
+                </div>
+                -->
             </div>
+
         </section>
         <!-- //본문영역 -->
 
@@ -63,7 +195,7 @@
                 <div class="footerLink">
                     <a href="#">이용약관</a>
                     <a href="#" class="etc">개인정보처리방침</a>
-                    <a href="#">기업소개</a>
+                    <a href="https://www.nexentire.com/kr/" target="_blank" title="새창열림">기업소개</a>
                 </div>
             </div>
             <div class="footerBottom">
@@ -85,42 +217,23 @@
         <div class="btnGoTop"><a href="#">Top으로 이동</a></div>
         <!-- //Top버튼 -->
 
-        <!-- 하단 고정 메뉴 -->
-        <div class="floatingWrap fixBotNav">
-            <nav class="floatingMenu">            
-                <ul>
-                    <li class="mypage"><a href="#"><span>나의 정보</span></a></li>
-                    <li class="rental"><a href="#"><span>내게 맞는 렌탈찾기</span></a></li>
-                    <li class="consult"><a href="#"><span>상담하기</span></a></li>
-                    <li class="store"><a href="#"><span>가까운 전문점 찾기</span></a></li>
-                </ul>
-            </nav>
 
-            <div class="floatingCont mypage">
-                <ul>
-                    <li><a href="#">주문배송조회</a></li>
-                    <li><a href="#">내이용상품조회</a></li>
-                    <li><a href="#">나의결제관리</a></li>
-                    <li><a href="#">서비스신청관리</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">인증번호발급</a></li>
-                </ul>
-                <button type="button" class="btnClose">닫기</button>
-            </div>
+        <!-- js -->
+        <script>
+            $(function(){
+                $('.cartList .btns .btnOpt').on('click', function(){
+                    $(this).addClass('on').text('옵션닫기');
+                    $('.optionview').show();
+                });
 
-            <div class="floatingCont consult">
-                <ul>
-                    <li><a href="#">전화상담</a></li>
-                    <li><a href="#">가입상담</a></li>
-                    <li><a href="#">렌탈제품상담</a></li>
-                    <li><a href="#">무료문자</a></li>
-                    <li><a href="#">1:1상담</a></li>
-                </ul>
-                <button type="button" class="btnClose">닫기</button>
-            </div>  
-        </div> 
-        <!--// 하단 고정 메뉴 -->
-      
+                $('.cartList .btnOptChange').on('click', function(){
+                    $('.optionview').hide();
+                    $('.btns .btnOpt').removeClass('on').text('옵션변경');
+                })
+            })
+        </script>
+        <!-- //js -->
+
     </div>
 </body>
 </html>
