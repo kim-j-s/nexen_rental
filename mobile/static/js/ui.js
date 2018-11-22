@@ -425,20 +425,24 @@ function topBanner() {
 	});
 }
 
-
 $(window).scroll(function() {
 	var st = $(this).scrollTop();
 	var fixedStartY = 50;	
 
 	if(st > fixedStartY) {
-		$('#headerWrap').addClass('fixed');
+		$('#wrap').addClass('fixed');
+		$('.sectionTire .tabMenu').addClass('fixed');
+		
 		$('.topBanner').hide();
 
 		$('.btnGoTop').addClass('active');
 		$('.fixBotNav').fadeIn(200);
 
+
 	} else {
-		$('#headerWrap').removeClass('fixed');
+		$('#wrap').removeClass('fixed');
+		$('.sectionTire .tabMenu').removeClass('fixed');
+		
 		$('.topBanner').show();
 
 		$('.btnGoTop').removeClass('active');
@@ -451,11 +455,10 @@ $(window).scroll(function() {
 	});
 
 	// 타이어 상품
-	$('.sectionTire .fixedBot:visible').each(function(){
+	$('.sectionTire .fixedBot:visible, .sectionCart .fixedBot:visible').each(function(){
 		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
 	});
 
 });
-
 
 
