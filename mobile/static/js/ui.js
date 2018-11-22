@@ -127,25 +127,6 @@ $(function(){
 		}
 	});
 
-	// 렌탈전문점
-	var galleryThumbs = new Swiper('.galleryThumbs', {
-		spaceBetween: 10,
-		slidesPerView: 3,
-		freeMode: true,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-	  });
-	  var galleryTop = new Swiper('.galleryView', {
-		spaceBetween: 15,
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-		thumbs: {
-		  swiper: galleryThumbs
-		}
-	  });
-
 	// 타이어 상품 갤러리
 	var swiper = new Swiper('.photoSlide', {
 		navigation: {

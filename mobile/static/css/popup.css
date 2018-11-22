@@ -9,7 +9,7 @@
 .popRentalStore .lBtn .btn { width: 65px; min-width: inherit; padding: 0; }
 .popRentalStore .lBtn .btn.light.primary  {color:#812990;border-color:#812990;}
 
-.popRentalStore .popContent .contWrap  { padding: 65px 15px 50px; }
+.popRentalStore .popContent .contWrap  { padding: 20px 15px 50px; }
 .popRentalStore .popContent .searchShop + .contWrap { padding: 35px 15px 50px; }
 .popRentalStore .mapArea {width:100%;}
 .popRentalStore .mapArea img {width:100%;}
@@ -86,21 +86,20 @@
 	border-top:1px solid #dadada; 
 	background:#f8f8f8;
 }
-.storeInfo .addInfo a.txtTel {
+.storeInfo .addInfo .txtTel {
 	display: inline-block;
-	padding-left: 17px;
-	background: url('../images/common/icon/icon_tel3.png') no-repeat;
-	background-size: 12px 12px;
-	font-size:12px;
-	font-weight:500;
-	line-height: 12px;
-	vertical-align: middle;
+	padding-left: 12px;
+	background: url('../images/common/icon/icon_tel4.png') no-repeat;
+	background-size: 10px 15px;
+	background-position: left 50%;
+	font-weight: 500;
+	text-decoration: none;
 }
 .storeInfo .addInfo .btns {position:absolute; top: 10px; right: 15px; font-size:0;}
 .storeInfo .addInfo .btns .btn { width: 60px; min-width: inherit; padding: 0;}
 .storeInfo .addInfo .btns .btn + .btn {margin-left: 5px;}
 
-.searchShop {position:relative;padding-top:45px;}
+.searchShop {position:relative;/*padding-top:45px;*/}
 .searchShop .searchWrap {background:#fafafa; border-bottom:1px solid #a9a9a9; padding:20px 15px 18px 15px;}
 .searchShop .searchWrap > dl {display:table; width:100%; margin:0 0 5px 0;}
 .searchShop .searchWrap > dl:nth-child(4) { margin-bottom:10px;}
@@ -115,50 +114,63 @@
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
 
 /*매장위치 슬라이드*/
-.storeSlideWrap { position:relative; }
-.galleryView { border: 1px solid #d5d5d5; }
-.galleryView .swiper-slide {
-	/* height: 280px; */
-	padding-top: 56.25%;
-	background-position: 50%;
-	background-size: cover;
+.storeSlideWrap { }
+.storeSlideWrap .mapView {
+	display: none;
+	overflow: hidden;
+	height: 280px; 
+	border: 1px solid #d5d5d5; 
 }
+.storeSlideWrap .mapView { }
+.galleryView {
+	display: none;
+	overflow: hidden;
+	height: 280px; 
+	border: 1px solid #d5d5d5;
+	text-align: center;
+}
+.galleryView img { max-width: 100%; max-height: 100%; }
 
 .galleryThumbs {
+	position: relative;
 	box-sizing: border-box;
 	margin-top: 10px;
 }
 .galleryThumbs .swiper-slide {
 	box-sizing: border-box;
 	border: 1px solid #d5d5d5;
-	/* width: 89px; */
-	min-height: 50px;
-	max-height: 90px;
-	background-position: 50%;
-	background-size: cover;
+	width: 33%;
+	height: 50px;
+	text-align: center;
 }
+
+.galleryThumbs .swiper-slide img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+ 
 .galleryThumbs .swiper-slide-thumb-active {
 	border: 1px solid #812990;
 	opacity: 1;
 }
 
-.storeSlideWrap .swiper-button-next,
-.storeSlideWrap .swiper-button-prev {
+.galleryThumbs .swiper-button-next,
+.galleryThumbs .swiper-button-prev {
 	position:absolute;
 	top:100%;
 	margin-top:-45px;
 	width:20px; 
 	height:40px; 
-	z-index:1; 
+	z-index:50; 
 	text-indent:-999px; 
-	overflow: hidden; 
 	background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0;
 	background-size: 40px 40px;
 }
-.storeSlideWrap .swiper-button-prev {left: -15px; background-position:0px 0px;}
-.storeSlideWrap .swiper-button-next {right: -15px; background-position:-20px 0px;}
-.storeSlideWrap .swiper-button-next.swiper-button-disabled, 
-.storeSlideWrap .swiper-button-prev.swiper-button-disabled { 
+.galleryThumbs .swiper-button-prev {left: -15px; background-position:0px 0px;}
+.galleryThumbs .swiper-button-next {right: -15px; background-position:-20px 0px;}
+.galleryThumbs .swiper-button-next.swiper-button-disabled, 
+.galleryThumbs .swiper-button-prev.swiper-button-disabled { 
 	opacity: 0;
 	cursor: auto; 
 	pointer-events: none;

@@ -43,9 +43,8 @@
 /* ==============================
  * 메인컨텐츠
  * ============================== */
+.main .headerTopMenu { position: relative; width: 100%; }
 
-/* 임시 */
-.mainContent { }
 .maintemp {
 	width: 100%;
 	height: 100%;
@@ -265,31 +264,40 @@
 }
 
 .tireSearch .carType {
+	position: relative;
 	box-sizing: border-box;
 	width: 180px;
 	height: 35px;
 	margin: 0 auto 15px;
-	background: url('../images/main/bg_tab_car.png') no-repeat left top;
+	border-radius: 35px; 
+	border: 2px solid #fff;
 	background-size: 100%;
 	font-size: 0;
+	display: flex;
 }
 .tireSearch .carType:after {
 	content:'';
 	clear: both;
 	display: block;
+	background: #812990;
 }
-.tireSearch .carType li { float: left; width: 50%; }
+.tireSearch .carType li { flex: 1; }
 .tireSearch .carType li a {
 	display: block;
 	height: 35px;
 	line-height: 31px;
 	font-size: 12px;
 }
-.tireSearch .carType li:nth-child(1).on {
-	padding-right: 2px;
+.tireSearch .carType li:nth-child(1).on a {
+	position: absolute;
+	top: -2px; 
+	left: -2px;
+	z-index: 2;
+	width: calc(50% + 2px);
+	padding-right: 2px; 
 	background: url('../images/main/bg_tab_car1.png') no-repeat left top;
 	background-size: 180px 35px;
-}
+}	
 .tireSearch .carType li:nth-child(2).on {
 	padding-left: 2px;
 	background: url('../images/main/bg_tab_car2.png') no-repeat right top;
@@ -333,7 +341,6 @@
 	color: #fff;
 	text-align: center;
 }
-
 
 .tireSearch .selectBox .select {
 	width: 100%;
@@ -396,3 +403,36 @@
 	font-size: 11px;
 }
 .careService li:focus { border: 1px solid #fff; }
+
+
+/* 내게 맞는 렌탈찾기 팝업*/
+.popMyRental {}
+.popMyRental .popContent { padding: 20px 25px; }
+.popMyRental .mainIntro { position: static; background: none; }
+.popMyRental .mainIntro .headCopy { position: static; color: #000; font-size: 23px; font-family: 'Raleway'; font-weight: 800;}
+.popMyRental .mainIntro .subCopy { position: static; margin-top: 10px; color: #333; }
+.popMyRental .mainIntro .subCopy strong { color: #812990; font-weight: 500; }
+.popMyRental .tireSearch { margin-top: 35px; text-align: center; }
+.popMyRental .tireSearch .txt { color: #666; font-size: 11px; }
+.popMyRental .tireSearch .inner { margin-top: 5px; background: #e7e2f2; }
+.popMyRental .tireSearch .selectBox { background: #fff; border-color: #d5d5d5; }
+.popMyRental .tireSearch .selectBox:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 3px);
+	right: 10px;
+	width: 10px;
+	height: 6px;
+	background:url('../images/main/arrow_bottom_dark.png') no-repeat;
+	background-size: 100%;
+}
+.popMyRental .tireSearch .selectBox label { color: #666; }
+
+
+
+
+
+
+
+
