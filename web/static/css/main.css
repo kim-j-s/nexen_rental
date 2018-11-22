@@ -155,48 +155,89 @@
 .mainCs .inner .etc > * {float:left;}
 .mainCs .inner .etc .btn {margin-left:10px;}
 
-#mainWrap {position:relative; /* max-width:1980px; */ min-width:1200px; overflow:hidden;}
-#mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
+#mainWrap {position:relative; min-width:1200px; overflow:hidden;}
+#mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; /* left:-100%; */ left:0; overflow:hidden;}
 .mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
-.mainContent.leftCont {background:green; font-size:50px; color:#fff; font-weight:700; text-align:center;}
-.mainContent.rightCont {}
 
 .mainRightVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
 .mainRightVisual > .inner {position:relative; width:1200px; margin:0 auto;}
-.mainRightVisual h1 {padding-top:188px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
+.mainRightVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainRightVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
-.centerGo {position:absolute; top:384px; left:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_right.png) no-repeat center;}
+.mainRightVisual .centerGo {position:absolute; top:384px; left:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_right.png) no-repeat center;}
 .mainRightVisual h2 + .typeSwitch {margin-top:36px;}
+
+.mainLeftVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_left.jpg) no-repeat center; background-size:cover;}
+.mainLeftVisual > .inner {position:relative; width:1200px; margin:0 auto; text-align:center;}
+.mainLeftVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
+.mainLeftVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
+.mainLeftVisual .centerGo {position:absolute; top:384px; right:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_left.png) no-repeat center;}
+.mainRightVisual h2 + .typeSwitch {margin-top:36px;}
+.typeSwitch2 {position:relative; display:inline-block; margin-top:50px; font-size:0; width:438px; height:60px; border:2px solid #fff; border-radius:45px; overflow:hidden;}
+.typeSwitch2:after {content:''; position:absolute; top:0; left:0; width:216px; height:60px; background:#812990; transition:left 200ms;}
+.typeSwitch2.on:after {left:218px;}
+.typeSwitch2 .switchBtn {position:relative; z-index:1; float:left; width:216px;}
+.typeSwitch2 .switchBtn + .switchBtn {margin-left:2px;}
+.typeSwitch2 .switchBtn + .switchBtn:after {content:''; position:absolute; top:0; left:-2px; width:2px; height:100%; background:#fff;}
+.typeSwitch2 .switchBtn button {display:block; width:100%;}
+.typeSwitch2 .switchBtn button span {display:block; line-height:56px; text-align:center; font-family: 'Raleway'; font-weight:500; font-size:22px; color:#fff; text-align:center; letter-spacing:-1px;}
+.typeSwitch2 + .serviceWrap {margin-top:50px;}
+
+.serviceWrap {width:910px; margin:0 auto;}
+.serviceCont {display:none; text-align:left;}
+.serviceCont.on {display:block;}
+.serviceCont {overflow:hidden;}
+.serviceCont > .gCont {float:left; width:440px;}
+.serviceCont > .gCont + .gCont {margin-left:30px;}
+.serviceCont > .gCont .lCont + .lCont {margin-top:30px;}
+
+.lCont > a {position:relative; display:block; width:440px; height:230px; padding-top:37px; border:1px solid #fff; text-align:center;}
+.lCont > a:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.2; transition: 0.45s;}
+.lCont > a:hover:before {background:#812990; opacity:0.7;}
+.lCont > a .txt {position:relative; z-index:1; display:block; padding-top:86px;}
+.lCont > a .txt:before {content:''; position:absolute; top:0; left:50%; margin-left:-32px; width:63px; height:59px; background:url(../images/main/bg_lCont.png) no-repeat 0 0;}
+.lCont > a .txt > strong {display:inline-block; padding-right:24px; font-weight:400; font-size:22px; color:#fff; background:url(../images/main/bg_arrow.png) no-repeat right center;}
+.lCont > a .txt > .desc {display:block; margin-top:6px; font-size:16px; color:#d5d5d5; text-align:center; line-height:22px;}
+.lCont > a .txt.ty1:before {background-position:0 0;}
+.lCont > a .txt.ty2:before {background-position:0 -59px;}
+.lCont > a .txt.ty3:before {background-position:0 -118px;}
+.lCont > a .txt.ty4:before {background-position:0 -177px;}
+.lCont > a .txt.ty5:before {background-position:0 -236px;}
+.lCont > a .txt.ty6:before {background-position:0 -295px;}
+
+
+
+
+
 
 
 .typeSwitch {text-align:center;}
-.typeSwitch > .inner {position:relative; display:inline-block; font-size:0; width:208px; height:68px; background:url(../images/main/bg_switch.png) no-repeat 0 0; overflow:hidden;}
-.typeSwitch > .inner:after {content:''; position:absolute; top:0; left:0; width:118px; height:68px; background:url(../images/main/btn_switch.png) no-repeat 0 0; transition:left 200ms;}
-.typeSwitch > .inner.on:after {left:90px;}
+.typeSwitch > .inner {position:relative; display:inline-block; font-size:0; width:212px; height:60px; background:url(../images/main/bg_switch.png) no-repeat 0 0; overflow:hidden;}
+.typeSwitch > .inner:after {content:''; position:absolute; top:0; left:0; width:120px; height:60px; background:url(../images/main/btn_switch.png) no-repeat 0 0; transition:left 200ms;}
+.typeSwitch > .inner.on:after {left:92px;}
 .typeSwitch > .inner > .switchBtn {position:relative; z-index:1; float:left; text-align:center;}
-.typeSwitch > .inner > .switchBtn > label {display:inline-block; width:90px; font-size:24px; color:#fff; line-height:68px; text-align:center; transition: 0.45s; cursor:pointer;}
+.typeSwitch > .inner > .switchBtn > label {display:inline-block; width:90px; font-size:24px; color:#fff; line-height:60px; text-align:center; transition: 0.45s; cursor:pointer;}
 .typeSwitch > .inner > .switchBtn > input[type="radio"] {position:absolute; top:-20px; left:0;}
 .typeSwitch > .inner > .switchBtn:nth-child(1) > label {padding-left:10px;}
 .typeSwitch > .inner > .switchBtn:nth-child(2) > label {padding-right:10px;}
-.typeSwitch > .inner > .switchBtn > input[type="radio"]:checked + label {width:118px; padding:0;}
-.typeSwitch + .rankSelect {margin-top:67px;}
+.typeSwitch > .inner > .switchBtn > input[type="radio"]:checked + label {width:120px; padding:0;}
+.typeSwitch + .rankSelect {margin-top:48px;}
 
-.rankSelect {height:338px;}
+.rankSelect {height:322px;}
 .rankSelect > .inner {width:944px; margin:0 auto;}
 .rankSelect > .inner:after {content:''; display:block; clear:both;}
 .rankSelect > .inner > .rankList {position:relative; top:119px; float:left; display:inline-block;}
-.rankList {width:264px; border:4px solid #fff; border-radius:5px;}
+.rankList {width:264px; border:1px solid #fff;}
 .rankList + .rankList {margin-left:76px;}
 .rankList > h3 {position:relative; padding:27px 0 29px 0; font-weight:400; font-size:30px; color:#fff; text-align:center;}
 .rankList .dom {display:none;}
-.rankList ul {position:relative; padding:24px 0 14px 0;}
+.rankList ul {position:relative; padding:24px 0 44px 0;}
 .rankList ul:after {content:''; position:absolute; top:0; left:50%; margin-left:-10px; width:20px; border-top:4px solid #fff;}
 .rankList ul > li {position:relative; overflow:hidden;}
 .rankList ul > li > input[type="radio"] {position:absolute; top:-20px; left:0;}
 .rankList ul > li > label {display:block; text-align:center; font-size:18px; color:#fff; transition: 0.3s; line-height:40px; cursor:pointer;}
 .rankList ul > li > label:hover {font-weight:400; font-size:24px; background:#6d2477;}
 .rankList ul > li > input[type="radio"]:checked + label {font-weight:400; font-size:24px; background:#6d2477;}
-.rankSelect + .btnBox {margin-top:65px;}
+.rankSelect + .btnBox {margin-top:100px;}
 
 .mainWing {position:absolute; top:535px; right:0; z-index:120;}
 .mainWing.down {z-index:105;}

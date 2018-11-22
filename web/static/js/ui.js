@@ -235,6 +235,7 @@ $(function(){
 	var mainMove = $('#mainWrap > .inner');
 
 	$(viewLeft).click(function(){
+		$('.wing').addClass('none');
 		$(mainMove).animate({
 			left:'0'
 		},500, function(){
@@ -242,12 +243,32 @@ $(function(){
 		});
 	});
 	$(viewRight).click(function(){
+		$('.wing').addClass('none');
 		$(mainMove).animate({
 			left:'-200%'
 		},500, function(){
 			$('.mainContent.centerCont').css('height','0');
 		});
 	});
+
+	/*
+	$('.mainContent.leftCont').click(function(){
+		MoveCenter();
+	});
+	*/
+
+	$('.centerGo').click(function(){
+		MoveCenter();
+	});
+
+	function MoveCenter() {
+		$('.mainContent.centerCont').css('height','auto');
+		$(mainMove).animate({
+			left:'-100%'
+		},500, function(){
+			$('.wing').removeClass('none');
+		});
+	}
 
 	var RankEvent = $('.rankSelect').find('.rankList').eq(0);
 	var RankEventList = $('.rankList').find('li');
@@ -267,20 +288,6 @@ $(function(){
 		});
 	});
 
-	$('.mainContent.leftCont').click(function(){
-		MoveCenter();
-	});
-	$('.centerGo').click(function(){
-		MoveCenter();
-	});
-
-	function MoveCenter() {
-		$('.mainContent.centerCont').css('height','auto');
-		$(mainMove).animate({
-			left:'-100%'
-		},500);
-	}
-
 	// switch
 	$('.typeSwitch').each(function(){
 		$(this).find('.switchBtn').eq(1).click(function(){
@@ -290,6 +297,20 @@ $(function(){
 			$(this).closest('.inner').removeClass('on');
 		});
 	});
+
+	$('.typeSwitch2').each(function(){
+		$(this).find('.switchBtn').eq(1).click(function(){
+			$(this).closest('.typeSwitch2').addClass('on');
+			$('.serviceCont').removeClass('on');
+			$('.serviceCont').eq(1).addClass('on');
+		});
+		$(this).find('.switchBtn').eq(0).click(function(){
+			$(this).closest('.typeSwitch2').removeClass('on');
+			$('.serviceCont').removeClass('on');
+			$('.serviceCont').eq(0).addClass('on');
+		});
+	});
+
 	
 	// 메인화면 띠베너
 	$('.bandBanner').slick({

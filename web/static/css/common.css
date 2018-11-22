@@ -32,13 +32,13 @@
 .footerBottom .copyright {font-size:11px; margin-top:25px;}
 
 
-
 /* ==============================
  * windBanner
  * ============================== */
 .wing {position:fixed; top:176px; right:0; z-index:120;}
 .wing.down {z-index:105;}
 .wing.on {position:absolute;}
+.wing.none {display:none;}
 .wing > ul {position:relative; width:80px;}
 .wing > ul > li {position:relative; height:80px; transition:0.5s;}
 .wing > ul > li + li a {border-top:none;}
@@ -51,13 +51,13 @@
 .wing > ul > li .inner {position:absolute; top:0; left:0; width:79px; overflow:hidden;}
 .wing > ul li .call {position:relative; display:block; width:79px; height:80px; text-align:center; cursor:pointer;}
 .wing > ul li .call:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:1; transition: 0.5s;}
-.wing > ul li .call > span {position:relative; z-index:1; display:inline-block; padding-top:41px; margin-top:13px; font-size:13px; color:#c5c5c5;}
+.wing > ul li .call > span {position:relative; z-index:1; display:inline-block; padding-top:41px; margin-top:13px; font-size:13px; color:#777;}
 .wing > ul li .call > span:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 0;}
 .wing > ul li .call.on {border:none;}
 .wing > ul li .call.on:before {background:#812990; opacity:0.5;}
 .wing > ul li .call.on > span {font-weight:500; font-size:14px; color:#fff;}
 .wing > ul li .call.on > span:before {background-position:0 -33px;}
-.wing > ul li .findShop > span {position:relative; z-index:1; display:inline-block; padding-top:41px; font-size:13px; color:#c5c5c5;}
+.wing > ul li .findShop > span {position:relative; z-index:1; display:inline-block; padding-top:41px; font-size:13px; color:#777;}
 .wing > ul li .findShop > span:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 -66px;}
 .wing > ul li .pageTop > span {position:relative; z-index:1; display:inline-block; padding-top:41px; font-size:13px; color:#b6985a;}
 .wing > ul li .pageTop > span:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 -99px;}
