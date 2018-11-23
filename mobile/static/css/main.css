@@ -420,7 +420,7 @@
 
 
 /* kjs */
-.mainSwiper {position:relative;}
+.mainSwiper {position:relative; overflow:hidden;}
 .mainSwiper > .title {position:absolute; top:24px; left:0; z-index:2; width:100%; text-align:center;}
 .mainSwiper .title h3 {font-weight:400; font-size:20px; color:#000;}
 .mainSwiper .title .txt {margin-top:4px; font-weight:400; font-size:12px; color:#666;}
