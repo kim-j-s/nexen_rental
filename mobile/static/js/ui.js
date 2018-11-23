@@ -206,17 +206,6 @@ $(function(){
 		});
 	});
 
-
-	//렌탈상품 년도 그룹 swipper
-	var swiper = new Swiper('.dateGroup', {
-		direction: 'horizontal',
-		slidesPerView: 'auto',
-		freeMode: true,
-		// scrollbar: {
-		//  el: '.swiper-scrollbar',
-		// },
-		mousewheel: true,
-	});
 	
 	//렌탈상품 QnA
 	var btnDetailView = $('.qnaDetailWrap .btn')
@@ -494,14 +483,6 @@ function topBanner() {
 		$('.topBanner').animate({height: 0}, 500);
 	});
 }
-
-
- 
-var dateWidth= $('.dateGroup > ul').width();
-$(window).resize(function(){
-	$('.dateGroup > ul').width(dateWidth);
-});
-
 
 $(window).scroll(function() {
 	var st = $(this).scrollTop();
