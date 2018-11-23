@@ -22,25 +22,24 @@
         <a href="#gnb">주메뉴 바로가기</a>
         <a href="#content">본문 바로가기</a>
     </div>
-
-	<div id="wrap" class="main">
-        <!-- 띠배너영역 -->
+ 
+    <div id="wrap">
+         <!-- 띠배너영역 -->
         <div class="topBanner">
-			<div class="tbswiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="#"><img src="../static/images/main/img_topbanner1.png" alt=""></a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#"><img src="../static/images/main/img_topbanner1.png" alt=""></a>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-            <button class="btnClose">닫기</button>
+            <ul class="notiList">
+                <li>타이어 방문 장착 서비스 개시! 타이어 방문 장착 서비스 개시!</li>
+                <li>222타이어 방문 장착 서비스 개시!</li>
+                <li>333타이어 방문 장착 서비스 개시!</li>
+            </ul>
+            <!-- <ul class="bannerList">
+                <li><img src="/" alt="banner"></li>
+                <li><img src="/" alt="banner"></li>
+                <li><img src="/" alt="banner"></li>
+            </ul> -->
+            <button type="button" class="btnClose">닫기</button>
         </div>
         <!-- //띠배너영역 -->
-        
+
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
@@ -129,104 +128,8 @@
 
         <!-- 메인 컨텐츠영역 -->
         <section class="mainContent">
-
-            <div class="mainIntro">
-                <h2>
-                    <span class="headCopy">Driving Tomorrow</span>
-                    <span class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, <strong>넥스트 레벨</strong></span>
-                </h2>
-                <div class="tireContWrap">
-                    <ul class="tab">
-                        <li class="on"><a href="#tireCont1">타이어 찾기</a></li>
-                        <li><a href="#tireCont2">신개념타이어케어</a></li>
-                    </ul>
-    
-                    <!-- 타이어 찾기 -->
-                    <div class="tireCont tireSearch" id="tireCont1" style="display: block;">
-                        <p class="txt">
-                            가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
-                            나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
-                        </p>
-    
-                        <div class="inner">
-                            <ul class="carType">
-                                <li class="on"><a href="#">승용차</a></li>
-                                <li><a href="#">SUV</a></li>
-                            </ul>
-        
-                            <div class="searchWrap">
-                                <div class="selectBox">
-                                    <label for="opt1">1순위</label>
-                                    <select class="select" id="opt1">
-                                        <option value="">1순위</option>
-                                        <option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
-                                </div>
-                                <div class="selectBox">
-                                    <label for="opt2">2순위</label>
-                                    <select class="select" id="opt2">
-                                        <option value="">2순위</option>
-										<option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
-                                </div>
-                                <div class="selectBox">
-                                    <label for="opt3">3순위</label>
-                                    <select class="select" id="opt3">
-                                        <option value="">3순위</option>
-										<option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
-                                </div>
-                                <div class="btnArea">
-                                    <button type="button" class="btn primary">타이어 검색</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //타이어 찾기 -->
-    
-                    <!-- 신개념타이어케어 -->
-                    <div class="tireCont tireCare" id="tireCont2">
-                        <ul class="careService">
-                            <li>
-                                <a href="#">
-                                    <p class="tit">타이어 방문장착 서비스</p>
-                                    <p class="desc">
-                                        넥센 전문가가 직접 방문해서<br>
-                                        타이어를 장착해 드립니다!
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <p class="tit">타이어 렌탈 서비스란?</p>
-                                    <p class="desc">
-                                        타이어에서부터 엔진오일까지<br>
-                                        넥센에서 차량 관리를 책임집니다!                                    
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <p class="tit">다양한 렌탈상품</p>
-                                    <p class="desc">
-                                        일시불 상품부터 패키지 상품까지<br>
-                                        넥센타이어의 렌탈 상품을 확인하세요
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //신개념타이어케어 -->
-                </div>
+            <div class="maintemp">
+                <img src="../static/images/main/temp_main.png" alt="" class="full">
             </div>
 
             <div class="serviceFlow">
@@ -235,40 +138,17 @@
                     <strong>렌탈</strong> 주문에서 <strong>장착, 정기점검</strong>까지
                 </p>
                 <ul class="flow">
-                    <li>렌탈주문</li>
-                    <li>무료배송</li>
-                    <li>도착문자발송</li>
-                    <li>무료장착</li>
-                    <li>해피콜</li>
+                    <li data-animation="fadeInRight" data-delay="0" class="animated fadeInRight">렌탈주문</li>
+                    <li data-animation="fadeInRight" data-delay="0" class="animated fadeInRight">무료배송</li>
+                    <li data-animation="fadeInRight" data-delay="0" class="animated fadeInRight">도착문자발송</li>
+                    <li data-animation="fadeInRight" data-delay="0" class="animated fadeInRight">무료장착</li>
+                    <li data-animation="fadeInRight" data-delay="0" class="animated fadeInRight">해피콜</li>
                 </ul>
             </div>
 
-			<div class="mainSwiper">
-				<div class="title">
-					<h3 class="mainTitle">NOTICE &amp; EVENT</h3>
-					<p class="txt">부담없이 넥센타이어 렌탈</p>
-				</div>
-
-				<div class="slideArea">
-					<div class="swiper-main">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="../static/images/sample/img_mainr01.jpg" alt="">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="../static/images/sample/img_mainr02.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-			</div>
+            <div class="maintemp">
+                <img src="../static/images/main/temp_main2.png" alt="" class="full">
+            </div>
 
             <div class="quickMenuWrap">
                 <ul>
@@ -322,7 +202,7 @@
                 <div class="footerLink">
                     <a href="#">이용약관</a>
                     <a href="#" class="etc">개인정보처리방침</a>
-                    <a href="https://www.nexentire.com/kr/" target="_blank" title="새창열림">기업소개</a>
+                    <a href="#">기업소개</a>
                 </div>
             </div>
             <div class="footerBottom">
@@ -379,8 +259,8 @@
             </div>  
         </div> 
         <!--// 하단 고정 메뉴 -->
-        
+   
     </div>
-    
+
 </body>
 </html>

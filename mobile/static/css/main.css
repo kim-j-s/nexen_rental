@@ -11,8 +11,12 @@
 	width: 100%;
 	height: auto;
 	overflow: hidden;
-	background: url('../images/main/bg_topBanner.jpg') no-repeat;
-	background-size: 100%;
+}
+.topBanner .swiper-slide a {
+	display:block;
+}
+.topBanner .swiper-slide a img {
+	width:100%;
 }
 .topBanner .btnClose {
 	position: absolute;
@@ -21,8 +25,9 @@
 	width: 50px;
 	height: 50px;
 	background: url('../images/main/btn_closeMenu.png') no-repeat 50%;
-	background-size: 16px 16px;
+	background-size: 15px 15px;
 	font-size: 0;
+	z-index:3;
 }
 .topBanner .notiList { height:50px; }
 .topBanner .notiList li {
@@ -32,14 +37,20 @@
 	color:#fff;
 	font-size: 15px;
 	font-weight: 500;
-
 	overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
 }
-
-.topBanner .bannerList { height: 50px; }
-.topBanner .bannerList img { width: 100%; }
-
-
+.topBanner .swiper-pagination {
+	bottom:2px
+}
+.topBanner .swiper-pagination-bullet {
+	width:5px;
+	height:5px;
+	background:none;
+	border:1px solid #fff;
+}
+.topBanner .swiper-pagination-bullet-active {
+	background:#fff;
+}
 /* ==============================
  * 메인컨텐츠
  * ============================== */
@@ -273,37 +284,40 @@
 	border: 2px solid #fff;
 	background-size: 100%;
 	font-size: 0;
-	display: flex;
 }
 .tireSearch .carType:after {
 	content:'';
-	clear: both;
-	display: block;
-	background: #812990;
+	display:block;
+	clear:both;
 }
-.tireSearch .carType li { flex: 1; }
+.tireSearch .carType li {
+	position:relative;
+	z-index:1;
+	float:left;
+	width:50%;
+}
+.tireSearch .carType li.on:after {
+	content:'';
+	position:absolute;
+	top:-2px;
+	left:-2px;
+	width:50%;
+	width:95px;
+	height:35px;
+	background:url(../images/main/bg_car_on.png) no-repeat 0 0; background-size:95px 35px;
+}
+.tireSearch .carType li:nth-child(2).on:after {
+	content:'';
+	left:-4px;
+}
 .tireSearch .carType li a {
+	position:relative;
+	z-index:2;
 	display: block;
-	height: 35px;
+	height: 31px;
 	line-height: 31px;
 	font-size: 12px;
 }
-.tireSearch .carType li:nth-child(1).on a {
-	position: absolute;
-	top: -2px; 
-	left: -2px;
-	z-index: 2;
-	width: calc(50% + 2px);
-	padding-right: 2px; 
-	background: url('../images/main/bg_tab_car1.png') no-repeat left top;
-	background-size: 180px 35px;
-}	
-.tireSearch .carType li:nth-child(2).on {
-	padding-left: 2px;
-	background: url('../images/main/bg_tab_car2.png') no-repeat right top;
-	background-size: 180px 35px;
-}
-
 .tireSearch .searchWrap {
 	padding: 0 15px;
 }
@@ -403,6 +417,18 @@
 	font-size: 11px;
 }
 .careService li:focus { border: 1px solid #fff; }
+
+
+/* kjs */
+.mainSwiper {position:relative;}
+.mainSwiper > .title {position:absolute; top:24px; left:0; z-index:2; width:100%; text-align:center;}
+.mainSwiper .title h3 {font-weight:400; font-size:20px; color:#000;}
+.mainSwiper .title .txt {margin-top:4px; font-weight:400; font-size:12px; color:#666;}
+.mainSwiper .swiper-button-next, .swiper-button-prev {width:16px; height:30px; background:url(../images/common/btn/btn_mainswiper.png) no-repeat 0 0; background-size:16px 60px;}
+.mainSwiper .swiper-button-prev {background-position:0 -30px;}
+.mainSwiper .swiper-slide a {display:block;}
+.mainSwiper .swiper-slide a img {width:100%;}
+.mainSwiper .swiper-pagination {bottom:27px;}
 
 
 /* 내게 맞는 렌탈찾기 팝업*/
