@@ -79,6 +79,7 @@ $(function(){
 	/* ==============================
 	 * content 
 	 * ============================== */
+
 	// affiliate card 
 	var menuOpt = $('.optionList .optionTitle')
 	var menuOptList = $('.optionList > ul')
@@ -127,6 +128,25 @@ $(function(){
 		}
 	});
 
+	// 렌탈전문점
+	var galleryThumbs = new Swiper('.galleryThumbs', {
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	  });
+	  var galleryTop = new Swiper('.galleryView', {
+		spaceBetween: 15,
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+		  swiper: galleryThumbs
+		}
+	  });
+
 	// 타이어 상품 갤러리
 	var swiper = new Swiper('.photoSlide', {
 		navigation: {
@@ -138,16 +158,14 @@ $(function(){
 		},
 	 });
 
-	  //타이어 간편 조회 툴팁 레이어
+	//타이어 간편 조회 툴팁 레이어
 	var toolTipInfo = $('.easySearchInfo .toolTipInfo')
 	$('.searchOptList .tireSize').click(function(){	
-		console.log('test');
 		$(toolTipInfo).hide();
 		$(toolTipInfo).eq(1).show();
 	});
 
 	$('.searchOptList .member').click(function(){	
-		console.log('test');
 		$(toolTipInfo).hide();
 		$(toolTipInfo).eq(2).show();
 	});
@@ -185,6 +203,36 @@ $(function(){
 		});
 	});
 
+
+	//렌탈상품 년도 그룹 swipper
+	var swiper = new Swiper('.dateGroup', {
+		direction: 'horizontal',
+		slidesPerView: 'auto',
+		freeMode: true,
+		// scrollbar: {
+		//  el: '.swiper-scrollbar',
+		// },
+		mousewheel: true,
+	});
+	
+	//렌탈상품 QnA
+	var btnDetailView = $('.qnaDetailWrap .btn')
+
+	$(btnDetailView).each(function(qna){
+		$(this).click(function(){
+			if ( $(this).hasClass('on') )
+			{
+				$(btnDetailView).removeClass('on');
+				$(this).removeClass('on');				
+				$(this).siblings('.qnaA').slideUp(200);
+			} else {
+				$(btnDetailView).removeClass('on');
+				$(this).addClass('on');
+				$('.qnaDetailWrap').find('.qnaA').slideUp(200);
+				$(this).siblings('.qnaA').slideDown(200);
+			}
+		});
+	}); 
 });
 
 
@@ -406,24 +454,27 @@ function topBanner() {
 	});
 }
 
+
+ 
+var dateWidth= $('.dateGroup > ul').width();
+$(window).resize(function(){
+	$('.dateGroup > ul').width(dateWidth);
+});
+
+
 $(window).scroll(function() {
 	var st = $(this).scrollTop();
 	var fixedStartY = 50;	
 
 	if(st > fixedStartY) {
-		$('#wrap').addClass('fixed');
-		$('.sectionTire .tabMenu').addClass('fixed');
-		
+		$('#headerWrap').addClass('fixed');
 		$('.topBanner').hide();
 
 		$('.btnGoTop').addClass('active');
 		$('.fixBotNav').fadeIn(200);
 
-
 	} else {
-		$('#wrap').removeClass('fixed');
-		$('.sectionTire .tabMenu').removeClass('fixed');
-		
+		$('#headerWrap').removeClass('fixed');
 		$('.topBanner').show();
 
 		$('.btnGoTop').removeClass('active');
@@ -436,10 +487,8 @@ $(window).scroll(function() {
 	});
 
 	// 타이어 상품
-	$('.sectionTire .fixedBot:visible, .sectionCart .fixedBot:visible').each(function(){
+	$('.sectionTire .fixedBot:visible').each(function(){
 		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
 	});
 
 });
-
-

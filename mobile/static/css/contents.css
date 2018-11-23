@@ -792,3 +792,98 @@ img.full { width: 100%;}
 	background-position: 0 0;
 }
 .memberType li.on .business:after {	background-position: right 0; }
+
+/* 렌탈상품 */
+.table.ty3 tbody th.lineR {border-right:1px solid #dadada;}
+.table.ty3 tbody td.bg1 {background:#f8f8f8;}
+.contWrap .txtsWrap {margin:0;}
+.txtsWrap {margin:30px 0;}
+.txtsWrap .logo {text-align:center; margin-bottom:15px;}
+.txtsWrap .logo img {width:163px; height:30px;}
+.secIntro .txtsWrap .txt2 {margin:10px 0 30px 0;}
+.bigNumber {margin:30px 0 5px 0;}
+.bigNumber > li {font-weight:500; font-size:15px; color:#333333; line-height:20px;}
+.tbTit {font-size:14px; font-weight:400; color:#000000; margin:15px 0 10px 0;}
+.secIntro .bigNumber .list1 {margin:10px 0 30px 0;}
+.secIntro > .list1 {margin:10px 15px 0 15px;}
+.txtsWrap .txt1 {font-size:20px; font-weight:400; color:#454545; line-height:25px; text-align:center;}
+.txtsWrap .txt2 {font-size:15px; font-weight:200; color:#777777; text-align:center;} 
+.txtsWrap .txt3 {font-size:14px; font-weight:400; line-height:20px; text-align:center; margin-bottom:10px;}
+.txtsWrap .txtColor1 {font-weight:500;}
+
+.serviceGroup {background:#e8e8e8; padding:25px 15px 0 15px; margin:5px 0 0 0;}
+.serviceGroup > ul li {padding:20px 0;}
+.serviceGroup > ul li:not(:last-child) {border-bottom:1px dashed #999999;}
+.serviceGroup .tit {font-size:14px; font-weight:bold; color:#444444; margin-bottom:10px;}
+.serviceGroup .tit .optNum {color:#812990; margin-right:5px;}
+.serviceGroup .txt {font-size:12px; font-weight:400; color:#454545;}
+.serviceItem {background:#e7e2f2; padding:15px; margin:30px 0 0 0;}
+.serviceItem .tit {font-size:12px; font-weight:500; color:#812990; margin-bottom:15px;}
+.serviceItem .txt {font-size:12px; font-weight:400; color:#454545;}
+
+
+.dateGroup {padding:50px 0 0 0;}
+.dateGroup li {display: inline-block; font-size:14px; font-weight:400; color:#757575; background:#e5e5e5; border-radius:17px; height:35px; padding:0 17px; line-height: 35px;}
+.dateGroup li:not(:last-child) {margin-right:5px;}
+.dateGroup li.on {background:#812990; color:#ffffff;}
+.dateGroup .swiper-slide {width: auto; -webkit-box-sizing: border-box;	box-sizing: border-box;}
+
+.qnaWrap {padding:20px 0; margin:0 15px;}
+.qnaWrap li:not(:first-child) {margin-top:10px;}
+.qnaWrap .qWrap, .qnaWrap .aWrap {display:table; width:100%; table-layout:fixed;}
+.qnaWrap .icon {position:relative; display:table-cell; width:50px; height:50px;} 
+.qnaWrap .icon span {display: block; background-color:#f9efbb;  width:50px; height:50px; border-radius:25px; font-size:0;}
+.qnaWrap .aWrap .icon span {background-color:#e7e2f2;}
+.qnaWrap .icon:after {position:absolute; top:13px; left:12px; display:block; content:''; background:url('../images/common/icon/icon_qna.png') no-repeat; background-size:51px 25px;}
+.qnaWrap .qWrap .icon:after {width:25px; height:25px; background-position:0 0;}
+.qnaWrap .aWrap .icon:after {width:26px; height:25px; background-position:-25px 0;}
+.qnaWrap .txt {position:relative; padding-top:2px; display:table-cell; font-size:12px; font-weight:400; line-height:17px; color:#444444; box-sizing:border-box;}
+.qnaWrap .qWrap .txt {padding-left:8px; box-sizing:border-box;}  
+.qnaWrap .aWrap .txt {padding-right:8px; box-sizing:border-box;}  
+.qnaWrap .qWrap .txt span {position:relative; display:block; background-color:#f9efbb; border-radius:2px; padding:15px 15px 15px 29px; box-sizing:border-box;}  
+.qnaWrap .aWrap .txt span {position:relative; display:block; background-color:#e7e2f2; border-radius:2px; padding:15px 15px 15px 29px; box-sizing:border-box;}  
+.qnaWrap .txt::after {position:absolute; display: inline-block; width:3px; height:6px; content:''; background:url('../images/common/bg_qna.png') no-repeat; background-size:3px 12px;}
+.qnaWrap .qWrap .txt::after {top:20px; left:5px; background-position:0 0;}
+.qnaWrap .aWrap .txt::after {top:20px; left:100%; margin-left:-8px; background-position:0 -6px;}
+.qnaWrap .txt span::before {position:absolute; display: inline-block; width:15px; height:13px; top:15px; left:10px; content:''; background:url('../images/common/icon/icon_qnaText.png') no-repeat; background-size:30px 13px;}
+.qnaWrap .qWrap .txt span::before {background-position:0 0;}
+.qnaWrap .aWrap .txt span::before {background-position:-15px 0;}
+
+.qnaGroup {background:#e7e2f2; padding:20px 15px 20px 15px;}
+.groupTitle {font-size:20px; font-weight:bold; color:#353535; text-align:center; border-bottom:2px solid #353535; padding-bottom:12px; }
+
+.qnaDetailWrap .qnaQ {position:relative; padding:0 0 0 65px; vertical-align: middle;}
+.qnaDetailWrap .qnaQ .icon {position:absolute; top:0; left:0; display: inline-block; width:50px; height:50px; content:''; background:url('../images/common/icon/icon_qnaSet1.png') no-repeat; background-size:200px 50px;}
+.qnaDetailWrap.ty2  .qnaQ .icon {position:absolute; top:0; left:0; display: inline-block; width:50px; height:50px; content:''; background:url('../images/common/icon/icon_qnaSet2.png') no-repeat; background-size:350px 50px;}
+.qnaDetailWrap .qnaQ .icon.ty1 {background-position:0 0;}
+.qnaDetailWrap .qnaQ .icon.ty2 {background-position:-50px 0;}
+.qnaDetailWrap .qnaQ .icon.ty3 {background-position:-100px 0;}
+.qnaDetailWrap .qnaQ .icon.ty4 {background-position:-150px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty1 {background-position:0 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty2 {background-position:-50px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty3 {background-position:-100px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty4 {background-position:-150px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty5 {background-position:-200px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty6 {background-position:-250px 0;}
+.qnaDetailWrap.ty2 .qnaQ .icon.ty7 {background-position:-300px 0;}
+.qnaDetailWrap .qnaQ .num {display:block; font-size:14px; color:#812990; font-family: 'Raleway'; font-weight: 800;}
+.qnaDetailWrap .txtQ {font-size:12px; font-weight:400; line-height:17px; color:#454545; min-height:65px;}
+.qnaDetailWrap .txtQ strong {display:block; font-size:14px; font-weight:bold; line-height:19px; color:#444444;}
+.qnaDetailWrap .qnaA {display:none; background:#ffffff; padding:20px 15px;}
+.qnaDetailWrap .qnaA.on {display:block;} 
+.qnaDetailWrap .txtA {font-size:12px; font-weight:400; line-height:17px; color:#666666;}
+.qnaDetailWrap .qnaA .list1 .ulBar {font-size:12px;}
+.qnaDetailWrap > li {padding:20px 0 0 0;}
+.qnaDetailWrap > li:not(:last-child) {padding:20px 0; border-bottom:1px dashed #999999;}
+.qnaDetailWrap.ty2 > li {padding:20px 0 0 0;}
+.qnaDetailWrap.ty2 > li:not(:last-child) {padding:20px 0 40px 0; border-bottom:none; background:url('../images/common/bg_qna2.png') no-repeat center bottom; background-size:19px 19px; }
+.qnaDetailWrap .btn {margin-top:15px;}
+.qnaDetailWrap .btn .innerIcon.view2:after {content:''; display:inline-block; width:12px; height:7px; margin:0 0 1px 5px; background: url('../images/common/icon/icon_arrow_updown2.png') no-repeat; background-size: 100%;}
+.qnaDetailWrap .btn.on .innerIcon.view2:after {transform:rotate(180deg); margin:0 0 1px 5px;} 
+.qnaDetailWrap.ty2 .btn {margin-top:0px;}
+
+/* 텍스트 컬러 */
+.txtColor1 {color:#812990;}
+.txtColor2 {color:#c3244e;}
+.txtColor3 {color:#666666;}
+.txtColor4 {color:#454545;}
