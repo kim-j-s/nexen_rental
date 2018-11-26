@@ -401,6 +401,7 @@ text-align:center; line-height:60px;}
 .table.ty3 + .orderAmount {margin-top:50px;}
 .table.ty3 + .orderTotal {margin-top:50px;}
 .table.ty3 + .serviceInfo {margin-top:40px;}
+.table.ty3 + .btnBox {margin-top:100px;}
 
 .table.ty4 {border-top:2px solid #353535;}
 .table.ty4 table {width:100%;}
@@ -1691,8 +1692,12 @@ no-repeat left center;}
 .viewContent > .visualList .btnVL.btn_next {bottom:0; background-position:0 0;}
 .viewContent + .table.ty4 {margin-top:10px;}
 .dimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:50; background:#4c4c4c; opacity:0.7;}
+
+
 .dimmedBg {position:fixed; top:0; right:0; bottom:0; left:0; z-index:110; background:#000; opacity:0; transition: 0.5s;}
 .dimmedBg.on {opacity:0.6;}
+.gnbBg {position:fixed; top:0; right:0; bottom:0; left:0; z-index:95; background:#000; opacity:0; transition: 0.3s;}
+.gnbBg.on {opacity:0.6;}
 
 .rstTxt {color:#888; padding:10px 0 13px 0;}
 .rstTxt > span {font-weight:500; font-size:16px; color:#812990;}

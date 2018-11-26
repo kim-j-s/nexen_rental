@@ -4,7 +4,7 @@
 /* ==============================
  * common - 컨텐츠 공통
  * ============================== */
-.topBanner {position:relative; min-width:1200px; height:100px;}
+.topBanner {position:relative; z-index:100; min-width:1200px; height:100px; overflow:hidden;}
 .topBanner > .item {height:100px; overflow:hidden;}
 .topBanner > .item a {display:block; text-align:center; height:100px;}
 .topBanner > .control {position:relative; width:1200px; margin:0 auto;}
@@ -33,7 +33,7 @@
  /* ==============================
  * main
  * ============================== */
-.mainVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual.jpg) no-repeat center; background-size:cover;}
+.mainVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual.jpg) no-repeat center; background-size:cover;}
 .mainVisual h1 {padding-top:182px; font-family:'Raleway'; font-weight:800; font-size:54px; color:#fff; text-align:center;}
 .mainVisual h2 {padding-top:8px; font-size:30px; color:#eaeaea; text-align:center;}
 
@@ -155,18 +155,18 @@
 .mainCs .inner .etc > * {float:left;}
 .mainCs .inner .etc .btn {margin-left:10px;}
 
-#mainWrap {position:relative; min-width:1200px; overflow:hidden;}
+#mainWrap {position:relative; min-width:1200px; overflow:hidden; margin-top:-83px;}
 #mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
 .mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
 
-.mainRightVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
+.mainRightVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
 .mainRightVisual > .inner {position:relative; width:1200px; margin:0 auto;}
 .mainRightVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainRightVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
 .mainRightVisual .centerGo {position:absolute; top:384px; left:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_right.png) no-repeat center;}
 .mainRightVisual h2 + .typeSwitch {margin-top:36px;}
 
-.mainLeftVisual {position:relative; min-width:1200px; margin-top:-95px; min-height:950px; background:url(../images/main/img_mainvisual_left.jpg) no-repeat center; background-size:cover;}
+.mainLeftVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual_left.jpg) no-repeat center; background-size:cover;}
 .mainLeftVisual > .inner {position:relative; width:1200px; margin:0 auto; text-align:center;}
 .mainLeftVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainLeftVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
@@ -205,24 +205,26 @@
 .lCont > a .txt.ty6:before {background-position:0 -295px;}
 
 .mainRoll {position:relative; width:440px; height:490px; border:1px solid #fff; overflow:hidden;}
-.mainRoll > .items {position:absolute; top:0; left:0; width:10000px;}
-.mainRoll > .items > a {float:left; display:block; width:438px; height:488px;}
+.mainRoll .slick-dots {position:absolute; bottom:10px; left:0; width:100%; z-index:2;}
+.mainRoll .slick-dots {position:absolute; bottom:20px; left:0; width:100%; text-align:center;}
+.mainRoll .slick-dots > li {display:inline-block; width:12px; height:12px; margin:0 4px; overflow:hidden; text-indent:-999px; background:#b2b2b2; border-radius:50%; cursor:pointer;}
+.mainRoll .slick-dots > .slick-active {background:#fff;}
+.mainRoll .slick-dots > li.etc {width:auto; height:auto; text-indent:0; background:none; border-radius:0;}
+.mainRoll .slick-dots .play {display:inline-block; width:10px; height:12px;}
+.mainRoll .slick-dots .play > span {position:relative; display:block; overflow:hidden; text-indent:-999px;}
+.mainRoll .slick-dots .play > span:after {content:''; position:absolute; top:0; left:0; height:12px; border-left:3px solid #b08bb6; border-top:none; border-bottom:none;}
+.mainRoll .slick-dots .play > span:before {content:''; position:absolute; top:0; left:5px; height:12px; border-left:3px solid #b08bb6; border-top:none; border-bottom:none;}
+.mainRoll .slick-dots .play.on > span:before {content:none;}
+.mainRoll .slick-dots .play.on > span:after {content:''; position:absolute; top:0; left:0; border-left:10px solid #b08bb6; border-top:6px solid transparent; border-bottom:6px solid transparent;}
+.mainRoll .slick-arrow {position:absolute; top:222px; z-index:2; width:14px; height:24px; text-indent:-999px; overflow:hidden; background:url(../images/main/bg_rollBtn.png) no-repeat 0 0;}
+.mainRoll .slick-arrow.slick-prev {left:29px;  background-position:0 -24px;}
+.mainRoll .slick-arrow.slick-next {right:29px; background-position:0 0;}
+
 .mainRoll .btns {position:absolute; top:222px; padding:10px;}
 .mainRoll .btns > span {display:block; width:14px; height:24px; text-indent:-999px; overflow:hidden; background:url(../images/main/bg_rollBtn.png) no-repeat 0 0;}
 .mainRoll .btns.btnLeft {left:29px;}
 .mainRoll .btns.btnLeft span {background-position:0 -24px;}
 .mainRoll .btns.btnRight {right:29px;}
-.mainRoll .control {position:absolute; bottom:22px; width:100%; text-align:center;}
-.mainRoll .control .dots {display:inline-block; font-size:0; vertical-align:middle;}
-.mainRoll .control .dots > a {display:inline-block; width:12px; height:12px; border-radius:50%; background:#b08bb6;}
-.mainRoll .control .dots > a + a {margin-left:8px;}
-.mainRoll .control .dots > a.on {background:#fff;}
-.mainRoll .control .play {display:inline-block; width:10px; height:12px; margin-left:4px;}
-.mainRoll .control .play span {position:relative; display:block; overflow:hidden; text-indent:-999px;}
-.mainRoll .control .play span:after {content:''; position:absolute; top:0; left:0; height:12px; border-left:3px solid #b08bb6; border-top:none; border-bottom:none;}
-.mainRoll .control .play span:before {content:''; position:absolute; top:0; left:5px; height:12px; border-left:3px solid #b08bb6; border-top:none; border-bottom:none;}
-.mainRoll .control .play.on span:before {content:none;}
-.mainRoll .control .play.on span:after {content:''; position:absolute; top:0; left:0; border-left:10px solid #b08bb6; border-top:6px solid transparent; border-bottom:6px solid transparent;}
 
 .typeSwitch {text-align:center;}
 .typeSwitch > .inner {position:relative; display:inline-block; font-size:0; width:212px; height:60px; background:url(../images/main/bg_switch.png) no-repeat 0 0; overflow:hidden;}
@@ -254,7 +256,7 @@
 .rankSelect + .btnBox {margin-top:100px;}
 
 .mainWing {position:absolute; top:535px; right:0; z-index:120;}
-.mainWing.down {z-index:105;}
+.mainWing.down {z-index:90;}
 .mainWing > ul {position:relative; width:80px;}
 .mainWing > ul > li {position:relative; height:80px;}
 .mainWing > ul > li + li {margin-top:1px;}
@@ -262,7 +264,7 @@
 .mainWing > ul > li.etc:before {content:none;}
 .mainWing > ul > li.on:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#000; opacity:0.7;}
 .mainWing > ul > li > a {position:relative; display:block; width:100%; height:80px; padding-top:13px; text-align:center;}
-.mainWing > ul > li .inner {position:absolute; top:0; left:0;}
+.mainWing > ul > li .inner {position:absolute; top:0; left:0; overflow:hidden;}
 .mainWing > ul li .call {position:relative; display:block; width:80px; height:80px; text-align:center; cursor:pointer; }
 .mainWing > ul li .call:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#1f2425; opacity:0.5; transition: 0.5s;}
 .mainWing > ul li .call.on:before {background:#6d5f41;}

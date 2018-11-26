@@ -10,7 +10,133 @@
 /* ==============================
  * header
  * ============================== */
-#headerWrap {position:relative; z-index:1; background:#ddd; min-width:1200px; height:95px; text-align:center;}
+#headerWrap {position:relative; z-index:100; min-width:1200px; height:80px; background:#fff; border-bottom:3px solid #812990;}
+
+
+/* menuAll 전체메뉴 */
+.menuAll {position:absolute; top:0; left:0; z-index:2;}
+.menuAll > .allBtn {position:absolute; top:22px; left:0; z-index:5; display:inline-block; width:36px; height:36px;}
+.menuAll > .allBtn > span {position:absolute; top:50%; left:5px; margin-top:-1px; display:block; width:24px; height:2px; background:#252525; text-indent:-999px; transition:all 300ms ease-in-out;}
+.menuAll > .allBtn > span:before {content:''; position:absolute; top:-10px; left:50%; transform:translate(-50%, 0); width:100%; height:100%; background-color:#252525; transition:all 300ms ease-in-out;}
+.menuAll > .allBtn > span:after {content:''; position:absolute; top:10px; left:50%; transform:translate(-50%, 0); width:100%; height:100%; background-color:#252525; transition:all 300ms ease-in-out;}
+.menuAll > .allBtn.on {border:1px solid #a5a5a5;}
+.menuAll > .allBtn.on > span {background-color: transparent;}
+.menuAll > .allBtn.on > span:before {top:0;	left:0; transform: rotate(140deg);}
+.menuAll > .allBtn.on > span:after {top:0; left:0; transform: rotate(-140deg);}
+.menuAll > .inner {position:absolute; top:0; left:0; width:1200px;}
+.menuAll > .inner:after {content:''; position:absolute; top:77px; left:0; z-index:3; width:100%; border-bottom:3px solid #812990;}
+.menuAll > .inner .amback {position:absolute; top:0; left:50%; z-index:-1; height:100%; background:#fff;}
+.menuAll > .inner .amback:after {content:''; position:absolute; top:77px; left:0; z-index:3; width:100%; border-bottom:3px solid #812990;}
+
+
+.menuAllList {display:none; padding:0 0 0 136px; height:435px; overflow:hidden; background:#fff; z-index:3;}
+.menuAllList > li {float:left; width:245px;}
+.menuAllList > li > h2 {font-weight:400; font-size:24px; color:#353535; line-height:80px;}
+.allDept {padding:34px 0 0 0;}
+.allDept > li {}
+.allDept > li + li {margin-top:19px;}
+.allDept > li > a {font-weight:400; font-size:17px; color:#353535;}
+.allDept > li:hover > a {color:#812990;}
+.allDept > li > .tit {font-weight:400; font-size:17px; color:#353535;}
+.allDept > li:hover > .tit {color:#812990;}
+.allDept > li > .allDeep {padding:13px 0 3px 0;}
+.allDeep {}
+.allDeep > li {position:relative; padding-left:10px; }
+.allDeep > li + li {margin-top:8px;}
+.allDeep > li:before {content:''; position:absolute; top:8px; left:0; width:4px; height:1px; background:#777;}
+.allDeep > li:hover:before {background:#812990;}
+.allDeep > li > a {color:#777;}
+.allDeep > li:hover > a {color:#812990;}
+
+.gnbWrap {position:relative; width:1200px; height:80px; margin:0 auto;}
+.gnbWrap > .logo {display:inline-block; font-size:0; margin:14px 0 0 44px;}
+.gnbWrap > .gnb {position:absolute; top:0; left:308px;}
+.gnbWrap.on .gnbBack {display:block;}
+.gnbBack {display:none; position:absolute; top:80px; left:50%; z-index:-1; height:225px; background:#fff;}
+
+.gnbList {}
+.gnbList:after {content:''; display:block; clear:both;}
+.gnbList > li {float:left; padding:0 40px;}
+.gnbList > li > h2 {font-weight:500; font-size:20px; color:#353535; line-height:80px;}
+.gnbList > li.on > h2 {color:#812990;}
+.gnbList > li > .inner {position:absolute; top:77px; left:-308px; width:1200px; height:228px; padding-top:3px; z-index:4; display:none; background:#fff;}
+.gnbList > li > .inner:before {content:''; position:absolute; top:0; left:0; width:100%; border-bottom:3px solid #812990;}
+.gnbList > li > .inner:after {content:''; display:block; clear:both;}
+.gnbList > li > .inner > * {float:left; height:225px;}
+.gnbList > li.on > .inner {display:block;}
+.gnbList > li .titEle {width:301px; padding:31px 0 0 44px; border-right:1px solid #c5c5c5;}
+.gnbList > li .titEle strong {position:relative; display:block; padding-bottom:18px; font-weight:400; font-size:24px; color:#353535;}
+.gnbList > li .titEle strong:after {content:''; position:absolute; bottom:0; left:0; width:17px; border-bottom:2px solid #9a54a6;}
+.gnbList > li .titEle span {display:block; margin-top:14px; color:#888; line-height:22px;}
+.gnbList > li.ty1 .titEle {background:url(../images/common/bg_gnbty01.png) no-repeat right bottom 35px;}
+.gnbList > li.ty2 .titEle {background:url(../images/common/bg_gnbty02.png) no-repeat right bottom 35px;}
+.gnbList > li.ty3 .titEle {background:url(../images/common/bg_gnbty03.png) no-repeat right bottom 35px;}
+.gnbList > li.ty4 .titEle {background:url(../images/common/bg_gnbty04.png) no-repeat right bottom 35px;}
+
+.gnbList > li .listEle {width:300px; padding:31px 46px 0 47px; border-right:1px solid #c5c5c5;}
+.gnbList > li .listEle li + li {margin-top:15px;}
+.gnbList > li .listEle li a {position:relative; display:block; font-weight:400; font-size:16px; line-height:20px;}
+.gnbList > li .listEle li a:after {content:''; position:absolute; top:5px; right:0; width:7px; height:12px; background:url(../images/common/bg_gnblist_arrow.png) no-repeat 0 0;}
+.gnbList > li .listEle li a:hover, .gnbList > li .listEle li a:focus {color:#812990;}
+.gnbList > li .listEle li a:hover:after, .gnbList > li .listEle li a:focus:after {background-position:0 -12px;}
+.gnbList > li .bEle {width:369px; padding:35px 48px 0 48px;}
+.gnbList > li .bEle .tips {display:block; text-align:center; font-weight:400; font-size:15px; color:#454545; line-height:46px; background:#f5f5f5; border:1px solid #d5d5d5;}
+.gnbList > li .cEle {width:178px; padding:31px 0 0 14px; text-align:center;}
+.gnbList > li .cEle .txt {font-weight:400; font-size:15px; line-height:22px;}
+.gnbList > li .cEle .gngtel {display:inline-block; width:150px; margin-top:16px; border:2px solid #555; border-radius:45px; text-align:center;}
+.gnbList > li .cEle .gngtel > span {display:inline-block; padding-left:24px; font-weight:400; font-size:18px; color:#353535; line-height:35px; background:url(../images/common/bg_gnbtel.png) no-repeat left center;}
+.gnbList > li .cEle .qa {display:inline-block; width:150px; margin-top:20px; border:2px solid #812990; border-radius:45px; text-align:center;}
+.gnbList > li .cEle .qa > span {display:inline-block; padding-left:24px; font-weight:400; font-size:18px; color:#812990; line-height:35px; background:url(../images/common/bg_gnbqa.png) no-repeat left center;}
+
+/* gnb util */
+.gnbWrap > .util {position:absolute; top:29px; right:0;}
+.utilList {}
+.utilList:after {content:''; display:block; clear:both;}
+.utilList > li {float:left;}
+.utilList > li.etc {position:relative;}
+.utilList > li + li {margin-left:24px;}
+.utilList > li > a {display:block; font-size:13px; color:#999; cursor:pointer; line-height:24px;}
+.utilList > li:hover > a {color:#454545;}
+.utilList > li.etc > span {position:relative; display:block; padding-right:10px; font-size:13px; color:#999; cursor:pointer; line-height:24px;}
+.utilList > li:hover > span {color:#454545;}
+.utilList > li.etc > span:after {content:''; position:absolute; top:10px; right:0; width:7px; height:4px; background:url(../images/common/bg_gnbdown.png) no-repeat 0 0;}
+.utilList > li.etc:hover > span:after {background-position:0 -4px;}
+.utilList > li.etc .inner {position:absolute; top:20px; left:50%; display:none; width:128px; margin-left:-64px; padding-top:7px;}
+.utilList > li.etc .inner:before {content:''; position:absolute; top:0; left:50%; margin-left:-6px; border-bottom:7px solid #812990; border-left:6px solid transparent; border-right:6px solid transparent;}
+.utilList > li.etc .inner:after {content:''; position:absolute; top:2px; left:50%; z-index:5; margin-left:-6px; border-bottom:7px solid #fff; border-left:6px solid transparent; border-right:6px solid transparent;}
+.utilList > li.etc .inner ul {position:relative; padding:13px 0 15px 23px;; border:1px solid #812990; background:#fff; z-index:5;}
+.utilList > li.etc .inner ul li {}
+.utilList > li.etc .inner ul li + li {margin-top:10px;}
+.utilList > li.etc .inner ul li a {font-size:13px; color:#454545;}
+.utilList > li.etc .inner ul li a:hover {color:#812990;}
+.utilList > li.etc:hover .inner {display:block;}
+.utilList > li.etc2 {}
+.utilList > li.etc2 span {display:inline-block; width:80px; line-height:24px; background:#bc34ba; font-size:13px; color:#fff; border-radius:45px; text-align:center;}
+.utilList > li.etc2 .txt {position:absolute; top:33px; left:40px; z-index:5; display:none; padding:0 20px; transform:translate(-50%, 0%); line-height:53px; background:#353535; border:1px solid #252525; white-space:nowrap; border-radius:3px; font-size:12px; color:#f5f5f5;}
+.utilList > li.etc2 .txt:before {content:''; position:absolute; top:-7px; left:50%; margin-left:-6px; border-bottom:7px solid #252525; border-left:6px solid transparent; border-right:6px solid transparent;}
+.utilList > li.etc2 .txt:after {content:''; position:absolute; top:-5px; left:50%; z-index:5; margin-left:-6px; border-bottom:7px solid #353535; border-left:6px solid transparent; border-right:6px solid transparent;}
+.utilList > li.etc2:hover .txt {display:block;}
+
+
+#headerWrap.main {background:none; border-bottom:none;}
+#headerWrap.main .menuAll > .inner:after {content:none;}
+#headerWrap.main .menuAll > .inner .amback:after {content:none;}
+#headerWrap.main .menuAll > .allBtn > span {background:#fff;}
+#headerWrap.main .menuAll > .allBtn > span:before {background:#fff;}
+#headerWrap.main .menuAll > .allBtn > span:after {background:#fff;}
+#headerWrap.main .gnbWrap {border-bottom:1px solid #919697;}
+#headerWrap.main .gnbList > li > h2 {color:#fff;}
+#headerWrap.main .utilList > li > a {color:#c5c5c5;}
+#headerWrap.main .utilList > li > span {color:#c5c5c5;}
+
+ /* ==============================
+ * skip navigation
+ * ============================== */
+#skipnav a {display:block; height:1px; width:1px; margin:0 -1px -1px 0; padding:0; overflow:hidden; font-size:1px; line-height:0;}
+#skipnav a:active,
+#skipnav a:focus,
+#skipnav a:hover {width:100%; height:auto; margin:0; adding:5px 0; text-indent:10px; font-weight:500; font-size: 13px; color:#333; line-height:1; text-decoration:none}
+
 
 /* ==============================
  * footer
@@ -36,7 +162,7 @@
  * windBanner
  * ============================== */
 .wing {position:fixed; top:176px; right:0; z-index:120;}
-.wing.down {z-index:105;}
+.wing.down {z-index:90;}
 .wing.on {position:absolute;}
 .wing.none {display:none;}
 .wing > ul {position:relative; width:80px;}
