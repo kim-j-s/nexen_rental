@@ -487,6 +487,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 
 .prodTire {display:table; width:100%;}
 .prodTire > .thumb {display:table-cell; vertical-align:middle; text-align:left; width:10px; white-space:nowrap;}
+.prodTire > .thumb > img {max-width:128px;}
 .prodTire > .orderInfo {display:table-cell; padding-left:24px; vertical-align:middle; font-size:0;}
 .prodTire > .orderInfo2 {display:table-cell; padding-left:50px; vertical-align:middle; font-size:0;}
 .prodTire > .orderInfo2.etc {padding-left:32px;}
