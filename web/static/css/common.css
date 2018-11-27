@@ -128,6 +128,7 @@
 #headerWrap.main .gnbList > li > h2 {color:#fff;}
 #headerWrap.main .utilList > li > a {color:#c5c5c5;}
 #headerWrap.main .utilList > li > span {color:#c5c5c5;}
+#headerWrap.main .utilList > li.etc2 span {color:#fff;}
 
  /* ==============================
  * skip navigation
