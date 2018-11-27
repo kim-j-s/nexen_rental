@@ -12,6 +12,8 @@ $(function(){
 	// kjs
 	SwiperActMain();
 	TopBanner();
+	dateGroup();
+	cartOpt();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -197,16 +199,15 @@ $(function(){
 		$(this).click(function(){
 			$(this).closest('.searchOpt').siblings('.searchOptList').removeClass('on');
 			$(this).closest('.searchOpt').siblings('.searchOptList').eq(idx).addClass('on');
-			
+
 			if (idx == 1){
 				$(radioVal2).css({display:'none'});
 			}else{
 				$(radioVal2).css({display:'flex'});
-			}	
+			}
 		});
 	});
 
-	
 	//렌탈상품 QnA
 	var btnDetailView = $('.qnaDetailWrap .btn')
 
@@ -346,6 +347,27 @@ function TopBanner() {
 		});	
 	}
 }
+
+function dateGroup() {
+	//렌탈상품 년도 그룹 swipper
+	var dateGroupLng = $('.dateGroup').find('.swiper-slide').length;
+	if (dateGroupLng > 0)
+	{
+		var swiper = new Swiper('.dateGroup', {
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+		});
+	}
+
+	$('.dateGroup').find('.advTab').each(function(i){
+		$(this).on('click', function(){
+			$('.dateGroup').find('.advTab').removeClass('on');
+			$(this).addClass('on');
+			$(this).closest('.dateGroup').next('.advWrap').children('.advCont').removeClass('on');
+			$(this).closest('.dateGroup').next('.advWrap').children('.advCont').eq(i).addClass('on');
+		});
+	});
+}
 /* parallax scrolling motion */
 scrollAnimation();
 function scrollAnimation(){
@@ -383,7 +405,6 @@ function scrollAnimation(){
 		});
 	});
 }
-
 
 /* form select */
 function selectMake(){
@@ -473,14 +494,33 @@ function uiForm() {
 		$(this).siblings('label').text(select_name); 
 		$(this).parent().removeClass('focus'); 
 	});
-
-
 }
 
 // 띠배너
 function topBanner() {
 	$('.topBanner .btnClose').bind("click", function(){
 		$('.topBanner').animate({height: 0}, 500);
+	});
+}
+
+// cart option change
+function cartOpt() {
+	var opChangeBtn = $('.cartList li').find('.btnOpt.viewopt');
+	$(opChangeBtn).on('click', function(){
+		if ( $(this).hasClass('on') )
+		{
+			$(this).removeClass('on').text('옵션변경');
+			$(this).closest('li').find('.optionview').hide();
+		} else if ( !$(this).hasClass('on') )
+		{
+			$(this).addClass('on').text('옵션닫기');
+			$(this).closest('li').find('.optionview').show();
+		}
+	});
+
+	$('.cartList .btnOptChange').on('click', function(){
+		$(this).closest('.optionview').hide();
+		$(this).closest('li').find('.btnOpt').removeClass('on').text('옵션변경');
 	});
 }
 
@@ -513,4 +553,36 @@ $(window).scroll(function() {
 		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
 	});
 
+});
+
+
+// 장바구니 플로팅 전체금액
+$(window).load(function(){
+	$(window).scroll(function(){
+		var itemTotalLng = $('.itemTotal').length;
+		if (itemTotalLng > 0)
+		{
+			cartTotal();
+		}
+	});
+	var itemTotalLng = $('.itemTotal').length;
+	if (itemTotalLng > 0)
+	{
+		cartTotal();
+	}
+	function cartTotal() {
+		var top = $('body, html').scrollTop();
+		var windowH = $(window).height();
+		var itemTotalH = $('.itemTotal').outerHeight();
+		var itemTotalCont = $('.itemTotalCont');
+		var bpObj = $('.itemTotalCont').offset();
+		var bp = (bpObj.top + itemTotalH) - windowH;
+		$(itemTotalCont).height(itemTotalH);
+		if ( top > bp)
+		{
+			$('.itemTotal').addClass('on');
+		} else {
+			$('.itemTotal').removeClass('on');
+		}
+	}
 });

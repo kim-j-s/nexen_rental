@@ -28,7 +28,8 @@
  
 /* 상품목록 */
 .cartListWrap {
-	padding: 40px 0 50px;
+	/* padding: 40px 0 50px; */
+	padding: 40px 0 10px 0;
 	position: relative;
 	top: 0;
 	bottom: 0;
@@ -82,8 +83,8 @@
 	vertical-align: -1px;
  }
 .cartList .btns { display: flex; padding-bottom: 20px; }
-.cartList .btns .btnDel { width: 52px; border-color: #c5c5c5; }
-.cartList .btns .btnOpt { width: 75px; }
+.cartList .btns .btnDel {border-color: #c5c5c5; }
+.cartList .btns .btnOpt { width: 75px; background:#333; }
 .cartList .btns .btnOpt.on { background: #fff; border-color: #333; color:#333; }
 .cartList .btns .btnOrder { width: calc(100% - 137px); }
 .cartList .btns .btn + .btn { margin-left: 5px; }
@@ -103,12 +104,14 @@
 }
 .cartList .optionview .btnArea { clear:both; padding-top: 10px; }
 
-.cartListWrap .itemTotal { box-sizing: border-box; position: fixed; bottom: 0; width: 100%; padding: 15px; background: rgba(0,0,0,.8); color: #fff; font-weight: 400; }
+.cartListWrap .itemTotalCont {min-height:100px;}
+.cartListWrap .itemTotal { box-sizing: border-box; position: fixed; bottom: 0; left:0; width: 100%; padding:13px 15px 15px 15px; background: rgba(0,0,0,.8); color: #fff; font-weight: 400; }
+.cartListWrap .itemTotal.on {position: static;}
 .cartListWrap .itemTotal .total { padding-left: 10px }
 .cartListWrap .itemTotal .priceInfo { margin-top: 4px; padding: 0 10px; color: #fff; font-weight: 400; }
 .cartListWrap .itemTotal .priceInfo .txt { padding-left: 0; font-size: 12px; line-height: 16px; }
 .cartListWrap .itemTotal .priceInfo .price { font-weight: 400; }
 .cartListWrap .itemTotal .priceInfo .price .num { font-size: 16px; font-weight: 700; }
-.cartListWrap .itemTotal .primary { margin-top: 10px; background-color: #5f14ea; border-color: #5f14ea; }
+.cartListWrap .itemTotal .primary { margin-top: 8px; background-color: #5f14ea; border-color: #5f14ea; }
 
 

@@ -28,30 +28,7 @@
         </header>
         <!-- //헤더영역 -->
 
-
-<script type="text/javascript">
-$(function(){
-	//렌탈상품 년도 그룹 swipper
-	var swiper = new Swiper('.dateGroup', {
-		slidesPerView: 'auto',
-		spaceBetween: 10,
-	});
-
-	$('.dateGroup').find('.advTab').each(function(i){
-		$(this).on('click', function(){
-			$('.dateGroup').find('.advTab').removeClass('on');
-			$(this).addClass('on');
-			$(this).closest('.dateGroup').next('.advWrap').children('.advCont').removeClass('on');
-			$(this).closest('.dateGroup').next('.advWrap').children('.advCont').eq(i).addClass('on');
-		});
-	});
-});
-</script>
-
-
-
-
-        <section id="content">       
+		<section id="content">       
             <div class="optionList">
                 <div class="optionTitle on"><span>렌탈서비스 장점</span></div>               
                 <ul>

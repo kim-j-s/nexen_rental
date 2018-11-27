@@ -26,10 +26,102 @@
         </header>
         
         <div class="popContent">
-            
+            <p class="txtTy1">
+				렌탈 계약에 필요한 고객님의 신용정보 조회를 위해 정보를 입력 해 주세요. 
+			</p>
+
+			<section class="tblSection">
+				<h1>고객정보</h1>
+				<div class="table ty2">
+                    <table>
+                        <caption>기본 정보</caption>
+                        <colgroup>
+                            <col style="width:27%;">
+                            <col style="width:73%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">성명</th>
+                                <td>김넥센</td>
+                            </tr>
+							<tr>
+                                <th scope="row">성별</th>
+                                <td>남</td>
+                            </tr>
+							<tr>
+                                <th scope="row">법정생일</th>
+                                <td>
+									<div class="birthEle">
+										<div class="ele">
+											<select name="" class="selectbox">
+												<option value="">1984</option>
+											</select>
+										</div>
+										<div class="ele">
+											<select name="" class="selectbox">
+												<option value="">01</option>
+											</select>
+										</div>
+										<div class="ele">
+											<select name="" class="selectbox">
+												<option value="">01</option>
+											</select>
+										</div>
+									</div>
+								</td>
+                            </tr>
+							<tr>
+                                <th scope="row">휴대폰번호</th>
+                                <td>
+									<div class="hpNum">
+                                        <select name="" class="selectbox">
+                                            <option value="">선택</option>
+                                            <option value="">010</option>
+                                        </select>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                        <div class="inputBox">
+                                            <input type="text" class="inp" placeholder="숫자 입력" />
+                                        </div>
+                                    </div>    
+								</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+			</section>
+
+			<div class="agreeTy1">
+				<div class="checkbox">
+					<input type="checkbox" name="" id="chk">
+					<label for="chk"><span class="txtColor1">[필수]</span> 개인정보 수집 및 이용에 대한 동의 </label>
+				</div>
+			</div>
+
+			<div class="agreeTy1Txt">
+				<ul>
+					<li>가. 수집목적 : 고객의 청약 여부 확인</li>
+					<li>나. 수집항목 : 성명, 성별, 법정생일, 전화번호</li>
+					<li>다. 이용기간 : 법령에서 정한 기간까지 보유 후 파기</li>
+				</ul>
+			</div>
+
+			<div class="btnArea">
+				<button class="btn">취소</button>
+                <button class="btn primary" disabled="disabled">발급</button>
+			</div>
+
+			<div class="agreeTy2Txt">
+				<ul>
+					<li>위탁기관: NICE평가정보주식회사</li>
+					<li>위탁업무: 본인인증, 이용약관 및 개인정보 수집 &middot; 이용/제공 &middot; 활용/조회 동의  </li>
+				</ul>
+			</div>
+
+
         </div>
     </article>
     <!-- //팝업 : 인증번호 발급 -->
-
 </body>
 </html>
