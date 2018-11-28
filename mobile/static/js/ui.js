@@ -9,11 +9,12 @@ $(function(){
 	uiMain.init();
 	uiForm();
 	topBanner();
-	// kjs
+
 	SwiperActMain();
 	TopBanner();
 	dateGroup();
 	cartOpt();
+	DateInput();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -521,6 +522,23 @@ function cartOpt() {
 	$('.cartList .btnOptChange').on('click', function(){
 		$(this).closest('.optionview').hide();
 		$(this).closest('li').find('.btnOpt').removeClass('on').text('옵션변경');
+	});
+}
+
+
+// input type date
+function DateInput() {
+	var InpDate = $('input[type=date]');
+	$(InpDate).each(function(){
+		$(this).on('change', function(){
+			if($(this).val()) {
+				$(this).next('label').css('display','none');
+			}
+			if ( !$(this).val() )
+			{
+				$(this).next('label').css('display','block');
+			}
+		});
 	});
 }
 
