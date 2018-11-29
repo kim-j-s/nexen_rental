@@ -15,6 +15,8 @@ $(function(){
 	dateGroup();
 	cartOpt();
 	DateInput();
+	slideCont();
+	inpReset();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -142,16 +144,17 @@ $(function(){
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	  });
-	  var galleryTop = new Swiper('.galleryView', {
+
+	var galleryTop = new Swiper('.galleryView', {
 		spaceBetween: 15,
 		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 		thumbs: {
-		  swiper: galleryThumbs
+			swiper: galleryThumbs
 		}
-	  });
+	});
 
 	// 타이어 상품 갤러리
 	var swiper = new Swiper('.photoSlide', {
@@ -163,6 +166,25 @@ $(function(){
 		  el: '.swiper-pagination',
 		},
 	 });
+
+	// 장바구니 주문/결제
+	var orderSlideLng = $('.orderSlide').find('.swiper-slide').length;
+	if (orderSlideLng > 1)
+	{
+		var swiper = new Swiper('.orderSlide', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+				pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+	} else if (orderSlideLng == 1)
+	{
+		$('.orderSlide').find('.swiper-button-next').hide();
+		$('.orderSlide').find('.swiper-button-prev').hide();
+	}
 
 	//타이어 간편 조회 툴팁 레이어
 	var toolTipInfo = $('.easySearchInfo .toolTipInfo')
@@ -369,6 +391,25 @@ function dateGroup() {
 		});
 	});
 }
+
+function inpReset(){
+	// 검색 입력 초기화
+	$('.inpReset').click(function(){
+		$(this).prev('.inp').val('');
+		$(this).hide();
+	});
+
+	var InpObj = $('input:text, input:password');
+	$(InpObj).on('keyup', function(e) {
+		if($(this).val().length >= 1) {
+			$(this).next('button').css('display','block');
+		}
+		if ( $(this).val().length == 0 )
+		{
+			$(this).next('button').css('display','none');
+		}
+	});
+}
 /* parallax scrolling motion */
 scrollAnimation();
 function scrollAnimation(){
@@ -537,6 +578,26 @@ function DateInput() {
 			if ( !$(this).val() )
 			{
 				$(this).next('label').css('display','block');
+			}
+		});
+	});
+}
+
+function slideCont() {
+	var slideBtn = $('.slideContBtn');
+	$(slideBtn).each(function(){
+		$(this).click(function(){
+			if ( $(this).hasClass('on') )
+			{
+				$(this).removeClass('on');
+				$(this).closest('.slideCont').siblings().find('.slideContBtn').removeClass('on');
+				$(this).closest('.slideCont').siblings().find('.inner').stop(true, false).slideUp();
+				$(this).closest('.slideCont').find('.inner').stop(true, false).slideUp();
+			} else {
+				$(this).addClass('on');
+				$(this).closest('.slideCont').siblings().find('.slideContBtn').removeClass('on');
+				$(this).closest('.slideCont').siblings().find('.inner').stop(true, false).slideUp();
+				$(this).closest('.slideCont').find('.inner').stop(true, false).slideDown();
 			}
 		});
 	});

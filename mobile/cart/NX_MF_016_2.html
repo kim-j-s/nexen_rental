@@ -31,8 +31,229 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content" style="min-height: 350px;">
-            2. 결제정보 입력 - 신용카드
+        <section id="content">
+			<div class="flowTitle">
+				<h1>결제정보 입력</h1>
+				<div class="flowView">
+					<span>1</span>
+					<span class="on">2</span>
+				</div>
+			</div>
+
+			<div class="slideCont">
+				<p class="title">렌탈료 결제정보</p>
+				<div class="inner etc2">
+					<div class="tabMenu">
+						<ul class="tabList etc">
+							<li class="on"><button><span>신용카드</span></button></li>
+							<li><button><span>계좌이체</span></button></li>
+						</ul>
+
+						<div class="tabContent pb0 on">
+							<div class="table ty2">
+								<table>
+									<caption>신용카드 정보입력 표</caption>
+									<colgroup>
+										<col style="width:27%;">
+										<col style="width:73%;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">카드사<span class="iconMust">필수</span></th>
+											<td>
+												<select name="" class="selectbox">
+													<option value="">카드사 선택</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">카드번호<span class="iconMust">필수</span></th>
+											<td>
+												<div class="inputBox w100">
+													<input type="text" class="inp" placeholder="‘-’없이 숫자만 입력해주세요." />
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">카드 <br />소유주<span class="iconMust">필수</span></th>
+											<td>김넥센</td>
+										</tr>
+										<tr>
+											<th scope="row">유효기간<span class="iconMust">필수</span></th>
+											<td>
+												<div class="yearGroup">
+													<div class="ele">
+														<select name="" class="selectbox">
+															<option value="">년</option>
+														</select>
+													</div>
+													<div class="ele">
+														<select name="" class="selectbox">
+															<option value="">월</option>
+														</select>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">결제일<span class="iconMust">필수</span></th>
+											<td>
+												<div class="radiobtnGroup">
+													<label for="rd1" class="radiobtn on">
+														<input type="radio" name="radioSelect" id="rd1" checked="checked"><span class="txt">5일</span>
+													</label>
+													<label for="rd2" class="radiobtn">
+														<input type="radio" name="radioSelect" id="rd2"><span class="txt">15일</span>
+													</label>
+													<label for="rd3" class="radiobtn">
+														<input type="radio" name="radioSelect" id="rd3"><span class="txt">25일</span>
+													</label>
+												</div>
+												<div class="tblEle">
+													<div class="checkbox">
+														<input type="checkbox" name="" id="chk1" checked="checked" />
+														<label for="chk1">자동이체동의</label>
+													</div>
+												</div>
+												<p class="txt mark1 mgt2">월 렌탈 요금 자동이체 등록은 주문고객님 본인의 계좌 또는 카드만 가능하며, 선택한 결제일에 자동으로 결제됩니다.</p>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">본인<br />확인대상<span class="iconMust">필수</span></th>
+											<td>
+												<select name="" class="selectbox">
+													<option value="">대표자명</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="tabContent pb0">
+							<div class="table ty2">
+								<table>
+									<caption>계좌이체 정보입력 표</caption>
+									<colgroup>
+										<col style="width:27%;">
+										<col style="width:73%;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">은행명<span class="iconMust">필수</span></th>
+											<td>
+												<select name="" class="selectbox">
+													<option value="">은행명 선택</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">계좌번호<span class="iconMust">필수</span></th>
+											<td>
+												<div class="inputBox w100">
+													<input type="text" class="inp" placeholder="‘-’없이 숫자만 입력해주세요." />
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">계좌 <br />소유주<span class="iconMust">필수</span></th>
+											<td>김넥센</td>
+										</tr>
+										<tr>
+											<th scope="row">결제일<span class="iconMust">필수</span></th>
+											<td>
+												<div class="radiobtnGroup">
+													<label for="rd21" class="radiobtn on">
+														<input type="radio" name="radioSelect2" id="rd21" checked="checked"><span class="txt">5일</span>
+													</label>
+													<label for="rd22" class="radiobtn">
+														<input type="radio" name="radioSelect2" id="rd22"><span class="txt">15일</span>
+													</label>
+													<label for="rd23" class="radiobtn">
+														<input type="radio" name="radioSelect2" id="rd23"><span class="txt">25일</span>
+													</label>
+												</div>
+												<div class="tblEle">
+													<div class="checkbox">
+														<input type="checkbox" name="" id="chk2" checked="checked" />
+														<label for="chk2">자동이체동의</label>
+													</div>
+												</div>
+												<p class="txt mark1 mgt2">월 렌탈 요금 자동이체 등록은 주문고객님 본인의 계좌 또는 카드만 가능하며, 선택한 결제일에 자동으로 결제됩니다.</p>
+												<div class="btnArea">
+													<a href="#" class="btn etc">출금이체동의</a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">본인<br />확인대상<span class="iconMust">필수</span></th>
+											<td>
+												<select name="" class="selectbox">
+													<option value="">대표자명</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
+			</div>
+
+			<div class="slideCont">
+				<p class="title">렌탈 등록비 결제정보</p>
+				<div class="inner">
+					<dl class="costList">
+						<dt>등록비</dt>
+						<dd>
+							<strong class="num">25,000</strong>원
+						</dd>
+					</dl>
+					<p class="txt"><span class="mark1">렌탈 등록비는 주문 시 1회만 즉시 결제됩니다.</span></p>
+				</div>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
+			</div>
+
+
+			<div class="slideCont">
+				<p class="title">판매인정보</p>
+				<div class="inner">
+					<div class="table ty2">
+						<table>
+							<caption>판매인정보 표</caption>
+							<colgroup>
+								<col style="width:27%;">
+								<col style="width:73%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">판매인<span class="iconMust"></span></th>
+									<td>
+										<div>
+											<a href="#" class="btn primary"><span class="innerIcon search">검색</span></a>
+										</div>
+										<p class="rstTxt">㈜에스에이치생활건강</p>
+										<div class="tblEle">
+											<div class="textareaWrap">
+												<textarea name="" id="textarea" cols="30" rows="10" class="textarea w100" placeholder="남기실 말씀이 있으시면 적어주세요.&#13;&#10;추천 판매인이 없을 경우 결제하기 버튼을 눌러주세요."></textarea>
+											</div>   
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
+			</div>
+
+			<div class="btnArea">
+				<button class="btn">이전</button>
+                <button class="btn primary" disabled="disabled">결제하기</button>
+			</div>
         </section>
         <!-- //본문영역 -->
 

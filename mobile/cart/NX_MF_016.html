@@ -176,7 +176,7 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<button class="slideContBtn"><span>열기/닫기</span></button>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
 			</div>
 
 			<div class="slideCont">
@@ -243,7 +243,7 @@
 						</table>
 					</div>
 				</div>
-				<button class="slideContBtn"><span>열기/닫기</span></button>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
 			</div>
 
 			<div class="slideCont">
@@ -300,54 +300,15 @@
 						</table>
 					</div>
 				</div>
-				<button class="slideContBtn"><span>열기/닫기</span></button>
+				<button class="slideContBtn on"><span>열기/닫기</span></button>
 			</div>
 
 			<div class="btnArea">
 				<button class="btn">취소</button>
-                <button class="btn primary">다음</button>
+                <button class="btn primary" disabled="disabled">다음</button>
 			</div>
         </section>
         <!-- //본문영역 -->
-
-
-<script type="text/javascript">
-$(function(){
-
-	var slideBtn = $('.slideContBtn');
-
-	$(slideBtn).each(function(){
-		$(this).click(function(){
-			if ( $(this).hasClass('on') )
-			{
-				$(this).removeClass('on');
-				$(this).closest('.slideCont').siblings().find('.slideContBtn').removeClass('on');
-				$(this).closest('.slideCont').siblings().find('.inner').stop(true, false).slideUp();
-				$(this).closest('.slideCont').find('.inner').stop(true, false).slideUp();
-			} else {
-				$(this).addClass('on');
-				$(this).closest('.slideCont').siblings().find('.slideContBtn').removeClass('on');
-				$(this).closest('.slideCont').siblings().find('.inner').stop(true, false).slideUp();
-				$(this).closest('.slideCont').find('.inner').stop(true, false).slideDown();
-			}
-		});
-	});
-
-
-
-
-	var swiper = new Swiper('.orderSlide', {
-		//autoHeight:true,
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-		  el: '.swiper-pagination',
-		},
-	 });
-});
-</script>
 
         <!-- 푸터영역 -->
         <footer id="footerWrap">
