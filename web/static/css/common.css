@@ -15,7 +15,7 @@
 
 /* menuAll 전체메뉴 */
 .menuAll {position:absolute; top:0; left:0; z-index:2;}
-.menuAll > .allBtn {position:absolute; top:22px; left:0; z-index:5; display:inline-block; width:36px; height:36px;}
+.menuAll > .allBtn {position:absolute; top:22px; left:0; z-index:5; display:inline-block; width:36px; height:36px; overflow:hidden;}
 .menuAll > .allBtn > span {position:absolute; top:50%; left:5px; margin-top:-1px; display:block; width:24px; height:2px; background:#252525; text-indent:-999px; transition:all 300ms ease-in-out;}
 .menuAll > .allBtn > span:before {content:''; position:absolute; top:-10px; left:50%; transform:translate(-50%, 0); width:100%; height:100%; background-color:#252525; transition:all 300ms ease-in-out;}
 .menuAll > .allBtn > span:after {content:''; position:absolute; top:10px; left:50%; transform:translate(-50%, 0); width:100%; height:100%; background-color:#252525; transition:all 300ms ease-in-out;}

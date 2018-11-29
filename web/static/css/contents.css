@@ -1325,12 +1325,12 @@ no-repeat left center;}
 .cartStep > li.on * {color:#353535;}
 .cartStep > li > em {padding-top:12px; font-size:16px;}
 .cartStep > li > span {margin-top:5px; font-size:18px;}
-.cartStep > li:nth-child(1) {background-position:0 0;}
-.cartStep > li.on:nth-child(1) {background-position:0 -70px;}
-.cartStep > li:nth-child(2) {background-position:0 -140px;}
-.cartStep > li.on:nth-child(2) {background-position:0 -210px;}
-.cartStep > li:nth-child(3) {background-position:0 -280px;}
-.cartStep > li.on:nth-child(3) {background-position:0 -350px;}
+.cartStep > li.ty1 {background-position:0 0;}
+.cartStep > li.ty1.on {background-position:0 -70px;}
+.cartStep > li.ty2 {background-position:0 -140px;}
+.cartStep > li.ty2.on {background-position:0 -210px;}
+.cartStep > li.ty3 {background-position:0 -280px;}
+.cartStep > li.ty3.on {background-position:0 -350px;}
 .cartStepWrap + .tabWrap {margin-top:60px;}
 .cartStepWrap + .itemList3Wrap {margin-top:60px;}
 
