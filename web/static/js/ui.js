@@ -257,6 +257,11 @@ $(function(){
 	}
 	$('.topBanner').find('.allcnt').html(TBLng);
 
+	if (TBLng > 1)
+	{
+		TBRolling = StartInterval();
+	}
+
 	// topbanner close
 	$('.topBanner').find('.topBclose').on('click', function(){
 		$('.topBanner').animate({
@@ -307,13 +312,6 @@ $(function(){
 			restartRolling();
 		}
 	});
-
-	if (TBLng > 1)
-	{
-		setTimeout(function(){
-			TBRolling = StartInterval();
-		},RollingTime);
-	}
 
 	function StartInterval() {
 		i = setInterval(function(){
@@ -497,12 +495,8 @@ function scrollAnimation(){
 			}
 			$el.addClass('animated '+animationClass);
 
-			$el.waypoint(function(){
-				$el.removeClass('wait-animation');
-			}, { offset: '100%', triggerOnce: true });
-		});
-	});
-}
+			$el.waypoint(function(){ $el.removeClass('wait-animation'); }, { 
+			offset: '150%', triggerOnce: true }); }); }); }
 
 
 /* form select */
@@ -877,12 +871,14 @@ $(function(){
 	}
 
 	// 타이어 상세 설정 탭
+	/*
 	$('.settingList > li > .tit').each(function(){
 		$(this).click(function(){
 			$(this).parent('li').siblings().removeClass('on');
 			$(this).parent('li').addClass('on');
 		});
 	});
+	*/
 
 	// 타이어 종류 셀렉트
 	$('.makerGroup1').each(function(){
