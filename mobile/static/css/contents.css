@@ -8,6 +8,7 @@
 #wrap {width:100%; margin:0 auto;}
 #content { z-index:1; width:100%; min-height: 300px; padding-top: 45px; }
 #content .contWrap {padding:20px 15px 50px 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
+#content .contWrap2 {padding:0 15px 50px 15px;}
 #content .optionList + .contWrap {padding:65px 15px 50px; } 
 
 #layerPop {padding: 10px;}
@@ -66,9 +67,6 @@
 }
 .inputBox .inpReset {position:absolute; top:10px; right:9px; width:16px; height:16px; background:url(../images/common/btn/btn_iptreset.png) no-repeat; background-size:100%; text-indent:-9999px;}
 .inputBox .inpReset {display:none;}
-
-/* height:36px; padding:6px 8px 7px 8px;  background:#fff url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px; */
-
 
 .inpDesc { margin-top: 5px; font-size: 10px; }
 .inpDesc.error { color: #c3244e; }
@@ -196,6 +194,7 @@ td .textarea {width:100%;}
 .list1 > li {position:relative; padding-left:6px; font-size:12px; line-height: 17px; font-weight:400; color:#666;}
 .list1 > li:before {content:''; position:absolute; top:7px; left:0; width:2px; height:2px; border-radius:2px; background:#666;}
 .list1 > li + li {margin-top:5px;}
+.list1 + .btnArea {margin-top:12px;}
 
 .exList > .title {color:#222; font-weight:500; font-size:12px;}
 .exList > .title .ex {display:inline-block; padding-right:9px; color:#222222; font-weight:normal; font-size:12px; background:url('../images/common/icon/icon_next.png') no-repeat right center; background-size: 3px 5px;}
@@ -303,6 +302,7 @@ td .textarea {width:100%;}
 
 .mgt2 {margin-top:2px;}
 .mgt10 {margin-top:10px;}
+.mgt50 {margin-top:50px;}
 
 .pd0 {padding:0 !important;}
 .pb0 {padding-bottom:0 !important;}
@@ -737,16 +737,20 @@ img.full { width: 100%;}
 	position: relative;
 	min-height: 185px;
 	border: 1px solid #eee;
+	border-top:none;
 	background: #fff;
 	text-align: center;
+}
+.infoBox + .infoBox {
+	margin-top:5px;
 }
 .infoBox:before {
 	content: '';
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -1px;
 	right: 0;
-	width: 100%;
+	width: calc(100% + 2px);
 	height: 2px;
 	background: #000;
 }
@@ -998,7 +1002,7 @@ btnArea + .agreeTy2Txt {margin-top:30px;}
 .flowTitle > h1 {display:inline-block; float:left; font-weight:500; font-size:15px; color:#fff; line-height:35px;}
 .flowTitle > .flowView {float:right; margin-top:8px;}
 .flowView {overflow:hidden;}
-.flowView > span {display:inline-block; width:19px; height:19px; float:left; text-align:center; line-height:17px; border:1px solid #fff; border-radius:2px; font-weight:500; font-size:10px; color:#fff;}
+.flowView > span {display:inline-block; width:19px; height:19px; float:left; text-align:center; line-height:16px; border:1px solid #fff; border-radius:2px; font-weight:500; font-size:10px; color:#fff;}
 .flowView > span.on {background:#fff; color:#333;}
 .flowView > span + span {margin-left:5px;}
 
@@ -1090,7 +1094,10 @@ div + .rstTxt {margin-top:8px;}
 
 .orderComplete {padding:0 15px;}
 .compTxt {margin-top:46px; font-weight:500; font-size:17px; color:#000; line-height:22px; text-align:center;}
+.compTxt.etc {margin:26px 0 0 0; background:url(../images/login/bg_comp.png) no-repeat center top 24px; background-size:113px 91px;}
+.compTxt.etc + .btnArea {margin-top:27px;}
 .compTxt > strong {color:#812990;}
+.compTxt > .subTxt {display:block; margin-top:25px; font-weight:400; font-size:13px; color:#888; line-height:18px;}
 .compTxt + .compItem {margin-top:47px;}
 .compItem {border:1px solid #e1e1e1; border-radius:3px;}
 .compItem > .title {padding:0 15px; font-weight:400; font-size:14px; color:#000; background:#eee; line-height:50px;}
@@ -1108,6 +1115,37 @@ div + .rstTxt {margin-top:8px;}
 .orderErrorInfo > .txt + .txt {margin-top:19px;}
 .orderErrorInfo + .btnArea {margin:27px 0 50px 0;}
 
+.contWrap2 {}
+.contWrap2 > .titTxt {margin-top:7px; font-weight:400; font-size:13px; color:#000; line-height:18px;}
+.contWrap2 >.titTxt + .agreeWrap {margin-top:27px;}
+.contWrap2 >.titTxt + .infoBox {margin-top:27px;}
+.contWrap2 >.titTxt + .tblSection {margin-top:27px;}
+.agreeWrap {}
+.agreeWrap > .agreeAll {}
+.agreeWrap > .agreeAll label {font-weight:400; font-size:14px; color:#333;}
+.agreeWrap + .list1 {margin-top:12px;}
+.agreeList {margin-top:9px;}
+.agreeList > .inner {padding:10px; border:1px solid #e1e1e1; border-radius:3px; background:#f6f6f6;}
+.agreeList > .inner > .checkbox {width:calc(100% - 65px);}
+.agreeList > .inner > .checkbox label {font-weight:500; color:#000;}
+.agreeList > .inner > .checkbox label .etc {color:#454545;}
+.agreeList > .inner > button {display:inline-block; float:right; width:55px; height:20px; border:1px solid #d6d6d8; border-radius:2px; background:#fff; text-align:center;}
+.agreeList > .inner > button > span {font-weight:400; font-size:11px;}
+.agreeList > .addOpt {padding:0 10px; overflow:hidden;}
+.agreeList > .addOpt > li {float:left; width:50%; margin-top:15px;}
+.agreeList + .agreeList {margin-top:5px;}
+
+.btnInp {display:table; width:100%;}
+.btnInp > .ele {display:table-cell; vertical-align:middle;}
+.btnInp > .ele + .ele {width:85px; padding-left:5px; text-align:right;}
+.btnInp > .ele + .ele .btn {display:block;}
+
+.infoBox + .notiEle {margin-top:26px;}
+.notiEle {}
+.notiEle > dt {padding-bottom:8px; font-weight:700; font-size:15px; color:#000; border-bottom:1px solid #dadada;}
+.notiEle > dd {padding-top:12px;}
+.notiEle > dd a.link {color:#000;}
+
 div + .shopInfo {margin-top:2px;}
 .shopInfo {}
 .shopInfo > dt {font-weight:500; font-size:13px; color:#000;}
@@ -1118,6 +1156,9 @@ div + .shopInfo {margin-top:2px;}
 .inputBox + .iList {margin-top:2px;}
 .iList > li {}
 .iList > li + li {margin-top:4px;}
+
+.logoImg {text-align:center;}
+.logoImg > img {width:163px;}
 
 /* swiper reset */
 .swiper-pagination-bullet {width:10px; height:10px; background:#ccc; opacity:1;}

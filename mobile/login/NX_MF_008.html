@@ -31,12 +31,115 @@
 
         <!-- 본문영역 -->
         <section id="content" class="sectionLogin">
-            3 회원정보 입력
+            <div class="flowTitle">
+				<h1>회원정보 입력</h1>
+				<div class="flowView">
+					<span>1</span>
+					<span>2</span>
+					<span class="on">3</span>
+					<span>4</span>
+				</div>
+			</div>
 
-            <div class="btnArea">
-                <a href="#" class="btn">동의안함</a>
-                <a href="#" class="btn primary">동의</a>
-            </div>
+			<div class="contWrap2">
+				<div class="titTxt">
+					회원님의 개인정보가 보호받을 수 있도록 최선을 다하고 있습니다.
+				</div>
+				<section class="tblSection">
+					<h1>가입정보</h1>
+					<div class="table ty2">
+						<table>
+							<caption>회원 가입정보</caption>
+							<colgroup>
+								<col style="width:27%;">
+								<col style="width:73%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">아이디</th>
+									<td>
+										<div class="btnInp">
+											<div class="ele">
+												<div class="inputBox">
+													<input type="text" class="inp" placeholder="아이디 입력" />
+												</div>
+											</div>
+											<div class="ele">
+												<a href="#" class="btn">중복확인</a>
+											</div>
+										</div>
+										<p class="inpDesc">
+											영문 대 소문자,숫자를 포함하여 4 ~ 12자를 입력해주세요.
+										</p>
+										<p class="inpDesc txtColor1">사용 가능한 아이디입니다.</p>
+										<p class="inpDesc error">이미 사용중인 아이디입니다.</p>
+										<p class="inpDesc error">아이디를 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">비밀번호</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="비밀번호 입력" />
+										</div>
+										<p class="inpDesc">
+											영문 대 소문자,숫자를 포함하여 8 ~ 20자를 입력해주세요.
+										</p>
+										<p class="inpDesc error ">다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">비밀번호 <br />확인</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="비밀번호 입력" />
+										</div>
+										<p class="inpDesc error">비밀번호가 일치하지 않습니다.<br>다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>
+										<div class="hpNum">
+											<select name="" class="selectbox">
+												<option value="">선택</option>
+												<option value="">010</option>
+											</select>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+										</div>    
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">임직원 코드</th>
+									<td>
+										<div class="btnInp">
+											<div class="ele">
+												<div class="inputBox">
+													<input type="text" class="inp" placeholder="임직원코드 입력" />
+												</div>
+											</div>
+											<div class="ele">
+												<a href="#" class="btn">코드확인</a>
+											</div>
+										</div>
+										<p class="inpDesc txtColor1">사용 가능한 코드입니다.</p>
+										<p class="inpDesc error">사용할 수 없는 코드입니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<div class="btnArea">
+					<button href="#" class="btn primary" disabled="disabled">가입하기</button>
+				</div>
+			</div>
 
         </section>
         <!-- //본문영역 -->
