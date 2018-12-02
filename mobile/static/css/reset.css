@@ -64,11 +64,17 @@ em {font-style:normal; }
 
 .ellipsis {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .txtColor1 {color:#812990;}
+.txtColor2 {color:#c3244e;}
+.txtColor3 {color:#666;}
+.txtColor4 {color:#454545;}
+.txtColor5 {color:#000;}
+
 
 .hide {
 	position: absolute;
 	left: -9999px;
 }
+.underline {text-decoration:underline;}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 

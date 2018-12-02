@@ -937,6 +937,8 @@ a.btn { text-decoration: none !important; }
 }
 .btnArea .btn { flex: 1; }
 .btnArea .btn + .btn { margin-left: 5px; }
+.btnArea.single {justify-content: center;}
+.btnArea.single .btn {flex: 0.5;}
 
 /* 타이어 */
 .btnAction {

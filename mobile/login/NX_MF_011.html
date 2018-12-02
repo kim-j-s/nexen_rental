@@ -19,7 +19,6 @@
 
 <body>
     <div id="wrap">
-        
         <!-- 헤더영역 -->
         <header id="headerWrap">
             <div class="headerTopMenu">
@@ -32,7 +31,312 @@
 
         <!-- 본문영역 -->
         <section id="content" class="sectionLogin">
-            3. 회원정보 입력
+            <div class="flowTitle">
+				<h1>회원정보 입력</h1>
+				<div class="flowView">
+					<span>1</span>
+					<span>2</span>
+					<span class="on">3</span>
+					<span>4</span>
+				</div>
+			</div>
+
+			<div class="contWrap2">
+				<div class="titTxt">
+					사업자 정보를 모두 입력해 주세요.
+				</div>
+				<section class="tblSection">
+					<h1>기본정보</h1>
+					<div class="table ty2">
+						<table>
+							<caption>회원 가입정보</caption>
+							<colgroup>
+								<col style="width:27%;">
+								<col style="width:73%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">법인명</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="법인명 입력" />
+										</div>
+										<p class="inpDesc error">법인명을 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">업종</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="업종 입력" />
+										</div>
+										<p class="inpDesc error">업종을 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">업태</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="업태 입력" />
+										</div>
+										<p class="inpDesc error">업태를 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">대표자명</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="대표자명 입력" />
+										</div>
+										<p class="inpDesc error">대표자명을 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">대표자 <br />생년월일</th>
+									<td>
+										<div class="birthEle">
+											<div class="ele">
+												<select name="" class="selectbox">
+													<option value="">년</option>
+												</select>
+											</div>
+											<div class="ele">
+												<select name="" class="selectbox">
+													<option value="">월</option>
+												</select>
+											</div>
+											<div class="ele">
+												<select name="" class="selectbox">
+													<option value="">일</option>
+												</select>
+											</div>
+										</div>
+										<p class="inpDesc error">생년월일을 선택해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">대표자 성별</th>
+									<td>
+										<div class="radiobtnGroup">
+											<label for="rd1" class="radiobtn on">
+												<input type="radio" name="radioSelect" id="rd1" checked="checked"><span class="txt">남자</span>
+											</label>
+											<label for="rd2" class="radiobtn">
+												<input type="radio" name="radioSelect" id="rd2"><span class="txt">여자</span>
+											</label>
+										</div>
+										<p class="inpDesc error">성별을 선택해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">대표자 <br />휴대폰번호</th>
+									<td>
+										<div class="hpNum">
+											<select name="" class="selectbox">
+												<option value="">선택</option>
+												<option value="">010</option>
+											</select>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+										</div>
+										<p class="inpDesc error">다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">담당자명</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="담당자명 입력" />
+										</div>
+										<p class="inpDesc error">담당자명을 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">담당자 <br />휴대폰번호</th>
+									<td>
+										<div class="hpNum">
+											<select name="" class="selectbox">
+												<option value="">선택</option>
+												<option value="">010</option>
+											</select>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="숫자 입력">
+											</div>
+										</div>
+										<p class="inpDesc error">다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="tblSection">
+					<h1>가입정보</h1>
+					<div class="table ty2">
+						<table>
+							<caption>회원 가입정보</caption>
+							<colgroup>
+								<col style="width:27%;">
+								<col style="width:73%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">아이디</th>
+									<td>
+										<div class="btnInp">
+											<div class="ele">
+												<div class="inputBox">
+													<input type="text" class="inp" placeholder="아이디 입력" />
+												</div>
+											</div>
+											<div class="ele">
+												<a href="#" class="btn">중복확인</a>
+											</div>
+										</div>
+										<p class="inpDesc">
+											영문 대 소문자,숫자를 포함하여 4 ~ 12자를 입력해주세요.
+										</p>
+										<p class="inpDesc txtColor1">사용 가능한 아이디입니다.</p>
+										<p class="inpDesc error">이미 사용중인 아이디입니다.</p>
+										<p class="inpDesc error">아이디를 입력해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">비밀번호</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="비밀번호 입력" />
+										</div>
+										<p class="inpDesc">
+											영문 대 소문자,숫자를 포함하여 8 ~ 20자를 입력해주세요.
+										</p>
+										<p class="inpDesc error ">다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">비밀번호 <br />확인</th>
+									<td>
+										<div class="inputBox w100">
+											<input type="text" class="inp" placeholder="비밀번호 입력" />
+										</div>
+										<p class="inpDesc error">비밀번호가 일치하지 않습니다.<br>다시 입력해 주십시요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">담당자 <br />이메일</th>
+									<td>
+										<div class="emailGroup">
+											<div class="inputBox">
+												<input type="text" class="inp" placeholder="이메일 입력" />
+											</div>
+											<div class="inputBox">
+												<input type="text" class="inp" />
+											</div>
+										</div>
+										<div class="tblEle">
+											<select name="" class="selectbox">
+												<option value="">직접입력</option>
+											</select>
+										</div>
+										<p class="inpDesc error">이메일을 입력해 주세요.</p>
+									</td>
+								</tr>								
+								<tr>
+									<th scope="row">임직원 코드</th>
+									<td>
+										<div class="btnInp">
+											<div class="ele">
+												<div class="inputBox">
+													<input type="text" class="inp" placeholder="임직원코드 입력" />
+												</div>
+											</div>
+											<div class="ele">
+												<a href="#" class="btn">코드확인</a>
+											</div>
+										</div>
+										<p class="inpDesc txtColor1">사용 가능한 코드입니다.</p>
+										<p class="inpDesc error">사용할 수 없는 코드입니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="tblSection">
+					<h1>증빙자료</h1>
+					<ul class="list1">
+						<li>첨부 파일은 이미지(jpg, png, gif, pdf, bmp) 파일만 가능합니다.</li>
+					</ul>
+					<div class="table ty2">
+						<table>
+							<caption>회원 가입정보</caption>
+							<colgroup>
+								<col style="width:27%;">
+								<col style="width:73%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">사업자 <br />등록증사본</th>
+									<td>
+										<div class="fileBox preview-image">
+											<label for="upload1">사진첨부</label>
+											<input type="file" id="upload1" class="upload-hidden">
+										</div>
+										<div class="imgAttach">
+											<ul>
+												<li>
+													<div class="imgBox">
+														<img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지">
+														<a href="#" class="btnImgDel">첨부 이미지 삭제</a>
+													</div>
+												</li> 
+											</ul>  
+										</div>       
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">통장사본</th>
+									<td>
+										<div class="fileBox preview-image">
+											<label for="upload2">사진첨부</label>
+											<input type="file" id="upload2" class="upload-hidden">
+										</div>
+										<div class="groupMark">
+											<p><span class="mark1">개인사업자 또는 법인 통장사본을 첨부해주세요.</span></p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">차량등록증 <br />사본</th>
+									<td>
+										<div class="fileBox preview-image">
+											<label for="upload3">사진첨부</label>
+											<input type="file" id="upload3" class="upload-hidden">
+										</div>
+										<div class="groupMark">
+											<p><span class="mark1">개인사업자 또는 법인 차량등록증 사본을 첨부해주세요.</span></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<div class="btnArea">
+					<button class="btn primary" disabled="disabled">가입하기</button>
+				</div>
+			</div>
+
         </section>
         <!-- //본문영역 -->
 
