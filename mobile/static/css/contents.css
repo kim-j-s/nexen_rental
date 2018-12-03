@@ -56,6 +56,7 @@
 	font-size:12px; outline:0; transition: all .3s ease;
 }
 .inputBox .inp:disabled {background:#eee; color:#b5b5b5;}
+.inputBox .inp[readonly] {background:#eee; color:#b5b5b5;}
 .inputBox .inp:focus {border:1px solid #812990;}
 .inputBox .inp.error {border:1px solid #c3244e;}
 .inputBox.date .inp {background:url(../images/common/icon/icon_date.png) no-repeat right 10px center; background-size:15px 18px; -webkit-appearance: none; -moz-appearance: none;appearance: none;}
@@ -70,6 +71,7 @@
 
 .inpDesc { margin-top: 5px; font-size: 10px; }
 .inpDesc.error { color: #c3244e; }
+.btnTb.block { margin-top: 5px; }
 
 /* selectbox */
 .selectbox {display:inline-block; width:100%; height:35px; padding:0 30px 0 8px; border:1px solid #d5d5d5; font-size:12px; color:#666; outline:none; transition: all .3s ease;}
@@ -79,6 +81,8 @@
 .selectbox:focus {border:1px solid #812990;}
 .selectbox + .selectbox {margin-left:2px;}
 .selectGroup + .list4 {margin-top:12px;}
+.selectboxGroup .selectbox { width: 100%;}
+.selectboxGroup .selectbox:not(:first-child) { margin-top: 5px; margin-left: 0; }
 
 /* checkbox */
 .checkbox {display:inline-block; position:relative; min-height:20px; padding:0 0 0 25px;}
@@ -301,6 +305,7 @@ td .textarea {width:100%;}
 .mg3 { margin-top: 10px; }
 
 .mgt2 {margin-top:2px;}
+.mgt5 {margin-top:5px;}
 .mgt10 {margin-top:10px;}
 .mgt50 {margin-top:50px;}
 

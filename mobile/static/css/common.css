@@ -770,6 +770,7 @@ body.errorPage {
 }
 .headTitle:first-child { margin-top: 0; }
 .headTitle.noline { padding-bottom:0; border: none; }
+.headTitle + .table { margin-top: -5px; }
 
 .headTitle2 {
     margin-top: 20px;
@@ -777,6 +778,13 @@ body.errorPage {
     color:#000;
     font-size: 13px;
     font-weight: 500;
+}
+
+.headSubBtn {
+	margin-top: -35px;
+	margin-bottom: 10px;
+	text-align: right;
+	vertical-align: top;
 }
 
 
@@ -826,18 +834,22 @@ body.errorPage {
     background-color: #812990;
     color: #fff;
 }
-.btn.primary:disabled {
+.btn.primary:disabled, 
+.btn.primary[disabled] {
     border-color: #5a1d66;
     background-color: #5a1d66;
     color: #7f7f7f;
 }
 .btn.point {
-    border-radius: none;
+    border-radius: inherit;
     border-color: #b6985a;
     background-color: #b6985a;
 }
-/* 계산하기 */
-
+.btn.bgGray {
+    border-radius: inherit;
+    border-color: #888;
+    background-color: #888;
+}
 
 /* 보더 있는 버튼 */
 .btn.light {
@@ -854,6 +866,12 @@ body.errorPage {
     border-radius: calc(70px / 2);
 }
 
+.btn.xsmall {
+    height: 20px;
+	line-height: 18px;
+	padding: 0 8px;
+    font-size: 11px;
+}
 .btn.small {
     height: 24px;
     line-height: 22px;
@@ -908,6 +926,29 @@ a.btn { text-decoration: none !important; }
     background: url('../images/common/icon/icon_inner_consult.png') no-repeat;
     background-size: 100%;
     vertical-align: top;
+}
+/* 차량추가 */
+.innerIcon.add:after {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-left: 5px;
+    background: url('../images/common/icon/icon_inner_add.png') no-repeat;
+    background-size: 100%;
+    vertical-align: 0;
+}
+/* 삭제 */
+.innerIcon.del {vertical-align: 0;}
+.innerIcon.del:after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    background: url('../images/common/icon/icon_inner_add.png') no-repeat;
+    background-size: 100%;
+    vertical-align: 0;
 }
 
 /* 멤버십-자세히보기*/
