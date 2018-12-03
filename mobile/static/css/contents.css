@@ -83,6 +83,9 @@
 .selectGroup + .list4 {margin-top:12px;}
 .selectboxGroup .selectbox { width: 100%;}
 .selectboxGroup .selectbox:not(:first-child) { margin-top: 5px; margin-left: 0; }
+.selectboxGroup.inline { display: flex; }
+.selectboxGroup.inline .selectbox { flex: 1; }
+.selectboxGroup.inline .selectbox:not(:first-child) { margin-left: 5px; margin-top: 0; }
 
 /* checkbox */
 .checkbox {display:inline-block; position:relative; min-height:20px; padding:0 0 0 25px;}
