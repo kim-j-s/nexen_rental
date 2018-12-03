@@ -461,6 +461,10 @@ td .textarea {width:100%;}
 .yearGroup > .ele {display:table-cell; padding-right:2px;}
 .yearGroup > .ele + .ele {padding:0 0 0 3px;}
 
+.inputBtnGroup { display: inline-block; width: 100%; }
+.inputBtnGroup .inputBox { width: calc(100% - 85px); vertical-align: top; }
+.inputBtnGroup .btnTb { width: 80px; padding: 0; vertical-align: top;}
+
 .imgSpec > img {width:100%;}
 .zipCode > .addr {display: table; width:100%;}
 .zipCode > .addr .btn {display: table-cell; width:75px;}
