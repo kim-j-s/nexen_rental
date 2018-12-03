@@ -434,13 +434,13 @@
 /* 내게 맞는 렌탈찾기 팝업*/
 .popMyRental {}
 .popMyRental .popContent { padding: 20px 25px; }
-.popMyRental .mainIntro { position: static; background: none; }
+.popMyRental .mainIntro { position: static; background: none; min-height: inherit; }
 .popMyRental .mainIntro .headCopy { position: static; color: #000; font-size: 23px; font-family: 'Raleway'; font-weight: 800;}
 .popMyRental .mainIntro .subCopy { position: static; margin-top: 10px; color: #333; }
 .popMyRental .mainIntro .subCopy strong { color: #812990; font-weight: 500; }
 .popMyRental .tireSearch { margin-top: 35px; text-align: center; }
 .popMyRental .tireSearch .txt { color: #666; font-size: 11px; }
-.popMyRental .tireSearch .inner { margin-top: 5px; background: #e7e2f2; }
+.popMyRental .tireSearch .inner { height: auto; margin-top: 5px; padding: 15px 0; background: #e7e2f2; }
 .popMyRental .tireSearch .selectBox { background: #fff; border-color: #d5d5d5; }
 .popMyRental .tireSearch .selectBox:after {
 	content: '';
