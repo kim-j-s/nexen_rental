@@ -379,7 +379,7 @@ td .textarea {width:100%;}
 
 .detailPage .replyWrap {border-top:1px solid #c5c5c5; }
 .detailPage .replyWrap dl { margin-top: 30px; border: 1px solid #e5e5e5; }
-.detailPage .replyWrap dt { height: 40px; line-height: 40px; padding: 0 15px; border: 1px solid #e5e5e5; background: #f5f5f5; color: #333; font-weight: 700; font-size: 14px; }
+.detailPage .replyWrap dt { height: 40px; line-height: 40px; padding: 0 15px; border-bottom: 1px solid #e5e5e5; background: #f5f5f5; color: #333; font-weight: 700; font-size: 14px; }
 .detailPage .replyWrap dt:before { content:''; display: inline-block; width: 14px; height: 15px; margin-right: 5px; background:url('../images/common/icon/icon_reply.png') no-repeat left 50%; background-size: 100%; vertical-align: -3px;}
 .detailPage .replyWrap dd { padding: 20px 15px; color: #333; }
 
