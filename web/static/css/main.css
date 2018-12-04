@@ -33,11 +33,12 @@
  /* ==============================
  * main
  * ============================== */
-.mainVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual.jpg) no-repeat center; background-size:cover;}
-.mainVisual h1 {padding-top:182px; font-family:'Raleway'; font-weight:800; font-size:54px; color:#fff; text-align:center;}
+.mainVisual {position:relative; min-width:1200px; min-height:820px; background:url(../images/main/img_mainvisual.jpg) no-repeat center; background-size:cover;}
+.mainVisual h1 {padding-top:120px; font-family:'Raleway'; font-weight:800; font-size:54px; color:#fff; text-align:center; text-transform: uppercase;}
 .mainVisual h2 {padding-top:8px; font-size:30px; color:#eaeaea; text-align:center;}
+.mainVisual h2 > span {font-weight:500; font-size:30px; color:#eaeaea;}
 
-.mainLink {width:1200px; margin:0 auto; margin-top:45px; overflow:hidden;}
+.mainLink {width:1200px; margin:0 auto; margin-top:24px; overflow:hidden;}
 .mainFind {position:relative; width:564px; height:564px; float:left; padding-top:115px;}
 .mainFind + .mainFind {margin-left:72px;}
 .mainFind h3 {font-weight:400; font-size:30px; color:#fff; text-align:center; line-height:42px;}
@@ -50,7 +51,7 @@
 .mainFind > .bg2 {z-index:1; opacity:0;}
 .mainFind:hover .bg1 {opacity: 0;}
 .mainFind:hover .bg2 {opacity: 1;}
-.mainVisual > .goPage {position:absolute; bottom:29px; left:50%; display:inline-block; width:150px; margin-left:-75px; padding-top:28px; background:url(../images/main/icon_gopage.png) no-repeat center top; text-align:center; cursor:pointer; font-size:13px; color:#fff;}
+.mainVisual > .goPage {position:absolute; bottom:30px; left:50%; display:inline-block; width:150px; margin-left:-75px; padding-top:28px; background:url(../images/main/icon_gopage.png) no-repeat center top; text-align:center; cursor:pointer; font-size:13px; color:#fff;}
 
 .mainSection {min-width:1200px; padding:0 0 70px 0;}
 .mainSection > .inner {width:1200px; margin:0 auto; padding:62px 0 0 0;}
@@ -159,14 +160,14 @@
 #mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
 .mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
 
-.mainRightVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
+.mainRightVisual {position:relative; min-width:1200px; min-height:880px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
 .mainRightVisual > .inner {position:relative; width:1200px; margin:0 auto;}
 .mainRightVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainRightVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
 .mainRightVisual .centerGo {position:absolute; top:384px; left:0; display:inline-block; width:55px; height:151px; text-indent:-999px; overflow:hidden; background:url(../images/main/btn_main_right.png) no-repeat center;}
 .mainRightVisual h2 + .typeSwitch {margin-top:36px;}
 
-.mainLeftVisual {position:relative; min-width:1200px; min-height:950px; background:url(../images/main/img_mainvisual_left.jpg) no-repeat center; background-size:cover;}
+.mainLeftVisual {position:relative; min-width:1200px; min-height:915px; background:url(../images/main/img_mainvisual_left.jpg) no-repeat center; background-size:cover;}
 .mainLeftVisual > .inner {position:relative; width:1200px; margin:0 auto; text-align:center;}
 .mainLeftVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainLeftVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}

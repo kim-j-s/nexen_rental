@@ -264,11 +264,25 @@ $(function(){
 
 	// topbanner close
 	$('.topBanner').find('.topBclose').on('click', function(){
+		var winHeight = $(window).height();
 		$('.topBanner').animate({
 			height : '0px'
+		},300, function(){
+			$('.topBanner').remove();
+		});
+		$('.mainVisual').animate({
+			height : winHeight + 3
 		},300);
+
+		$('#nomore').prop('checked') ? $.cookie('TB', 'view', { expires: 7, path: '/' }) : $.cookie('TB', { expires: -1 });
+
 		StopInterval();
 	});
+
+	// cookie
+	(function TBview() {
+		if($.cookie('TB') == 'view') $('.topBanner').remove();;
+	})();
 
 	// 배너 이벤트
 	$(TBLeft).on('click', function(){
@@ -294,6 +308,7 @@ $(function(){
 		}
 		TBL(TBCnt);
 	});
+
 	$(TBRight).on('mouseenter', function(){
 		StopInterval();
 		$('.topBanner').find('.playBtn').addClass('on');
@@ -341,6 +356,7 @@ $(function(){
 		$('.topBanner').find('.now').html(TBCnt);
 	}
 	// TopRollingBanner End
+
 
 	var viewLeft = $('.mainFind.case1').find('a');
 	var viewRight = $('.mainFind.case2').find('a');
@@ -436,17 +452,38 @@ $(function(){
 		dots: true
 	});
 
-	// 공통
-	// window height
 	var winHeight = $(window).height();
+	console.log(winHeight + ' x');
 
 	$(window).resize(function(){
 		var winHeight = $(window).height();
-		$('.mainVisual').height(winHeight);
+		$('.mainVisual').height(winHeight + 3);
 	});
-	$('.mainVisual').height(winHeight);
-	$('.mainRightVisual').height(winHeight);
-	$('.mainLeftVisual').height(winHeight);
+
+	// 공통
+	visualHeight();
+
+	function visualHeight() {
+		var tbLng = $('.topBanner').length;
+		if (tbLng > 0)
+		{
+			console.log(tbLng);
+			$('.mainVisual').height(winHeight - 97);
+			$('.mainRightVisual').height(winHeight - 97);
+			$('.mainLeftVisual').height(winHeight - 97);
+		} else {
+			console.log(tbLng + ' x');
+			$('.mainVisual').height(winHeight + 3);
+			$('.mainRightVisual').height(winHeight + 3);
+			$('.mainLeftVisual').height(winHeight + 3);
+		}
+	}
+
+	function vH() {
+		// window height
+		
+		
+	}
 		
 
 	$('.goPage').click(function(){
