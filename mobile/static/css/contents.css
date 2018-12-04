@@ -86,6 +86,7 @@
 .selectboxGroup.inline { display: flex; }
 .selectboxGroup.inline .selectbox { flex: 1; }
 .selectboxGroup.inline .selectbox:not(:first-child) { margin-left: 5px; margin-top: 0; }
+.selectbox.w50p { width: 50%; }
 
 /* checkbox */
 .checkbox {display:inline-block; position:relative; min-height:20px; padding:0 0 0 25px;}
@@ -160,6 +161,8 @@
 /* textarea */
 .textarea { box-sizing: border-box; display:block; height: 150px; padding:10px; border:1px solid #d5d5d5; font-size:12px; color:#666; outline:0; transition: all .3s ease; resize:none;}
 .textarea:focus {border:1px solid #812990;}
+.textarea[disabled] { border-color: #dadada; background:#eee; color:#b5b5b5; }
+.textarea[readonly] { border-color: #dadada; background:#eee; color:#b5b5b5; }
 td .textarea {width:100%;}
 .textarea.w100 {width:100%;}
 .textarea + .byte {margin-top:10px;}
@@ -1210,3 +1213,17 @@ div + .shopInfo {margin-top:2px;}
 .swiper-pagination-bullet-active {background:#812990;}
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {margin:0;}
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet + .swiper-pagination-bullet {margin-left:5px;}
+
+
+ /* ==============================
+ *  나의정보
+ * ============================== */
+.textareaWrap.rentalShop { height: 55px; }
+.textareaWrap.rentalShop .textarea { height: 100%; }
+span.readInp { box-sizing: border-box; display: inline-block; width: 42px; height: 15px; margin-top: -3px; border: 1px solid #d5d5d5; background: #eee; vertical-align: middle; }
+
+.noItem { padding: 120px 0; }
+.noItem .txt { position:relative; padding-top: 80px; font-size: 13px; text-align: center; }
+.noItem .txt:after { content:''; display: block; position: absolute; top: 0; left: calc(50% - 35px);  width: 70px; height: 70px; background: url('../images/common/icon/icon_noitem.png') no-repeat; background-size: 100%; }
+.noItem .btnArea { display: block; margin-top: 30px; text-align: center; }
+.noItem .btnArea .btn { min-width: 140px; }

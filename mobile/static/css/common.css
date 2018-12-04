@@ -771,6 +771,7 @@ body.errorPage {
 .headTitle:first-child { margin-top: 0; }
 .headTitle.noline { padding-bottom:0; border: none; }
 .headTitle + .table { margin-top: -5px; }
+.headTitle + .list1 { margin-top: -5px; margin-bottom: 10px; }
 
 .headTitle2 {
     margin-top: 20px;
