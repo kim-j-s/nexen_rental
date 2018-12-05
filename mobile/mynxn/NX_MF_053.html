@@ -113,17 +113,17 @@
         <!-- 본문영역 -->
         <section id="content">
 			<div class="optionList">
-				<div class="optionTitle on"><span>걱정제로서비스</span></div>               
+				<div class="optionTitle on"><span>엔진오일서비스</span></div>               
 				<ul>
-					<li class="on"><a href="#">걱정제로서비스</a></li>
-					<li><a href="#">엔진오일서비스</a></li>
+					<li><a href="#">걱정제로서비스</a></li>
+					<li class="on"><a href="#">엔진오일서비스</a></li>
 				</ul>
 			</div> 
 
             <div class="contWrap">
                 <div class="contTitleWrap">
                     <div class="contTitle">
-                        <p class="txt">고객님께서 직접 걱정제로 서비스를 신청하실 수 있으며 2016년 렌탈 계약자에게 제공되는 서비스입니다.</p>
+                        <p class="txt">고객님께서 직접 엔진오일 서비스를 신청하실 수 있으며 2015년 렌탈 계약자에게 제공되는 서비스입니다.</p>
                     </div>
 				</div>    
                 
@@ -184,19 +184,32 @@
 								</td>
                             </tr>
                             <tr>
-                                <th scope="row">신청 타이어<br> 종류</th>
+                                <th scope="row">차대번호</th>
                                 <td>
 									<div class="inputBox w100">
-										<input type="text" class="inp" value="" disabled>
+										<input type="text" class="inp" value="">
 									</div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">신청 타이어<br> 본수</th>
+                                <th scope="row">엔진오일<br> 차량정보</th>
                                 <td>
-									<select name="" class="selectbox w50p">
-										<option value="">본수</option>
-									</select>
+                                    <div class="selectboxGroup">
+                                        <select name="" class="selectbox">
+                                            <option value="">유종</option>
+                                        </select>
+                                        <select name="" class="selectbox">
+                                            <option value="">연식</option>
+                                        </select>
+                                        <select name="" class="selectbox">
+                                            <option value="">배기량</option>
+                                        </select>
+                                    </div>
+                                    <ul class="list1 mgt5">
+                                        <li>정확한 부품의 배송을 위하여 고객님 차량에 맞는 내용을 기입하여 주시기 바랍니다.</li>
+                                        <li>오정보로 인하여 서비스를 실시할 수 없을 경우 현장에서 추가 비용이 발생할 수 있습니다.</li>
+                                        <li>자세한 내용을 모르실 경우 배송 요청사항에 차대번호(차량등록증에서 확인가능)를 입력해주세요.</li>
+                                    </ul>
                                 </td>
                             </tr>
                         </tbody>
@@ -216,13 +229,22 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">장착요청일</th>
+                                <th scope="row">오일서비스<br> 배송지</th>
+                                <td>
+                                    <div class="radiobtnGroup mg3">
+                                        <label class="radiobtn" for="service01"><input type="radio" name="radioService" id="service01" checked="checked"><span class="txt">대리점 배송</span></label>
+                                        <label class="radiobtn" for="service02"><input type="radio" name="radioService" id="service02"><span class="txt">자택 배송</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">교체 예정일</th>
                                 <td>
                                     <div class="inputBox w100 date">
                                         <input type="date" class="inp" id="date" value="20181030" />
                                         <label class="labelDate" for="date">20181030</label>
                                     </div>
-									<p class="inpDesc">※ 장착 요청일은 <span class="txtColor1">3일 이후 부터</span> 선택 가능합니다.</p>
+									<p class="inpDesc">※ 교체 요청일은 <span class="txtColor1">7일 이후 부터</span> 선택 가능합니다.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -235,10 +257,25 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">렌탈 전문점<br> 주소</th>
+                                <th scope="row">배송 주소</th>
                                 <td>
-                                    <div class="inputBox w100">
-                                        <input type="text" class="inp" value="" disabled>
+                                    <div class="zipCode">
+                                        <div class="addr">
+                                            <a href="#" class="btn"><span>우편번호</span></a>
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="addr">
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="addr">
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="" disabled>
+                                            </div>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -246,7 +283,7 @@
                                 <th scope="row">배송시<br> 요청사항</th>
                                 <td>
                                     <div class="textareaWrap">
-                                        <textarea name="" id="textarea" cols="30" rows="10" class="textarea w100" placeholder="장착 가능한 시간을 알려주시면 방문하도록 하겠습니다."></textarea>
+                                        <textarea name="" id="textarea" cols="30" rows="10" class="textarea w100" placeholder=""></textarea>
                                     </div>
                                     <div class="byte"><span class="txtColor1">0</span> / 2000 Byte</div>
                                 </td>
@@ -254,9 +291,48 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="checkbox mg3">
-                    <input type="checkbox" name="" id="agreeChk">
-                    <label for="agreeChk">걱정제로 서비스의 주문이 접수중일 때까지는 취소가 가능합니다. 다만 배송준비 중일 경우부터는 취소가 불가능합니다. 이에 동의합니다.</label>
+                
+                <div class="agreeTy1 mg1">
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="checkAll">
+                        <label for="checkAll">전체 약관 동의</label>
+                    </div>
+                </div>
+
+                <div class="agreeTy1Txt">
+                    <ul>
+                        <li>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="chk1">
+                                <label for="chk1">대리점 배송 외(자택, 타지역 배송) 선택시 엔진오일 교체 서비스가 1회 차감에 동의합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="chk2">
+                                <label for="chk2">오일 서비스 배송지를 자택 또는 타지역으로 지정하신 경우에는 렌탈전문점에서 무상교체 서비스를 제공하지 않습니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="chk3">
+                                <label for="chk3">제품 배송시 (주)오토앤에 고객님의 개인정보 중 성명, 전화번호, 주소지, 차량정보의 위탁에 동의합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="chk4">
+                                <label for="chk4">엔진오일교체 서비스의 주문이 접수중일 때까지는 취소가 가능합니다. 다만 배송준비 중일 경우부터는 취소가 불가능합니다. 이에 동의합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="chk5">
+                                <label for="chk5">엔진오일 발송은 SK사의 ZIC X7을 발송합니다. 고객님의 차종에 해당 엔진오일이 부적합할 경우 당사 선정 엔진오일 교체점 또는 고객님께서 지정하신 교체점에서 협의하시기 바랍니다. 상기 제품 외 타 엔진오일은 제공이 불가능합니다.</label>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
 
                 <div class="btnArea">

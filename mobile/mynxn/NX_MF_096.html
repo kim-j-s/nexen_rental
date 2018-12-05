@@ -112,28 +112,24 @@
 
         <!-- 본문영역 -->
         <section id="content">
-			<div class="optionList">
-				<div class="optionTitle on"><span>걱정제로서비스</span></div>               
-				<ul>
-					<li class="on"><a href="#">걱정제로서비스</a></li>
-					<li><a href="#">엔진오일서비스</a></li>
-				</ul>
-			</div> 
+            <div class="optionList">
+                <div class="optionTitle on"><span>엔진오일서비스</span></div>               
+                <ul>
+                    <li><a href="#">걱정제로서비스</a></li>
+                    <li class="on"><a href="#">엔진오일서비스</a></li>
+                </ul>
+            </div> 
 
             <div class="contWrap">
                 <div class="contTitleWrap">
                     <div class="contTitle">
-                        <p class="txt">고객님께서 직접 걱정제로 서비스를 신청하실 수 있으며 2016년 렌탈 계약자에게 제공되는 서비스입니다.</p>
+                        <p class="txt">고객님께서 직접 엔진오일 서비스를 신청하실 수 있으며 2015년 렌탈 계약자에게 제공되는 서비스입니다.</p>
                     </div>
 				</div>    
                 
-                <div style="height: 100px; border: 1px solid #00f; ">
-                    슬라이드 영역
-                </div>
-
                 <h2 class="headTitle noline">주문자 정보</h2>
                 <ul class="list1">
-                    <li><span class="readInp"></span> 적용된 항목은 직접 입력할 수 없으며 상단 리스트 주문번호를 선택하시면 해당 정보가 표기됩니다. </li>
+                    <li>휴대폰 번호는 숫자만 입력해주세요.</li>
                 </ul>
 				<div class="table ty2">
                     <table>
@@ -147,7 +143,7 @@
                                 <th scope="row">주문번호</th>
                                 <td>
 									<div class="inputBox w100">
-										<input type="text" class="inp" value="" disabled>
+										<input type="text" class="inp" value="O15000001192" readonly>
 									</div>
                                 </td>
                             </tr>
@@ -163,40 +159,55 @@
                                 <th scope="row">휴대폰번호</th>
                                 <td>
 									<div class="hpNum">
-										<select name="" class="selectbox" disabled>
-											<option value="" selected>선택</option>
+										<select name="" class="selectbox">
+											<option value="">선택</option>
+											<option value="" selected>010</option>
 										</select>
-										<div class="inputBox" >
-											<input type="text" class="inp" value="" disabled>
+										<div class="inputBox">
+											<input type="text" class="inp" value="1234" placeholder="숫자 입력">
 										</div>
 										<div class="inputBox">
-											<input type="text" class="inp" value="" disabled>
+											<input type="text" class="inp" value="1234" placeholder="숫자 입력">
 										</div>
 									</div>
+									<p class="inpDesc">※ 통화 가능한 휴대폰 번호를 입력해주세요.</p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">주문 차량<br>정보</th>
                                 <td>
 									<div class="inputBox w100">
-										<input type="text" class="inp" value="" disabled>
+										<input type="text" class="inp" value="현대자동차 / 트라제XG / 24주2600" readonly>
 									</div>
 								</td>
                             </tr>
                             <tr>
-                                <th scope="row">신청 타이어<br> 종류</th>
+                                <th scope="row">차대번호</th>
                                 <td>
 									<div class="inputBox w100">
-										<input type="text" class="inp" value="" disabled>
+										<input type="text" class="inp" value="3gh5g3j453h4g53">
 									</div>
-                                </td>
+								</td>
                             </tr>
                             <tr>
-                                <th scope="row">신청 타이어<br> 본수</th>
+                                <th scope="row">엔진오일<br> 차량정보</th>
                                 <td>
-									<select name="" class="selectbox w50p">
-										<option value="">본수</option>
-									</select>
+                                    <div class="selectboxGroup">
+                                        <select name="" class="selectbox">
+                                            <option value="">디젤</option>
+                                        </select>
+                                        <select name="" class="selectbox">
+                                            <option value="">2002년</option>
+                                        </select>
+                                        <select name="" class="selectbox">
+                                            <option value="">2,000CC</option>
+                                        </select>
+                                    </div>
+                                    <ul class="list1 mgt5">
+                                        <li>정확한 부품의 배송을 위하여 고객님 차량에 맞는 내용을 기입하여 주시기 바랍니다.</li>
+                                        <li>오정보로 인하여 서비스를 실시할 수 없을 경우 현장에서 추가 비용이 발생할 수 있습니다.</li>
+                                        <li>자세한 내용을 모르실 경우 배송 요청사항에 차대번호(차량등록증에서 확인가능)를 입력해주세요.</li>
+                                    </ul>
                                 </td>
                             </tr>
                         </tbody>
@@ -216,13 +227,22 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">장착요청일</th>
+                                <th scope="row">오일서비스<br> 배송지</th>
+                                <td>
+                                    <div class="radiobtnGroup mg3">
+                                        <label class="radiobtn" for="service01"><input type="radio" name="radioService" id="service01" checked="checked"><span class="txt">대리점 배송</span></label>
+                                        <label class="radiobtn" for="service02"><input type="radio" name="radioService" id="service02"><span class="txt">자택 배송</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">교체예정일</th>
                                 <td>
                                     <div class="inputBox w100 date">
                                         <input type="date" class="inp" id="date" value="20181030" />
                                         <label class="labelDate" for="date">20181030</label>
                                     </div>
-									<p class="inpDesc">※ 장착 요청일은 <span class="txtColor1">3일 이후 부터</span> 선택 가능합니다.</p>
+									<p class="inpDesc">※ 교체 요청일은 <span class="txtColor1">7일 이후 부터</span> 선택 가능합니다.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -230,15 +250,33 @@
                                 <td>
                                     <a href="#" class="btn primary btnTb">렌탈 전문점 찾기</a>
                                     <div class="textareaWrap rentalShop mgt5">
-                                        <textarea name="" cols="10" rows="10" class="textarea w100" disabled></textarea>
+                                        <textarea name="" cols="10" rows="10" class="textarea w100" readonly>
+주식회사 다인 리테일 군산지점
+(타이어테크 수송점)
+                                        </textarea>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">렌탈 전문점<br> 주소</th>
+                                <th scope="row">배송 주소</th>
                                 <td>
-                                    <div class="inputBox w100">
-                                        <input type="text" class="inp" value="" disabled>
+                                    <div class="zipCode">
+                                        <div class="addr">
+                                            <a href="#" class="btn"><span>우편번호</span></a>
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="06202" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="addr">
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="인천광역시 부평구 부평동 611" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="addr">
+                                            <div class="inputBox">
+                                                <input type="text" class="inp" value="부평아파트 12" readonly>
+                                            </div>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -246,7 +284,7 @@
                                 <th scope="row">배송시<br> 요청사항</th>
                                 <td>
                                     <div class="textareaWrap">
-                                        <textarea name="" id="textarea" cols="30" rows="10" class="textarea w100" placeholder="장착 가능한 시간을 알려주시면 방문하도록 하겠습니다."></textarea>
+                                        <textarea name="" id="textarea" cols="30" rows="10" class="textarea w100" placeholder="교체 가능한 시간을 알려주시면 방문하도록 하겠습니다."></textarea>
                                     </div>
                                     <div class="byte"><span class="txtColor1">0</span> / 2000 Byte</div>
                                 </td>
@@ -254,16 +292,14 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="checkbox mg3">
-                    <input type="checkbox" name="" id="agreeChk">
-                    <label for="agreeChk">걱정제로 서비스의 주문이 접수중일 때까지는 취소가 가능합니다. 다만 배송준비 중일 경우부터는 취소가 불가능합니다. 이에 동의합니다.</label>
-                </div>
 
                 <div class="btnArea">
                     <a href="#" class="btn">목록</a>
-                    <a href="#" class="btn primary">등록</a>
+                    <a href="#" class="btn light">수정</a>
+                    <a href="#" class="btn primary">삭제</a>
                 </div>    
             </div>
+        
         </section>
         <!-- //본문영역 -->
 
