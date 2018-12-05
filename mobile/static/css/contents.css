@@ -1093,6 +1093,7 @@ img.full { width: 100%;}
 .orderItem > .itemSub .cost + .cost {margin-top:5px;}
 .orderItem > .itemSub .cost > dt {display:table-cell; font-weight:400; font-size:11px; color:#000;}
 .orderItem > .itemSub .cost > dd {display:table-cell; font-weight:500; font-size:11px; color:#000; text-align:right;}
+.orderItem > .itemSub .cost > dd span {font-weight:500; font-size:15px; color:#666;}
 .orderItem > .itemSub .cost > dd strong {font-weight:500; font-size:18px; color:#c3244e;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
 .orderItem > .itemSub .payment { margin-bottom: -15px; padding: 10px 15px 10px; background: #feefef;}
