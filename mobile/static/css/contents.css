@@ -1095,6 +1095,7 @@ img.full { width: 100%;}
 .orderItem > .itemSub .cost > dd {display:table-cell; font-weight:500; font-size:11px; color:#000; text-align:right;}
 .orderItem > .itemSub .cost > dd strong {font-weight:500; font-size:18px; color:#c3244e;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
+.orderItem > .itemSub .payment { margin-bottom: -15px; padding: 10px 15px 10px; background: #feefef;}
 
 .orderView + .orderView {margin-top:44px;}
 .prodCost {display:table; width:100%; padding:0 10px; background:#eee;}
@@ -1159,6 +1160,8 @@ div + .rstTxt {margin-top:8px;}
 
 .compItemList {}
 .compItemList li:not(:first-child) { margin-top: 5px; }
+.compItem.shadow { box-shadow: 0 2px 2px rgba(229,229,229,.8);}
+
 
 .orderError {padding:0 15px; text-align:center;}
 .orderErrorInfo {margin-top:50px;}
