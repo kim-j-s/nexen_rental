@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>주문상세내역 – 신개념 타이어 렌탈서비스</title>
+    <title>나의결제관리 – 신개념 타이어 렌탈서비스</title>
     <link rel="shortcut icon" href="../static/images/common/favicon.ico">
     <link href="../static/css/lib/swiper.css" rel="stylesheet">
     <link href="../static/css/reset.css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         <header id="headerWrap">
             <div class="headerTopMenu">
                 <button class="back">이전화면</button>
-                <h1 class="mainTitle">주문상세내역</h1>
+                <h1 class="mainTitle">나의결제관리</h1>
                 <button class="totalMenu">전체메뉴</button>
             </div>
 
@@ -111,144 +111,136 @@
         <!-- //헤더영역 -->
 
         <!-- 본문영역 -->
-        <section id="content">
+        <section id="content" class="sectionMynxn">
+            <div class="optionList">
+                <div class="optionTitle on"><span>나의 결제정보</span></div>               
+                <ul>
+                    <li class="on"><a href="#">나의 결제정보</a></li>
+                    <li><a href="#">연체금 관리</a></li>
+                </ul>
+            </div> 
+
             <div class="contWrap">
-                <div class="compItem shadow">
-                    <p class="title">
-                        2016-11-30 / O16000004929
-                    </p>
+                <p class="headMessage">
+					<strong>김넥센</strong>고객님<br>
+					<strong>2016년 12월</strong> 결제정보 입니다.
+				</p>
 
-                    <div class="orderItem">
-                        <div class="prod">
-                            <div class="thumb">
-                                <img src="../static/images/sample/product2.png" alt="">
-                            </div>
-                            <div class="cont">
-                                <p class="state">
-                                    <span class="ty1">계약접수</span>
-                                </p>
-                                <div class="prodName">
-                                    <p class="txt1">[알뜰렌탈][온라인]</p>
-                                    <p class="txt2">
-                                        <strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
-                                    </p>
-                                </div>
-                                <ul class="prodi">
-                                    <li>장착요청일 : 2016-12-12  (2본)</li>
-                                    <li class="opt">
-                                        <span>2본</span>
-                                        <span>12개월</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="itemSub">
-                            <dl class="cost">
-                                <dt>월 렌탈료</dt>
-                                <dd>
-                                    <span class="won">26,500</span>원
-                                </dd>
-                            </dl>
-                            <dl class="cost">
-                                <dt>등록비</dt>
-                                <dd>
-                                    <span class="won">25,000</span>원
-                                </dd>
-                            </dl>
-                            <dl class="cost payment">
-                                <dt>등록비 결제금액</dt>
-                                <dd>
-                                    <strong class="won">25,000</strong>원
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <button type="button" class="btnCancel"><span>주문취소</span></button>
-                </div>
+				<div class="paymentInfoWrap">
+					<div class="paymentInfo">
+						<dl class="cost">
+							<dt>총 청구금액</dt>
+							<dd>
+								<span class="won">46,600</span>원
+							</dd>
+						</dl>
+						<a href="#" class="btn primary block">전월 납부내역 보기</a>
+					</div>
+					<div class="paymentInfo">
+						<dl class="cost">
+							<dt> 총 <span class="underline">10건</span>의 연체내역</dt>
+							<dd>
+								<span class="won">46,600</span>원
+							</dd>
+						</dl>
+						<a href="#" class="btn primary block">연체금 보기</a>
+					</div>
+				</div>
 
-                <h2 class="headTitle noline">주문자 정보</h2>
-				<div class="table ty3">
-                    <table>
-                        <caption>주문자 정보 테이블</caption>
-                        <colgroup>
-                            <col style="width:27%;" />
-                            <col style="width:73%;" />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">성명</th>
-                                <td class="tlNobd tc">
-                                    김넥센
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">휴대폰번호</th>
-                                <td class="tlNobd tc">
-                                    010-1234-5566
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">이메일</th>
-                                <td class="tlNobd tc">
-                                    acdd1212@gmail.com
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">주소</th>
-                                <td class="tlNobd tc">
-                                    [04780] 서울특별시 성동구<br>
-                                    뚝섬로 3길 16 (성수동 1가) 220 하하 
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">차량정보</th>
-                                <td class="tlNobd tc">
-                                    현대자동차 2015 쏘나타 Hybrid<br>
-                                    12나 1234
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>    
+				<h2 class="headTitle noline">청구요금</h2>
+				<ul class="compItemList">
+					<li>
+						<div class="compItem">
+							<p class="title">
+								주문번호(<span>O16000004929</span>)
+							</p>
+		
+							<div class="orderItem">
+								<div class="prod">
+									<div class="thumb">
+										<img src="../static/images/sample/product2.png" alt="">
+									</div>
+									<div class="cont">
+										<div class="prodName">
+											<p class="txt1">[알뜰렌탈]</p>
+											<p class="txt2">
+												<strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
+											</p>
+										</div>
+										<ul class="prodi">
+											<li class="opt">
+												<span>54더 1212</span>
+												<span>2본</span>
+												<span>1년</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="itemSub">
+									<dl class="cost">
+										<dt>납부방법</dt>
+										<dd>
+											<span>계좌이체</span>
+										</dd>
+									</dl>
+									<dl class="cost payment">
+										<dt>청구금액</dt>
+										<dd>
+											<strong class="won">21,800</strong>원
+										</dd>
+									</dl>
+								</div>
+							</div>
+							
+							<button type="button" class="btnCancel"><span>주문취소</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="compItem">
+							<p class="title">
+								주문번호(<span>O16000004929</span>)
+							</p>
+		
+							<div class="orderItem">
+								<div class="prod">
+									<div class="thumb">
+										<img src="../static/images/sample/product2.png" alt="">
+									</div>
+									<div class="cont">
+										<div class="prodName">
+											<p class="txt1">[알뜰렌탈]</p>
+											<p class="txt2">
+												<strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
+											</p>
+										</div>
+										<ul class="prodi">
+											<li class="opt">
+												<span>54더 1212</span>
+												<span>4본</span>
+												<span>36개월</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="itemSub">
+									<dl class="cost">
+										<dt>납부방법</dt>
+										<dd>
+											<span>카드납부</span>
+										</dd>
+									</dl>
+									<dl class="cost payment">
+										<dt>청구금액</dt>
+										<dd>
+											<strong class="won">21,800</strong>원
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
                 
-                <h2 class="headTitle noline">배송지 정보</h2>
-				<div class="table ty3">
-                    <table>
-                        <caption>배송지 정보 테이블</caption>
-                        <colgroup>
-                            <col style="width:27%;" />
-                            <col style="width:73%;" />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">장착요청일</th>
-                                <td class="tlNobd tc">
-                                    2016.12.12
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">장착점명</th>
-                                <td class="tlNobd tc">
-                                    애니카랜드 성수점
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">장착점주소</th>
-                                <td class="tlNobd tc">
-                                    [04800] 서울특별시<br> 
-                                    성동구 동일로 241,101호 (송정동,1층)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">장착점<br>전화번호 </th>
-                                <td class="tlNobd tc">
-                                    02-315-1122
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>    
-
             </div>
         </section>
         <!-- //본문영역 -->

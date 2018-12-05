@@ -1096,7 +1096,7 @@ img.full { width: 100%;}
 .orderItem > .itemSub .cost > dd span {font-weight:500; font-size:15px; color:#666;}
 .orderItem > .itemSub .cost > dd strong {font-weight:500; font-size:18px; color:#c3244e;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
-.orderItem > .itemSub .payment { margin-bottom: -15px; padding: 10px 15px 10px; background: #feefef;}
+.orderItem > .itemSub .payment { margin-bottom: -15px; padding: 6px 15px; background: #feefef;}
 
 .orderView + .orderView {margin-top:44px;}
 .prodCost {display:table; width:100%; padding:0 10px; background:#eee;}
