@@ -1230,3 +1230,19 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .noItem .txt:after { content:''; display: block; position: absolute; top: 0; left: calc(50% - 35px);  width: 70px; height: 70px; background: url('../images/common/icon/icon_noitem.png') no-repeat; background-size: 100%; }
 .noItem .btnArea { display: block; margin-top: 30px; text-align: center; }
 .noItem .btnArea .btn { min-width: 140px; }
+.noItem.short { padding: 50px 0; }
+
+.benefitList { padding: 25px 15px 5px; border-top: 1px solid #c5c5c5; border-bottom: 1px solid #c5c5c5; background: #f5f5f5; }
+.benefitList .benefitTitle { color: #353535; font-size: 20px; font-weight: 700; text-align: center; }
+.benefitList ul { margin-top: 15px; border-top: 1px solid #353535; font-size: 0; }
+.benefitList li { display: flex; flex-direction: column; justify-content: center; position: relative; box-sizing: border-box; min-height: 90px; padding: 20px 0 20px 65px; vertical-align: middle; }
+.benefitList li:not(:first-child) { background: url('../images/mynxn/bg_dotted_line.png') repeat-x left top; background-size: 3px 1px; }
+.benefitList li:before { content:''; display: inline-block; position: absolute; top: calc(50%-25px); left: 0; width: 50px; height: 50px; background-size: 100%;  vertical-align: middle;}
+.benefitList li:nth-child(1):before { background-image: url('../images/mynxn/icon_benefit1.png');}
+.benefitList li:nth-child(2):before { background-image: url('../images/mynxn/icon_benefit2.png');}
+.benefitList li:nth-child(3):before { background-image: url('../images/mynxn/icon_benefit3.png');}
+.benefitList li:nth-child(4):before { background-image: url('../images/mynxn/icon_benefit4.png');}
+.benefitList .num { color: #812990; font-size: 14px; /*font-family: 'Raleway';*/ font-weight: 700; }
+.benefitList .tit { margin-top: 3px; color: #444; font-size: 14px; font-weight: 700; }
+.benefitList .txt { margin-top: 5px; color: #666; font-size: 11px; }
+
