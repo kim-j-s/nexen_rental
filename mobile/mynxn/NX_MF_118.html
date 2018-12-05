@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>주문상세내역 – 신개념 타이어 렌탈서비스</title>
+    <link rel="shortcut icon" href="../static/images/common/favicon.ico">
+    <link href="../static/css/lib/swiper.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="skipnav">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#content">본문 바로가기</a>
+    </div>
+
+    <div id="wrap">        
+        <!-- 헤더영역 -->
+        <header id="headerWrap">
+            <div class="headerTopMenu">
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">주문상세내역</h1>
+                <button class="totalMenu">전체메뉴</button>
+            </div>
+
+            <!-- 전체 메뉴 -->
+            <nav class="gnb" id="gnb">
+                <div class="overlay"></div>
+                <div class="inner">
+                    <div class="navHead">
+                        <h2 class="hide">주메뉴</h2>
+                        <button class="closeTotalMenu">메뉴닫기</button>
+                        
+                        <!-- 로그아웃 상태일 때 -->
+                        <!-- <div class="loginArea">
+                            <a href="#" class="home">홈으로 가기</a>
+                            <a href="#" class="btn">로그인</a>
+                            <a href="#" class="btn">회원가입</a>
+                        </div> -->
+
+                        <!-- 로그인 상태일 때 -->
+                        <div class="loginArea">
+                            <a href="#" class="home">홈으로 가기</a>
+                            <a href="#" class="btn logout">로그아웃</a> <!-- 로그아웃 시 class="logout" 추가 -->
+                            <a href="#" class="btn">나의정보</a>
+                        </div>
+                        
+                        <div class="menuArea">
+                            <ul>
+                                <li><a href="#"><span class="cart">장바구니</span></a></li>
+                                <li><a href="#"><span class="delivery">주문/배송조회</span></a></li>
+                                <li><a href="#"><span class="item">이용상품조회</span></a></li>
+                                <li><a href="#"><span class="payment">나의결제</span></a></li>
+                            </ul>
+                        </div>
+                    </div>          
+
+                    <div class="navBody">
+                        <h3 class="hide">전체메뉴</h3>
+                        <div class="nav">
+                            <ul class="dep1">
+                                <li class="on"><a href="#">상품</a></li>
+                                <li><a href="#">타이어</a></li>
+                                <li><a href="#">멤버십/혜택</a></li>
+                                <li><a href="#">고객지원</a></li>
+                            </ul>
+                        </div>
+                        <div class="subnav">
+                            <ul class="dep2 on">
+                                <li class="on"><a href="#">렌탈상품</a></li>
+                                <li><a href="#">일시불상품</a></li>
+                                <li><a href="#">패키지상품</a></li>
+                                <li><a href="#">단체상품</a></li>
+                                <li><a href="#">결합상품</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">승용차용</a></li>
+                                <li><a href="#">SUV용</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">멤버십</a></li> 
+                                <li><a href="#">제휴카드</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">걱정제로서비스   </a></li>   
+                                <li><a href="#">엔진오일서비스</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                                <li><a href="#">NEWS &amp; TIP</a></li>
+                            </ul>
+                        </div>                                
+                    </div>  
+                    <div class="navFoot">
+                        <p class="csInfo">고객센터 이용안내 <a href="tel:1855-0100" class="num">1855-0100</a></p>
+                        <p>평일 09:00~18:00 (토요일, 공휴일 휴무)</p>
+                    </div>
+                </div>                   
+            </nav>
+            <!--// 전체 메뉴 -->
+        </header>
+        <!-- //헤더영역 -->
+
+        <!-- 본문영역 -->
+        <section id="content">
+            <div class="contWrap">
+                <div style="height: 100px; border: 1px solid #00f; ">
+                    슬라이드 영역
+                </div>
+
+                <h2 class="headTitle noline">주문자 정보</h2>
+				<div class="table ty3">
+                    <table>
+                        <caption>주문자 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width:27%;" />
+                            <col style="width:73%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">성명</th>
+                                <td class="tlNobd tc">
+                                    김넥센
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대폰번호</th>
+                                <td class="tlNobd tc">
+                                    010-1234-5566
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">이메일</th>
+                                <td class="tlNobd tc">
+                                    acdd1212@gmail.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주소</th>
+                                <td class="tlNobd tc">
+                                    [04780] 서울특별시 성동구<br>
+                                    뚝섬로 3길 16 (성수동 1가) 220 하하 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">차량정보</th>
+                                <td class="tlNobd tc">
+                                    현대자동차 2015 쏘나타 Hybrid<br>
+                                    12나 1234
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+                
+                <h2 class="headTitle noline">배송지 정보</h2>
+				<div class="table ty3">
+                    <table>
+                        <caption>배송지 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width:27%;" />
+                            <col style="width:73%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">장착요청일</th>
+                                <td class="tlNobd tc">
+                                    2016.12.12
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">장착점명</th>
+                                <td class="tlNobd tc">
+                                    애니카랜드 성수점
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">장착점주소</th>
+                                <td class="tlNobd tc">
+                                    [04800] 서울특별시<br> 
+                                    성동구 동일로 241,101호 (송정동,1층)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">장착점<br>전화번호 </th>
+                                <td class="tlNobd tc">
+                                    02-315-1122
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+
+            </div>
+        </section>
+        <!-- //본문영역 -->
+
+        <!-- 푸터영역 -->
+        <footer id="footerWrap">
+            <div class="footerTop">
+                <div class="footerLink">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="etc">개인정보처리방침</a>
+                    <a href="https://www.nexentire.com/kr/" target="_blank" title="새창열림">기업소개</a>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <address>경상남도 양산시 충렬로 355 넥센타이어주식회사</address>
+                <p>    
+                    <span>대표이사 : 강호찬 </span>
+                    <span>사업자등록번호 : 621-81-10769</span>
+                </p>
+                <p>
+                    <span>통신판매업신고번호 : 제2015-경남양산-0139호</span>
+                    <span>대표번호 : <a href="tel:1855-0100">1855-0100</a></span>
+                </p>
+            </div>
+            <p class="copyright">COPYRIGHT &copy; NEXTLEVEL. ALL RIGHTS RESERVED.</p>
+        </footer>
+        <!-- //푸터영역 -->
+        
+        <!-- Top버튼 -->
+        <div class="btnGoTop"><a href="#">Top으로 이동</a></div>
+        <!-- //Top버튼 -->
+
+        <!-- 하단 고정 메뉴 -->
+        <div class="floatingWrap fixBotNav">
+            <nav class="floatingMenu">            
+                <ul>
+                    <li class="mypage"><a href="#"><span>나의 정보</span></a></li>
+                    <li class="rental"><a href="#"><span>내게 맞는 렌탈찾기</span></a></li>
+                    <li class="consult"><a href="#"><span>상담하기</span></a></li>
+                    <li class="store"><a href="#"><span>가까운 전문점 찾기</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="floatingCont mypage">
+                <ul>
+                    <li><a href="#">주문배송조회</a></li>
+                    <li><a href="#">내이용상품조회</a></li>
+                    <li><a href="#">나의결제관리</a></li>
+                    <li><a href="#">서비스신청관리</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">인증번호발급</a></li>
+                </ul>
+                <button type="button" class="btnClose">닫기</button>
+            </div>
+
+            <div class="floatingCont consult">
+                <ul>
+                    <li><a href="#">전화상담</a></li>
+                    <li><a href="#">가입상담</a></li>
+                    <li><a href="#">렌탈제품상담</a></li>
+                    <li><a href="#">무료문자</a></li>
+                    <li><a href="#">1:1상담</a></li>
+                </ul>
+                <button type="button" class="btnClose">닫기</button>
+            </div>  
+        </div> 
+        <!--// 하단 고정 메뉴 -->
+        
+    </div>
+    
+</body>
+</html>
