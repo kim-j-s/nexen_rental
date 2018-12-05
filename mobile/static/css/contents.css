@@ -205,7 +205,7 @@ td .textarea {width:100%;}
 .list1 > li:before {content:''; position:absolute; top:7px; left:0; width:2px; height:2px; border-radius:2px; background:#666;}
 .list1 > li + li {margin-top:5px;}
 .list1 + .btnArea {margin-top:12px;}
-.list1 > li > ul > li { position: relative; margin-top: 8px; padding-left: 6px; font-size: 11px; line-height: 1.4; }
+.list1 > li > ul > li { position: relative; margin-top: 6px; padding-left: 6px; font-size: 11px; line-height: 1.4; }
 .list1 > li > ul > li:before {content:''; position:absolute; top:.6em; left:0; width:3px; height:1px; background:#666;}
 /* .list1 > li > ul > li:not(:first-child) { margin-top: 6px; } */
 
@@ -1066,11 +1066,16 @@ img.full { width: 100%;}
 .orderSlide .swiper-button-next {right:0px; background-position:-20px 0px;}
 .orderSlide .swiper-pagination {bottom:-28px;}
 
-.orderItem {}
-.orderItem > .prod {display:table; width:100%; padding:18px 0 18px 0; table-layout:fixed;}
-.orderItem > .prod > .thumb {display:table-cell; width:100px; text-align:center; vertical-align:middle;}
+.orderItem { cursor: pointer; }
+.orderItem > .prod { display:table; width:100%; padding:18px 0 18px 0; table-layout:fixed;}
+.orderItem > .prod > .thumb { display:table-cell; width:100px; text-align:center; vertical-align:middle;}
 .orderItem > .prod > .thumb img {max-width:100%;}
 .orderItem > .prod > .cont {display:table-cell; vertical-align:middle; padding-right:30px;}
+.orderItem > .prod > .cont > .state {margin-bottom: 12px;}
+.orderItem > .prod > .cont > .state span { display: inline-block; width: 50px; height: 17px; line-height: 15px; font-size: 11px; text-align: center; }
+.orderItem > .prod > .cont > .state span.ty1 { border: 1px solid #812990; color: #812990; }
+.orderItem > .prod > .cont > .state span.ty2 { border: 1px solid #999; color: #999; }
+.orderItem > .prod > .cont > .state span.ty3 { border: 1px solid #c3244e; color: #c3244e; }
 .orderItem > .prod .prodName {}
 .orderItem > .prod .prodName .txt1 {padding-bottom:5px; font-weight:400; font-size:11px;}
 .orderItem > .prod .prodName .txt2 strong {display:block; font-weight:500; font-size:15px; color:#000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
@@ -1143,12 +1148,17 @@ div + .rstTxt {margin-top:8px;}
 .compTxt > .subTxt {display:block; margin-top:25px; font-weight:400; font-size:13px; color:#888; line-height:18px;}
 .compTxt > .subTxt + .subTxt {margin-top:20px;}
 .compTxt + .compItem {margin-top:47px;}
-.compItem {border:1px solid #e1e1e1; border-radius:3px;}
+
+.compItem { position: relative; border:1px solid #e1e1e1; border-radius:3px;}
 .compItem > .title {padding:0 15px; font-weight:400; font-size:14px; color:#000; background:#eee; line-height:50px;}
 .compItem > .title > span {color:#b6985a;}
 .compItem > .orderItem .itemSub {height:auto; margin:0; padding:9px 0 15px 0; border-top:1px dashed #e1e1e1}
 .compItem + .list1 {margin-top:7px;}
 .compItem + .list1 + .btnArea {margin:12px 0 50px 0;}
+.compItem .btnCancel { position: absolute; top: 15px; right: 15px; }
+
+.compItemList {}
+.compItemList li:not(:first-child) { margin-top: 5px; }
 
 .orderError {padding:0 15px; text-align:center;}
 .orderErrorInfo {margin-top:50px;}

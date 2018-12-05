@@ -1023,5 +1023,21 @@ a.btn { text-decoration: none !important; }
 }
 .btnAction.block { display: block; }
 
+.btnCancel { 
+	box-sizing: border-box; height: 20px; line-height: 18px; padding: 0 7px; 
+	border: 1px solid #000; border-radius: 10px;
+	background: #fff;
+	color: #333; font-size: 11px; font-weight: 300; 
+}
+.btnCancel span:after {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-left: 3px;
+	background: url('../images/common/btn/btn_cancel.png') no-repeat;
+	background-size: 100%;
+	vertical-align: 0;
+}
 
 
