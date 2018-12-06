@@ -186,6 +186,25 @@ $(function(){
 		$('.orderSlide').find('.swiper-button-prev').hide();
 	}
 
+	// 나의정보
+	var itemSlideLng = $('.itemSlide').find('.swiper-slide').length;
+	if (itemSlideLng > 1)
+	{
+		var swiper = new Swiper('.itemSlide', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+				pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+	} else if (itemSlideLng == 1)
+	{
+		$('.itemSlide').find('.swiper-button-next').hide();
+		$('.itemSlide').find('.swiper-button-prev').hide();
+	}
+
 	//타이어 간편 조회 툴팁 레이어
 	var toolTipInfo = $('.easySearchInfo .toolTipInfo')
 	$('.searchOptList .tireSize').click(function(){	
