@@ -239,6 +239,7 @@ td .textarea {width:100%;}
 
 .table.mg1 {margin-top:30px;}
 .table.mg2 {margin-top:15px}
+.table table { table-layout: fixed; }
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .link {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .table .btn {
@@ -252,6 +253,10 @@ td .textarea {width:100%;}
 	border-color: #555;
 	background-color: #555;
 	border-radius: inherit;
+}
+.table .btn[disabled] {
+	border-color: #bcbcbc;
+	background-color: #bcbcbc;
 }
 .table .btn.primary {
 	color: #fff;
@@ -1383,6 +1388,18 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .periodSearch .period:after {content: '~'; position: absolute; left: calc(50% - 7px); width: 13px; line-height: 35px; font-size: 12px; text-align: center; vertical-align: middle; }
 .periodSearch .period .inputBox { flex: 1; }
 .periodSearch .period .inputBox:first-child { margin-right: 13px; }
+
+/* 결제 신청/변경 */
+.contWrap.mynxn { padding: 0 0 50px !important; background: #e7e7e7; }
+.contWrap.mynxn .tabMenu { margin-top: 5px; background: #fff; }
+.contWrap.mynxn .tabMenu .tabList.etc li { border-top: 1px solid #dedee1; }
+.contWrap.mynxn .tabMenu .tabList.etc li.on { border-top: 1px solid #fff; }
+.contWrap.mynxn .tabMenu .tabContent { padding-bottom: 20px !important; border-bottom: 1px solid #d4d4d4; }
+.contWrap.mynxn .btnArea { padding: 0 15px; }
+
+.slideCont.payment { background: #fff; }
+.slideCont.payment .inner { background: #f9f9f9 url('../images/mynxn/bg_dotted_line2.png') repeat-x left top; background-size: 6px 1px;}
+.slideCont.payment .inner .paymentItem { padding: 15px 0; }
 
 
 
