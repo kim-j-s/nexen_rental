@@ -77,6 +77,13 @@ $(function(){
 		});
 	});
 
+	// 나의정보 - 기간선택 버튼
+	$('.sortBtn li').on('click', function(e){
+		e.preventDefault();
+		
+		$(this).addClass('on').siblings().removeClass('on');
+	})
+
 	
 	/* ==============================
 	 * gnb 

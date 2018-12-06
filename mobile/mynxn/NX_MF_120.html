@@ -36,133 +36,101 @@
         <!-- 본문영역 -->
         <section id="content">
             <div class="periodSearch">
-                
-                <div class="date">
-
+                <ul class="sortBtn">
+                    <li class="on"><a href="#">1개월</a></li>
+                    <li><a href="#">3개월</a></li>
+                    <li><a href="#">6개월</a></li>
+                </ul>                
+                <div class="period">
+                    <div class="inputBox date">
+                        <input type="date" class="inp" id="dateStart" />
+                        <label class="labelDate" for="dateStart">날짜선택</label>
+                    </div>
+                    <div class="inputBox date">
+                        <input type="date" class="inp" id="dateEnd" />
+                        <label class="labelDate" for="dateEnd">날짜선택</label>
+                    </div>
                 </div>
                 <button type="button" class="btn primary block"><span class="innerIcon search">검색</span></button>
             </div>
 
             <div class="contWrap">
-				<div class="payinfoWrap">
-                    <p class="topinfo">
-                        <strong class="txtColor1">김넥센</strong>고객님<br>
-                        <strong>2016년 12월</strong> 결제정보 입니다.
-                    </p>
+                <!-- 납부내역이 없는 경우 -->
+                <div class="noItem">
+                    <p class="txt">전월 납부 내역이 없습니다.</p>
+                </div>
 
-					<div class="payinfo">
-						<dl class="cost">
-							<dt>총 청구금액</dt>
-							<dd>
-								<strong class="won">46,600</strong> 원
-							</dd>
-						</dl>
-						<a href="#" class="btn primary block">전월 납부내역 보기</a>
-                    </div>
-                    
-					<div class="payinfo">
-						<dl class="cost">
-							<dt> 총 <span class="underline">10건</span>의 연체내역</dt>
-							<dd>
-								<strong class="won">46,600</strong> 원
-							</dd>
-						</dl>
-						<a href="#" class="btn primary block">연체금 보기</a>
-					</div>
-				</div>
-
-				<h2 class="headTitle noline">청구요금</h2>
-				<ul class="compItemList">
+                <!-- 납부내역 리스트 -->
+                <ul class="compItemList">
 					<li>
-						<div class="compItem">
+						<div class="compItem2">
 							<p class="title">
-								주문번호(<span>O16000004929</span>)
+                                D16000004929
+                                <span class="date">2016-11-25</span>
 							</p>
-		
-							<div class="orderItem">
-								<div class="prod">
-									<div class="thumb">
-										<img src="../static/images/sample/product2.png" alt="">
-									</div>
-									<div class="cont">
-										<div class="prodName">
-											<p class="txt1">[알뜰렌탈]</p>
-											<p class="txt2">
-												<strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
-											</p>
-										</div>
-										<ul class="prodi">
-											<li class="opt">
-												<span>54더 1212</span>
-												<span>2본</span>
-												<span>1년</span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="itemSub">
-									<dl class="cost">
-										<dt>납부방법</dt>
-										<dd>
-											<span>계좌이체</span>
-										</dd>
-									</dl>
-									<dl class="cost payment">
-										<dt>청구금액</dt>
-										<dd>
-											<strong class="won">21,800</strong> 원
-										</dd>
-									</dl>
-								</div>
-							</div>
+                            
+                            <div class="paymentItem">
+                                <div class="prodName">
+                                    <p class="txt">
+                                        <strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
+                                    </p>
+                                </div>
+                                <div class="infowrap">
+                                    <dl>
+                                        <dt>은행/카드사</dt>
+                                        <dd>우리은행</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계좌/카드번호</dt>
+                                        <dd>655**********499</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소유주</dt>
+                                        <dd>김넥센</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>월 렌탈료</dt>
+                                        <dd><span>21,800</span> 원</dd>
+                                    </dl>
+                                </div>
+                            </div>
 						</div>
 					</li>
 					<li>
-						<div class="compItem">
+						<div class="compItem2">
 							<p class="title">
-								주문번호(<span>O16000004929</span>)
+                                D16000004929
+                                <span class="date">2016-11-25</span>
 							</p>
-		
-							<div class="orderItem">
-								<div class="prod">
-									<div class="thumb">
-										<img src="../static/images/sample/product2.png" alt="">
-									</div>
-									<div class="cont">
-										<div class="prodName">
-											<p class="txt1">[알뜰렌탈]</p>
-											<p class="txt2">
-												<strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
-											</p>
-										</div>
-										<ul class="prodi">
-											<li class="opt">
-												<span>54더 1212</span>
-												<span>4본</span>
-												<span>36개월</span>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="itemSub">
-									<dl class="cost">
-										<dt>납부방법</dt>
-										<dd>
-											<span>카드납부</span>
-										</dd>
-									</dl>
-									<dl class="cost payment">
-										<dt>청구금액</dt>
-										<dd>
-											<strong class="won">21,800</strong> 원
-										</dd>
-									</dl>
-								</div>
-							</div>
+                            
+                            <div class="paymentItem">
+                                <div class="prodName">
+                                    <p class="txt">
+                                        <strong>NFERA AU5</strong> <span class="size">(205/65R16)</span>
+                                    </p>
+                                </div>
+                                <div class="infowrap">
+                                    <dl>
+                                        <dt>은행/카드사</dt>
+                                        <dd>우리은행</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계좌/카드번호</dt>
+                                        <dd>655**********499</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소유주</dt>
+                                        <dd>김넥센</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>월 렌탈료</dt>
+                                        <dd><span>21,800</span> 원</dd>
+                                    </dl>
+                                </div>
+                            </div>
 						</div>
 					</li>
 				</ul>
-                
             </div>
         </section>
         <!-- //본문영역 -->

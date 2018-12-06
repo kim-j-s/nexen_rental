@@ -1236,6 +1236,18 @@ div + .rstTxt {margin-top:8px;}
 .compItem.complete .prodName .txt2 strong  { color: #999; }
 .compItem.complete .prodi li { color: #999; }
 
+.compItem2 { position: relative; border:1px solid #e1e1e1; border-radius:3px;}
+.compItem2 .title { line-height:50px; padding:0 15px;  background:#eee; color:#812990; font-size:15px; font-weight:500;}
+.compItem2 .title .date { position: absolute; right: 15px; color: #666; font-size: 13px; font-weight: 400; line-height: 50px; } 
+.paymentItem { padding: 20px 15px; }
+.paymentItem .prodName .txt strong { display: inline-block; font-weight:500; font-size: 17px; color:#000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.paymentItem .prodName .txt span { display: inline-block; font-weight:500; font-size:13px; vertical-align: 2px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.paymentItem .infowrap { margin-top: 5px;}
+.paymentItem .infowrap dl { display: flex; justify-content: space-between; padding: 5px 0; }
+.paymentItem .infowrap dl:last-child { padding-bottom: 0; }
+.paymentItem .infowrap dt { color: #333; }
+.paymentItem .infowrap dd { color: #454545; text-align: right; }
+
 .orderError {padding:0 15px; text-align:center;}
 .orderErrorInfo {margin-top:50px;}
 .orderErrorInfo > strong {display:block; padding-top:85px; font-weight:500; font-size:17px; color:#525797; background:url(../images/cart/bg_error.png) no-repeat center top; background-size:70px 70px;}
@@ -1359,6 +1371,18 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .payinfoWrap .cost dd { color: #000; font-size: 11px; }
 .payinfoWrap .cost dd .won { color: #c3244e; font-size: 18px; }
 
+.sortBtn { display: flex; position: relative; }
+.sortBtn a { box-sizing: border-box; display: block; height: 35px; line-height: 33px; padding: 0 10px; border: 1px solid #dedee1; color: #888; text-align: center; }
+.sortBtn li { flex: 1; /*float: left;*/ }
+.sortBtn li:not(:first-child) { margin-left: -1px; }
+.sortBtn li.on { position: relative; z-index: 1; }
+.sortBtn li.on a { border: 1px solid #555; background: #555; color: #fff; transition: background 0.2s linear;}
+
+.periodSearch { padding: 15px; background: #fafafa; }
+.periodSearch .period { display: flex; position: relative; width: 100%; margin: 12px 0 5px; }
+.periodSearch .period:after {content: '~'; position: absolute; left: calc(50% - 7px); width: 13px; line-height: 35px; font-size: 12px; text-align: center; vertical-align: middle; }
+.periodSearch .period .inputBox { flex: 1; }
+.periodSearch .period .inputBox:first-child { margin-right: 13px; }
 
 
 
