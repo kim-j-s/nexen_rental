@@ -146,6 +146,7 @@
 .noticeList > li + li {border-top:1px dotted #999;}
 .noticeList > li > a {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:49px;}
 .noticeList > li .date {position:absolute; top:0; right:0; width:93px; text-align:center; font-size:15px; color:#888; line-height:49px;}
+.noticeList > li.none {text-align:center; line-height:48px;}
 
 .mainCs {min-width:1200px; background:#f5f5f5;}
 .mainCs .inner {width:1200px; height:120px; margin:0 auto; padding:39px 0 0 0; background:url(../images/main/bg_cs.png) no-repeat 67px 33px; vertical-align:top;}
@@ -160,7 +161,7 @@
 #mainWrap > .inner {width:calc(100% * 3); position:relative; top:0; left:-100%; overflow:hidden;}
 .mainContent {width:calc(100% / 3); min-height:500px; float:left; overflow:hidden;}
 
-.mainRightVisual {position:relative; min-width:1200px; min-height:880px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
+.mainRightVisual {position:relative; min-width:1200px; min-height:915px; background:url(../images/main/img_mainvisual_right.jpg) no-repeat center; background-size:cover;}
 .mainRightVisual > .inner {position:relative; width:1200px; margin:0 auto;}
 .mainRightVisual h1 {padding-top:153px; font-weight:400; font-size:40px; color:#fff; text-align:center;}
 .mainRightVisual h2 {padding-top:13px; font-weight:100; font-size:30px; color:#e5e5e5; text-align:center;}
@@ -206,8 +207,7 @@
 .lCont > a .txt.ty6:before {background-position:0 -295px;}
 
 .mainRoll {position:relative; width:440px; height:490px; border:1px solid #fff; overflow:hidden;}
-.mainRoll .slick-dots {position:absolute; bottom:10px; left:0; width:100%; z-index:2;}
-.mainRoll .slick-dots {position:absolute; bottom:20px; left:0; width:100%; text-align:center;}
+.mainRoll .slick-dots {position:absolute; bottom:20px; left:0; width:100%; z-index:2; text-align:center;}
 .mainRoll .slick-dots > li {display:inline-block; width:12px; height:12px; margin:0 4px; overflow:hidden; text-indent:-999px; background:#b2b2b2; border-radius:50%; cursor:pointer;}
 .mainRoll .slick-dots > .slick-active {background:#fff;}
 .mainRoll .slick-dots > li.etc {width:auto; height:auto; text-indent:0; background:none; border-radius:0;}

@@ -171,20 +171,35 @@
 .wing > ul > li + li a {border-top:none;}
 .wing > ul > li:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:1;}
 .wing > ul > li.etc {border-left:1px solid #999;}
-/* .wing > ul > li.etc:before {content:''; position:absolute; top:0; left:0; width:100%; height:1px; border-bottom:1px solid #999; z-index:1;} */
+.wing > ul > li.etc.on {border-left:1px solid #3d3d3d;}
 .wing > ul > li.etc:before {content:none;}
 .wing > ul > li.etc:after {content:''; position:absolute; bottom:0; left:0; width:100%; height:1px; border-bottom:1px solid #999; z-index:1;}
 .wing > ul > li.on:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#000; opacity:0.6;}
 .wing > ul > li > a {position:relative; display:block; width:100%; height:80px; padding-top:13px; text-align:center; background:#fff; border:1px solid #999; border-right:none;}
-.wing > ul > li .inner {position:absolute; top:0; left:0; width:79px; overflow:hidden;}
+.wing > ul > li > .inner {position:absolute; top:0; left:0; width:79px; overflow:hidden;}
 .wing > ul li .call {position:relative; display:block; width:79px; height:80px; text-align:center; cursor:pointer;}
 .wing > ul li .call:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:1; transition: 0.5s;}
 .wing > ul li .call > span {position:relative; z-index:1; display:inline-block; padding-top:41px; margin-top:13px; font-size:13px; color:#777;}
 .wing > ul li .call > span:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 0;}
 .wing > ul li .call.on {border:none;}
 .wing > ul li .call.on:before {background:#812990; opacity:0.5;}
-.wing > ul li .call.on > span {font-weight:500; font-size:14px; color:#fff;}
+.wing > ul li .call.on > span {font-size:14px; color:#fff;}
 .wing > ul li .call.on > span:before {background-position:0 -33px;}
+
+.wing > ul > li.etc2 {border:none;}
+.wing > ul > li.etc2.on {}
+.wing > ul > li.etc2.on:before {content:''; position:absolute; top:0; left:0; z-index:2; width:calc(100% - 1px); height:100%; background:#000; opacity:0.6;}
+.wing > ul > li.etc2 > .inner {height:350px;}
+.wing > ul li .call2 {position:relative; display:block; width:80px; height:80px; text-align:center; cursor:pointer; border-left:1px solid #999; border-bottom:1px solid #999;}
+.wing > ul li .call2:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:1; transition: 0.5s;}
+.wing > ul li .call2.on {border:none;}
+.wing > ul li .call2 > .txt {position:relative; z-index:1; display:inline-block; padding-top:37px; margin-top:17px; font-size:13px; color:#777;}
+.wing > ul li .call2 > .txt:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 -264px;}
+.wing > ul li .call2 > .num {position:absolute; top:19px; right:15px; z-index:1; display:inline-block; width:20px; height:20px; background:#c3244e; border-radius:50%; text-align:center; line-height:20px; font-size:13px; color:#fff; transition: 0.5s;}
+.wing > ul li .call2.on:before {background:#812990; opacity:0.5;}
+.wing > ul li .call2.on > .txt {padding-top:39px; margin-top:15px; font-size:14px; color:#fff;}
+.wing > ul li .call2.on > .txt:before {background-position:0 -297px;}
+.wing > ul li .call2.on > .num {opacity:0;}
 .wing > ul li .findShop > span {position:relative; z-index:1; display:inline-block; padding-top:41px; font-size:13px; color:#777;}
 .wing > ul li .findShop > span:before {content:''; position:absolute; top:0; left:50%; width:29px; height:33px; margin-left:-15px; background:url(../images/common/btn/bg_wing.png) no-repeat 0 -66px;}
 .wing > ul li .pageTop > span {position:relative; z-index:1; display:inline-block; padding-top:41px; font-size:13px; color:#b6985a;}
@@ -207,6 +222,32 @@
 .wing .cList > .ty4 {width:80px;}
 .wing .cList > .ty4 span:before {background-position:0 -231px;}
 
+.wing .itemHistory {position:absolute; top:0; left:80px; z-index:3; width:350px; background:#fff;}
+.wing .itemHistory:before {content:''; position:absolute; top:35px; left:0; border-right:6px solid #fff; border-top:6px solid transparent; border-bottom:6px solid transparent; transition: 0.5s; opacity:0;}
+.wing .itemHistory.on:before {left:-6px; opacity:1;}
+.wing .itemHistory:after {content:''; display:block; clear:both;}
+
+.itemHistory > .item {padding:27px 20px 55px 20px;}
+.itemHistory > .item > .slick-dots {position:absolute; bottom:25px; left:0; width:100%; z-index:2; text-align:center;}
+.itemHistory > .item > .slick-dots > li {display:inline-block; width:12px; height:12px; margin:0 4px; overflow:hidden; text-indent:-999px; background:#b2b2b2; border-radius:50%; cursor:pointer;}
+.itemHistory > .item > .slick-dots > .slick-active {background:#9851a5;}
+.itemHistory > .item > .slick-dots > li.etc {width:auto; height:auto; text-indent:0; background:none; border-radius:0;}
+
+.hListWrap {border-top:1px solid #666; border-bottom:1px solid #666; outline:none;}
+.hList {height:266px;}
+.hList > li {position:relative; padding:15px 0; border-bottom:1px solid #a5a5a5;}
+.hList > li:nth-child(3) {border-bottom:none;}
+.hList > li > a {display:block;}
+.hList > li > a .inner {display:table; width:100%; table-layout:fixed;}
+.hList > li .thumb {display:table-cell; width:60px; height:60px; border:1px solid #d5d5d5; text-align:center; vertical-align:middle;}
+.hList > li .thumb img {max-width:100%; max-height:100%;}
+
+.hItem {padding-left:20px;}
+.hItem > dt {font-weight:400; font-size:14px; color:#555; line-height:18px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.hItem > dd {padding-top:20px; overflow:hidden;}
+.hItem > dd .txt {font-size:13px; color:#555;}
+.hItem > dd .won {float:right; font-size:13px; color:#555;}
+.hItem > dd .won .num {font-weight:400; font-size:13px; color:#812990;}
 
 /* ==============================
  * Error
