@@ -893,6 +893,11 @@ img.full { width: 100%;}
 }
 .memberType li.on .business:after {	background-position: right 0; }
 
+
+/* ==============================
+ *  상품안내
+ * ============================== */
+
 /* 렌탈상품 */
 .table.ty3 tbody th.lineR {border-right:1px solid #dadada;}
 .table.ty3 tbody td.bg1 {background:#f8f8f8;}
@@ -1001,6 +1006,66 @@ img.full { width: 100%;}
 .soon .txt strong {display:block; font-weight:700; font-size:20px; color:#812990;}
 
 .pl14etc {display:inline-block; text-indent:-15px; margin-left:15px;}
+
+/* ==============================
+ *  장바구니/주문하기
+ * ============================== */
+ .sectionCart { position: relative; padding-top: 45px; }
+ .sectionCart .optionList { position: absolute; }
+
+.carNoitem { margin-top: 45px; padding: 155px 0; text-align: center; }
+.carNoitem .btn { width: 140px;	margin-top: 30px; }
+.carNoitem .txt { font-size: 13px; }
+.carNoitem .txt:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px; background: url('../images/cart/bg_noitem.png'); background-size: 100%;}
+ 
+/* 상품목록 */
+.cartListWrap {	/* padding: 40px 0 50px; */	padding: 40px 0 10px 0;	position: relative;	top: 0; bottom: 0; left: 0;	right: 0; height: 100%;	background: #e7e7e7; }
+
+.cartAction { padding: 10px 15px 10px; line-height: 400; vertical-align: top; background: #e8e9eb; }
+.cartAction:after { content: ''; display: block; clear: both; }
+.cartAction .checkbox { float: left; color: #000; font-size: 13px; }
+.cartAction .rbtn { float: right; } 
+.cartAction .rbtn .btn { width: 65px; padding: 0; border-radius: inherit; }
+
+.cartList li { padding: 20px 15px 0; border-bottom: 1px solid #d4d4d4; background: #fff; }
+.cartList li:not(:first-child) { margin-top: 5px; }
+ 
+.cartList .priceInfoWrap { margin-top: 10px; padding: 10px 0; border-top: 1px solid #dcdcdc; }
+.cartList .priceInfoWrap .priceInfo:not(:first-child) { margin-top: 6px; }
+.cartList .priceInfo .txt { padding-left: 10px; color: #000; font-size: 11px; line-height: 18px; }
+.cartList .priceInfo .price { padding-left: 10px; color: #000; font-weight: 500; }
+.cartList .priceInfo .price .num { color: #c3244e; font-size: 18px; line-height: 18px; }
+
+.itemInfo { display: flex; width: 100%;margin-top: 10px;}
+.itemInfo .thumb { box-sizing: border-box; width: 100px; height: 100px; border: 1px solid #e4e4e5; background: #fff; display: flex;	align-items: center; justify-content: center; }
+.itemInfo .thumb img { display:inline-block;height: 85px;}
+.itemInfo .info { width: calc(100% - 100px); margin-left: 15px; padding-top: 6px; line-height: 1; }
+.itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; line-height: 1;  }
+.itemInfo .info .tit { margin: 6px 0 2px; color:#000; font-size:15px; font-weight: 500;}
+.itemInfo .info .desc { font-size: 11px; }
+.itemInfo .info .option { margin-top: 6px; color: #999; font-size: 11px; }
+.itemInfo .info .option span:not(:first-child):before { content: ''; display: inline-block; width: 1px;	height: 9px; margin: 0 5px 0 2px; background: #c4c4c4; vertical-align: -1px; }
+.cartList .btns { display: flex; padding-bottom: 20px; }
+.cartList .btns .btnDel {border-color: #c5c5c5; }
+.cartList .btns .btnOpt { width: 75px; background:#333; }
+.cartList .btns .btnOpt.on { background: #fff; border-color: #333; color:#333; }
+.cartList .btns .btnOrder { width: calc(100% - 137px); }
+.cartList .btns .btn + .btn { margin-left: 5px; }
+
+.cartList .optionview { display: none; margin: 0 -15px 0; padding: 15px 15px 20px; border-top: 1px dashed #dcdcdc; background: #f9f9f9; }
+.cartList .optionview .tit { float: left; color: #333; line-height: 35px; }
+.cartList .optionview .radiobtnGroup { float: right; width: calc(100% - 80px); }
+.cartList .optionview .btnArea { clear:both; padding-top: 10px; }
+
+.cartListWrap .itemTotalCont {min-height:100px;}
+.cartListWrap .itemTotal { box-sizing: border-box; position: fixed; bottom: 0; left:0; width: 100%; padding:13px 15px 15px 15px; background: rgba(0,0,0,.8); color: #fff; font-weight: 400; }
+.cartListWrap .itemTotal.on {position: static;}
+.cartListWrap .itemTotal .total { padding-left: 10px }
+.cartListWrap .itemTotal .priceInfo { margin-top: 4px; padding: 0 10px; color: #fff; font-weight: 400; }
+.cartListWrap .itemTotal .priceInfo .txt { padding-left: 0; font-size: 12px; line-height: 16px; }
+.cartListWrap .itemTotal .priceInfo .price { font-weight: 400; }
+.cartListWrap .itemTotal .priceInfo .price .num { font-size: 16px; font-weight: 700; }
+.cartListWrap .itemTotal .primary { margin-top: 8px; background-color: #5f14ea; border-color: #5f14ea; }
 
 .popContent.sch {background:#fafafa;}
 .optCCont {}
@@ -1267,6 +1332,7 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .benefitList .tit { margin-top: 3px; color: #444; font-size: 14px; font-weight: 700; }
 .benefitList .txt { margin-top: 5px; color: #666; font-size: 11px; }
 
+/* 슬라이드 */
 .itemSlideWrap { overflow: hidden; }
 .itemSlide { position:relative;}
 .itemSlide .swiper-button-next, 
@@ -1281,4 +1347,18 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .itemSlide.swiper-container-horizontal .swiper-pagination-bullets span { vertical-align: top;}
 .itemSlideWrap.service .list1 { margin-top: 10px; }
 .itemSlideWrap.service .itemSlide.swiper-container-horizontal + .list1 { margin-top: 35px; } /* 걱정제로서비스 */
+
+/* 나의결제관리 */
+.payinfoWrap {}
+.payinfoWrap .topinfo { color: #000; font-size: 15px; }
+.payinfoWrap .payinfo { padding: 15px; background: #e7e2f2; }
+.payinfoWrap .payinfo:not(:first-child) { margin-top: 5px; }
+.payinfoWrap .payinfo .btn { margin-top: 10px; border-radius: inherit; }
+.payinfoWrap .cost { display: flex; justify-content: space-between; align-items: center; line-height: 18px; }
+.payinfoWrap .cost dt { color: #000; font-size: 11px; font-weight: 500; }
+.payinfoWrap .cost dd { color: #000; font-size: 11px; }
+.payinfoWrap .cost dd .won { color: #c3244e; font-size: 18px; }
+
+
+
 

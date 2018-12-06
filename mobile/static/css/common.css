@@ -15,10 +15,7 @@ body {
 }
 
 strong { font-weight: 500; } /* bold */
-.hide {
-	position: absolute;
-	left: -9999px;
-}
+.hide { position: absolute; left: -9999px; }
 
 /* ==============================
  * skip navigation
