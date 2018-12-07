@@ -188,18 +188,7 @@ $(function(){
 		}
 	});
 
-	var hListLng = $('.hListWrap').find('li').length;
-	if ( hListLng > 3)
-	{
-		$('.itemHistory > .item').slick({
-			arrows: false,
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			adaptiveHeight: true,
-			dots: true
-		});
-	}
+	itemHistory();
 	
 	/* ==============================
 	 * gnb 
@@ -610,6 +599,21 @@ $(function(){
 	 
 });
 
+function itemHistory() {
+	var hListLng = $('.hListWrap').find('li').length;
+	if ( hListLng > 3)
+	{
+		$('.itemHistory > .item').slick({
+			arrows: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			dots: true
+		});
+	}
+}
+
 /* parallax scrolling motion */
 scrollAnimation();
 function scrollAnimation(){
@@ -697,7 +701,6 @@ function selectMakeUI(){
 
 
 $(function(){
-
 	// tabwrap
 	$('.tabWrap').each(function(tab){
 		$(this).children('.tabList').children('li').each(function(idx){
@@ -1158,8 +1161,6 @@ $(function(){
 			$('.visualList').find('.btn_next').show();
 		}
 	}
-
-
 
 });
 
