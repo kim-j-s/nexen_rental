@@ -143,26 +143,6 @@ $(function(){
 		}
 	});
 
-	// 렌탈전문점
-	// var galleryThumbs = new Swiper('.galleryThumbs', {
-	// 	spaceBetween: 10,
-	// 	slidesPerView: 3,
-	// 	freeMode: true,
-	// 	watchSlidesVisibility: true,
-	// 	watchSlidesProgress: true,
-	//   });
-
-	// var galleryTop = new Swiper('.galleryView', {
-	// 	spaceBetween: 15,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// 	thumbs: {
-	// 		swiper: galleryThumbs
-	// 	}
-	// });
-
 	// 렌탈전문점 슬라이드
 	$('.gallery-thumbs .swiper-slide').mouseenter(function(){
 		$('.storeSlideWrap').find('.mapArea').removeClass('on');
@@ -170,12 +150,27 @@ $(function(){
 		$('.storeSlideWrap').find('.mapArea').addClass('on');
 	});
 
-	var storeSlideLng = $('.gallery-thumbs').find('.swiper-slide').length;
-	if (storeSlideLng == 0)
-	{
-		$('.gallery-thumbs').find('.swiper-button-next').hide();
-		$('.gallery-thumbs').find('.swiper-button-prev').hide();
-	}
+	$('.gallery-top .swiper-button-prev').css('display','');
+	$('.gallery-top .swiper-button-next').css('display','');
+
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 0,
+		thumbs: {
+			swiper: {
+				el: '.gallery-thumbs',
+				spaceBetween: 5,
+				slidesPerView: 3,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				}
+			}
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		}
+	});
 
 	// 타이어 상품 갤러리
 	var swiper = new Swiper('.photoSlide', {
