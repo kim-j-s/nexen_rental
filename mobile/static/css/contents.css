@@ -152,7 +152,6 @@
 .radiobtnGroup .radiobtn { flex: 1; }
 .radiobtnGroup .radiobtn + .radiobtn { margin-left: 5px; }
 
-
 /* hack */
 @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
 	.selectbox {padding:0 0 0 8px; background:none;}
@@ -162,11 +161,11 @@
 .textarea { box-sizing: border-box; display:block; height: 150px; padding:10px; border:1px solid #d5d5d5; font-size:12px; color:#666; outline:0; transition: all .3s ease; resize:none;}
 .textarea:focus {border:1px solid #812990;}
 .textarea[disabled] { border-color: #dadada; background:#eee; color:#b5b5b5; }
-.textarea[readonly] { border-color: #dadada; background:#eee; color:#b5b5b5; }
-td .textarea {width:100%;}
 .textarea.w100 {width:100%;}
 .textarea + .byte {margin-top:10px;}
 .byte {margin-top:5px; font-size:10px; color:#666; font-weight:400; text-align: right}
+.textarea[readonly] { border-color: #dadada; background:#eee; color:#b5b5b5; }
+td .textarea {width:100%;}
 
 /* 게시물 검색 */
 .keyword {display:flex; width:100%;}
@@ -198,7 +197,6 @@ td .textarea {width:100%;}
 .tabList.etc > li.on > button span {font-weight:500; color:#812990;}
 .tabList.etc > li + li.on {border-left:1px solid #dedee1;}
 
-
 /* 리스트 */
 .list1.mg1 {margin:10px 0 15px 0;}
 .list1 > li {position:relative; padding-left:6px; font-size:12px; line-height: 17px; font-weight:400; color:#666;}
@@ -215,31 +213,8 @@ td .textarea {width:100%;}
 .exList .list1 { margin: 15px 0 0 5px;}
 
 /* 테이블 */
-.table.ty2 {border-top:2px solid #353535;}
-.table.ty2 tbody th {vertical-align:middle; height:35px; text-align:left; font-weight:500; font-size:12px; color:#333333; border-bottom:1px solid #dadada;}
-.table.ty2 tbody td {vertical-align:middle; height:35px; padding:10px 0; text-align:left; border-bottom:1px solid #dadada; font-size:12px;}
-.table.ty2 tbody td div + .tblEle {margin-top:5px;}
-
-.table.ty3 {border-top:2px solid #353535;}
-.table.ty3 thead th {padding:15px 0; text-align:center; font-weight:normal; font-size:12px; color:#333333; border:1px solid #dadada; border-top:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody th {padding:15px 10px; text-align:left; line-height:16px; font-weight:normal; font-size:12px; color:#333333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody td {padding:15px 5px 15px 5px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300; line-height:17px;}
-.table.ty3 tbody td.link {padding:20px 32px; text-align:left}
-.table.ty3 tbody td.tl {padding:20px 30px 20px 30px; text-align:left;}
-.table.ty3 tbody td.tlNobd {padding:10px; text-align:left; border-left:none;}
-.table.ty3 tbody td.other {font-size:15px;}
-.table.ty3 tbody td.other.color1 {font-weight:400;}
-.table.ty3 thead tr th:first-child, 
-.table.ty3 tbody tr td:first-child {border-left:none;}
-.table.ty3 tbody tr:first-child th,
-.table.ty3 tbody tr:first-child td {border-top:none;}
-.table.ty3.view tbody tr:first-child th,
-.table.ty3.view tbody tr:first-child td {border-top:none;}
-.table.ty3.view tbody td {border-left:none;}
-
-.table.mg1 {margin-top:30px;}
-.table.mg2 {margin-top:15px}
-.table table { table-layout: fixed; }
+.table table { width: 100%; table-layout: fixed; }
+.table table th, .table table td { word-wrap: break-word; }
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .link {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .table .btn {
@@ -265,8 +240,35 @@ td .textarea {width:100%;}
 	border-radius: inherit;
 }
 
+/* 테이블 가로(th+td) - form */
+.table.ty2 {border-top:2px solid #353535;}
+.table.ty2 tbody th {vertical-align:middle; height:35px;  border-bottom:1px solid #dadada;  color:#333; font-size:12px; font-weight:500; text-align:left;}
+.table.ty2 tbody td {vertical-align:middle; height:35px; padding:10px 0; border-bottom:1px solid #dadada; color: #454545; font-size:12px; text-align:left; }
+.table.ty2 tbody td div + .tblEle {margin-top:5px;}
+
+/* 테이블 세로(thead+tbody) - view  */
+.table.ty3 {border-top:2px solid #353535;}
+.table.ty3 thead th {padding:15px 0; text-align:center; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-top:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody th {padding:15px 10px; text-align:left; line-height:16px; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody td {padding:15px 5px 15px 5px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300; line-height:17px;}
+.table.ty3 tbody td.link {padding:20px 32px; text-align:left}
+.table.ty3 tbody td.tl {padding:20px 30px 20px 30px; text-align:left;}
+.table.ty3 tbody td.tlNobd {padding:10px; text-align:left; border-left:none;}
+.table.ty3 tbody td.other {font-size:15px;}
+.table.ty3 tbody td.other.color1 {font-weight:400;}
+.table.ty3 thead tr th:first-child, 
+.table.ty3 tbody tr td:first-child {border-left:none;}
+.table.ty3 tbody tr:first-child th,
+.table.ty3 tbody tr:first-child td {border-top:none;}
+
+.table.ty3.view tbody tr:first-child th,
+.table.ty3.view tbody tr:first-child td {border-top:none;}
+.table.ty3.view tbody td {border-left:none;}
+
+.table.mg1 {margin-top:30px;}
+.table.mg2 {margin-top:15px}
+
 .box1 {margin-top: 15px; padding:15px 10px; background:#f5f5f5;}
-.box1 > .exList {}
 .box2 {background:#f6f6f6; border:1px solid #e1e1e1; padding:15px 10px; text-align:center;}
 .box2.mg1 {margin:10px 0 15px 0;}
 .box2 .txt {font-size:13px; font-weight:400; color:#010101; line-height:18px; margin:0 0 20px 0;}
@@ -279,7 +281,7 @@ td .textarea {width:100%;}
 .layerPopWrap .imgWrap {max-width:100%;}
 .layerPopWrap .imgWrap img {width:100%;}
 
- /* ==============================
+/* ==============================
  * content
  * ============================== */
 
@@ -327,7 +329,10 @@ td .textarea {width:100%;}
 .pd0 {padding:0 !important;}
 .pb0 {padding-bottom:0 !important;}
 
- /* 맴버십 */
+/* ==============================
+ * 맴버십/혜택
+ * ============================== */
+
 .affiliateCards {text-align:center;}
 .affiliateCards .inner {position:relative; display:inline-block; }
 .affiliateCards .inner .cardImg {text-align: center;}
@@ -394,7 +399,6 @@ td .textarea {width:100%;}
 .detailPage .replyWrap dt { height: 40px; line-height: 40px; padding: 0 15px; border-bottom: 1px solid #e5e5e5; background: #f5f5f5; color: #333; font-weight: 700; font-size: 14px; }
 .detailPage .replyWrap dt:before { content:''; display: inline-block; width: 14px; height: 15px; margin-right: 5px; background:url('../images/common/icon/icon_reply.png') no-repeat left 50%; background-size: 100%; vertical-align: -3px;}
 .detailPage .replyWrap dd { padding: 20px 15px; color: #333; }
-
 
 /* 고객지원 */
 .itemtList2 .noResult { border-top: 0; border-bottom: 0; }
@@ -544,7 +548,7 @@ p.mark1 {display:block;}
 .searchWrap {width:100%;}
 .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
 .searchWrap dl:nth-child(4) { margin-bottom:10px;}
-.searchWrap dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333333;  vertical-align: middle;}
+.searchWrap dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333;  vertical-align: middle;}
 .searchWrap dl dd {display:table-cell;}
 .searchWrap dl dd select {width:100%;} 
 
@@ -725,10 +729,10 @@ p.mark1 {display:block;}
 .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
 .infoArea .priceInfo {padding:0 10px 10px 10px;}
 .infoArea .priceInfo .txt {flex:auto;font-size:12px; color:#666;}
-.infoArea .priceInfo .price {flex-basis: 100px;font-size:12px; font-weight:400; text-align:right; color:#333333;}
-.infoArea .priceInfo .price .num {font-size:12px;font-weight:400; color:#333333;}
+.infoArea .priceInfo .price {flex-basis: 100px;font-size:12px; font-weight:400; text-align:right; color:#333;}
+.infoArea .priceInfo .price .num {font-size:12px;font-weight:400; color:#333;}
 .infoArea .totPrice {background:#feefef; margin:10px 0 5px 0; height:30px;}
-.infoArea .totPrice .priceInfo .txt {font-size:12px; color:#333333; font-weight:500; line-height:30px;}
+.infoArea .totPrice .priceInfo .txt {font-size:12px; color:#333; font-weight:500; line-height:30px;}
 .infoArea .totPrice .price {flex-basis: 100px; font-size:13px; font-weight:500; text-align:right; color:#c3244e; line-height:30px;}
 .infoArea .totPrice .price .num {font-size:13px; font-weight:500; color:#c3244e;}
 .infoArea .list1 li {font-size:10px;}
@@ -913,7 +917,7 @@ img.full { width: 100%;}
 .txtsWrap .logo img {width:163px; height:30px;}
 .secIntro .txtsWrap .txt2 {margin:10px 0 30px 0;}
 .bigNumber {margin:30px 0 5px 0;}
-.bigNumber > li {font-weight:500; font-size:15px; color:#333333; line-height:20px;}
+.bigNumber > li {font-weight:500; font-size:15px; color:#333; line-height:20px;}
 .tbTit {font-size:14px; font-weight:400; color:#000000; margin:15px 0 10px 0;}
 .secIntro .bigNumber .list1 {margin:10px 0 43px 0;}
 .secIntro > .list1 {margin:10px 15px 0 15px;}
@@ -1401,5 +1405,11 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .slideCont.payment .inner { background: #f9f9f9 url('../images/mynxn/bg_dotted_line2.png') repeat-x left top; background-size: 6px 1px;}
 .slideCont.payment .inner .paymentItem { padding: 15px 0; }
 
-
+.prepaymentWrap { margin-top: 15px; padding: 15px 10px; background: #e7e2f2; }
+.prepaymentWrap dl { display: flex; justify-content: space-between; }
+.prepaymentWrap dl:not(:first-child) { margin-top: 10px; } 
+.prepaymentWrap dt { color: #333; font-weight: 500; } 
+.prepaymentWrap dd { color: #333; text-align: right; }
+.prepaymentWrap .total { padding-top: 12px; background: url('../images/mynxn/bg_dotted_line3.png') repeat-x left top; background-size: 6px 1px;}
+.prepaymentWrap .total dd { font-size: 13px; font-weight: 500; }
 
