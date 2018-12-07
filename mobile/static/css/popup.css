@@ -114,64 +114,32 @@
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
 
 /*매장위치 슬라이드*/
-.storeSlideWrap { }
-.storeSlideWrap .mapView {
-	display: none;
-	overflow: hidden;
-	height: 280px; 
-	border: 1px solid #d5d5d5; 
-}
-.storeSlideWrap .mapView { }
-.galleryView {
-	display: none;
-	overflow: hidden;
-	height: 280px; 
-	border: 1px solid #d5d5d5;
-	text-align: center;
-}
-.galleryView img { max-width: 100%; max-height: 100%; }
+.storeSlideWrap { position: relative; height: 342px; }
+.storeSlideWrap .mapArea { display: none; position: absolute; top: 0; left: 0; z-index: 50; overflow: hidden; box-sizing: border-box; height: 280px; border: 1px solid #d5d5d5; }
+.storeSlideWrap .mapArea.on { display: block;}
 
-.galleryThumbs {
-	position: relative;
-	box-sizing: border-box;
-	margin-top: 10px;
-}
-.galleryThumbs .swiper-slide {
-	box-sizing: border-box;
-	border: 1px solid #d5d5d5;
-	width: 33%;
-	height: 50px;
-	text-align: center;
-}
+.gallery-top { height: 280px;  border: 1px solid #d5d5d5; text-align: center; }
+.gallery-top.on { display: block; }
+.gallery-top .swiper-slide { display: flex; align-items: center; justify-content: center; }
+.gallery-top img { vertical-align: middle; max-width: 100%; max-height: 100%; }
 
-.galleryThumbs .swiper-slide img {
-	max-width: 100%;
-	max-height: 100%;
-}
-.galleryThumbs .swiper-slide-thumb-active {
-	border: 1px solid #812990;
-	opacity: 1;
-}
-.galleryThumbs .swiper-button-next,
-.galleryThumbs .swiper-button-prev {
-	position:absolute;
-	top:100%;
-	margin-top:-45px;
-	width:20px; 
-	height:40px; 
-	z-index:50; 
-	text-indent:-999px; 
-	background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0;
-	background-size: 40px 40px;
-}
-.galleryThumbs .swiper-button-prev {left: -15px; background-position:0px 0px;}
-.galleryThumbs .swiper-button-next {right: -15px; background-position:-20px 0px;}
-.galleryThumbs .swiper-button-next.swiper-button-disabled, 
-.galleryThumbs .swiper-button-prev.swiper-button-disabled { 
-	opacity: 0;
-	cursor: auto; 
-	pointer-events: none;
-}
+.gallery-thumbs {position: relative;  box-sizing: border-box; margin-top: 10px; height: 50px; }
+.gallery-thumbs .swiper-slide {	box-sizing: border-box;	border: 1px solid #d5d5d5;	width: 33%;	height: 50px; text-align: center; }
+.gallery-thumbs .swiper-slide img { max-width: 100%; max-height: 100%; }
+.gallery-thumbs .swiper-slide-thumb-active { border: 1px solid #812990; opacity: 1; }
+
+/*
+.gallery-thumbs .controls { position: absolute; top: calc(50% - 10px); z-index: 50; width: 100%; height: 20px; border: 1px solid red; }
+.gallery-thumbs .swiper-button-next, 
+.gallery-thumbs .swiper-button-prev {position:absolute; width:20px; height:40px; text-indent:-999px; overflow:hidden; background:url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
+.gallery-thumbs .swiper-button-next.swiper-button-disabled, 
+.gallery-thumbs .swiper-button-prev.swiper-button-disabled { opacity:0.3; cursor:auto;  pointer-events:none;}
+.gallery-thumbs .swiper-button-prev {left:0px; background-position:0px 0px; border: 1px solid blue;}
+.gallery-thumbs .swiper-button-next {right:0px; background-position:-20px 0px;border: 1px solid blue;}
+*/
+
+.gallery-top .swiper-slide.noimg, .gallery-thumbs .swiper-slide.noimg { background: #f5f5f5 url('../images/common/img_null_s.png') no-repeat 50%; }
+.gallery-thumbs .swiper-slide.noimg { background-size: contain; }
 
 .storeName {display: flex; align-items: center;}
 .storeName .serviceIcon { flex-basis: 30px; margin-right: 10px; }

@@ -31,67 +31,57 @@
                 <h2 class="headTitle">매장위치</h2>
 
                 <div div class="storeSlideWrap">
-                    <!-- 위치 api -->
-                    <div class="mapView" style="display: block;">
+                    <div class="mapArea on">
+                        <!-- 위치 api영역 -->
                         <img src="../static/images/sample/map2.jpg" alt="" class="full"> <!-- 임시-->
                     </div>
 
-                    <div class="galleryView"> 
-                        <img src="../static/images/sample/product1.jpg" alt="">
+                    <div class="swiper-container gallery-top">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="../static/images/sample/product1.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt=""></li>
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
+                        </ul>
                     </div>
 
-                    <div class="swiper-container galleryThumbs">
+                    <div class="swiper-container gallery-thumbs">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide mapApi"><img src="../static/images/sample/map2.jpg" alt=""></li> <!-- 첫번째 섬네일 클릭 시 위치맵 보여짐-->
-                            <li class="swiper-slide">
-                                <img src="../static/images/sample/product1.jpg" alt="">
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="../static/images/sample/product2.png" alt="">
-                            </li>
+                            <li class="swiper-slide"><img src="../static/images/sample/product1.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt=""></li>
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
+                            <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
                         </ul>
-
-                        <!-- controls -->
-                        <div class="swiper-button-prev">이전</div>
-                        <div class="swiper-button-next">다음</div>
                     </div>
                 </div>
-
-                <!-- JS -->
                 <script>
-                $(function(){
-
-
-                    // 렌탈전문점
-                    var galleryThumbs = new Swiper('.galleryThumbs', {
-                        spaceBetween: 10,
+                    $('.gallery-thumbs .swiper-slide').mouseenter(function(){
+                        $('.storeSlideWrap').find('.mapArea').removeClass('on');
+                    }).mouseleave(function(){
+                        $('.storeSlideWrap').find('.mapArea').addClass('on');
+                    });
+                    
+                    var galleryThumbs = new Swiper('.gallery-thumbs', {
+                        spaceBetween: 5,
                         slidesPerView: 3,
                         freeMode: true,
                         watchSlidesVisibility: true,
-                        watchSlidesProgress: true,
+                        watchSlidesProgress: true
                     });
-
-                    // $('.galleryThumbs li.mapApi').on('click', function(){
-                    //     $('.storeSlideWrap .mapView').show();
-                    //     $('.storeSlideWrap .galleryView').hide();
-                    // });
-
-                    $('.galleryThumbs li').on('click', function(){
-
-                        $('.storeSlideWrap .mapView').hide();
-                        $('.storeSlideWrap .galleryView').show();
-
-                        var imgPath = $(this).find('img').attr('src');    
-
-                        // $('.galleryView > img').attr({src:imgPath})  
-                        //     .hide()                                 
-                        //     .fadeIn();                              
-                        //     return false;                           
+                    var galleryTop = new Swiper('.gallery-top', {
+                        spaceBetween: 0,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        thumbs: {
+                            swiper: galleryThumbs
+                        }
                     });
+                    </script>
 
-                })
-                </script>
-                <!-- //JS -->
                 <div class="table ty3 mg3">
                     <table>
                         <caption>렌탈 전문점 정보</caption>
