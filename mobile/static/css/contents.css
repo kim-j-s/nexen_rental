@@ -1165,7 +1165,12 @@ img.full { width: 100%;}
 .orderItem > .prod .prodi > .opt span {position:relative; display:inline-block;}
 .orderItem > .prod .prodi > .opt span + span {padding-left:10px; margin-left:7px;}
 .orderItem > .prod .prodi > .opt span + span:after {content:''; position:absolute; top:50%; left:0; height:10px; margin-top:-5px; border-right:1px solid #999;}
-.orderItem > .itemSub {height:67px; margin:0 15px; padding:5px 0 0 0; border-top:1px solid #dcdcdc;}
+.orderItem > .prod .prodi2 { margin-top: 10px; }
+.orderItem > .prod .prodi2 li { display: inline-block; font-size: 11px; }
+.orderItem > .prod .prodi2 li strong { color: #333; font-weight: 500; }
+.orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 12px;  background: #c4c4c4; vertical-align: -1px;}
+.orderItem > .prod .prodi2 li:last-child:after { display: none; }
+.orderItem > .itemSub {height:67px; margin:0 15px; padding:5px 0 0 0; border-top:1px solid #dcdcdc; }
 .orderItem > .itemSub .cost {display:table; width:100%; padding:0 15px;}
 .orderItem > .itemSub .cost + .cost {margin-top:5px;}
 .orderItem > .itemSub .cost > dt {display:table-cell; font-weight:400; font-size:11px; color:#000;}
