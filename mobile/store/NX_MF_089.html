@@ -44,6 +44,11 @@
                             <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
                             <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
                         </ul>
+                    
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
                     </div>
 
                     <div class="swiper-container gallery-thumbs">
@@ -54,33 +59,13 @@
                             <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
                             <li class="swiper-slide noimg"></li> <!-- 섬네일 없을 경우 class="noimg" 추가 -->
                         </ul>
+                    
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
                     </div>
                 </div>
-                <script>
-                    $('.gallery-thumbs .swiper-slide').mouseenter(function(){
-                        $('.storeSlideWrap').find('.mapArea').removeClass('on');
-                    }).mouseleave(function(){
-                        $('.storeSlideWrap').find('.mapArea').addClass('on');
-                    });
-                    
-                    var galleryThumbs = new Swiper('.gallery-thumbs', {
-                        spaceBetween: 5,
-                        slidesPerView: 3,
-                        freeMode: true,
-                        watchSlidesVisibility: true,
-                        watchSlidesProgress: true
-                    });
-                    var galleryTop = new Swiper('.gallery-top', {
-                        spaceBetween: 0,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                        thumbs: {
-                            swiper: galleryThumbs
-                        }
-                    });
-                    </script>
 
                 <div class="table ty3 mg3">
                     <table>
