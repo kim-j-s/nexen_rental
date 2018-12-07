@@ -189,7 +189,6 @@ $(function(){
 	});
 
 	var hListLng = $('.hListWrap').find('li').length;
-	console.log(hListLng);
 	if ( hListLng > 3)
 	{
 		$('.itemHistory > .item').slick({
@@ -910,11 +909,14 @@ $(function(){
 		$('.prodGalleryViewer').append(tireThumbImg);
 	}
 
-	var BreakPoint1 = $('.bPoint1').offset();
 	$('.fixedBottom').find('.btn').on('click', function(e){
+		var bpData = $(this).data('bpoint');
+		var BreakPoint = $('.'+ bpData).offset();
 		e.preventDefault();
+		console.log('class : ' + bpData);
+		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
 		$("html, body").animate({
-			scrollTop: BreakPoint1.top }
+			scrollTop: BreakPoint.top }
 		,500);
 	});
 

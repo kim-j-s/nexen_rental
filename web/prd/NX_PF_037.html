@@ -308,8 +308,10 @@
 					</span>
 				</h1>
 				<span class="typeTxt">
+					<!-- 2018-12-06 삭제
 					<span class="ty1">HIT</span>
 				<span class="ty2">BEST</span>
+				-->
 				<span class="ty3">일시불</span>
 				<span class="ty4">렌탈</span>
 				</span>
@@ -377,6 +379,12 @@
 				</div>
 				<div class="prodGallery">
 					<div class="prodGalleryViewer">
+						<!-- 2018-12-06 추가 -->
+						<div class="itemLabel">
+							<span class="best">BEST</span>
+							<span class="hit">HIT</span>
+						</div>
+						<!--// 2018-12-06 추가 -->
 						<img src="../static/images/sample/tire_v1.gif" alt="" />
 						<button class="prev off"><span>이전보기</span></button>
 						<button class="next"><span>다음보기</span></button>
@@ -393,284 +401,215 @@
 			</div>
 
 			<div class="prdDetailCont">
-				<div class="carInfoWrap bPoint1">
-					<!-- 2018-11-20 클래스 추가 -->
-					<div class="setting">
-						<ul class="settingList">
-							<!-- *********************
-							처음 화면 진입 시 차종 li 부분에 on 클래스를 부여하여 엘리먼트 활성화 상태
-							해당 탭별로 입력값이 완료되면 해당 li에 complete 클래스를 부여
-							해당 구간별 옵션값이 해제되면 complete 클래스 제거
-							***********************-->
-							<!-- 차종 -->
-							<li class="complete">
-								<button class="tit"><span class="num">01</span><span class="titTxt">차종</span></span></button>
-								<div class="inner">
-									<div class="settingOption">
-										<div class="tabWrap mini">
-											<ul class="tabList carTypeSelect">
-												<li class="on"><button><span>국내</span></button></li>
-												<li><button><span>수입</span></button></li>
-											</ul>
-											<div class="tabContent on">
-												<div class="makerGroup">
-													<div class="makerGroup1">
-														<ul class="makerRadio">
-															<li>
-																<input type="radio" name="makerGroup1" id="makerRadio1_1" />
-																<label for="makerRadio1_1" class="ty1">현대</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup1" id="makerRadio1_2" />
-																<label for="makerRadio1_2" class="ty2">기아</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup1" id="makerRadio1_3" />
-																<label for="makerRadio1_3" class="ty3">쉐보레</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup1" id="makerRadio1_4" />
-																<label for="makerRadio1_4" class="ty4">르노삼성</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup1" id="makerRadio1_5" />
-																<label for="makerRadio1_5" class="ty5">쌍용</label>
-															</li>
-														</ul>
-													</div>
-													<div class="makerGroup2">
-														<select name="" id="" class="selectbox" disabled="disabled">
-															<option value="">모델명</option>
-														</select>
-														<div class="inputBox">
-															<input type="text" placeholder="12아1234 (차량번호를 입력해 주세요/장착점 방문시 고객확인용)" class="inp" />
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tabContent">
-												<div class="makerGroup">
-													<div class="makerGroup1">
-														<ul class="makerRadio">
-															<li>
-																<input type="radio" name="makerGroup2" id="makerRadio2_1" />
-																<label for="makerRadio2_1" class="ty6">BMW</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup2" id="makerRadio2_2" />
-																<label for="makerRadio2_2" class="ty7">벤츠</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup2" id="makerRadio2_3" />
-																<label for="makerRadio2_3" class="ty8">토요타</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup2" id="makerRadio2_4" />
-																<label for="makerRadio2_4" class="ty9">폭스바겐</label>
-															</li>
-															<li>
-																<input type="radio" name="makerGroup2" id="makerRadio2_5" />
-																<label for="makerRadio2_5" class="ty10">렉서스</label>
-															</li>
-														</ul>
-													</div>
-													<div class="makerGroup2">
-														<select name="" id="" class="selectbox makerSelect">
-															<option value="">다른 제조사</option>
-															<option value="B001">BENTLEY</option>
-															<option value="B003">Ferrari</option>
-															<option value="B005">JEEP</option>
-															<option value="B006">LOUTUS</option>
-															<option value="B007">MASERATI</option>
-															<option value="B008">MINI</option>
-															<option value="B009">SUBARU</option>
-															<option value="B010">닛산</option>
-															<option value="B011">닷지</option>
-															<option value="B012">랜드로버</option>
-															<option value="B014">링컨</option>
-															<option value="B016">미쓰비시</option>
-															<option value="B018">볼보</option>
-															<option value="B019">사브</option>
-															<option value="B020">스즈끼</option>
-															<option value="B021">시트로엥</option>
-															<option value="B022">아우디</option>
-															<option value="B023">인피니티</option>
-															<option value="B024">재규어</option>
-															<option value="B025">캐딜락</option>
-															<option value="B026">크라이슬러</option>
-															<option value="B028">포드</option>
-															<option value="B029">포르쉐</option>
-															<option value="B031">푸조</option>
-															<option value="B032">혼다</option>
-															<option value="B033">람보르기니</option>
-														</select>
-														<select name="" id="" class="selectbox" disabled="disabled">
-															<option value="">모델명</option>
-														</select>
-														<div class="inputBox">
-															<input type="text" placeholder="12아1234 (차량번호를 입력해 주세요/장착점 방문시 고객확인용)" class="inp" />
-														</div>
-													</div>
-												</div>
-											</div>
+				<div class="prodSetting bPoint1">
+					<div class="optEle">
+						<p class="title">01. 차종선택</p>
+						<div class="tabWrap mini">
+							<ul class="tabList carTypeSelect">
+								<li class="on"><button><span>국내</span></button></li>
+								<li><button><span>수입</span></button></li>
+							</ul>
+							<div class="tabContent on">
+								<div class="makerGroup">
+									<div class="makerGroup1">
+										<ul class="makerRadio">
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_1" />
+												<label for="makerRadio1_1" class="ty1">현대</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_2" />
+												<label for="makerRadio1_2" class="ty2">기아</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_3" />
+												<label for="makerRadio1_3" class="ty3">쉐보레</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_4" />
+												<label for="makerRadio1_4" class="ty4">르노삼성</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_5" />
+												<label for="makerRadio1_5" class="ty5">쌍용</label>
+											</li>
+										</ul>
+									</div>
+									<div class="makerGroup2">
+										<select name="" id="" class="selectbox" disabled="disabled">
+											<option value="">모델명</option>
+										</select>
+										<div class="inputBox">
+											<input type="text" placeholder="12아1234 (차량번호를 입력해 주세요/장착점 방문시 고객확인용)" class="inp" />
 										</div>
 									</div>
-
-									<div class="settingInfo">
-										<div class="inner">
-											<!-- 기본 표식 -->
-											<p class="txt case1">주문 전 <span class="color">타이어 사이즈, 차량번호, 수량</span>을 <br />정확히 확인 후 입력해 주세요</p>
-												<!--// 기본 표식 -->
-												<!-- 제조사 미선택 -->
-												<!--
-											<p class="txt case2"><span class="color">제조사</span>를 선택해 주세요</p>
-											-->
-												<!--// 제조사 미선택 -->
-
-												<!-- 제조사 미선택 -->
-												<!--
-											<p class="txt case2"><span class="color">모델명</span>를 선택해 주세요</p>
-											-->
-												<!--// 제조사 미선택 -->
-
-												<!-- 차랑변호 미입력 -->
-												<!--
-											<p class="txt case3">
-												<span class="color">차량번호</span>를 입력해 주세요 <br /> 
-												등록된 차량번호는 장착점 방문시 <br />고객 확인용으로 사용됩니다.
-											</p>
-											-->
-												<!--// 차랑변호 미입력 -->
-										</div>
-									</div>
-									<a href="#" class="btn ty13"><span>렌탈상품 알아보기</span></a>
 								</div>
-							</li>
-							<!-- 차종 -->
-
-							<!-- 사이즈 -->
-							<li class="on">
-								<button class="tit"><span class="num">02</span><span class="titTxt">사이즈</span></span></button>
-								<div class="inner">
-									<div class="settingOption">
-										<div class="tireOptions">
-											<div class="head">
-												<span class="txt">타이어 사이즈</span>
-												<select name="" id="" style="width:160px;" class="selectbox">
-													<option value="">인치 선택</option>
-												</select>
-											</div>
-											<div class="cont">
-												<ul class="tireOptionList">
-													<li>
-														<input type="radio" name="tireSize" id="tireSize1" />
-														<label for="tireSize1">(순정) 205/55R16 4P</label>
-													</li>
-													<li>
-														<input type="radio" name="tireSize" id="tireSize2" />
-														<label for="tireSize2">(호환) 205/55R16 4P</label>
-													</li>
-													<li>
-														<input type="radio" name="tireSize" id="tireSize3" />
-														<label for="tireSize3">(순정) 205/55R16 4P</label>
-													</li>
-													<li>
-														<input type="radio" name="tireSize" id="tireSize4" />
-														<label for="tireSize4">(호환) 205/55R16 4P</label>
-													</li>
-													<li>
-														<input type="radio" name="tireSize" id="tireSize5" />
-														<label for="tireSize5">(순정) 205/55R16 4P</label>
-													</li>
-													<li>
-														<input type="radio" name="tireSize" id="tireSize6" />
-														<label for="tireSize6">(호환) 205/55R16 4P</label>
-													</li>
-												</ul>
-											</div>
+							</div>
+							<div class="tabContent">
+								<div class="makerGroup">
+									<div class="makerGroup1">
+										<ul class="makerRadio">
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_1" />
+												<label for="makerRadio2_1" class="ty6">BMW</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_2" />
+												<label for="makerRadio2_2" class="ty7">벤츠</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_3" />
+												<label for="makerRadio2_3" class="ty8">토요타</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_4" />
+												<label for="makerRadio2_4" class="ty9">폭스바겐</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_5" />
+												<label for="makerRadio2_5" class="ty10">렉서스</label>
+											</li>
+										</ul>
+									</div>
+									<div class="makerGroup2">
+										<select name="" id="" class="selectbox makerSelect">
+											<option value="">다른 제조사</option>
+											<option value="B001">BENTLEY</option>
+											<option value="B003">Ferrari</option>
+											<option value="B005">JEEP</option>
+											<option value="B006">LOUTUS</option>
+											<option value="B007">MASERATI</option>
+											<option value="B008">MINI</option>
+											<option value="B009">SUBARU</option>
+											<option value="B010">닛산</option>
+											<option value="B011">닷지</option>
+											<option value="B012">랜드로버</option>
+											<option value="B014">링컨</option>
+											<option value="B016">미쓰비시</option>
+											<option value="B018">볼보</option>
+											<option value="B019">사브</option>
+											<option value="B020">스즈끼</option>
+											<option value="B021">시트로엥</option>
+											<option value="B022">아우디</option>
+											<option value="B023">인피니티</option>
+											<option value="B024">재규어</option>
+											<option value="B025">캐딜락</option>
+											<option value="B026">크라이슬러</option>
+											<option value="B028">포드</option>
+											<option value="B029">포르쉐</option>
+											<option value="B031">푸조</option>
+											<option value="B032">혼다</option>
+											<option value="B033">람보르기니</option>
+										</select>
+										<select name="" id="" class="selectbox" disabled="disabled">
+											<option value="">모델명</option>
+										</select>
+										<div class="inputBox">
+											<input type="text" placeholder="12아1234 (차량번호를 입력해 주세요/장착점 방문시 고객확인용)" class="inp" />
 										</div>
 									</div>
-									<div class="settingInfo">
-										<div class="inner">
-											<!-- 사이즈 선택 -->
-											<p class="txt case4">
-												<span class="color">현대자동차, EF 소나타</span>에 <br />
-												장착할 타이어 사이즈를 <br />선택해 주세요
-											</p>
-												<!--/// 사이즈 선택 -->
-										</div>
-									</div>
-									<a href="#" class="btn ty13"><span>렌탈상품 알아보기</span></a>
 								</div>
-							</li>
-							<!-- 사이즈 -->
+							</div>
+						</div>
+					</div>
 
-							<!-- 수량 -->
-							<li>
-								<button class="tit"><span class="num">03</span><span class="titTxt">수량</span></span></button>
-								<div class="inner">
-									<div class="settingOption">
-										<div class="tireOptions">
-											<div class="head">
-												<span class="txt">타이어 수량</span>
-											</div>
-											<div class="cont">
-												<ul class="tireOptionList">
-													<li>
-														<input type="radio" name="tireCnt" id="tireCnt1" />
-														<label for="tireCnt1">1본</label>
-													</li>
-													<li>
-														<input type="radio" name="tireCnt" id="tireCnt2" />
-														<label for="tireCnt2">2본</label>
-													</li>
-													<li>
-														<input type="radio" name="tireCnt" id="tireCnt3" />
-														<label for="tireCnt3">3본</label>
-													</li>
-													<li>
-														<input type="radio" name="tireCnt" id="tireCnt4" />
-														<label for="tireCnt4">4본</label>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="settingInfo">
-										<div class="inner">
-											<!-- 수량 선택 -->
-											<div class="txt case5">
-												<p class="txt1">
-													<span class="color">205/55R16 4P</span><br />
-													타이어 사이즈의 수량을 <br />선택해 주세요
-												</p>
-													<p class="txt2">
-														렌탈타이어 제품을 이용한 적이 있는 기존 고객님께서는, <br />로그인 후, 1본/3본 수량도 주문이 가능합니다.
-														<!-- 2018-11-09 수정 -->
-													</p>
-													<div class="btnBox">
-														<a href="#" class="btn ty9">로그인</a>
-													</div>
-											</div>
-											<!--/// 수량 선택 -->
+					<div class="optEle">
+						<p class="title">02. 사이즈 선택</p>
+						<div class="tireOptions">
+							<div class="cont">
+								<ul class="tireOptionList">
+									<li>
+										<select name="" id="" style="width:135px;" class="selectbox">
+											<option value="">인치 선택</option>
+										</select>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize1" />
+										<label for="tireSize1">(순정) 205/55R16 4P</label>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize2" />
+										<label for="tireSize2">(호환) 205/55R16 4P</label>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize3" />
+										<label for="tireSize3">(순정) 205/55R16 4P</label>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize4" />
+										<label for="tireSize4">(호환) 205/55R16 4P</label>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize5" />
+										<label for="tireSize5">(순정) 205/55R16 4P</label>
+									</li>
+									<li>
+										<input type="radio" name="tireSize" id="tireSize6" />
+										<label for="tireSize6">(호환) 205/55R16 4P</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-											<!-- 입력완료 -->
-											<!--
-											<p class="txt case6">
-												<span class="color">기본 정보 입력이 끝났습니다.</span> <br /> 
-												렌탈상품을 알아보기를 눌러 <br />나에게 맞는 렌탈상품을 확인하세요
-											</p>
-											-->
-											<!--// 입력완료 -->
-										</div>
-									</div>
-									<a href="#" class="btn ty13"><span>렌탈상품 알아보기</span></a>
-								</div>
-							</li>
-							<!--// 수량 -->
-						</ul>
+					<div class="optEle">
+						<p class="title">03. 수량 선택</p>
+						<div class="tireOptions">
+							<div class="cont">
+								<ul class="tireOptionList">
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt1" />
+										<label for="tireCnt1">1본</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt2" />
+										<label for="tireCnt2">2본</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt3" />
+										<label for="tireCnt3">3본</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt4" />
+										<label for="tireCnt4">4본</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="goLogin">
+							<p class="txt">
+								<span>
+									기존 이용 고객님께서는, <strong>로그인 후 <br />1본 / 3본 수량도 주문이 가능</strong>합니다.
+								</span>
+							</p>
+							<a href="#">로그인</a>
+						</div>
+					</div>
+
+					<!--
+					상단의 옵션을 모두 선택 완료 후 button disabled 제거
+					-->
+					<div class="btnBox">
+						<button class="btn ty14" disabled="disabled">
+							<span class="txt">내게 맞는 렌탈 상품 찾기</span>
+						</button>
 					</div>
 				</div>
+				<!-- 2018-12-07 추가 -->
+				<div class="tips">
+					<span class="black">Tip (</span>
+					<span class="txt">타이어 사이즈</span>
+					<div class="toolTip">
+						<span class="toolBox">
+							<strong class="tit">장착할 차량의 타이어 사이즈 확인 방법</strong>
+							<span class="inner etc">
+								<img src="../static/images/prd/img_tool1.jpg" alt="">
+							</span>
+						</span>
+					</div>
+					<span class="black">)</span>
+				</div>
+				<!--// 2018-12-07 추가 -->
 			</div>
 
 			<div class="prdDetailCont">
@@ -790,12 +729,13 @@
 				</ul>
 			</div>
 
-			<div class="prdDetailCont">
+			<div class="prdDetailCont bPoint2">
 				<div class="tabWrap floating2">
 					<!-- 2018-11-20 클래스 추가 -->
-					<ul class="tabList other">
+					<ul class="tabList other3">
+						<!-- 2018-12-06 클래스 수정 -->
 						<li class="on"><button><span>추천렌탈상품</span></button></li>
-						<li><button><span>렌탈료 직접 설계</span></button></li>
+						<li><button><span>나만의 렌탈 설계하기</span></button></li> <!-- 2018-12-06 문구 수정 -->
 					</ul>
 
 					<!-- 추천렌탈상품 -->
@@ -871,7 +811,8 @@
 											</p>
 											<ul class="list7">
 												<li>3년 렌탈 기간</li>
-												<li>3종 렌탈 케어 서비스 제공
+												<li class="etc">3종 렌탈 케어 서비스 제공
+													<!-- 2018-12-06 클래스 추가 -->
 													<div class="text">
 														<span class="serviceTxt">① 마모/파손케어</span>
 														<span class="serviceTxt">② 경정비 케어</span>
@@ -972,7 +913,8 @@
 											</p>
 											<ul class="list7">
 												<li>3년 렌탈 기간</li>
-												<li>3종 렌탈 케어 서비스 제공
+												<li class="etc">3종 렌탈 케어 서비스 제공
+													<!-- 2018-12-06 클래스 추가 -->
 													<div class="text">
 														<span class="serviceTxt">① 마모/파손케어</span>
 														<span class="serviceTxt">② 경정비 케어</span>
@@ -1018,7 +960,8 @@
 													</div>
 												</li>
 												<!-- 2018-11-19 수정 -->
-												<li>타이어 무한 서비스
+												<li class="etc">타이어 무한 서비스
+													<!-- 2018-12-06 클래스 추가 -->
 													<span class="toolTip">
 														<span class="toolBox txtType">
 															<span class="inner">
@@ -1089,7 +1032,8 @@
 											</p>
 											<ul class="list7">
 												<li>3년 렌탈 기간</li>
-												<li>3종 렌탈 케어 서비스 제공
+												<li class="etc">3종 렌탈 케어 서비스 제공
+													<!-- 2018-12-06 클래스 추가 -->
 													<div class="text">
 														<span class="serviceTxt">① 마모/파손케어</span>
 														<span class="serviceTxt">② 경정비 케어</span>
@@ -1135,7 +1079,8 @@
 													</div>
 												</li>
 												<!-- 2018-11-19 수정 -->
-												<li>타이어 무한 서비스
+												<li class="etc">타이어 무한 서비스
+													<!-- 2018-12-06 클래스 추가 -->
 													<span class="toolTip">
 														<span class="toolBox txtType">
 															<span class="inner">
@@ -1152,7 +1097,8 @@
 												<!--// 2018-11-19 수정 -->
 
 												<!-- 2018-11-19 수정 -->
-												<li>엔진오일 3회 서비스
+												<li class="etc">엔진오일 3회 서비스
+													<!-- 2018-12-06 클래스 추가 -->
 													<span class="toolTip">
 														<span class="toolBox txtType">
 															<span class="inner">
@@ -1214,342 +1160,216 @@
 
 					<!-- 렌탈료 직접 설계 -->
 					<div class="tabContent">
-						<div class="carInfoWrap mt20">
-							<div class="setting">
-								<ul class="settingList etc">
-									<!-- *********************
-									처음 화면 진입 시 렌탈 li 부분에 on 클래스를 부여하여 엘리먼트 활성화 상태
-									해당 탭별로 입력값이 완료되면 해당 li에 complete 클래스를 부여
-									해당 구간별 옵션값이 해제되면 complete 클래스 제거
-									***********************-->
-									<!-- 렌탈 -->
-									<li class="on complete">
-										<button class="tit"><span class="num">01</span><span class="titTxt">렌탈</span></span></button>
-										<div class="inner">
-											<div class="settingOption">
-												<div class="tireOptions">
-													<div class="head">
-														<span class="txt">렌탈등록비</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental01" id="rental0101" />
-																<label for="rental0101">0원</label>
-															</li>
-															<li>
-																<input type="radio" name="rental01" id="rental0102" />
-																<label for="rental0102">5만원</label>
-															</li>
-															<li>
-																<input type="radio" name="rental01" id="rental0103" />
-																<label for="rental0103">10만원</label>
-															</li>
-															<li>
-																<input type="radio" name="rental01" id="rental0104" />
-																<label for="rental0104">20만원</label>
-															</li>
-														</ul>
-													</div>
+						<div class="prodSetting mt20">
+							<div class="optEle">
+								<p class="title">01. 렌탈 등록비 선택</p>
+								<div class="tireOptions">
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental02" id="rental0201" />
+												<label for="rental0201">12개월</label>
+											</li>
+											<li>
+												<input type="radio" name="rental02" id="rental0202" />
+												<label for="rental0202">24개월</label>
+											</li>
+											<li>
+												<input type="radio" name="rental02" id="rental0203" />
+												<label for="rental0203">36개월</label>
+											</li>
+											<li>
+												<input type="radio" name="rental02" id="rental0204" />
+												<label for="rental0204">48개월</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 
-													<div class="head">
-														<span class="txt">렌탈료 납부기간</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental02" id="rental0201" />
-																<label for="rental0201">12개월</label>
-															</li>
-															<li>
-																<input type="radio" name="rental02" id="rental0202" />
-																<label for="rental0202">24개월</label>
-															</li>
-															<li>
-																<input type="radio" name="rental02" id="rental0203" />
-																<label for="rental0203">36개월</label>
-															</li>
-															<li>
-																<input type="radio" name="rental02" id="rental0204" />
-																<label for="rental0204">48개월</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
+							<div class="optEle">
+								<p class="title">02. 렌탈료 납부기간 선택</p>
+								<div class="tireOptions">
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental01" id="rental0101" />
+												<label for="rental0101">0원</label>
+											</li>
+											<li>
+												<input type="radio" name="rental01" id="rental0102" />
+												<label for="rental0102">5만원</label>
+											</li>
+											<li>
+												<input type="radio" name="rental01" id="rental0103" />
+												<label for="rental0103">10만원</label>
+											</li>
+											<li>
+												<input type="radio" name="rental01" id="rental0104" />
+												<label for="rental0104">20만원</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 
-											<div class="settingInfo">
-												<div class="inner">
-													<!-- 기본 표식 -->
-													<p class="txt case1">내게 꼭 맞는 <span class="color">렌탈 서비스</span>를 <br />직접 설계해 보세요!</p>
-														<!--// 기본 표식 -->
-														<!-- 렌탈 등록비 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">렌탈등록비</span>를 선택해 주세요</p>
-													-->
-														<!--// 렌탈 등록비 미선택 -->
-
-														<!-- 렌탈료 납부기간 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">렌탈료</span> 납부기간을 선택해 주세요</p>
-													-->
-														<!--// 렌탈료 납부기간 미선택 -->
-
-														<!-- 렌탈료 결제방법 미입력 -->
-														<!--
-													<p class="txt case2"><span class="color">렌탈료</span> 결제방법을 선택해 주세요</p>
-													-->
-														<!--// 렌탈료 결제방법 미입력 -->
-
-														<!-- 렌탈료 결제일자 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">렌탈료</span> 결제일자를 선택해 주세요</p>
-													-->
-														<!--// 렌탈료 결제일자 미선택 -->
-												</div>
-											</div>
-											<a href="#" class="btn ty13"><span>렌탈료 계산하기</span></a>
+							<div class="optEle">
+								<p class="title">03. 서비스 선택</p>
+								<div class="tireOptions">
+									<div class="cont tCont">
+										<!-- 기본 -->
+										<div class="notiBox">
+											<p class="txt">
+												<strong>렌탈등록비</strong>와 <strong>렌탈료 납부기간</strong>을 선택하시면 <br />제공되는 서비스를 선택하실 수 있습니다.
+											</p>
 										</div>
-									</li>
-									<!-- 렌탈 -->
+										<!--// 기본 -->
 
-									<!-- 수량 -->
+										<!-- 서비스 없음 -->
+										<!-- <div class="notiBox">
+											<p class="txt">
+												제공되는 서비스가 없습니다. <br /><strong>렌탈 등록비</strong>와 <strong>렌탈료 납부기간</strong>을 다시 선택해주십시요.
+											</p>
+										</div> -->
+										<!--// 서비스 없음 -->
+									</div>
+
 									<!--
-									2018-11-12 기획 요청에 의한 삭제
-									<li>
-										<button class="tit"><span class="num">02</span><span class="titTxt">수량</span></span></button>
-										<div class="inner">
-											<div class="settingOption">
-												<div class="tireOptions">
-													<div class="head">
-														<span class="txt">타이어 수량</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental03" id="rental0301" />
-																<label for="rental0301">1본</label>
-															</li>
-															<li>
-																<input type="radio" name="rental03" id="rental0302" />
-																<label for="rental0302">2본</label>
-															</li>
-															<li>
-																<input type="radio" name="rental03" id="rental0303" />
-																<label for="rental0303">3본</label>
-															</li>
-															<li>
-																<input type="radio" name="rental03" id="rental0304" />
-																<label for="rental0304">4본</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-											<div class="settingInfo">
-												<div class="inner">
-													<div class="txt case5">
-														<p class="txt1">
-															<span class="color">타이어 수량</span>을 선택해 주세요
-														</p>
-														<p class="txt2">
-															렌탈타이어 제품을 이용한 적이 있는 기고객님께서는, <br />로그인 후, 1본/3본 수량도 주문이 가능합니다.
-														</p>
-														<div class="btnBox">
-															<a href="#" class="btn ty9">로그인</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<a href="#" class="btn ty13"><span>렌탈료 계산하기</span></a>
-										</div>
-									</li>
+									옵션 리스트
+
+									<div class="head">
+										<span class="txt">타이어 무상 교체 서비스</span>
+									</div>
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental04" id="rental0401" />
+												<label for="rental0401">타이어 2개 추가</label>
+											</li>
+											<li>
+												<input type="radio" name="rental04" id="rental0402" />
+												<label for="rental0402">타이어 4개 추가</label>
+											</li>
+											<li>
+												<input type="radio" name="rental04" id="rental0403" />
+												<label for="rental0403">해당없음</label>
+											</li>
+										</ul>
+									</div>
+									<div class="head">
+										<span class="txt">엔진오일 교체 서비스</span>
+									</div>
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental05" id="rental0501" />
+												<label for="rental0501">엔진오일 1회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental05" id="rental0502" />
+												<label for="rental0502">엔진오일 2회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental05" id="rental0503" />
+												<label for="rental0503">엔진오일 3회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental05" id="rental0504" />
+												<label for="rental0504">엔진오일 4회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental05" id="rental0505" />
+												<label for="rental0505">해당없음</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="head">
+										<span class="txt">얼라인먼트 무상 서비스</span>
+									</div>
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental06" id="rental0601" />
+												<label for="rental0601">1회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental06" id="rental0602" />
+												<label for="rental0602">2회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental06" id="rental0603" />
+												<label for="rental0603">3회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental06" id="rental0604" />
+												<label for="rental0604">4회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental06" id="rental0605" />
+												<label for="rental0605">해당없음</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="head">
+										<span class="txt">위치교환서비스 무상 서비스</span>
+									</div>
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental07" id="rental0701" />
+												<label for="rental0701">1회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental07" id="rental0702" />
+												<label for="rental0702">2회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental07" id="rental0703" />
+												<label for="rental0703">3회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental07" id="rental0704"/>
+												<label for="rental0704">4회</label>
+											</li>
+											<li>
+												<input type="radio" name="rental07" id="rental0705" />
+												<label for="rental0705">해당없음</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="head">
+										<span class="txt">방문점검서비스</span>
+									</div>
+									<div class="cont">
+										<ul class="tireOptionList">
+											<li>
+												<input type="radio" name="rental08" id="rental0801" />
+												<label for="rental0801">3개월</label>
+											</li>
+											<li>
+												<input type="radio" name="rental08" id="rental0802" />
+												<label for="rental0802">6개월</label>
+											</li>
+											<li>
+												<input type="radio" name="rental08" id="rental0803" />
+												<label for="rental0803">해당없음</label>
+											</li>
+										</ul>
+									</div>
 									-->
-									<!-- 수량 -->
+								</div>
+							</div>
 
-									<!-- 서비스 -->
-									<li>
-										<!-- 2018-11-19 텍스트 수정 -->
-										<button class="tit"><span class="num">02</span><span class="titTxt">서비스</span></span></button>
-										<!--/ 2018-11-19 텍스트 수정 -->
-										<div class="inner">
-											<div class="settingOption">
-												<div class="tireOptions">
-													<div class="head">
-														<span class="txt">타이어 무상 교체 서비스</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental04" id="rental0401" />
-																<label for="rental0401">타이어 2개 추가</label>
-															</li>
-															<li>
-																<input type="radio" name="rental04" id="rental0402" />
-																<label for="rental0402">타이어 4개 추가</label>
-															</li>
-															<li>
-																<input type="radio" name="rental04" id="rental0403" />
-																<label for="rental0403">해당없음</label>
-															</li>
-														</ul>
-													</div>
-													<div class="head">
-														<span class="txt">엔진오일 교체 서비스</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental05" id="rental0501" />
-																<label for="rental0501">엔진오일 1회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental05" id="rental0502" />
-																<label for="rental0502">엔진오일 2회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental05" id="rental0503" />
-																<label for="rental0503">엔진오일 3회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental05" id="rental0504" />
-																<label for="rental0504">엔진오일 4회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental05" id="rental0505" />
-																<label for="rental0505">해당없음</label>
-															</li>
-														</ul>
-													</div>
-
-													<div class="head">
-														<span class="txt">얼라인먼트 무상 서비스</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental06" id="rental0601" />
-																<label for="rental0601">1회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental06" id="rental0602" />
-																<label for="rental0602">2회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental06" id="rental0603" />
-																<label for="rental0603">3회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental06" id="rental0604" />
-																<label for="rental0604">4회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental06" id="rental0605" />
-																<label for="rental0605">해당없음</label>
-															</li>
-														</ul>
-													</div>
-
-													<div class="head">
-														<span class="txt">위치교환서비스 무상 서비스</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental07" id="rental0701" />
-																<label for="rental0701">1회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental07" id="rental0702" />
-																<label for="rental0702">2회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental07" id="rental0703" />
-																<label for="rental0703">3회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental07" id="rental0704" />
-																<label for="rental0704">4회</label>
-															</li>
-															<li>
-																<input type="radio" name="rental07" id="rental0705" />
-																<label for="rental0705">해당없음</label>
-															</li>
-														</ul>
-													</div>
-
-													<div class="head">
-														<span class="txt">방문점검서비스</span>
-													</div>
-													<div class="cont">
-														<ul class="tireOptionList">
-															<li>
-																<input type="radio" name="rental08" id="rental0801" />
-																<label for="rental0801">3개월</label>
-															</li>
-															<li>
-																<input type="radio" name="rental08" id="rental0802" />
-																<label for="rental0802">6개월</label>
-															</li>
-															<li>
-																<input type="radio" name="rental08" id="rental0803" />
-																<label for="rental0803">해당없음</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-											<div class="settingInfo">
-												<div class="inner">
-													<!-- 서비스 선택 -->
-													<p class="txt case2">원하시는<span class="color">타이어 케어 서비스</span>를 <br />선택해 주세요</p>
-														<!--/// 서비스 선택 -->
-
-														<!-- 타이어 무상 교체 서비스 미 선택 -->
-														<!--
-													<p class="txt case2"><span class="color">타이어 무상 교체 서비스</span>를 <br />선택해 주세요</p>
-													-->
-														<!--// 타이어 무상 교체 서비스 미 선택 -->
-
-														<!-- 엔진오일 교체 서비스 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">엔진오일 교체 서비스</span>를 <br />선택해 주세요</p>
-													-->
-														<!--// 엔진오일 교체 서비스 미선택 -->
-
-														<!-- 얼라인먼트 무상 서비스 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">얼라인먼트 무상 서비스</span>를 <br />선택해 주세요</p>
-													-->
-														<!--// 얼라인먼트 무상 서비스 미선택 -->
-
-														<!-- 위치교환서비스 무상 서비스 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">위치교환서비스 무상 서비스</span>를 <br />선택해 주세요</p>
-													-->
-														<!--// 위치교환서비스 무상 서비스 미선택 -->
-
-														<!-- 방문점검서비스 미선택 -->
-														<!--
-													<p class="txt case2"><span class="color">방문점검서비스</span>를 <br />선택해 주세요</p>
-													-->
-														<!--// 방문점검서비스 미선택 -->
-
-														<!-- 입력완료 -->
-														<!--
-													<p class="txt case6">
-														<span class="color">기본 정보 입력이 끝났습니다.</span> <br /> 
-														렌탈료 확인하기를 눌러 <br />나에게 맞는 렌탈상품을 확인하세요
-													</p>
-													-->
-														<!--// 입력완료 -->
-												</div>
-											</div>
-											<a href="#" class="btn ty13"><span>렌탈료 계산하기</span></a>
-										</div>
-									</li>
-									<!--// 서비스 -->
-								</ul>
+							<!--
+							상단의 옵션을 모두 선택 완료 후 button disabled 제거
+							-->
+							<div class="btnBox">
+								<button class="btn ty14" disabled="disabled">
+									<span class="txt">렌탈료 계산하기</span>
+								</button>
 							</div>
 						</div>
 
@@ -2200,11 +2020,20 @@
 			</div>
 		</section>
 
+		<!-- 2018-12-07 수정 -->
 		<div class="fixedBottom">
 			<div class="inner">
-				<a href="#" class="btn ty14"><span><span class="txt">렌탈상품 알아보기</span></span></a>
+				<a href="#" class="btn ty14" data-bpoint="bPoint1">
+					<span class="txt">내게 맞는 렌탈 상품 찾기</span>
+				</a>
+				<!-- 나만의 렌탈 설계하기 탭 활성화 시 -->
+				<!-- <a href="#" class="btn ty14" data-bpoint="bPoint2">
+					<span class="txt">나만의 렌탈 설계하기</span>
+				</a> -->
+				<!--// 나만의 렌탈 설계하기 탭 활성화 시 -->
 			</div>
 		</div>
+		<!--// 2018-12-07 수정 -->
 		<!-- 하단 영역 -->
 		<div class="wing">
 			<ul>

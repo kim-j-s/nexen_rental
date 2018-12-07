@@ -55,6 +55,9 @@
 .inputBox .inp:disabled {background:#eee; color:#b5b5b5;}
 .inputBox .inp:focus {border:1px solid #812990;}
 .inputBox.error .inp {border:1px solid #c3244e;}
+.inputBox.readonly {}
+.inputBox.readonly .inp {background:#eee; color:#b5b5b5;}
+.inputBox.readonly:after {content:''; position:absolute; top:0; left:0; width:100%; height:100%;}
 .inputBox + .dateTxt {display:inline-block; width:34px; padding-left:6px; vertical-align:middle;}
 .inputBox + .btn.ty6 {margin-left:7px;}
 .inputBox.picker .inp {background:url(../images/common/icon/icon_datepicker.png) no-repeat right 10px center;}
@@ -163,11 +166,9 @@ text-align:center; line-height:60px;}
 .btn.ty12.on {background:#65236a;}
 .btn.ty13 {padding:0 10px; background:#812990; border-radius:3px; text-align:center;}
 .btn.ty13 > span {display:inline-block; padding-right:28px; font-weight:500; font-size:16px; color:#fff; background:url(../images/common/icon/icon_checkmark1.png) no-repeat right center; line-height:50px;}
-.btn.ty14 {position:relative; padding:0 20px;}
-.btn.ty14:before {content:''; position:absolute; top:0; left:0; width:22px; height:100%; border-top-left-radius:90px; border-bottom-left-radius:90px; background:#812990;}
-.btn.ty14:after {content:''; position:absolute; top:0; right:0; width:22px; height:100%; border-top-right-radius:90px; border-bottom-right-radius:90px; background:#812990;}
-.btn.ty14 > span {display:block; padding:0 20px; min-width:170px; background:#812990; text-align:center;}
-.btn.ty14 > span .txt {display:block; padding:0 29px 0 1px; line-height:40px; border-left:none; border-right:none; font-size:16px; color:#fff; text-align:center; background:url(../images/common/icon/icon_checkmark1.png) no-repeat right center;}
+.btn.ty14 {position:relative; padding:0 20px; border-radius:45px 45px 45px 45px; background:#812990;}
+.btn.ty14 .txt {display:block; padding:0 29px 0 1px; line-height:40px; border-left:none; border-right:none; font-weight:500; font-size:16px; color:#fff; text-align:center; background:url(../images/common/icon/icon_checkmark1.png) no-repeat right center;}
+.btn.ty14:disabled {background:#999; cursor:default;}
 .btn.ty15 {width:200px; background:#555; border-radius:2px; text-align:center;}
 .btn.ty15 span {display:block; font-size:18px; color:#fff; line-height:50px;}
 .btn.ty16 {width:200px; background:#999; border-radius:2px; text-align:center;}
@@ -216,7 +217,7 @@ text-align:center; line-height:60px;}
 .tabList > li > button {display:block; width:100%; height:48px; text-align:center;}
 .tabList > li > button span {font-size:18px; color:#757575;}
 .tabList > li > a {display:inline-block; width:100%; height:48px; text-align:center; line-height:48px;}
-.tabList > li > a span {font-size:18px; color:#757575;}
+.tabList > li > a span {display:block; font-size:18px; color:#757575; line-height:48px;}
 .tabList > li.on {background:#fff; border:2px solid #812990; border-left:none; border-bottom:none;}
 .tabList > li.on:after {content:''; position:absolute; top:-2px; left:-1px; width:2px; border-bottom:50px solid #812990;}
 .tabList > li.on > button {height:48px;}
@@ -235,15 +236,15 @@ text-align:center; line-height:60px;}
 .tabContent > .subTabWrap:first-child {margin-top:60px;}
 
 .tabWrap.mini {width:100%;}
-.tabWrap.mini .tabList > li > button {height:38px;}
-.tabWrap.mini .tabList > li.on > button {height:38px;}
-.tabWrap.mini .tabList > li.on:after {content:''; position:absolute; top:-2px; left:-1px; width:2px; border-bottom:40px solid #812990;}
+.tabWrap.mini .tabList > li > button {height:36px;}
+.tabWrap.mini .tabList > li.on > button {height:36px;}
+.tabWrap.mini .tabList > li.on:after {content:''; position:absolute; top:-2px; left:-1px; width:2px; border-bottom:38px solid #812990;}
 .tabWrap.mini .tabList > li.on:first-child:after {content:''; position:absolute; top:-2px; left:0; width:2px; border-bottom:40px solid #812990;}
 
 .tabList {display:table; width:100%; table-layout:fixed;}
 .tabList.other > li {position:relative; display:table-cell; border:1px solid #d5d5d5; background:#fff;}
-.tabList.other > li:after {content:none;}
 .tabList.other > li + li {border-left:none;}
+.tabList.other > li:after {content:none;}
 .tabList.other > li > button {display:block; width:100%; height:60px; text-align:center;}
 .tabList.other > li > button span {font-weight:400; font-size:18px; color:#666;}
 .tabList.other > li.on {border:1px solid #812990; background:#812990;}
@@ -265,6 +266,17 @@ text-align:center; line-height:60px;}
 .tabList.other2 > li.on > button span {font-weight:500; color:#353535;}
 .tabList.other2 > li:first-child:after {content:none;}
 .tabList.other2 > li.on:first-child:after {content:''; position:absolute; top:auto; bottom:-1px; left:-1px; width:calc(100% + 2px); border-bottom:2px solid #812990;}
+
+.tabList.other3 > li {position:relative; display:table-cell; border:1px solid #d5d5d5; background:#f5f5f5;}
+.tabList.other3 > li:after {content:none;}
+.tabList.other3 > li > button {display:block; width:100%; height:60px; text-align:center;}
+.tabList.other3 > li > button span {font-weight:400; font-size:18px; color:#666;}
+.tabList.other3 > li.on {border:1px solid #353535; background:#353535;}
+.tabList.other3 > li.on:after {content:''; position:absolute; top:-1px; left:-2px; bottom:auto; width:1px; border-bottom:62px solid #812990;}
+.tabList.other3 > li.on > button {height:60px;}
+.tabList.other3 > li.on > button span {font-weight:400; color:#fff;}
+.tabList.other3 > li:first-child:after {content:none;}
+.tabList.other3 > li.on:first-child:after {content:none;}
 
 .subTabWrap {text-align:center;}
 .subTabList {display:inline-block; overflow:hidden; font-size:0;}
@@ -345,9 +357,10 @@ text-align:center; line-height:60px;}
 
 .list7 {}
 .list7 > li {padding-left:22px; font-weight:400; font-size:16px; color:#454545; background:url(../images/common/icon/icon_list7.png) no-repeat left 3px; line-height:20px;}
+.list7 > li.etc {font-weight:500; color:#c3244e; background:url(../images/common/icon/icon_list8.png) no-repeat left 3px;}
 .list7 > li + li {margin-top:7px;}
 .list7 > li .toolTip {margin-top:-3px;}
-.list7 > li > .text {margin-top:10px; font-size:15px;}
+.list7 > li > .text {margin-top:10px; font-size:15px; color:#454545;}
 .list7 > li > .text > * {font-size:15px;}
 .list7 > li > .text .serviceTxt + .serviceTxt {margin-left:12px;}
 .list7 > li > .text .serviceTxt .tipGroup {font-size:14px; color:#888;}
@@ -820,18 +833,18 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemtList2 > li {display:table; width:100%; bordeR:1px solid #d5d5d5;}
 .itemtList2 > li > a {display:table; width:100%;}
 .itemtList2 > li + li {margin-top:30px;}
-.itemtList2 > li .thumb {display:table-cell; width:217px; vertical-align:middle; text-align:center;}
+.itemtList2 > li .thumb {position:relative; display:table-cell; width:217px; vertical-align:middle; text-align:center;}
 .itemtList2 > li .thumb img {max-width:100%; max-height:100%;}
 .itemtList2 > li .inner {display:table-cell; padding:35px 45px 24px 0; vertical-align:top;}
 .itemtList2 > li .itemInfo1 {}
 .itemtList2 > li .itemInfo2 {display:table; width:100%; padding-top:30px;}
 .itemtList2 > li .itemInfo2 .hashWrap {display:table-cell; vertical-align:bottom;}
-.itemtList2 > li .itemInfo2 .pay {display:table-cell; width:300px; vertical-align:bottom; text-align:right;}
+.itemtList2 > li .itemInfo2 .pay {display:table-cell; width:320px; vertical-align:bottom; text-align:right;}
 .itemtList2 > li .itemInfo2 .pay > ul {padding-bottom:10px;}
 .itemtList2 > li .itemInfo2 .pay > ul > li + li {margin-top:12px;}
 .itemtList2 > li .itemInfo2 .pay > ul > li dl {display:table; width:100%;}
 .itemtList2 > li .itemInfo2 .pay > ul > li dt {display:table-cell; text-align:right; font-size:16px; color:#454545;}
-.itemtList2 > li .itemInfo2 .pay > ul > li dd {display:table-cell; width:170px; text-align:right; font-size:16px; color:#454545;}
+.itemtList2 > li .itemInfo2 .pay > ul > li dd {display:table-cell; width:210px; text-align:right; font-size:16px; color:#454545;}
 .itemtList2 > li .itemInfo2 .pay > ul > li dd > span {font-weight:500; font-size:24px;}
 .itemtList2Wrap + .pagenation {margin-top:80px;}
 
@@ -865,7 +878,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3 > li > .inner .fee > dl dd p {padding-top:2px; font-size:16px;}
 
 /* 상품 라벨 */
-.itemLabel {position:absolute; top:-1px; left:-1px; width:30px;}
+.itemLabel {position:absolute; top:-1px; left:-1px; z-index:1; width:30px;}
 .itemLabel > span {display:block; height:30px; overflow:hidden; text-indent:-9999px; background:url(../images/common/icon/icon_itemlabel.jpg) no-repeat 0 0;}
 .itemLabel > span + span {margin-top:4px;}
 .itemLabel > .hit {background-position:0 -30px;}
@@ -1078,7 +1091,7 @@ no-repeat left center;}
 .detailTitle > .typeTxt {position:absolute; top:0; left:0;}
 .detailTitle + .prdDetailCont {margin-top:6px;}
 
-.prodInfo {float:right; width:703px; margin-top:-5px; border-bottom:2px solid #353535;}
+.prodInfo {float:right; width:703px; margin-top:-5px;}
 .prodInfo > h2 {font-weight:400; font-size:30px; color:#252525; line-height:40px;}
 .prodInfo > .txt {height:48px; margin-top:13px; font-weight:400; font-size:18px; color:#454545; line-height:24px;}
 .prodFunction {margin-top:26px;}
@@ -1176,6 +1189,26 @@ no-repeat left center;}
 .settingInfo .txt.case5 .txt2 + .btnBox {margin-top:18px;}
 .settingInfo .txt.case6 {padding-top:68px; background:url(../images/prd/icon_info5.png) no-repeat top center;}
 
+.prodSetting {padding:40px 47px 28px 47px; border:3px solid #353535; overflow:hidden;}
+.prodSetting > .optEle {float:left; width:334px;}
+.prodSetting .btnBox {padding-top:36px; clear:both;}
+.prodSetting + .tips {margin-top:12px;}
+
+.optEle {}
+.optEle + .optEle {margin-left:48px;}
+.optEle > .title {padding-bottom:6px; font-weight:500; font-size:18px; color:#454545; line-height:24px; border-bottom:1px solid #666;}
+.optEle > .title + .tabWrap {margin-top:15px;}
+.optEle > .title + .tireOptions {margin-top:15px;}
+.optEle .goLogin {margin-top:10px; overflow:hidden;}
+.optEle .goLogin > * {float:left;}
+.optEle .goLogin > .txt {width:251px; height:82px; padding:21px 0 0 30px; background:#f5f5f5; font-size:14px; letter-spacing:-1px;}
+.optEle .goLogin > .txt span {display:block; line-height:20px;}
+.optEle .goLogin > .txt strong {font-weight:400; color:#454545;}
+.optEle .goLogin > a {width:82px; background:#812990; font-size:14px; color:#fff; line-height:82px; text-align:center;}
+.optEle .notiBox {height:174px; padding:38px 0 0 0; background:#f5f5f5;}
+.optEle .notiBox > .txt {padding-top:57px; text-align:center; background:url(../images/common/icon/icon_none.png) no-repeat center top; font-size:14px; line-height:22px; letter-spacing:-1px;}
+.optEle .notiBox > .txt strong {font-weight:400; font-size:14px; color:#454545;}
+
 .tips {}
 .tips .black {font-weight:500; color:#353535;}
 .tips > .txt {color:#888;}
@@ -1183,12 +1216,12 @@ no-repeat left center;}
 .tips > .toolTip + .txt {margin-left:9px;}
 .tips + .itemtList3 {margin-top:50px;}
 
-.makerGroup1 {margin-top:24px;}
+.makerGroup1 {margin-top:25px;}
 .makerRadio {overflow:hidden;}
 .makerRadio > li {position:relative; float:left;}
 .makerRadio > li + li {margin-left:23px;}
 .makerRadio > li input[type="radio"] {position:absolute; top:-20px; left:0;}
-.makerRadio > li label {display:block; width:70px; padding-top:35px; font-size:12px; color:#888; text-align:center; cursor:pointer; line-height:16px;}
+.makerRadio > li label {display:block; width:48px; padding-top:35px; font-size:12px; color:#888; text-align:center; cursor:pointer; line-height:16px;}
 .makerRadio > li label.ty1 {background:url(../images/prd/icon_maker1_1.png) no-repeat top center;}
 .makerRadio > li label.ty2 {background:url(../images/prd/icon_maker1_2.png) no-repeat top center;}
 .makerRadio > li label.ty3 {background:url(../images/prd/icon_maker1_3.png) no-repeat top center;}
@@ -1206,14 +1239,15 @@ no-repeat left center;}
 .makerGroup2 .selectbox + .selectbox {margin:10px 0 0 0;;}
 .makerGroup2 .selectbox + .inputBox {display:block; margin-top:10px;}
 
-.tireOptions {height:266px; overflow:auto;}
-.tireOptions > .head {font-size:0;}
-.tireOptions > .head .txt {position:relative; display:inline-block; padding-left:10px; vertical-align:middle; line-height:36px; font-weight:500; font-size:15px; color:#454545;}
-.tireOptions > .head .txt:after {content:''; position:absolute; top:50%; left:0; margin-top:-1px; width:3px; height:3px; background:#666;}
+.tireOptions {max-height:266px; overflow:auto;}
+.tireOptions .head {font-size:0;}
+.tireOptions .head .txt {position:relative; display:inline-block; padding-left:10px; vertical-align:middle; line-height:38px; font-weight:500; font-size:15px; color:#454545;}
+.tireOptions .head .txt:after {content:''; position:absolute; top:50%; left:0; margin-top:-1px; width:3px; height:3px; background:#666;}
 .tireOptions .toolTip {margin-left:6px;}
-.tireOptions > .head .selectbox {float:right;}
-.tireOptions > .cont {margin-top:10px;}
-.tireOptions > .cont + .head {margin-top:19px}
+/* .tireOptions > .head .selectbox {float:right;} */
+.tireOptions > .cont {}
+.tireOptions .cont + .head {margin-top:18px;}
+.tireOptions .cont.tCont + .head {margin-top:0;}
 .tireOptionList {}
 .tireOptionList > li {position:relative; overflow:hidden;}
 .tireOptionList > li + li {margin-top:10px;}
