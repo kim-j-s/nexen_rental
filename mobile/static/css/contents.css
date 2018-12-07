@@ -1402,9 +1402,10 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contWrap.mynxn .tabMenu .tabContent { padding-bottom: 20px !important; border-bottom: 1px solid #d4d4d4; }
 .contWrap.mynxn .btnArea { padding: 0 15px; }
 
-.slideCont.payment { background: #fff; }
+.slideCont.payment { background: #fff; border-bottom-width: 1px; }
 .slideCont.payment .inner { background: #f9f9f9 url('../images/mynxn/bg_dotted_line2.png') repeat-x left top; background-size: 6px 1px;}
-.slideCont.payment .inner .paymentItem { padding: 15px 0; }
+.slideCont.payment .inner .paymentItem { padding: 15px 0 0; }
+.slideCont.payment .inner .paymentItem .infowrap { margin: -5px 0; }
 
 .prepaymentWrap { margin-top: 15px; padding: 15px 10px; background: #e7e2f2; }
 .prepaymentWrap dl { display: flex; justify-content: space-between; }
@@ -1414,3 +1415,18 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .prepaymentWrap .total { padding-top: 12px; background: url('../images/mynxn/bg_dotted_line3.png') repeat-x left top; background-size: 6px 1px;}
 .prepaymentWrap .total dd { font-size: 13px; font-weight: 500; }
 
+/* 연체금 상세정보*/
+.overdueList .topArea { padding: 10px 15px; border-bottom: 1px solid #dcdcdc; background: #e8e9eb; color: #000; font-size: 13px; font-weight: 300; }
+.overdueList .slideCont { border-top: 0; background: #fff; }
+
+.overdueList .paymentItem { margin: 0 15px; padding: 0; background: url('../images/mynxn/bg_dotted_line4.png') repeat-x left bottom; background-size: 3px 1px;}
+.overdueList .paymentItem:first-child { margin-top: 5px; background: none; }
+.overdueList .paymentItem .infotop { padding: 10px 0; }
+.overdueList .paymentItem .infotop .checkbox { color: #000; font-size: 15px; font-weight: 500; }
+.overdueList .paymentItem .infotop { position: relative; vertical-align: middle; }
+.overdueList .paymentItem .infotop .date { display: inline-block; font-size: 11px; vertical-align: 0; }
+.overdueList .paymentItem .infotop .sum { position: absolute; top: 10px; right: 0; font-size: 13px; line-height: 20px; }
+.overdueList .paymentItem .inner { display: none; }
+.overdueList .paymentItem .infowrap { margin: 0; padding-bottom: 10px; }
+
+.overdueList .slideCont .prepaymentWrap { margin: 10px 15px 20px; }
