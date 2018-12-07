@@ -1411,6 +1411,7 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .slideCont.payment .inner { background: #f9f9f9 url('../images/mynxn/bg_dotted_line2.png') repeat-x left top; background-size: 6px 1px;}
 .slideCont.payment .inner .paymentItem { padding: 15px 0 0; }
 .slideCont.payment .inner .paymentItem .infowrap { margin: -5px 0; }
+.slideCont.payment .btnArea { margin: 0 15px; padding: 15px 0 20px; border-top: 1px solid #e4e4e5; }
 
 .prepaymentWrap { margin-top: 15px; padding: 15px 10px; background: #e7e2f2; }
 .prepaymentWrap dl { display: flex; justify-content: space-between; }
@@ -1423,7 +1424,6 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 /* 연체금 상세정보*/
 .overdueList .topArea { padding: 10px 15px; border-bottom: 1px solid #dcdcdc; background: #e8e9eb; color: #000; font-size: 13px; font-weight: 300; }
 .overdueList .slideCont { border-top: 0; background: #fff; }
-
 .overdueList .paymentItem { margin: 0 15px; padding: 0; background: url('../images/mynxn/bg_dotted_line4.png') repeat-x left bottom; background-size: 3px 1px;}
 .overdueList .paymentItem:first-child { margin-top: 5px; background: none; }
 .overdueList .paymentItem .infotop { padding: 10px 0; }
@@ -1433,5 +1433,23 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .overdueList .paymentItem .infotop .sum { position: absolute; top: 10px; right: 0; font-size: 13px; line-height: 20px; }
 .overdueList .paymentItem .inner { display: none; }
 .overdueList .paymentItem .infowrap { margin: 0; padding-bottom: 10px; }
-
 .overdueList .slideCont .prepaymentWrap { margin: 10px 15px 20px; }
+
+/* 계약상세내역 */
+.contracWrap { margin-top: 20px; background: #fff; padding-bottom: 20px; border-bottom: 1px solid #d4d4d4; }
+.contracWrap .optSelect { margin: 0 15px; padding: 20px 0 10px; border-bottom: 1px solid #e4e4e5; }
+
+.contracWrap .shopList { margin: 10px 15px 0; }
+.contracWrap .shopList li { border: 1px solid #d5d5d5;}
+.contracWrap .shopList li:not(:first-child) { margin-top: 10px; }
+
+.contracWrap .storeInfo dl { padding: 20px 15px; background: #fafafa; }
+.contracWrap .storeInfo dl dt { font-size: 15px; }
+.contracWrap .storeInfo .storeAddress { margin-bottom: 0; }
+.contracWrap .storeInfo .addInfo { border-top: 0; background: #fff; height: 40px; font-weight: 500; }
+.contracWrap .storeInfo .addInfo .date { position: absolute; top: 0; right: 15px; line-height: 40px; color: #999; }
+.contracWrap .storeInfo .btnBox { padding: 0 5px 5px; }
+.contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
+
+
+
