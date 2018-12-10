@@ -346,7 +346,7 @@ td .textarea {width:100%;}
 .affiliateCards .inner .txt span {display:block; padding-top:20px; font-size:12px; font-weight:400; line-height:16px; color:#666;}
 .affiliateCards .inner .txt + .btnBox {margin-top:10px;}
 .btnSet { display: flex; margin-top: 30px;}
-.btnSet .btn { display: flex; flex: 1;flex-direction: column; height: 48px;	justify-content: center;line-height: 1;}
+.btnSet .btn { display: flex; flex: 1;flex-direction: column; width: 50%; height: 48px;	padding: 0;  justify-content: center;line-height: 1;}
 .btnSet .btn + .btn { margin-left: 5px; }
 .btnSet .call {padding-left:13px; padding-top: 4px}
 .btnSet .call:before {display: inline-block; content:''; width:10px; height:12px; margin-right:2px; background:url('../images/common/icon/icon_tel2.png') no-repeat left center; background-size:100%; vertical-align:-1px;}
@@ -546,7 +546,7 @@ p.mark1 {display:block;}
  * ============================== */
 
 .fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
-.sectionTire .tabMenu .tabList.top { position: fixed; top: 45px; z-index: 100; background: #fff; }
+.sectionTire .tabMenu .tabList.top { position: fixed; top: 44px; z-index: 100; background: #fff; }
 .sectionTire .tabMenu .tabList.top ~ .tabContent.on { margin-top: 35px; }
 .sectionTire .tabMenu.fixed {top: 44px; z-index: 100; background: #fff; }
 
@@ -569,28 +569,28 @@ p.mark1 {display:block;}
 .photoSlide .swiper-button-next {right:0px; background-position:-20px 0px;}
 .photoSlide .swiper-pagination {position:absolute; bottom:18px;}
 
-.productViewWrap .badge {position:absolute; top:15px; right:15px; z-index:2;} 
+.productViewWrap .badge {position:absolute; top:15px; left:15px; z-index:2;} 
 .badge.inline span { display: inline-block; }
-.badge span {display: block;box-sizing: border-box; width: 35px; height:18px; line-height:18px; border-radius: 2px; background: #b6985a;color: #fff; font-size: 10px; text-align:center;}
-.badge span.hit { background: #c3244e;}
-.badge span.best {background: #6a2276;}
+.badge span { box-sizing: border-box; display: block;  width: 25px; height: 25px; font-size: 0; line-height: 0; }
+.badge span.hit { background: url('../images/prd/icon_hit.png') no-repeat left top; background-size: 100%; }
+.badge span.best { background: url('../images/prd/icon_best.png') no-repeat left top; background-size: 100%; }
 .badge span:not(:first-child) { margin-top: 2px; } 
 
 
 /* 상품 */
-.label { display: inline-block;}
-.label span { display:inline-block; box-sizing: border-box; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
-.label span.point { border-color: #6a2276;}
+.label { display: inline-block; font-size: 0; }
+.label span { display:inline-block; box-sizing: border-box; margin-bottom: 2px; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align: center; }
+.label span.point { border-color: #b6985a; border-radius: 2px; min-width: 35px; background: #b6985a; color: #fff; }
+.label span:not(:first-child) { margin-right: 5px; }
+.label span.point + span.point { margin-left: 5px;}
 
 .hTag { display: inline-block;}
 .hTag span { display:inline-block; background:#fff; box-sizing: border-box; border-radius:1px; border: 1px solid #666; min-width: 45px; height: 20px; line-height: 18px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
-.hTag span.point { border-color: #6a2276;}
-
+.hTag span.point { border-color: #b6985a;}
 
 .tabContent > .btnArea {margin-top:0px;}
 .tabContent .list1 .ulBar {margin-bottom:10px;}
 .tabContent .list1 .ulBar li {margin:5px 0 0 5px; font-size:12px;}
-
 
 .mainTech {overflow:hidden;}
 .mainTech li {position:relative; float:left; display:block; padding-top:35px; min-width:40px; text-align:center; margin-bottom:5px;}
@@ -641,7 +641,7 @@ p.mark1 {display:block;}
 .product { position:relative;border:1px solid #d5d5d5;}
 .product .thumb {display:flex; align-items: center;justify-content: center;height:200px;background:#fff;text-align:center}
 .product .thumb img { height:150px; } /* 세로고정 150px */
-.product .badge { position: absolute; top:0; right:0; }
+.product .badge { position: absolute; top:-1px; left:-1px; }
 .orderArea {margin-top:0; padding:0 5px 5px 5px;}
 .orderArea .btn:nth-child(1) {flex:0; flex-basis:40px;}
 .orderArea .btn:nth-child(2) {flex:1;}
@@ -662,10 +662,10 @@ p.mark1 {display:block;}
 
 .priceInfoWrap {position:relative; background:#fdfdfd; padding: 15px 15px; border-top: 1px dashed #e1e1e1;}
 .priceInfoWrap.noLine {border:none; background:#fff;}
-.priceInfo {display:flex; align-items:center; color:#000;}
+.priceInfo {display:flex; align-items:center; justify-content: space-between; color:#000;}
 .priceInfo:not(:first-child) {margin-top:10px;}
-.priceInfo .txt {flex:auto;font-size:11px;}
-.priceInfo .price {flex-basis: 100px;font-size:11px;font-weight:500;text-align:right;}
+.priceInfo .txt { flex-basis: 100px; font-size:11px;}
+.priceInfo .price { font-size:11px; font-weight:500; text-align:right;}
 .priceInfo .price .num {font-size:18px;font-weight:500;}
 .priceInfo .price .num.type1 {color:#812990;}
 .priceInfo .price .num.type2 {color:#b6985a;}
@@ -676,13 +676,13 @@ p.mark1 {display:block;}
 .priceInfo.more {padding-right:35px;}
 .priceInfo .btn.more {position:absolute; top:12px; right:5px; font-size:0; width:30px; height:30px; background:#555555 url('../images/common/btn/btn_more.png') no-repeat 50% 50%; background-size: 14px 14px;}
 
-.myRentalProduct {display:none; padding: 15px 12px; margin-top:10px; border-radius: 2px; background: #f8f8f8; text-align: center;}
+.myRentalProduct { /*display:none;*/ padding: 15px 12px; margin-top:10px; border-radius: 2px; background: #f8f8f8; text-align: center;}
 .myRentalProduct + .myRentalProduct {margin-top:5px;}
 .myRentalProduct .tit {display:inline-block; color:#000; font-size:12px; font-weight:400;}
 .myRentalProduct .info {margin-top:5px;}
 .myRentalProduct .info li {display: inline-block;}
 .myRentalProduct .info li ~ li { margin-top:5px;}
-.myRentalProduct .info span {min-width:85px; box-sizing:border-box; display:inline-block; padding:5px 10px; border-radius:10px; background:#812990; color:#fff; font-size: 11px; font-weight:300;}
+.myRentalProduct .info span { min-width:85px; box-sizing:border-box; display:inline-block; height: 20px; line-height: 20px; padding: 0 10px; border-radius:10px; background:#812990; color:#fff; font-size: 11px; font-weight:300;}
 .myRentalProduct .btnDel {display: inline-block; width: 15px; height: 15px; border-radius: 100%; background: #555 url('../images/common/btn/btn_del.png') no-repeat 50%; background-size: 7px 7px; vertical-align: -1px;}
 .myRentalProduct .btnDel span {font-size:0;}
 
@@ -722,9 +722,9 @@ p.mark1 {display:block;}
 .searchOpt .radiobtnGroup:nth-child(1) {padding-bottom:10px; background:url('../images/common/bg_line1.png') repeat-x 0 100%; background-size:6px 1px;}
 .searchOpt .radiobtnGroup:nth-child(2) {margin-top:10px;} 
 
-.sortArea {display:flex; table-layout:fixed; width:100%;}
-.sortArea .selectbox {display:table-cell; width:50%; box-sizing:border-box;} 
-.sortArea .selectBox:last-child {margin-right:0;}
+.sortArea { display: flex; width:100%; }
+.sortArea .selectbox { flex: 1; } 
+.sortArea .selectbox:last-child { margin-left: 5px; }
 
 /* 일시불/추천렌탈 리스트 */
 .rentalList.mg1 {margin:20px 15px 50px 15px;}
@@ -1146,6 +1146,7 @@ img.full { width: 100%;}
 .slideCont + .btnArea {margin:0; padding:15px 15px 50px 15px; background:#e7e7e7;}
 
 .orderSlide {position:relative; margin-bottom:25px;}
+.orderSlide .swiper-slide { width: 100%; }
 .orderSlide .swiper-button-next, .orderSlide .swiper-button-prev {position:absolute; top:50%; width:20px; height:40px; z-index:1; margin-top:-20px; text-indent:-999px; overflow:hidden; background:url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
 .orderSlide .swiper-button-next.swiper-button-disabled, .orderSlide .swiper-button-prev.swiper-button-disabled {opacity:0.3; cursor:auto;  pointer-events:none;}
 .orderSlide .swiper-button-prev {left:0px; background-position:0px 0px;}
@@ -1154,7 +1155,7 @@ img.full { width: 100%;}
 
 .orderItem { cursor: pointer; }
 .orderItem > .prod { display:table; width:100%; padding:18px 0 18px 0; table-layout:fixed;}
-.orderItem > .prod > .thumb { display:table-cell; width:100px; text-align:center; vertical-align:middle;}
+.orderItem > .prod > .thumb { display:table-cell; width:100px; text-align:center; vertical-align:middle;  }
 .orderItem > .prod > .thumb img {max-width:100%;}
 .orderItem > .prod > .cont {display:table-cell; vertical-align:middle; padding-right:30px;}
 .orderItem > .prod > .cont > .state {margin-bottom: 12px;}

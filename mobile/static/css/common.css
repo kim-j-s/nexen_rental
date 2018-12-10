@@ -1007,7 +1007,7 @@ a.btn { text-decoration: none !important; }
 }
 
 .pageFoot { display: flex; }
-.pageFoot .btnAction { flex: 1; }
+.pageFoot .btnAction { flex: 1; padding: 0; }
 
 .btnAction  .btnSearch {
 	display: inline-block;
