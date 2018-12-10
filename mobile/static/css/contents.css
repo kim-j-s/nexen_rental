@@ -670,6 +670,8 @@ p.mark1 {display:block;}
 .priceInfo .price .num.type1 {color:#812990;}
 .priceInfo .price .num.type2 {color:#b6985a;}
 .priceInfo .price .num.type3 {color:#c3244e;}
+.priceInfo .price .num.type2 {color:#b6985a;}
+.priceInfo .price.txtColor2 * {color:#c3244e !important; }
 .priceInfo.more {padding-right:35px;}
 .priceInfo .btn.more {position:absolute; top:12px; right:5px; font-size:0; width:30px; height:30px; background:#555555 url('../images/common/btn/btn_more.png') no-repeat 50% 50%; background-size: 14px 14px;}
 
