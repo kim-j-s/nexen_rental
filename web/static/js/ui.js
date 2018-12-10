@@ -188,8 +188,6 @@ $(function(){
 		}
 	});
 
-	itemHistory();
-	
 	/* ==============================
 	 * gnb 
 	 * ============================== */
@@ -596,9 +594,13 @@ $(function(){
 	/* ==============================
 	 * content 
 	 * ============================== */
+
+	 itemHistory();
 	 
 });
 
+
+// 최근 본 제품 slick
 function itemHistory() {
 	var hListLng = $('.hListWrap').find('li').length;
 	if ( hListLng > 3)
@@ -613,6 +615,8 @@ function itemHistory() {
 		});
 	}
 }
+
+
 
 /* parallax scrolling motion */
 scrollAnimation();
@@ -705,10 +709,13 @@ $(function(){
 	$('.tabWrap').each(function(tab){
 		$(this).children('.tabList').children('li').each(function(idx){
 			$(this).click(function(){
-				$(this).parent('.tabList').children('li').removeClass('on');
-				$(this).addClass('on');
-				$(this).closest('.tabWrap').children('.tabContent').removeClass('on');
-				$(this).closest('.tabWrap').children('.tabContent').eq(idx).addClass('on');
+				if ( !$(this).hasClass('bye') )
+				{
+					$(this).parent('.tabList').children('li').removeClass('on');
+					$(this).addClass('on');
+					$(this).closest('.tabWrap').children('.tabContent').removeClass('on');
+					$(this).closest('.tabWrap').children('.tabContent').eq(idx).addClass('on');
+				}
 			});
 		});
 	});
@@ -912,98 +919,6 @@ $(function(){
 		$('.prodGalleryViewer').append(tireThumbImg);
 	}
 
-	$('.fixedBottom').find('.btn').on('click', function(e){
-		var bpData = $(this).data('bpoint');
-		var BreakPoint = $('.'+ bpData).offset();
-		e.preventDefault();
-		console.log('class : ' + bpData);
-		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
-		$("html, body").animate({
-			scrollTop: BreakPoint.top }
-		,500);
-	});
-
-	// 스크롤 이벤트
-	$(window).scroll(function(){
-		// 타이어 상세 페이지	
-		var FloatingChk = $('.floating').length;
-		var Floating2Chk = $('.floating2').length;
-		var bPoint1Lng = $('.bPoint1').length;
-		
-		var Top = $('body, html').scrollTop();
-		// 타이어 상품 상세 탭
-		var Floating = $('.floating').offset();
-		var Floating2 = $('.floating2').offset();
-		var BreakPoint1 = $('.bPoint1').offset();
-
-		// 상품상세 플로팅버튼
-		if (bPoint1Lng > 0)
-		{
-			if ( Top > BreakPoint1.top + 298 )
-			{
-				$('.fixedBottom').addClass('on');
-			} else {
-				$('.fixedBottom').removeClass('on');
-			}
-		}
-
-		if (FloatingChk > 0)
-		{
-			if ( Top > Floating.top)
-			{
-				$('.floating').find('.tabList').addClass('fixed');
-				$('.floating').addClass('pt62');
-			} else {
-				$('.floating').find('.tabList').removeClass('fixed');
-				$('.floating').removeClass('pt62');
-			}
-		}
-
-		if (Floating2Chk > 0)
-		{
-			if ( Top > Floating2.top)
-			{
-				$('.floating2').find('.tabList').addClass('fixed');
-				$('.floating2').addClass('pt62');
-			} else {
-				$('.floating2').find('.tabList').removeClass('fixed');
-				$('.floating2').removeClass('pt62');
-			}
-		}
-
-		// 장바구니
-		var CartLng = $('.orderView').length;
-		var CartBaseTop = $('.paymentWrap').offset();
-		var CartTop = $('.orderView').offset();
-		if (CartLng > 0)
-		{
-			if ( Top > CartBaseTop.top + 74)
-			{
-				$('.orderView').removeClass('fix');
-				$('.orderView').css('top',Top - CartBaseTop.top);
-			} else {
-				$('.orderView').addClass('fix');
-			}
-		}
-
-		// wingBanner Break Main
-		var MainVisualLng = $('.mainVisual').length;
-		var itemContWrapOff = $('.itemContWrap').offset();
-		if (MainVisualLng >= 1)
-		{
-			if ( Top < itemContWrapOff.top )
-			{
-				$('.wing').addClass('on');
-				$('.wing').css('top',itemContWrapOff.top);
-			}
-			if ( Top + 176 > itemContWrapOff.top )
-			{
-				$('.wing').removeClass('on');
-				$('.wing').css('top','');
-			}
-		}
-	});
-
 	var Top = $('body, html').scrollTop();
 	var MainVisualLng = $('.mainVisual').length;
 	var itemContWrapOff = $('.itemContWrap').offset();
@@ -1020,16 +935,6 @@ $(function(){
 			$('.wing').css('top','');
 		}
 	}
-
-	// 타이어 상세 설정 탭
-	/*
-	$('.settingList > li > .tit').each(function(){
-		$(this).click(function(){
-			$(this).parent('li').siblings().removeClass('on');
-			$(this).parent('li').addClass('on');
-		});
-	});
-	*/
 
 	// 타이어 종류 셀렉트
 	$('.makerGroup1').each(function(){
@@ -1063,7 +968,6 @@ $(function(){
 		$(this).closest('.fileBox').find('.upload-name').val(filename); 
 	});
 
-
 	// popup
 	$('.popupOpen').click(function(e){
 		var NameValue = $(this).data('name');
@@ -1085,7 +989,6 @@ $(function(){
 	function LayerpopupClose(){
 		$('.layerPopupWrap').removeClass('on');
 	};
-
 	
 	// visual list
 	$('.visualList').mouseenter(function(){
@@ -1162,8 +1065,116 @@ $(function(){
 		}
 	}
 
+	// 상품 상세 하단 플로팅
+	FixBottom();
+	// 플로팅 버튼 위치 반영
+	FixBtnPosition();
+
 });
+
+// 상품 상세 하단 플로팅
+function FixBottom(){
+	$('.fixedBottom').find('.btn').on('click', function(e){
+		var bpData = $(this).data('bpoint');
+		var BreakPoint = $('.'+ bpData).offset();
+		e.preventDefault();
+		console.log('class : ' + bpData);
+		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
+		$("html, body").animate({
+			scrollTop: BreakPoint.top }
+		,500);
+	});
+}
 
 $(window).load(function(){
 	//alert('z');
 });
+
+
+
+// 스크롤 이벤트
+$(window).scroll(function(){
+	// 타이어 상세 페이지	
+	var FloatingChk = $('.floating').length;
+	var Floating2Chk = $('.floating2').length;
+	var bPoint1Lng = $('.bPoint1').length;	
+	var Top = $('body, html').scrollTop();
+	// 타이어 상품 상세 탭
+	var Floating = $('.floating').offset();
+	var Floating2 = $('.floating2').offset();
+	
+
+	// 상품상세 플로팅버튼
+	FixBtnPosition();	
+
+	if (FloatingChk > 0)
+	{
+		if ( Top > Floating.top)
+		{
+			$('.floating').find('.tabList').addClass('fixed');
+			$('.floating').addClass('pt62');
+		} else {
+			$('.floating').find('.tabList').removeClass('fixed');
+			$('.floating').removeClass('pt62');
+		}
+	}
+
+	if (Floating2Chk > 0)
+	{
+		if ( Top > Floating2.top)
+		{
+			$('.floating2').find('.tabList').addClass('fixed');
+			$('.floating2').addClass('pt62');
+		} else {
+			$('.floating2').find('.tabList').removeClass('fixed');
+			$('.floating2').removeClass('pt62');
+		}
+	}
+
+	// 장바구니
+	var CartLng = $('.orderView').length;
+	var CartBaseTop = $('.paymentWrap').offset();
+	var CartTop = $('.orderView').offset();
+	if (CartLng > 0)
+	{
+		if ( Top > CartBaseTop.top + 74)
+		{
+			$('.orderView').removeClass('fix');
+			$('.orderView').css('top',Top - CartBaseTop.top);
+		} else {
+			$('.orderView').addClass('fix');
+		}
+	}
+
+	// wingBanner Break Main
+	var MainVisualLng = $('.mainVisual').length;
+	var itemContWrapOff = $('.itemContWrap').offset();
+	if (MainVisualLng >= 1)
+	{
+		if ( Top < itemContWrapOff.top )
+		{
+			$('.wing').addClass('on');
+			$('.wing').css('top',itemContWrapOff.top);
+		}
+		if ( Top + 176 > itemContWrapOff.top )
+		{
+			$('.wing').removeClass('on');
+			$('.wing').css('top','');
+		}
+	}
+});
+
+function FixBtnPosition() {
+	var BreakPoint1 = $('.bPoint1').offset();
+	var Top = $('body, html').scrollTop();
+	var bPoint1Lng = $('.bPoint1').length;
+	if (bPoint1Lng > 0)
+	{
+		if ( Top > BreakPoint1.top + 298 )
+		{
+			$('.fixedBottom').addClass('on');
+		} else {
+			$('.fixedBottom').removeClass('on');
+		}
+	}
+}
