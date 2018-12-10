@@ -238,6 +238,10 @@ body.noScroll {
 	background-size: 23px 20px;
 	font-size: 0;
 }
+.loginArea .rental {
+	color: #fff;
+	text-decoration: underline;
+}
 .loginArea .btn {display:inline-block;
 	box-sizing: border-box;
 	width: 70px;
