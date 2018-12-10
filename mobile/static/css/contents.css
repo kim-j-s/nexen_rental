@@ -53,6 +53,7 @@
 	font-family: 'Noto Sans', sans-serif;
 	padding:0 10px; 
 	border:1px solid #d5d5d5;
+	background: #fff;
 	font-size:12px; outline:0; transition: all .3s ease;
 }
 .inputBox .inp:disabled {background:#eee; color:#b5b5b5;}
@@ -330,8 +331,13 @@ td .textarea {width:100%;}
 .pb0 {padding-bottom:0 !important;}
 
 /* ==============================
- * 맴버십/혜택
+ * 멤버십/혜택
  * ============================== */
+
+/* 멤버십 */
+.sectionMembership {}
+.sectionMembership .fixedBot { position: absolute; bottom: 0; }
+
 
 .affiliateCards {text-align:center;}
 .affiliateCards .inner {position:relative; display:inline-block; }
@@ -539,11 +545,11 @@ p.mark1 {display:block;}
  * 타이어
  * ============================== */
 
- .fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
- .sectionTire .tabMenu .tabList.top { position: fixed; top: 45px; z-index: 100; background: #fff; }
- .sectionTire .tabMenu .tabList.top + .tabContent { padding-top: 57px; }
- 
- .sectionTire .tabMenu.fixed {top: 44px; z-index: 100; background: #fff; }
+.fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
+.sectionTire .tabMenu .tabList.top { position: fixed; top: 45px; z-index: 100; background: #fff; }
+.sectionTire .tabMenu .tabList.top + .tabContent { padding-top: 57px; }
+
+.sectionTire .tabMenu.fixed {top: 44px; z-index: 100; background: #fff; }
 
 .searchWrap {width:100%;}
 .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
@@ -681,7 +687,7 @@ p.mark1 {display:block;}
 .easySearchWrap {width:100%; height:100%;}
 .easySearchWrap .btnTopClose {display:block; width:22px; height:22px; background:url('../images/common/btn/btn_close3.png') no-repeat; background-size:100%; position:fixed; top:11px; right:15px; font-size:0;}
 .easySearchWrap .easySearchInfo {min-height:315px; text-align:center;}
-.easySearchWrap .easySearchInfo h3.tit {color:#fff; font-size:20px; font-weight:bold; line-height:25px; margin-top:80px;}
+.easySearchWrap .easySearchInfo .tit {color:#fff; font-size:20px; font-weight:bold; line-height:25px; margin-top:80px;}
 .easySearchWrap .easySearchInfo p.txt {color:#fff; font-size:15px; font-weight:400; line-height:20px; margin-top:10px;}
 .easySearchWrap .easySearchInfo p.img {display:inline-block;font-size:0; margin-top:10px; width:290px; height:150px;}
 .easySearchWrap .easySearchInfo .btnArea {padding:10px 15px 0;}
@@ -690,6 +696,7 @@ p.mark1 {display:block;}
 .easySearchWrap .searchWrap .btnArea {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchWrap .btnArea a.btn {display:table-cell; height:45px; line-height:45px; color:#fff; font-size:16px; font-weight:400; text-align:center; background:#3c079d}
 .easySearchWrap .searchWrap .btnArea a.btn + .btn {background:#5f14ea}
+.easySearchWrap .searchWrap .txt { margin-bottom: 15px; color: #333; font-size: 14px; text-align: center; }
 .easySearchWrap .searchOptList {padding:20px 15px 10px 15px;}
 .easySearchWrap .searchOptList ul {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchOptList ul li {display:table-cell; box-sizing:border-box;}
