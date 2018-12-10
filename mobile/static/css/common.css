@@ -1005,6 +1005,7 @@ a.btn { text-decoration: none !important; }
 .btnAction.primary {
 	background-color: #3c079d;
 }
+.btnAction[disabled] { background: #2f0a75; color: #7f7f7f; }
 
 .pageFoot { display: flex; }
 .pageFoot .btnAction { flex: 1; padding: 0; }
@@ -1022,6 +1023,7 @@ a.btn { text-decoration: none !important; }
     background-size: 100%;
     vertical-align: -3px;
 }
+.btnAction[disabled] .btnSearch:before { background-image: url('../images/common/icon/icon_inner_search_disabled.png'); }
 .btnAction.block { display: block; }
 
 .btnCancel { 
