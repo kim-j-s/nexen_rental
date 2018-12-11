@@ -4,11 +4,9 @@ $(function(){
 	 * common
 	 * ============================== */
 	
-	selectMake();
-	selectMakeUI();
 	uiMain.init();
 	uiForm();
-	topBanner();
+	// topBanner();
 	tireSearch();
 
 	SwiperActMain();
@@ -381,6 +379,11 @@ function SwiperActMain() {
 }
 
 function TopBanner() {
+
+	$('.topBanner .btnClose').bind("click", function(){
+		$('.topBanner').animate({height: 0}, 500);
+	});
+
 	var tBlng = $('.topBanner').find('.swiper-slide').length;
 	if (tBlng > 1)
 	{
@@ -435,6 +438,7 @@ function inpReset(){
 		}
 	});
 }
+
 /* parallax scrolling motion */
 scrollAnimation();
 function scrollAnimation(){
@@ -522,11 +526,12 @@ function tireSearch() {
 }
 
 // 띠배너
-function topBanner() {
-	$('.topBanner .btnClose').bind("click", function(){
-		$('.topBanner').animate({height: 0}, 500);
-	});
-}
+// function topBanner() {
+// 	$('.topBanner .btnClose').bind("click", function(){
+// 		$('.topBanner').animate({height: 0}, 500);
+// 	});
+// }
+
 
 // cart option change
 function cartOpt() {
