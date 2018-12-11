@@ -41,17 +41,6 @@ $(function(){
 		});
 	}
 
-	//swiper
-	if($('.swiper').size() != 0){
-		 $('.swiper').slick({
-		  dots: true,
-		  arrows:true,
-		  roof:false,
-		  infinite: false,
-		  speed: 1300
-		});
-	}
-
 	if($('.loding-act').size() > 0){
 		//http://kottenator.github.io/jquery-circle-progress/
 		var lodingActVal = parseInt($('.loding-act .loding-txt span').text());
@@ -484,56 +473,6 @@ function scrollAnimation(){
 	});
 }
 
-/* form select */
-function selectMake(){
-	$("select.selectBox").each(function(){
-		if($(this).parents('pre').length < 1){
-			var classes = $(this).attr("class"),
-				id      = $(this).attr("id"),
-				name    = $(this).attr("name");
-				style	= $(this).attr('style');
-				
-			if($(this).is(':visible')){
-				var template  = '<div class="' + classes + '" style="' +  style + '">';
-					template += '<a href="#" class="ui-select-trigger">' + $(this).find(':selected').text() + '</a>';
-					template += '<ul class="ui-select-options">';
-					$(this).find("option").each(function(){
-						template += '<li><a href="#" class="ui-select-option" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</a></li>';
-					});
-					template += '</ul></div>';
-			  
-				$(this).wrap('<div class="ui-select-wrapper"></div>');
-				$(this).hide().after(template);
-			}
-		}
-	});
-}
-
-function selectMakeUI(){
-	$(document).on("hover",".ui-select-option:first-of-type",function(){
-	  $(this).closest(".ui-select-options").addClass("ui-select-option-hover");
-	}, function(){
-	  $(this).closest(".ui-select-options").removeClass("ui-select-option-hover");
-	});
-	$(document).on("click",".ui-select-trigger", function(e){
-		$('.ui-select-options').not($(this).next()).hide();
-		$(this).next().show();
-		return false;
-	});
-	$(document).click(function(e){
-		$('.ui-select-options').hide();
-	});
-	$(document).on("click",".ui-select-option", function(e){
-	  var $val= $(this).data("value"),
-		  $select = $(this).closest(".ui-select-wrapper").find("select");
-	  
-	  $select.val($val);
-	  $(this).addClass("selection").parent().siblings().find(".ui-select-option").removeClass("selection");
-	  $(this).closest('.ui-select-options').hide().siblings(".ui-select-trigger").text($(this).text());
-	  return false;
-	});
-}
-
 function uiForm() {
 	var radioForm = 'input[type=radio]';
 
@@ -588,8 +527,6 @@ function topBanner() {
 		$('.topBanner').animate({height: 0}, 500);
 	});
 }
-
-
 
 // cart option change
 function cartOpt() {

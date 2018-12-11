@@ -444,7 +444,7 @@
 .popMyRental .mainIntro .subCopy strong { color: #812990; font-weight: 500; }
 .popMyRental .tireSearch { margin-top: 35px; text-align: center; }
 .popMyRental .tireSearch .txt { color: #666; font-size: 11px; }
-.popMyRental .tireSearch .inner { height: auto; margin-top: 5px; padding: 15px 0; background: #e7e2f2; }
+.popMyRental .tireSearch .inner { height: auto; margin-top: 5px; padding: 15px 0; background: #e7e2f2; box-shadow: 0 5px 4px rgba(0,0,0,.07); }
 .popMyRental .tireSearch .selectBox { background: #fff; border-color: #d5d5d5; }
 .popMyRental .tireSearch .selectBox:after {
 	content: '';
@@ -457,11 +457,11 @@
 	background:url('../images/main/arrow_bottom_dark.png') no-repeat;
 	background-size: 100%;
 }
+
 .popMyRental .tireSearch .selectBox label { color: #666; }
-
+.popMyRental .tireSearch .selectBox.disabled label { color: #b5b5b5 !important; }
+.popMyRental .tireSearch .selectBox.disabled .select option { color: #b5b5b5 !important; } 
 .popMyRental .tireSearch .disabled { border-color: #d5d5d5; background: #eee; opacity: inherit;}
-.popMyRental .tireSearch .selectBox.disabeld label { color: #b5b5b5 !important; }
-.popMyRental .tireSearch .selectBox.disabled .innerIcon.search:before { background-image: url('../images/common/icon/icon_inner_search_disabled.png');}
-
-
-
+.popMyRental .tireSearch .btn { border-color: #fff; }
+.popMyRental .tireSearch .btn[disabled] .innerIcon.search:before { background-image: url('../images/common/icon/icon_inner_search_disabled.png'); }
+.popMyRental .tireSearch .selectBox.disabeld:after { background:url('../images/main/arrow_bottom_dark_disabled.png') no-repeat; }
