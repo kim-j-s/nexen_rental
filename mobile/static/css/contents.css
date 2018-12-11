@@ -1185,7 +1185,7 @@ img.full { width: 100%;}
 .orderItem > .prod .prodi2 li strong { color: #333; font-weight: 500; }
 .orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 12px;  background: #c4c4c4; vertical-align: -1px;}
 .orderItem > .prod .prodi2 li:last-child:after { display: none; }
-.orderItem > .itemSub {height:67px; margin:0 15px; padding:5px 0 0 0; border-top:1px solid #dcdcdc; }
+.orderItem > .itemSub { height:67px; margin:0 15px; padding:5px 0 0 0; border-top:1px solid #dcdcdc; }
 .orderItem > .itemSub .cost {display:table; width:100%; padding:0 15px;}
 .orderItem > .itemSub .cost + .cost {margin-top:5px;}
 .orderItem > .itemSub .cost > dt {display:table-cell; font-weight:400; font-size:11px; color:#000;}
@@ -1195,6 +1195,8 @@ img.full { width: 100%;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
 .orderItem > .itemSub .payment { margin-bottom: -15px; padding: 6px 15px; background: #feefef;}
 .orderItem > .itemSub .prodi { padding: 0 15px; }
+.orderItem > .itemSub.auto { height: auto; }
+.orderItem > .itemSub.auto + .btnArea { margin-top: 15px; }
 .orderItem > .btnArea { margin-top: 0; padding: 0 5px 5px; }
 
 .orderView + .orderView {margin-top:44px;}
