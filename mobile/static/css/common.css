@@ -912,6 +912,7 @@ a.btn { text-decoration: none !important; }
     background-size: 100%;
     vertical-align: -1px;
 }
+.btn[disabled] .innerIcon.search:before { background-image: url('../images/common/icon/icon_inner_search_disabled.png'); }
 /* 전화 */
 .innerIcon.call:before {
     content: '';

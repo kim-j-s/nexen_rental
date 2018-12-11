@@ -522,6 +522,8 @@ td .textarea {width:100%;}
 .agreementCont.privacy .ulBar {padding-left:6px;}
 .agreementCont.privacy .ulBar + p {margin-top:10px;}
 .agreementCont.privacy .table {margin:10px 0;}
+.agreementCont .table td { padding: 5px 10px !important; }
+
 
 .cNumber {margin:10px 0 0 0;}
 .cNumber > li {font-weight:400; font-size:11px; color:#666; line-height:16px; text-indent:-14px; margin-left:15px; margin-bottom:10px;}
