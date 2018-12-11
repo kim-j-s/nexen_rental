@@ -573,7 +573,7 @@ p.mark1 {display:block;}
 
 .productViewWrap .badge {position:absolute; top:15px; left:15px; z-index:2;} 
 .badge.inline span { display: inline-block; }
-.badge span { box-sizing: border-box; display: block;  width: 25px; height: 25px; font-size: 0; line-height: 0; }
+.badge span { box-sizing: border-box; display: block;  width: 35px; height: 18px; font-size: 0; line-height: 0; }
 .badge span.hit { background: url('../images/prd/icon_hit.png') no-repeat left top; background-size: 100%; }
 .badge span.best { background: url('../images/prd/icon_best.png') no-repeat left top; background-size: 100%; }
 .badge span:not(:first-child) { margin-top: 2px; } 
