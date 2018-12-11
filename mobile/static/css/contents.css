@@ -1208,6 +1208,7 @@ img.full { width: 100%;}
 .prodCost > dd {display:table-cell; vertical-align:middle; padding:10px 0 9px 0; text-align:right; font-weight:500; font-size:13px; color:#333;}
 .prodCost + .txt {position:relative; margin-top:2px; padding-left:7px; font-weight:400; font-size:10px;}
 .prodCost + .txt:before {content:''; position:absolute; top:6px; left:0; width:2px; height:2px; background:#666; border-radius:50%;}
+.prodCost + .orderView {margin-top:27px;}
 .prodCost + .orderCostWrap {margin-top:27px;}
 .prodCost + .txt + .orderCostWrap {margin-top:27px;}
 
