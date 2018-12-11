@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-.fixed #headerWrap { position: fixed; top: 0; }
-.fixed .optionList { position: fixed; top: 45px; }
-
-
-

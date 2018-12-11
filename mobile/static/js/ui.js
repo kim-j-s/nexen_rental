@@ -134,20 +134,19 @@ $(function(){
 	});
 
 	// 렌탈전문점 슬라이드
-	$('.gallery-thumbs .swiper-slide').mouseenter(function(){
+	$('.storeThumbs .swiper-slide').mouseenter(function(){
 		$('.storeSlideWrap').find('.mapArea').removeClass('on');
 	}).mouseleave(function(){
 		$('.storeSlideWrap').find('.mapArea').addClass('on');
 	});
 
-	$('.gallery-top .swiper-button-prev').css('display','');
-	$('.gallery-top .swiper-button-next').css('display','');
+	$('.storeSlideWrap .swiper-button-prev, .storeSlideWrap .swiper-button-next').css('display','');
 
-	var galleryTop = new Swiper('.gallery-top', {
+	var galleryTop = new Swiper('.storeView', {
 		spaceBetween: 0,
 		thumbs: {
 			swiper: {
-				el: '.gallery-thumbs',
+				el: '.storeThumbs',
 				spaceBetween: 5,
 				slidesPerView: 3,
 				navigation: {
@@ -155,10 +154,6 @@ $(function(){
 					prevEl: '.swiper-button-prev'
 				}
 			}
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
 		}
 	});
 

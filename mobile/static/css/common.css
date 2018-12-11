@@ -15,10 +15,7 @@ body {
 strong { font-weight: 500; } /* bold */
 .hide { position: absolute; left: -9999px; }
 
-
-
 #headerWrap.fixed { position: fixed; top: 0; }
-/* .fixed .optionList { position: fixed; top: 45px; } */
 
 /* ==============================
  * skip navigation
@@ -58,6 +55,7 @@ strong { font-weight: 500; } /* bold */
     width:100%;
     background: #fff;
 }
+#headerWrap.fixed { position: fixed; top: 0; }
 
 #headerWrap .headerTopMenu {
 	width: 100%;

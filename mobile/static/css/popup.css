@@ -114,32 +114,34 @@
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
 
 /*매장위치 슬라이드*/
-.storeSlideWrap { position: relative; height: 342px; }
+.storeSlideWrap { position: relative; height: 340px; }
+
 .storeSlideWrap .mapArea { display: none; position: absolute; top: 0; left: 0; z-index: 50; overflow: hidden; box-sizing: border-box; height: 280px; border: 1px solid #d5d5d5; }
 .storeSlideWrap .mapArea.on { display: block;}
 
-.gallery-top { height: 280px;  border: 1px solid #d5d5d5; text-align: center; }
-.gallery-top.on { display: block; }
-.gallery-top .swiper-slide { display: flex; align-items: center; justify-content: center; }
-.gallery-top img { vertical-align: middle; max-width: 100%; max-height: 100%; }
+.storeView { height: 280px;  border: 1px solid #d5d5d5; text-align: center; }
+.storeView.on { display: block; }
+.storeView .swiper-slide { display: flex; align-items: center; justify-content: center; }
+.storeView img { vertical-align: middle; max-width: 100%; max-height: 100%; }
 
-.gallery-thumbs { overflow: inherit; box-sizing: border-box; margin-top: 10px; height: 50px; }
-.gallery-thumbs .swiper-slide {	box-sizing: border-box;	border: 1px solid #d5d5d5;	width: 33%;	height: 50px; text-align: center; }
-.gallery-thumbs .swiper-slide img { max-width: 100%; max-height: 100%; }
-.gallery-thumbs .swiper-slide-thumb-active { border: 1px solid #812990; opacity: 1; }
+.storeThumbs { position: relative; overflow: inherit; height: 50px; margin: 10px 0 0; }
+.storeThumbs:before { content:''; position: absolute; top:0; left:-15px; z-index: 5; width: 15px; height: 50px; background: #fff;}
+.storeThumbs:after { content:''; position: absolute; top:0; right:-15px; z-index: 5; width: 15px; height: 50px; background: #fff;}
+.storeThumbs .swiper-slide { box-sizing: border-box;	border: 1px solid #d5d5d5;	width: 33%;	height: 50px; text-align: center; }
+.storeThumbs .swiper-slide img { max-width: 100%; max-height: 100%; }
+.storeThumbs .swiper-slide-thumb-active { border: 1px solid #812990; opacity: 1; }
+.storeThumbs .swiper-slide.first.swiper-slide-thumb-active { } 
 
-.gallery-top .swiper-button-next, 
-.gallery-top .swiper-button-prev { position:absolute; z-index: 100; width:20px; height:40px; overflow:hidden; background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
+.storeThumbs .swiper-button-next, 
+.storeThumbs .swiper-button-prev { position:absolute; z-index: 100; width:20px; height:40px; margin-top: -20px; overflow:hidden; background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
+.storeThumbs .swiper-button-prev {left: -15px; background-position:0px 0px;}
+.storeThumbs .swiper-button-next {right: -15px; background-position:-20px 0px;}
+.storeThumbs .swiper-button-next.swiper-button-disabled, 
+.storeThumbs .swiper-button-prev.swiper-button-disabled { opacity:0.3; cursor:auto;  pointer-events:none; }
 
-.gallery-top .swiper-button-prev {left:-15px; bottom: 6px;  background-position:0px 0px;}
-.gallery-top .swiper-button-next {right:-15px; bottom: 6px;  background-position:-20px 0px;}
-
-.gallery-top .swiper-button-next.swiper-button-disabled, 
-.gallery-top .swiper-button-prev.swiper-button-disabled { opacity:0.3; cursor:auto;  pointer-events:none; }
-
-.gallery-top .swiper-slide.noimg, 
-.gallery-thumbs .swiper-slide.noimg { background: #f5f5f5 url('../images/common/img_null_s.png') no-repeat 50%; }
-.gallery-thumbs .swiper-slide.noimg { background-size: contain; }
+.storeView .swiper-slide.noimg, 
+.storeThumbs .swiper-slide.noimg { background: #f5f5f5 url('../images/common/img_null_s.png') no-repeat 50%; }
+.storeThumbs .swiper-slide.noimg { background-size: contain; }
 
 .storeName {display: flex; align-items: center;}
 .storeName .serviceIcon { flex-basis: 30px; margin-right: 10px; }
