@@ -1032,8 +1032,8 @@ img.full { width: 100%;}
 /* ==============================
  *  장바구니/주문하기
  * ============================== */
- .sectionCart { position: relative; padding-top: 45px; }
- .sectionCart .optionList { position: absolute; }
+.sectionCart { position: relative; padding-top: 45px; }
+.sectionCart .optionList { position: absolute; }
 
 .carNoitem { margin-top: 45px; padding: 155px 0; text-align: center; }
 .carNoitem .btn { width: 140px;	margin-top: 30px; }
@@ -1041,7 +1041,7 @@ img.full { width: 100%;}
 .carNoitem .txt:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px; background: url('../images/cart/bg_noitem.png'); background-size: 100%;}
  
 /* 상품목록 */
-.cartListWrap {	/* padding: 40px 0 50px; */	padding: 40px 0 10px 0;	position: relative;	top: 0; bottom: 0; left: 0;	right: 0; height: 100%;	background: #e7e7e7; }
+.cartListWrap { padding: 40px 0 50px; /*padding: 40px 0 10px 0;*/ position: relative; top: 0; bottom: 0; left: 0;	right: 0; height: 100%;	background: #e7e7e7; }
 
 .cartAction { padding: 10px 15px 10px; line-height: 400; vertical-align: top; background: #e8e9eb; }
 .cartAction:after { content: ''; display: block; clear: both; }
@@ -1049,8 +1049,9 @@ img.full { width: 100%;}
 .cartAction .rbtn { float: right; } 
 .cartAction .rbtn .btn { width: 65px; padding: 0; border-radius: inherit; }
 
-.cartList li { padding: 20px 15px 0; border-bottom: 1px solid #d4d4d4; background: #fff; }
-.cartList li:not(:first-child) { margin-top: 5px; }
+.cartList { }
+.cartList > ul > li { padding: 20px 15px 0; border-bottom: 1px solid #d4d4d4; background: #fff; }
+.cartList > ul > li:not(:first-child) { margin-top: 5px; }
  
 .cartList .priceInfoWrap { margin-top: 10px; padding: 10px 0; border-top: 1px solid #dcdcdc; }
 .cartList .priceInfoWrap .priceInfo:not(:first-child) { margin-top: 6px; }
@@ -1064,7 +1065,8 @@ img.full { width: 100%;}
 .itemInfo .info { width: calc(100% - 100px); margin-left: 15px; padding-top: 6px; line-height: 1; }
 .itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; line-height: 1;  }
 .itemInfo .info .tit { margin: 6px 0 2px; color:#000; font-size:15px; font-weight: 500;}
-.itemInfo .info .desc { font-size: 11px; }
+.itemInfo .info .desc { font-size: 11px;  }
+.itemInfo .info .desc li { color: #999; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .itemInfo .info .option { margin-top: 6px; color: #999; font-size: 11px; }
 .itemInfo .info .option span:not(:first-child):before { content: ''; display: inline-block; width: 1px;	height: 9px; margin: 0 5px 0 2px; background: #c4c4c4; vertical-align: -1px; }
 .cartList .btns { display: flex; padding-bottom: 20px; }
@@ -1079,7 +1081,7 @@ img.full { width: 100%;}
 .cartList .optionview .radiobtnGroup { float: right; width: calc(100% - 80px); }
 .cartList .optionview .btnArea { clear:both; padding-top: 10px; }
 
-.cartListWrap .itemTotalCont {min-height:100px;}
+.cartListWrap .itemTotalCont {min-height:100px; position: absolute; bottom: 0; left: 0; right: 0; }
 .cartListWrap .itemTotal { box-sizing: border-box; position: fixed; bottom: 0; left:0; width: 100%; padding:13px 15px 15px 15px; background: rgba(0,0,0,.8); color: #fff; font-weight: 400; }
 .cartListWrap .itemTotal.on {position: static;}
 .cartListWrap .itemTotal .total { padding-left: 10px }
@@ -1193,6 +1195,7 @@ img.full { width: 100%;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
 .orderItem > .itemSub .payment { margin-bottom: -15px; padding: 6px 15px; background: #feefef;}
 .orderItem > .itemSub .prodi { padding: 0 15px; }
+.orderItem > .btnArea { margin-top: 0; padding: 0 5px 5px; }
 
 .orderView + .orderView {margin-top:44px;}
 .prodCost {display:table; width:100%; padding:0 10px; background:#eee;}
