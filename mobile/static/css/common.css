@@ -15,6 +15,11 @@ body {
 strong { font-weight: 500; } /* bold */
 .hide { position: absolute; left: -9999px; }
 
+
+
+#headerWrap.fixed { position: fixed; top: 0; }
+/* .fixed .optionList { position: fixed; top: 45px; } */
+
 /* ==============================
  * skip navigation
  * ============================== */
@@ -457,7 +462,9 @@ body.noScroll {
 /* ==============================
 * footer
 * ============================== */
-#footerWrap {/* position: absolute; bottom: 0;*/ width:100%; padding:0 15px 20px; background-color:#222; }
+#footerWrap {/* position: absolute; bottom: 0;*/ width:100%; padding-left: 15px; padding-right: 15px; background-color:#222; }
+#footerWrap.on { padding-bottom: 45px; }
+
 .footerTop { padding: 20px 0; }
 .footerTop .footerLink { width:100%; text-align:center; }
 .footerTop .footerLink a { display: inline-block; color:#a4a4a4; font-size: 12px; }
@@ -486,7 +493,7 @@ body.noScroll {
 	background: #444;
 	vertical-align: -1px;
 }
-.copyright { margin-top:20px; font-size: 11px; }
+.copyright { padding: 20px 0; font-size: 11px; }
 
 /* ==============================
 * Top버튼
@@ -507,7 +514,7 @@ body.noScroll {
 	background-size: 100%;
 	font-size: 0;
 }
-.btnGoTop.active {
+.btnGoTop.on {
 	bottom: 60px;
 	visibility: visible;
     opacity: 1;
@@ -652,7 +659,7 @@ body.noScroll {
 .floatingCont.consult li:nth-child(1) a:after { background-position: 0 0; } 
 .floatingCont.consult li:nth-child(2) a:after { background-position: 0 -50px; } 
 .floatingCont.consult li:nth-child(3) a:after { background-position: 0 -102px; } 
-.floatingCont.consult li:nth-child(4) a:after { background-position: 0 -152px; } 
+.floatingCont.consult li:nth-child(4) a:after { background-position: 0 -156px; } 
 .floatingCont.consult li:nth-child(5) a:after { background-position: 0 -203px; } 
 .floatingCont.consult .btnClose { left: calc(50% + 24px); }
 

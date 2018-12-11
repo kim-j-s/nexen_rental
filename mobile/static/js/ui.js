@@ -17,6 +17,8 @@ $(function(){
 	slideCont();
 	inpReset();
 
+	// floatingNav(); // 플로팅 네비
+
 	//datepicker
 	if($('.datepicker').size() > 0){
 		$( '.datepicker' ).datepicker({
@@ -525,14 +527,6 @@ function tireSearch() {
 	});
 }
 
-// 띠배너
-// function topBanner() {
-// 	$('.topBanner .btnClose').bind("click", function(){
-// 		$('.topBanner').animate({height: 0}, 500);
-// 	});
-// }
-
-
 // cart option change
 function cartOpt() {
 	var opChangeBtn = $('.cartList li').find('.btnOpt.viewopt');
@@ -591,37 +585,41 @@ function slideCont() {
 	});
 }
 
-$(window).scroll(function() {
-	var st = $(this).scrollTop();
-	var fixedStartY = 50;	
+// 플로팅메뉴
+$(window).load(function(){
+	
+	// 메인 처음 진입 시
+	// $('.main').find('.floatingWrap').addClass('fixBotNav');
 
-	if(st > fixedStartY) {
-		$('#headerWrap').addClass('fixed');
-		$('.topBanner').hide();
+	$(window).scroll(function() {
+		var st = $(this).scrollTop();
+		var fixedStartY = 50;	
+	
+		if(st > fixedStartY) {
+			$('#headerWrap').addClass('fixed');
+	
+			$('.btnGoTop').addClass('on');
 
-		$('.btnGoTop').addClass('active');
-		$('.fixBotNav').fadeIn(200);
+			$('.floatingWrap').addClass('fixBotNav');
+			$('#footerWrap').addClass('on');
 
-	} else {
-		$('#headerWrap').removeClass('fixed');
-		$('.topBanner').show();
-
-		$('.btnGoTop').removeClass('active');
-		$('.fixBotNav').fadeOut(200);
-	}
-
-	// 하단고정네비 노출에 따른 height 설정
-	$('.fixBotNav:visible').each(function(){
-		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
+	
+		} else {
+			$('#headerWrap').removeClass('fixed');
+	
+			$('.btnGoTop').removeClass('on');
+0
+			$('.floatingWrap').removeClass('fixBotNav');
+			$('#footerWrap').removeClass('on');
+		}
+	
+		// 타이어 상품
+		// $('.sectionTire .fixedBot:visible').each(function(){
+		// 	$(this).closest('#wrap').find('#footerWrap').css('padding-bottom' , $(this).outerHeight() );
+		// });
+	
 	});
-
-	// 타이어 상품
-	$('.sectionTire .fixedBot:visible').each(function(){
-		$(this).closest('#wrap').css('padding-bottom' , $(this).outerHeight() );
-	});
-
 });
-
 
 // 장바구니 플로팅 전체금액
 $(window).load(function(){
