@@ -223,10 +223,10 @@ body.noScroll {
 	background:#5f14ea;
 	font-size: 0;
 	text-align: right;
-	vertical-align: middle;
 }
 .loginArea a {
 	display: inline-block;
+	vertical-align: top;
 }
 .loginArea .home {
 	position:absolute;
@@ -239,8 +239,15 @@ body.noScroll {
 	font-size: 0;
 }
 .loginArea .rental {
+	box-sizing: border-box;
+	height: 23px;
+	margin-right: 8px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #fff;
 	color: #fff;
-	text-decoration: underline;
+	font-size: 12px;
+	/* text-decoration: underline; */
+	line-height: 25px;
 }
 .loginArea .btn {display:inline-block;
 	box-sizing: border-box;

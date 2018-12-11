@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>로그인 – 신개념 타이어 렌탈서비스</title>
+    <link rel="shortcut icon" href="../static/images/common/favicon.ico">
+    <link href="../static/css/lib/swiper.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 헤더영역 -->
+        <header id="headerWrap">
+            <div class="headerTopMenu">
+                <button class="back">이전화면</button>
+                <h1 class="mainTitle">로그인</h1>
+                <button class="totalMenu">전체메뉴</button>
+            </div>
+
+            <!-- 전체 메뉴 -->
+            <nav class="gnb" id="gnb" style="left: 0;">
+                <div class="overlay" style="display: block; opacity: 0.8;"></div>
+                <div class="inner">
+                    <div class="navHead">
+                        <h2 class="hide">주메뉴</h2>
+                        <button class="closeTotalMenu">메뉴닫기</button>
+                        
+                        <!-- 로그아웃 상태일 때 -->
+                        <!-- <div class="loginArea">
+                            <a href="#" class="home">홈으로 가기</a>
+                            <a href="#" class="btn">로그인</a>
+                            <a href="#" class="btn">회원가입</a>
+                        </div> -->
+
+                        <!-- 로그인 상태일 때 -->
+                        <div class="loginArea">
+                            <a href="#" class="home">홈으로 가기</a>
+                            <a href="#" class="rental">재렌탈대상</a> <!-- 재렌탈대상자 고객일 경우 노출 -->
+                            <a href="#" class="btn logout">로그아웃</a> <!-- 로그아웃 시 class="logout" 추가 -->
+                            <a href="#" class="btn">나의정보</a>
+                        </div>
+
+                        <div class="menuArea">
+                            <ul>
+                                <li><a href="#"><span class="cart">장바구니</span></a></li>
+                                <li><a href="#"><span class="delivery">주문/배송조회</span></a></li>
+                                <li><a href="#"><span class="item">이용상품조회</span></a></li>
+                                <li><a href="#"><span class="payment">나의결제</span></a></li>
+                            </ul>
+                        </div>
+                    </div>          
+
+                    <div class="navBody">
+                        <h3 class="hide">전체메뉴</h3>
+                        <div class="nav">
+                            <ul class="dep1">
+                                <li class="on"><a href="#">상품</a></li>
+                                <li><a href="#">타이어</a></li>
+                                <li><a href="#">멤버십/혜택</a></li>
+                                <li><a href="#">고객지원</a></li>
+                                <li><a href="#">단체상품</a></li>
+                                <li><a href="#">결합상품</a></li>
+                            </ul>
+                        </div>
+                        <div class="subnav">
+                            <ul class="dep2 on">
+                                <li class="on"><a href="#">렌탈상품</a></li>
+                                <li><a href="#">일시불상품</a></li>
+                                <li><a href="#">패키지상품</a></li>
+                                <li><a href="#">단체상품</a></li>
+                                <li><a href="#">결합상품</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">승용차용</a></li>
+                                <li><a href="#">SUV용</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">멤버십</a></li> 
+                                <li><a href="#">제휴카드</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                            <ul class="dep2">
+                                <li><a href="#">걱정제로서비스   </a></li>   
+                                <li><a href="#">엔진오일서비스</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                                <li><a href="#">NEWS &amp; TIP</a></li>
+                            </ul>
+                        </div>                                
+                    </div>  
+                    <div class="navFoot">
+                        <p class="csInfo">고객센터 이용안내 <a href="tel:1855-0100" class="num">1855-0100</a></p>
+                        <p>평일 09:00~18:00 (토요일, 공휴일 휴무)</p>
+                    </div>
+                </div>                   
+            </nav>
+            <!--// 전체 메뉴 -->
+        </header>
+        <!-- //헤더영역 -->
+        
+        <!-- 본문영역 -->
+        <section id="content">
+            본문영역
+        </section>
+        <!-- //본문영역 -->
+        
+        <!-- 푸터영역 -->
+        <footer id="footerWrap"></footer>
+        <!-- //푸터영역 -->
+    </div>
+
+    <!-- 레이어 : 재렌탈 가능 고객 알림 -->
+    <div class="dim">
+        <div id="layerPop" class="layerPop">        
+            <header class="layerPopHeader">
+                <h1><span>재렌탈 가능 고객 알림</span></h1>
+                <a href="#" class="closeBtn"><span>닫기</span></a>
+            </header>
+            <section id="layerPopCont">
+                <div class="layerPopWrap">
+                    “<strong>홍길동</strong>” 고객님은 재렌탈 가능 고객입니다.<br>
+                    타이어 재렌탈로, 할인된 가격과 서비스를 받으세요.<br><br>
+                    전체메뉴를 통해서 재렌탈대상 표기를 확인하세요.
+                </div>        
+            </section>
+        </div>
+    </div>  
+    <!-- // 레이어 : 재렌탈 가능 고객 알림 -->
+
+</body>
+</html>
