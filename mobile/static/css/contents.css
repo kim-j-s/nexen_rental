@@ -1043,7 +1043,8 @@ img.full { width: 100%;}
 .carNoitem .txt:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px; background: url('../images/cart/bg_noitem.png'); background-size: 100%;}
  
 /* 상품목록 */
-.cartListWrap { padding: 40px 0 50px; /*padding: 40px 0 10px 0;*/ position: relative; top: 0; bottom: 0; left: 0;	right: 0; height: 100%;	background: #e7e7e7; }
+.cartListWrap { padding: 40px 0 135px; position: relative; top: 0; bottom: 0; left: 0;	right: 0; height: 100%;	background: #e7e7e7; }
+.cartListWrap.membership { padding: 40px 0 50px; }
 
 .cartAction { padding: 10px 15px 10px; line-height: 400; vertical-align: top; background: #e8e9eb; }
 .cartAction:after { content: ''; display: block; clear: both; }
