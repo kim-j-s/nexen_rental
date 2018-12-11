@@ -34,22 +34,27 @@
             <div class="calcRentalWrap">
                 <div class="searchWrap">
                     <div class="searchOptList">
-                        <dl>
-                            <dt>렌탈등록비</dt> 
-                            <dd>
-                                <select class="selectbox">
-                                    <option value="">렌탈등록비 선택</option>
-                                </select>
-                            </dd>
-                        </dl>
-                        <dl>   
-                            <dt>렌탈료<br>납부기간</dt> 
-                            <dd>
-                                <select class="selectbox">
-                                    <option value="">렌탈료납부기간 선택</option>
-                                </select>
-                            </dd>
-                        </dl>
+                        <!-- 2018-12-11 수정 -->
+                        <div class="topOpt">
+                            <dl>
+                                <dt>렌탈등록비</dt> 
+                                <dd>
+                                    <select class="selectbox">
+                                        <option value="">렌탈등록비 선택</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>   
+                                <dt>렌탈료<br>납부기간</dt> 
+                                <dd>
+                                    <select class="selectbox">
+                                        <option value="">렌탈료납부기간 선택</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- //2018-12-11 수정 -->
+                        
                         <dl>   
                             <dt>타이어 무상<br>교체서비스<a href="#" class="tooltip"><span class="iconToolTip">?</span></a></dt> 
                             <dd>
@@ -94,10 +99,26 @@
                     <div class="btnArea">
                         <button class="btn block point"><span>렌탈료 계산하기</span></button>
                     </div> 
-                </div> 
-                 
+                </div>
             </div>
             <!-- // 렌탈료 계산 -->
+
+            <!-- 2018-12-11 수정 -->
+            <div class="noItem short">
+                <p class="txt">
+                    나만의 렌탈 설계에 맞는 렌탈 서비스가 없습니다.<br>
+                    다시 선택해 주세요.
+                </p>
+            </div>
+
+            <div class="noItem short">
+                <p class="txt">
+                    렌탈 등록비와 납부기간 변경시<br>
+                    <strong class="txtColor5">렌탈료 계산하기 버튼</strong>을 클릭하셔야 렌탈 서비스를<br>
+                    확인할 수 있습니다.
+                </p>
+            </div>
+            <!-- //2018-12-11 수정 -->
 
         </section>
         <!-- //본문영역 -->

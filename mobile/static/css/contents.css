@@ -553,7 +553,6 @@ p.mark1 {display:block;}
 
 .searchWrap {width:100%;}
 .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
-.searchWrap dl:nth-child(4) { margin-bottom:10px;}
 .searchWrap dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333;  vertical-align: middle;}
 .searchWrap dl dd {display:table-cell;}
 .searchWrap dl dd select {width:100%;} 
@@ -752,6 +751,7 @@ p.mark1 {display:block;}
 /* 렌탈료 계산 */
 .calcRentalWrap {padding:20px 15px; background:#fafafa; border-bottom:1px solid #d4d4d4}
 .calcRentalWrap .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 2px 2px;}
+.calcRentalWrap .searchWrap .topOpt { margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #dcdcdc; }
 
 /* 구매후기 */
 .detailPage > .idArea {display: table; width:100%; table-layout:fixed; padding:10px; box-sizing:border-box; border-bottom:1px solid #d9d9d9;}
@@ -1356,7 +1356,7 @@ div + .shopInfo {margin-top:2px;}
 span.readInp { box-sizing: border-box; display: inline-block; width: 42px; height: 15px; margin-top: -3px; border: 1px solid #d5d5d5; background: #eee; vertical-align: middle; }
 
 .noItem { padding: 120px 0; }
-.noItem .txt { position:relative; padding-top: 80px; font-size: 13px; text-align: center; }
+.noItem .txt { position:relative; padding: 80px 15px 0; font-size: 13px; text-align: center; }
 .noItem .txt:after { content:''; display: block; position: absolute; top: 0; left: calc(50% - 35px);  width: 70px; height: 70px; background: url('../images/common/icon/icon_noitem.png') no-repeat; background-size: 100%; }
 .noItem .btnArea { display: block; margin-top: 30px; text-align: center; }
 .noItem .btnArea .btn { min-width: 140px; }
