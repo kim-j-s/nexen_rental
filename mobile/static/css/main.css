@@ -340,7 +340,7 @@
 	background-size: 100%;
 }
 
-.tireSearch .selectBox.focus { border: 1px solid #fff; }
+/* .tireSearch .selectBox.focus { border: 1px solid #fff; } */
 .tireSearch .selectBox:not(:first-child) { margin-top: 5px; }
 
 .tireSearch .selectBox label {
@@ -379,6 +379,10 @@
 }
 
 .tireSearch .searchWrap .btnArea { margin-top: 10px; }
+
+/* 비활성화 */
+.tireSearch .selectBox.disabled { opacity: .5; }
+
 
 /* 신개념타이어케어 */
 .tireCare {}
@@ -455,10 +459,9 @@
 }
 .popMyRental .tireSearch .selectBox label { color: #666; }
 
-
-
-
-
+.popMyRental .tireSearch .disabled { border-color: #d5d5d5; background: #eee; opacity: inherit;}
+.popMyRental .tireSearch .selectBox.disabeld label { color: #b5b5b5 !important; }
+.popMyRental .tireSearch .selectBox.disabled .innerIcon.search:before { background-image: url('../images/common/icon/icon_inner_search_disabled.png');}
 
 
 

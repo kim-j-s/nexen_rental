@@ -136,10 +136,12 @@
                     <span class="headCopy">Driving Tomorrow</span>
                     <span class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, <strong>넥스트 레벨</strong></span>
                 </h2>
+
+                <!-- 2018-12-11 수정 -->
                 <div class="tireContWrap">
                     <ul class="tab">
-                        <li class="on"><a href="#tireCont1">타이어 찾기</a></li>
-                        <li><a href="#tireCont2">신개념타이어케어</a></li>
+                        <li class="on"><a href="#tireCont1">#타이어 찾기</a></li>
+                        <li><a href="#tireCont2">#신개념타이어렌탈</a></li>
                     </ul>
     
                     <!-- 타이어 찾기 -->
@@ -166,9 +168,9 @@
                                         <option value="">주행거리</option>
                                     </select>
                                 </div>
-                                <div class="selectBox">
+                                <div class="selectBox disabled">
                                     <label for="opt2">2순위</label>
-                                    <select class="select" id="opt2">
+                                    <select class="select" id="opt2" disabled>
                                         <option value="">2순위</option>
 										<option value="">제동성능</option>
                                         <option value="">연비효율</option>
@@ -176,9 +178,9 @@
                                         <option value="">주행거리</option>
                                     </select>
                                 </div>
-                                <div class="selectBox">
+                                <div class="selectBox disabled">
                                     <label for="opt3">3순위</label>
-                                    <select class="select" id="opt3">
+                                    <select class="select" id="opt3" disabled>
                                         <option value="">3순위</option>
 										<option value="">제동성능</option>
                                         <option value="">연비효율</option>
@@ -187,14 +189,14 @@
                                     </select>
                                 </div>
                                 <div class="btnArea">
-                                    <button type="button" class="btn primary">타이어 검색</button>
+                                    <button type="button" class="btn primary btnSearch" disabled>타이어 검색</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- //타이어 찾기 -->
     
-                    <!-- 신개념타이어케어 -->
+                    <!-- 신개념타이어렌탈 -->
                     <div class="tireCont tireCare" id="tireCont2">
                         <ul class="careService">
                             <li>
@@ -226,8 +228,9 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- //신개념타이어케어 -->
+                    <!-- //신개념타이어렌탈 -->
                 </div>
+                <!-- //2018-12-11 수정 -->
             </div>
 
             <div class="serviceFlow">
@@ -383,7 +386,7 @@
     </div>
 
     <!-- 레이어 : 재렌탈 가능 고객 알림 -->
-    <div class="dim">
+    <div class="dim" style="display: none;">
         <div id="layerPop" class="layerPop">        
             <header class="layerPopHeader">
                 <h1><span>재렌탈 가능 고객 알림</span></h1>

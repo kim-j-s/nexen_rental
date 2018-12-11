@@ -9,6 +9,7 @@ $(function(){
 	uiMain.init();
 	uiForm();
 	topBanner();
+	tireSearch();
 
 	SwiperActMain();
 	TopBanner();
@@ -554,22 +555,30 @@ function uiForm() {
 		$('[for="'+labelFor+'"]').addClass('on');
 	});
 
-	// label + select 
-	var selectTarget = $('.tireSearch .selectBox select'); 
+	
+}
 
-	selectTarget.on('focus',function(){ 
-		$(this).parent().addClass('focus');
-	}); 
-
-	selectTarget.on('blur', function(){ 
-		$(this).parent().removeClass('focus'); 
-	});
-
-	selectTarget.change(function(){ 
-		var select_name = $(this).children('option:selected').text();
+// 메인 - 타이어검색
+function tireSearch() {
+	var $tireSearch = $('.tireSearch');
+	var $tireSearchSelect = $tireSearch.find('.selectBox select');
+	var $tireSearchBtn = $tireSearch.find('.btnSearch');
+	
+	$tireSearchSelect.change(function(){ 
+		var $this = $(this);
+		var selectedIndex = this.selectedIndex;
+		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
+		var select_name = $this.children('option').eq(selectedIndex).text();
 		
-		$(this).siblings('label').text(select_name); 
-		$(this).parent().removeClass('focus'); 
+		$this.siblings('label').text(select_name); 
+	
+		if(selectedIndex === 0) {
+			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
+			$tireSearchBtn.prop('disabled', true);
+		} else {
+			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
+			$tireSearchBtn.prop('disabled', false);
+		}
 	});
 }
 
@@ -579,6 +588,8 @@ function topBanner() {
 		$('.topBanner').animate({height: 0}, 500);
 	});
 }
+
+
 
 // cart option change
 function cartOpt() {

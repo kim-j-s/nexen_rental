@@ -5,8 +5,6 @@
 @import url('lib/swiper.css');
 @import url('main.css');
 
-@import url('jeon.css'); /* 임시 - 삭제예정 */
-
 html,
 body { 
     color: #666;
