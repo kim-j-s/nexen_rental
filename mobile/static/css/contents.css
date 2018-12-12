@@ -9,7 +9,7 @@
 #content { z-index:1; width:100%; min-height: 300px; padding-top: 45px; }
 #content .contWrap {padding:20px 15px 50px 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
 #content .contWrap2 {padding:0 15px 50px 15px;}
-#content .optionList + .contWrap {padding:65px 15px 50px; } 
+#content .optionList + .contWrap {padding:60px 15px 50px; } 
 
 /* popup */
 .layerPop { position: absolute; top: 40px; width: 100%; padding: 0 15px; }
@@ -69,7 +69,7 @@
 .inputBox .inp[readonly] {background:#eee; color:#b5b5b5;}
 .inputBox .inp:focus {border:1px solid #812990;}
 .inputBox .inp.error {border:1px solid #c3244e;}
-.inputBox.date .inp {background:url(../images/common/icon/icon_date.png) no-repeat right 10px center; background-size:15px 18px; -webkit-appearance: none; -moz-appearance: none;appearance: none;}
+.inputBox.date .inp {background: #fff url(../images/common/icon/icon_date.png) no-repeat right 10px center; background-size:15px 18px; -webkit-appearance: none; -moz-appearance: none;appearance: none;}
 .labelDate {position:absolute; top:1px; left:10px; width:calc(100% - 45px); background:#fff; font-weight:400; font-size:12px; color:#666; line-height:33px;}
 .inp[type="date"]::-webkit-inner-spin-button,
 .inp[type="date"]::-webkit-calendar-picker-indicator {
@@ -1402,8 +1402,8 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 /* 나의결제관리 */
 .payinfoWrap .topinfo { color: #000; font-size: 15px; }
 .payinfoWrap .payinfo { padding: 15px; background: #e7e2f2; }
-.payinfoWrap .payinfo:not(:first-child) { margin-top: 15px; }
-.payinfoWrap .topinfo + .payinfo { margin-top: 5px; } 
+.payinfoWrap .payinfo:not(:first-child) { margin-top: 5px; }
+.payinfoWrap .topinfo + .payinfo { margin-top: 10px; } 
 .payinfoWrap .payinfo .btn { margin-top: 10px; border-radius: inherit; }
 .payinfoWrap .cost { display: flex; justify-content: space-between; align-items: center; line-height: 18px; }
 .payinfoWrap .cost dt { color: #000; font-size: 11px; font-weight: 500; }
@@ -1411,7 +1411,7 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .payinfoWrap .cost dd .won { color: #c3244e; font-size: 18px; }
 
 .sortBtn { display: flex; position: relative; }
-.sortBtn a { box-sizing: border-box; display: block; height: 35px; line-height: 33px; padding: 0 10px; border: 1px solid #dedee1; color: #888; text-align: center; }
+.sortBtn a { box-sizing: border-box; display: block; height: 35px; line-height: 33px; padding: 0 10px; border: 1px solid #dedee1; background: #fff; color: #888; text-align: center; }
 .sortBtn li { flex: 1; /*float: left;*/ }
 .sortBtn li:not(:first-child) { margin-left: -1px; }
 .sortBtn li.on { position: relative; z-index: 1; }
@@ -1471,7 +1471,7 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contracWrap .storeInfo dl dt { font-size: 15px; }
 .contracWrap .storeInfo .storeAddress { margin-bottom: 0; }
 .contracWrap .storeInfo .addInfo { border-top: 0; background: #fff; height: 40px; font-weight: 500; }
-.contracWrap .storeInfo .addInfo .date { position: absolute; top: 0; right: 15px; line-height: 40px; color: #999; }
+.contracWrap .storeInfo .addInfo .date { position: absolute; top: 0; right: 15px; line-height: 40px; color: #999; font-weight: 400;}
 .contracWrap .storeInfo .btnBox { padding: 0 5px 5px; }
 .contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
 
