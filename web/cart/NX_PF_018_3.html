@@ -299,7 +299,6 @@
 		<section id="content">
 			<h1 class="sectionTitle">주문서작성/결제</h1>
 
-			<!-- 2018-11-29 수정 -->
 			<div class="cartStepWrap">
 				<ol class="cartStep">
 					<li class="ty1">
@@ -316,22 +315,18 @@
 					</li>
 				</ol>
 			</div>
-			<!--// 2018-11-29 수정 -->
 
 			<div class="itemList3Wrap">
-				<ul class="itemList3">
+				<ul class="itemList3 etc">
 					<li>
 						<div class="inner">
 							<div class="thumb">
-								<img src="../static/images/sample/tire3.jpg" alt="" />
+								<img src="../static/images/cart/img_membershipImg.png" alt="" />
 							</div>
 							<div class="info">
-								<dl class="tireInfo2">
+								<dl class="tireInfo2 etc">
 									<dt>
-										WG SPORT 2 WU7 SUV <small>205 / 55R16</small>
-										<span>
-											[자유렌탈] <br />[승용차용][사계절용][순정]
-										</span>
+										[맴버십] 알뜰 멤버십
 									</dt>
 									<dd>
 										<span>제조사 : 르노삼성</span>
@@ -339,30 +334,14 @@
 										<span>차량번호 : 12아1234</span> <br />
 										<span>수량 : 4본</span>
 										<span>렌탈기간 : 3년</span>
-									</dd>
-								</dl>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="inner">
-							<div class="thumb">
-								<img src="../static/images/sample/tire3.jpg" alt="" />
-							</div>
-							<div class="info">
-								<dl class="tireInfo2">
-									<dt>
-										WG SPORT 2 WU7 SUV <small>205 / 55R16</small>
-										<span>
-											[자유렌탈] <br />[승용차용][사계절용][순정]
-										</span>
-									</dt>
-									<dd>
-										<span>제조사 : 르노삼성</span>
-										<span>모델명 : NEW SM3</span>
-										<span>차량번호 : 12아1234</span> <br />
-										<span>수량 : 4본</span>
-										<span>렌탈기간 : 3년</span>
+
+										<ul class="list9">
+											<li>타이어 무상 교체 서비스 : 타이어 2개 추가</li>
+											<li>엔진오일 교체서비스 : 엔진오일 1회</li>
+											<li>얼라인먼트 무상 서비스 : 4회</li>
+											<li>위치교환 무상서비스 : 해당없음</li>
+											<li>방문점검서비스 : 6개월</li>
+										</ul>
 									</dd>
 								</dl>
 							</div>
@@ -411,9 +390,6 @@
 													<input type="text" class="inp" value="1234" disabled="disabled" />
 												</div>
 											</div>
-											<div class="txtBox">
-												<span class="txt color4">이메일을 입력해 주세요</span>
-											</div>
 										</td>
 									</tr>
 									<tr>
@@ -444,6 +420,9 @@
 												</select>
 											</div>
 											<!--// 2018-11-15 수정 -->
+											<div class="txtBox">
+												<span class="txt color4">이메일을 입력해 주세요</span>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -467,58 +446,6 @@
 														<input type="text" class="inp" disabled="disabled" />
 													</div>
 												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
-
-					<section class="infoWrap">
-						<h1 class="title">배송지 정보</h1>
-						<p class="txt">'<span class="chkm">필수등록</span>' 표시는 필수로 입력해 주세요.</p>
-						<div class="table ty4">
-							<table>
-								<caption>배송지 입력 표</caption>
-								<colgroup>
-									<col style="width:270px;">
-									<col style="">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row"><label for="request"><span class="chkm">필수등록</span> 장착요청일</label></th>
-										<td>
-											<div class="inputBox picker">
-												<input type="text" id="request" class="inp" />
-											</div>
-											<div class="txtBox">
-												<p class="mark1">장착일은 <strong>3일 이후 부터</strong> 선택 가능합니다.</p>
-												<p class="mark1">
-													고객님께서 지정한 장착요청일 이후, 일주일 내 미장착시 <br />
-													해당 계약건은 자동으로 취소되며 취소수수료가 부가됩니다. <br />
-													<strong>[취소수수료 개당 1만원]</strong>
-												</p>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row"><span class="chkm">필수등록</span> 렌탈전문점 선택</th>
-										<td>
-											<a href="#" class="btn ty6">렌탈 전문점 찾기</a>
-											<div class="inputBox" style="width:calc(100% - 141px);">
-												<input type="text" class="inp" disabled="disabled" />
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row"><span class="chkm">필수등록</span> 렌탈전문점 주소</th>
-										<td>
-											<div class="inputBox full">
-												<input type="text" class="inp" value="인천광역시 부평구 부평동 661" disabled="disabled" />
-											</div>
-											<div class="txtBox">
-												<span class="txt color4">렌탈전문점 찾기를 통해 주소를 입력해 주세요</span>
 											</div>
 										</td>
 									</tr>
@@ -563,23 +490,6 @@
 										</td>
 									</tr>
 									<!--// 사업자(개인)인 경우만 노출 / 사업자(법인)인 경우만 노출 -->
-									<tr>
-										<th scope="row">법정생년월일</th>
-										<td>
-											<div class="inputBox wd60">
-												<input type="text" class="inp" value="1980" disabled="disabled" />
-											</div>
-											<span class="dateTxt">년</span>
-											<div class="inputBox wd60">
-												<input type="text" class="inp" value="01" disabled="disabled" />
-											</div>
-											<span class="dateTxt">월</span>
-											<div class="inputBox wd60">
-												<input type="text" class="inp" value="01" disabled="disabled" />
-											</div>
-											<span class="dateTxt">일</span>
-										</td>
-									</tr>
 									<tr>
 										<th scope="row"><span class="chkm">필수등록</span> 결제수단</th>
 										<td>
@@ -782,26 +692,6 @@
 					</section>
 
 					<section class="infoWrap">
-						<h1 class="title">렌탈 등록비 결제 정보</h1>
-						<p class="txt">월 렌탈 등록비는 주문시 1회만 결제됩니다.</p>
-						<div class="table ty4">
-							<table>
-								<caption>렌탈 등록비 결제 정보 표</caption>
-								<colgroup>
-									<col style="width:270px;">
-									<col style="">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">등록비 결제금액</th>
-										<td><strong class="bold">25,000 원</strong></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
-
-					<section class="infoWrap">
 						<h1 class="title">판매인 정보</h1>
 						<div class="table ty4">
 							<table>
@@ -832,26 +722,14 @@
 					</section>
 				</div>
 
-				<!-- 알뜰, 표준, 무한, 슈퍼, 자유 -->
-				<!--
-				단일 상품일 경우
-				<strong class="tit">NFERA AU5 (205/65R16)</strong> 제품명 입력 구간 삭제
-				-->
+				<!-- 맴버십 -->
 				<div class="orderView">
 					<h3>주문확인</h3>
 					<div class="inner">
 						<div class="item">
-							<strong class="tit">NFERA AU5 (205/65R16)</strong>
-							<div class="prodPay">
-								<dl>
-									<dt>렌탈 등록비</dt>
-									<dd>170,000 원</dd>
-								</dl>
-								<p class="txt">※ 장착후 익월부터 청구됩니다</p>
-							</div>
 							<div class="detailProdPay">
 								<dl class="ty1">
-									<dt>렌탈료</dt>
+									<dt>월 사용료</dt>
 									<dd>
 										<div class="detail">
 											<span class="tit">[1~24개월]</span>
@@ -864,48 +742,15 @@
 									</dd>
 								</dl>
 								<dl>
-									<dt>추가렌탈료</dt>
+									<dt>추가사용료</dt>
 									<dd>월 2,500 원</dd>
 								</dl>
 								<dl>
-									<dt>총 렌탈료</dt>
-									<dd>월 11,500 원</dd>
-								</dl>
-								<dl class="ty2">
-									<dt>총납입금액</dt>
-									<dd>439,000 원</dd>
-								</dl>
-							</div>
-						</div>
-						<div class="item">
-							<strong class="tit">NFERA AU5 (205/65R16)</strong>
-							<div class="prodPay">
-								<dl>
-									<dt>렌탈 등록비</dt>
-									<dd>170,000 원</dd>
-								</dl>
-								<p class="txt">※ 장착후 익월부터 청구됩니다</p>
-							</div>
-							<div class="detailProdPay">
-								<dl class="ty1">
-									<dt>렌탈료</dt>
-									<dd>
-										<div class="detail">
-											<span class="tit">[1~24개월]</span>
-											<span class="won">월 9,000 원</span>
-										</div>
-										<div class="detail">
-											<span class="tit">[25~36개월]</span>
-											<span class="won">월 9,000 원</span>
-										</div>
-									</dd>
+									<dt>할인료</dt>
+									<dd>월 <span class="color4">-5,000</span> 원</dd>
 								</dl>
 								<dl>
-									<dt>추가렌탈료</dt>
-									<dd>월 2,500 원</dd>
-								</dl>
-								<dl>
-									<dt>총 렌탈료</dt>
+									<dt>총 사용료</dt>
 									<dd>월 11,500 원</dd>
 								</dl>
 								<dl class="ty2">
@@ -916,45 +761,12 @@
 						</div>
 					</div>
 					<dl class="total">
-						<dt>최종 렌탈료</dt>
+						<dt>최종 사용료</dt>
 						<dd>월 <span class="num">22,600</span> 원</dd>
 					</dl>
 					<a href="#" class="btn ty7"><span>주문하기</span></a>
 				</div>
-				<!--// 알뜰, 표준, 무한, 슈퍼, 자유 -->
-
-				<!-- 일시불 -->
-				<!--
-				<div class="orderView">
-					<h3>주문확인</h3>
-					<div class="inner">
-						<div class="item">
-							<div class="prodPay">
-								<dl>
-									<dt>렌탈 등록비</dt>
-									<dd>170,000 원</dd>
-								</dl>
-							</div>
-							<div class="detailProdPay">
-								<dl>
-									<dt>추가렌탈료</dt>
-									<dd>월 2,500 원</dd>
-								</dl>
-								<dl>
-									<dt>총 렌탈료</dt>
-									<dd>월 11,500 원</dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-					<dl class="total">
-						<dt>최종 결제금액</dt>
-						<dd><span class="num">1,022,600</span> 원</dd>
-					</dl>
-					<a href="#" class="btn ty7"><span>주문하기</span></a>
-				</div>
-				-->
-				<!--// 일시불 -->
+				<!--// 맴버십 -->
 			</div>
 		</section>
 
