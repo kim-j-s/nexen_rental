@@ -190,9 +190,10 @@ td .textarea {width:100%;}
 .tabList > li {position:relative; display:table-cell; border-top:1px solid #dedee1; border-bottom:1px solid #dedee1; vertical-align:middle; box-sizing:border-box;}
 .tabList > li:nth-child(2) {border:1px solid #dedee1;}
 .tabList > li > button {display:block; width:100%; height:35px; text-align:center;}
-.tabList > li > button span {font-size:12px; color:#888888; font-weight:400; line-height:35px;}
+.tabList > li > a {display:block; width:100%; height:35px; text-align:center; font-size:12px; color:#888888; font-weight:400; line-height:35px;}
 .tabList > li.on {background:#812990; border:none;}
 .tabList > li.on > button span {color:#fff;}
+.tabList > li.on > a {color:#fff;}
 .tabContent {padding:20px 15px 50px; display:none;}
 .tabContent.on {display:block;}
 
@@ -350,7 +351,7 @@ td .textarea {width:100%;}
 .btnSet { display: flex; margin-top: 30px;}
 .btnSet .btn { display: flex; flex: 1;flex-direction: column; width: 50%; height: 48px;	padding: 0;  justify-content: center;line-height: 1;}
 .btnSet .btn + .btn { margin-left: 5px; }
-.btnSet .call {padding-left:13px; padding-top: 4px}
+.btnSet .call {/*padding-left:13px;*/ padding-top: 4px}
 .btnSet .call:before {display: inline-block; content:''; width:10px; height:12px; margin-right:2px; background:url('../images/common/icon/icon_tel2.png') no-repeat left center; background-size:100%; vertical-align:-1px;}
 .btnSet + .table {margin-top:20px;}
 .note {margin:20px 0;}
@@ -550,9 +551,9 @@ p.mark1 {display:block;}
  * ============================== */
 
 .fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
-.sectionTire .tabMenu .tabList.top { position: fixed; top: 44px; z-index: 100; background: #fff; }
-.sectionTire .tabMenu .tabList.top ~ .tabContent.on { margin-top: 35px; }
-.sectionTire .tabMenu.fixed {top: 44px; z-index: 100; background: #fff; }
+
+.sectionTire .tabMenu .tabList.fixed { position: fixed; top: 44px; z-index: 100; background: #fff; }
+.sectionTire .tabMenu .tabList.fixed ~ .tabContent.on { margin-top: 35px; }
 
 .searchWrap {width:100%;}
 .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
@@ -741,7 +742,7 @@ p.mark1 {display:block;}
 .rentalList .list1 .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 3px 2px;}
 .infoArea .desc {font-size:12px; font-weight:400; color:#000; line-height:17px; margin-bottom:15px;}
 .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
-.infoArea .priceInfo {padding:0 10px 10px 10px;}
+.infoArea .priceInfo {padding:0 10px 8px 10px;}
 .infoArea .priceInfo .txt {flex:auto;font-size:12px; color:#666;}
 .infoArea .priceInfo .price {flex-basis: 100px;font-size:12px; font-weight:400; text-align:right; color:#333;}
 .infoArea .priceInfo .price .num {font-size:12px;font-weight:400; color:#333;}
@@ -1207,7 +1208,7 @@ img.full { width: 100%;}
 .prodCost {display:table; width:100%; padding:0 10px; background:#eee;}
 .prodCost > dt {display:table-cell; vertical-align:middle; padding:10px 0 9px 0; color: #333; font-weight:500; font-size:12px;}
 .prodCost > dd {display:table-cell; vertical-align:middle; padding:10px 0 9px 0; text-align:right; font-weight:500; font-size:13px; color:#333;}
-.prodCost + .txt {position:relative; margin-top:2px; padding-left:7px; font-weight:400; font-size:10px;}
+.prodCost + .txt {position:relative; margin-top:5px; padding-left:7px; font-weight:400; font-size:10px;}
 .prodCost + .txt:before {content:''; position:absolute; top:6px; left:0; width:2px; height:2px; background:#666; border-radius:50%;}
 .prodCost + .orderView {margin-top:27px;}
 .prodCost + .orderCostWrap {margin-top:27px;}
