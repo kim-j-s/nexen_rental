@@ -6,7 +6,6 @@ $(function(){
 	
 	uiMain.init();
 	uiForm();
-	// topBanner();
 	tireSearch();
 
 	SwiperActMain();
@@ -17,7 +16,7 @@ $(function(){
 	slideCont();
 	inpReset();
 
-	// floatingNav(); // 플로팅 네비
+	fixedMoveTab ();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -646,3 +645,39 @@ $(window).load(function(){
 		}
 	}
 });
+
+// 상품상세 - fixed Tab
+function fixedMoveTab (){
+	var $tabWraper = $('.tabList');
+	var $contentTab = $tabWraper.find('button');
+	var $contentWrap = $('.tabContent'); 
+
+	var tabHeight = $('.tabList').height(); //fixed된 탭영역
+	var onTabIdx = 0;
+	var moveTime = 300;
+
+	var tabMove = function () {
+		var winScrollTop = $(window).scrollTop();
+		var contentHeight = $('.tabMenu').height();
+		var contentOffsetTop = $('.tabMenu').offset().top;
+
+		if (winScrollTop < contentOffsetTop) {
+			$tabWraper.removeClass('fixed');
+		} else {
+			$tabWraper.addClass('fixed');
+		}
+	};
+
+	$(window).on('load scroll', tabMove);
+
+	$contentTab.on('click', function(e) {
+		var $target = $(this.hash);
+		var targetOffset = $target.offset().top;
+
+		$('html,body').stop().animate({
+			scrollTop : targetOffset - tabHeight
+		}, moveTime);
+
+		e.preventDefault();
+	});
+}

@@ -425,7 +425,7 @@ td .textarea {width:100%;}
 .itemtList2.inquiry li .desc { padding-right: 65px; font-size: 12px; font-weight: 300;}
 .itemtList2.inquiry .topTxt { margin-bottom: 10px; }
 .itemtList2.inquiry .btn { position: absolute; top: 50%; right:0; width: 50px; margin-top: -10px; }
-.itemtList2.inquiry .label { height: 17px; line-height: 15px; margin-right: 2px; padding: 0 6px; border: 1px solid #999; color: #999;}
+.itemtList2.inquiry .label { height: 17px; line-height: 15px; margin-right: 2px; padding: 0 6px; border: 1px solid #999; color: #999; font-size: 11px;}
 .itemtList2.inquiry .label.point { border: none; background: #812990; color: #fff; font-size: 11px; line-height: 17px;}
 
 .faqWrap {border-top:2px solid #353535; margin: 30px 0 0 0;}
@@ -513,7 +513,7 @@ td .textarea {width:100%;}
 .agreementCont p + .number {padding-left:25px;}
 .agreementCont.privacy h2 + p {margin-top:10px;}
 .agreementCont.privacy p + p {margin-top:10px;}
-.agreementCont.privacy .box1 {margin-top:10px;}
+.agreementCont.privacy .box1 {margin-top:10px; padding-left: 15px; }
 .agreementCont.privacy .box1 .number {margin:0 10px;}
 .agreementCont.privacy .tBracket {padding-left:15px;}
 .agreementCont.privacy .tBracket li > p {margin:10px 0 0 10px;}
@@ -553,7 +553,7 @@ p.mark1 {display:block;}
 .fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
 
 .sectionTire .tabMenu .tabList.fixed { position: fixed; top: 44px; z-index: 100; background: #fff; }
-.sectionTire .tabMenu .tabList.fixed ~ .tabContent.on { margin-top: 35px; }
+.sectionTire .tabMenu .tabList.fixed ~ .tabContent.on { padding: 100px 15px 50px; }
 
 .searchWrap {width:100%;}
 .searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}

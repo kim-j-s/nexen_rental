@@ -65,21 +65,22 @@
                 </div>
             </div>
 
-            <div class="tabMenu fixed"><!-- scrollTop : class="fixed" 추가 -->
+            <!-- 2018-12-12 수정 -->
+            <div class="tabMenu"> 
                 <ul class="tabList">
-                    <li><button><span>상품정보</span></button></li>
-                    <li class="on"><button><span>반품/교환/AS</span></button></li>
-                    <li><button><span>교환후기</span></button></li>
+                    <li><a href="#tabCont1">상품정보</a></li>
+                    <li class="on"><a href="#tabCont2">반품/교환/AS</a></li>
+                    <li><a href="#tabCont3">교환후기</a></li>
                 </ul>
 
                 <!-- 상품정보 탭 내용 -->
-                <div class="tabContent">
+                <div class="tabContent" id="tabCont1">
                     상품정보
                 </div>
                 <!--// 상품정보 탭 내용 -->
                 
                 <!-- 반품/교환/AS 탭 내용 -->
-                <div class="tabContent on">
+                <div class="tabContent on" id="tabCont2">
                     <h2 class="headTitle">계약안내</h2>
                     <div class="detailTxt">
                         <ul class="list1">
@@ -128,11 +129,12 @@
                 <!--// 반품/교환/AS 탭 내용 -->
 
                 <!-- 교환후기 -->
-                <div class="tabContent">
+                <div class="tabContent" id="tabCont3">
                     교환후기    
                 </div>
                 <!--// 교환후기 -->
-            </div>           
+            </div>
+            <!-- // 2018-12-12 수정 -->           
 
             <div class="pageFoot fixedBot"> 
                 <a href="#" class="btnAction"><span class="btnSearch">간편조회하기</span></a>
