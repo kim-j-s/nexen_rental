@@ -741,7 +741,7 @@ body.errorPage {
     justify-content: center;
 	margin: 0 15px;
 	text-align: center;
-	border-bottom: 1px solid #dcdcdc;
+	/* border-bottom: 1px solid #dcdcdc; */
 }
 .errorMessage .mainText {
 	padding-top: 90px;
