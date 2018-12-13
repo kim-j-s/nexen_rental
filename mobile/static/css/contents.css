@@ -627,12 +627,17 @@ p.mark1 {display:block;}
 .reviewList > ul li > .btnDel {position:absolute; top:20px; right:0; display: inline-block; width: 15px; height: 15px; border-radius: 100%; background: #555 url('../images/common/btn/btn_del.png') no-repeat 50%; background-size: 7px 7px; vertical-align: -1px;}
 .reviewList > ul li > .btnDel span {font-size:0;}
 .grade span {font-size:0; display:block; width:84px; height:16px; background:url('../images/common/icon/icon_star.png') no-repeat; background-size:100%;}
-.grade span.star5 {background-position:0 0} /* 별점 5 */  
-.grade span.star4 {background-position:0 -16px} /* 별점 4 */ 
-.grade span.star3 {background-position:0 -32px} /* 별점 3 */ 
-.grade span.star2 {background-position:0 -48px} /* 별점 2 */ 
-.grade span.star1 {background-position:0 -64px} /* 별점 1 */
-.grade span.star {background-position:0 -80px} /* 별점 0 */
+.grade span.star5 {background-position:0 0} /* 별점 10 */
+.grade span.star4_1 {background-position:0 -16px} /* 별점 9 */ 
+.grade span.star4 {background-position:0 -32px} /* 별점 8 */ 
+.grade span.star3_1 {background-position:0 -48px} /* 별점 7 */ 
+.grade span.star3 {background-position:0 -64px} /* 별점 6 */ 
+.grade span.star2_1 {background-position:0 -80px} /* 별점 5 */ 
+.grade span.star2 {background-position:0 -96px} /* 별점 4 */ 
+.grade span.star1_1 {background-position:0 -112px} /* 별점 3 */ 
+.grade span.star1 {background-position:0 -128px} /* 별점 2 */
+.grade span.starOne {background-position:0 -144px} /* 별점 1 */ 
+.grade span.star {background-position:0 -160px} /* 별점 0 */
 .reviewList > ul li .tit {font-size:14px; color:#000000; font-weight:400; margin-top:15px; line-height:17px;} 
 .reviewList > ul li .txt {font-size:12px; color:#666; font-weight:400; margin-top:10px; line-height:17px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;} 
 .reviewList > ul li.noList {display:table; width: 100%; min-height:130px; table-layout:fixed;} 
@@ -641,6 +646,11 @@ p.mark1 {display:block;}
 .reviewList .txt2 span {position:relative; padding-right:5px;}
 .reviewList .txt2 span + span {padding-left:5px;}
 .reviewList .txt2 span:nth-child(1):after {position:absolute; top:6px; right:0; width:1px; height:7px; background:#e8e8e8; content:'';}
+
+.gradeGroup {display:table; width:100%;}
+.gradeGroup > .ele {display:table-cell; vertical-align:middle;}
+.gradeGroup > .ele.sel {width:113px;}
+.gradeGroup > .ele.gr {padding:0 0 0 15px;}
 
 .productList li:not(:first-child) { margin-top:10px; }
 .productList a { display: block; }

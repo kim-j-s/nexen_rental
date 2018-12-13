@@ -17,6 +17,7 @@ $(function(){
 	inpReset();
 
 	fixedMoveTab ();
+	GradeSelect()
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -83,6 +84,14 @@ $(function(){
 	/* ==============================
 	 * content 
 	 * ============================== */
+
+	function GradeSelect() {
+		$('.gradeSelect').change(function(){
+			grade = $(this).children('option:selected').data('grade');
+			console.log(grade);
+			$(this).closest('td').find('.grade').children('span').attr('class','').addClass(grade);
+		});
+	}
 
 	// affiliate card 
 	var menuOpt = $('.optionList .optionTitle')
