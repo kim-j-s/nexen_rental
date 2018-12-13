@@ -26,6 +26,7 @@
 .sectionTitle2 + .loginWrap {margin-top:18px;}
 .sectionTitle2 + .loginBox {margin-top:18px;}
 .sectionTitle2 + .terms {margin-top:30px;}
+.sectionTitle2 + .memberClass {margin-top:18px;}
 .sectionTitle2 + .txt {margin-top:15px; text-align:center; font-weight:400; font-size:18px; color:#777;}
 .sectionTitle2 + .txt + .loginWrap {margin-top:29px;}
 .sectionTitle2 + .txt + .tabWrap {margin-top:39px;}
@@ -445,6 +446,7 @@ text-align:center; line-height:60px;}
 
 .table table tbody td {word-break: keep-all;}
 .table table tbody td strong {font-weight:500;}
+.table table tbody td .prdName {font-weight:500; font-size:15px; color:#353535;}
 .table table tbody td .telGroup {display:inline-block; vertical-align:middle;}
 .table table tbody td .telGroup .inputBox {width:130px;}
 .table table tbody td .telGroup .inputBox + .inputBox {width:105px; margin-left:7px;}
@@ -789,6 +791,13 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .affiliateCards .inner .txt + .btnBox {padding-top:28px;}
 .affiliateCards + .table {margin-top:115px;}
 
+.memberClass {padding:30px 23px; background:#f5f5f5; border:1px solid #e5e5e5; overflow:hidden;}
+.memberClass > .txt {float:left; font-weight:500; font-size:18px; color:#333; line-height:36px;}
+.memberClass > .view {float:right;}
+.memberClass > .view .dpClass {display:block; width:130px; border:2px solid #812990; border-radius:45px; text-align:center; background:#fff;}
+.memberClass > .view .dpClass .txt {display:inline-block; line-height:32px; padding-left:20px; background:url(../images/common/icon/icon_chk.png) no-repeat left center; color:#812990;}
+.memberClass + .prdDetailCont {margin-top:50px;}
+
 
 /* 이벤트 페이지 */
 .contTitle {position:relative; padding:45px 150px 0 0;}
@@ -976,6 +985,7 @@ no-repeat left center;}
 .tireInfo2 > dd .list9 {padding-top:27px;}
 .tireInfo2.long > dd > span {width:250px;}
 .tireInfo2.etc > dt {padding-top:0;}
+.tireInfo2.etc2 > dt {padding-top:25px;}
 
 /* slider 1 */
 .slider1 {margin:0 -16px;}
@@ -1229,6 +1239,14 @@ no-repeat left center;}
 .optEle .notiBox > .txt {padding-top:57px; text-align:center; background:url(../images/common/icon/icon_none.png) no-repeat center top; font-size:14px; line-height:22px; letter-spacing:-1px;}
 .optEle .notiBox > .txt strong {font-weight:400; font-size:14px; color:#454545;}
 
+.optEle .contractChk {height:266px; margin-top:15px; padding-top:48px; background:#f5f5f5; text-align:center;}
+.optEle .contractChk > .txt {padding-top:58px; background:url(../images/common/icon/icon_none.png) no-repeat center top; line-height:20px;}
+.optEle .contractChk > .txt strong {font-weight:400; color:#454545;}
+.optEle .contractChk > .txt + .btnBox {padding-top:42px;}
+.optEle .contractChk > .btnBox {text-align:center;}
+.optEle .contractChk > .btnBox .viewBtn {width:130px; height:36px; background:#812990; border-radius:45px;}
+.optEle .contractChk > .btnBox .viewBtn > span {color:#fff;}
+
 .tips {}
 .tips .black {font-weight:500; color:#353535;}
 .tips > .txt {color:#888;}
@@ -1273,7 +1291,7 @@ no-repeat left center;}
 .tireOptionList > li {position:relative; overflow:hidden; line-height:36px;}
 .tireOptionList > li + li {margin-top:10px;}
 .tireOptionList > li input[type="radio"] {position:absolute; top:-20px; left:0;}
-.tireOptionList > li label {position:relative; display:block; padding:0 10px; font-size:14px; color:#666; line-height:34px; border:1px solid #d5d5d5; background:#fff;}
+.tireOptionList > li label {position:relative; display:block; padding:0 10px; font-size:14px; color:#666; line-height:34px; border:1px solid #d5d5d5; background:#fff; cursor:pointer;}
 .tireOptionList > li label:after {content:''; position:absolute; top:50%; right:10px; margin-top:-10px; width:20px; height:20px; background:url(../images/common/icon/icon_checkbox2.jpg) no-repeat 0 0;}
 .tireOptionList > li input[type="radio"]:checked + label {border:1px solid #812990;}
 .tireOptionList > li input[type="radio"]:checked + label:after {background:url(../images/common/icon/icon_checkbox2.jpg) no-repeat 0 -20px;}
@@ -1693,6 +1711,7 @@ no-repeat left center;}
 .subTxt2 + .contract {margin-top:20px;}
 .contract {}
 .contract > .inputBox {display:block;}
+.contract + .addrScroll {margin-top:16px;}
 
 .accountInfo {border:1px solid #d2d2d2;}
 .accountInfo > dt {padding:0 20px; line-height:53px; border-bottom:1px solid #d2d2d2; font-weight:500; font-size:18px; color:#454545;}
@@ -1776,6 +1795,7 @@ no-repeat left center;}
 .addrSch > .keyword .inputBox {width:428px;}
 
 .addrScroll {height:426px; overflow:auto;}
+.addrScroll.ty2 {height:386px;}
 .addrScroll + .pagenation {margin-top:40px;}
 .addDetail {position:relative; padding-left:74px; font-size:14px; color:#888; line-height:24px;}
 .addDetail > span {position:absolute; top:0; left:0; width:62px; font-size:12px; text-align:center; border-radius:2px;}

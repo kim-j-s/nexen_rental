@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="x-apple-disable-message-reformatting" />
-	<title>내이용상품조회 | 신개념 타이어 렌탈서비스</title>
+	<title>멤버십 | 신개념 타이어 렌탈서비스</title>
 	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
 	<link href="../static/css/lib/swiper.css" rel="stylesheet">
 	<link href="../static/css/reset.css" rel="stylesheet" />
@@ -293,249 +293,259 @@
 
 		<div class="location">
 			<span class="home">홈</span>
-			<span>나의정보</span>
-			<span>내이용상품조회</span>
+			<span>멤버십/혜택</span>
+			<span>멤버십</span>
 		</div>
 
 		<section id="content">
-			<h1 class="sectionTitle">내이용상품조회</h1>
+			<h1 class="sectionTitle">멤버십</h1>
+			<h2 class="sectionTitle2">멤버십 상품 가입하기</h2>
 
-			<div class="itemList3Wrap">
-				<ul class="itemList3">
-					<!-- 계약서 버튼이 없는경우 -->
-					<li>
-						<div class="inner">
-							<div class="thumb">
-								<img src="../static/images/sample/tire3.jpg" alt="" />
-							</div>
-							<div class="info">
-								<dl class="tireInfo2 long">
-									<dt>
-										WG SPORT 2 WU7 SUV
-										<span>
-											[자유렌탈] <br />[승용차용][사계절용][순정]
-										</span>
-									</dt>
-									<!-- 2018-11-26 수정 -->
-									<dd>
-										<span>주문번호 : O150000001192</span>
-										<span>온/오프라인 : 온라인 [장착완료]</span>
-										<span>차량정보 : 기아자동차 올 뉴 카니발</span> <br />
-										<span>장착일 : 2017.04.03</span>
-										<span>사이즈 : 235/55R 19</span>
-										<span>수량 : 4본</span>
-									</dd>
-									<!--// 2018-11-26 수정 -->
-								</dl>
+			<div class="memberClass">
+				<p class="txt">신규 가입자 혹은 기존 가입자 유무를 확인 하기 위한 "계약확인"을 진행해 주세요</p>
+				<div class="view">
+					<!--
+					계약확인을 하기 전에는 아무것도 노출하지 않고 확인 후 조건에 따라서 노출
+					-->
+					<!-- 신규 가입자 노출 -->
+					<span class="dpClass"><span class="txt">신규 가입자</span></span>
+					<!--// 신규 가입자 노출 -->
+
+					<!-- 기존 가입자 노출 -->
+					<!-- <span class="dpClass"><span class="txt">기존 가입자</span></span> -->
+					<!--// 기존 가입자 노출 -->
+				</div>
+			</div>
+
+			<div class="prdDetailCont">
+				<div class="prodSetting bPoint1">
+					<div class="optEle">
+						<p class="title">01. 계약확인</p>
+						<div class="contractChk">
+							<p class="txt"><strong>신규 가입자</strong> 혹은 <strong>기존 가입자</strong> 유무를 <br />확인하기 위한 <strong>"계약확인"을 진행</strong>해 주세요.</p>
+							<div class="btnBox">
+								<button class="viewBtn"><span>계약확인</span></button>
 							</div>
 						</div>
-					</li>
-					<!--// 계약서 버튼이 없는경우 -->
+					</div>
 
-					<!-- 계약서 버튼이 있는 경우 -->
-					<li>
-						<div class="inner">
-							<div class="thumb">
-								<img src="../static/images/sample/tire3.jpg" alt="" />
+					<div class="optEle">
+						<p class="title">02. 차종선택</p>
+						<div class="tabWrap mini">
+							<ul class="tabList carTypeSelect">
+								<li class="on"><button><span>국내</span></button></li>
+								<li><button><span>수입</span></button></li>
+							</ul>
+							<div class="tabContent on">
+								<div class="makerGroup">
+									<div class="makerGroup1">
+										<ul class="makerRadio">
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_1" />
+												<label for="makerRadio1_1" class="ty1">현대</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_2" />
+												<label for="makerRadio1_2" class="ty2">기아</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_3" />
+												<label for="makerRadio1_3" class="ty3">쉐보레</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_4" />
+												<label for="makerRadio1_4" class="ty4">르노삼성</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup1" id="makerRadio1_5" />
+												<label for="makerRadio1_5" class="ty5">쌍용</label>
+											</li>
+										</ul>
+									</div>
+									<div class="makerGroup2">
+										<select name="" id="" class="selectbox" disabled="disabled">
+											<option value="">모델명</option>
+										</select>
+										<div class="inputBox">
+											<input type="text" placeholder="12아1234 (차량번호 입력/장착점 방문시 고객확인용)" class="inp" />
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="info etc">
-								<dl class="tireInfo2 long">
-									<dt>
-										WG SPORT 2 WU7 SUV
-										<span>
-											[자유렌탈] <br />[승용차용][사계절용][순정]
-										</span>
-									</dt>
-									<!-- 2018-11-26 수정 -->
-									<dd>
-										<span>주문번호 : O150000001192</span>
-										<span>온/오프라인 : 온라인 [장착완료]</span>
-										<span>차량정보 : 기아자동차 올 뉴 카니발</span> <br />
-										<span>장착일 : 2017.04.03</span>
-										<span>사이즈 : 235/55R 19</span>
-										<span>수량 : 4본</span>
-									</dd>
-									<!--// 2018-11-26 수정 -->
-								</dl>
-								<div class="btnGroup">
-									<a href="#" class="btn ty9">계약서</a>
-									<a href="#" class="btn ty9">장착확인서</a>
+							<div class="tabContent">
+								<div class="makerGroup">
+									<div class="makerGroup1">
+										<ul class="makerRadio">
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_1" />
+												<label for="makerRadio2_1" class="ty6">BMW</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_2" />
+												<label for="makerRadio2_2" class="ty7">벤츠</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_3" />
+												<label for="makerRadio2_3" class="ty8">토요타</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_4" />
+												<label for="makerRadio2_4" class="ty9">폭스바겐</label>
+											</li>
+											<li>
+												<input type="radio" name="makerGroup2" id="makerRadio2_5" />
+												<label for="makerRadio2_5" class="ty10">렉서스</label>
+											</li>
+										</ul>
+									</div>
+									<div class="makerGroup2">
+										<select name="" id="" class="selectbox makerSelect">
+											<option value="">다른 제조사</option>
+											<option value="B001">BENTLEY</option>
+											<option value="B003">Ferrari</option>
+											<option value="B005">JEEP</option>
+											<option value="B006">LOUTUS</option>
+											<option value="B007">MASERATI</option>
+											<option value="B008">MINI</option>
+											<option value="B009">SUBARU</option>
+											<option value="B010">닛산</option>
+											<option value="B011">닷지</option>
+											<option value="B012">랜드로버</option>
+											<option value="B014">링컨</option>
+											<option value="B016">미쓰비시</option>
+											<option value="B018">볼보</option>
+											<option value="B019">사브</option>
+											<option value="B020">스즈끼</option>
+											<option value="B021">시트로엥</option>
+											<option value="B022">아우디</option>
+											<option value="B023">인피니티</option>
+											<option value="B024">재규어</option>
+											<option value="B025">캐딜락</option>
+											<option value="B026">크라이슬러</option>
+											<option value="B028">포드</option>
+											<option value="B029">포르쉐</option>
+											<option value="B031">푸조</option>
+											<option value="B032">혼다</option>
+											<option value="B033">람보르기니</option>
+										</select>
+										<select name="" id="" class="selectbox" disabled="disabled">
+											<option value="">모델명</option>
+										</select>
+										<div class="inputBox">
+											<input type="text" placeholder="12아1234 (차량번호를 입력해 주세요/장착점 방문시 고객확인용)" class="inp" />
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="optEle">
+						<p class="title">03. 기간 선택</p>
+						<div class="tireOptions">
+							<div class="cont">
+								<ul class="tireOptionList">
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt1" />
+										<label for="tireCnt1">12개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt2" />
+										<label for="tireCnt2">24개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt3" />
+										<label for="tireCnt3">36개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt4" />
+										<label for="tireCnt4">48개월</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--
+					상단의 옵션을 모두 선택 완료 후 button disabled 제거
+					-->
+					<div class="btnBox">
+						<button class="btn ty14" disabled="disabled">
+							<span class="txt">내게 맞는 렌탈 상품 찾기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="prdDetailCont">
+				<ul class="itemtList3">
+					<!-- 정보가 변경될 경우 -->
+					<li>
+						<p class="itemNoneBig">
+							차종과 기간 변경시 <strong>내게 맞는 렌탈 상품 찾기 버튼</strong>을 클릭하셔야 <br />멤버십 서비스를 확인할 수 있습니다.
+						</p>
 					</li>
-					<!--// 계약서 버튼이 있는 경우 -->
+					<!--// 정보가 변경될 경우 -->
+					<li>
+						<div class="purchase">
+							<dl>
+								<dt>알뜰 멤버십</dt>
+								<dd>
+									<div class="typeTxt4">
+										<span>#넥센 타이어 케어 서비스를 받을 수 있는 알뜰 멤버십 상품</span>
+									</div>
+									<p class="txt">
+										고객님을 위한 렌탈 서비스를 확인하세요
+									</p>
+									<ul class="list7">
+										<li>멤버십 기간 : 36개월</li>
+										<li>타이어 무상 교체 서비스 : 타이어 4개 추가</li>
+										<li>엔진오일 교체 서비스 : 엔진오일 3회</li>
+										<li>얼라인먼트 무상 서비스 : 2회</li>
+										<li>위치교환서비스 무상 서비스 : 2회</li>
+										<li>방문점검서비스 : 6개월</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="rentalfee">
+							<div class="total">
+								<span class="tit">월 사용료</span>
+								<span class="price"><span class="num">10,000</span> 원</span>
+							</div>
+							<div class="btns">
+								<div class="inner">
+									<a href="#" class="btn cart">장바구니</a>
+									<a href="#" class="btn ty6">주문하기</a>
+								</div>
+								<div class="inner">
+									<a href="#" class="btnsLink">고객후기</a>
+									<a href="#" class="btnsLink">상담신청</a>
+								</div>
+							</div>
+							<dl class="rentalfeeList">
+								<dt>기본 월 사용료</dt>
+								<dd><span class="num">9,000</span> 원</dd>
+							</dl>
+							<dl class="rentalfeeList">
+								<dt>추가 사용료</dt>
+								<dd><span class="num">2,500</span> 원</dd>
+							</dl>
+							<dl class="rentalfeeList">
+								<dt>멤버십할인</dt>
+								<dd><span class="num color4">-5,000</span> 원</dd>
+							</dl>
+							<dl class="rentalfeeList">
+								<dt>총 사용료</dt>
+								<dd><span class="num etc">475,000</span> 원</dd>
+							</dl>
+							<dl class="rentalfeeListTotal">
+								<dt>총 납입금액</dt>
+								<dd><span class="num">25,000</span> 원</dd>
+							</dl>
+						</div>
+					</li>
 				</ul>
-			</div>
-
-			<div class="table ty3 cursor">
-				<table>
-					<caption>각 프리미엄 서비스 별 이용내역</caption>
-					<colgroup>
-						<col style="width:350px;">
-						<col style="width:145px;">
-						<col style="width:145px;">
-						<col style="width:140px;">
-						<col style="">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">프리미엄 서비스</th>
-							<th scope="col">서비스 횟수</th>
-							<th scope="col">잔여 횟수</th>
-							<th scope="col">최근 이용일</th>
-							<th scope="col">최근 이용 대리점</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 마우스 커스 pointer 스타일만 적용되어있습니다. -->
-						<tr class="used">
-							<td>엔진오일</td>
-							<td>100회</td>
-							<td>100회</td>
-							<td>2017.05.12</td>
-							<td>SP타이어(타이어테크 개포점)</td>
-						</tr>
-						<tr>
-							<td>위치교환</td>
-							<td>100회</td>
-							<td>-</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>방문점검</td>
-							<td>6회</td>
-							<td>-</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>프리미엄(사계절보증제도)</td>
-							<td>100회</td>
-							<td>100회</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<!--// 마우스 커스 pointer 스타일만 적용되어있습니다. -->
-					</tbody>
-				</table>
-			</div>
-
-			<!-- 서비스 확인서 없는 경우 -->
-			<section class="infoWrap">
-				<h1 class="title">서비스별 이용 대리점 내역</h1>
-				<div class="table ty3">
-					<table>
-						<caption>서비스별 이용 대리점 내역 표</caption>
-						<colgroup>
-							<col style="width:244px;">
-							<col style="">
-							<col style="width:275px;">
-							<col style="width:140px;">
-							<col style="width:100px;">
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="row">프리미엄 서비스</th>
-								<th scope="row">이용 대리점</th>
-								<th scope="row">주소</th>
-								<th scope="row">전화번호</th>
-								<th scope="row">이용일</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>엔진오일</td>
-								<td>SP타이어(타이어테크 개포점)</td>
-								<!-- 2018-12-10 수정 -->
-								<td class="tl">서울 강남구 개포동 1231-1</td>
-								<!--// 2018-12-10 수정 -->
-								<!-- 2018-12-13 수정 -->
-								<td>02-2057-4863</td>
-								<!--// 2018-12-13 수정 -->
-								<td>2017.05.12</td>
-							</tr>
-							<tr>
-								<td colspan="5">
-									<div class="itemNone">이용 내역이 없습니다.</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section>
-			<!--// 서비스 확인서 없는 경우 -->
-
-			<!-- 서비스 확인서 있는 경우 -->
-			<section class="infoWrap">
-				<h1 class="title">서비스별 이용 대리점 내역</h1>
-				<div class="table ty3">
-					<table>
-						<caption>서비스별 이용 대리점 내역 표</caption>
-						<colgroup>
-							<col style="width:244px;">
-							<col style="">
-							<col style="width:275px;">
-							<col style="width:140px;">
-							<col style="width:100px;">
-							<col style="width:140px;">
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="row">프리미엄 서비스</th>
-								<th scope="row">이용 대리점</th>
-								<th scope="row">주소</th>
-								<th scope="row">전화번호</th>
-								<th scope="row">이용일</th>
-								<th scope="row">서비스 확인서</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>엔진오일</td>
-								<td>SP타이어(타이어테크 개포점)</td>
-								<!-- 2018-12-10 수정 -->
-								<td class="tl">서울 강남구 개포동 1231-1</td>
-								<!--// 2018-12-10 수정 -->
-								<!-- 2018-12-13 수정 -->
-								<td>02-2057-4863</td>
-								<!--// 2018-12-13 수정 -->
-								<td>2017.05.12</td>
-								<!-- 2018-12-10 수정 -->
-								<td><a href="#" class="btn ty9">확인서</a></td>
-								<!--// 2018-12-10 수정 -->
-							</tr>
-							<tr>
-								<td colspan="6">
-									<div class="itemNone">이용 내역이 없습니다.</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section>
-			<!--// 서비스 확인서 있는 경우 -->
-
-			<div class="pagenation">
-				<a href="#" class="pb first">맨처음</a>
-				<a href="#" class="pb prev">이전보기</a>
-				<a href="#" class="on">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#">7</a>
-				<a href="#">8</a>
-				<a href="#">9</a>
-				<a href="#">10</a>
-				<a href="#" class="pb next">다음보기</a>
-				<a href="#" class="pb last">마지막</a>
-			</div>
-
-			<div class="btnBox">
-				<a href="#" class="btn ty2"><span>목록</span></a>
 			</div>
 		</section>
 
