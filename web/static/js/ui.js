@@ -583,11 +583,10 @@ $(function(){
 	}
 
 	$('.goPage').click(function(){
-		movement = $('.mainVisual').height();
+		var objOff = $('.mainSection').eq(0).offset();
 		$('body, html').animate({
-			scrollTop:movement
+			scrollTop:objOff.top
 		},500);
-
 	});
 
 
@@ -990,7 +989,37 @@ $(function(){
 		$('.layerPopupWrap').removeClass('on');
 	};
 	
-	// visual list
+	
+
+	// 상품 상세 하단 플로팅
+	FixBottom();
+	// 플로팅 버튼 위치 반영
+	FixBtnPosition();
+
+	// 렌탈전문점 찾기 팝업
+	visualList();
+
+	// 구매후기 평점
+	GradeSelect();
+
+});
+
+// 상품 상세 하단 플로팅
+function FixBottom(){
+	$('.fixedBottom').find('.btn').on('click', function(e){
+		var bpData = $(this).data('bpoint');
+		var BreakPoint = $('.'+ bpData).offset();
+		e.preventDefault();
+		console.log('class : ' + bpData);
+		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
+		$("html, body").animate({
+			scrollTop: BreakPoint.top }
+		,500);
+	});
+}
+
+// visual list
+function visualList() {
 	$('.visualList').mouseenter(function(){
 		$("p:first",this).text("mouse enter");
 		$('.visualContent').find('.mapArea').removeClass('on');
@@ -1064,33 +1093,16 @@ $(function(){
 			$('.visualList').find('.btn_next').show();
 		}
 	}
-
-	// 상품 상세 하단 플로팅
-	FixBottom();
-	// 플로팅 버튼 위치 반영
-	FixBtnPosition();
-
-});
-
-// 상품 상세 하단 플로팅
-function FixBottom(){
-	$('.fixedBottom').find('.btn').on('click', function(e){
-		var bpData = $(this).data('bpoint');
-		var BreakPoint = $('.'+ bpData).offset();
-		e.preventDefault();
-		console.log('class : ' + bpData);
-		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
-		$("html, body").animate({
-			scrollTop: BreakPoint.top }
-		,500);
-	});
 }
 
-$(window).load(function(){
-	//alert('z');
-});
-
-
+// 구매후기 평점
+function GradeSelect() {
+	$('.gradeSelect').change(function(){
+		grade = $(this).children('option:selected').data('grade');
+		console.log(grade);
+		$(this).closest('td').find('.grade').attr('class','').addClass('grade ' + grade);
+	});
+}
 
 // 스크롤 이벤트
 $(window).scroll(function(){

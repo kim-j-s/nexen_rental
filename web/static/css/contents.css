@@ -558,12 +558,23 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .infoWrap + .pagenation {margin-top:56px;}
 
 /* 평점 */
-.grade {display:inline-block; font-size:0; width:84px; height:15px; background:url(../images/common/bg_grade.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
-.grade.ty1 {background-position:0 0;}
-.grade.ty2 {background-position:0 -15px;}
-.grade.ty3 {background-position:0 -30px;}
-.grade.ty4 {background-position:0 -45px;}
-.grade.ty5 {background-position:0 -60px;}
+.grade {display:inline-block; font-size:0; width:84px; height:15px; background:url(../images/common/bg_grade.png) no-repeat 0 -150px; text-indent:-9999px; overflow:hidden;}
+.grade.ty0 {background-position:0 0;}
+.grade.tyOne {background-position:0 -15px;}
+.grade.ty1 {background-position:0 -30px;}
+.grade.ty1_1 {background-position:0 -45px;}
+.grade.ty2 {background-position:0 -60px;}
+.grade.ty2_1 {background-position:0 -75px;}
+.grade.ty3 {background-position:0 -90px;}
+.grade.ty3_1 {background-position:0 -105px;}
+.grade.ty4 {background-position:0 -120px;}
+.grade.ty4_1 {background-position:0 -135px;}
+.grade.ty5 {background-position:0 -150px;}
+
+.gradeGroup {display:table; width:100%;}
+.gradeGroup > .ele {display:table-cell;}
+.gradeGroup > .ele.sel {width:113px;}
+.gradeGroup > .ele.gr {padding-left:8px;}
 
 /* 약관동의 */
 .agreeWrap {}
@@ -849,14 +860,15 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemtList1 li:nth-child(3n + 3) { animation-delay: 0.4s;}
 
 .itemtList2Wrap {padding:27px 0 0 0;}
-.itemtList2 > li {display:table; width:100%; bordeR:1px solid #d5d5d5;}
-.itemtList2 > li > a {display:table; width:100%;}
+.itemtList2 > li {bordeR:1px solid #d5d5d5;}
+.itemtList2 > li > a {}
+.itemtList2 > li > a .tblDiv {display:table; width:100%;}
 .itemtList2 > li + li {margin-top:30px;}
-.itemtList2 > li .thumb {position:relative; display:table-cell; width:217px; vertical-align:middle; text-align:center;}
+.itemtList2 > li .thumb {position:relative; display:table-cell; width:250px; padding:35px 0 0 30px; vertical-align:top; text-align:center;}
 .itemtList2 > li .thumb img {max-width:100%; max-height:100%;}
-.itemtList2 > li .inner {display:table-cell; padding:35px 45px 24px 0; vertical-align:top;}
+.itemtList2 > li .inner {display:table-cell; padding:35px 45px 24px 27px; vertical-align:top;}
 .itemtList2 > li .itemInfo1 {}
-.itemtList2 > li .itemInfo2 {display:table; width:100%; padding-top:30px;}
+.itemtList2 > li .itemInfo2 {display:table; width:100%; height:110px; padding-top:30px;}
 .itemtList2 > li .itemInfo2 .hashWrap {display:table-cell; vertical-align:bottom;}
 .itemtList2 > li .itemInfo2 .pay {display:table-cell; width:320px; vertical-align:bottom; text-align:right;}
 .itemtList2 > li .itemInfo2 .pay > ul {padding-bottom:10px;}
@@ -866,6 +878,11 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemtList2 > li .itemInfo2 .pay > ul > li dd {display:table-cell; width:210px; text-align:right; font-size:16px; color:#454545;}
 .itemtList2 > li .itemInfo2 .pay > ul > li dd > span {font-weight:500; font-size:24px;}
 .itemtList2Wrap + .pagenation {margin-top:80px;}
+
+.gradeArea {padding:19px 0 18px 0; background:#f9f9f9; border-top:1px solid #d5d5d5; font-size:0;}
+.gradeList {overflow:hidden;}
+.gradeList > li {float:left; width:20%; font-weight:500; font-size:15px; color:#454545; text-align:center;}
+.gradeList > li .grade {position:relative; top:1px; margin-left:4px;}
 
 .itemList3Wrap {}
 .itemList3Wrap + .paymentWrap {margin-top:66px;}
@@ -972,7 +989,7 @@ no-repeat left center;}
 .tireInfo > dd > .tit {display:table; width:100%;}
 .tireInfo > dd > .tit .typeTxt3 {display:table-cell; width:56px; padding:3px 10px 0 0; white-space:nowrap; vertical-align:top;}
 .tireInfo > dd > .tit strong {display:table-cell; font-weight:400; font-size:22px; color:#252525; vertical-align:top;}
-.tireInfo > dd > .txt {padding-top:8px; font-size:16px; color:#888; line-height:21px;}
+.tireInfo > dd > .txt {padding-top:8px; min-height:50px; font-size:16px; color:#888; line-height:21px;}
 .tireInfo .typeTxt {position:absolute; top:0; left:0;}
 
 .tireInfo2 {}
