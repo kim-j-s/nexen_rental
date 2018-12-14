@@ -192,8 +192,11 @@
 .serviceList .tit { box-sizing: border-box; flex-basis: 60%; height: 45px; line-height: 45px; padding: 0 15px; background: #feefef; color: #333; font-weight: 500; }
 .serviceList .desc { flex: 1; height: 45px; padding: 0 15px; line-height: 45px; text-align: center; }
 
-
-
+/* ==============================
+* popup - 이미지 크게보기
+* ============================== */
+.popImgBig {}
+.popImgBig .imgArea { overflow: auto; }
 
 
 
