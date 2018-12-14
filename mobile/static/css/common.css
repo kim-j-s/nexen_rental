@@ -9,13 +9,13 @@ html,
 body { 
     color: #666;
 	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
 	font-size: 12px;
 }
 
 strong { font-weight: 500; } /* bold */
 .hide { position: absolute; left: -9999px; }
 
-#headerWrap.fixed { position: fixed; top: 0; }
 
 /* ==============================
  * skip navigation
@@ -56,7 +56,6 @@ strong { font-weight: 500; } /* bold */
     background: #fff;
 }
 #headerWrap.fixed { position: fixed; top: 0; }
-
 #headerWrap .headerTopMenu {
 	width: 100%;
 	height: 45px; 
@@ -68,7 +67,7 @@ strong { font-weight: 500; } /* bold */
 	position: fixed;
 	top: 0;
 	z-index: 100;
-} /* 스크롤 시 추가 */
+} 
 
 .headerTopMenu h1.logo {
     display: inline-block;

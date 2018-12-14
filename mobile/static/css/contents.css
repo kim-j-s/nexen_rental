@@ -575,18 +575,15 @@ p.mark1 {display:block;}
 
 .productViewWrap .badge {position:absolute; top:15px; left:15px; z-index:2;} 
 .badge.inline span { display: inline-block; }
-.badge span { box-sizing: border-box; display: block;  width: 35px; height: 18px; font-size: 0; line-height: 0; }
-.badge span.hit { background: url('../images/prd/icon_hit.png') no-repeat left top; background-size: 100%; }
-.badge span.best { background: url('../images/prd/icon_best.png') no-repeat left top; background-size: 100%; }
+.badge span { box-sizing: border-box; display: block; width: 35px; height: 18px; border-radius: 2px; color: #fff; font-size: 9px; line-height: 18px; text-align: center; }
+.badge span.hit { background: #c3244e; /*background: url('../images/prd/icon_hit.png') no-repeat left top; background-size: 100%;*/ }
+.badge span.best { background: #6a2276; /*background: url('../images/prd/icon_best.png') no-repeat left top; background-size: 100%;*/ }
 .badge span:not(:first-child) { margin-top: 2px; } 
 
-
 /* 상품 */
-.label { display: inline-block; font-size: 0; }
-.label span { display:inline-block; box-sizing: border-box; margin-bottom: 2px; margin-right:5px; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align: center; }
-.label span.point { border-color: #b6985a; border-radius: 2px; min-width: 35px; background: #b6985a; color: #fff; }
-/* .label span:not(:first-child) { margin-right: 5px; } */
-/* .label span.point + span.point { margin-left: 5px;} */
+.productInfo .label { display: inline-block; font-size: 0; }
+.productInfo .label span { display:inline-block; box-sizing: border-box; margin-bottom: 2px; margin-right: 5px; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align: center; }
+.productInfo .label span.point { border-color: #b6985a; border-radius: 2px; min-width: 35px; background: #b6985a; color: #fff; }
 
 .hTag { display: inline-block;}
 .hTag span { display:inline-block; background:#fff; box-sizing: border-box; border-radius:1px; border: 1px solid #666; min-width: 45px; height: 20px; line-height: 18px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
