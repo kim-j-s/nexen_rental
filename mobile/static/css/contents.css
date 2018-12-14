@@ -15,7 +15,7 @@
 .layerPop { position: absolute; top: 40px; width: 100%; padding: 0 15px; }
 
 .layerPopHeader {position:relative; background:#812990;  border-top-left-radius:10px; border-top-right-radius:10px; text-align:center;}
-.layerPopHeader span {height:40px; line-height:40px; font-size:15px; font-weight:normal; color:#fff;}
+.layerPopHeader h1 {height:40px; line-height:40px; font-size:15px; font-weight:normal; color:#fff;}
 .layerPopHeader .closeBtn {position: absolute; top: 5px; right: 0; text-indent: -9999px; display:block; width: 30px; height: 30px; }
 .layerPopHeader .closeBtn:after { content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background:url('../images/common/btn/btn_close1.png') no-repeat 0 0; background-size:100%; }
 .layerPopWrap { box-sizing: border-box; min-height: 160px; padding:15px; background:#fff; border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
@@ -501,7 +501,7 @@ td .textarea {width:100%;}
 .groupMark > p {margin-bottom:5px;}
 .imgAttach > ul {overflow:hidden;}
 .imgAttach li { float:left; margin-right: 5px;}
-.imgAttach li:not(:first-child) { margin-top: 5px; }
+.imgAttach li:not(:first-child) { margin-top: 10px; }
 .imgAttach .imgBox {position:relative; box-sizing:border-box; width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
 .imgAttach .imgBox img {width:100%;}
 .imgAttach .imgBox .btnImgDel {position:absolute; top:4px; right:4px; width: 16px; height:16px; text-indent: -9999px; background:url('../images/common/btn/btn_close4.png') no-repeat 0 0; background-size:100%; }

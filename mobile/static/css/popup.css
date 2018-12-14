@@ -193,10 +193,15 @@
 .serviceList .desc { flex: 1; height: 45px; padding: 0 15px; line-height: 45px; text-align: center; }
 
 /* ==============================
-* popup - 이미지 크게보기
+* 레이어팝업 - 이미지 크게보기
 * ============================== */
-.popImgBig {}
-.popImgBig .imgArea { overflow: auto; }
-
+.layerPop.imgView { top: 0; padding: 0; height: 100%; }
+.layerPop.imgView .layerPopHeader {  position: relative; border-bottom: 1px solid #dcdcdc; border-top-left-radius: 0; border-top-right-radius: 0; background: #fff; text-align: center; }
+.layerPop.imgView .layerPopHeader .title { color: #000; font-size: 15px; font-weight: 500; height: 45px; line-height: 45px;}
+.layerPop.imgView .closeBtn { position:absolute; top: 0; right: 0; display: block; width: 45px; height: 45px; font-size: 0; }
+.layerPop.imgView .closeBtn:after { content:''; position: absolute; right: 50%; top: 50%; width: 13px; height: 13px; margin: -7px 0 0 -6px; background: url('../images/common/btn/btn_close_popup.png') no-repeat; background-size: 100%; }
+.layerPop.imgView #layerPopCont { height: calc(100% - 46px); }
+.layerPop.imgView .layerPopWrap { box-sizing: border-box; height: 100%; padding: 20px 15px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.layerPop.imgView .imgViewArea { overflow: auto; }
 
 
