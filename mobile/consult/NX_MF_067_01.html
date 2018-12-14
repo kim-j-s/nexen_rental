@@ -77,23 +77,25 @@
                             <tr>
                                 <th scope="row">첨부이미지<span class="iconMust">필수</span></th>
                                 <td>
-                                    <div class="fileAttach">
-                                        <a href="#" class="btn ty5"><span>사진첨부</span></a>
+                                    <!-- 2018-12-14 수정 -->
+                                    <div class="fileBox preview-image">
+                                        <label for="upload1">사진첨부</label>
+                                        <input type="file" id="upload1" class="upload-hidden">
                                     </div>
                                     <div class="groupMark">
-                                        <p><span class="mark1">첨부 파일은 이미지(jpg, png, gif, pdf, bmp) 파일만 가능합니다.</span></p>
-                                        <p><span class="mark1">타이어 규격이 잘 보여지는 사진으로 촬영 및 업로드 해주시기 바랍니다.</span></p>
+                                        <p><span class="mark1">첨부 파일은 이미지(jpg, png, bmp) 파일만 가능합니다.</span></p>
                                     </div>
                                     <div class="imgAttach">
                                         <ul>
                                             <li>
                                                 <div class="imgBox">
-                                                   <a href="#"><img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지"></a>
-                                                   <a href="#" class="btnImgDel">첨부 이미지 삭제</a>
+                                                    <img src="../static/images/sample/product1.jpg" alt="타이어 규격 첨부 이미지">
+                                                    <a href="#" class="btnImgDel">첨부 이미지 삭제</a>
                                                 </div>
                                             </li> 
                                         </ul>  
-                                    </div>       
+                                    </div>
+                                    <!-- // 2018-12-14 수정 --> 
                                 </td>
                             </tr>                       
                         </tbody>

@@ -83,8 +83,10 @@
                             <tr>
                                 <th scope="row">첨부이미지<br>(선택사항)</th>
                                 <td>
-                                    <div class="fileAttach">
-                                        <a href="#" class="btnTb"><span>사진첨부</span></a>
+                                    <!-- 2018-12-14 수정 -->
+                                    <div class="fileBox preview-image">
+                                        <label for="upload1">사진첨부</label>
+                                        <input type="file" id="upload1" class="upload-hidden">
                                     </div>
                                     <div class="groupMark">
                                         <p><span class="mark1">사진은 1장만 jpg, png, jpeg 파일만 가능합니다.</span></p>
@@ -98,7 +100,8 @@
                                                 </div>
                                             </li> 
                                         </ul>  
-                                    </div>       
+                                    </div>
+                                    <!-- // 2018-12-14 수정 --> 
                                 </td>
                             </tr>    
                         </tbody>
