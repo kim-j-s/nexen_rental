@@ -64,28 +64,29 @@
                     </p>
                 </div>
             </div>    
-                
-            <div class="tabMenu fixed"><!-- scrollTop : class="fixed" 추가 -->
+            
+            <!-- 2018-12-14 수정 -->
+            <div class="tabMenu">
                 <ul class="tabList">
-                    <li><button><span>상품정보</span></button></li>
-                    <li><button><span>반품/교환/AS</span></button></li>
-                    <li class="on"><button><span>구매후기</span></button></li>
+                    <li><a href="#tabCont1">상품정보</a></li>
+                    <li><a href="#tabCont2">반품/교환/AS</a></li>
+                    <li class="on"><a href="#tabCont3">구매후기</a></li>
                 </ul>
-
+        
                 <!-- 상품정보 탭 내용 -->
-                <div class="tabContent">
+                <div class="tabContent" id="tabCont1"> 
                     상품정보
                 </div>
                 <!--// 상품정보 탭 내용 -->
                 
                 <!-- 반품/교환/AS 탭 내용 -->
-                <div class="tabContent">
+                <div class="tabContent" id="tabCont2">
                     반품/교환/AS
                 </div>
                 <!--// 반품/교환/AS 탭 내용 -->
 
                 <!-- 교환후기 -->
-                <div class="tabContent on">
+                <div class="tabContent on" id="tabCont3">
                     <div class="reviewNum">
                         <p class="count">총 <strong class="total">20</strong>개의 상품이 있습니다.</p>
                         <a class="btn primary" href="#">구매후기작성</a>
@@ -164,7 +165,8 @@
                     <!-- // 2018-12-14 수정 -->
                 </div>
                 <!--// 교환후기 -->
-            </div>           
+            </div>       
+             <!-- // 2018-12-14 수정 -->    
 
         </section>
 		<!-- //본문영역 -->
