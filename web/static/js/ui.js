@@ -4,8 +4,8 @@ $(function(){
 	 * common
 	 * ============================== */
 	
-	selectMake();
-	selectMakeUI();
+	//selectMake();
+	//selectMakeUI();
 
 	//datepicker
 	/*
