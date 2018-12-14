@@ -504,6 +504,7 @@ td .textarea {width:100%;}
 .imgAttach .imgBox {position:relative; box-sizing:border-box; width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
 .imgAttach .imgBox img {width:100%;}
 .imgAttach .imgBox .btnImgDel {position:absolute; top:4px; right:4px; width: 16px; height:16px; text-indent: -9999px; background:url('../images/common/btn/btn_close4.png') no-repeat 0 0; background-size:100%; }
+.imgAttach .fileNm { padding: 6px 0 0 5px; color: #888; font-size: 12px; }
 
 /* 약관내용 */
 .agreementCont {word-break:keep-all;}
