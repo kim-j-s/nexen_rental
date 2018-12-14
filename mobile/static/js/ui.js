@@ -16,7 +16,10 @@ $(function(){
 	slideCont();
 	inpReset();
 
-	fixedMoveTab ();
+	// 타이어 - 상세
+	// fixedMoveTab ();
+	if ($('.productViewWrap').length > 0) { fixedMoveTab(); }
+	
 	GradeSelect()
 
 	//datepicker
@@ -658,7 +661,7 @@ $(window).load(function(){
 // 상품상세 - fixed Tab
 function fixedMoveTab (){
 	var $tabWraper = $('.tabList');
-	var $contentTab = $tabWraper.find('button');
+	var $contentTab = $tabWraper.find('a');
 	var $contentWrap = $('.tabContent'); 
 
 	var tabHeight = $('.tabList').height(); //fixed된 탭영역
@@ -690,3 +693,4 @@ function fixedMoveTab (){
 		e.preventDefault();
 	});
 }
+
