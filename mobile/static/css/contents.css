@@ -499,8 +499,8 @@ td .textarea {width:100%;}
 .zipCode > .addr .btn + .inputBox {display:table-cell; padding-left:5px;}
 .fileAttach {margin:0 0 5px 0;}
 .groupMark > p {margin-bottom:5px;}
-.imgAttach > ul {overflow:hidden;}
-.imgAttach li { float:left; margin-right: 5px;}
+.imgAttach > ul {}
+.imgAttach li { margin-right: 5px;}
 .imgAttach li:not(:first-child) { margin-top: 10px; }
 .imgAttach .imgBox {position:relative; box-sizing:border-box; width:140px; height:140px; vertical-align:middle; text-align:center; border:1px solid #dadada; }
 .imgAttach .imgBox img {width:100%;}
