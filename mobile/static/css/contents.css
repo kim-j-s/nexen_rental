@@ -340,7 +340,7 @@ td .textarea {width:100%;}
 /* 멤버십 */
 .sectionMembership {}
 .sectionMembership .fixedBot { position: absolute; bottom: 0; }
-
+.sectionMembership .defaultMsg { padding: 200px 0; color: #333; font-size: 17px; font-weight: 500; text-align: center; }
 
 .affiliateCards {text-align:center;}
 .affiliateCards .inner {position:relative; display:inline-block; }
