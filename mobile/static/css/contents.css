@@ -225,28 +225,10 @@ td .textarea {width:100%;}
 .table table th, .table table td { word-wrap: break-word; }
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .link {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.table .btn {
-	color: #fff;
-	border-color: #888;
-	background-color: #888;
-	border-radius: inherit;
-}
-.table .btn.etc {
-	color: #fff;
-	border-color: #555;
-	background-color: #555;
-	border-radius: inherit;
-}
-.table .btn[disabled] {
-	border-color: #bcbcbc;
-	background-color: #bcbcbc;
-}
-.table .btn.primary {
-	color: #fff;
-	border-color: #812990;
-	background-color: #812990;
-	border-radius: inherit;
-}
+.table .btn { color: #fff; border-color: #888; background-color: #888; border-radius: inherit; }
+.table .btn.etc { color: #fff; border-color: #555; background-color: #555; border-radius: inherit; }
+.table .btn[disabled] { border-color: #bcbcbc; background-color: #bcbcbc; }
+.table .btn.primary { color: #fff; border-color: #812990; background-color: #812990; border-radius: inherit; }
 
 /* 테이블 가로(th+td) - form */
 .table.ty2 {border-top:2px solid #353535;}
@@ -281,6 +263,7 @@ td .textarea {width:100%;}
 .box2.mg1 {margin:10px 0 15px 0;}
 .box2 .txt {font-size:13px; font-weight:400; color:#010101; line-height:18px; margin:0 0 20px 0;}
 
+.headTitle + .list1 { }
 
 /* ==============================
  * content
