@@ -99,30 +99,27 @@
 .selectbox.w50p { width: 50%; }
 
 /* checkbox */
-.checkbox {display:inline-block; position:relative; min-height:20px; padding:0 0 0 25px;}
+.checkbox {display:inline-block; position:relative; min-height:20px; padding-left: 25px;}
 .checkbox input { position:absolute; top: 0; left:0; z-index:1; opacity:0;}
-.checkbox label { font-size: 12px; color:#666; cursor:pointer; line-height: 20px; }
-.checkbox label:after { 
-	content:''; display:block; position:absolute; top:0px; left:0; 
-	width:20px;
-	height:20px;  
-	background:url('../images/common/icon/icon_checkbox.png') no-repeat 0 0;
-	background-size: 100%;
-}
+.checkbox label { color:#333; font-size: 12px; cursor:pointer; line-height: 20px; }
+.checkbox label:after {  content:''; display:block; position:absolute; top:0px; left:0; width:20px; height:20px; background: url('../images/common/icon/icon_checkbox.png') no-repeat 0 0; background-size: 100%; }
 .checkbox label > .color {font-weight:inherit; font-size:inherit; color:#812990;}
-.checkbox input:checked + label:after { 
-	background-image: url('../images/common/icon/icon_checkbox_checkd.png');
-}
+.checkbox input:checked + label:after { background-image: url('../images/common/icon/icon_checkbox_checked.png'); }
+.checkbox input:disabled + label:after { background-image: url('../images/common/icon/icon_checkbox_disabled.png'); }
+
 .checkbox.single {padding:0 0 0 20px;}
 .checkbox.single label {font-size:0;}
 
 /* radio */
-.radioGroup {}
-.radio {display:inline-block; position:relative; min-height:17px; padding:0 0 0 25px; text-align:left;}
+.radio {display:inline-block; position:relative; min-height:20px; padding-left: 25px; text-align:left;}
 .radio input { position:absolute; top:0; left:0; z-index:1; opacity:0;}
-.radio label {font-size:12px; color:#666; font-weight:300; cursor:pointer; line-height:17px; margin-right:20px;}
-.radio label:after { content:''; display:block; position:absolute; top:0px; left:0; width:17px; height:17px; background:url('../images/common/icon/icon_radio.png') no-repeat 0 0; background-size:100%;}
-.radio input:checked + label:after { background-position:0 -17px;}
+.radio label { color:#333; font-size:12px; font-weight:400; cursor:pointer; line-height:20px; }
+.radio label:after { content:''; display:block; position:absolute; top:0px; left:0; width:20px; height:20px; background:url('../images/common/icon/icon_radio.png') no-repeat 0 0; background-size:100%;}
+.radio input:checked + label:after { background-position:0 -20px;}
+
+.radioGroup { font-size: 0; }
+.radioGroup .radio + .radio { margin-left: 20px; }
+
 
 /* 타이어 라디오 선택 */
 .radiobtn {
@@ -1255,7 +1252,8 @@ img.full { width: 100%;}
 .costList dd strong {font-weight:500; font-size:18px; color:#c3244e;}
 
 .sellerSch {padding:15px; background:#fafafa;}
-.sellerSch > .radioBox {text-align:center;}
+.sellerSch > .radioBox {text-align:center; font-size: 0;}
+.sellerSch > .radioBox .radio + .radio { margin-left: 20px; }
 .sellerSch > .radioBox + .keyword {margin-top:12px;}
 .schInfoTxt {margin:100px auto; padding-top:88px; text-align:center; background:url(../images/cart/bg_sch.png) no-repeat center top; background-size:69px 76px; font-weight:400; font-size:13px;}
 
