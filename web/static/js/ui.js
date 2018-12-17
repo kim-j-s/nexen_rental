@@ -917,9 +917,12 @@ $(function(){
 		$('.prodGalleryViewer > .viewer iframe').remove();
 		if ( $('.prodGalleryThumb').find('li').eq(cnt).hasClass('tube') )
 		{
+			
+			$('.prodGalleryViewer .itemLabel').hide();
 			$('.prodGalleryViewer > .viewer').append(tireThumbImg);
 			$('.prodGalleryViewer > .viewer').find('img').remove();
 		} else {
+			$('.prodGalleryViewer .itemLabel').show();
 			$('.prodGalleryViewer > .viewer').append(tireThumbImg);
 		}
 	}
