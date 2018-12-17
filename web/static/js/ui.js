@@ -559,13 +559,8 @@ $(function(){
 		dots: true
 	});
 
-	var winHeight = $(window).height();
-	$(window).resize(function(){
-		var winHeight = $(window).height();
-		$('.mainVisual').height(winHeight + 3);
-	});
-
 	// 공통
+	var winHeight = $(window).height();
 	visualHeight();
 
 	function visualHeight() {
@@ -880,7 +875,10 @@ $(function(){
 
 	$(tgThumb).each(function(i){
 		$(this).mouseenter(function(x){
-			tireThumb(i);
+			if ( !$(this).hasClass('on'))
+			{
+				tireThumb(i);
+			}
 		});
 	});
 
@@ -888,6 +886,7 @@ $(function(){
 		if ( cnt == 0)
 		{
 			$(tgLeft).addClass('off');
+			console.log(this);
 			tireThumbView(cnt);
 		} else if ( cnt < 0)
 		{
@@ -914,8 +913,15 @@ $(function(){
 		var tireThumbImg = $('.prodGalleryThumb').find('li').eq(cnt).html();
 		$('.prodGalleryThumb').find('li').siblings().removeClass('on');
 		$('.prodGalleryThumb').find('li').eq(cnt).addClass('on');
-		$('.prodGalleryViewer > img').remove();
-		$('.prodGalleryViewer').append(tireThumbImg);
+		$('.prodGalleryViewer > .viewer img').remove();
+		$('.prodGalleryViewer > .viewer iframe').remove();
+		if ( $('.prodGalleryThumb').find('li').eq(cnt).hasClass('tube') )
+		{
+			$('.prodGalleryViewer > .viewer').append(tireThumbImg);
+			$('.prodGalleryViewer > .viewer').find('img').remove();
+		} else {
+			$('.prodGalleryViewer > .viewer').append(tireThumbImg);
+		}
 	}
 
 	var Top = $('body, html').scrollTop();
