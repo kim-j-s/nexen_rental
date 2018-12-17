@@ -1065,6 +1065,22 @@ no-repeat left center;}
 .switchGroup.on .switch:nth-of-type(2) {display:none;}
 .schWrap + .itemWrap {margin-top:48px;}
 
+.mainSch {width:1200px; margin:0 auto; padding-top:83px;}
+.mainSch .schWrap {background:none; border-top:none;}
+.mainSch .schWrap .selectbox {background:transparent url(../images/common/icon/icon_selectbox3.png) no-repeat right 10px center; color:#fff;}
+
+.mainSch .switch {background:transparent;}
+.mainSch .switch:after {background:#494643;}
+.mainSch .switch .switchBtn + .switchBtn {margin-left:-1px;}
+.mainSch .switch .switchBtn > label {color:#fff;}
+.mainSch .switch .switchBtn > input[type="radio"]:checked + label {border:1px solid #d5d5d5;}
+
+.mainSch .schWrap .btn.sch.big {border:1px solid #fff;}
+.mainSch .schWrap .btn.sch.big > span {line-height:40px;}
+
+.mainSch .schWrap .tipBtn {background:transparent;}
+.mainSch .schWrap .tipBtn > .txt {background:url(../images/common/icon/icon_tip2.png) no-repeat left center; color:#fff;}
+
 .selectGroup {display:inline-block; vertical-align:middle;}
 .selectGroup > .selectbox {width:210px; height:42px;}
 .selectGroup > .selectbox + .selectbox {margin-left:9px;}

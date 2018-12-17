@@ -559,13 +559,8 @@ $(function(){
 		dots: true
 	});
 
-	var winHeight = $(window).height();
-	$(window).resize(function(){
-		var winHeight = $(window).height();
-		$('.mainVisual').height(winHeight + 3);
-	});
-
 	// 공통
+	var winHeight = $(window).height();
 	visualHeight();
 
 	function visualHeight() {
