@@ -52,30 +52,15 @@
 /* input */
 .inputBox {position:relative; display:inline-block;}
 .inputBox.w100 {width:100%;}
-.inputBox .inp {
-	box-sizing: border-box;
-	display:block; 
-	width:100%;
-	height:35px;
-	line-height:33px; 
-	color:#666; 
-	font-family: 'Noto Sans', sans-serif;
-	padding:0 10px; 
-	border:1px solid #d5d5d5;
-	background: #fff;
-	font-size:12px; outline:0; transition: all .3s ease;
-}
-.inputBox .inp:disabled {background:#eee; color:#b5b5b5;}
-.inputBox .inp[readonly] {background:#eee; color:#b5b5b5;}
+.inputBox .inp { box-sizing: border-box; display:block; width:100%; height:35px; line-height:33px; padding:0 10px; border:1px solid #d5d5d5; background: #fff; color:#666; font-family: 'Noto Sans', sans-serif; font-size:12px; outline:0; transition: all .3s ease; }
+.inputBox .inp[disabled] {border-color:#d5d5d5; background:#eee; color:#b5b5b5;}
+.inputBox .inp[readonly] {border-color:#d5d5d5; background:#eee; color:#b5b5b5;}
 .inputBox .inp:focus {border:1px solid #812990;}
 .inputBox .inp.error {border:1px solid #c3244e;}
 .inputBox.date .inp {background: #fff url(../images/common/icon/icon_date.png) no-repeat right 10px center; background-size:15px 18px; -webkit-appearance: none; -moz-appearance: none;appearance: none;}
 .labelDate {position:absolute; top:1px; left:10px; width:calc(100% - 45px); background:#fff; font-weight:400; font-size:12px; color:#666; line-height:33px;}
 .inp[type="date"]::-webkit-inner-spin-button,
-.inp[type="date"]::-webkit-calendar-picker-indicator {
-	display: none;
-	-webkit-appearance: none;
-}
+.inp[type="date"]::-webkit-calendar-picker-indicator { display: none; -webkit-appearance: none; }
 .inputBox .inpReset {position:absolute; top:10px; right:9px; width:16px; height:16px; background:url(../images/common/btn/btn_iptreset.png) no-repeat; background-size:100%; text-indent:-9999px;}
 .inputBox .inpReset {display:none;}
 
@@ -84,7 +69,7 @@
 .btnTb.block { margin-top: 5px; }
 
 /* selectbox */
-.selectbox { box-sizing: border-box; display:inline-block; width:100%; height:35px; padding:0 30px 0 8px; border:1px solid #d5d5d5; font-size:12px; color:#666; outline:none; transition: all .3s ease;}
+.selectbox { box-sizing: border-box; display:inline-block; width:100%; height:35px; padding:0 30px 0 8px; border:1px solid #d5d5d5; background: #fff; font-size:12px; color:#666; outline:none; transition: all .3s ease;}
 .selectbox {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#fff url('../images/common/icon/icon_select.png') no-repeat right 10px center; background-size:10px 6px;}
 .selectbox::-ms-expand {display:none;}
 .selectbox:disabled {background:#eee url('../images/common/icon/icon_select2.png') no-repeat right 10px center; color:#b5b5b5; background-size:10px 6px;}
@@ -209,9 +194,9 @@ td .textarea {width:100%;}
 .list1.mg1 {margin:10px 0 15px 0;}
 .list1 > li {position:relative; padding-left:6px; font-size:12px; line-height: 17px; font-weight:400; color:#666;}
 .list1 > li:before {content:''; position:absolute; top:7px; left:0; width:2px; height:2px; border-radius:2px; background:#666;}
-.list1 > li + li {margin-top:5px;}
+.list1 > li + li { margin-top: 7px; }
 .list1 + .btnArea {margin-top:12px;}
-.list1 > li > ul > li { position: relative; margin-top: 6px; padding-left: 6px; font-size: 11px; line-height: 1.4; }
+.list1 > li > ul > li { position: relative; margin-top: 3px; padding-left: 6px; font-size: 12px; }
 .list1 > li > ul > li:before {content:''; position:absolute; top:.6em; left:0; width:3px; height:1px; background:#666;}
 /* .list1 > li > ul > li:not(:first-child) { margin-top: 6px; } */
 
@@ -225,10 +210,10 @@ td .textarea {width:100%;}
 .table table th, .table table td { word-wrap: break-word; }
 .table table tbody td .inputBox {vertical-align:middle;}
 .table table tbody td .link {display:block; font-size:16px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.table .btn { color: #fff; border-color: #888; background-color: #888; border-radius: inherit; }
-.table .btn.etc { color: #fff; border-color: #555; background-color: #555; border-radius: inherit; }
+.table .btn { color: #fff; border: 0; background-color: #888; border-radius: inherit; }
+.table .btn.etc { color: #fff; background-color: #555; border-radius: inherit; }
 .table .btn[disabled] { border-color: #bcbcbc; background-color: #bcbcbc; }
-.table .btn.primary { color: #fff; border-color: #812990; background-color: #812990; border-radius: inherit; }
+.table .btn.primary { color: #fff; background-color: #812990; border-radius: inherit; }
 
 /* 테이블 가로(th+td) - form */
 .table.ty2 {border-top:2px solid #353535;}
@@ -238,12 +223,12 @@ td .textarea {width:100%;}
 
 /* 테이블 세로(thead+tbody) - view  */
 .table.ty3 {border-top:2px solid #353535;}
-.table.ty3 thead th {padding:15px 0; text-align:center; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-top:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody th {padding:15px 10px; text-align:left; line-height:16px; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
-.table.ty3 tbody td {padding:15px 5px 15px 5px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300; line-height:17px;}
+.table.ty3 thead th {box-sizing: border-box; height: 45px; padding: 10px 0; text-align:center; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-top:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody th { box-sizing: border-box; height: 45px; padding: 10px 10px; text-align:left; line-height:16px; font-weight:normal; font-size:12px; color:#333; border:1px solid #dadada; border-left:none; border-right:none; background:#f8f8f8;}
+.table.ty3 tbody td { box-sizing: border-box; height: 45px; padding: 10px 20px; text-align:center; border:1px solid #dadada; border-right:none; font-size:12px; font-weight:300; line-height:17px;}
 .table.ty3 tbody td.link {padding:20px 32px; text-align:left}
-.table.ty3 tbody td.tl {padding:20px 30px 20px 30px; text-align:left;}
-.table.ty3 tbody td.tlNobd {padding:10px; text-align:left; border-left:none;}
+.table.ty3 tbody td.tl {text-align:left;}
+.table.ty3 tbody td.tlNobd {text-align:left; border-left:none;}
 .table.ty3 tbody td.other {font-size:15px;}
 .table.ty3 tbody td.other.color1 {font-weight:400;}
 .table.ty3 thead tr th:first-child, 
@@ -259,12 +244,11 @@ td .textarea {width:100%;}
 .table.mg1 {margin-top:30px;}
 .table.mg2 {margin-top:15px}
 
-.box1 {margin-top: 15px; padding:15px 10px; background:#f5f5f5;}
+.box1 {margin-top: 15px; padding:15px 15px; background:#f5f5f5;}
 .box2 {background:#f6f6f6; border:1px solid #e1e1e1; padding:15px 10px; text-align:center;}
 .box2.mg1 {margin:10px 0 15px 0;}
 .box2 .txt {font-size:13px; font-weight:400; color:#010101; line-height:18px; margin:0 0 20px 0;}
 
-.headTitle + .list1 { }
 
 /* ==============================
  * content
@@ -1195,14 +1179,16 @@ img.full { width: 100%;}
 .orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 12px;  background: #c4c4c4; vertical-align: -1px;}
 .orderItem > .prod .prodi2 li:last-child:after { display: none; }
 .orderItem > .itemSub { height:67px; margin:0 15px; padding:5px 0 0 0; border-top:1px solid #dcdcdc; }
-.orderItem > .itemSub .cost {display:table; width:100%; padding:0 15px;}
-.orderItem > .itemSub .cost + .cost {margin-top:5px;}
-.orderItem > .itemSub .cost > dt {display:table-cell; font-weight:400; font-size:11px; color:#000;}
-.orderItem > .itemSub .cost > dd {display:table-cell; font-weight:500; font-size:11px; color:#000; text-align:right;}
+.orderItem > .itemSub .cost {display:table; width:100%; padding: 6px 15px; }
+.orderItem > .itemSub .cost + .cost {/*margin-top:5px;*/}
+.orderItem > .itemSub .cost > dt {display:table-cell; font-weight:400; font-size:11px; color:#000; vertical-align: middle;}
+.orderItem > .itemSub .cost > dd {display:table-cell; font-weight:500; font-size:11px; color:#000; text-align:right; vertical-align: middle;}
 .orderItem > .itemSub .cost > dd span {font-weight:500; font-size:15px; color:#666;}
 .orderItem > .itemSub .cost > dd strong {font-weight:500; font-size:18px; color:#c3244e;}
 .orderItem > .itemSub + .btnArea {margin-top:0; padding:0 15px;}
-.orderItem > .itemSub .payment { margin-bottom: -15px; padding: 6px 15px; background: #feefef;}
+
+.orderItem > .itemSub .payment { margin-top: 0 !important; margin-bottom: -5px; padding: 6px 15px 11px; background: #feefef; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+
 .orderItem > .itemSub .prodi { padding: 0 15px; }
 .orderItem > .itemSub.auto { height: auto; }
 .orderItem > .itemSub.auto + .btnArea { margin-top: 15px; }
@@ -1266,13 +1252,14 @@ div + .rstTxt {margin-top:8px;}
 .compItem { position: relative; border:1px solid #e1e1e1; border-radius:3px;}
 .compItem > .title {padding:0 15px; font-weight:400; font-size:14px; color:#000; background:#eee; line-height:50px;}
 .compItem > .title > span {color:#b6985a;}
-.compItem > .orderItem .itemSub {height:auto; margin:0; padding:9px 0 15px 0; border-top:1px dashed #e1e1e1}
+.compItem > .orderItem .itemSub {height:auto; margin:0; padding: 5px 0; border-top:1px dashed #e1e1e1}
 .compItem + .list1 {margin-top:7px;}
 .compItem + .list1 + .btnArea {margin:12px 0 50px 0;}
 .compItem .btns { position: absolute; top: 15px; right: 15px; }
 
 .compItemList {}
 .compItemList li:not(:first-child) { margin-top: 5px; }
+
 .compItem.shadow { box-shadow: 0 2px 2px rgba(229,229,229,.8); }
 .compItem.complete .title { color: #777; }
 .compItem.complete .prodName .txt2,
@@ -1411,7 +1398,7 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .payinfoWrap .topinfo + .payinfo { margin-top: 10px; } 
 .payinfoWrap .payinfo .btn { margin-top: 10px; border-radius: inherit; }
 .payinfoWrap .cost { display: flex; justify-content: space-between; align-items: center; line-height: 18px; }
-.payinfoWrap .cost dt { color: #000; font-size: 11px; font-weight: 500; }
+.payinfoWrap .cost dt { color: #000; font-size: 11px; font-weight: 500; line-height: 18px; }
 .payinfoWrap .cost dd { color: #000; font-size: 11px; }
 .payinfoWrap .cost dd .won { color: #c3244e; font-size: 18px; }
 

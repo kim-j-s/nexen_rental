@@ -883,7 +883,8 @@ body.errorPage {
     height: 20px;
 	line-height: 18px;
 	padding: 0 8px;
-    font-size: 11px;
+	font-size: 11px;
+	border-radius: inherit;
 }
 .btn.small {
     height: 24px;
@@ -953,13 +954,13 @@ a.btn { text-decoration: none !important; }
     vertical-align: 0;
 }
 /* 삭제 */
-.innerIcon.del {vertical-align: 0;}
+.innerIcon.del { margin-right: 0; vertical-align: 0; }
 .innerIcon.del:after {
     content: '';
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin-left: 5px;
+    margin-left: 4px;
     background: url('../images/common/icon/icon_inner_del.png') no-repeat;
     background-size: 100%;
     vertical-align: 0;
@@ -1040,10 +1041,11 @@ a.btn { text-decoration: none !important; }
 
 .btnCancel { 
 	box-sizing: border-box; height: 20px; line-height: 18px; padding: 0 7px; 
-	border: 1px solid #000; border-radius: 10px;
+	border: 1px solid #333; border-radius: 10px;
 	background: #fff;
 	color: #333; font-size: 11px; font-weight: 300; 
 }
+.btnCancel span { display: inline-block; line-height: 18px; }
 .btnCancel span:after {
 	content: '';
 	display: inline-block;
