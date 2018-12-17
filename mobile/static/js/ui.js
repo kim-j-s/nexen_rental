@@ -77,11 +77,16 @@ $(function(){
 		$(this).addClass('on').siblings().removeClass('on');
 	})
 
-	
-	/* ==============================
-	 * gnb 
-	 * ============================== */
+	// 메인 - 타이어검색 탭영역
+	$('.tireContWrap .tab li a').on('click', function(e){
+		e.preventDefault();
+		
+		$(this).parent().addClass('on').siblings().removeClass('on');
 
+		var dataID = $(this).attr('href').substring(1);
+		$('#' + dataID ).siblings().hide().end().show();
+
+	});
 
 
 	/* ==============================
@@ -693,4 +698,6 @@ function fixedMoveTab (){
 		e.preventDefault();
 	});
 }
+
+
 

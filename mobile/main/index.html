@@ -137,100 +137,170 @@
                     <span class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, <strong>넥스트 레벨</strong></span>
                 </h2>
 
-                <!-- 2018-12-11 수정 -->
+                <!-- 2018-12-17 수정 -->
                 <div class="tireContWrap">
                     <ul class="tab">
                         <li class="on"><a href="#tireCont1">#타이어 찾기</a></li>
-                        <li><a href="#tireCont2">#신개념타이어렌탈</a></li>
+                        <li><a href="#tireCont2">#렌탈상품 추천</a></li>
+                        <li><a href="#tireCont3">#신개념타이어렌탈</a></li>
                     </ul>
-    
-                    <!-- 타이어 찾기 -->
-                    <div class="tireCont tireSearch" id="tireCont1" style="display: block;">
-                        <p class="txt">
-                            가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
-                            나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
-                        </p>
-    
-                        <div class="inner">
-                            <ul class="carType">
-                                <li class="on"><a href="#">승용차</a></li>
-                                <li><a href="#">SUV</a></li>
-                            </ul>
-        
-                            <div class="searchWrap">
-                                <div class="selectBox">
-                                    <label for="opt1">1순위</label>
-                                    <select class="select" id="opt1">
-                                        <option value="">1순위</option>
-                                        <option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
+
+                    <div class="tireContent">
+                        <!-- 타이어 찾기 -->
+                        <div class="tireCont tireSearch" id="tireCont1" style="display: block;">
+                            <div class="inner">
+                                <div class="radiobtnGroup2">
+                                    <label for="rd1" class="radiobtn on">
+                                        <input type="radio" name="radioSelect1" id="rd1" checked="checked">
+                                        <span class="txt">차종</span>
+                                    </label>
+                                    <label for="rd2" class="radiobtn">
+                                        <input type="radio" name="radioSelect1" id="rd2"><span class="txt">사이즈</span>
+                                    </label>
                                 </div>
-                                <div class="selectBox disabled">
-                                    <label for="opt2">2순위</label>
-                                    <select class="select" id="opt2" disabled>
-                                        <option value="">2순위</option>
-										<option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
+
+                                <div class="radiobtnGroup">
+                                    <label for="rd3" class="radiobtn on">
+                                        <input type="radio" name="radioSelect2" id="rd3" checked="checked">
+                                        <span class="txt">국내</span>
+                                    </label>
+                                    <label for="rd4" class="radiobtn">
+                                        <input type="radio" name="radioSelect2" id="rd4"><span class="txt">수입</span>
+                                    </label>
                                 </div>
-                                <div class="selectBox disabled">
-                                    <label for="opt3">3순위</label>
-                                    <select class="select" id="opt3" disabled>
-                                        <option value="">3순위</option>
-										<option value="">제동성능</option>
-                                        <option value="">연비효율</option>
-                                        <option value="">승차감/소음</option>
-                                        <option value="">주행거리</option>
-                                    </select>
-                                </div>
-                                <div class="btnArea">
-                                    <button type="button" class="btn primary btnSearch" disabled><span class="innerIcon search">내게맞는 렌탈상품 찾기</span></button>
+
+                                <div class="searchWrap">
+                                    <div class="selectBox">
+                                        <label for="opt1">1순위</label>
+                                        <select class="select" id="opt1">
+                                            <option value="">1순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="selectBox disabled">
+                                        <label for="opt2">2순위</label>
+                                        <select class="select" id="opt2" disabled>
+                                            <option value="">2순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="selectBox disabled">
+                                        <label for="opt3">3순위</label>
+                                        <select class="select" id="opt3" disabled>
+                                            <option value="">3순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn primary btnSearch" disabled><span class="innerIcon">내게맞는 렌탈상품 찾기</span></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- //타이어 찾기 -->
+
+                        <!-- 렌탈상품 추천 -->
+                        <div class="tireCont tireRental" id="tireCont2">
+                            <p class="txt">
+                                가장 선호하는 타이어의 성능 순위를 매겨주세요.<br>
+                                나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.
+                            </p>
+        
+                            <div class="inner">
+                                <div class="radiobtnGroup2">
+                                    <label for="rd5" class="radiobtn on">
+                                        <input type="radio" name="radioSelect3" id="rd5" checked="checked">
+                                        <span class="txt">승용차</span>
+                                    </label>
+                                    <label for="rd6" class="radiobtn">
+                                        <input type="radio" name="radioSelect3" id="rd6"><span class="txt">SUV</span>
+                                    </label>
+                                </div>
+            
+                                <div class="searchWrap">
+                                    <div class="selectBox">
+                                        <label for="opt4">1순위</label>
+                                        <select class="select" id="opt4">
+                                            <option value="">1순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="selectBox disabled">
+                                        <label for="opt5">2순위</label>
+                                        <select class="select" id="opt5" disabled>
+                                            <option value="">2순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="selectBox disabled">
+                                        <label for="opt6">3순위</label>
+                                        <select class="select" id="opt6" disabled>
+                                            <option value="">3순위</option>
+                                            <option value="">제동성능</option>
+                                            <option value="">연비효율</option>
+                                            <option value="">승차감/소음</option>
+                                            <option value="">주행거리</option>
+                                        </select>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn primary btnSearch" disabled><span class="innerIcon">내게맞는 렌탈상품 찾기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 렌탈상품 추천 -->
+        
+                        <!-- 신개념타이어렌탈 -->
+                        <div class="tireCont tireCare" id="tireCont3">
+                            <ul class="careService">
+                                <li>
+                                    <a href="#">
+                                        <p class="tit">타이어 방문장착 서비스</p>
+                                        <p class="desc">
+                                            넥센 전문가가 직접 방문해서<br>
+                                            타이어를 장착해 드립니다!
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="tit">타이어 렌탈 서비스란?</p>
+                                        <p class="desc">
+                                            타이어에서부터 엔진오일까지<br>
+                                            넥센에서 차량 관리를 책임집니다!                                    
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="tit">다양한 렌탈상품</p>
+                                        <p class="desc">
+                                            일시불 상품부터 패키지 상품까지<br>
+                                            넥센타이어의 렌탈 상품을 확인하세요
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //신개념타이어렌탈 -->
                     </div>
-                    <!-- //타이어 찾기 -->
-    
-                    <!-- 신개념타이어렌탈 -->
-                    <div class="tireCont tireCare" id="tireCont2">
-                        <ul class="careService">
-                            <li>
-                                <a href="#">
-                                    <p class="tit">타이어 방문장착 서비스</p>
-                                    <p class="desc">
-                                        넥센 전문가가 직접 방문해서<br>
-                                        타이어를 장착해 드립니다!
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <p class="tit">타이어 렌탈 서비스란?</p>
-                                    <p class="desc">
-                                        타이어에서부터 엔진오일까지<br>
-                                        넥센에서 차량 관리를 책임집니다!                                    
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <p class="tit">다양한 렌탈상품</p>
-                                    <p class="desc">
-                                        일시불 상품부터 패키지 상품까지<br>
-                                        넥센타이어의 렌탈 상품을 확인하세요
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //신개념타이어렌탈 -->
                 </div>
-                <!-- //2018-12-11 수정 -->
+                <!-- //2018-12-17 수정 -->
             </div>
 
             <div class="serviceFlow">
