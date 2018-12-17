@@ -153,10 +153,16 @@
 * ============================== */
 .popZipcode {}
 .popZipcode .popContent { padding: 0; }
-.zipcodeWrap .searchArea { padding: 15px; background: #fafafa; }
+
+.zipcodeWrap  { height: 100%; }
+.zipcodeWrap .searchArea {padding: 15px; background: #fafafa; }
 .zipcodeWrap .searchArea .ex { position: relative; margin-top: 10px; padding-left: 18px; line-height: 1.4;}
 .zipcodeWrap .searchArea .ex:before { content:'예)'; display: block; position: absolute; top: 0; left: 0; }
 .zipcodeWrap .searchResult { margin-top: 20px; padding: 0 15px; }
+.zipcodeWrap .searchResult .noResult { border: none; margin-top: -20px; padding: 150px 0; text-align: center; }
+.zipcodeWrap .searchResult .noResult:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px;  background: url('../images/common/icon/icon_noresult.png') no-repeat; background-size: 100%; }
+.zipcodeWrap .searchResult .noResult.address:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px;  background: url('../images/common/icon/icon_addr.png') no-repeat; background-size: 100%; }
+
 .zipcodeList { border-top: 2px solid #000; border-bottom: 1px solid #dadada; }
 .zipcodeList li { padding: 20px 0; cursor: pointer; }
 .zipcodeList li:not(:first-child) { border-top: 1px solid #dadada; }
