@@ -34,13 +34,14 @@
  * main
  * ============================== */
 .mainVisual {position:relative; min-width:1200px; min-height:840px; background:url(../images/main/img_mainvisual.jpg) no-repeat center; background-size:cover;}
-.mainVisual h1 {/* padding-top:120px; */ margin-top:37px; font-family:'Raleway'; font-weight:800; font-size:54px; color:#fff; text-align:center; text-transform: uppercase;}
+.mainVisual h1 {margin-top:20px; font-family:'Raleway'; font-weight:800; font-size:54px; color:#fff; text-align:center; text-transform: uppercase;}
 .mainVisual h2 {padding-top:8px; font-size:30px; color:#eaeaea; text-align:center;}
 .mainVisual h2 > span {font-weight:500; font-size:30px; color:#eaeaea;}
 
-.mainLink {width:1200px; margin:0 auto; margin-top:10px; overflow:hidden; text-align:center;}
+.mainLink {width:1200px; margin:0 auto; margin-top:20px; overflow:hidden; text-align:center;}
 .mainFind {position:relative; display:inline-block; font-size:0; width:519px; height:519px; padding-top:127px;}
 .mainFind + .mainFind {margin-left:57px;}
+.mainFind:hover .inner .btn {background:rgba(101,35,106,1); transition-delay:0.15s;}
 .mainFind h3 {font-weight:400; font-size:30px; color:#fff; text-align:center; line-height:40px;}
 .mainFind h3 + .desc {margin-top:24px;}
 .mainFind .desc {position:relative; padding-top:22px; font-size:17px; color:#d5d5d5; text-align:center; line-height:30px;}
@@ -49,11 +50,20 @@
 .mainFind > .inner {position:relative; z-index:2;}
 .mainFind > .bgImg {position:absolute; top:0; left:0; width:100%; height:100%; transition: all 0.65s;}
 .mainFind > .bg2 {z-index:1; opacity:0;}
-.mainFind > .inner .btn {background:rgba(255,255,255,.1); transition: 0.45s;}
-.mainFind > .inner .btn:hover {background:rgba(101,35,106,1);}
+.mainFind > .inner .btn {background:rgba(255,255,255,.1); transition: .45s;}
 .mainFind:hover .bg1 {opacity: 0;}
 .mainFind:hover .bg2 {opacity: 1;}
-.mainVisual > .goPage {position:absolute; bottom:30px; left:50%; display:inline-block; width:150px; margin-left:-75px; padding-top:28px; background:url(../images/main/icon_gopage.png) no-repeat center top; text-align:center; cursor:pointer; font-size:13px; color:#fff;}
+.mainVisual > .goPage {position:absolute; bottom:30px; left:50%; display:inline-block; width:150px; margin-left:-75px; padding-top:28px; text-align:center; cursor:pointer; font-size:13px; color:#fff;}
+.mainVisual > .goPage:after {content:''; position:absolute; top:0; left:50%; margin-left:-6px; width:12px; height:15px; background:url(../images/main/icon_gopage.png) no-repeat 0 0; animation: MoveUpDown 1s linear infinite;}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: -5px;
+  }
+  50% {
+    top: 5px;
+  }
+}
 
 .mainSection {min-width:1200px; padding:0 0 70px 0;}
 .mainSection > .inner {width:1200px; margin:0 auto; padding:62px 0 0 0;}

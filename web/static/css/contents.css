@@ -880,8 +880,12 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemtList2Wrap + .pagenation {margin-top:80px;}
 
 .gradeArea {padding:19px 0 18px 0; background:#f9f9f9; border-top:1px solid #d5d5d5; font-size:0;}
+/*
 .gradeList {overflow:hidden;}
 .gradeList > li {float:left; width:20%; font-weight:500; font-size:15px; color:#454545; text-align:center;}
+*/
+.gradeList {display:table; width:100%; table-layout:fixed;}
+.gradeList > li {display:table-cell; vertical-align:middle; font-weight:500; font-size:15px; color:#454545; text-align:center;}
 .gradeList > li .grade {position:relative; top:1px; margin-left:4px;}
 
 .itemList3Wrap {}
