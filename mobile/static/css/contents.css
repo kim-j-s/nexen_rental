@@ -254,6 +254,7 @@ td .textarea {width:100%;}
 .table.ty3.view tbody tr:first-child th,
 .table.ty3.view tbody tr:first-child td {border-top:none;}
 .table.ty3.view tbody td {border-left:none;}
+.table.ty3.view th { font-weight: 500; }
 
 .table.mg1 {margin-top:30px;}
 .table.mg2 {margin-top:15px}
@@ -928,7 +929,7 @@ img.full { width: 100%;}
 
 /* 렌탈상품 */
 .table.ty3 tbody th.lineR {border-right:1px solid #dadada;}
-.table.ty3 tbody td.bg1 {background:#f8f8f8;}
+.table.ty3 tbody td.bg1 {background:#f8f8f8; font-weight: 500; }
 .contWrap .txtsWrap {margin:0;}
 .txtsWrap {margin:30px 0 26px 0;}
 .txtsWrap .logo {text-align:center; margin-bottom:15px;}
@@ -957,11 +958,12 @@ img.full { width: 100%;}
 .serviceItem .tit {font-size:12px; font-weight:500; color:#812990; margin-bottom:10px;}
 .serviceItem .txt {font-size:12px; font-weight:400; color:#454545; line-height:17px;}
 
-.dateGroup {padding:50px 0 0 0;}
+.dateGroup {padding:50px 30px 0 0;}
 .dateGroup .swiper-slide {width: auto; -webkit-box-sizing: border-box;	box-sizing: border-box;}
 .dateGroup .swiper-slide .advTab {display: inline-block; font-size:14px; font-weight:400; color:#757575; background:#e5e5e5; border-radius:17px; height:35px; padding:0 17px; line-height: 35px;}
 .dateGroup .swiper-slide .advTab.on {background:#812990; color:#ffffff;}
 .dateGroup .swiper-wrapper {padding:0 0 0 15px;}
+
 .advWrap {}
 .advWrap .advCont {display:none;}
 .advWrap .advCont.on {display:block;}
