@@ -1714,6 +1714,7 @@ no-repeat left center;}
 
 
 /* 플로팅 기능 추가 필요 */
+.fixedBottomWrap {height:88px;}
 .fixedBottom {position:relative; bottom:0; left:0; z-index:5; width:100%; text-align:center; padding-top:8px; background:url(../images/prd/bg_dark.png) repeat-x left top;}
 .fixedBottom > .inner {padding:20px 0; background:#fff;}
 .fixedBottom.on {position:fixed;}
