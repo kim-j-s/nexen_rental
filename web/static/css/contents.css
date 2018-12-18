@@ -1079,6 +1079,8 @@ no-repeat left center;}
 .mainSch .switchGroup.on .switch:nth-of-type(3) {display:none;}
 .mainSch .switchGroup.on + .selectGroup > .selectbox {width:231px;}
 .mainSch .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:230px;}
+.mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox {width:231px;}
+.mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox:nth-of-type(1) {width:230px;}
 
 @media all and (min-width:0\0) and (min-resolution:.001dpcm)
 {
