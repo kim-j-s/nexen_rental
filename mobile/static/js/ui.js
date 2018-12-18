@@ -524,19 +524,46 @@ function tireSearch() {
 		var $this = $(this);
 		var selectedIndex = this.selectedIndex;
 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
+		var $next = $this.closest('.selectBox').next('.selectBox');
 		var select_name = $this.children('option').eq(selectedIndex).text();
 		
 		$this.siblings('label').text(select_name); 
 	
+		console.log(selectedIndex);
+
 		if(selectedIndex === 0) {
 			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
 			$tireSearchBtn.prop('disabled', true);
 		} else {
-			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
+			$next.removeClass('disabled').find('select').prop('disabled', false);
 			$tireSearchBtn.prop('disabled', false);
-		}
+		};
+
 	});
 }
+
+// function tireSearch() {
+// 	var $tireSearch = $('.tireSearch');
+// 	var $tireSearchSelect = $tireSearch.find('.selectBox select');
+// 	var $tireSearchBtn = $tireSearch.find('.btnSearch');
+	
+// 	$tireSearchSelect.change(function(){ 
+// 		var $this = $(this);
+// 		var selectedIndex = this.selectedIndex;
+// 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
+// 		var select_name = $this.children('option').eq(selectedIndex).text();
+		
+// 		$this.siblings('label').text(select_name); 
+	
+// 		if(selectedIndex === 0) {
+// 			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
+// 			$tireSearchBtn.prop('disabled', true);
+// 		} else {
+// 			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
+// 			$tireSearchBtn.prop('disabled', false);
+// 		}
+// 	});
+// }
 
 // cart option change
 function cartOpt() {
