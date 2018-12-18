@@ -1042,26 +1042,28 @@ img.full { width: 100%;}
 .cartAction .rbtn { float: right; } 
 .cartAction .rbtn .btn { width: 65px; padding: 0; border-radius: inherit; }
 
-.cartList { }
+.cartList {}
 .cartList > ul > li { padding: 20px 15px 0; border-bottom: 1px solid #d4d4d4; background: #fff; }
 .cartList > ul > li:not(:first-child) { margin-top: 5px; }
  
 .cartList .priceInfoWrap { margin-top: 10px; padding: 10px 0; border-top: 1px solid #dcdcdc; }
 .cartList .priceInfoWrap .priceInfo:not(:first-child) { margin-top: 6px; }
-.cartList .priceInfo .txt { padding-left: 10px; color: #000; font-size: 11px; line-height: 18px; }
-.cartList .priceInfo .price { padding-left: 10px; color: #000; font-weight: 500; }
+.cartList .priceInfo { padding: 0 10px; }
+.cartList .priceInfo .txt { color: #000; font-size: 11px; line-height: 18px; }
+.cartList .priceInfo .price { color: #000; font-weight: 500; }
 .cartList .priceInfo .price .num { color: #c3244e; font-size: 18px; line-height: 18px; }
 
 .itemInfo { display: flex; width: 100%;margin-top: 10px;}
 .itemInfo .thumb { box-sizing: border-box; width: 100px; height: 100px; border: 1px solid #e4e4e5; background: #fff; display: flex;	align-items: center; justify-content: center; }
 .itemInfo .thumb img { display:inline-block;height: 85px;}
 .itemInfo .info { width: calc(100% - 100px); margin-left: 15px; padding-top: 6px; line-height: 1; }
-.itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; line-height: 1;  }
-.itemInfo .info .tit { margin: 6px 0 2px; color:#000; font-size:15px; font-weight: 500;}
+.itemInfo .info .label { margin-bottom: 5px; }
+.itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; }
+.itemInfo .info .tit { color:#000; font-size:15px; font-weight: 500;}
 .itemInfo .info .desc { font-size: 11px;  }
 .itemInfo .info .desc li { color: #999; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.itemInfo .info .option { margin-top: 6px; color: #999; font-size: 11px; }
-.itemInfo .info .option span:not(:first-child):before { content: ''; display: inline-block; width: 1px;	height: 9px; margin: 0 5px 0 2px; background: #c4c4c4; vertical-align: -1px; }
+.itemInfo .info .option { margin-top: 5px; color: #999; font-size: 11px; }
+.itemInfo .info .option span:not(:first-child):before { content: ''; display: inline-block; width: 1px;	height: 9px; margin: 0 9px 0 6px; background: #c4c4c4; vertical-align: -1px; }
 .cartList .btns { display: flex; padding-bottom: 20px; }
 .cartList .btns .btnDel {border-color: #c5c5c5; }
 .cartList .btns .btnOpt { width: 75px; background:#333; }
@@ -1171,12 +1173,12 @@ img.full { width: 100%;}
 .orderItem > .prod .prodi > li + li {margin-top:2px;}
 .orderItem > .prod .prodi > .opt {}
 .orderItem > .prod .prodi > .opt span {position:relative; display:inline-block;}
-.orderItem > .prod .prodi > .opt span + span {padding-left:10px; margin-left:7px;}
-.orderItem > .prod .prodi > .opt span + span:after {content:''; position:absolute; top:50%; left:0; height:10px; margin-top:-5px; border-right:1px solid #999;}
-.orderItem > .prod .prodi2 { margin-top: 10px; }
+.orderItem > .prod .prodi > .opt span + span { padding-left: 9px; margin-left: 6px; }
+.orderItem > .prod .prodi > .opt span + span:after {content:''; position:absolute; top:50%; left:0; height: 9px; margin-top:-5px; border-right:1px solid #c4c4c4;}
+.orderItem > .prod .prodi2 { margin-top: 7px; }
 .orderItem > .prod .prodi2 li { display: inline-block; font-size: 11px; }
 .orderItem > .prod .prodi2 li strong { color: #333; font-weight: 500; }
-.orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 12px;  background: #c4c4c4; vertical-align: -1px;}
+.orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 9px; background: #c4c4c4; vertical-align: -1px;}
 .orderItem > .prod .prodi2 li:last-child:after { display: none; }
 
 .orderItem > .itemSub { height: 70px; margin: 0 15px; border-top:1px solid #dcdcdc; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
