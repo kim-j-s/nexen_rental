@@ -1183,6 +1183,21 @@ $(window).scroll(function(){
 			$('.wing').css('top','');
 		}
 	}
+
+	// 타이어 상세
+	var fixedBottomLng = $('.fixedBottom').length;
+	var contH = $('#wrap').height();
+	var footerH = $('#footerWrap').height();
+	var winH = $(window).height();
+	var breakObj = contH - winH;
+
+	if (breakObj > Top)
+	{
+		$('.fixedBottom').addClass('on');
+	} else {
+		$('.fixedBottom').removeClass('on');
+	}
+
 });
 
 function FixBtnPosition() {
@@ -1198,4 +1213,14 @@ function FixBtnPosition() {
 			$('.fixedBottom').removeClass('on');
 		}
 	}
+}
+
+function fBtn1() {
+	$('.fixedBottom').find('.txt').html('나만의 렌탈 설계하기');
+	$('.fixedBottom').find('.btn').data('bpoint','bPoint2');
+}
+
+function fBtn2() {
+	$('.fixedBottom').find('.txt').html('내게 맞는 렌탈 상품 찾기');
+	$('.fixedBottom').find('.btn').data('bpoint','bPoint1');
 }
