@@ -1048,13 +1048,13 @@ no-repeat left center;}
 .contTitleWrap .contTitle {float:left;}
 .contTitleWrap .keyword {float:right; margin:40px 0 0 0;}
 
-.switchGroup {display:inline-block; vertical-align:middle;}
+.switchGroup {display:inline-block; vertical-align:middle; font-size:0;}
 .schWrap {position:relative; padding:20px 28px 20px 31px; background:#f5f5f5; border-top:2px solid #353535; border-bottom:1px solid #c5c5c5; font-size:0;}
 .schWrap:after {content:''; display:block; clear:both;}
 .switch {position:relative; display:inline-block; vertical-align:middle; overflow:hidden; background:#fff;}
 .switch:after {content:''; position:absolute; top:0; left:0; width:70px; height:42px; background:#555; transition:left 200ms;}
 .switch.on:after {left:50%;}
-.switch + .switch {margin-left:9px;}
+.switch + .switch {margin-left:12px;}
 .switch .switchBtn {position:relative; z-index:1; float:left; font-size:0;}
 .switch .switchBtn > label {position:relative; display:inline-block; width:70px; height:42px; font-size:16px; color:#454545; border:1px solid #d5d5d5; line-height:40px; text-align:center; transition: 0.45s; cursor:pointer;}
 .switch .switchBtn > input[type="radio"] {position:absolute; top:-20px; left:0;}
@@ -1070,8 +1070,23 @@ no-repeat left center;}
 .schWrap + .itemWrap {margin-top:48px;}
 
 .mainSch {width:1200px; margin:0 auto; padding-top:83px;}
-.mainSch .schWrap {background:none; border-top:none;}
+.mainSch .schWrap {padding:20px 0 20px 0; background:none; border-top:none;}
 .mainSch .schWrap .selectbox {background:transparent url(../images/common/icon/icon_selectbox3.png) no-repeat right 10px center; color:#fff;}
+.mainSch .schWrap .selectbox option {color:#666;}
+.mainSch .switchGroup + .selectGroup > .selectbox:nth-of-type(1) {width:181px;}
+.mainSch .switchGroup + .selectGroup > .selectbox {width:180px;}
+.mainSch .switchGroup.on .switch:nth-of-type(2) {display:inline-block;}
+.mainSch .switchGroup.on .switch:nth-of-type(3) {display:none;}
+.mainSch .switchGroup.on + .selectGroup > .selectbox {width:231px;}
+.mainSch .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:230px;}
+
+@media all and (min-width:0\0) and (min-resolution:.001dpcm)
+{
+.mainSch .schWrap .selectbox {background:transparent; }
+.mainSch .schWrap .selectbox option {color:#fff;}
+.mainSch .schWrap .selectbox:focus {background:#fff; }
+.mainSch .schWrap .selectbox:focus option {color:#666;}
+}
 
 .mainSch .switch {background:transparent;}
 .mainSch .switch:after {background:#494643;}
@@ -1085,9 +1100,9 @@ no-repeat left center;}
 .mainSch .schWrap .tipBtn {background:transparent;}
 .mainSch .schWrap .tipBtn > .txt {background:url(../images/common/icon/icon_tip2.png) no-repeat left center; color:#fff;}
 
-.selectGroup {display:inline-block; vertical-align:middle;}
+.selectGroup {display:inline-block; vertical-align:middle; font-size:0;}
 .selectGroup > .selectbox {width:210px; height:42px;}
-.selectGroup > .selectbox + .selectbox {margin-left:9px;}
+.selectGroup > .selectbox + .selectbox {margin-left:12px;}
 .selectGroup + .btn.sch.big {margin-left:12px;}
 
 .schTip {display:inline-block; vertical-align:middle;}
