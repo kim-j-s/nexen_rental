@@ -114,7 +114,7 @@
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
 
 /*매장위치 슬라이드*/
-.storeSlideWrap { position: relative; height: 340px; }
+.storeSlideWrap { position: relative; height: 340px; width: 100%;}
 
 .storeSlideWrap .mapArea { display: none; position: absolute; top: 0; left: 0; z-index: 50; overflow: hidden; box-sizing: border-box; height: 280px; border: 1px solid #d5d5d5; }
 .storeSlideWrap .mapArea.on { display: block;}
@@ -124,20 +124,21 @@
 .storeView .swiper-slide { display: flex; align-items: center; justify-content: center; }
 .storeView img { vertical-align: middle; max-width: 100%; max-height: 100%; }
 
-.storeThumbs { position: relative; overflow: inherit; height: 50px; margin: 10px 0 0; }
+.storeThumbs { position: relative; height: 50px; margin: 10px 0 0; }
 .storeThumbs:before { content:''; position: absolute; top:0; left:-15px; z-index: 5; width: 15px; height: 50px; background: #fff;}
 .storeThumbs:after { content:''; position: absolute; top:0; right:-15px; z-index: 5; width: 15px; height: 50px; background: #fff;}
-.storeThumbs .swiper-slide { box-sizing: border-box;	border: 1px solid #d5d5d5;	width: 33%;	height: 50px; text-align: center; }
+/* .storeThumbs .swiper-wrapper { overflow: hidden; } */
+.storeThumbs .swiper-slide { box-sizing: border-box; border: 1px solid #d5d5d5;	width: 33%;	height: 50px; text-align: center; }
 .storeThumbs .swiper-slide img { max-width: 100%; max-height: 100%; }
 .storeThumbs .swiper-slide-thumb-active { border: 1px solid #812990; opacity: 1; }
 .storeThumbs .swiper-slide.first.swiper-slide-thumb-active { } 
 
-.storeThumbs .swiper-button-next, 
-.storeThumbs .swiper-button-prev { position:absolute; z-index: 100; width:20px; height:40px; margin-top: -20px; overflow:hidden; background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
-.storeThumbs .swiper-button-prev {left: -15px; background-position:0px 0px;}
-.storeThumbs .swiper-button-next {right: -15px; background-position:-20px 0px;}
-.storeThumbs .swiper-button-next.swiper-button-disabled, 
-.storeThumbs .swiper-button-prev.swiper-button-disabled { opacity:0.3; cursor:auto;  pointer-events:none; }
+.storeSlideWrap .swiper-button-next, 
+.storeSlideWrap .swiper-button-prev { position:absolute; top: auto; bottom: 5px; z-index: 3; width:20px; height:40px; margin-top: -20px; overflow:hidden; background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
+.storeSlideWrap .swiper-button-prev {left: -15px; background-position:0px 0px;}
+.storeSlideWrap .swiper-button-next {right: -15px; background-position:-20px 0px;}
+.storeSlideWrap .swiper-button-next.swiper-button-disabled, 
+.storeSlideWrap .swiper-button-prev.swiper-button-disabled { opacity:0.3; cursor:auto;  pointer-events:none; }
 
 .storeView .swiper-slide.noimg, 
 .storeThumbs .swiper-slide.noimg { background: #f5f5f5 url('../images/common/img_null_s.png') no-repeat 50%; }
@@ -209,5 +210,121 @@
 .layerPop.imgView #layerPopCont { height: calc(100% - 46px); }
 .layerPop.imgView .layerPopWrap { box-sizing: border-box; height: 100%; padding: 20px 15px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .layerPop.imgView .imgViewArea { overflow: auto; }
+
+
+/* ==============================
+* 모달팝업 스타일
+* ============================== */
+
+.ui-front { z-index: 200; }
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+	opacity: unset;
+}
+.ui-widget-shadow {
+/*	-webkit-box-shadow: 0px 0px 5px #666666;
+	box-shadow: 0px 0px 5px #666666;*/
+}
+
+.ui-dialog {
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	outline: 0;
+	border-radius: 0;
+	color: #666;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* header - 비노출 */
+.ui-dialog .ui-dialog-titlebar {
+	position: relative;
+	z-index: 200;
+    /* height: 45px;  */
+	padding: 0;
+	border: 0;
+	border-radius: inherit;
+	background: #fff;
+	text-align: center;
+}
+.ui-dialog .ui-dialog-title {
+	display: none;
+	width: 100%;
+	margin: 0;
+	border: 0;
+	/* border-bottom: 1px solid #dcdcdc; */
+	color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px; 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45px;
+	/* height: 44px; */
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: none; 
+	border-radius: inherit;
+	background: #fff;
+	font-size: 0;
+}
+.ui-dialog .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar-close:active { background: #fff; border: none; }
+.ui-dialog .ui-dialog-titlebar-close .ui-icon {
+	position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 13px;
+	/* height: 13px; */
+	height: 0;
+	margin: -6px 0 0 -6px;
+    background: url('../images/common/btn/btn_close_popup.png') no-repeat;
+    background-size: 100%;
+}
+
+/*contents*/
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	z-index: 300;
+	width: 100%;
+	height: 100%;
+    min-height: 100%;
+	padding: 0;
+	border: 0;
+	background: #fff;
+	overflow: auto;
+}
+
+.ui-widget-content { border: none; }
+.ui-widget-content a { color: #666; }
+
+.ui-dialog-content .popup {} /* full popup */
+.ui-dialog-content .popHead {}
+.ui-dialog-content .popHead .lBtn { position: absolute; top: 10px; left: 15px; }
+.ui-dialog-content .popHead .lBtn a { color: #fff; }
+.ui-dialog-content .popContent {}
+.ui-dialog-content .popContent .btn { color: #fff; }
+.ui-dialog-content .popContent .btn[disabled] { color: #7f7f7f; }
+.ui-dialog-content .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
+
 
 
