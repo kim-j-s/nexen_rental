@@ -174,6 +174,7 @@ $(function(){
 	});
 
 	// 타이어 상품 갤러리
+	/*
 	var swiper = new Swiper('.photoSlide', {
 		navigation: {
 		  nextEl: '.swiper-button-next',
@@ -183,6 +184,7 @@ $(function(){
 		  el: '.swiper-pagination',
 		},
 	 });
+	*/
 
 	// 장바구니 주문/결제
 	var orderSlideLng = $('.orderSlide').find('.swiper-slide').length;
