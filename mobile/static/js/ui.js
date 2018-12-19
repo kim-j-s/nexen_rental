@@ -174,15 +174,32 @@ $(function(){
 	});
 
 	// 타이어 상품 갤러리
-	var swiper = new Swiper('.photoSlide', {
+	var xswiper = new Swiper('.photoSlide', {
 		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 		pagination: {
-		  el: '.swiper-pagination',
+			el: '.swiper-pagination',
 		},
-	 });
+	});
+
+	var tubeLng = $('.tube').length;
+	var tubeIndex = $('.tube').index();
+
+	if (tubeIndex > 0)
+	{
+		xswiper.on('slideChangeTransitionEnd', function () {
+			var idx = $('.swiper-pagination-bullet-active').index();
+			if (idx != tubeIndex)
+			{
+				$('#popup-youtube-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+				$('.productViewWrap').find('.badge').show(); // 동영상 플레이 때 노출관련 
+			} else {
+				$('.productViewWrap').find('.badge').hide(); // 동영상 플레이 때 노출관련
+			}
+		});
+	}
 
 	// 장바구니 주문/결제
 	var orderSlideLng = $('.orderSlide').find('.swiper-slide').length;
@@ -524,46 +541,19 @@ function tireSearch() {
 		var $this = $(this);
 		var selectedIndex = this.selectedIndex;
 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
-		var $next = $this.closest('.selectBox').next('.selectBox');
 		var select_name = $this.children('option').eq(selectedIndex).text();
 		
 		$this.siblings('label').text(select_name); 
 	
-		console.log(selectedIndex);
-
 		if(selectedIndex === 0) {
 			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
 			$tireSearchBtn.prop('disabled', true);
 		} else {
-			$next.removeClass('disabled').find('select').prop('disabled', false);
+			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
 			$tireSearchBtn.prop('disabled', false);
-		};
-
+		}
 	});
 }
-
-// function tireSearch() {
-// 	var $tireSearch = $('.tireSearch');
-// 	var $tireSearchSelect = $tireSearch.find('.selectBox select');
-// 	var $tireSearchBtn = $tireSearch.find('.btnSearch');
-	
-// 	$tireSearchSelect.change(function(){ 
-// 		var $this = $(this);
-// 		var selectedIndex = this.selectedIndex;
-// 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
-// 		var select_name = $this.children('option').eq(selectedIndex).text();
-		
-// 		$this.siblings('label').text(select_name); 
-	
-// 		if(selectedIndex === 0) {
-// 			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
-// 			$tireSearchBtn.prop('disabled', true);
-// 		} else {
-// 			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
-// 			$tireSearchBtn.prop('disabled', false);
-// 		}
-// 	});
-// }
 
 // cart option change
 function cartOpt() {

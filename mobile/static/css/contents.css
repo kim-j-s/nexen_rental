@@ -533,28 +533,34 @@ p.mark1 {display:block;}
 .searchWrap dl dd select {width:100%;} 
 
 /* 상품 갤러리 */
-.productViewWrap {position:relative;}
-.photoSlide {position:relative; width:100%; height:340px; background:#fafafa; overflow:hidden;}
-.photoSlide > ul {width:100%; padding-top:20px;}
-.photoSlide > ul li {width:100%; height:290px; background:#fafafa; text-align:center;}
-.photoSlide > ul li img {width:290px; height:290px; margin:0 auto;}
-.photoSlide .swiper-button-next,.photoSlide .swiper-button-prev {position:absolute; top:150px; width:20px; height:40px; z-index:1; text-indent:-999px; overflow:hidden; background:url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size:40px 40px;}
-.photoSlide .swiper-button-next.swiper-button-disabled, .photoSlide .swiper-button-prev.swiper-button-disabled {opacity:0.3; cursor:auto;  pointer-events:none;}
-.photoSlide .swiper-button-prev {left:0px; background-position:0px 0px;}
-.photoSlide .swiper-button-next {right:0px; background-position:-20px 0px;}
-.photoSlide .swiper-pagination {position:absolute; bottom:18px;}
+.productViewWrap { position: relative; padding-top: 15px; }
+
+.photoSlide { position: relative; width: 100%; height: 324px; overflow: hidden; }
+.photoSlide .swiper-wrapper { width: 100%; height: 243px; margin-top: 33px;} 
+.photoSlide .swiper-slide { display: flex; justify-content: center; align-items: center; width: 100%; height: 243px; text-align: center;  } 
+.photoSlide .swiper-slide img { max-width: 264px; }
+.photoSlide .swiper-slide iframe { margin: 0 28px; height: 100%; } /* 동영상 */
+
+.photoSlide .swiper-button-prev,
+.photoSlide .swiper-button-next { position: absolute; top: 150px; width: 20px; height: 40px; z-index: 1; text-indent: -999px; overflow: hidden; background: url('../images/common/btn/btn_visualList.png') no-repeat 0 0; background-size: 40px 40px; }
+.photoSlide .swiper-button-prev.swiper-button-disabled,
+.photoSlide .swiper-button-next.swiper-button-disabled { opacity:0.3; cursor:auto; pointer-events:none; }
+.photoSlide .swiper-button-prev { left:0px; background-position:0px 0px;}
+.photoSlide .swiper-button-next { right:0px; background-position:-20px 0px;}
+.photoSlide .swiper-pagination { position: absolute; bottom: 18px; height: 10px;}
+.photoSlide .swiper-pagination-bullet { vertical-align: top; }
 
 .productViewWrap .badge {position:absolute; top:15px; left:15px; z-index:2;} 
 .badge.inline span { display: inline-block; }
 .badge span { box-sizing: border-box; display: block; width: 35px; height: 18px; border-radius: 2px; color: #fff; font-size: 9px; line-height: 18px; text-align: center; }
-.badge span.hit { background: #c3244e; /*background: url('../images/prd/icon_hit.png') no-repeat left top; background-size: 100%;*/ }
-.badge span.best { background: #6a2276; /*background: url('../images/prd/icon_best.png') no-repeat left top; background-size: 100%;*/ }
+.badge span.hit { background: #c3244e; }
+.badge span.best { background: #6a2276; }
 .badge span:not(:first-child) { margin-top: 2px; } 
 
 /* 상품 */
 .productInfo .label { display: inline-block; font-size: 0; }
-.productInfo .label span { display:inline-block; box-sizing: border-box; margin-bottom: 2px; margin-right: 5px; border: 1px solid #666; min-width: 45px; height: 18px;	line-height: 16px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align: center; }
-.productInfo .label span.point { border-color: #b6985a; border-radius: 2px; min-width: 35px; background: #b6985a; color: #fff; }
+.productInfo .label span { display:inline-block; box-sizing: border-box; min-width: 45px; height: 18px;	line-height: 16px; margin-bottom: 2px; margin-right: 5px; padding: 0 6px; border: 1px solid #666; border-radius: 2px; color: #454545; font-size: 9px; text-align: center; }
+.productInfo .label span.point { border-color: #b6985a; min-width: inherit; width: 35px; padding: 0; background: #b6985a; color: #fff; }
 
 .hTag { display: inline-block;}
 .hTag span { display:inline-block; background:#fff; box-sizing: border-box; border-radius:1px; border: 1px solid #666; min-width: 45px; height: 20px; line-height: 18px;	padding: 0 5px;	color: #454545;	font-size: 9px; text-align:center; }
