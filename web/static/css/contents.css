@@ -1012,9 +1012,9 @@ no-repeat left center;}
 .sliderMain > button {position:absolute; top:156px; width:25px; height:47px; background:url(../images/common/btn/btn_arrow.png) no-repeat 0 0;}
 .sliderMain > button:disabled {cursor:auto;}
 .sliderMain > button span {display:block; overflow:hidden; text-indent:-999px;}
-.sliderMain > .sliderLeft {left:-43px;}
+.sliderMain > .sliderLeft {left:-43px; display:none;}
 .sliderMain > .sliderLeft:disabled {background-position:0 -94px;}
-.sliderMain > .sliderRight {right:-43px; background-position:0 -47px;}
+.sliderMain > .sliderRight {right:-43px; background-position:0 -47px; display:none;}
 .sliderMain > .sliderRight:disabled {background-position:0 -141px;}
 
 /* slider 1 */
