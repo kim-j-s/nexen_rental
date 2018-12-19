@@ -538,7 +538,7 @@ function tireContSelect() {
 // 메인 - 타이어 찾기(차종or사이즈)
 function tireOptSelect() {
 	var $tireOpt = $('.tireOptSelect input[type="radio"]');
-
+	
 	$($tireOpt).change(function(){
 		
 		if($(this).attr('value') == "carType"){
@@ -558,22 +558,36 @@ function tireRentalSearch() {
 	var $tireRental = $('.tireRental');
 	var $tireRentalSelect = $tireRental.find('.selectBox select');
 	var $tireRentalBtn = $tireRental.find('.btnSearch');
-	
-	$tireRentalSelect.change(function(){ 
+	var $firstSelect = $tireRental.find('.selectBox:first-child select');
+
+	$firstSelect.change(function(){
 		var $this = $(this);
 		var selectedIndex = this.selectedIndex;
 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
+		var select_name = $this.children('option').eq(selectedIndex).text();
+		
+		$this.siblings('label').text(select_name); 
+
+		if( selectedIndex === 0 ) {
+			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
+			$tireRentalBtn.prop('disabled', true);
+		} else {
+			$tireRentalBtn.prop('disabled', false);
+		}
+	}); 
+
+	$tireRentalSelect.change(function(){ 
+		var $this = $(this);
+		var selectedIndex = this.selectedIndex;
 		var $next = $this.closest('.selectBox').next('.selectBox');
 		var select_name = $this.children('option').eq(selectedIndex).text();
 		
 		$this.siblings('label').text(select_name); 
-	
-		if(selectedIndex === 0) {
-			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
-			$tireRentalBtn.prop('disabled', true);
+		
+		if( selectedIndex === 0 ) {
+			$next.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
 		} else {
 			$next.removeClass('disabled').find('select').prop('disabled', false);
-			$tireRentalBtn.prop('disabled', false);
 		}
 	});
 }
