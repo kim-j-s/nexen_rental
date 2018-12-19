@@ -824,7 +824,8 @@ $(function(){
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 4,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		arrows: false
 	});
 	// slick init
 	function slickInit() {
