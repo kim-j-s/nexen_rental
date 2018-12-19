@@ -1008,13 +1008,22 @@ no-repeat left center;}
 .tireInfo2.etc > dt {padding-top:0;}
 .tireInfo2.etc2 > dt {padding-top:25px;}
 
+.sliderMain {position:relative;}
+.sliderMain > button {position:absolute; top:156px; width:25px; height:47px; background:url(../images/common/btn/btn_arrow.png) no-repeat 0 0;}
+.sliderMain > button:disabled {cursor:auto;}
+.sliderMain > button span {display:block; overflow:hidden; text-indent:-999px;}
+.sliderMain > .sliderLeft {left:-43px;}
+.sliderMain > .sliderLeft:disabled {background-position:0 -94px;}
+.sliderMain > .sliderRight {right:-43px; background-position:0 -47px;}
+.sliderMain > .sliderRight:disabled {background-position:0 -141px;}
+
 /* slider 1 */
-.slider1 {margin:0 -16px;}
-.slider1 .item {margin:0 16px; border:1px solid #999;}
+.slider1 {margin:0 -18px;}
+.slider1 .item {margin:0 18px; border:1px solid #999; width:273px !important;}
 .slider1 .item:hover {border:1px solid #812990;}
 .slider1 .item > a {display:block; background:#fff;}
-.slider1 .item .thumb {position:relative; text-align:center; display:table; width:100%; height:262px;}
-.slider1 .item .thumb .imgDiv {display:table-cell; vertical-align:middle;}
+.slider1 .item .thumb {position:relative; text-align:center; display:table; width:100%; height:285px; padding-bottom:35px;}
+.slider1 .item .thumb .imgDiv {display:table-cell; vertical-align:middle; overflow:hidden;}
 .slider1 .item .thumb .imgDiv > img {max-width:100%; max-height:100%; transition: 0.45s;}
 .slider1 .item .thumb .imgDiv > img:hover {transform: scale(1.06);}
 .slider1 .slick-prev {position:absolute; top:156px; left:-23px; width:25px; height:47px; background:url(../images/common/btn/btn_arrow.png) no-repeat 0 0; text-indent:-999px; overflow:hidden;}
