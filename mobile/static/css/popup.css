@@ -339,7 +339,7 @@
 
 
 .popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
-.popRentalStore .popContent {height:100%; margin:0; padding-top:45px;}
+.popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
 .popRentalStore .mapArea {height:100%;}
 
 
