@@ -34,15 +34,10 @@
                 <div class="photoSlidetest">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt="상품이미지"></li>
-                        <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt="상품이미지"></li>
-                        <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt="상품이미지"></li>
+                       <!--  <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt="상품이미지"></li>
+                        <li class="swiper-slide"><img src="../static/images/sample/product2.png" alt="상품이미지"></li> -->
 						<li class="swiper-slide tube" data-url="https://www.youtube.com/embed/Ar4EOYYo8JQ">
-							<!-- <iframe width="558" height="248" id="popup-youtube-player" src="https://www.youtube.com/embed/Ar4EOYYo8JQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-
 							<iframe id="popup-youtube-player" width="640" height="360" src="https://www.youtube.com/embed/Ar4EOYYo8JQ?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
-
-							<!-- <iframe id="popup-youtube-player" width="640" height="360" src="http://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe> -->
 						</li>
                     </ul>
                     <!-- Add Arrows -->
@@ -56,7 +51,7 @@
 
 
 .productViewWrap {position:relative;}
-.photoSlidetest {position:relative; width:100%; height:340px; background:green; overflow:hidden;}
+.photoSlidetest {position:relative; width:100%; height:340px; background:blue; overflow:hidden;}
 .photoSlidetest > ul {width:100%; padding-top:20px;}
 .photoSlidetest > ul li {width:100%; height:290px; background:#fafafa; text-align:center;}
 .photoSlidetest > ul li img {width:290px; height:290px; margin:0 auto;}
@@ -82,14 +77,20 @@ $(function(){
 		},
 	});
 
-	//xswiper.on('slideChangeTransitionEnd', function () {
+	var tubeLng = $('.tube').length;
+	var tubeIndex = $('.tube').index();
+	console.log(tubeLng + ' , ' + tubeIndex);
+
 	xswiper.on('slideChangeTransitionEnd', function () {
 	  	var idx = $('.swiper-pagination-bullet-active').index();
 		console.log(idx);
-		if (idx != 3)
+		if (idx != tubeIndex)
 		{
-			console.log('zzzz');
+			console.log(idx + ' zzzz ' + tubeIndex);
 			$('#popup-youtube-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+			$('.productViewWrap').find('.badge').show();
+		} else {
+			$('.productViewWrap').find('.badge').hide();
 		}
 	});
 
