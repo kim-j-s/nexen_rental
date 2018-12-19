@@ -33,57 +33,60 @@
 .tireContWrap .tab { box-sizing: border-box; display: flex; position: absolute; bottom: 0; width: 100%; padding: 0 15px; }
 .tireContWrap .tab li { width: 33%; height: 52px; }
 .tireContWrap .tab li:first-child { width: 34%; }
-.tireContWrap .tab li a { display: block; padding: 12px 0 10px; font-size: 11px; font-weight: 700; }
-.tireContWrap .tab li.on { position: relative; }
+.tireContWrap .tab li a { display: block; padding: 12px 0 10px; font-size: 11px;  }
+.tireContWrap .tab li.on { position: relative; font-weight: 700; }
 .tireContWrap .tab li.on a:after { content: ''; position: absolute;	top: 0;	left: 0; width: 100%; height: 2px; background-color: #fff; }
 
 .tireContWrap .tireCont { display: none; box-sizing: border-box; position: absolute; width: 100%; height: 280px; padding: 0 25px; }
 .tireContWrap .tireCont .inner { box-sizing: border-box; padding: 15px 15px; background: rgba(245,245,245,.2); }
 
+.tireCont .optCont { display: none; }
+.tireCont .optCont.on { display: block; }
 
-/* radio+label 옵션 선택 */
-.carType { position: relative; box-sizing: border-box; width: 180px; height: 35px; margin: 0 auto 15px;	border-radius: 35px; border: 2px solid #fff; background-size: 100%; font-size: 0; }
-.carType:after { content:''; display:block;	clear:both; }
-.carType li { position:relative; z-index: 1; float:left; width:50%; }
-.carType li.on:after { content:''; position:absolute; top: -2px; left: -2px; width: 50%; width: 95px; height: 35px; background:url('../images/main/bg_car_on.png') no-repeat 0 0; background-size: 95px 35px; }
-.carType li:nth-child(2).on:after {	content:'';	left: -4px;}
-.carType li a { position:relative;	z-index:2; display: block; height: 31px; line-height: 31px; font-size: 12px; }
-
-.radiobtnGroup2 { position: relative; box-sizing: border-box; width: 180px; height: 35px; margin: 0 auto 15px;	border-radius: 35px; border: 2px solid #fff; background-size: 100%; font-size: 0; }
-.radiobtnGroup2 > .radiobtn { position:relative; width: 50%; background: transparent; border: none; border-radius: inherit; color: #fff;   }
-.radiobtnGroup2 > .radiobtn.on { background: transparent; border: none; }
-.radiobtnGroup2 > .radiobtn.on:after { content:''; position:absolute; top: -2px; left: -2px; width: 50%; width: 95px; height: 35px; background: url('../images/main/bg_car_on.png') no-repeat 0 0; background-size: 95px 35px; }
-.radiobtnGroup2 > .radiobtn:nth-child(2).on:after { content: ''; left: -4px; }
-.radiobtnGroup2 > .radiobtn span { position:relative; z-index: 2; display: block; height: 31px; line-height: 31px; color: #fff; font-size: 12px; }
+.radiobtnGroup2 { position: relative; box-sizing: border-box; width: 125px; height: 35px; border-radius: 35px; border: 2px solid #fff; background-size: 100%; font-size: 0; }
+.radiobtnGroup2 > .radiobtn { position:relative; width: 50%; margin-top: -2px; padding: 0; background: transparent; border: none; border-radius: inherit; color: #fff; transition: background 0.2s; }
+.radiobtnGroup2 > .radiobtn.on { background: rgba(129,41,144,.8); border: none; }
+.radiobtnGroup2 > .radiobtn.on:after { content:''; box-sizing: border-box; position: absolute; top: 0; left: -2px; width: calc(100% + 4px); height: 35px; border: 2px solid #fff; border-radius: 35px; }
+.radiobtnGroup2 > .radiobtn:nth-child(2).on:after { content: ''; right: 50%; }
+.radiobtnGroup2 > .radiobtn span { position:relative; z-index: 2; display: block; height: 35px; line-height: 35px; color: #fff; font-size: 12px; }
 
 .tireCont .radiobtnGroup { margin-bottom: 5px; }
-.tireCont .radiobtnGroup > .radiobtn { position: relative; z-index: 1; width: 50%; background: transparent; border: none;  color: #fff; border: 1px solid #fff;}
-.tireCont .radiobtnGroup > .radiobtn.on { background: #5f295d; border-color: #fff; color: #fff; }
+.tireCont .radiobtnGroup > .radiobtn { position: relative; z-index: 1; width: 50%; padding: 0; background: transparent; color: #fff; border-color: #fff; border-radius: 3px; }
+.tireCont .radiobtnGroup > .radiobtn.on { background: #5f295d; }
 
-.tireCont .selectBox { position: relative; z-index: 1; width: 100%; height: 30px; border: 1px solid #fff; }
+.tireCont .selectBox { position: relative; z-index: 1; box-sizing: border-box; width: 100%; height: 35px; border: 1px solid #fff; }
 .tireCont .selectBox:after { content: ''; display: block; position: absolute; top: calc(50% - 3px);	right: 10px; width: 10px; height: 6px;	background: url('../images/main/arrow_bottom.png') no-repeat;	background-size: 100%; }
 .tireCont .selectBox:not(:first-child) { margin-top: 5px; }
-.tireCont .selectBox label { box-sizing: border-box; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 30px; line-height: 28px;	color: #fff; text-align: center; }
-.tireCont .selectBox .select { width: 100%; height: 30px; line-height: 30px; padding: 0 20px; border: none;	opacity: 0;	background: transparent; -webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+.tireCont .selectBox label { box-sizing: border-box; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 35x; line-height: 33px; color: #fff; text-align: center; }
+.tireCont .selectBox .select { width: 100%; height: 35px; line-height: 35px; padding: 0 20px; border: none;	opacity: 0;	background: transparent; -webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
 .tireCont .selectBox .select::-ms-expand { display: none; }
 .tireCont .selectBox .select option { color: #000; background: #fafafa; }
 .tireCont .selectBox .select option:hover { color: #812990; background: #fff; }
 .tireCont .selectBox.disabled { opacity: .5; } /* 비활성화 */
 
-.tireCont .searchWrap .btnArea { margin-top: 10px; }
-.tireCont .searchWrap .btnSearch { border-color: #fff; border-radius: 3px; font-weight: 500; }
-.tireCont .searchWrap .btnSearch .innerIcon.search:before { background: url('../images/main/icon_inner_sch.png') no-repeat;  }
-.tireCont .searchWrap .btnSearch[disabled] { background: transparent; border: 1px solid rgba(255,255,255,.5); color: rgba(255,255,255,.5); }
-.tireCont .searchWrap .btnSearch .innerIcon { margin-right: 0; }
-.tireCont .searchWrap .btnSearch .innerIcon:before { content: ''; display: inline-block; width: 11px; height: 11px; margin-right: 5px; background: url('../images/main/icon_inner_sch.png') no-repeat;  background-size: 100%;  vertical-align: -1px; }
-.tireCont .searchWrap .btnSearch[disabled] .innerIcon:before { background: url('../images/main/icon_inner_sch_disabled.png') no-repeat;  background-size: 100%; }
+.tireCont .btnArea { margin-top: 10px; }
+
+.tireCont .btnSearch { border-color: #fff; border-radius: 3px; font-weight: 500; }
+.tireCont .btnSearch .innerIcon.search:before { background: url('../images/main/icon_inner_sch.png') no-repeat;  }
+.tireCont .btnSearch[disabled] { background: transparent; border: 1px solid rgba(255,255,255,.5); color: rgba(255,255,255,.5); }
+.tireCont .btnSearch .innerIcon { margin-right: 0; }
+.tireCont .btnSearch .innerIcon:before { content: ''; display: inline-block; width: 11px; height: 11px; margin-right: 5px; background: url('../images/main/icon_inner_sch.png') no-repeat;  background-size: 100%;  vertical-align: -1px; }
+.tireCont .btnSearch[disabled] .innerIcon:before { background: url('../images/main/icon_inner_sch_disabled.png') no-repeat;  background-size: 100%; }
+
+.tireCont .btns { margin-bottom: 5px; }
+.tireCont .btnTireSize { box-sizing: border-box; display: block; width: 100%; height: 35px; line-height: 33px; border: 1px solid #fff; border-radius: 3px; background-color: transparent; }
+.tireCont .btnTireSize { color: #fff; font-size: 12px; }
+.tireCont .btnTireSize span:after { content: ''; display: inline-block; margin-left: 3px; background: url('../images/main/icon_question.png'); background-size: 100%; width: 12px; height: 12px; vertical-align: -2px;}
 
 /* 탭 - 타이어 찾기*/
 .tireSearch .inner { height: 280px; }
+.tireSearch .topArea { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.tireSearch .topArea .radiobtnGroup2  { width: calc((100% - 5px) / 2); }
 
 /* 탭 - 렌탈상품 추천 */ 
 .tireRental .txt { height: 40px; font-size: 11px; font-weight: 200;	line-height: 17px; }
 .tireRental .inner { height: 240px; padding-top: 15px; }
+.tireRental .radiobtnGroup2 { width: 180px; margin: 0 auto 15px; }
 
 /* 탭 - 신개념타이어렌탈 */
 .careService li { position: relative; width: 100%; background: rgba(244,244,244,.2); }

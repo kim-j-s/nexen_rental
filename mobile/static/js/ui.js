@@ -6,7 +6,11 @@ $(function(){
 	
 	uiMain.init();
 	uiForm();
-	tireSearch();
+
+	// 메인 
+	tireContSelect();
+	tireOptSelect();
+	tireRentalSearch();
 
 	SwiperActMain();
 	TopBanner();
@@ -16,9 +20,8 @@ $(function(){
 	slideCont();
 	inpReset();
 
-	// 타이어 - 상세
-	// fixedMoveTab ();
-	if ($('.productViewWrap').length > 0) { fixedMoveTab(); }
+	// 타이어-상품상세 탭
+	if ($('.productViewWrap').length > 0) { fixedMoveTab(); } 
 	
 	GradeSelect()
 
@@ -76,18 +79,6 @@ $(function(){
 		
 		$(this).addClass('on').siblings().removeClass('on');
 	})
-
-	// 메인 - 타이어검색 탭영역
-	$('.tireContWrap .tab li a').on('click', function(e){
-		e.preventDefault();
-		
-		$(this).parent().addClass('on').siblings().removeClass('on');
-
-		var dataID = $(this).attr('href').substring(1);
-		$('#' + dataID ).siblings().hide().end().show();
-
-	});
-
 
 	/* ==============================
 	 * content 
@@ -531,26 +522,58 @@ function uiForm() {
 	
 }
 
-// 메인 - 타이어검색
-function tireSearch() {
-	var $tireSearch = $('.tireSearch');
-	var $tireSearchSelect = $tireSearch.find('.selectBox select');
-	var $tireSearchBtn = $tireSearch.find('.btnSearch');
+// 메인 - 타이어검색 탭영역
+function tireContSelect() {
+
+	$('.tireContWrap .tab li a').on('click', function(e){
+		e.preventDefault();
+		
+		$(this).parent().addClass('on').siblings().removeClass('on');
 	
-	$tireSearchSelect.change(function(){ 
+		var dataID = $(this).attr('href').substring(1);
+		$('#' + dataID ).siblings().hide().end().show();
+	});
+}
+
+// 메인 - 타이어 찾기(차종or사이즈)
+function tireOptSelect() {
+	var $tireOpt = $('.tireOptSelect input[type="radio"]');
+
+	$($tireOpt).change(function(){
+		
+		if($(this).attr('value') == "carType"){
+			$('.optCont.carType').show();
+			$('.optCont.tireSize').hide();
+		}
+
+		if($(this).attr('value') == "tireSize" ){
+			$('.optCont.tireSize').show();
+			$('.optCont.carType').hide();
+		} 
+	}); 
+}
+
+// 메인 - 렌탈상품 추천flow
+function tireRentalSearch() {
+	var $tireRental = $('.tireRental');
+	var $tireRentalSelect = $tireRental.find('.selectBox select');
+	var $tireRentalBtn = $tireRental.find('.btnSearch');
+	
+	$tireRentalSelect.change(function(){ 
 		var $this = $(this);
 		var selectedIndex = this.selectedIndex;
 		var $nextAll = $this.closest('.selectBox').nextAll('.selectBox');
+		var $next = $this.closest('.selectBox').next('.selectBox');
 		var select_name = $this.children('option').eq(selectedIndex).text();
 		
 		$this.siblings('label').text(select_name); 
 	
 		if(selectedIndex === 0) {
 			$nextAll.addClass('disabled').find('select').prop('disabled', true).prop('selectedIndex', 0).trigger('change');
-			$tireSearchBtn.prop('disabled', true);
+			$tireRentalBtn.prop('disabled', true);
 		} else {
-			$nextAll.removeClass('disabled').find('select').prop('disabled', false);
-			$tireSearchBtn.prop('disabled', false);
+			$next.removeClass('disabled').find('select').prop('disabled', false);
+			$tireRentalBtn.prop('disabled', false);
 		}
 	});
 }

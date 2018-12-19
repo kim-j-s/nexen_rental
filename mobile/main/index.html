@@ -137,7 +137,7 @@
                     <span class="subCopy">국내 최초 신개념 타이어 렌탈 서비스, <strong>넥스트 레벨</strong></span>
                 </h2>
 
-                <!-- 2018-12-17 수정 -->
+                <!-- 2018-12-19 수정 -->
                 <div class="tireContWrap">
                     <ul class="tab">
                         <li class="on"><a href="#tireCont1">#타이어 찾기</a></li>
@@ -149,60 +149,97 @@
                         <!-- 타이어 찾기 -->
                         <div class="tireCont tireSearch" id="tireCont1" style="display: block;">
                             <div class="inner">
-                                <div class="radiobtnGroup2">
-                                    <label for="rd1" class="radiobtn on">
-                                        <input type="radio" name="radioSelect1" id="rd1" checked="checked">
-                                        <span class="txt">차종</span>
-                                    </label>
-                                    <label for="rd2" class="radiobtn">
-                                        <input type="radio" name="radioSelect1" id="rd2"><span class="txt">사이즈</span>
-                                    </label>
+                                <div class="topArea">
+                                    <div class="radiobtnGroup2">
+                                        <label for="radioOpt1_1" class="radiobtn on">
+                                            <input type="radio" name="radioOpt1" id="radioOpt1_1" checked="checked">
+                                            <span class="txt">승용차</span>
+                                        </label>
+                                        <label for="radioOpt1_2" class="radiobtn">
+                                            <input type="radio" name="radioOpt1" id="radioOpt1_2">
+                                            <span class="txt">SUV</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="radiobtnGroup2 tireOptSelect">
+                                        <label for="radioOpt2_1" class="radiobtn on">
+                                            <input type="radio" name="radioOpt2" value="carType" id="radioOpt2_1" checked="checked">
+                                            <span class="txt">차종</span>
+                                        </label>
+                                        <label for="radioOpt2_2" class="radiobtn">
+                                            <input type="radio" name="radioOpt2" value="tireSize" id="radioOpt2_2">
+                                            <span class="txt">사이즈</span>
+                                        </label>
+                                    </div>
                                 </div>
 
-                                <div class="radiobtnGroup">
-                                    <label for="rd3" class="radiobtn on">
-                                        <input type="radio" name="radioSelect2" id="rd3" checked="checked">
-                                        <span class="txt">국내</span>
-                                    </label>
-                                    <label for="rd4" class="radiobtn">
-                                        <input type="radio" name="radioSelect2" id="rd4"><span class="txt">수입</span>
-                                    </label>
+                                <!-- 차종 선택 시 -->
+                                <div class="optCont carType on">
+                                    <div class="radiobtnGroup">
+                                        <label for="rd1" class="radiobtn on">
+                                            <input type="radio" name="radioSelect" id="rd1" checked="checked">
+                                            <span class="txt">국내</span>
+                                        </label>
+                                        <label for="rd2" class="radiobtn">
+                                            <input type="radio" name="radioSelect" id="rd2">
+                                            <span class="txt">수입</span>
+                                        </label>
+                                    </div>
+    
+                                    <div class="searchWrap">
+                                        <div class="selectBox">
+                                            <label for="opt1_1">제조사 선택</label>
+                                            <select class="select" id="opt1_1">
+                                                <option value="">제조사 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <label for="opt1_2">모델명 선택</label>
+                                            <select class="select" id="opt1_2">
+                                                <option value="">모델명 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <label for="opt1_3">사이즈 선택</label>
+                                            <select class="select" id="opt1_3">
+                                                <option value="">사이즈 선택</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="searchWrap">
-                                    <div class="selectBox">
-                                        <label for="opt1">1순위</label>
-                                        <select class="select" id="opt1">
-                                            <option value="">1순위</option>
-                                            <option value="">제동성능</option>
-                                            <option value="">연비효율</option>
-                                            <option value="">승차감/소음</option>
-                                            <option value="">주행거리</option>
-                                        </select>
+                                <!-- // 차종 선택 시 -->
+                                
+                                <!-- 사이즈 선택 시  -->
+                                <div class="optCont tireSize">
+                                    <div class="btns">
+                                        <a href="#" class="btnTireSize"><span>장착할 차량의 타이어 사이즈 확인 방법</span></a> <!-- [D] 하단 타이어 사이즈 확인방법 레이어 노출 -->
                                     </div>
-                                    <div class="selectBox disabled">
-                                        <label for="opt2">2순위</label>
-                                        <select class="select" id="opt2" disabled>
-                                            <option value="">2순위</option>
-                                            <option value="">제동성능</option>
-                                            <option value="">연비효율</option>
-                                            <option value="">승차감/소음</option>
-                                            <option value="">주행거리</option>
-                                        </select>
+    
+                                    <div class="searchWrap">
+                                        <div class="selectBox">
+                                            <label for="opt2_1">단면폭 선택</label>
+                                            <select class="select" id="opt2_1">
+                                                <option value="">단면폭 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox">
+                                            <label for="opt2_2">편평비 선택</label>
+                                            <select class="select" id="opt2_2">
+                                                <option value="">편평비 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectBox ">
+                                            <label for="opt2_3">인치 선택</label>
+                                            <select class="select" id="opt2_3">
+                                                <option value="">인치 선택</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="selectBox disabled">
-                                        <label for="opt3">3순위</label>
-                                        <select class="select" id="opt3" disabled>
-                                            <option value="">3순위</option>
-                                            <option value="">제동성능</option>
-                                            <option value="">연비효율</option>
-                                            <option value="">승차감/소음</option>
-                                            <option value="">주행거리</option>
-                                        </select>
-                                    </div>
-                                    <div class="btnArea">
-                                        <button type="button" class="btn primary btnSearch" disabled><span class="innerIcon">내게맞는 렌탈상품 찾기</span></button>
-                                    </div>
+                                </div>
+                                <!-- // 사이즈 선택 시  -->
+                                
+                                <div class="btnArea">
+                                    <button type="button" class="btn primary btnSearch"><span class="innerIcon">내게맞는 타이어 찾기</span></button>
                                 </div>
                             </div>
                         </div>
@@ -228,8 +265,8 @@
             
                                 <div class="searchWrap">
                                     <div class="selectBox">
-                                        <label for="opt4">1순위</label>
-                                        <select class="select" id="opt4">
+                                        <label for="opt3_1">1순위</label>
+                                        <select class="select" id="opt3_1">
                                             <option value="">1순위</option>
                                             <option value="">제동성능</option>
                                             <option value="">연비효율</option>
@@ -238,8 +275,8 @@
                                         </select>
                                     </div>
                                     <div class="selectBox disabled">
-                                        <label for="opt5">2순위</label>
-                                        <select class="select" id="opt5" disabled>
+                                        <label for="opt3_2">2순위</label>
+                                        <select class="select" id="opt3_2" disabled>
                                             <option value="">2순위</option>
                                             <option value="">제동성능</option>
                                             <option value="">연비효율</option>
@@ -248,8 +285,8 @@
                                         </select>
                                     </div>
                                     <div class="selectBox disabled">
-                                        <label for="opt6">3순위</label>
-                                        <select class="select" id="opt6" disabled>
+                                        <label for="opt3_3">3순위</label>
+                                        <select class="select" id="opt3_3" disabled>
                                             <option value="">3순위</option>
                                             <option value="">제동성능</option>
                                             <option value="">연비효율</option>
@@ -300,7 +337,7 @@
                         <!-- //신개념타이어렌탈 -->
                     </div>
                 </div>
-                <!-- //2018-12-17 수정 -->
+                <!-- //2018-12-19 수정 -->
             </div>
 
             <div class="serviceFlow">
@@ -455,14 +492,17 @@
         <!--// 하단 고정 메뉴 -->
     </div>
 
-    <!-- 레이어 : 재렌탈 가능 고객 알림 -->
-    <div class="dim" style="display: none;">
-        <div id="layerPop" class="layerPop">        
+    
+    <!-- 2018-12-18 수정 -->
+    <div class="dim" style="display: none">
+        
+        <!-- 레이어 : 재렌탈 가능 고객 알림 -->
+        <div class="layerPop">        
             <header class="layerPopHeader">
                 <h1><span>재렌탈 가능 고객 알림</span></h1>
                 <a href="#" class="closeBtn"><span>닫기</span></a>
             </header>
-            <section id="layerPopCont">
+            <section>
                 <div class="layerPopWrap">
                     “<strong>홍길동</strong>” 고객님은 재렌탈 가능 고객입니다.<br>
                     타이어 재렌탈로, 할인된 가격과 서비스를 받으세요.<br><br>
@@ -470,8 +510,25 @@
                 </div>        
             </section>
         </div>
+        <!-- // 레이어 : 재렌탈 가능 고객 알림 -->
+
+        <!-- 레이어 : 타이어 규격 확인 방법 -->
+        <div class="layerPop">        
+            <header class="layerPopHeader">
+                <h1><span>타이어 규격 확인 방법</span></h1>
+                <a href="#" class="closeBtn"><span>닫기</span></a>
+            </header>
+            <section>
+                <div class="layerPopWrap">
+                   <div class="imgArea">
+                        <img src="../static/images/main/img_tire_size.jpg" alt="" class="full">
+                   </div>
+                </div>        
+            </section>
+        </div>
+        <!-- //레이어 : 타이어 규격 확인 방법 -->
     </div>  
-    <!-- // 레이어 : 재렌탈 가능 고객 알림 -->
+    <!-- // 2018-12-18 수정 -->
 
 </body>
 </html>
