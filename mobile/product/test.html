@@ -79,16 +79,13 @@ $(function(){
 
 	var tubeLng = $('.tube').length;
 	var tubeIndex = $('.tube').index();
-	console.log(tubeLng + ' , ' + tubeIndex);
 
 	if (tubeIndex > 0)
 	{
 		xswiper.on('slideChangeTransitionEnd', function () {
 			var idx = $('.swiper-pagination-bullet-active').index();
-			console.log(idx);
 			if (idx != tubeIndex)
 			{
-				console.log(idx + ' zzzz ' + tubeIndex);
 				$('#popup-youtube-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
 				$('.productViewWrap').find('.badge').show();
 			} else {
