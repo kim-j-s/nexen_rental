@@ -224,11 +224,12 @@ td .textarea {width:100%;}
 .table .btn.etc { color: #fff; background-color: #555; border-radius: inherit; }
 .table .btn[disabled] { border-color: #bcbcbc; background-color: #bcbcbc; }
 .table .btn.primary { color: #fff; background-color: #812990; border-radius: inherit; }
+.table .btn .innerIcon { line-height: 34px; }
 
 /* 테이블 가로(th+td) - form */
 .table.ty2 {border-top:2px solid #353535;}
-.table.ty2 tbody th {vertical-align:middle; height:35px;  border-bottom:1px solid #dadada;  color:#333; font-size:12px; font-weight:500; text-align:left;}
-.table.ty2 tbody td {vertical-align:middle; height:35px; padding:10px 0; border-bottom:1px solid #dadada; color: #454545; font-size:12px; text-align:left; }
+.table.ty2 tbody th { height:35px; padding: 10px 0; border-bottom:1px solid #dadada; color:#333; font-size:12px; font-weight:500; text-align:left; vertical-align:middle;}
+.table.ty2 tbody td { height:35px; padding: 10px 0; border-bottom:1px solid #dadada; color: #454545; font-size:12px; text-align:left; vertical-align:middle;}
 .table.ty2 tbody td div + .tblEle {margin-top:5px;}
 
 /* 테이블 세로(thead+tbody) - view  */

@@ -219,145 +219,74 @@
 .ui-front { z-index: 300; }
 
 /* Overlays */
-.ui-widget-overlay {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0,.5);
-	opacity: unset;
-	overflow-y: hidden;
-}
-.ui-widget-shadow {
-/*	-webkit-box-shadow: 0px 0px 5px #666666;
-	box-shadow: 0px 0px 5px #666666;*/
-}
+.ui-widget-overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0;	background: rgba(0,0,0,.8);	opacity: unset;	overflow-y: hidden; }
+.ui-widget-shadow { /*-webkit-box-shadow: 0px 0px 5px #666666; box-shadow: 0px 0px 5px #666666;*/ }
 
-.ui-dialog {
-	overflow: auto;
-	position: absolute;
-	top: 0 !important;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100% !important;
-	padding: 0;
-	outline: 0;
-	border-radius: 0;
-	color: #666;
-    font-family: 'Noto Sans', sans-serif;
-}
+.ui-dialog { overflow: auto; position: absolute; top: 0 !important;	bottom: 0;	left: 0; right: 0; width: 100% !important; padding: 0; outline: 0; border-radius: 0; color: #666; font-family: 'Noto Sans', sans-serif; }
 
 /* header - 비노출 */
-.ui-dialog .ui-dialog-titlebar {
-	position: relative;
-	z-index: 200;
-    /* height: 45px;  */
-	padding: 0;
-	border: 0;
-	border-radius: inherit;
-	background: #fff;
-	text-align: center;
-}
-.ui-dialog .ui-dialog-title {
-	display: none;
-	width: 100%;
-	margin: 0;
-	border: 0;
-	/* border-bottom: 1px solid #dcdcdc; */
-	color: #000;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 45px; 
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.ui-dialog .ui-dialog-titlebar-close {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 45px;
-	/* height: 44px; */
-	height: 0;
-	margin: 0;
-	padding: 0;
-	border: none; 
-	border-radius: inherit;
-	background: #fff;
-	font-size: 0;
-}
+.ui-dialog .ui-dialog-titlebar { position: relative; z-index: 200; /* height: 45px; */	padding: 0;	border: 0;	border-radius: inherit;	background: #fff; text-align: center; }
+.ui-dialog .ui-dialog-title { display: none; width: 100%; margin: 0; border: 0; /* border-bottom: 1px solid #dcdcdc; */ color: #000; font-size: 15px; font-weight: 500; text-align: center; line-height: 45px; white-space: nowrap;	overflow: hidden; text-overflow: ellipsis; }
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: 0;	top: 0;	width: 45px; /* height: 44px; */ height: 0;	margin: 0;	padding: 0; border: none; border-radius: inherit; background: #fff;	font-size: 0; }
 .ui-dialog .ui-dialog-titlebar-close:hover,
 .ui-dialog .ui-dialog-titlebar-close:active { background: #fff; border: none; }
-.ui-dialog .ui-dialog-titlebar-close .ui-icon {
-	position: absolute;
-    right: 50%;
-    top: 50%;
-    width: 13px;
-	/* height: 13px; */
-	height: 0;
-	margin: -6px 0 0 -6px;
-    background: url('../images/common/btn/btn_close_popup.png') no-repeat;
-    background-size: 100%;
-}
+.ui-dialog .ui-dialog-titlebar-close .ui-icon { position: absolute; right: 50%; top: 50%; width: 13px; /* height: 13px; */ height: 0; margin: -6px 0 0 -6px; background: url('../images/common/btn/btn_close_popup.png') no-repeat; background-size: 100%; }
 
 /*contents*/
-.ui-dialog .ui-dialog-content {
-	position: relative;
-	z-index: 300;
-	width: 100%;
-	height: 100%;
-    min-height: 100%;
-	padding: 0;
-	border: 0;
-	background: #fff;
-	overflow: auto;
-}
-
 .ui-widget-content { border: none; }
 .ui-widget-content a { color: #666; }
 
-.ui-dialog-content .popup {}
-.ui-dialog-content .popHead {}
+.ui-dialog-content { overflow: auto; position: relative; z-index: 300; width: 100%; height: 100%; min-height: 100%; padding: 0 !important; border: 0; background: #fff; }
+.ui-dialog-content .popup { position:fixed; }
+.ui-dialog-content .popHead { position:fixed; }
 .ui-dialog-content .popHead .lBtn { position: absolute; top: 10px; left: 15px; }
 .ui-dialog-content .popHead .lBtn a { color: #fff; }
-.ui-dialog-content .popContent {}
+.ui-dialog-content .popContent { overflow: auto; }
 .ui-dialog-content .popContent .btn { color: #fff; }
 .ui-dialog-content .popContent .btn[disabled] { color: #7f7f7f; }
-.ui-dialog-content .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
-
-
-/* 렌탈전문점 모달적용 reset */
-.ui-dialog.rentalmap {position:fixed !important; top:0 !important; height:100%;}
-.ui-dialog.rentalmap html, .ui-dialog.rentalmap body {height:100%;}
-.ui-dialog.rentalmap .ui-dialog-content {height:100% !important;}
-
-.ui-dialog.rentalmap .popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
-.ui-dialog.rentalmap .popRentalStore .popHead { position: fixed; }
-.ui-dialog.rentalmap .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
-.ui-dialog.rentalmap .popRentalStore .mapArea {height:100%;}
 
 /* reset */
 .ui-resizable-handle { display: none !important; }
 
-
-/* 풀팝업 모달적용 시 */
+/* 풀팝업 모달 */
 .fullPop.ui-dialog { position: fixed !important; top: 0 !important; height: 100% !important; }
 .fullPop.ui-dialog html, 
 .fullPop.ui-dialog body { height:100%; }
 .fullPop.ui-dialog .ui-dialog-content { height: 100% !important; }
-.fullPop.ui-dialog .popup { position: fixed; top: 0; bottom: 0; left: 0; right: 0;}
+.fullPop.ui-dialog .popup { position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
 .fullPop.ui-dialog .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
 
-/* dim */
+/* 딤레이어 모달 */
 .dimPop.ui-dialog { position: fixed !important; top: 0 !important; height: 100% !important; background: transparent !important; }
 .dimPop.ui-dialog html, 
 .dimPop.ui-dialog body { height:100%; }
-.dimPop.ui-dialog .ui-dialog-content { height: 100% !important; background: transparent; }
-.dimPop.ui-dialog .dim { background: transparent !important; }
+.dimPop.ui-dialog .ui-dialog-content { height: 100% !important; background: transparent !important; }
+.dimPop.ui-dialog .ui-dialog-content .dim { background: rgba(0,0,0,0) !important; }
 
+/* ==============================
+* 모달 UI 내 팝업스타일 제어  
+* ============================== */
+
+/* 렌탈전문점 찾기 */
+.ui-dialog.rentalmap { position:fixed !important; top:0 !important; height:100%; }
+.ui-dialog.rentalmap html, 
+.ui-dialog.rentalmap body {height:100%;}
+.ui-dialog.rentalmap .ui-dialog-content {height:100% !important;}
+.ui-dialog.rentalmap .popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
+.ui-dialog.rentalmap .popRentalStore .popHead { position: fixed; }
+.ui-dialog.rentalmap .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
+.ui-dialog.rentalmap .popRentalStore .popContent .mapArea { height:100%; }
+.ui-dialog.rentalmap .popRentalStore .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
+
+.fullPop.ui-dialog { position:fixed !important; top:0 !important; height:100%; }
+.fullPop.ui-dialog html, 
+.fullPop.ui-dialog body { height:100%; }
+.fullPop.ui-dialog .ui-dialog-content {height:100% !important;}
+.fullPop.ui-dialog .popRentalStore { position:fixed; top:0; right:0; bottom:0; left:0; }
+.fullPop.ui-dialog .popRentalStore .popHead { position: fixed; }
+.fullPop.ui-dialog .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
+.fullPop.ui-dialog .popRentalStore .popContent .mapArea { height:100%; }
+.fullPop.ui-dialog .popRentalStore .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
 
 
 
