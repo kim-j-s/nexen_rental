@@ -1201,6 +1201,7 @@ no-repeat left center;}
 .gaugeList li .gauge .bar {position:absolute; top:0; left:0; height:8px; background:#812990;}
 .gaugeList li .value {position:relative; top:-9px; width:75px; padding-right:2px; text-align:right; font-weight:500; font-size:16px; color:#454545;}
 .gaugeList li + li {margin-top:30px;}
+.gaugeList.winter li + li {margin-top:21px;}
 
 .prodGallery {position:relative; float:left; width:428px;}
 .prodGalleryViewer {height:428px; border:1px solid #c5c5c5; text-align:center; overflow:hidden;}
