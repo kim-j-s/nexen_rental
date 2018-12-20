@@ -216,7 +216,7 @@
 * 모달팝업 스타일
 * ============================== */
 
-.ui-front { z-index: 200; }
+.ui-front { z-index: 300; }
 
 /* Overlays */
 .ui-widget-overlay {
@@ -227,15 +227,12 @@
 	right: 0;
 	background: rgba(0,0,0,.5);
 	opacity: unset;
+	overflow-y: hidden;
 }
 .ui-widget-shadow {
 /*	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;*/
 }
-
-/* dimd*/
-
-/* full case */
 
 .ui-dialog {
 	overflow: auto;
@@ -322,7 +319,7 @@
 .ui-widget-content { border: none; }
 .ui-widget-content a { color: #666; }
 
-.ui-dialog-content .popup {} /* full popup */
+.ui-dialog-content .popup {}
 .ui-dialog-content .popHead {}
 .ui-dialog-content .popHead .lBtn { position: absolute; top: 10px; left: 15px; }
 .ui-dialog-content .popHead .lBtn a { color: #fff; }
@@ -332,17 +329,35 @@
 .ui-dialog-content .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
 
 
-/* 2018-12-19 */
+/* 렌탈전문점 모달적용 reset */
 .ui-dialog.rentalmap {position:fixed !important; top:0 !important; height:100%;}
 .ui-dialog.rentalmap html, .ui-dialog.rentalmap body {height:100%;}
 .ui-dialog.rentalmap .ui-dialog-content {height:100% !important;}
 
-
-.popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
-.popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
-.popRentalStore .mapArea {height:100%;}
+.ui-dialog.rentalmap .popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
+.ui-dialog.rentalmap .popRentalStore .popHead { position: fixed; }
+.ui-dialog.rentalmap .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
+.ui-dialog.rentalmap .popRentalStore .mapArea {height:100%;}
 
 /* reset */
 .ui-resizable-handle { display: none !important; }
+
+
+/* 풀팝업 모달적용 시 */
+.fullPop.ui-dialog { position: fixed !important; top: 0 !important; height: 100% !important; }
+.fullPop.ui-dialog html, 
+.fullPop.ui-dialog body { height:100%; }
+.fullPop.ui-dialog .ui-dialog-content { height: 100% !important; }
+.fullPop.ui-dialog .popup { position: fixed; top: 0; bottom: 0; left: 0; right: 0;}
+.fullPop.ui-dialog .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
+
+/* dim */
+.dimPop.ui-dialog { position: fixed !important; top: 0 !important; height: 100% !important; background: transparent !important; }
+.dimPop.ui-dialog html, 
+.dimPop.ui-dialog body { height:100%; }
+.dimPop.ui-dialog .ui-dialog-content { height: 100% !important; background: transparent; }
+.dimPop.ui-dialog .dim { background: transparent !important; }
+
+
 
 
