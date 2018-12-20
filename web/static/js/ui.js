@@ -887,7 +887,6 @@ $(function(){
 		if ( cnt == 0)
 		{
 			$(tgLeft).addClass('off');
-			console.log(this);
 			tireThumbView(cnt);
 		} else if ( cnt < 0)
 		{
@@ -998,8 +997,9 @@ $(function(){
 	function LayerpopupClose(){
 		$('.layerPopupWrap').removeClass('on');
 	};
-	
-	
+
+	// 상품 상세 플로팅 버튼
+	btnAnimate();
 
 	// 상품 상세 하단 플로팅
 	FixBottom();
@@ -1014,14 +1014,26 @@ $(function(){
 
 });
 
+function btnAnimate() {
+	var fBtn1Event = $('.tabWrap.floating2 > .tabList').find('li').eq(0);
+	var fBtn2Event = $('.tabWrap.floating2 > .tabList').find('li').eq(1);
+	$(fBtn1Event).on('click', function(){
+		fBtn2();
+	});
+	$(fBtn2Event).on('click', function(){
+		fBtn1();
+	});
+}
+
+
 // 상품 상세 하단 플로팅
 function FixBottom(){
 	$('.fixedBottom').find('.btn').on('click', function(e){
 		var bpData = $(this).data('bpoint');
 		var BreakPoint = $('.'+ bpData).offset();
 		e.preventDefault();
-		console.log('class : ' + bpData);
-		console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
+		//console.log('class : ' + bpData);
+		//console.log('class : ' + bpData + ' : BreakPoint : ' + BreakPoint.top);
 		$("html, body").animate({
 			scrollTop: BreakPoint.top }
 		,500);
@@ -1215,6 +1227,7 @@ function FixBtnPosition() {
 		}
 	}
 }
+
 
 function fBtn1() {
 	$('.fixedBottom').find('.txt').html('나만의 렌탈 설계하기');
