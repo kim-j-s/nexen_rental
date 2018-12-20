@@ -126,6 +126,7 @@ $(function(){
 	}); 
 
 	// search rental shop
+	var searchShop = $('.searchShop');
 	var toggleBtn = $('.searchShop > .btnTogl')
 	var searchArea = $('.searchShop > .searchWrap')
 
@@ -134,20 +135,22 @@ $(function(){
 		{
 			$(searchArea).slideUp(200);
 			$(toggleBtn).removeClass('on');			
+			$(searchShop).addClass('close');
 		} else {
 			$(searchArea).slideDown(200);
-			$(toggleBtn).addClass('on');
+			$(toggleBtn).addClass('on');		
+			$(searchShop).removeClass('close');
 		}
 	});
 
-	// 렌탈전문점 슬라이드
+	// 렌탈전문점 매장위치&섬네일 슬라이드
+
+	/* 매장위치 */
 	$('.storeThumbs .swiper-slide').mouseenter(function(){
 		$('.storeSlideWrap').find('.mapArea').removeClass('on');
 	}).mouseleave(function(){
 		$('.storeSlideWrap').find('.mapArea').addClass('on');
 	});
-
-	$('.storeSlideWrap .swiper-button-prev, .storeSlideWrap .swiper-button-next').css('display','');
 
 	var galleryTop = new Swiper('.storeView', {
 		spaceBetween: 0,
@@ -163,6 +166,15 @@ $(function(){
 			}
 		}
 	});
+
+	var rentalshopSlideLng = $('.storeThumbs').find('.swiper-slide').length;
+	if (rentalshopSlideLng < 4)
+	{
+		$('.storeSlideWrap').find('.swiper-button-next').hide();
+		$('.storeSlideWrap').find('.swiper-button-prev').hide();
+	}
+
+	console.log(rentalshopSlideLng);
 
 	// 타이어 상품 갤러리
 	var xswiper = new Swiper('.photoSlide', {

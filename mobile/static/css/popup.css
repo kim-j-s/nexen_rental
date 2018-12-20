@@ -3,16 +3,18 @@
 /* ==============================
 * popup - 렌탈전문점 찾기
 * ============================== */
-.popRentalStore { position: relative; }
+.popRentalStore { position:fixed; top:0; bottom:0; left:0; right:0;  }
 .popRentalStore .popHead { position: fixed; z-index: 100; width: 100%; height: 45px; background: #fff; }
-.popRentalStore .popContent {padding: 0;}
+.popRentalStore .popContent { overflow: auto; height:100%; margin:0; padding: 45px 0 0; }
 .popRentalStore .lBtn .btn { width: 65px; min-width: inherit; padding: 0; }
-.popRentalStore .lBtn .btn.light.primary  {color:#812990;border-color:#812990;}
+.popRentalStore .lBtn .btn.light.primary  { color:#812990; border-color:#812990; }
 
 .popRentalStore .popContent .contWrap  { padding: 20px 15px 50px; }
-.popRentalStore .popContent .searchShop + .contWrap { padding: 35px 15px 50px; }
-.popRentalStore .mapArea {width:100%;}
-.popRentalStore .mapArea img {width:100%;}
+/* .popRentalStore .popContent .searchShop { position: fixed; }
+.popRentalStore .popContent .searchShop + .contWrap { padding: 35px 15px 50px; } */
+.popRentalStore .popContent .mapArea { width:100%;  height:100%; }
+.popRentalStore .popContent .mapArea img {width:100%;}
+.popRentalStore .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
 
 .fixedBottom {position:fixed; bottom:0; left:0; z-index:5; width:100%; background:#ffffff; box-shadow: 0px 0px 6px 2px #c7c7c7;}
 .fixedBottom .storeInfo dl { padding: 20px 15px 15px; }
@@ -99,7 +101,7 @@
 .storeInfo .addInfo .btns .btn { width: 60px; min-width: inherit; padding: 0;}
 .storeInfo .addInfo .btns .btn + .btn {margin-left: 5px;}
 
-.searchShop {position:relative;/*padding-top:45px;*/}
+.searchShop {position: fixed; width: 100%; z-index: 2; }
 .searchShop .searchWrap {background:#fafafa; border-bottom:1px solid #a9a9a9; padding:20px 15px 18px 15px;}
 .searchShop .searchWrap > dl {display:table; width:100%; margin:0 0 5px 0;}
 .searchShop .searchWrap > dl:nth-child(4) { margin-bottom:10px;}
@@ -109,6 +111,9 @@
 .searchShop .btnTogl {position:absolute; top:100%; left:50%; margin-left:-22px; margin-top:0px; cursor:pointer; display:block; font-size:0; width:44px; height:16px; background:url(../images/common/btn/bg_btn2.png) no-repeat 0 0; background-size:44px 32px; }
 .searchShop .btnTogl.on {background-position:0 -16px; margin-top:-1px;}
 
+.searchShop + .contWrap { margin-top: 240px; padding: 35px 15px 50px !important; }
+.searchShop.close + .contWrap { margin-top: 0; padding: 35px 15px 50px; }
+
 .rentalShopList li:not(:first-child) { margin-top: 10px;}
 .rentalShopList .storeInfo {border: 1px solid #d5d5d5;}
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
@@ -116,7 +121,7 @@
 /*매장위치 슬라이드*/
 .storeSlideWrap { position: relative; height: 340px; width: 100%;}
 
-.storeSlideWrap .mapArea { display: none; position: absolute; top: 0; left: 0; z-index: 50; overflow: hidden; box-sizing: border-box; height: 280px; border: 1px solid #d5d5d5; }
+.storeSlideWrap .mapArea { display: none; position: absolute; top: 0; left: 0; z-index: 50; overflow: hidden; box-sizing: border-box; height: 280px !important; border: 1px solid #d5d5d5; }
 .storeSlideWrap .mapArea.on { display: block;}
 
 .storeView { height: 280px;  border: 1px solid #d5d5d5; text-align: center; }
@@ -216,7 +221,7 @@
 * 모달팝업 스타일
 * ============================== */
 
-.ui-front { z-index: 300; }
+.ui-front { z-index: 200; }
 
 /* Overlays */
 .ui-widget-overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0;	background: rgba(0,0,0,.8);	opacity: unset;	overflow-y: hidden; }
@@ -236,7 +241,7 @@
 .ui-widget-content { border: none; }
 .ui-widget-content a { color: #666; }
 
-.ui-dialog-content { overflow: auto; position: relative; z-index: 300; width: 100%; height: 100%; min-height: 100%; padding: 0 !important; border: 0; background: #fff; }
+.ui-dialog-content { overflow: auto; position: relative; z-index: 200; width: 100%; height: 100%; min-height: 100%; padding: 0 !important; border: 0; background: #fff; }
 .ui-dialog-content .popup { position:fixed; }
 .ui-dialog-content .popHead { position:fixed; }
 .ui-dialog-content .popHead .lBtn { position: absolute; top: 10px; left: 15px; }
@@ -244,6 +249,7 @@
 .ui-dialog-content .popContent { overflow: auto; }
 .ui-dialog-content .popContent .btn { color: #fff; }
 .ui-dialog-content .popContent .btn[disabled] { color: #7f7f7f; }
+.ui-dialog-content .dim { background: rgba(0,0,0,0) !important; }
 
 /* reset */
 .ui-resizable-handle { display: none !important; }
@@ -261,7 +267,6 @@
 .dimPop.ui-dialog html, 
 .dimPop.ui-dialog body { height:100%; }
 .dimPop.ui-dialog .ui-dialog-content { height: 100% !important; background: transparent !important; }
-.dimPop.ui-dialog .ui-dialog-content .dim { background: rgba(0,0,0,0) !important; }
 
 /* ==============================
 * 모달 UI 내 팝업스타일 제어  
@@ -272,21 +277,4 @@
 .ui-dialog.rentalmap html, 
 .ui-dialog.rentalmap body {height:100%;}
 .ui-dialog.rentalmap .ui-dialog-content {height:100% !important;}
-.ui-dialog.rentalmap .popRentalStore {position:fixed; top:0; right:0; bottom:0; left:0;}
-.ui-dialog.rentalmap .popRentalStore .popHead { position: fixed; }
-.ui-dialog.rentalmap .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
-.ui-dialog.rentalmap .popRentalStore .popContent .mapArea { height:100%; }
-.ui-dialog.rentalmap .popRentalStore .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
-
-.fullPop.ui-dialog { position:fixed !important; top:0 !important; height:100%; }
-.fullPop.ui-dialog html, 
-.fullPop.ui-dialog body { height:100%; }
-.fullPop.ui-dialog .ui-dialog-content {height:100% !important;}
-.fullPop.ui-dialog .popRentalStore { position:fixed; top:0; right:0; bottom:0; left:0; }
-.fullPop.ui-dialog .popRentalStore .popHead { position: fixed; }
-.fullPop.ui-dialog .popRentalStore .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; }
-.fullPop.ui-dialog .popRentalStore .popContent .mapArea { height:100%; }
-.fullPop.ui-dialog .popRentalStore .popContent .storeInfo .addInfo .btns .btn.light { color: #666; }
-
-
 
