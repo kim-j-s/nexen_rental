@@ -22,7 +22,7 @@
 .layerPopWrap .imgWrap {max-width:100%;}
 .layerPopWrap .imgWrap img {width:100%;}
 
-#dimTopLayer {position:absolute; top:0px; left:0; right: 0; width:100%; z-index:60;}
+#dimTopLayer {position:fixed; top:0px; left:0; right: 0; width:100%; z-index:60;}
 #dimBotLayer {position:absolute; top:0px; left:0; right: 0; bottom:0; width:100%; height:100%; z-index:210;}
 .dim {display:block; position:fixed; top:0; left:0; right: 0; bottom:0; z-index:200; width:100%; height:100%; overflow:auto; background: rgba(0,0,0,.8); } /* full dimmed */
 .dimCont {display:none; position:fixed; top:0; left:0; right: 0; bottom:0; width:100%; height:100%; background-color:#000; opacity:0.8; z-index:50 } /* except header */
@@ -548,9 +548,10 @@ p.mark1 {display:block;}
 .sectionTire .tabMenu .tabList.top ~ .tabContent.on { padding: 55px 15px 50px; }
 
 .searchWrap {width:100%;}
-.searchWrap dl {display:table; width:100%; margin:0 0 5px 0;}
-.searchWrap dl dt {display:table-cell; width:27%; font-size:12px; font-weight:500; color:#333;  vertical-align: middle;}
-.searchWrap dl dd {display:table-cell;}
+.searchWrap dl {display:table; width:100%; margin-bottom: 5px; }
+.searchWrap dl:last-child { margin-bottom: 0; }
+.searchWrap dl dt {display:table-cell; width:27%; height: 35px; font-size:12px; font-weight:500; color:#333;  vertical-align: middle;}
+.searchWrap dl dd {display:table-cell; height: 35px; }
 .searchWrap dl dd select {width:100%;} 
 
 /* 상품 갤러리 */
@@ -722,13 +723,14 @@ p.mark1 {display:block;}
 .easySearchWrap .searchWrap .btnArea {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchWrap .btnArea a.btn {display:table-cell; height:45px; line-height:45px; color:#fff; font-size:16px; font-weight:400; text-align:center; background:#3c079d}
 .easySearchWrap .searchWrap .btnArea a.btn + .btn {background:#5f14ea}
-.easySearchWrap .searchWrap .txt { margin-bottom: 15px; color: #333; font-size: 14px; text-align: center; }
+.easySearchWrap .searchWrap > .txt { margin-bottom: 15px; color: #333; font-size: 14px; text-align: center; }
 .easySearchWrap .searchOptList {padding:20px 15px 10px 15px;}
 .easySearchWrap .searchOptList ul {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchOptList ul li {display:table-cell; box-sizing:border-box;}
 .easySearchWrap .searchOptList ul li:nth-child(1) {padding-right:5px;}
 .easySearchWrap .searchOptList ul li button {width:100%; border:1px solid #fff; border:1px solid #d6d6d6; border-radius:3px; box-sizing:border-box; height:35px; background:#efefef; color:#000000; font-size:12px; font-weight:400;}
 .easySearchWrap .searchOptList ul li button.on {background:#fff; border:1px solid #812990; color:#812990;}
+
 .tooltip {text-align:right; margin:10px 0;}
 .tooltip .txt {cursor:pointer; display:inline-block; font-size:11px; font-weight:400; color:#454545; border-bottom:1px solid #454545; padding-bottom:3px;}
 .tooltip .iconToolTip {cursor:pointer; margin-left:4px; display:inline-block; vertical-align: middle; width:15px; height:15px; font-size:0; background:url('../images/common/icon/icon_toolTip.png') no-repeat; background-size:100%;}
