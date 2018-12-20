@@ -895,9 +895,10 @@ body.errorPage {
     border-radius: calc(24px / 2);
 }
 
-.btn.large {}
-
 a.btn { text-decoration: none !important; }
+
+.btn .innerIcon { line-height: 33px; }
+
 
 /* 버튼 내부 아이콘 button > span 클래스 지정  */
 .innerIcon {
