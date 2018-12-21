@@ -738,6 +738,7 @@ p.mark1 {display:block;}
 .tireSearchWrap .btnArea {margin-top:0;}
 .tireSearchWrap .btnArea button {position:relative;}
 .tireSearchWrap .btnArea button[disabled="disabled"]:after {position:absolute; top:0; bottom:0; left:0; bottom:0; width:100%; height:100%; content:''; background:#000000; opacity:0.5; display:block; z-index:1;}
+.tireSearchWrap .btnArea button span { display: block; line-height: 45px; }
 .tireSearchWrap .searchWrap {display:none; background:#fafafa; padding:0 15px 10px 15px;}
 .tireSearchWrap .searchWrap .searchOptList {display:none;}
 .tireSearchWrap .searchWrap .searchOptList.on {display:block;} 
