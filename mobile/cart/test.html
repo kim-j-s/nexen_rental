@@ -244,6 +244,7 @@
 
 	$(window).scroll(function(){
 		var top = $('body, html').scrollTop();
+		var scrollTop = $(window).scrollTop();
 		var windowH = $(window).outerHeight();
 		//var windowH = screen.height;
 		var itemTotalH = $('.itemTotal').outerHeight();
@@ -261,7 +262,7 @@
 		*/
 
 		$(itemTotalCont).height(itemTotalH);
-		$('.fix').html('v4 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH );
+		$('.fix').html('v5 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH + ' 컨텐츠 높이 + ' + contH + ' 푸터 높이 + ' + footHeight + ' 아이폰 스크롤 탑 + ' + scrollTop);
 		if ( top > breakObj)
 		{
 			$('.itemTotal').addClass('on');
@@ -273,6 +274,7 @@
 
 	$(window).resize(function(){
 		var top = $('body, html').scrollTop();
+		var scrollTop = $(window).scrollTop();
 		var windowH = $(window).outerHeight();
 		//var windowH = screen.height;
 		var itemTotalH = $('.itemTotal').outerHeight();
@@ -282,7 +284,7 @@
 		var contH = $('#wrap').height();
 		var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
 		$(itemTotalCont).height(itemTotalH);
-		$('.fix').html('v4 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH );
+		$('.fix').html('v5 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH +  ' 아이폰 스크롤 탑 + ' + scrollTop);
 		if ( top > breakObj)
 		{
 			$('.itemTotal').addClass('on');
