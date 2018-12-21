@@ -699,6 +699,7 @@ $(window).load(function(){
 });
 
 // 장바구니 플로팅 전체금액
+/*
 $(window).load(function(){
 	$(window).scroll(function(){
 		var itemTotalLng = $('.itemTotal').length;
@@ -728,7 +729,7 @@ $(window).load(function(){
 		}
 	}
 });
-
+*/
 // 상품상세 - fixed Tab
 function fixedMoveTab (){
 	var $tabWraper = $('.tabList');
