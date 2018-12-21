@@ -230,11 +230,62 @@
 <script type="text/javascript">
 // 장바구니 플로팅 전체금액
 	var itemTotalLng = $('.itemTotal').length;
+	/*
+	var windowH = $(window).height();
+	var itemTotalH = $('.itemTotal').outerHeight();
+	var itemTotalCont = $('.itemTotalCont');
+	var itemTotalContOff = $('.itemTotalCont').offset();
+	var footHeight = $('#footerWrap').height();
+	var contH = $('#wrap').height();
+	var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
+	*/
+
+	
+
 	$(window).scroll(function(){
-		var itemTotalLng = $('.itemTotal').length;
+		var top = $('body, html').scrollTop();
+		var windowH = $(window).height();
+		var itemTotalH = $('.itemTotal').outerHeight();
+		var itemTotalCont = $('.itemTotalCont');
+		var itemTotalContOff = $('.itemTotalCont').offset();
+		var footHeight = $('#footerWrap').height();
+		var contH = $('#wrap').height();
+		var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
+
+		/*
 		if (itemTotalLng > 0)
 		{
 			cartTotal();
+		}
+		*/
+
+		$(itemTotalCont).height(itemTotalH);
+		$('.fix').html('v2 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH );
+		if ( top > breakObj)
+		{
+			$('.itemTotal').addClass('on');
+		} else {
+			$('.itemTotal').removeClass('on');
+		}
+
+	});
+
+	$(window).resize(function(){
+		var top = $('body, html').scrollTop();
+		var windowH = $(window).height();
+		var itemTotalH = $('.itemTotal').outerHeight();
+		var itemTotalCont = $('.itemTotalCont');
+		var itemTotalContOff = $('.itemTotalCont').offset();
+		var footHeight = $('#footerWrap').height();
+		var contH = $('#wrap').height();
+		var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
+		$(itemTotalCont).height(itemTotalH);
+		$('.fix').html('v2 스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH );
+		if ( top > breakObj)
+		{
+			$('.itemTotal').addClass('on');
+		} else {
+			$('.itemTotal').removeClass('on');
 		}
 	});
 	
@@ -244,20 +295,12 @@
 		cartTotal();
 	}
 	*/
-	function cartTotal() {
-		var top = $('body, html').scrollTop();
-		var windowH = $(window).height();
-		var itemTotalH = $('.itemTotal').outerHeight();
-		var itemTotalCont = $('.itemTotalCont');
-		var itemTotalContOff = $('.itemTotalCont').offset();
-		var footHeight = $('#footerWrap').height();
+	
 
-		var contH = $('#wrap').height();
-		//var breakObj = contH - windowH;
-		var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
+	function cartTotal() {
 
 		$(itemTotalCont).height(itemTotalH);
-		$('.fix').html('스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH + ' 푸터 높이 + ' + footHeight);
+		$('.fix').html('스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH );
 		if ( top > breakObj)
 		{
 			$('.itemTotal').addClass('on');
