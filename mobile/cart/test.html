@@ -250,17 +250,14 @@
 		var itemTotalH = $('.itemTotal').outerHeight();
 		var itemTotalCont = $('.itemTotalCont');
 		var itemTotalContOff = $('.itemTotalCont').offset();
-		//var bpObj = $('.itemTotalCont').offset();
-		//var bp = (bpObj.top + itemTotalH) - windowH;
 		var footHeight = $('#footerWrap').height();
 
 		var contH = $('#wrap').height();
-		//var footerH = $('#footerWrap').height();
-		var winH = $(window).height();
-		var breakObj = contH - (winH + footHeight + 45);
+		//var breakObj = contH - windowH;
+		var breakObj = (itemTotalContOff.top - windowH) + itemTotalH ;
 
 		$(itemTotalCont).height(itemTotalH);
-		$('.fix').html('스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + '정지 위치 + ' + breakObj + ' 워렙 높이 + ' + contH + ' 윈도우 높이 + ' + winH + ' 푸터 높이 + ' + footHeight);
+		$('.fix').html('스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + ' 브레이크값 + ' + breakObj + ' 윈도우 높이 + ' + windowH + ' 푸터 높이 + ' + footHeight);
 		if ( top > breakObj)
 		{
 			$('.itemTotal').addClass('on');
