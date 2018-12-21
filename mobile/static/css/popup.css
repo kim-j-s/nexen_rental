@@ -117,7 +117,7 @@
 .rentalShopList li:not(:first-child) { margin-top: 10px;}
 .rentalShopList .storeInfo {border: 1px solid #d5d5d5;}
 .rentalShopList .storeInfo .addInfo { border-top: 0; }
-.rentalShopList .noResult { border: none; padding: 150px 0; text-align: center; }
+.rentalShopList .noResult { border: none; padding: 50px 0; text-align: center; }
 .rentalShopList .noResult:before { content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 15px;  background: url('../images/common/icon/icon_noresult.png') no-repeat; background-size: 100%; }
 
 

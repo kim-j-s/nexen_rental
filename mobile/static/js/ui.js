@@ -174,7 +174,7 @@ $(function(){
 		$('.storeSlideWrap').find('.swiper-button-prev').hide();
 	}
 
-	console.log(rentalshopSlideLng);
+	//console.log(rentalshopSlideLng);
 
 	// 타이어 상품 갤러리
 	var xswiper = new Swiper('.photoSlide', {
