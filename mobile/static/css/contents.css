@@ -1092,7 +1092,7 @@ img.full { width: 100%;}
 .itemInfo .info .label { padding-bottom: 5px; }
 .itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; }
 .itemInfo .info .tit { color:#000; font-size:15px; font-weight: 500; line-height: 16px;}
-.itemInfo .info .desc { font-size: 11px;  }
+.itemInfo .info .desc { margin-top: 2px; font-size: 11px;  }
 .itemInfo .info .desc li { color: #999; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .itemInfo .info .option { margin-top: 5px; color: #999; font-size: 11px; }
 .itemInfo .info .option span:not(:first-child):before { content: ''; display: inline-block; width: 1px;	height: 9px; margin: 0 9px 0 6px; background: #c4c4c4; vertical-align: -1px; }
