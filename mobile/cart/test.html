@@ -221,8 +221,15 @@
         <div class="btnGoTop"><a href="#">Top으로 이동</a></div>
         <!-- //Top버튼 -->
 
+<div class="fix"></div>
+
+<style type="text/css">
+.fix {position:fixed; z-index:8888; top:20px; left:20px; background:#fff; border:1px solid blue; line-height:20px; padding:10px;}
+</style>
+
 <script type="text/javascript">
 // 장바구니 플로팅 전체금액
+	var itemTotalLng = $('.itemTotal').length;
 	$(window).scroll(function(){
 		var itemTotalLng = $('.itemTotal').length;
 		if (itemTotalLng > 0)
@@ -230,25 +237,44 @@
 			cartTotal();
 		}
 	});
-	var itemTotalLng = $('.itemTotal').length;
+	
+	/*
 	if (itemTotalLng > 0)
 	{
 		cartTotal();
 	}
+	*/
 	function cartTotal() {
 		var top = $('body, html').scrollTop();
 		var windowH = $(window).height();
 		var itemTotalH = $('.itemTotal').outerHeight();
 		var itemTotalCont = $('.itemTotalCont');
-		var bpObj = $('.itemTotalCont').offset();
-		var bp = (bpObj.top + itemTotalH) - windowH;
+		var itemTotalContOff = $('.itemTotalCont').offset();
+		//var bpObj = $('.itemTotalCont').offset();
+		//var bp = (bpObj.top + itemTotalH) - windowH;
+		var footHeight = $('#footerWrap').height();
+
+		var contH = $('#wrap').height();
+		//var footerH = $('#footerWrap').height();
+		var winH = $(window).height();
+		var breakObj = contH - (winH + footHeight + 45);
+
 		$(itemTotalCont).height(itemTotalH);
-		if ( top > bp)
+		$('.fix').html('스크롤 탑 : ' + top + ' 정지 위치 : ' + itemTotalContOff.top + '정지 위치 + ' + breakObj + ' 워렙 높이 + ' + contH + ' 윈도우 높이 + ' + winH + ' 푸터 높이 + ' + footHeight);
+		if ( top > breakObj)
 		{
 			$('.itemTotal').addClass('on');
 		} else {
 			$('.itemTotal').removeClass('on');
 		}
+/*
+		if (breakObj > Top)
+		{
+			$('.fixedBottom').addClass('on');
+		} else {
+			$('.fixedBottom').removeClass('on');
+		}
+*/
 	}
 </script>
 
