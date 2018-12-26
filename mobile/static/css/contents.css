@@ -1510,4 +1510,10 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
 
 
+/**/
+.contTitle.rbtn { display: flex; justify-content: space-between; align-items: center; }
+.contTitle .txt { width: calc(100% - 96px); }
+
+
+
 
