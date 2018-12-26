@@ -6,7 +6,7 @@ $(function(){
 	
 	uiMain.init();
 	uiForm();
-	footerFix();
+	// footerFix();
 
 	// 메인 
 	tireContSelect();
@@ -753,17 +753,3 @@ function fixedMoveTab (){
 		e.preventDefault();
 	});
 }
-
-// 푸터고정(컨텐츠길이 짧을 경우)
-function footerFix(){
-	var winHeight = $(window).height(); 
-	var wrapHeight = $('#wrap').height();
-	var footerArea = $('#footerWrap');
-
-	if( wrapHeight < winHeight) {
-		// console.log(wrapHeight + "<" + winHeight);
-		footerArea.addClass('fixBot');
-	}
-}
-
-
