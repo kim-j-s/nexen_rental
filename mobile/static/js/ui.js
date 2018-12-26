@@ -6,6 +6,7 @@ $(function(){
 	
 	uiMain.init();
 	uiForm();
+	footerFix();
 
 	// 메인 
 	tireContSelect();
@@ -144,8 +145,6 @@ $(function(){
 	});
 
 	// 렌탈전문점 매장위치&섬네일 슬라이드
-
-	/* 매장위치 */
 	$('.storeThumbs .swiper-slide').mouseenter(function(){
 		$('.storeSlideWrap').find('.mapArea').removeClass('on');
 	}).mouseleave(function(){
@@ -173,8 +172,6 @@ $(function(){
 		$('.storeSlideWrap').find('.swiper-button-next').hide();
 		$('.storeSlideWrap').find('.swiper-button-prev').hide();
 	}
-
-	//console.log(rentalshopSlideLng);
 
 	// 타이어 상품 갤러리
 	var xswiper = new Swiper('.photoSlide', {
@@ -313,8 +310,8 @@ $(function(){
 * ============================== */
 var uiMain = {
 	init : function(){
-		this.close(); // 전체 메뉴
-		this.menu(); // 전체 메뉴
+		this.close(); // 전체메뉴 닫기
+		this.menu(); // 전체메뉴
 		this.goTop(); // top버튼 클릭시 페이지 상단으로 이동
 		this.nav(); // gnb메뉴
 		this.botNavList(); // gnb메뉴
@@ -665,9 +662,6 @@ function slideCont() {
 // 플로팅메뉴
 $(window).load(function(){
 	
-	// 메인 처음 진입 시
-	// $('.main').find('.floatingWrap').addClass('fixBotNav');
-
 	$(window).scroll(function() {
 		var st = $(this).scrollTop();
 		var fixedStartY = 50;	
@@ -685,16 +679,11 @@ $(window).load(function(){
 			$('#headerWrap').removeClass('fixed');
 	
 			$('.btnGoTop').removeClass('on');
-0
+
 			$('.floatingWrap').removeClass('fixBotNav');
 			$('#footerWrap').removeClass('on');
 		}
-	
-		// 타이어 상품
-		// $('.sectionTire .fixedBot:visible').each(function(){
-		// 	$(this).closest('#wrap').find('#footerWrap').css('padding-bottom' , $(this).outerHeight() );
-		// });
-	
+
 	});
 });
 
@@ -765,5 +754,16 @@ function fixedMoveTab (){
 	});
 }
 
+// 푸터고정(컨텐츠길이 짧을 경우)
+function footerFix(){
+	var winHeight = $(window).height(); 
+	var wrapHeight = $('#wrap').height();
+	var footerArea = $('#footerWrap');
+
+	if( wrapHeight < winHeight) {
+		// console.log(wrapHeight + "<" + winHeight);
+		footerArea.addClass('fixBot');
+	}
+}
 
 
