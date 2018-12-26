@@ -1318,6 +1318,10 @@ no-repeat left center;}
 .optEle .contractChk > .btnBox {text-align:center;}
 .optEle .contractChk > .btnBox .viewBtn {width:130px; height:36px; background:#812990; border-radius:45px;}
 .optEle .contractChk > .btnBox .viewBtn > span {color:#fff;}
+.optEle .contractChk > .txt.checkOk {padding-top:58px; background:url(../images/common/icon/icon_check.png) no-repeat center top; line-height:20px;}
+.optEle .contractChk .dpClass {display:inline-block; width:130px; border:2px solid #812990; border-radius:45px; text-align:center; background:transparent;}
+.optEle .contractChk .dpClass .txt {display:inline-block; line-height:32px; padding-left:20px; background:url(../images/common/icon/icon_chk.png) no-repeat left center; color:#812990;}
+
 
 .tips {}
 .tips .black {font-weight:500; color:#353535;}

@@ -337,6 +337,8 @@ td .textarea {width:100%;}
 .contTitle {padding: 0 0 30px 0;}
 .contTitle > .txt {font-size:13px; font-weight:300; color:#000; }
 .contTitle .headTitle { margin-bottom: 10px; }
+.contTitle.rbtn { display: flex; justify-content: space-between; align-items: center; }
+.contTitle.rbtn .txt { width: calc(100% - 96px); }
 
 .itemtList1 {overflow:hidden;}
 .itemtList1 > li {position:relative; width:100%;}
@@ -400,7 +402,7 @@ td .textarea {width:100%;}
 .itemtList2.inquiry li { position: relative; }
 .itemtList2.inquiry li .desc { padding-right: 65px; font-size: 12px; font-weight: 300;}
 .itemtList2.inquiry .topTxt { margin-bottom: 10px; }
-.itemtList2.inquiry .btn { position: absolute; top: 50%; right:0; width: 50px; margin-top: -10px; }
+.itemtList2.inquiry .btn { position: absolute; top: 50%; right:0; z-index: 5; width: 50px; margin-top: -10px; }
 .itemtList2.inquiry .label { height: 17px; line-height: 15px; margin-right: 2px; padding: 0 6px; border: 1px solid #999; color: #999; font-size: 11px;}
 .itemtList2.inquiry .label.point { border: none; background: #812990; color: #fff; font-size: 11px; line-height: 17px;}
 
@@ -1510,9 +1512,6 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
 
 
-/**/
-.contTitle.rbtn { display: flex; justify-content: space-between; align-items: center; }
-.contTitle .txt { width: calc(100% - 96px); }
 
 
 
