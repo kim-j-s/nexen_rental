@@ -593,24 +593,26 @@ p.mark1 {display:block;}
 .tabContent .list1 .ulBar {margin-bottom:10px;}
 .tabContent .list1 .ulBar li {margin:5px 0 0 5px; font-size:12px;}
 
-.mainTech {overflow:hidden;}
-.mainTech li {position:relative; float:left; display:block; padding-top:35px; min-width:40px; text-align:center; margin-bottom:5px;}
-.mainTech li span {text-align:center; color:#676767; font-size:8px; font-weight:400;}
+.mainTech {}
+.mainTech:after { content: ''; display: block; clear: both; } 
+.mainTech li { float:left;  margin-right: 7px; margin-bottom: 2px; }
+.mainTech li img { display: inline-block; width: 30px; vertical-align: top; }
+.mainTech li span { position: relative; display:block; min-width:40px; padding-top:35px; color:#676767; font-size:8px; font-weight:400; text-align: center; }
 .mainTech li span:after {position:absolute; display: block; content:''; top:0; left:50%; margin-left:-15px; width:30px; height:31px; background:#fff url('../images/prd/icon_mainTech.png') no-repeat; background-size:240px 31px;}
-.mainTech li:nth-child(1) span:after {background-position:-30 0;} /* 비대칭 */
+.mainTech li:nth-child(1) span:after {background-position:-30 0;} /* 비대칭 */ 
 .mainTech li:nth-child(2) span:after {background-position:-60px 0;} /* 사계절 */
 .mainTech li:nth-child(3) span:after {background-position:-90px 0;} /* 승차감 */
 .mainTech li:nth-child(4) span:after {background-position:-120px 0;} /* 정숙성 */
 .mainTech li:nth-child(5) span:after {background-position:-150px 0;} /* 제동성 */
-.mainTech li:nth-child(6) span:after {background-position:-180px 0;} /* 주행안전성 */
+.mainTech li:nth-child(6) span:after {background-position:-180px 0;} /* 주행안전성 */ 
 .mainTech li:nth-child(7) span:after {background-position:-210px 0;} /* 초고성능 */
 
 .techSkill {overflow:hidden;}
 .techSkill li {float:left; display:block; margin:0 5px 5px 0}
 .techSkill li img {height:30px;}
 
-
 .productSearchWrap { margin-top: 20px; }
+
 .count { margin-bottom: 10px; color:#000; font-size:12px; font-weight:300;}
 .count .total { color:#812990; font-weight: 500; }
 
@@ -1510,6 +1512,11 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contracWrap .storeInfo .addInfo .date { position: absolute; top: 0; right: 15px; line-height: 40px; color: #999; font-weight: 400;}
 .contracWrap .storeInfo .btnBox { padding: 0 5px 5px; }
 .contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
+
+
+
+
+
 
 
 
