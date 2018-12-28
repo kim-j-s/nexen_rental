@@ -725,7 +725,7 @@ p.mark1 {display:block;}
 .easySearchWrap .searchWrap .btnArea {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchWrap .btnArea a.btn {display:table-cell; height:45px; line-height:45px; color:#fff; font-size:16px; font-weight:400; text-align:center; background:#3c079d}
 .easySearchWrap .searchWrap .btnArea a.btn + .btn {background:#5f14ea}
-.easySearchWrap .searchWrap > .txt { margin-bottom: 15px; color: #333; font-size: 14px; text-align: center; }
+.easySearchWrap .searchWrap .searchOptList > .txt { margin-bottom: 15px; color: #333; font-size: 14px; text-align: center; }
 .easySearchWrap .searchOptList {padding:20px 15px 10px 15px;}
 .easySearchWrap .searchOptList ul {display:table; table-layout:fixed; width:100%;}
 .easySearchWrap .searchOptList ul li {display:table-cell; box-sizing:border-box;}
