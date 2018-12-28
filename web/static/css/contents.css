@@ -805,10 +805,11 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .memberClass {padding:30px 23px; background:#f5f5f5; border:1px solid #e5e5e5; overflow:hidden;}
 .memberClass > .txt {float:left; font-weight:500; font-size:18px; color:#333; line-height:36px;}
 .memberClass > .view {float:right;}
-.memberClass > .view .dpClass {display:block; width:130px; border:2px solid #812990; border-radius:45px; text-align:center; background:#fff;}
+.memberClass > .view .dpClass {display:inline-block; width:130px; border:2px solid #812990; border-radius:45px; text-align:center; background:#fff;}
 .memberClass > .view .dpClass .txt {display:inline-block; line-height:32px; padding-left:20px; background:url(../images/common/icon/icon_chk.png) no-repeat left center; color:#812990;}
 .memberClass + .prdDetailCont {margin-top:50px;}
-
+.memberClass .viewBtn {width:130px; height:36px; margin-left: 3px; background:#812990; border-radius:45px;vertical-align:top;}
+.memberClass .viewBtn > span {color:#fff;}
 
 /* 이벤트 페이지 */
 .contTitle {position:relative; padding:45px 150px 0 0;}

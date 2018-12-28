@@ -301,6 +301,7 @@
 			<h1 class="sectionTitle">멤버십</h1>
 			<h2 class="sectionTitle2">멤버십 상품 가입하기</h2>
 
+			<!-- 2018-12-28 수정 -->
 			<div class="memberClass">
 				<p class="txt">신규 가입자 혹은 기존 가입자 유무를 확인 하기 위한 "계약확인"을 진행해 주세요</p>
 				<div class="view">
@@ -310,38 +311,19 @@
 					<!-- 신규 가입자 노출 -->
 					<span class="dpClass"><span class="txt">신규 가입자</span></span>
 					<!--// 신규 가입자 노출 -->
-
+				
 					<!-- 기존 가입자 노출 -->
 					<!-- <span class="dpClass"><span class="txt">기존 가입자</span></span> -->
 					<!--// 기존 가입자 노출 -->
+
+					<button class="viewBtn"><span>계약확인</span></button>
 				</div>
 			</div>
 
 			<div class="prdDetailCont">
 				<div class="prodSetting bPoint1">
 					<div class="optEle">
-						<p class="title">01. 계약확인</p>
-						<div class="contractChk">
-							<p class="txt"><strong>신규 가입자</strong> 혹은 <strong>기존 가입자</strong> 유무를 <br />확인하기 위한 <strong>"계약확인"을 진행</strong>해 주세요.</p>
-							<div class="btnBox">
-								<button class="viewBtn"><span>계약확인</span></button>
-							</div>
-						</div>
-						<!-- 2018-12-26 수정 -->
-						<!-- 계약확인 완료 후 상태 노출 -->
-						<!-- <div class="contractChk">
-							<p class="txt checkOk">고객님의  <strong>서비스 가입 유무</strong><br /> 정보 확인에 감사드립니다.</p>
-							<div class="btnBox">
-								<span class="dpClass"><span class="txt">기존 가입자</span></span>
-								<span class="dpClass"><span class="txt">신규 가입자</span></span>
-							</div>
-						</div> -->
-						<!-- // 계약확인 완료 후 상태 노출 -->
-						<!-- // 2018-12-26 수정 -->
-					</div>
-
-					<div class="optEle">
-						<p class="title">02. 차종선택</p>
+						<p class="title">01. 차종선택</p>
 						<div class="tabWrap mini">
 							<ul class="tabList carTypeSelect">
 								<li class="on"><button><span>국내</span></button></li>
@@ -452,25 +434,55 @@
 					</div>
 
 					<div class="optEle">
-						<p class="title">03. 기간 선택</p>
+						<p class="title">02. 기간 선택</p>
 						<div class="tireOptions">
 							<div class="cont">
 								<ul class="tireOptionList">
 									<li>
-										<input type="radio" name="tireCnt" id="tireCnt1" />
-										<label for="tireCnt1">12개월</label>
+										<input type="radio" name="tirePeriod" id="tirePeriod1" />
+										<label for="tirePeriod1">12개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tirePeriod" id="tirePeriod2" />
+										<label for="tirePeriod2">24개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tirePeriod" id="tirePeriod3" />
+										<label for="tirePeriod3">36개월</label>
+									</li>
+									<li>
+										<input type="radio" name="tirePeriod" id="tirePeriod4" />
+										<label for="tirePeriod4">48개월</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="optEle">
+						<p class="title">03. 타이어 제조사 선택</p>
+						<div class="tireOptions">
+							<div class="cont">
+								<ul class="tireOptionList">
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt1" checked="checked" />
+										<label for="tireCnt1">넥센타이어</label>
 									</li>
 									<li>
 										<input type="radio" name="tireCnt" id="tireCnt2" />
-										<label for="tireCnt2">24개월</label>
+										<label for="tireCnt2">한국타이어</label>
 									</li>
 									<li>
 										<input type="radio" name="tireCnt" id="tireCnt3" />
-										<label for="tireCnt3">36개월</label>
+										<label for="tireCnt3">금호타이어</label>
 									</li>
 									<li>
 										<input type="radio" name="tireCnt" id="tireCnt4" />
-										<label for="tireCnt4">48개월</label>
+										<label for="tireCnt4">수입타이어</label>
+									</li>
+									<li>
+										<input type="radio" name="tireCnt" id="tireCnt5" />
+										<label for="tireCnt5">기타타이어</label>
 									</li>
 								</ul>
 							</div>
@@ -487,6 +499,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- // 2018-12-28 수정 -->
 
 			<div class="prdDetailCont">
 				<ul class="itemtList3">
