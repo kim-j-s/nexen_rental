@@ -514,6 +514,8 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .prodTire > .orderInfo {display:table-cell; padding-left:24px; vertical-align:middle; font-size:0;}
 .prodTire > .orderInfo2 {display:table-cell; padding-left:50px; vertical-align:middle; font-size:0;}
 .prodTire > .orderInfo2.etc {padding-left:32px;}
+.prodTire > .orderInfo2 .prdCate { color: #812990; font-weight: 700;} /*렌탈상품 분류*/
+
 
 .orderInfo2 > .txt {font-weight:400; font-size:14px; color:#666; line-height:24px;}
 .orderInfo2 > .prodName {margin-top:2px; font-size:16px; color:#666;}
@@ -1001,6 +1003,7 @@ no-repeat left center;}
 .tireInfo2 > dt {position:relative; padding-top:50px; font-weight:500; font-size:26px; color:#353535;}
 .tireInfo2 > dt > small {font-weight:500; font-size:18px; color:#454545;}
 .tireInfo2 > dt > span {position:absolute; top:0; left:0; font-weight:400; font-size:14px; color:#666; line-height:24px;}
+.tireInfo2 > dt .prdCate {  color: #812990; font-weight: 700;}
 .tireInfo2 > dd {padding-top:11px;}
 .tireInfo2 > dd > span {position:relative; display:inline-block; width:202px; padding-left:9px; margin-top:11px; font-size:16px;}
 .tireInfo2 > dd > span:before {content:''; position:absolute; top:9px; left:0; width:5px; border-bottom:1px solid #666;}
@@ -1424,6 +1427,7 @@ no-repeat left center;}
 .itemtList3.etc {border-top:none}
 .itemtList3 > li {display:table; width:100%; padding:32px 43px 30px 35px; border:1px solid #d5d5d5; border-top:none;}
 .itemtList3 > li .purchase {display:table-cell; vertical-align:top;}
+.itemtList3 > li .purchase .txt { color: #812990; } /*설명글 강조*/
 
 /* 추천 상품 */
 .purchase {}
