@@ -425,6 +425,7 @@ text-align:center; line-height:60px;}
 .table.ty3 + .orderTotal {margin-top:50px;}
 .table.ty3 + .serviceInfo {margin-top:40px;}
 .table.ty3 + .btnBox {margin-top:100px;}
+.table.ty3 .prdCate { color: #812990; font-weight: 500; }
 
 .table.ty4 {border-top:2px solid #353535;}
 .table.ty4 table {width:100%;}
