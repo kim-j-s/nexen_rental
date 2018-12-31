@@ -232,7 +232,9 @@ text-align:center; line-height:60px;}
 .tabWrap .tabContent.on {display:block;}
 .tabContent > .agreeWrap {margin-top:57px;}
 .tabContent > .loginWrap {margin-top:60px;}
+.tabContent > .deleteBox:after { content: ''; display: block; clear: both; font-size: 0; }
 .tabContent > .deleteBox:nth-child(1) {font-size:0; margin:50px 0 15px 0;}
+.tabContent > .deleteBox .keyword{ float: right; margin-top: -4px; }
 .tabContent > .itemNone {margin-top:72px;}
 .tabContent > .subTabWrap:first-child {margin-top:60px;}
 
