@@ -1096,6 +1096,7 @@ img.full { width: 100%;}
 .itemInfo .info { width: calc(100% - 100px); margin-left: 15px; padding-top: 6px; line-height: 1; }
 .itemInfo .info .label { padding-bottom: 5px; }
 .itemInfo .info .label span { min-width: auto; height: auto; padding: 0; border: none; font-size: 10px; }
+.itemInfo .info .label .prdCate { color: #812990; font-weight: 500; }
 .itemInfo .info .tit { color:#000; font-size:15px; font-weight: 500; line-height: 16px;}
 .itemInfo .info .desc { margin-top: 2px; font-size: 11px;  }
 .itemInfo .info .desc li { color: #999; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -1130,6 +1131,7 @@ img.full { width: 100%;}
 .optList + .optList {margin-top:19px;}
 .optList > dt {font-weight:500; font-size:12px; color:#333;}
 .optList > dd {margin-top:5px; font-weight:400; font-size:12px; color:#666; line-height:17px;}
+.optList .prdCate { color: #812990; font-weight: 500;}
 .serviceOpt {}
 .serviceOpt + .serviceOpt {margin-top:10px;}
 .serviceOpt > .ele1 {position:relative; overflow:hidden;}
@@ -1201,7 +1203,7 @@ img.full { width: 100%;}
 .orderItem > .prod > .cont > .state .ty3 { border: 1px solid #c3244e; color: #c3244e; }
 .orderItem > .prod > .cont > .state .ty4 { background: #b6985a; color: #fff; line-height: 17px }
 .orderItem > .prod > .cont > .state .txt { width: auto; color: #999; line-height: 17px; }
-.orderItem > .prod .prodName {}
+.orderItem > .prod .prodName .prdCate { color: #812990; font-weight: 500; }
 .orderItem > .prod .prodName .txt1 {padding-bottom:5px; font-weight:400; font-size:11px;}
 .orderItem > .prod .prodName .txt2 strong {display:block; font-weight:500; font-size:15px; color:#000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .orderItem > .prod .prodName .txt2 span {display:block; font-weight:500; font-size:13px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
