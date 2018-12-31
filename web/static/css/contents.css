@@ -862,6 +862,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemtList1 li:nth-child(3),
 .itemtList1 li:nth-child(3n + 3) { animation-delay: 0.4s;}
 
+/* 상품목록 */
 .itemtList2Wrap {padding:27px 0 0 0;}
 .itemtList2 > li {bordeR:1px solid #d5d5d5;}
 .itemtList2 > li > a {}
@@ -1010,6 +1011,7 @@ no-repeat left center;}
 .tireInfo2 > dd .list9 {padding-top:27px;}
 .tireInfo2.long > dd > span {width:250px;}
 .tireInfo2.etc > dt {padding-top:0;}
+.tireInfo2.etc .prdCate {  color: #812990; font-size: 26px; font-weight: 500;}
 .tireInfo2.etc2 > dt {padding-top:25px;}
 
 .sliderMain {position:relative;}
