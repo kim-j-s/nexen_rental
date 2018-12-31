@@ -136,7 +136,7 @@
 #skipnav a {display:block; height:1px; width:1px; margin:0 -1px -1px 0; padding:0; overflow:hidden; font-size:1px; line-height:0;}
 #skipnav a:active,
 #skipnav a:focus,
-#skipnav a:hover {width:100%; height:auto; margin:0; adding:5px 0; text-indent:10px; font-weight:500; font-size: 13px; color:#333; line-height:1; text-decoration:none}
+#skipnav a:hover {width:100%; height:auto; margin:0; padding:5px 0; text-indent:10px; font-weight:500; font-size: 13px; color:#333; line-height:1; text-decoration:none}
 
 
 /* ==============================
