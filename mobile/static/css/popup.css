@@ -195,6 +195,7 @@
 .contractInfo .info dl:not(:first-child) { margin-top: 10px; }
 .contractInfo .info dt { color: #333; }
 .contractInfo .info dd { color: #454545; text-align: right; }
+.contractInfo .prdCate { color: #812990; font-weight: 500; }
 
 /* ==============================
 * popup - 멤버십 상세보기
