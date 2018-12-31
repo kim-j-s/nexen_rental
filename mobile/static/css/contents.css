@@ -757,6 +757,7 @@ p.mark1 {display:block;}
 /* 일시불/추천렌탈 리스트 */
 .rentalList.mg1 {margin:20px 15px 50px 15px;}
 .rentalList li:not(:first-child) { margin-top:5px;}
+.rentalList .list1 { margin-top: 10px; }
 .rentalList .list1 li {color:#454545; margin:0;}
 .rentalList .list1 .cNumber {overflow:hidden; margin-top:0;}
 .rentalList .list1 .cNumber li {float:left; margin:0 5px 0 0; padding-left: 0; color:#666;}
@@ -764,6 +765,9 @@ p.mark1 {display:block;}
 .rentalList .list1 .tooltip {color:#888888; font-size:11px; text-align:left; margin:0 0 5px 0;}
 .rentalList .list1 .tooltip a {text-decoration:none;}
 .rentalList .list1 .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 3px 2px;}
+.rentalList .productInfo .tit { margin-top: 0;}
+.rentalList .productInfo .desc {color: #812990; }
+.rentalList .productInfo .desc strong { margin: 0; color: #812990; }
 .infoArea .desc {font-size:12px; font-weight:400; color:#000; line-height:17px; margin-bottom:15px;}
 .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
 .infoArea .priceInfo {padding:0 10px 8px 10px;}
