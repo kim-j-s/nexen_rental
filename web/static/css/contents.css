@@ -316,6 +316,7 @@ text-align:center; line-height:60px;}
 .list1 > li {position:relative; padding-left:15px; font-weight:400; font-size:16px; color:#454545;}
 .list1 > li:before {content:''; position:absolute; top:8px; left:0; width:3px; height:3px; background:#000;}
 .list1 > li > .ops {padding-left:12px; font-weight:500; font-size:16px; color:#454545;}
+.list1 > li > .ops .prdCate { color: #812990; font-size:16px; font-weight: 500; }
 .list1 > li + li {margin-top:13px;}
 .list1 > li > .list8 {margin-top:5px;}
 
@@ -1538,6 +1539,7 @@ no-repeat left center;}
 .orderView .prodPay > dl {display:table; width:100%;}
 .orderView .prodPay > dl  dt {display:table-cell; text-align:left; font-weight:500; font-size:16px; color:#666;}
 .orderView .prodPay > dl dd {display:table-cell; text-align:right; font-weight:500; font-size:16px; color:#454545;}
+.orderView .prodPay > dl dd .selectbox { font-weight: 300; }
 .orderView .prodPay > .txt {margin-top:20px;}
 
 .orderView .detailProdPay {padding:24px 15px 26px 15px;}
