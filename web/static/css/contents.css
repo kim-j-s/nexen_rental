@@ -2060,7 +2060,7 @@ p.mark1 {display:block; line-height:20px;}
 .msgList li:nth-child(3) { margin-top: 30px; background: url('../images/intro/bg_msgBox3.png') no-repeat left top; }
 .msgList li:nth-child(4) { margin-top: 42px; background: url('../images/intro/bg_msgBox4.png') no-repeat left top; }
 
-/* 렌탈서비스 징잠 */
+/* 렌탈서비스 장점 */
 .halfwrap { clear: both; }
 .halfwrap:after { content: ''; display: block; clear: both; }
 .halfwrap .colbox { float: left; width: 560px;}
