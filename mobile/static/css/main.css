@@ -23,6 +23,9 @@
 .main .headerTopMenu { position: relative; width: 100%; }
 
 .mainIntro { position: relative; box-sizing: border-box; min-height: 473px;	background: url('../images/main/bgMainTop.jpg') no-repeat; background-size: cover; color: #fff;	text-align: center; }
+.mainIntro.rental { background-image: url('../images/main/bgMainTop2.jpg'); }
+.mainIntro.service { background-image: url('../images/main/bgMainTop3.jpg'); }
+
 .mainIntro .headCopy, .mainIntro .subCopy {	display: block;	position: absolute;	width: 100%; text-align: center; color: #fff; }
 .mainIntro .headCopy { top: 45px;	font-family: 'Raleway'; font-size: 23px; font-weight: 800; line-height: 25px; }
 .mainIntro .subCopy { top: 75px; font-weight: 200; }

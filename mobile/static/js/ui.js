@@ -542,6 +542,21 @@ function tireContSelect() {
 		var dataID = $(this).attr('href').substring(1);
 		$('#' + dataID ).siblings().hide().end().show();
 	});
+
+	var tabTire = $('.tireContWrap .tab li:nth-child(1)');
+	var tabRental = $('.tireContWrap .tab li:nth-child(2)');
+	var tabCare = $('.tireContWrap .tab li:nth-child(3)');
+	var mainIntroBg = $('.mainIntro');  
+
+	tabTire.on('click', function(){
+		mainIntroBg.addClass('mainIntro').removeClass('rental service');
+	});
+	tabRental.on('click', function(){
+		mainIntroBg.addClass('mainIntro rental').removeClass('service');
+	});
+	tabCare.on('click', function(){
+		mainIntroBg.addClass('mainIntro service').removeClass('rental');
+	});
 }
 
 // 메인 - 타이어 찾기(차종or사이즈)
