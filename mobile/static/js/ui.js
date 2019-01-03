@@ -6,7 +6,6 @@ $(function(){
 	
 	uiMain.init();
 	uiForm();
-	// footerFix();
 
 	// 메인 
 	tireContSelect();
