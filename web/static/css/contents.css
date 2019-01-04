@@ -1090,17 +1090,17 @@ no-repeat left center;}
 .schWrap + .itemWrap {margin-top:48px;}
 
 .mainSch {width:1200px; margin:0 auto; padding-top:83px;}
-.mainSch .schWrap {padding:20px 0 20px 0; background:none; border-top:none;}
+.mainSch .schWrap {position: relative; padding:20px 0 20px 0; background:none; border-top:none;}
 .mainSch .schWrap .selectbox {background:transparent url(../images/common/icon/icon_selectbox3.png) no-repeat right 10px center; color:#fff;}
 .mainSch .schWrap .selectbox option {color:#666;}
 .mainSch .switchGroup + .selectGroup > .selectbox:nth-of-type(1) {width:181px;}
 .mainSch .switchGroup + .selectGroup > .selectbox {width:180px;}
-.mainSch .switchGroup.on .switch:nth-of-type(2) {display:inline-block;}
+.mainSch .switchGroup.on .switch:nth-of-type(2) {display:none;}
 .mainSch .switchGroup.on .switch:nth-of-type(3) {display:none;}
-.mainSch .switchGroup.on + .selectGroup > .selectbox {width:231px;}
-.mainSch .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:230px;}
-.mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox {width:231px;}
-.mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox:nth-of-type(1) {width:230px;}
+.mainSch .switchGroup.on + .selectGroup > .selectbox {width:281px;}
+/* .mainSch .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:230px;} */
+/* .mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox {width:231px;} */
+/* .mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox:nth-of-type(1) {width:230px;} */
 
 @media all and (min-width:0\0) and (min-resolution:.001dpcm)
 {
@@ -1433,7 +1433,7 @@ no-repeat left center;}
 .itemtList3 {border-top:3px solid #353535;}
 .itemtList3.etc {border-top:none}
 .itemtList3 > li {display:table; width:100%; padding:32px 43px 30px 35px; border:1px solid #d5d5d5; border-top:none;}
-.itemtList3 > li .purchase {display:table-cell; vertical-align:top;}
+.itemtList3 > li .purchase {display:table-cell; vertical-align:top; padding-right: 35px; /*background: yellow;*/ }
 .itemtList3 > li .purchase .txt { color: #812990; } /*설명글 강조*/
 
 /* 추천 상품 */
