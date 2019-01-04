@@ -1,5 +1,6 @@
 $(function(){
-	
+	//alert("가나다라")
+
 	/* ==============================
 	 * common
 	 * ============================== */
@@ -23,7 +24,7 @@ $(function(){
 	// 타이어-상품상세 탭
 	if ($('.productViewWrap').length > 0) { fixedMoveTab(); } 
 	
-	GradeSelect()
+	GradeSelect();
 
 	//datepicker
 	if($('.datepicker').size() > 0){
@@ -527,6 +528,23 @@ function uiForm() {
 		$('[for="'+labelFor+'"]').addClass('on');
 	});
 
+	// 디자인 셀렉트박스(label+select) 
+	var selectTarget = $('.mainIntro .selectBox select'); 
+
+	selectTarget.on('focus',function(){ 
+		$(this).parent().addClass('focus');
+	}); 
+
+	selectTarget.on('blur', function(){ 
+		$(this).parent().removeClass('focus'); 
+	});
+
+	selectTarget.change(function(){ 
+		var select_name = $(this).children('option:selected').text();
+		
+		$(this).siblings('label').text(select_name); 
+		$(this).parent().removeClass('focus'); 
+	});
 	
 }
 
@@ -618,6 +636,7 @@ function tireRentalSearch() {
 		}
 	});
 }
+
 
 // cart option change
 function cartOpt() {

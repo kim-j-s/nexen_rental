@@ -768,6 +768,7 @@ p.mark1 {display:block;}
 .rentalList .productInfo .tit { margin-top: 0;}
 .rentalList .productInfo .desc {color: #812990; }
 .rentalList .productInfo .desc strong { margin: 0; color: #812990; }
+.rentalList .hTag { margin-bottom: 16px; }
 .infoArea .desc {font-size:12px; font-weight:400; color:#000; line-height:17px; margin-bottom:15px;}
 .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
 .infoArea .priceInfo {padding:0 10px 8px 10px;}
