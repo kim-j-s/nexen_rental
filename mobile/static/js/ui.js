@@ -567,11 +567,15 @@ function tireOptSelect() {
 		if($(this).attr('value') == "carType"){
 			$('.optCont.carType').show();
 			$('.optCont.tireSize').hide();
+			
+			$('.carModel').show();
 		}
 
 		if($(this).attr('value') == "tireSize" ){
 			$('.optCont.tireSize').show();
 			$('.optCont.carType').hide();
+
+			$('.carModel').hide();
 		} 
 	}); 
 }
