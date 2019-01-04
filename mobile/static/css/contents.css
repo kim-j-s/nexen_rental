@@ -737,6 +737,13 @@ p.mark1 {display:block;}
 .tooltip .txt {cursor:pointer; display:inline-block; font-size:11px; font-weight:400; color:#454545; border-bottom:1px solid #454545; padding-bottom:3px;}
 .tooltip .iconToolTip {cursor:pointer; margin-left:4px; display:inline-block; vertical-align: middle; width:15px; height:15px; font-size:0; background:url('../images/common/icon/icon_toolTip.png') no-repeat; background-size:100%;}
 
+.tipBox { margin-bottom: 15px; text-align: left; border-bottom: 2px solid #c3244e; }
+.tipBox .tipTitle { height: 35px; line-height: 35px; background: #c3244e; color: #fff; font-weight: 500; text-align: center;}
+.tipBox .tipTitle:after { content:''; display: inline-block; vertical-align: -2px; width: 12px; height: 12px; margin-left: 5px; background: url('../images/common/icon/icon_tipbox_q.png') no-repeat; background-size: 100%; }
+.tipBox .tooltip { margin: 0; color: #333; font-stretch: 12px; text-align: left; }
+.tipBox .list1 { padding: 20px 15px; background: #f0f1f5; }
+.tipBox .list1 li + li { margin-top: 3px; }
+
 /* 타이어 검색 */ 
 .tireSearchWrap {background:#fff; padding-top:45px;}
 .tireSearchWrap .btnArea {margin-top:0;}
@@ -766,9 +773,16 @@ p.mark1 {display:block;}
 .rentalList .list1 .tooltip a {text-decoration:none;}
 .rentalList .list1 .tooltip .iconToolTip {width:12px; height:12px; margin:0 0 3px 2px;}
 .rentalList .productInfo .tit { margin-top: 0;}
-.rentalList .productInfo .desc {color: #812990; }
+.rentalList .productInfo .desc { color: #812990; font-size: 12px; 
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
 .rentalList .productInfo .desc strong { margin: 0; color: #812990; }
 .rentalList .hTag { margin-bottom: 16px; }
+
 .infoArea .desc {font-size:12px; font-weight:400; color:#000; line-height:17px; margin-bottom:15px;}
 .infoArea .itemPrice {border-bottom:1px dashed #dcdcdc; padding:0 0 8px 0;}
 .infoArea .priceInfo {padding:0 10px 8px 10px;}
