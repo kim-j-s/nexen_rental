@@ -1341,6 +1341,12 @@ no-repeat left center;}
 .tips > .toolTip + .txt {margin-left:9px;}
 .tips + .itemtList3 {margin-top:50px;}
 
+.tipBox { height: 48px; margin: 60px 0 20px; border-right: 3px solid #c3244e; background: #f0f1f5 url('../images/prd/bg_tipbox.png') no-repeat left top; font-size: 0; }
+.tipBox .tipTitle { box-sizing: border-box; display: inline-block; width: 140px; padding-left: 33px; color: #fff; font-stretch: 16px; font-weight: 500; line-height: 48px; }
+.tipBox .tips { display: inline-block; }
+.tipBox .tips .txt { margin-left: 30px; color: #333; font-weight: 400; letter-spacing: -.05em; }
+.tipBox .tips .txt
+
 .makerGroup1 {margin-top:25px;}
 .makerRadio {overflow:hidden;}
 .makerRadio > li {position:relative; float:left;}
@@ -1642,7 +1648,7 @@ no-repeat left center;}
 
 .toolTip {position:relative; display:inline-block; width:16px; height:16px; vertical-align:middle; background:url(../images/common/icon/icon_tip.png) no-repeat; cursor:pointer;}
 .toolTip .toolBox {top:27px; left:0; margin-left:-242px;}
-.toolTip .toolBox.txtType {top:-9px; left:25px; margin-left:0;}
+.toolTip .toolBox.txtType {top:27px; left:0; /*margin-left:-242px;*/}
 .toolTip:hover .toolBox {display:block;}
 
 
@@ -1751,11 +1757,10 @@ no-repeat left center;}
 .toolBox > .inner.etc {display:block; width:500px; height:auto; padding:33px 0; border:1px solid #c5c5c5; text-align:center; vertical-align:middle;}
 .toolBox:after {content:''; position:absolute; top:-10px; right:50%; margin-right:-7px; width:14px; border-bottom:10px solid #252525; border-left:7px solid transparent; border-right:7px solid transparent;}
 
-.toolBox.txtType {width:auto; box-shadow:none !important;}
-.toolBox.txtType > .inner {display:block; width:auto; height:auto; padding:15px; text-align:left; border:1px solid #252525; background:#353535; font-size:12px; color:#fff; line-height:18px; border-radius:3px; white-space:nowrap;}
-.toolBox.txtType:before {content:''; position:absolute; top:10px; left:-6px; z-index:1; right:auto; margin-right:0; width:auto; height:14px; border-right:7px solid #353535; border-bottom:7px solid transparent; border-top:7px solid transparent;  border-left:none;}
-.toolBox.txtType:after {content:''; position:absolute; top:10px; left:-7px; right:auto; margin-right:0; width:auto; height:14px; border-right:7px solid #252525; border-bottom:7px solid transparent; border-top:7px solid transparent;  border-left:none;}
-
+.toolBox.txtType { position:absolute; top:27px; left:0; margin-left: -342px; z-index:10; width:700px; box-shadow:none !important;}
+.toolBox.txtType > .inner {display:block; width:auto; height:auto; padding:15px; text-align:left; border:1px solid #252525; background:#353535; font-size:12px; color:#fff; line-height:18px; border-radius:3px; white-space:nowrap; }
+.toolBox.txtType:before {content:''; position:absolute; top:-10px; right:50%; margin-right:-7px; width:14px; border-bottom:10px solid #252525; border-left:7px solid transparent; border-right:7px solid transparent;}
+.toolBox.txtType:after {content:''; position:absolute; position:absolute; top:-10px; right:50%; margin-right:-7px; width:14px; border-bottom:10px solid #252525; border-left:7px solid transparent; border-right:7px solid transparent; }
 
 /* 플로팅 기능 추가 필요 */
 .fixedBottomWrap {height:88px;}
