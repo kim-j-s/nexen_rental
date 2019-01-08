@@ -22,6 +22,26 @@
         document.createElement("footer");
     </script>
 <![endif]-->
+
+<script>
+$(document).ready(function(){
+	$('.rentalfee .btnsReview').on('click', function(){
+
+
+		$('#reviewArea .tabList li').removeClass('on');
+		$('#reviewArea .tabContent').removeClass('on');
+		
+		$('#reviewArea .tabList li:last-child').addClass('on');
+		$('#reviewArea .tabContent .reviewContent').addClass('on');
+	
+		itemFade();
+	})
+
+	function itemFade() {
+		$('.itemList li').data('animation','fadeInUp');
+	}
+});
+</script>
 </head>
 <div id="skipnav">
 	<a href="#headerWrap">주메뉴 바로가기</a>
@@ -708,7 +728,7 @@
 									<a href="#" class="btn ty6">주문하기</a>
 								</div>
 								<div class="inner">
-									<a href="#" class="btnsLink">고객후기</a>
+									<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 									<a href="#" class="btnsLink">상담신청</a>
 								</div>
 							</div>
@@ -788,7 +808,7 @@
 									<a href="#" class="btn ty6">주문하기</a>
 								</div>
 								<div class="inner">
-									<a href="#" class="btnsLink">고객후기</a>
+									<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 									<a href="#" class="btnsLink">상담신청</a>
 								</div>
 							</div>
@@ -838,7 +858,7 @@
 											<a href="#" class="btn ty6">주문하기</a>
 										</div>
 										<div class="inner">
-											<a href="#" class="btnsLink">고객후기</a>
+											<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 											<a href="#" class="btnsLink">상담신청</a>
 										</div>
 									</div>
@@ -940,7 +960,7 @@
 											<a href="#" class="btn ty6">주문하기</a>
 										</div>
 										<div class="inner">
-											<a href="#" class="btnsLink">고객후기</a>
+											<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 											<a href="#" class="btnsLink">상담신청</a>
 										</div>
 									</div>
@@ -1059,7 +1079,7 @@
 											<a href="#" class="btn ty6">주문하기</a>
 										</div>
 										<div class="inner">
-											<a href="#" class="btnsLink">고객후기</a>
+											<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 											<a href="#" class="btnsLink">상담신청</a>
 										</div>
 									</div>
@@ -1195,7 +1215,7 @@
 											<a href="#" class="btn ty6">주문하기</a>
 										</div>
 										<div class="inner">
-											<a href="#" class="btnsLink">고객후기</a>
+											<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 											<a href="#" class="btnsLink">상담신청</a>
 										</div>
 									</div>
@@ -1558,7 +1578,7 @@
 											<a href="#" class="btn ty6">주문하기</a>
 										</div>
 										<div class="inner">
-											<a href="#" class="btnsLink">고객후기</a>
+											<a href="#reviewArea" class="btnsLink btnsReview">고객후기</a>
 											<a href="#" class="btnsLink">상담신청</a>
 										</div>
 									</div>
@@ -1642,7 +1662,7 @@
 				</div>
 			</div>
 
-			<div class="tabWrap floating">
+			<div class="tabWrap floating" id="reviewArea">
 				<ul class="tabList other">
 					<li class="on"><button><span>상품정보</span></button></li>
 					<li><button><span>계약/배송/반품/교환/AS</span></button></li>
@@ -1860,7 +1880,7 @@
 				<!--// 계약/배송/반품/교환/AS -->
 
 				<!-- 구매후기 -->
-				<div class="tabContent">
+				<div class="tabContent reviewContent">
 					<!-- 리스트 -->
 					<div class="sortDisplay2 mt50">
 						<div class="leftCont">
