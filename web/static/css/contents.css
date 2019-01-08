@@ -1907,7 +1907,7 @@ no-repeat left center;}
 .opModify {margin-top:15px; padding-top:13px; padding-left:15px; border-top:1px dashed #bebebe;}
 .opModify {overflow:hidden;}
 .opModify > .opModifys {position:relative; display:block; float:left; padding-left:15px; line-height:36px;}
-.opModify > .opModifys > span {display:inline-block; font-weight:400; font-size:16px; color:#454545; vertical-align:middle;}
+.opModify > .opModifys > span {display:inline-block; font-weight:400; font-size:16px; color:#454545; vertical-align:middle;  line-height: 36px;}
 .opModify > .opModifys:before {content:''; position:absolute; top:18px; left:0; width:3px; border-bottom:3px solid #000;}
 .opModify > .opModifys + .opModifys {margin-left:64px;}
 .opModify > .opModifys .selectbox {margin-left:14px;}

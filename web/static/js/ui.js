@@ -1012,6 +1012,9 @@ $(function(){
 	// 구매후기 평점
 	GradeSelect();
 
+	// 고객후기 버튼 클릭 시 구매후기 이동
+	reviewArea();
+
 });
 
 function btnAnimate() {
@@ -1237,4 +1240,16 @@ function fBtn1() {
 function fBtn2() {
 	$('.fixedBottom').find('.txt').html('내게 맞는 렌탈 상품 찾기');
 	$('.fixedBottom').find('.btn').data('bpoint','bPoint1');
+}
+
+// 상세페이지 - 고객후기 버튼
+function reviewArea(){
+	$('.rentalfee .btnsReview').on('click', function(){
+
+		$('#reviewArea .tabList li').removeClass('on');
+		$('#reviewArea .tabContent').removeClass('on');
+		
+		$('#reviewArea .tabList li:last-child').addClass('on');
+		$('#reviewArea .tabContent.reviewContent').addClass('on');
+	})
 }
