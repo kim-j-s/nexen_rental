@@ -448,7 +448,7 @@ text-align:center; line-height:60px;}
 .table.ty4 + .agreeWrap {margin-top:70px;}
 .table.ty4 + .btnBox {margin-top:100px;}
 
-.table table tbody td {word-break: keep-all;}
+.table table tbody td {word-wrap: break-word;}
 .table table tbody td strong {font-weight:500;}
 .table table tbody td .prdName {font-weight:500; font-size:15px; color:#353535;}
 .table table tbody td .telGroup {display:inline-block; vertical-align:middle;}
@@ -1011,12 +1011,12 @@ no-repeat left center;}
 .tireInfo2 > dt > span {position:absolute; top:0; left:0; font-weight:400; font-size:14px; color:#666; line-height:24px;}
 .tireInfo2 > dt .prdCate {  color: #812990; font-weight: 700;}
 .tireInfo2 > dd {padding-top:11px;}
-.tireInfo2 > dd > span {position:relative; display:inline-block; width:202px; padding-left:9px; margin-top:11px; font-size:16px;}
+.tireInfo2 > dd > span {position:relative; display:inline-block; width: 32%; padding-left:9px; margin-top:11px; vertical-align: top; font-size:16px;}
 .tireInfo2 > dd > span:before {content:''; position:absolute; top:9px; left:0; width:5px; border-bottom:1px solid #666;}
 .tireInfo2 > dd .list9 {padding-top:27px;}
-.tireInfo2.long > dd > span {width:250px;}
+.tireInfo2.long > dd > span { width: 33%; }
 .tireInfo2.etc > dt {padding-top:0;}
-.tireInfo2.etc .prdCate {  color: #812990; font-size: 26px; font-weight: 500;}
+.tireInfo2.etc .prdCate {color: #812990; font-size: 26px; font-weight: 500;}
 .tireInfo2.etc2 > dt {padding-top:25px;}
 
 .sliderMain {position:relative;}
