@@ -869,7 +869,7 @@ img.full { width: 100%;}
 .infoBox .authIpin:after {
 	content: '';
 	position: absolute;
-	top: 240px;
+	top: calc(50% - 45px);
 	left: calc(50% - 43px);
 	width: 85px;
 	height: 90px;
@@ -879,7 +879,7 @@ img.full { width: 100%;}
 .infoBox .authPhone:after {
 	content: '';
 	position: absolute;
-	top: 240px;
+	top: calc(50% - 45px);
 	left: calc(50% - 28px);
 	width: 56px;
 	height: 90px;
