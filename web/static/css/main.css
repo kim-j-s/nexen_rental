@@ -303,3 +303,12 @@
 .mainWing .cList > .ty3 span:before {background-position:0 -132px;}
 .mainWing .cList > .ty4 {width:80px;}
 .mainWing .cList > .ty4 span:before {background-position:0 -165px;}
+
+/* 메인 - 내게맞는렌탈상품찾기 차종 라디오버튼 */
+.radiobtnGroup { position: relative; box-sizing: border-box; width: 212px; height: 60px; margin: 36px auto 50px; border-radius: 60px; border: 2px solid #fff; font-size: 0; text-align: center; }
+.radiobtnGroup > .radiobtn { box-sizing: border-box; display: inline-block; position:relative; width: 50%; height: 60px; line-height: 60px; margin-top: -2px; padding: 0; background: transparent; border: none; border-radius: inherit; color: #fff; transition: background 0.2s; text-align: center; }
+.radiobtnGroup > .radiobtn input {	position:absolute; opacity:0; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; appearance:none; }
+.radiobtnGroup > .radiobtn.on { background: #812990; border: none; }
+.radiobtnGroup > .radiobtn.on:after { content:''; box-sizing: border-box; position: absolute; top: 0; left: -2px; width: calc(100% + 4px); height: 60px; border: 2px solid #fff; border-radius: 60px; }
+.radiobtnGroup > .radiobtn:nth-child(2).on:after { content: ''; right: 50%; }
+.radiobtnGroup > .radiobtn span { position:relative; z-index: 2; display: block; height: 60px; line-height: 60px; color: #fff; font-size: 24px; }

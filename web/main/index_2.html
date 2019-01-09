@@ -296,7 +296,18 @@
 				<h1>가장 선호하는 타이어 성능 순위를 매겨주세요!</h1>
 				<h2>나의 라이프 스타일에 맞는 렌탈 상품을 추천해 드립니다.</h2>
 
-				<div class="typeSwitch">
+				<!-- 2019-01-09 수정 : 개발요청으로 인한 라디오타입 변경 -->
+				<div class="radiobtnGroup">
+					<label for="rd1" class="radiobtn on">
+						<input type="radio" name="radioSelect" id="rd1" checked="checked">
+						<span class="txt">승용차</span>
+					</label>
+					<label for="rd2" class="radiobtn">
+						<input type="radio" name="radioSelect" id="rd2"><span class="txt">SUV</span>
+					</label>
+				</div>
+
+				<!-- <div class="typeSwitch">
 					<div class="inner">
 						<div class="switchBtn">
 							<input type="radio" name="rightswitchGroup1" id="switch1" checked="checked" />
@@ -307,7 +318,8 @@
 							<label for="switch2">SUV</label>
 						</div>
 					</div>
-				</div>
+				</div> -->
+				<!-- // 2019-01-09 수정 -->
 
 				<div class="rankSelect">
 					<div class="inner">

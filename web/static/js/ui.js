@@ -1015,6 +1015,8 @@ $(function(){
 	// 고객후기 버튼 클릭 시 구매후기 이동
 	reviewArea();
 
+	uiForm();
+
 });
 
 function btnAnimate() {
@@ -1252,4 +1254,26 @@ function reviewArea(){
 		$('#reviewArea .tabList li:last-child').addClass('on');
 		$('#reviewArea .tabContent.reviewContent').addClass('on');
 	})
+}
+
+function uiForm() {
+	var radioForm = 'input[type=radio]';
+
+	//라디오버튼
+	$(radioForm).each(function () {
+		if ($(this).prop('checked') == true) {
+			var labelFor = $(this).attr('id');
+			$('[for="'+labelFor+'"]').addClass('on');
+		}
+		if($(this).prop('disabled') == true){
+			$(this).parent().addClass('disabled');
+		}
+	});
+
+	$(document).on('click', radioForm, function () {
+		var labelFor = $(this).attr('id');
+		var n = $(this).attr('name');
+		$('[name="' + n + '"]').parent().removeClass('on');
+		$('[for="'+labelFor+'"]').addClass('on');
+	});
 }
