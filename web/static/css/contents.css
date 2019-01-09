@@ -234,7 +234,8 @@ text-align:center; line-height:60px;}
 .tabContent > .loginWrap {margin-top:60px;}
 .tabContent > .deleteBox:after { content: ''; display: block; clear: both; font-size: 0; }
 .tabContent > .deleteBox:nth-child(1) {font-size:0; margin:50px 0 15px 0;}
-.tabContent > .deleteBox .keyword{ float: right; margin-top: -4px; }
+.tabContent > .deleteBox > a.btn { float: left; }
+.tabContent > .deleteBox .keyword { float: right; margin-top: -4px; }
 .tabContent > .itemNone {margin-top:72px;}
 .tabContent > .subTabWrap:first-child {margin-top:60px;}
 
@@ -913,6 +914,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3 > li > .infoTxt {padding:22px 30px; font-weight:400; font-size:18px;}
 .itemList3 > li > .infoTxt > span {font-weight:400; font-size:18px; color:#b6985a; line-height:26px;}
 .itemList3 > li > .inner .thumb {width:270px; text-align:center; border-right:1px solid #e6e6e6;}
+.itemList3 > li > .inner .thumb img { max-width: 100%; }
 .itemList3 > li > .inner .info {position:relative; padding:34px 20px 38px 20px;}
 .itemList3 > li > .inner .info.etc {padding:34px 20px 20px 20px;}
 .itemList3 > li > .inner .info .btnGroup {margin-top:16px; text-align:right;}
@@ -1098,6 +1100,7 @@ no-repeat left center;}
 .mainSch .switchGroup.on .switch:nth-of-type(2) {display:none;}
 .mainSch .switchGroup.on .switch:nth-of-type(3) {display:none;}
 .mainSch .switchGroup.on + .selectGroup > .selectbox {width:281px;}
+.mainSch  #sizeSection .selectbox {width: 281px;}
 /* .mainSch .switchGroup.on + .selectGroup > .selectbox:nth-of-type(1) {width:230px;} */
 /* .mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox {width:231px;} */
 /* .mainSch .switchGroup.on + .selectGroup + .selectGroup > .selectbox:nth-of-type(1) {width:230px;} */

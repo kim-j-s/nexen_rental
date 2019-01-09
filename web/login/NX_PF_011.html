@@ -513,30 +513,34 @@
 									<span class="txt color4">비밀번호가 일치하지 않습니다. 다시 입력해 주십시요</span>
 								</td>
 							</tr>
+							<!-- 2019-01-09 수정 -->
 							<tr>
-								<th scope="row">
-									<label for="selectbox1">휴대폰번호</label>
-								</th>
+								<th scope="row"><label for="email">담당자 이메일</label></th>
 								<td>
-									<div class="telGroup">
-										<select name="" id="selectbox1" style="width:130px;" class="selectbox">
-											<option value="">010</option>
-											<option value="">011</option>
-											<option value="">016</option>
-											<option value="">017</option>
-											<option value="">018</option>
-											<option value="">019</option>
+									<div class="emailGroup">
+										<div class="inputBox">
+											<input type="text" class="inp" id="email" placeholder="이메일 입력" />
+										</div>
+										<span class="middle">@</span>
+										<div class="inputBox">
+											<input type="text" class="inp" />
+										</div>
+										<select style="width:130px;" name="" class="selectbox">
+											<option value="">직접입력</option>
+											<option value="hanmail.net">hanmail.net</option>
+											<option value="naver.com">naver.com</option>
+											<option value="nate.com">nate.com</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="hotmail.com">hotmail.com</option>
+											<option value="paran.com">paran.com</option>
+											<option value="empal.com">empal.com</option>
+											<option value="korea.com">korea.com</option>
+											<option value="freechal.com">freechal.com</option>
 										</select>
-										<div class="inputBox">
-											<input type="text" class="inp" placeholder="숫자 입력" />
-										</div>
-										<div class="inputBox">
-											<input type="text" class="inp" placeholder="숫자 입력" />
-										</div>
 									</div>
-									<span class="txt color4">다시 입력해 주십시요.</span>
 								</td>
 							</tr>
+							<!-- // 2019-01-09 수정 -->
 							<tr>
 								<th scope="row">
 									<label for="member">임직원코드</label>
