@@ -914,7 +914,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .itemList3 > li > .infoTxt {padding:22px 30px; font-weight:400; font-size:18px;}
 .itemList3 > li > .infoTxt > span {font-weight:400; font-size:18px; color:#b6985a; line-height:26px;}
 .itemList3 > li > .inner .thumb {width:270px; text-align:center; border-right:1px solid #e6e6e6;}
-.itemList3 > li > .inner .thumb img { max-width: 100%; }
+.itemList3 > li > .inner .thumb img { width: 100%; max-width: 100%; }
 .itemList3 > li > .inner .info {position:relative; padding:34px 20px 38px 20px;}
 .itemList3 > li > .inner .info.etc {padding:34px 20px 20px 20px;}
 .itemList3 > li > .inner .info .btnGroup {margin-top:16px; text-align:right;}
@@ -2085,3 +2085,6 @@ p.mark1 {display:block; line-height:20px;}
 .halfwrap .table { height: 250px; }
 .halfwrap .table.ty3 td { height: 191px; }
 .videoArea { width: 560px; height: 250px; }
+
+/* 이미지크게보기 */
+.imgRealSize { overflow: auto; width: 100%; height: 500px; text-align: center; }
