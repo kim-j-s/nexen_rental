@@ -2087,4 +2087,8 @@ p.mark1 {display:block; line-height:20px;}
 .videoArea { width: 560px; height: 250px; }
 
 /* 이미지크게보기 */
+.dimLayer { display: none;  position: fixed;  _position: absolute;	top:0; bottom:0; left:0; right:0; z-index:1000; height: 100%; width: 100%; }
+.dimLayer .dimBg { position: absolute;	top: 0;	left: 0; width: 100%; height: 100%;background: rgba(0,0,0,.8); }
+.dimLayer .layerPopCont { display: block; position: absolute; left: 50%; top: 50%; }
+
 .imgRealSize { overflow: auto; width: 100%; height: 500px; text-align: center; }

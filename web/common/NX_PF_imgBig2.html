@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>회원가입 | 신개념 타이어 렌탈서비스</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/lib/swiper.css" rel="stylesheet">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+<div id="skipnav">
+	<a href="#headerWrap">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+
+<body>
+	<div id="wrap">
+
+		<section id="content">
+			
+			<section class="infoWrap">
+				<h1 class="title">증빙자료</h1>
+				<ul class="list3">
+					<li>첨부 파일은 이미지(jpg, png, gif, pdf, bmp) 파일만 가능합니다.</li>
+				</ul>
+				<div class="table ty4">
+					<table>
+						<caption>증빙자료 입력 표</caption>
+						<colgroup>
+							<col style="width:350px;">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">사업자등록증사본</th>
+								<td>
+									<div class="fileBox preview-image">
+										<label for="upload">파일선택</label>
+										<input type="file" id="upload" class="upload-hidden" />
+										<div class="inputBox">
+											<input type="text" class="inp upload-name" value="" disabled="disabled" />
+										</div>
+
+										<div class="previewArea etc">
+											<a href="#layerImgBig" target="_blank" class="imgPreview"><img src="../static/images/sample/tire.jpg" alt="" /></a>
+											<a href="#" class="layerClose">닫기</a>
+										</div>
+									</div>
+									<span class="txt color4">첨부 파일을 등록해주세요</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</section>
+
+		<!-- 하단 영역 -->
+		<footer id="footerWrap">
+			<div class="inner">
+				<div class="footerTop">
+					<img src="../static/images/common/footer_logo.png" alt="NEXT LEVEL 신개념 타이어 렌탈서비스 - 넥스트레벨" class="footerLogo" />
+					<div class="footerLink">
+						<a href="#"><span>이용약관</span></a>
+						<a href="#" class="etc"><span>개인정보처리방침</span></a>
+						<a href="#"><span>기업소개</span></a>
+					</div>
+				</div>
+				<div class="footerBottom">
+					<p>
+						<span>대표이사 : 강호찬</span>
+						<span>주소 : 경상남도 양산시 충렬로 355 넥센타이어주식회사</span>
+						<span>대표번호 : 1855-0100</span>
+					</p>
+					<p>
+						<span>사업자등록번호 : 621-81-10769</span>
+						<span>통신판매업신고번호 : 제2015-경남양산-0139호</span>
+					</p>
+					<div class="copyright">COPYRIGHT ⓒ NEXTLEVEL. ALL RIGHTS RESERVED</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //하단 영역 -->
+	</div>
+
+	<!-- [레이어팝업] 이미지크게보기 -->
+	<div class="dimLayer">
+		<div class="dimBg"></div>
+		<section class="layerPopCont" id="layerImgBig">
+			<h1 class="popupTitle">이미지 크게보기</h1>
+			<div class="popSearch">
+				<div class="imgRealSize">
+					<img src="../static/images/sample/img_productView02.jpg" alt="">
+				</div>
+			</div>
+			<a href="#" class="layerClose">닫기</a>
+		</section>
+	</div>
+	<!-- // [레이어팝업] 이미지크게보기 -->
+
+	<script>
+	$(document).ready(function(){
+		// 딤레이어
+		$('.previewArea .imgPreview').click(function(e){
+			e.preventDefault();
+
+			var $href = $(this).attr('href');
+			layer_popup($href);
+		});
+	})
+	</script>
+</body>
+
+</html>
