@@ -1228,10 +1228,10 @@ img.full { width: 100%;}
 .txtTy1 + .tblSection {margin-top:25px;}
 .tblSection {}
 .tblSection + .tblSection {margin-top:28px;}
-.tblSection > h1 {font-weight:500; font-size:15px; color:#000;}
-.tblSection > h1 + .list1 {margin-top:9px;}
-.tblSection > h1 + .table.ty2 {margin-top:7px;}
-.tblSection > h1 + .list1 + .table.ty2 {margin-top:7px;}
+.tblSection h1 {font-weight:500; font-size:15px; color:#000;}
+.tblSection h1 + .list1 {margin-top:9px;}
+.tblSection h1 + .table.ty2 {margin-top:7px;}
+.tblSection h1 + .list1 + .table.ty2 {margin-top:7px;}
 .tblSection + .agreeTy1 {margin-top:20px;}
 .tblSection + .notiEle {margin-top:26px;}
 .agreeTy1 {padding:10px; border:1px solid #e1e1e1; background:#f6f6f6; border-radius:2px;}
