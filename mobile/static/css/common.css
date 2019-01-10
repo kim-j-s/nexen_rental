@@ -6,7 +6,8 @@
 @import url('main.css');
 
 html,
-body { 
+body {
+	height: 100%;  
     color: #666;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 400;
@@ -667,7 +668,7 @@ body.noScroll {
 /* ==============================
 * 팝업
 * ============================== */
-.popup { width: 100%; }
+.popup { width: 100%; height: 100%; }
 .popup .popHead {
 	position: fixed;
 	top: 0;
@@ -709,6 +710,9 @@ body.noScroll {
     background-size: 100%;
 }
 .popContent {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch; 
+	height: calc(100% - 45px);
 	margin-top: 45px;
     padding: 20px 15px 50px;
 }
