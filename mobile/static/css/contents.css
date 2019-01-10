@@ -542,9 +542,9 @@ p.mark1 {display:block;}
 
 .fixedBot { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; width:100%; }
 
-.sectionTire .tabMenu .tabList.fixed { position: fixed; top: 44px; z-index: 100; background: #fff; }
+.sectionTire .tabMenu .tabList.fixed { position: fixed; top: 44px; z-index: 50; background: #fff; }
 .sectionTire .tabMenu .tabList.fixed ~ .tabContent.on { padding: 100px 15px 50px; }
-.sectionTire .tabMenu .tabList.top { position: fixed; top: 44px; z-index: 100; background: #fff; }
+.sectionTire .tabMenu .tabList.top { position: fixed; top: 44px; z-index: 50; background: #fff; }
 .sectionTire .tabMenu .tabList.top ~ .tabContent.on { padding: 55px 15px 50px; }
 
 .searchWrap {width:100%;}

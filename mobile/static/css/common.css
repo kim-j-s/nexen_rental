@@ -51,9 +51,9 @@ strong { font-weight: 500; } /* bold */
  * header
  * ============================== */
 #headerWrap {
-	border: 1px solid yellow;
 	position: fixed;
-    z-index: 100;
+	top: 0;
+	z-index: 100;
 	width:100%;
 	height: 45px;
     background: #fff;
@@ -65,12 +65,12 @@ strong { font-weight: 500; } /* bold */
     background: #fff;
     border-bottom: 1px solid #dcdcdc;
 }
-
+/* 
 .headerTopMenu {
 	position: fixed;
 	top: 0;
 	z-index: 100;
-} 
+}  */
 
 .headerTopMenu h1.logo {
     display: inline-block;
@@ -459,6 +459,9 @@ body.noScroll {
 	vertical-align: -2px;
 }
 
+
+#content { overflow: auto; -webkit-overflow-scrolling: touch; }
+
 /* ==============================
 * footer
 * ============================== */
@@ -526,7 +529,7 @@ body.noScroll {
 * ============================== */
 .floatingWrap {
 	/* position: fixed; */
-	z-index: 150;
+	z-index: 250;
 	box-sizing: border-box;
 	width: 100%;
 	display: none;

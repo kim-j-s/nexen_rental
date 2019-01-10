@@ -3,7 +3,7 @@
 /* ==============================
 * popup - 렌탈전문점 찾기
 * ============================== */
-.popRentalStore { position:fixed; top:0; bottom:0; left:0; right:0;  }
+.popRentalStore { position:fixed; top:0; bottom:0; left:0; right:0; }
 .popRentalStore .popHead { position: fixed; z-index: 100; width: 100%; height: 45px; background: #fff; }
 .popRentalStore .popContent { overflow: auto; height:100%; margin:0; padding: 45px 0 0; }
 .popRentalStore .lBtn .btn { width: 65px; min-width: inherit; padding: 0; }
@@ -211,14 +211,14 @@
 /* ==============================
 * 레이어팝업 - 이미지 크게보기
 * ============================== */
-.layerPop.imgView { top: 0; padding: 0; height: 100%; }
+.layerPop.imgView { position: fixed; top: 0; bottom: 0; left: 0; right: 0; padding: 0; height: 100%; }
 .layerPop.imgView .layerPopHeader {  position: relative; border-bottom: 1px solid #dcdcdc; border-top-left-radius: 0; border-top-right-radius: 0; background: #fff; text-align: center; }
 .layerPop.imgView .layerPopHeader .title { color: #000; font-size: 15px; font-weight: 500; height: 45px; line-height: 45px;}
 .layerPop.imgView .closeBtn { position:absolute; top: 0; right: 0; display: block; width: 45px; height: 45px; font-size: 0; }
 .layerPop.imgView .closeBtn:after { content:''; position: absolute; right: 50%; top: 50%; width: 13px; height: 13px; margin: -7px 0 0 -6px; background: url('../images/common/btn/btn_close_popup.png') no-repeat; background-size: 100%; }
 .layerPop.imgView #layerPopCont { height: calc(100% - 46px); }
 .layerPop.imgView .layerPopWrap { box-sizing: border-box; height: 100%; padding: 20px 15px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-.layerPop.imgView .imgViewArea { overflow: auto; }
+.layerPop.imgView .imgViewArea  { overflow: auto; height: 100%; }
 
 
 /* ==============================
@@ -245,7 +245,7 @@
 .ui-widget-content { border: none; }
 .ui-widget-content a { color: #666; }
 
-.ui-dialog-content { overflow: auto; position: relative; z-index: 200; width: 100%; height: 100%; min-height: 100%; padding: 0 !important; border: 0; background: #fff; }
+.ui-dialog-content { overflow: auto !important; position: relative; z-index: 200; width: 100%; height: 100%; min-height: 100%; padding: 0 !important; border: 0; background: #fff; }
 .ui-dialog-content .popup { position:fixed; }
 .ui-dialog-content .popHead { position:fixed; }
 .ui-dialog-content .popHead .lBtn { position: absolute; top: 10px; left: 15px; }
@@ -278,8 +278,9 @@
 #popupFrame { height: 100%; }
 
 /* 렌탈전문점 찾기 */
-.ui-dialog.rentalmap { position:fixed !important; top:0 !important; height:100%; }
+.ui-dialog.rentalmap { position:fixed !important; top:0 !important; height:100% !important; }
 .ui-dialog.rentalmap html, 
-.ui-dialog.rentalmap body {height:100%;}
-.ui-dialog.rentalmap .ui-dialog-content {height:100% !important; -webkit-overflow-scrolling: touch;  }
+.ui-dialog.rentalmap body { height:100%; }
+.ui-dialog.rentalmap .ui-dialog-content { height:100% !important; }
+.ui-dialog.rentalmap .popContent { height:100%; margin:0; padding-top:45px; overflow: auto; -webkit-overflow-scrolling: touch;  }
 

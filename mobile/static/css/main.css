@@ -6,21 +6,21 @@
  * ============================== */
 
 /* 띠배너 */
-.topBanner { position: relative; width: 100%; height: auto;	overflow: hidden; }
+.topBanner { position: relative; width: 100%; height: 50px; overflow: hidden; }
 .topBanner .swiper-slide a { display:block; }
-.topBanner .swiper-slide a img { width:100%; }
-.topBanner .btnClose {	position: absolute;	top:0; right:0;	width: 50px; height: 50px; background: url('../images/main/btn_closeMenu.png') no-repeat 50%; background-size: 15px 15px;	font-size: 0;	z-index:3; }
-.topBanner .notiList { height:50px; }
-.topBanner .notiList li { line-height: 50px; padding: 0 50px 0 25px; color:#fff; font-size: 15px; font-weight: 500;	text-align: center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.topBanner .swiper-pagination { bottom:2px; }
-.topBanner .swiper-pagination-bullet { width:5px; height:5px; background:none; border:1px solid #fff; }
+.topBanner .swiper-slide a img { width:100%; max-height: 50px; }
+.topBanner .btnClose { position: absolute;	top:0; right:0;	width: 50px; height: 50px; background: url('../images/main/btn_closeMenu.png') no-repeat 50%; background-size: 15px 15px;	font-size: 0;	z-index:3; }
+.topBanner .swiper-pagination { bottom: 5px; height: 5px; }
+.topBanner .swiper-pagination-bullet { width:5px; height:5px; background:none; border:1px solid #fff;  vertical-align: top; }
 .topBanner .swiper-pagination-bullet-active { background:#fff; }
 
 /* ==============================
  * 메인컨텐츠
  * ============================== */
+.main #headerWrap { position: relative; top: 0 !important; width: 100%; }
+.main #headerWrap.fixed { top: 0 !important; }
 
-.main .headerTopMenu { position: relative; width: 100%; }
+.mainContent {}
 
 .mainIntro { position: relative; box-sizing: border-box; min-height: 473px;	background: url('../images/main/bgMainTop.jpg') no-repeat; background-size: cover; color: #fff;	text-align: center; }
 .mainIntro.rental { background-image: url('../images/main/bgMainTop2.jpg'); }
