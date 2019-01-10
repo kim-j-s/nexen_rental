@@ -1971,7 +1971,7 @@ p.mark1 {display:block; line-height:20px;}
 
 
 /* datepicker */
-.ui-widget {width:308px !important;}
+.ui-widget {width:308px;}
 .ui-datepicker-current {display:none;}
 .ui-widget-content {border-radius:0 !important; border:none !important;}
 .ui-datepicker {padding:0 11px 32px 11px !important; border:1px solid #aaa !important;}
