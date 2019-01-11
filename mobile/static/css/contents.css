@@ -5,8 +5,9 @@
 /* ==============================
  * common - 컨텐츠 공통
  * ============================== */
-#wrap {width:100%; margin:0 auto;}
-#content { z-index:1; width:100%; min-height: 300px; padding-top: 45px; }
+#wrap {width:100%; height: 100%; margin:0 auto;} 
+
+#content { overflow: auto; -webkit-overflow-scrolling: touch; z-index:1; width:100%; height: calc(100% + 50px); padding-top: 45px; }
 #content .contWrap {padding:20px 15px 50px 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
 #content .contWrap2 {padding:0 15px 50px 15px;}
 #content .optionList + .contWrap {padding:60px 15px 50px; } 

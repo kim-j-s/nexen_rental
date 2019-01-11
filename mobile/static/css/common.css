@@ -460,8 +460,6 @@ body.noScroll {
 }
 
 
-#content { overflow: auto; -webkit-overflow-scrolling: touch; }
-
 /* ==============================
 * footer
 * ============================== */
