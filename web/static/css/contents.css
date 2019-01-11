@@ -562,9 +562,9 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .infoWrap > .title + .txt {margin-top:13px;}
 .infoWrap > .txt + .table {margin-top:14px;}
 .infoWrap > .btn.ty21 {position:absolute; top:-4px; right:0;}
-
 .infoWrap + .btnBox {margin-top:95px;}
 .infoWrap + .pagenation {margin-top:56px;}
+.myCarList .infoWrap { margin-top: 66px; }
 
 /* 평점 */
 .grade {display:inline-block; font-size:0; width:84px; height:15px; background:url(../images/common/bg_grade.png) no-repeat 0 -150px; text-indent:-9999px; overflow:hidden;}
@@ -693,6 +693,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .period .inputBox + .inputBox:before {content:'~'; position:absolute; top:0; left:-20px; width:20px; line-height:36px; text-align:center;}
 .periodSorting > .btn.ty6 {float:left; min-width:73px; margin-left:10px;}
 .periodSorting + .table.ty3 {margin-top:15px;}
+.periodSorting + .contWrap .table.ty3 {margin-top:15px;}
 
 .itemNone {margin-top:52px; padding:58px 0 52px 0; background:url(../images/common/icon/icon_none.png) no-repeat center top; font-size:16px; color:#666; text-align:center; line-height:24px;}
 .itemNone.etc {border-bottom:1px solid #e6e6e6;}

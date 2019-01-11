@@ -343,7 +343,7 @@ td .textarea {width:100%;}
 
 .itemtList1 {overflow:hidden;}
 .itemtList1 > li {position:relative; width:100%;}
-.itemtList1 > li:not(:first-child) {margin-top: 240px;}
+.itemtList1 > li:not(:first-child) {margin-top: 24px;}
 .itemtList1 > li > a {display:block;}
 .itemtList1 > li .thumb {width:100%; overflow:hidden;}
 .itemtList1 > li .thumb img {width:100%; max-width:100%; max-height:100%;}
