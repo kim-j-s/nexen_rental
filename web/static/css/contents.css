@@ -1894,9 +1894,11 @@ no-repeat left center;}
 .rstTxt > span {font-weight:500; font-size:16px; color:#812990;}
 
 .popupTitle + .addrSch {margin-top:15px; padding:24px 0 28px 0;}
-.addrSch {padding:24px 0; text-align:center; border-top:2px solid #353535;}
+.addrSch {margin-top:15px; padding:24px 0; text-align:center; border-top:2px solid #353535;}
 .addrSch > .keyword {display:inline-block;}
 .addrSch > .keyword .inputBox {width:428px;}
+
+.popupTitle + form + .pagenation {margin-top:40px;} 
 
 .addrScroll {height:426px; overflow:auto;}
 .addrScroll.ty2 {height:386px;}
