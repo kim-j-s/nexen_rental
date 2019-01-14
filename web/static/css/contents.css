@@ -91,7 +91,7 @@
 .fileBox > .previewArea:before {content:''; display:inline-block; height:100%; vertical-align:middle; text-align:center;}
 .fileBox > .previewArea img {max-width:100%; max-height:100%; display:inline-block; vertical-align:middle;}
 .fileBox > .previewArea > .layerClose {position:absolute; top:8px; right:8px; width:20px; height:20px; background-size:cover;}
-.fileBox > .previewArea a { display: inline-block;}
+.fileBox > .previewArea a { display: inline-block; width: 99%; }
 .fileBox + .txt {margin-top:10px; font-size:14px; color:#888;}
 .fileBox + .txt span {font-size:14px; color:#812990;}
 .fileBox > .txt {margin-top:10px; font-size:14px; color:#888;}

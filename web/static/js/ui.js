@@ -1246,15 +1246,14 @@ function fBtn2() {
 
 // 상세페이지 - 고객후기 버튼
 function reviewArea(){
-	$('.rentalfee .btnsReview').on('click', function(){
-
-		$('#reviewArea .tabList li').removeClass('on');
-		$('#reviewArea .tabContent').removeClass('on');
-		
-		$('#reviewArea .tabList li:last-child').addClass('on');
-		$('#reviewArea .tabContent.reviewContent').addClass('on');
+	$(document).on('click', '.btnsReview', function(){
+	   $('#reviewArea .tabList li').removeClass('on');
+	   $('#reviewArea .tabContent').removeClass('on');
+	   
+	   $('#reviewArea .tabList li:last-child').addClass('on');
+	   $('#reviewArea .tabContent.reviewContent').addClass('on');
 	})
-}
+ }
 
 function uiForm() {
 	var radioForm = 'input[type=radio]';
