@@ -585,6 +585,8 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .gradeGroup > .ele.sel {width:113px;}
 .gradeGroup > .ele.gr {padding-left:8px;}
 
+
+
 /* 약관동의 */
 .agreeWrap {}
 .agreeWrap > .titleTxt {font-weight:400; font-size:18px; color:#454545;}
@@ -752,8 +754,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .loginWrap > .inner .inpWrap .middle .ele .checkbox label {font-weight:400; font-size:14px; color:#666;}
 .loginWrap > .inner .inpWrap .middle .ele .btn {font-weight:400; font-size:14px; color:#666;}
 .loginWrap > .inner .inpWrap .middle .ele .btn + .btn {position:relative; padding-left:14px; margin-left:11px;}
-.loginWrap > .inner .inpWrap .middle .ele .btn + .btn:before {content:''; position:absolute; top:3px; left:0; width:1px; border-bottom:12px solid 
-#b5b5b5;}
+.loginWrap > .inner .inpWrap .middle .ele .btn + .btn:before {content:''; position:absolute; top:3px; left:0; width:1px; border-bottom:12px solid #b5b5b5;}
 .loginWrap > .inner .inpWrap .btn.ty7 {width:100%;}
 .loginWrap > .inner .inpWrap .btnBox.double {overflow:hidden;}
 .loginWrap > .inner .inpWrap .btnBox.double > a {float:left; width:180px;}
@@ -898,7 +899,19 @@ td a {font-size:14px; color:#666; line-height:22px;}
 */
 .gradeList {display:table; width:100%; table-layout:fixed;}
 .gradeList > li {display:table-cell; vertical-align:middle; font-weight:500; font-size:15px; color:#454545; text-align:center;}
-.gradeList > li .grade {position:relative; top:1px; margin-left:4px;}
+.gradeList > li .grade {position:relative; top:1px; margin-left:4px; display:inline-block; font-size:0; width:84px; height:15px; background:url(../images/common/bg_grade.png) no-repeat 0 -150px; text-indent:-9999px; overflow:hidden; }
+.gradeList .grade[data-guage="0"] {background-position:0 0;}
+.gradeList .grade[data-guage="10"] {background-position:0 -15px;}
+.gradeList .grade[data-guage="20"] {background-position:0 -30px;}
+.gradeList .grade[data-guage="30"] {background-position:0 -45px;}
+.gradeList .grade[data-guage="40"] {background-position:0 -60px;}
+.gradeList .grade[data-guage="50"] {background-position:0 -75px;}
+.gradeList .grade[data-guage="60"] {background-position:0 -90px;}
+.gradeList .grade[data-guage="70"] {background-position:0 -105px;}
+.gradeList .grade[data-guage="80"] {background-position:0 -120px;}
+.gradeList .grade[data-guage="90"] {background-position:0 -135px;}
+.gradeList .grade[data-guage="100"] {background-position:0 -150px;}
+
 
 .itemList3Wrap {}
 .itemList3Wrap + .paymentWrap {margin-top:66px;}
@@ -955,8 +968,7 @@ td a {font-size:14px; color:#666; line-height:22px;}
 .detailPage > .title .txt {font-size:18px; color:#454545; line-height:22px;}
 .detailPage > .title .txt.ellipsis {overflow:initial; text-overflow:initial; white-space:initial;}
 .detailPage > .title .txt > strong {padding-right:8px; font-weight:500; font-size:18px; color:#353535;}
-.detailPage > .title .date {position:absolute; top:23px; right:25px; padding-left:22px; font-size:16px; background:url(../images/common/icon/icon_calendar2.png) 
-no-repeat left center;}
+.detailPage > .title .date {position:absolute; top:23px; right:25px; padding-left:22px; font-size:16px; background:url(../images/common/icon/icon_calendar2.png) no-repeat left center;}
 .detailPage > .detailSubCont {position:relative; padding:22px 235px 22px 25px; border-bottom:1px solid #353535; font-size:16px; color:#454545;}
 .detailPage > .detailSubCont .grade {margin-left:10px;}
 .detailPage > .detailContent {padding:30px 20px 30px 20px; text-align:center; border-bottom:1px solid #c5c5c5; font-size:16px; line-height:28px;}
