@@ -7,7 +7,7 @@
  * ============================== */
 #wrap {width:100%; height: 100%; margin:0 auto;} 
 
-#content { overflow: auto; -webkit-overflow-scrolling: touch; z-index:1; width:100%; height: calc(100% + 50px); padding-top: 45px; }
+#content { z-index:1; width:100%; padding-top: 45px; }
 #content .contWrap {padding:20px 15px 50px 15px;} /* 좌,우 여백 15px 있는 있는 경우 */
 #content .contWrap2 {padding:0 15px 50px 15px;}
 #content .optionList + .contWrap {padding:60px 15px 50px; } 
@@ -594,9 +594,9 @@ p.mark1 {display:block;}
 .tabContent .list1 .ulBar {margin-bottom:10px;}
 .tabContent .list1 .ulBar li {margin:5px 0 0 5px; font-size:12px;}
 
-.mainTech {}
+.mainTech { font-size: 0; }
 .mainTech:after { content: ''; display: block; clear: both; } 
-.mainTech li { float:left;  margin-right: 7px; margin-bottom: 2px; }
+.mainTech li { float:left;  margin-right: 5px; margin-bottom: 5px; }
 .mainTech li img { display: inline-block; width: 30px; vertical-align: top; }
 .mainTech li span { position: relative; display:block; min-width:40px; padding-top:35px; color:#676767; font-size:8px; font-weight:400; text-align: center; }
 .mainTech li span:after {position:absolute; display: block; content:''; top:0; left:50%; margin-left:-15px; width:30px; height:31px; background:#fff url('../images/prd/icon_mainTech.png') no-repeat; background-size:240px 31px;}
@@ -639,6 +639,19 @@ p.mark1 {display:block;}
 .grade span.star1 {background-position:0 -128px} /* 별점 2 */
 .grade span.starOne {background-position:0 -144px} /* 별점 1 */ 
 .grade span.star {background-position:0 -160px} /* 별점 0 */
+
+.grade span {font-size:0; display:block; width:84px; height:16px; background:url('../images/common/icon/icon_star.png') no-repeat; background-size:100%;}
+.grade span[data-gauge="100"] {background-position:0 0} /* 5점 */
+.grade span[data-gauge="90"] {background-position:0 -16px} /* 4.5점 */ 
+.grade span[data-gauge="80"] {background-position:0 -32px} /* 4점 */ 
+.grade span[data-gauge="70"] {background-position:0 -48px} /* 3.5점 */ 
+.grade span[data-gauge="60"] {background-position:0 -64px} /* 3점 */ 
+.grade span[data-gauge="50"] {background-position:0 -80px} /* 2.5점 */ 
+.grade span[data-gauge="40"] {background-position:0 -96px} /* 2점 */ 
+.grade span[data-gauge="30"] {background-position:0 -112px} /* 1.5점 */ 
+.grade span[data-gauge="20"] {background-position:0 -128px} /* 1점 */
+.grade span[data-gauge="10"] {background-position:0 -144px} /* 0.5점 */ 
+.grade span[data-gauge="0"] {background-position:0 -160px} /* 0점 */
 
 .reviewList > ul li .tit {font-size:14px; color:#000000; font-weight:400; margin-top:15px; line-height:17px;} 
 .reviewList > ul li .txt {font-size:12px; color:#666; font-weight:400; margin-top:10px; line-height:17px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;} 
@@ -1308,7 +1321,7 @@ img.full { width: 100%;}
 .orderItem > .prod .prodi2 li:after { content: ''; display: inline-block; width: 1px; height: 9px; margin: 0 6px 0 9px; background: #c4c4c4; vertical-align: -1px;}
 .orderItem > .prod .prodi2 li:last-child:after { display: none; }
 
-.orderItem > .itemSub { height: 70px; margin: 0 15px; border-top:1px solid #dcdcdc; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+.orderItem > .itemSub { height: auto; margin: 0 15px; border-top:1px solid #dcdcdc; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
 .orderItem > .itemSub .cost { display:table; width:100%; padding: 9px 10px 8px; }
 /* .orderItem > .itemSub .cost:first-child { margin-top: 5px; } */
 .orderItem > .itemSub .cost:not(:first-child) { margin-top: -10px; }
@@ -1602,13 +1615,6 @@ span.readInp { box-sizing: border-box; display: inline-block; width: 42px; heigh
 .contracWrap .storeInfo .btnBox { padding: 0 5px 5px; }
 .contracWrap .storeInfo .person { padding: 20px 15px; background: #fafafa; color: #000; font-size: 15px; font-weight: 500;}
 
-
-
-
-
-
-
-
-
-
-
+/* 보유차량 추가 */
+.myCarList .infoWrap { margin-top: 30px; }
+.btnAddCar span { line-height: 35px; }
