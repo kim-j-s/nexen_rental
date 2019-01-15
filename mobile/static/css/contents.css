@@ -702,6 +702,9 @@ p.mark1 {display:block;}
 
 .priceInfoWrap {position:relative; background:#fdfdfd; padding: 15px 15px; border-top: 1px dashed #e1e1e1;}
 .priceInfoWrap.noLine {border:none; background:#fff;}
+.priceInfoWrap .noSearchMsg { margin: -15px; padding: 15px; background: #f5f5f5; text-align: center; }
+.priceInfoWrap .noSearchMsg strong { color: #333; font-weight: 500; }
+
 .priceInfo {display:flex; align-items:center; justify-content: space-between; color:#000;}
 .priceInfo:not(:first-child) {margin-top:10px;}
 .priceInfo .txt { flex-basis: 100px; font-size:11px;}

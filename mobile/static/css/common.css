@@ -713,7 +713,6 @@ body.noScroll {
     background-size: 100%;
 }
 .popContent {
-	background: yellow;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch; 
 	height: calc(100%);
