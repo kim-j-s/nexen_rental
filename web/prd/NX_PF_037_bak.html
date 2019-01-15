@@ -25,21 +25,12 @@
 
 <script>
 $(document).ready(function(){
-	$('.rentalfee .btnsReview').on('click', function(){
+	var Top = $('body, html').scrollTop();
+	var onePayContWrap = $('#onePaymentList').offset();
 
-
-		$('#reviewArea .tabList li').removeClass('on');
-		$('#reviewArea .tabContent').removeClass('on');
-		
-		$('#reviewArea .tabList li:last-child').addClass('on');
-		$('#reviewArea .tabContent .reviewContent').addClass('on');
-	
-		itemFade();
+	$('#rentalBtn').on('click', function(){
+		$(document).scrollTop(onePayContWrap.top);
 	})
-
-	function itemFade() {
-		$('.itemList li').data('animation','fadeInUp');
-	}
 });
 </script>
 </head>
@@ -678,7 +669,7 @@ $(document).ready(function(){
 					상단의 옵션을 모두 선택 완료 후 button disabled 제거
 					-->
 					<div class="btnBox">
-						<button class="btn ty14" disabled="disabled">
+						<button class="btn ty14" id="rentalBtn" >
 							<span class="txt">내게 맞는 렌탈 상품 찾기</span>
 						</button>
 					</div>
@@ -701,7 +692,7 @@ $(document).ready(function(){
 			</div>
 
 			<div class="prdDetailCont">
-				<ul class="itemtList3">
+				<ul class="itemtList3" id="onePaymentList">
 					<li>
 						<div class="purchase">
 							<dl>
@@ -1455,7 +1446,7 @@ $(document).ready(function(){
 							상단의 옵션을 모두 선택 완료 후 button disabled 제거
 							-->
 							<div class="btnBox">
-								<button class="btn ty14" disabled="disabled">
+								<button class="btn ty14" disabled="disabled" id="">
 									<span class="txt">렌탈료 계산하기</span>
 								</button>
 							</div>
