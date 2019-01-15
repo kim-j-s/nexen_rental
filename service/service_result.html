@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>방문점검서비스 결과</title>
+
+<style>
+	* { margin:0; padding:0; }
+	body { font-family: 'Malgun Gothic','맑은 고딕', sans-serif; font-size: 12px; color: #666; }
+	strong { font-weight: bold; }
+	ol, ul { list-style:none; }
+	input { box-sizing: border-box; display: inline-block;  width: 50px; height: 22px; line-height: 20px; margin: 2px 0; border: 1px solid #ccc; background: #fff; color: #666; font-stretch: 12px; text-align: center; }
+	
+	table { width: 100%; table-layout: fixed; border-spacing: 0; border-collapse:collapse; border: 1px solid #ccc; }
+	table th, table td { padding: 8px 0; border-left: 1px solid #ccc;  border-bottom: 1px solid #ccc; word-wrap: break-word; text-align: center; }
+	table thead th { background: #f5f5f5; color: #444; font-weight: bold; text-align: center; }
+
+	.fc1 { color:#812990; }
+	.fc2 { color:#f00; }
+	.fc3 { color: #1e75fb;}
+
+	.service-result { box-sizing: border-box; overflow: hidden; min-width: 320px; max-width: 800px; margin: 0 auto; padding: 20px;  border:2px solid #666; background: #fff;  }
+	.service-result h1 {font-size:0;}
+	.service-result h1 img { height: 30px; }
+
+	.main-txt { margin: 25px 0 15px; color: #444; font-size: 14px; text-align: center; }
+	.main-txt strong, .main-txt span { font-size: 16px; }
+	.main-txt .date{ color: #000; }
+	.head-title { margin: 20px 0 10px; font-size: 14px; font-weight: bold; color:#000; }
+	
+	.skid-depth { box-sizing: border-box; width: 100%; border: 1px solid #ccc; border-bottom: 0; }
+	.skid-depth:after { content: ''; display: block; clear: both; }
+	.skid-depth dl { box-sizing: border-box; float: left; width: 50%; border-bottom: 1px solid #ccc; }
+	.skid-depth dl:nth-child(2n) { border-left: 1px solid #ccc; }
+	.skid-depth dl dt { padding: 5px 0; border-bottom: 1px solid #ccc; background: #f5f5f5; font-weight: bold; color: #444; text-align: center; }
+	.skid-depth dl dd { overflow: hidden;  padding: 5px 0; }
+	.skid-depth dl dd > div { float: left; text-align: center; }
+	.skid-depth dl dd .data-area { width: 40%; padding-top: 22px; text-align: right; }
+	.skid-depth dl dd .img-area { width: 60%; }
+	.skid-depth dl dd .img-area img { width: 100px; }
+	.skid-depth dl dd .txt { height: 25px; line-height: 25px; font-weight: bold; }
+	
+	.list li { position: relative; padding-left: 8px; }
+	.list li:before { content: ''; display: inline-block; position: absolute; top: 0.6em; left: 0; width: 4px; height: 1px; background: #666; }
+	
+	.comment-area { margin-top: 20px;  padding: 20px 20px; background: #f5f5f5; }
+	.comment-area .head-title { margin-top: 0; }
+	
+	.btn-area { margin-top: 20px; text-align: center; }
+	.btn-area .btn-close { box-sizing: border-box; display: inline-block; min-width: 65px;height: 30px; line-height: 30px; padding: 0 10px; vertical-align: middle; text-align: center; font-size: 12px; color: #fff; white-space: nowrap; border: none; background: #812990; border-radius: 2px; cursor: pointer; }
+	
+	/* 모바일 디바이스 대응 */
+	@media screen and (max-width: 599px)  {
+		.service-result { margin: 0; }
+		.skid-depth dl { width: 100%; float: none; }
+		.skid-depth dl:nth-child(2n) { border-left: 0; }
+	}
+</style>
+
+</head>
+<body>
+
+	<!-- 방문점검서비스 결과 -->
+	<div class="service-result">
+		<h1><a href="https://www.tirerental.co.kr" target="_blank"><img src="./logo.png" alt="NEXT LEVEL"></a></h1>
+
+		<p class="main-txt">
+			<strong class="fc1">홍길동</strong>님의 <span class="date">2019년 01월 14일</span> 기준 점검 안내입니다.
+		</p>
+
+		<table>
+			<colgroup>
+				<col style="width: 30%">
+				<col style="width: 30%">
+				<col style="width: 40%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">상품명</th>
+					<th scope="col">차량정보</th>
+					<th scope="col">제품정보</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>표준상품</td>
+					<td class="bl">QM3 / 19나9999</td>
+					<td class="bl">NFERA AU5 215/55R17(2본)</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="head-title">타이어 Skid Depth</h2>
+		<div class="skid-depth">
+			<dl>
+				<dt>앞(좌)</dt>
+				<dd>
+					<div class="data-area">
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.3" class="fc2"> mm<br>
+						<input type="text" value="1.9"> mm<br>
+						<input type="text" value="2.2"> mm
+					</div>
+					<div class="img-area">
+						<p class="txt fc3">잔존율 80%</p>
+						<img src="./tire.gif" alt="" style="width: 100px; height: 100px;">
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>앞(우)</dt>
+				<dd>
+					<div class="data-area">
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.3"> mm<br>
+						<input type="text" value="1.9" class="fc2"> mm<br>
+						<input type="text" value="2.2"> mm
+					</div>
+					<div class="img-area">
+						<p class="txt fc3">잔존율 70%</p>
+						<img src="./tire.gif" alt="" style="width: 100px; height: 100px;">
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>뒤(우)</dt>
+				<dd>
+					<div class="data-area">
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.1"> mm
+					</div>
+					<div class="img-area">
+						<p class="txt fc3">잔존율 75%</p>
+						<img src="./tire.gif" alt="" style="width: 100px; height: 100px;">
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>뒤(좌)</dt>
+				<dd>
+					<div class="data-area">
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="1.1" class="fc2"> mm<br>
+						<input type="text" value="2.1"> mm<br>
+						<input type="text" value="2.1"> mm
+					</div>
+					<div class="img-area">
+						<p class="txt fc3">잔존율 85%</p>
+						<img src="./tire.gif" alt="" style="width: 100px; height: 100px;">
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+		<h2 class="head-title">유의사항</h2>
+		<ul class="list">
+			<li>최초 장착된 렌탈타이어가 변경되었을 경우 수치가 부정확할 수 있습니다.</li>
+			<li>유의사항 미 숙지로 발생되는 부분은 본사에서 책임지지 않습니다.</li>
+		</ul>
+
+		<div class="comment-area">
+			<h2 class="head-title">점검자 의견</h2>
+			<p class="comment">
+				<strong class="fc1">홍길동</strong>님의 방문점검서비스 결과 타이어 잔존율이 우수하여 차량 이용하시는대 문제가 없습니다. 다만 차량 앞 우측 타이어에 이상이 느껴지시면 대리점을 방문하셔서 점검을 받으셔야합니다.
+			</p>
+		</div>
+
+		<div class="btn-area">
+			<button type="button" class="btn-close">닫기</button>
+		</div>
+	</div>
+	<!-- // 방문점검서비스 결과 -->
+
+</body>
+</html>
